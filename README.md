@@ -1,1 +1,1 @@
-# new-repo-template
+# workload-databases
