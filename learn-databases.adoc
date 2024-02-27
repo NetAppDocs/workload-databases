@@ -1,0 +1,25 @@
+---
+sidebar: sidebar
+permalink: learn-fsx-ontap.html
+keywords: Amazon FSx for NetApp ONTAP, volumes, aws
+summary: Amazon FSx for NetApp ONTAP is a fully managed service allowing customers to launch and run file systems powered by NetApp’s ONTAP storage operating system. FSx for ONTAP provides the same features, performance, and administrative capabilities NetApp customers use on premises today, with the simplicity, agility, security, and scalability of a native AWS service.
+---
+= Learn about Databases
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Databases is an end-to-end database deployment and maintenance service with built-in best practices for optimization, automatic thin cloning, application aware backup, disaster recovery, and monitoring and resolution capabilities. 
+
+== Features
+
+
+== Additional features in Workload Factory
+
+== Cost
+
+== Supported regions
+
+https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/[View supported Amazon regions.^]
+
+== Getting help

@@ -1,0 +1,17 @@
+---
+sidebar: sidebar
+permalink: whats-new.html
+keywords: what's new, features, new, release notes, enhancements, fixes, new features, workload factory, databases, workload factory
+summary: Learn what's new with Workload Factory Databases.
+---
+= What's new
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Learn what's new with Databases.
+
+== 29 April
+Databases is now generally available in Workload Factory. 
+
+link:learn-databases.html[Learn about Databases].
