@@ -9,7 +9,7 @@ settings:
   rss_page: "whats-new.html"  
 
 sidebar: 
-entries:
+  entries:
   - title: Databases docs
     url: /index.html
   - title: Release notes  
