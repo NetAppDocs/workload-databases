@@ -20,22 +20,42 @@ sidebar:
         url: /known-limitations.html 
   - title: Get started
     entries: 
-      - title: Learn about Databases
+      - title: Learn about Workload Factory Databases
         url: /learn-databases.html
       - title: Quick start
         url: /quick-start.html
   - title: Requirements
     entries: 
-      - title: Credentials
-        url: /credentials-databases.html
-      - title: Permissions
-        url: /permissions-databases.html
-  - title: Use Databases
+      - title: Basic mode requirements
+        url: /basic-mode-requirements.html
+      - title: Read mode requirements
+        url: /read-mode-requirements.html
+      - title: Operate mode requirements
+        url: /operate-mode-requirements  
+  - title: Manage hosts
     entries: 
+      - title: About hosts
+        url: /hosts-overview.html
+      - title: Deploy a host
+        url: /deploy-host.html
+      - title: Detect a host
+        url: /detect-host.html  
+  - title: Manage databases
+    entries: 
+      - title: About databases
+        url: /databases-overview.html
       - title: Create a database
         url: /create-database.html
-      - title: Manage a database
-        url: /manage-database.html  
+      - title: Monitor databases
+        url: /monitor-databases.html 
+  - title: Cost comparison
+    url: cost-comparison-databases.html
+  - title: Automate with Codebox
+    entries: 
+      - title: Automation catalog
+        url: /automation-catalog.html
+      - title: Code viewer
+        url: /code-viewer.html              
   - title: Knowledge and support
     entries: 
       - title: Register for support
