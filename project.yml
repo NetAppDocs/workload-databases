@@ -26,10 +26,10 @@ sidebar:
         url: /quick-start.html
   - title: Requirements
     entries: 
-      - title: 
-        url: 
-      - title: 
-        url: 
+      - title: Credentials
+        url: /credentials-databases.html
+      - title: Permissions
+        url: /permissions-databases.html
   - title: Use Databases
     entries: 
       - title: Create a database
