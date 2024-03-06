@@ -1,0 +1,12 @@
+---
+sidebar: sidebar
+permalink: deploy-host.html
+keywords: deploy, host, deploy a database host, database host 
+summary: Deploy a database host in Workload Factory Databases. 
+---
+= Deploy a host
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Deploy a database host in Workload Factory Databases. 

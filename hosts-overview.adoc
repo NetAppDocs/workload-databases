@@ -1,0 +1,12 @@
+---
+sidebar: sidebar
+permalink: hosts-overview.html
+keywords: hosts overview, about hosts
+summary: This is the overview of hosts. 
+---
+= About hosts
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+This is the overview of hosts. 

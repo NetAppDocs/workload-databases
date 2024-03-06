@@ -1,0 +1,13 @@
+---
+sidebar: sidebar
+permalink: automation-catalog.html
+keywords: automation, automate, catalog, databases
+summary: An automation catalog provides database template options for your use.
+---
+
+= Automation catalog
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+An automation catalog provides database template options for your use.

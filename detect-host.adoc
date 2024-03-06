@@ -1,0 +1,12 @@
+---
+sidebar: sidebar
+permalink: detect-host.html
+keywords: detest, discover host, detect a database host, database host 
+summary: Detect a database host in Workload Factory Databases. 
+---
+= Detect a host
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Detect a database host in Workload Factory Databases. 

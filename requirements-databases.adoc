@@ -1,0 +1,23 @@
+---
+sidebar: sidebar
+permalink: requirements-databases.html  
+keywords: requirements, basic mode, read mode, automate mode 
+summary: Databases has three different modes that have different requirements. 
+---
+= Requirements for databases
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Databases has three different modes with different requirements. 
+
+== Basic mode
+no permissions required, grab an empty template to be filled outside WF using the CloudFormation (AWS) console
+
+== Read mode
+In read mode, you'll need some read-only permissions in AWS CloudFormation.
+
+Ready-to-execute template filled out in WF, then executed outside WF using the CloudFormation (AWS) console
+
+== Operate mode 
+In operate or automate mode, you'll need AWS credentials, AWS CloudFOrmation permissions, and SSM connectivity. 

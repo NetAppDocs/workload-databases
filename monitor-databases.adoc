@@ -1,0 +1,12 @@
+---
+sidebar: sidebar
+permalink: monitor-databases.html 
+keywords: monitor databases, monitor jobs, track database jobs
+summary: Track database jobs and monitor databases with the Workload Factory Database capability. 
+---
+= Monitor databases
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Track database jobs and monitor databases with the Workload Factory Database capability. 

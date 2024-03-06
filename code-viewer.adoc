@@ -1,0 +1,13 @@
+---
+sidebar: sidebar
+permalink: code-viewer.html
+keywords: code, code viewer, codebox, databases
+summary: Use Databases Codebox as a code viewer.
+---
+
+= Automation catalog
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Use Databases Codebox as a code viewer.

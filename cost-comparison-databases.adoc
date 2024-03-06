@@ -1,0 +1,13 @@
+---
+sidebar: sidebar
+permalink: cost-comparison-databases.html
+keywords: cost comparison, calculator, databases
+summary: Use the cost comparison calculator to compare database costs. 
+---
+
+= Compare costs for databases
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Use the cost comparison calculator to compare database costs. 

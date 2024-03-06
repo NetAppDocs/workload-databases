@@ -25,13 +25,7 @@ sidebar:
       - title: Quick start
         url: /quick-start.html
   - title: Requirements
-    entries: 
-      - title: Basic mode requirements
-        url: /basic-mode-requirements.html
-      - title: Read mode requirements
-        url: /read-mode-requirements.html
-      - title: Operate mode requirements
-        url: /operate-mode-requirements  
+    url: /requirements-databases.html 
   - title: Manage hosts
     entries: 
       - title: About hosts
@@ -49,7 +43,7 @@ sidebar:
       - title: Monitor databases
         url: /monitor-databases.html 
   - title: Cost comparison
-    url: cost-comparison-databases.html
+    url: /cost-comparison-databases.html
   - title: Automate with Codebox
     entries: 
       - title: Automation catalog
