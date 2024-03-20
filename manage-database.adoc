@@ -1,0 +1,13 @@
+---
+sidebar: sidebar
+permalink: manage-database.html
+keywords: manage a database, manage databases
+summary: Manage your databases
+---
+= Manage a database
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Manage your databases
+

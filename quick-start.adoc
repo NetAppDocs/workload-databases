@@ -13,24 +13,20 @@ Get started with Workload Factory Databases in just a few steps.
 
 link: (Set up and admin docs?)
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Set up an IAM role in AWS
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] 
 [role="quick-margin-para"]
-To create or manage an FSx for ONTAP working environment, you need to add AWS credentials to Workload Factory by providing the ARN of an IAM role that gives Workload Factory the permissions needed to create an FSx for ONTAP working environment. To do this, you must link:/set-up-permissions-fsx.html[set up an IAM role that enables the Workload Factory SaaS to assume the role].
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Create an FSx for ONTAP working environment
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] 
 
 [role="quick-margin-para"]
-You must link:/create-file-system-fsx.html[create an FSx for ONTAP working environment] before adding volumes.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Create a link for AWS
 
 [role="quick-margin-para"]
-You must have a link:?[link for AWS^] to use the FSx for ONTAP working environment to support your workloads.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Add and mount a volume
 
 [role="quick-margin-para"]
-You can link:/create-volume-fsx.html[create and mount FSx for ONTAP volumes] in Workload Factory.
 
 .What's next
-You can now use Workload Factory to manage your volumes and configure additional services such as replication and cloning. 
+You can now use Workload Factory to manage your databases.
