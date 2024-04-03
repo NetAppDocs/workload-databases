@@ -10,3 +10,17 @@ summary: Track database jobs and monitor databases with the Workload Factory Dat
 
 [.lead]
 Track database jobs and monitor databases with the Workload Factory Database capability. 
+
+Workload Factory Databases provides database job monitoring so you can always track job progress, and diagnose and troubleshoot in case any failure occurs. 
+
+Job monitoring supports three levels of monitoring per deployment:
+
+* Level 1 (job): Tracks the host deployment job.
+* Level 2 (sub-job): Tracks the backup sub-job. 
+* Level 3 (task): Tracks the clone task.
+
+The job monitoring feature tracks _in progress_, _completed_, and _failed_ jobs daily, weekly, bi-weekly, and monthly. 
+
+Job monitoring events are retained in the user interface for 30 days. 
+
+In addition, filters by type and status, the search function, and the option to download the jobs table help with database jobs navigation and reporting.

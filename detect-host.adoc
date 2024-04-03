@@ -10,3 +10,34 @@ summary: Detect a database host in Workload Factory Databases.
 
 [.lead]
 Detect a database host in Workload Factory Databases. 
+
+== About this task
+When the requirements are met, hosts are automatically discovered in Workload Factory. You can also manually discover a host. 
+
+Hosts cannot be detected without AWS account credentials.
+
+Hosts are categorized as follows: 
+
+* _Unidentifiable hosts_: hosts that are not detected
+* _Unmanaged hosts_: detected hosts that are not managed by Workload Factory
+* _Managed hosts_: detected hosts that are managed by Workload Factory
+
+This task is for detecting an unidentifiable host. 
+
+== Before you begin
+You need the following to complete this task: 
+
+* AWS credentials (Link to credentials)
+* Anything else? 
+
+.Steps
+. In Databases, select the *Inventory* tab. 
+. Click *Detect host* for the unidentified host you want to detect.
+. A dialog appears. In the dialog, provide the Microsoft SQL Server user name and password, and the FSx for ONTAP system user name and password. 
+. Click *Detect*.
+. Detected host information appears if detection is successful. The host is now listed in the *Unmanaged hosts* tab. 
+.. The storage types for hosts can be FSx for ONTAP, AWS EBS, AWS EFS, FSx for Windows, and Cloud Volumes ONTAP. After detection when the storage type isn't FSx for ONTAP, the hosts are listed in the *Unmanaged hosts* tab. 
+.. When the storage type is FSx for ONTAP, you have the option to manage the host via Workload Factory. 
+. Click *Done*. 
+
+If detection fails, …?

@@ -13,10 +13,28 @@ Databases is an end-to-end database deployment and maintenance service with buil
 
 == Features
 
+Workload Factory Databases offers the following features: 
+
+* AWS resource provisioning
+* Storage provisioning
+* Database cloning for testing, development, QA, and training
+* Cost comparison calculators for Elastic Block Storage (EBS), FSx for Windows File Servers, and Elastic File Storage (EFS)
+* Networking
+* OS configurations
+* AWS, Microsoft, and NetApp best practices integration
+
 
 == Additional features in Workload Factory
 
+Databases supports both FCI and stand-alone architectures providing flexible costs and performance for any organizational database workloads.
+
+Automated orchestration via UI and API is available with AWS CloudFormation and Workload Factory's Chatbot. 
+
+Deployment options include a “Quick create” and an “Advanced create”. 
+
 == Cost
+
+Databases includes a storage savings calculator to assess pre-deployment costs. 
 
 == Supported regions
 
