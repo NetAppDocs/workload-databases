@@ -11,7 +11,7 @@ summary: Track database jobs and monitor databases with the Workload Factory Dat
 [.lead]
 Track database jobs and monitor databases with the Workload Factory Database capability. 
 
-Workload Factory Databases provides database job monitoring so you can always track job progress, and diagnose and troubleshoot in case any failure occurs. 
+Workload Factory Databases provides database job monitoring so you can always track job progress and diagnose and troubleshoot in case any failure occurs. 
 
 Job monitoring supports three levels of monitoring per deployment:
 
