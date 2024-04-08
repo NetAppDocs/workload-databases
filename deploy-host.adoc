@@ -10,3 +10,85 @@ summary: Deploy a database host in Workload Factory Databases.
 
 [.lead]
 Deploy a database host in Workload Factory Databases. 
+
+== About this task
+You can deploy a new database host in Workload Factory Databases. 
+
+== Before you begin
+You must have AWS credentials to deploy a new database host. 
+
+You can use _Quick create_ or _Advanced create_ deployment modes to complete this task.
+
+.Steps
+
+[role="tabbed-block"]
+====
+
+.Quick create
+--
+1. *AWS settings*: Enter details for AWS settings.
+.. *AWS credentials*: Select AWS credentials to deploy the new host. 
+...	AWS credentials with read permissions let Workload Factory generate a CloudFormation template for you to use in the AWS CloudFormation console. 
+...	AWS credentials with automate permissions let Workload Factory deploy and manage the new database host in your AWS account.
+.. *Region & VPC*: Select a Region and VPC network. 
+.. *Availability zones*: Look at the stage environment
+2. *Application settings*: Enter details for application settings.
+.. *Database credentials*: Enter a user name and password.
+3. *Connectivity*
+.. *Key pair*: Select a key pair.
+.. *Active Directory*: Look in the stage environment
+4. *Infrastructure settings*: Enter details for infrastructure settings.
+.. *FSx for ONTAP system*: Look in the stage environment
+.. *Data drive size*: Enter the data drive capacity and select the capacity unit. 
+5. Summary: 
+.. *Preview default*: Review the default configurations set by Quick create. To finish the file system creation process, click *Create*.
++ 
+Alternatively, if you want to change any of these default settings now, create the file system with Advanced create. 
+.. *Estimated cost*:
+
+--
+
+.Advanced create
+--
+
+1. *Deployment model*: Choose *Failover cluster instance* or *Single instance* for the deployment model.
+2. *AWS settings*
+.. *AWS credentials*: Select AWS credentials to deploy the new host. 
+... AWS credentials with read permissions let Workload Factory generate a CloudFormation template for you to use in the AWS CloudFormation console. 
+... AWS credentials with automate permissions let Workload Factory deploy and manage the new database host in your AWS account.
+.. *Region & VPC*: Select a Region and VPC network. 
+.. *Availability zones*: – Look in the stage environment
+.. *Security group*: – Look in the stage environment
+3. *Application settings*
+.. *Operating system*: Choose *Windows server 2016* or *Windows server 2019*. 
+. *Database edition*: Choose *SQL Server Standard Edition* or *SQL Server Enterprise Edition*. 
+. *Database version*: Select *SQL Server 2016* or *SQL Server 2019*.
+. *SQL Server install type*: Select the SQL Server install type.
+.. License included AMI: Select the SQL Server AMI from the dropdown.
+..	Use custom AMI – Look in the stage environment
+. *Database name*: Enter the database cluster name.
+. *Database credentials*: Enter a user name and password.
+4. *Connectivity*
+.. *Key pair*: Select a key pair.
+.. *Active Directory*: Look in the stage environment
+5. *Infrastructure settings* 
+.. *DB Instance type*: Select the DB instance type from the dropdown. 
+.. *FSx for ONTAP system*: Look in the stage environment
+.. *Data drive size*: Enter the data drive capacity and select the capacity unit. 
+.. *Provisioned IOPS*: Select *Automatic* or *User-provisioned*.
+.. *Throughput capacity*: Select the throughput capacity from the dropdown.
+.. *Encryption*: Select a key from your account or a key from another account. You must enter the encryption key ARN from another account. 
+.. *Tags*: Optionally, you can add up to 40 tags. 
+.. *Simple Notification Service*: Optional - look at the stage environment
+... Select to enable the Simple Notification Service. 
+... Select an ARN from the dropdown.
+.. *CloudWatch monitoring*: Optional. Select to enable CloudWatch monitoring.
+.. *Resource rollback*: Optional. Select to enable Resource rollback.
+6. Summary
+.. *Estimated cost* - Look at the stage environment
+
+--
+
+
+====
+
