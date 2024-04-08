@@ -12,7 +12,7 @@ summary: Deploy a database host in Workload Factory Databases.
 Deploy a database host in Workload Factory Databases. 
 
 == About this task
-You can deploy a new database host in Workload Factory Databases. 
+You can create a new database host in Workload Factory Databases. 
 
 == Before you begin
 You must have AWS credentials to deploy a new database host. 
@@ -26,40 +26,40 @@ You can use _Quick create_ or _Advanced create_ deployment modes to complete thi
 
 .Quick create
 --
-1. *AWS settings*: Enter details for AWS settings.
+1. Under *AWS settings*, provide the following: 
 .. *AWS credentials*: Select AWS credentials to deploy the new host. 
 ...	AWS credentials with read permissions let Workload Factory generate a CloudFormation template for you to use in the AWS CloudFormation console. 
 ...	AWS credentials with automate permissions let Workload Factory deploy and manage the new database host in your AWS account.
 .. *Region & VPC*: Select a Region and VPC network. 
 .. *Availability zones*: Look at the stage environment
-2. *Application settings*: Enter details for application settings.
+2. Under *Application settings*, provide the following: 
 .. *Database credentials*: Enter a user name and password.
 3. *Connectivity*
 .. *Key pair*: Select a key pair.
 .. *Active Directory*: Look in the stage environment
-4. *Infrastructure settings*: Enter details for infrastructure settings.
+4. Under *Infrastructure settings*, provide the following:  
 .. *FSx for ONTAP system*: Look in the stage environment
 .. *Data drive size*: Enter the data drive capacity and select the capacity unit. 
 5. Summary: 
 .. *Preview default*: Review the default configurations set by Quick create. To finish the file system creation process, click *Create*.
 + 
 Alternatively, if you want to change any of these default settings now, create the file system with Advanced create. 
-.. *Estimated cost*:
+.. *Estimated cost*: Provides an estimate of charges that you might incur if you deployed the resources shown. 
 
 --
 
 .Advanced create
 --
 
-1. *Deployment model*: Choose *Failover cluster instance* or *Single instance* for the deployment model.
-2. *AWS settings*
+1. For *Deployment model*,  choose *Failover cluster instance* or *Single instance*.
+2. Under *AWS settings*, provide the following: 
 .. *AWS credentials*: Select AWS credentials to deploy the new host. 
 ... AWS credentials with read permissions let Workload Factory generate a CloudFormation template for you to use in the AWS CloudFormation console. 
 ... AWS credentials with automate permissions let Workload Factory deploy and manage the new database host in your AWS account.
 .. *Region & VPC*: Select a Region and VPC network. 
 .. *Availability zones*: – Look in the stage environment
 .. *Security group*: – Look in the stage environment
-3. *Application settings*
+3. Under *Application settings*, provide the following: 
 .. *Operating system*: Choose *Windows server 2016* or *Windows server 2019*. 
 . *Database edition*: Choose *SQL Server Standard Edition* or *SQL Server Enterprise Edition*. 
 . *Database version*: Select *SQL Server 2016* or *SQL Server 2019*.
@@ -68,10 +68,10 @@ Alternatively, if you want to change any of these default settings now, create t
 ..	Use custom AMI – Look in the stage environment
 . *Database name*: Enter the database cluster name.
 . *Database credentials*: Enter a user name and password.
-4. *Connectivity*
+4. Under *Connectivity*, provide the following:
 .. *Key pair*: Select a key pair.
 .. *Active Directory*: Look in the stage environment
-5. *Infrastructure settings* 
+5. Under *Infrastructure settings*, provide the following:  
 .. *DB Instance type*: Select the DB instance type from the dropdown. 
 .. *FSx for ONTAP system*: Look in the stage environment
 .. *Data drive size*: Enter the data drive capacity and select the capacity unit. 
@@ -85,7 +85,7 @@ Alternatively, if you want to change any of these default settings now, create t
 .. *CloudWatch monitoring*: Optional. Select to enable CloudWatch monitoring.
 .. *Resource rollback*: Optional. Select to enable Resource rollback.
 6. Summary
-.. *Estimated cost* - Look at the stage environment
+.. *Estimated cost*: Provides an estimate of charges that you might incur if you deployed the resources shown. 
 
 --
 
