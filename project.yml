@@ -23,34 +23,34 @@ sidebar:
     entries: 
       - title: Learn about Workload Factory Databases
         url: /learn-databases.html
-      - title: Quick start
-        url: /quick-start.html
-  - title: Requirements
-    url: /requirements-databases.html 
-  - title: Manage hosts
+      - title: Requirements
+        url: /requirements-databases.html  
+#      - title: Quick start
+#        url: /quick-start.html
+  - title: Use Database workloads
     entries: 
       - title: About hosts
         url: /hosts-overview.html
       - title: Deploy a host
         url: /deploy-host.html
       - title: Detect a host
-        url: /detect-host.html  
-  - title: Manage databases
-    entries: 
+        url: /detect-host.html 
       - title: About databases
         url: /databases-overview.html
       - title: Create a database
         url: /create-database.html
+  - title: Administer and monitor
+    entries:
       - title: Monitor databases
         url: /monitor-databases.html 
-  - title: Cost comparison
-    url: /cost-comparison-databases.html
-  - title: Automate with Codebox
-    entries: 
-      - title: Automation catalog
-        url: /automation-catalog.html
-      - title: Code viewer
-        url: /code-viewer.html              
+      - title: Assess costs
+        url: /assess-costs-databases.html
+      - title: Automate with Codebox
+        entries: 
+          - title: Automation catalog
+            url: /automation-catalog.html
+          - title: Code viewer
+            url: /code-viewer.html              
   - title: Knowledge and support
     entries: 
       - title: Register for support
