@@ -43,6 +43,8 @@ sidebar:
     entries:
       - title: Monitor databases
         url: /monitor-databases.html 
+      - title: Manage a database
+        url: /manage-database.html
       - title: Assess costs
         url: /assess-costs-databases.html
       - title: Automate with Codebox
