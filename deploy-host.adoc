@@ -15,32 +15,40 @@ Deploy a database host in Workload Factory Databases.
 You can create a new database host in Workload Factory Databases. 
 
 == Before you begin
-You must have AWS credentials to deploy a new database host. 
+You must have link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html[AWS credentials^] and permissions to deploy a new database host in Workload Factory. 
 
-You can use _Quick create_ or _Advanced create_ deployment modes to complete this task.
+Alternatively, you can use the Codebox to copy an empty template or create a completed template so that you can deploy a database outside of Workload Factory using REST API, AWS CLI, or AWS CloudFormation. 
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html[Learn more about Codebox automation^].
 
 .Steps
+. Log in to the NetApp Workload Factory.
+. In the Databases tile, click *Deploy database*. 
+
+You can use _Quick create_ or _Advanced create_ deployment modes to complete this task in Workload Factory.
+
+If desired, you can use the Codebox to create a template so that you can deploy a database outside of Workload Factory using REST API, AWS CLI, or AWS CloudFormation. Requirements for the Codebox are as follows: 
 
 [role="tabbed-block"]
 ====
 
 .Quick create
---
-1. Under *AWS settings*, provide the following: 
+-- 
+. Under *AWS settings*, provide the following: 
 .. *AWS credentials*: Select AWS credentials to deploy the new host. 
 ...	AWS credentials with read permissions let Workload Factory generate a CloudFormation template for you to use in the AWS CloudFormation console. 
 ...	AWS credentials with automate permissions let Workload Factory deploy and manage the new database host in your AWS account.
 .. *Region & VPC*: Select a Region and VPC network. 
 .. *Availability zones*: Look at the stage environment
-2. Under *Application settings*, provide the following: 
+. Under *Application settings*, provide the following: 
 .. *Database credentials*: Enter a user name and password.
-3. *Connectivity*
+. *Connectivity*
 .. *Key pair*: Select a key pair.
 .. *Active Directory*: Look in the stage environment
-4. Under *Infrastructure settings*, provide the following:  
+. Under *Infrastructure settings*, provide the following:  
 .. *FSx for ONTAP system*: Look in the stage environment
 .. *Data drive size*: Enter the data drive capacity and select the capacity unit. 
-5. Summary: 
+. Summary: 
 .. *Preview default*: Review the default configurations set by Quick create. To finish the file system creation process, click *Create*.
 + 
 Alternatively, if you want to change any of these default settings now, create the file system with Advanced create. 
@@ -50,16 +58,15 @@ Alternatively, if you want to change any of these default settings now, create t
 
 .Advanced create
 --
-
-1. For *Deployment model*,  choose *Failover cluster instance* or *Single instance*.
-2. Under *AWS settings*, provide the following: 
+. For *Deployment model*,  choose *Failover cluster instance* or *Single instance*.
+. Under *AWS settings*, provide the following: 
 .. *AWS credentials*: Select AWS credentials to deploy the new host. 
 ... AWS credentials with read permissions let Workload Factory generate a CloudFormation template for you to use in the AWS CloudFormation console. 
 ... AWS credentials with automate permissions let Workload Factory deploy and manage the new database host in your AWS account.
 .. *Region & VPC*: Select a Region and VPC network. 
 .. *Availability zones*: – Look in the stage environment
 .. *Security group*: – Look in the stage environment
-3. Under *Application settings*, provide the following: 
+. Under *Application settings*, provide the following: 
 .. *Operating system*: Choose *Windows server 2016* or *Windows server 2019*. 
 . *Database edition*: Choose *SQL Server Standard Edition* or *SQL Server Enterprise Edition*. 
 . *Database version*: Select *SQL Server 2016* or *SQL Server 2019*.
@@ -68,10 +75,10 @@ Alternatively, if you want to change any of these default settings now, create t
 ..	Use custom AMI – Look in the stage environment
 . *Database name*: Enter the database cluster name.
 . *Database credentials*: Enter a user name and password.
-4. Under *Connectivity*, provide the following:
+. Under *Connectivity*, provide the following:
 .. *Key pair*: Select a key pair.
 .. *Active Directory*: Look in the stage environment
-5. Under *Infrastructure settings*, provide the following:  
+. Under *Infrastructure settings*, provide the following:  
 .. *DB Instance type*: Select the DB instance type from the dropdown. 
 .. *FSx for ONTAP system*: Look in the stage environment
 .. *Data drive size*: Enter the data drive capacity and select the capacity unit. 
@@ -84,7 +91,7 @@ Alternatively, if you want to change any of these default settings now, create t
 ... Select an ARN from the dropdown.
 .. *CloudWatch monitoring*: Optional. Select to enable CloudWatch monitoring.
 .. *Resource rollback*: Optional. Select to enable Resource rollback.
-6. Summary
+. Summary
 .. *Estimated cost*: Provides an estimate of charges that you might incur if you deployed the resources shown. 
 
 --

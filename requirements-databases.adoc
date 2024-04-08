@@ -12,7 +12,7 @@ summary: Databases has three different modes that have different requirements.
 Databases has three different modes with different requirements. 
 
 == Basic mode
-no permissions required, grab an empty template to be filled outside WF using the CloudFormation (AWS) console
+In Basic mode, you can copy an empty template which you can complete outside of Workload Factory using the AWS CloudFormation console. Permissions aren't required. 
 
 == Read mode
 In read mode, you'll need some read-only permissions in AWS CloudFormation.
@@ -78,7 +78,7 @@ Run the following JSON script to add read mode permissions:
 ----
 
 == Automate mode 
-In automate mode, you'll need AWS credentials, AWS CloudFOrmation permissions, and SSM connectivity.
+In automate mode, you'll need AWS credentials, AWS CloudFormation permissions, and SSM connectivity.
 
 To deploy and manage your workload resources within Workload Factory, you must have:
 
