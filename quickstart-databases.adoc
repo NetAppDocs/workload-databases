@@ -1,0 +1,66 @@
+---
+sidebar: sidebar
+permalink: quick-start-databases.html  
+keywords: requirements, basic mode, read mode, automate mode 
+summary: Databases has three different modes that have different requirements. 
+---
+= Quick start for databases
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+You can get started with Databases in Workload Factory in a few steps.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Verify account credentials and permissions
+
+[role="quick-margin-para"]
+You may have or need to create an AWS account. Add credentials if you don't have an AWS account. 
+
+Databases has three different modes for users, each with their own requirements.
+
+You'll have different requirements for permissions depending on the mode you choose to operate in. 
+
+Databases has three different modes for users, each with their own requirements. 
+
+* _Basic_ mode
++
+In Basic mode, you can copy an empty template which you can complete outside of Workload Factory using the AWS CloudFormation console. Permissions aren't required.
+
+* _Read_ mode
++
+In read mode, you'll need some read-only permissions in AWS CloudFormation.
++
+To use a ready-to-execute template that you fill out in Workload Factory for execution with AWS CloudFormation, you'll need AWS account credentials with some read-only permissions.  
+
+* _Automate_ mode
++
+In automate mode, you'll need AWS credentials, AWS CloudFormation permissions, and SSM connectivity.
++
+To deploy and manage your workload resources within Workload Factory, you must have:
++
+** AWS account credentials 
+** AWS CloudFormation permissions 
+** A deployed Amazon EC2 instance with an installed AWS Systems Manager Agent. The SSM Agent gives Workload Factory access to database host machines for installing, patching, or fetching data. 
+
+And explain about existing or creating new credentials.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy a database host
+
+[role="quick-margin-para"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Create a database
+
+[role="quick-margin-para"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Heading text here
+
+[role="quick-margin-para"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Heading text here
+
+[role="quick-margin-para"]
+
+== What's next

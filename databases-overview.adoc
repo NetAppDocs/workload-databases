@@ -9,3 +9,11 @@ summary: This is the overview of databases.
 :imagesdir: ./media/
 
 [.lead]
+Workload Factory Databases provides database management for Microsoft SQL databases. 
+
+== Database considerations
+
+== Database workloads
+
+== Database resources
+

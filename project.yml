@@ -22,11 +22,9 @@ sidebar:
   - title: Get started
     entries: 
       - title: Learn about Workload Factory Databases
-        url: /learn-databases.html
-      - title: Requirements
-        url: /requirements-databases.html  
-#      - title: Quick start
-#        url: /quick-start.html
+        url: /learn-databases.html 
+      - title: Quick start
+        url: /quick-start-databases.html
   - title: Use Database workloads
     entries: 
       - title: About hosts
