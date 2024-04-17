@@ -46,11 +46,7 @@ sidebar:
       - title: Assess costs
         url: /assess-costs-databases.html
       - title: Automate with Codebox
-        entries: 
-          - title: Automation catalog
-            url: /automation-catalog.html
-          - title: Code viewer
-            url: /code-viewer.html              
+        utl: /automate-codebox.html            
   - title: Knowledge and support
     entries: 
       - title: Register for support
