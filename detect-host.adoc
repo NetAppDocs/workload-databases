@@ -25,7 +25,7 @@ Hosts are categorized as follows:
 This task is for detecting an unidentifiable host. 
 
 === MS-SQL host detection 
-When a Microsoft SQL host is detected, the existing environment isn't modified. Detection happens through Amazon's SSM service. So, the EC2 instances should have role/instance profile that allows AWS Systems Manager Session Manager (SSM) connection for detection to work. link:https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-troubleshooting.html[Learn more about SSM troubleshooting^].
+When a Microsoft SQL host is detected, the existing environment isn't modified. Detection happens through AWS Systems Manager Session Manager (SSM). So, the EC2 instances should have role/instance profile that allows SSM connection for detection to work. link:https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-troubleshooting.html[Learn more about SSM troubleshooting^].
 
 
 == Before you begin
