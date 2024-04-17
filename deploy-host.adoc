@@ -39,14 +39,43 @@ If desired, you can use the Codebox to create a template so that you can deploy 
 ...	AWS credentials with read permissions let Workload Factory generate a CloudFormation template for you to use in the AWS CloudFormation console. 
 ...	AWS credentials with automate permissions let Workload Factory deploy and manage the new database host in your AWS account.
 .. *Region & VPC*: Select a Region and VPC network. 
++
+Ensure security groups for an existing interface endpoint allow access to HTTPS (443) protocol to the selected subnets. 
++
+AWS Service interface endpoints (SQS, FSx, EC2, CloudWatch, Cloud Formation, SSM) and S3 gateway endpoint are created during deployment if not found.  
++
+VPC DNS attributes (`EnableDnsSupport`` and `EnableDnsHostnames``) are modified to enable resolve endpoint address resolution if not set to true already.
 .. *Availability zones*: Look at the stage environment
+If using an existing FSx for ONTAP for FCI, (only MAZ deployment supported): 
++
+In a multiple Availability Zone (MAZ) configuration, the Availability Zones (AZ) you select should span the two Availability zones of FSx for ONTAP where AZ of node 1 should be the primary AZ of the MAZ for FSx for ONTAP.  
 . Under *Application settings*, provide the following: 
 .. *Database credentials*: Enter a user name and password.
 . *Connectivity*
 .. *Key pair*: Select a key pair.
 .. *Active Directory*: Look in the stage environment
++
+The following occurs during deployment: 
+
+* A new SQL service account is created (in case non-existing SQL service account is provided) 
+* The Windows Cluster, node hostnames and SQL FCI name are added as managed Computers to the account 
+* Windows cluster entry will be assigned permissions to add computers to domain 
++
+If you give an existing SQL service account in the domain, that would be used. Else, a new service account user is created in domain. 
++
+On rollback, these entries are not removed automatically. 
+
 . Under *Infrastructure settings*, provide the following:  
 .. *FSx for ONTAP system*: Look in the stage environment
++ 
+A multiple Availability Zone FSx for ONTAP filesystem is deployed when a new FSx is selected for FCI deployment. For standalone SQL deployment, a single Availability Zone FSx for ONTAP filesystem is created. 
++
+If you select an existing FSx for ONTAP file system, a new storage VM is created for the MSSQL workloads.  
++
+Separate volumes and LUNs are created for data, log, and tempdb files for Standalone and FCI deployment. 
++
+In case of FCI, an additional Volume and LUN is created for Quorum or witness disk for Windows cluster. 
+
 .. *Data drive size*: Enter the data drive capacity and select the capacity unit. 
 . Summary: 
 .. *Preview default*: Review the default configurations set by Quick create. To finish the file system creation process, click *Create*.
@@ -64,8 +93,30 @@ Alternatively, if you want to change any of these default settings now, create t
 ... AWS credentials with read permissions let Workload Factory generate a CloudFormation template for you to use in the AWS CloudFormation console. 
 ... AWS credentials with automate permissions let Workload Factory deploy and manage the new database host in your AWS account.
 .. *Region & VPC*: Select a Region and VPC network. 
++
+Ensure security groups for an existing interface endpoint allow access to HTTPS (443) protocol to the selected subnets. 
++
+AWS Service interface endpoints (SQS, FSx, EC2, CloudWatch, Cloud Formation, SSM) and S3 gateway endpoint are created during deployment if not found.  
++
+VPC DNS attributes (`EnableDnsSupport`` and `EnableDnsHostnames``) are modified to enable resolve endpoint address resolution if not set to true already. 
+
 .. *Availability zones*: – Look in the stage environment
+If using an existing FSx for ONTAP for FCI, (only MAZ deployment supported): 
++
+In a multiple Availability Zone (MAZ) configuration, the Availability Zones (AZ) you select should span the two Availability zones of FSx for ONTAP where AZ of node 1 should be the primary AZ of the MAZ for FSx for ONTAP.  
+
 .. *Security group*: – Look in the stage environment
++
+As part of deployment three security groups get attached to the SQL nodes (EC2 instances). 
++
+1. A workload security group is created to allow ports and protocols required for the SQL and Windows cluster communication on nodes. 
++
+2. In case of AWS managed Active Directory, the SG attached to the directory service will be automatically added to the SQL nodes, to allow communication with the AD.  
++
+3. In case of existing FSx for ONTAP file system, the security group associated with it is added automatically to the SQL nodes which allows communication to the file system. When a new FSx for ONTAP system is created, a new security group is created for the FSx file system and the same security group also gets attached to SQL nodes.
++
+You can select an additional security groups that allows traffic from your existing host farm/Windows clients. These additional security groups are when selecting user-managed Active Directory. The security group should allow communication to this domain from the subnets where EC2 instances for SQL are configured. 
+
 . Under *Application settings*, provide the following: 
 .. *Operating system*: Choose *Windows server 2016* or *Windows server 2019*. 
 . *Database edition*: Choose *SQL Server Standard Edition* or *SQL Server Enterprise Edition*. 
@@ -78,6 +129,17 @@ Alternatively, if you want to change any of these default settings now, create t
 . Under *Connectivity*, provide the following:
 .. *Key pair*: Select a key pair.
 .. *Active Directory*: Look in the stage environment
++
+The following occurs during deployment: 
+
+* A new SQL service account is created (in case non-existing SQL service account is provided) 
+* The Windows Cluster, node hostnames and SQL FCI name are added as managed Computers to the account 
+* Windows cluster entry will be assigned permissions to add computers to domain 
++
+If you give an existing SQL service account in the domain, that would be used. Else, a new service account user is created in domain. 
++
+On rollback, these entries are not removed automatically. 
+
 . Under *Infrastructure settings*, provide the following:  
 .. *DB Instance type*: Select the DB instance type from the dropdown. 
 .. *FSx for ONTAP system*: Look in the stage environment
@@ -90,7 +152,15 @@ Alternatively, if you want to change any of these default settings now, create t
 ... Select to enable the Simple Notification Service. 
 ... Select an ARN from the dropdown.
 .. *CloudWatch monitoring*: Optional. Select to enable CloudWatch monitoring.
++
+In CloudWatch, a Log group is created with the name of stack and log stream for each of validation nodes and SQL nodes appear under it. This will show progress script wise and helps understand at which step the deployment failed with the exception message. 
++
+We recommend enabling CloudWatch to debug in case of failure. The events in CloudFormation console are at very high level and not useful to know the cause. All detailed logs are saved in the `C:\cfn\logs`` folder in the EC2 instances.
+
 .. *Resource rollback*: Optional. Select to enable Resource rollback.
++
+On rollback or stack deletion after testing deployment or of failed deployment, all the resources created during deployment are cleaned up. Only exception are entries in the Active Directory and DNS.
+
 . Summary
 .. *Estimated cost*: Provides an estimate of charges that you might incur if you deployed the resources shown. 
 

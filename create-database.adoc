@@ -10,3 +10,19 @@ summary: Create a MySQL database with Workload Factory Databases.
 
 [.lead]
 Create a MySQL database with Workload Factory Databases. 
+
+.FSx for ONTAP
++ 
+Actions: If easy create is selected or new drive option is selected from Advanced create, two new volumes are created consisting of independent LUNs to host data and log files for the database.
++ 
+Conditions: By default, the default collation on SQL server is selected. User can change this in the create database wizard.
+
+.Windows Host
+Actions: On the server hosting SQL, drives from ONTAP are initialized, formatted and mounted as new drives.
++ 
+Conditions: There should be enough drive letters available on host to create new drives.
+
+.SQL Server
+Actions: A new database will be created of given size and collation.
++ 
+Conditions: The database files are thin provisioned and will consume only few MBs on creation and not the whole size assigned 

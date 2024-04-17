@@ -1,0 +1,27 @@
+---
+sidebar: sidebar
+permalink: manage-hosts.html
+keywords: 
+summary: Manage existing hosts. 
+---
+= Manage hosts
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Manage existing hosts within Workload Factory Databases. 
+
+== Managed hosts
+
+=== View host overview
+
+=== View databases list
+
+=== Remove a managed host
+
+== Unmanaged hosts
+
+=== Manage host
+
+=== Unidentifiable hosts
+

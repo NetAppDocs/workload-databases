@@ -33,18 +33,18 @@ sidebar:
         url: /deploy-host.html
       - title: Detect a host
         url: /detect-host.html 
+      - title: Manage hosts 
+        url: /manage-hosts.html 
       - title: About databases
         url: /databases-overview.html
       - title: Create a database
         url: /create-database.html
-  - title: Administer and monitor
-    entries:
+      - title: Manage databases
+        url: /manage-databases.html  
       - title: Monitor databases
-        url: /monitor-databases.html 
-      - title: Manage a database
-        url: /manage-database.html
-      - title: Assess costs
-        url: /assess-costs-databases.html
+        url: /monitor-databases.html  
+  - title: Reference
+    entries:
       - title: Automate with Codebox
         utl: /automate-codebox.html            
   - title: Knowledge and support

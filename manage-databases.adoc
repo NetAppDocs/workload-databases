@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: manage-database.html
+permalink: manage-databases.html
 keywords: manage a database, manage databases
 summary: Manage your databases
 ---
