@@ -12,7 +12,11 @@ summary: Deploy a database host in Workload Factory Databases.
 Deploy a database host in Workload Factory Databases. 
 
 == About this task
-You can create a new database host in Workload Factory Databases. 
+You can create a new Microsoft SQL server, or database host, in Workload Factory Databases. 
+
+=== Standalone deployments
+
+=== FCI deployments
 
 == Before you begin
 You must have link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html[AWS credentials^] and permissions to deploy a new database host in Workload Factory. 
@@ -27,7 +31,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html[
 
 You can use _Quick create_ or _Advanced create_ deployment modes to complete this task in Workload Factory.
 
-If desired, you can use the Codebox to create a template so that you can deploy a database outside of Workload Factory using REST API, AWS CLI, or AWS CloudFormation. Requirements for the Codebox are as follows: 
+If desired, you can use the Codebox to create a template so that you can deploy a database outside of Workload Factory using REST API, AWS CLI, or AWS CloudFormation. In _Basic_ mode, you'll copy the empty template from the Codebox. In _Read_ mode, you can complete the _Quick create_ or _Advanced create_ form and then copy it. 
 
 [role="tabbed-block"]
 ====
@@ -45,25 +49,36 @@ Ensure security groups for an existing interface endpoint allow access to HTTPS 
 AWS Service interface endpoints (SQS, FSx, EC2, CloudWatch, Cloud Formation, SSM) and S3 gateway endpoint are created during deployment if not found.  
 +
 VPC DNS attributes (`EnableDnsSupport`` and `EnableDnsHostnames``) are modified to enable resolve endpoint address resolution if not set to true already.
-.. *Availability zones*: Look at the stage environment
-If using an existing FSx for ONTAP for FCI, (only MAZ deployment supported): 
+.. *Availability zones*: Select availability zones and subnets according to the failover cluster instance (FCI) deployment model.
+
+NOTE: Multiple Availability Zone (MAZ) configurations are only supported for FCI deployments. In a MAZ configuration, the Availability Zones (AZ) you select should span the two Availability Zones of FSx for ONTAP where the AZ of node 1 should be the primary AZ of the MAZ for FSx for ONTAP.  
 +
-In a multiple Availability Zone (MAZ) configuration, the Availability Zones (AZ) you select should span the two Availability zones of FSx for ONTAP where AZ of node 1 should be the primary AZ of the MAZ for FSx for ONTAP.  
+... In the *Cluster configuration - Node 1* field, select an availability zone from the *Availability zone* from the dropdown menu and a subnet from the *Subnet* dropdown menu. 
+... In the *Cluster configuration - Node 2* field, select an availability zone from the *Availability zone* from the dropdown menu and a subnet from the *Subnet* dropdown menu. 
+
 . Under *Application settings*, provide the following: 
 .. *Database credentials*: Enter a user name and password.
 . *Connectivity*
 .. *Key pair*: Select a key pair.
-.. *Active Directory*: Look in the stage environment
+.. *Active Directory*: 
+... In the *Domain name* field, select or enter a name for the domain.
+.... For AWS managed Active Directories, domain names appear in the dropdown menu. 
+.... For a user-managed Active Directory, enter a name in the *Search and Add* field, and click *Add*. 
+... In the *DNS address* field, enter the DNS IP address for the domain. You can add up to 3 IP addresses. 
 +
-The following occurs during deployment: 
+For AWS managed Active Directories, the DNS IP address(es) appear in the dropdown menu.
+... In the *User name* field, enter the user name for the Active Directory domain. 
++
+The user must have administrative access.  
+... In the *Password* field, enter a password for the Active Directory domain.
++
+The following occurs for Active Directory during deployment: 
 
-* A new SQL service account is created (in case non-existing SQL service account is provided) 
-* The Windows Cluster, node hostnames and SQL FCI name are added as managed Computers to the account 
-* Windows cluster entry will be assigned permissions to add computers to domain 
+* A new Microsoft SQL service account is created in the domain if you don't provide an existing SQL service account.
+* The Windows cluster, node host names, and Microsoft SQL FCI name are added as managed computers to the Microsoft SQL service account. 
+* The Windows cluster entry is assigned permissions to add computers to the domain. 
 +
-If you give an existing SQL service account in the domain, that would be used. Else, a new service account user is created in domain. 
-+
-On rollback, these entries are not removed automatically. 
+NOTE: If you decide to rollback your resources, these entries are not removed automatically and can be cleaned up from the DNS server. For more information, refer to (add link to rollback information).
 
 . Under *Infrastructure settings*, provide the following:  
 .. *FSx for ONTAP system*: Look in the stage environment
@@ -87,7 +102,7 @@ Alternatively, if you want to change any of these default settings now, create t
 
 .Advanced create
 --
-. For *Deployment model*,  choose *Failover cluster instance* or *Single instance*.
+. For *Deployment model*,  select *Failover cluster instance* or *Single instance*.
 . Under *AWS settings*, provide the following: 
 .. *AWS credentials*: Select AWS credentials to deploy the new host. 
 ... AWS credentials with read permissions let Workload Factory generate a CloudFormation template for you to use in the AWS CloudFormation console. 
@@ -100,10 +115,17 @@ AWS Service interface endpoints (SQS, FSx, EC2, CloudWatch, Cloud Formation, SSM
 +
 VPC DNS attributes (`EnableDnsSupport`` and `EnableDnsHostnames``) are modified to enable resolve endpoint address resolution if not set to true already. 
 
-.. *Availability zones*: – Look in the stage environment
-If using an existing FSx for ONTAP for FCI, (only MAZ deployment supported): 
+.. *Availability zones*: Select availability zones and subnets according to the deployment model you selected.
 +
-In a multiple Availability Zone (MAZ) configuration, the Availability Zones (AZ) you select should span the two Availability zones of FSx for ONTAP where AZ of node 1 should be the primary AZ of the MAZ for FSx for ONTAP.  
+* For standalone deployments: 
+** In the *Cluster configuration - Node 1* field, select an availability zone from the *Availability zone* from the dropdown menu and a subnet from the *Subnet* dropdown menu. 
++
+* For FCI deployments: 
++
+NOTE: Multiple Availability Zone (MAZ) configurations are only supported for FCI deployments. In a MAZ configuration, the Availability Zones (AZ) you select should span the two Availability Zones of FSx for ONTAP where the AZ of node 1 should be the primary AZ of the MAZ for FSx for ONTAP.  
++
+** In the *Cluster configuration - Node 1* field, select an availability zone from the *Availability zone* from the dropdown menu and a subnet from the *Subnet* dropdown menu. 
+** In the *Cluster configuration - Node 2* field, select an availability zone from the *Availability zone* from the dropdown menu and a subnet from the *Subnet* dropdown menu. 
 
 .. *Security group*: – Look in the stage environment
 +
