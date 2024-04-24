@@ -1,22 +1,42 @@
 ---
 sidebar: sidebar
 permalink: deploy-host.html
-keywords: deploy, host, deploy a database host, database host 
+keywords: create, server, Microsoft SQL, deploy, host, deploy a database host, database host 
 summary: Deploy a database host in Workload Factory Databases. 
 ---
-= Deploy a host
+= Create a Microsoft SQL server
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Deploy a database host in Workload Factory Databases. 
+Create a Microsoft SQL server in Workload Factory Databases. 
 
 == About this task
-You can create a new Microsoft SQL server, or database host, in Workload Factory Databases. 
+You can create a new Microsoft SQL server, or database host, in Workload Factory Databases. Learn more about the following parameters and the <<Before you begin,requirements>> to complete this operation.
 
-=== Standalone deployments
+=== FSx for ONTAP file system deployments
+Creating a new Microsoft SQL server requires an FSx for ONTAP file system as the storage backend. You can use an existing FSx for ONTAP file system or create a new file system. If you select an existing FSx for ONTAP file system as your database server storage backend, we create a new storage VM for the Microsoft SQL workloads. 
 
-=== FCI deployments
+FSx for ONTAP file systems have two Microsoft SQL deployment models: _Failover Cluster Instance (FCI)_ or _Standalone_. Different resources are created for the FSx for ONTAP file system depending on the FSx for ONTAP deployment model you select.
+
+NOTE: In _Quick create_, FCI is the default deployment model.
+
+.Failover Cluster Instance (FCI) Microsoft SQL deployment
+A multiple Availability Zone FSx for NetApp ONTAP filesystem is deployed when a new FSx for ONTAP file system is selected for FCI deployment. 
+
+Separate volumes and LUNs are created for data, log, and tempdb files for an FCI deployment. An additional volume and LUN is created for Quorum or witness disk for Windows cluster. 
+
+.Standalone Microsoft SQL deployment
+A single Availability Zone FSx for ONTAP filesystem is created when a new Microsoft SQL server is created. In addition, separate volumes and LUNs are created for data, log, and tempdb files
+
+=== Active Directory
+The following occurs for Active Directory during deployment: 
+
+* A new Microsoft SQL service account is created in the domain if you don't provide an existing SQL service account.
+* The Windows cluster, node host names, and Microsoft SQL FCI name are added as managed computers to the Microsoft SQL service account. 
+* The Windows cluster entry is assigned permissions to add computers to the domain. 
+
+NOTE: If you decide to rollback your resources, these entries are not removed automatically and can be cleaned up from the DNS server. For more information, refer to (add link to rollback information).
 
 == Before you begin
 You must have link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html[AWS credentials^] and permissions to deploy a new database host in Workload Factory. 
@@ -24,6 +44,15 @@ You must have link:https://docs.netapp.com/us-en/workload-setup-admin/manage-cre
 Alternatively, you can use the Codebox to copy an empty template or create a completed template so that you can deploy a database outside of Workload Factory using REST API, AWS CLI, or AWS CloudFormation. 
 
 link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html[Learn more about Codebox automation^].
+
+When connecting to Active Directory, you must have administrative access with permissions to do the following: 
+
+* Join the domain  
+* Create Computer Objects 
+* Create objects in default Organization Unit (OU) 
+* Read all properties 
+* Make this domain user as a local admin on the AD nodes 
+* Create SQL Server service user in the AD, if it doesn't exist already 
 
 .Steps
 . Log in to the NetApp Workload Factory.
@@ -46,15 +75,17 @@ If desired, you can use the Codebox to create a template so that you can deploy 
 +
 Ensure security groups for an existing interface endpoint allow access to HTTPS (443) protocol to the selected subnets. 
 +
-AWS Service interface endpoints (SQS, FSx, EC2, CloudWatch, Cloud Formation, SSM) and S3 gateway endpoint are created during deployment if not found.  
+AWS Service interface endpoints (SQS, FSx, EC2, CloudWatch, Cloud Formation, SSM) and the S3 gateway endpoint are created during deployment if not found.  
 +
-VPC DNS attributes (`EnableDnsSupport`` and `EnableDnsHostnames``) are modified to enable resolve endpoint address resolution if not set to true already.
-.. *Availability zones*: Select availability zones and subnets according to the failover cluster instance (FCI) deployment model.
+VPC DNS attributes `EnableDnsSupport` and `EnableDnsHostnames` are modified to enable endpoint address resolution if they aren't set to `true` already.
+.. *Availability zones*: Select availability zones and subnets according to the failover cluster instance (FCI) deployment model. 
++
+NOTE: FCI deployments are only supported on Multiple Availability Zone (MAZ) FSx for ONTAP configurations.
++
+NOTE: Subnets should not share the same route table for high availability. 
 
-NOTE: Multiple Availability Zone (MAZ) configurations are only supported for FCI deployments. In a MAZ configuration, the Availability Zones (AZ) you select should span the two Availability Zones of FSx for ONTAP where the AZ of node 1 should be the primary AZ of the MAZ for FSx for ONTAP.  
-+
-... In the *Cluster configuration - Node 1* field, select an availability zone from the *Availability zone* from the dropdown menu and a subnet from the *Subnet* dropdown menu. 
-... In the *Cluster configuration - Node 2* field, select an availability zone from the *Availability zone* from the dropdown menu and a subnet from the *Subnet* dropdown menu. 
+... In the *Cluster configuration - Node 1* field, select the primary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the primary availability zone from the *Subnet* dropdown menu. 
+... In the *Cluster configuration - Node 2* field, select the secondary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the secondary availability zone from the *Subnet* dropdown menu. 
 
 . Under *Application settings*, provide the following: 
 .. *Database credentials*: Enter a user name and password.
@@ -68,28 +99,11 @@ NOTE: Multiple Availability Zone (MAZ) configurations are only supported for FCI
 +
 For AWS managed Active Directories, the DNS IP address(es) appear in the dropdown menu.
 ... In the *User name* field, enter the user name for the Active Directory domain. 
-+
-The user must have administrative access.  
 ... In the *Password* field, enter a password for the Active Directory domain.
-+
-The following occurs for Active Directory during deployment: 
-
-* A new Microsoft SQL service account is created in the domain if you don't provide an existing SQL service account.
-* The Windows cluster, node host names, and Microsoft SQL FCI name are added as managed computers to the Microsoft SQL service account. 
-* The Windows cluster entry is assigned permissions to add computers to the domain. 
-+
-NOTE: If you decide to rollback your resources, these entries are not removed automatically and can be cleaned up from the DNS server. For more information, refer to (add link to rollback information).
-
 . Under *Infrastructure settings*, provide the following:  
-.. *FSx for ONTAP system*: Look in the stage environment
-+ 
-A multiple Availability Zone FSx for ONTAP filesystem is deployed when a new FSx is selected for FCI deployment. For standalone SQL deployment, a single Availability Zone FSx for ONTAP filesystem is created. 
-+
-If you select an existing FSx for ONTAP file system, a new storage VM is created for the MSSQL workloads.  
-+
-Separate volumes and LUNs are created for data, log, and tempdb files for Standalone and FCI deployment. 
-+
-In case of FCI, an additional Volume and LUN is created for Quorum or witness disk for Windows cluster. 
+.. *FSx for ONTAP system*: You can create a new FSx for ONTAP file system or use an existing FSx for ONTAP file system. 
+... *Create new FSx for ONTAP*
+
 
 .. *Data drive size*: Enter the data drive capacity and select the capacity unit. 
 . Summary: 
@@ -117,15 +131,16 @@ VPC DNS attributes (`EnableDnsSupport`` and `EnableDnsHostnames``) are modified 
 
 .. *Availability zones*: Select availability zones and subnets according to the deployment model you selected.
 +
-* For standalone deployments: 
-** In the *Cluster configuration - Node 1* field, select an availability zone from the *Availability zone* from the dropdown menu and a subnet from the *Subnet* dropdown menu. 
+NOTE: FCI deployments are only supported on Multiple Availability Zone (MAZ) FSx for ONTAP configurations. 
++ 
+NOTE: Subnets should not share the same route table for high availability. 
 +
-* For FCI deployments: 
+For standalone deployments::: 
+... In the *Cluster configuration - Node 1* field, select an availability zone from the *Availability zone* from the dropdown menu and a subnet from the *Subnet* dropdown menu. 
 +
-NOTE: Multiple Availability Zone (MAZ) configurations are only supported for FCI deployments. In a MAZ configuration, the Availability Zones (AZ) you select should span the two Availability Zones of FSx for ONTAP where the AZ of node 1 should be the primary AZ of the MAZ for FSx for ONTAP.  
-+
-** In the *Cluster configuration - Node 1* field, select an availability zone from the *Availability zone* from the dropdown menu and a subnet from the *Subnet* dropdown menu. 
-** In the *Cluster configuration - Node 2* field, select an availability zone from the *Availability zone* from the dropdown menu and a subnet from the *Subnet* dropdown menu. 
+For FCI deployments::: 
+... In the *Cluster configuration - Node 1* field, select the primary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the primary availability zone from the *Subnet* dropdown menu. 
+... In the *Cluster configuration - Node 2* field, select the secondary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the secondary availability zone from the *Subnet* dropdown menu. 
 
 .. *Security group*: – Look in the stage environment
 +
@@ -150,24 +165,24 @@ You can select an additional security groups that allows traffic from your exist
 . *Database credentials*: Enter a user name and password.
 . Under *Connectivity*, provide the following:
 .. *Key pair*: Select a key pair.
-.. *Active Directory*: Look in the stage environment
-+
-The following occurs during deployment: 
+.. *Active Directory*: Provide the following Active Directory details: 
 
-* A new SQL service account is created (in case non-existing SQL service account is provided) 
-* The Windows Cluster, node hostnames and SQL FCI name are added as managed Computers to the account 
-* Windows cluster entry will be assigned permissions to add computers to domain 
+... In the *Domain name* field, select or enter a name for the domain.
+.... For AWS managed Active Directories, domain names appear in the dropdown menu. 
+.... For a user-managed Active Directory, enter a name in the *Search and Add* field, and click *Add*. 
+... In the *DNS address* field, enter the DNS IP address for the domain. You can add up to 3 IP addresses. 
 +
-If you give an existing SQL service account in the domain, that would be used. Else, a new service account user is created in domain. 
-+
-On rollback, these entries are not removed automatically. 
-
+For AWS managed Active Directories, the DNS IP address(es) appear in the dropdown menu.
+... In the *User name* field, enter the user name for the Active Directory domain. 
+... In the *Password* field, enter a password for the Active Directory domain.
 . Under *Infrastructure settings*, provide the following:  
 .. *DB Instance type*: Select the DB instance type from the dropdown. 
 .. *FSx for ONTAP system*: Look in the stage environment
 .. *Data drive size*: Enter the data drive capacity and select the capacity unit. 
 .. *Provisioned IOPS*: Select *Automatic* or *User-provisioned*.
 .. *Throughput capacity*: Select the throughput capacity from the dropdown.
++
+In certain regions, you may select 4 GBps throughput capacity. If you selects 4 GBps, the SSD capacity must be ? (ask Nithin).
 .. *Encryption*: Select a key from your account or a key from another account. You must enter the encryption key ARN from another account. 
 .. *Tags*: Optionally, you can add up to 40 tags. 
 .. *Simple Notification Service*: Optional - look at the stage environment
@@ -175,13 +190,13 @@ On rollback, these entries are not removed automatically.
 ... Select an ARN from the dropdown.
 .. *CloudWatch monitoring*: Optional. Select to enable CloudWatch monitoring.
 +
-In CloudWatch, a Log group is created with the name of stack and log stream for each of validation nodes and SQL nodes appear under it. This will show progress script wise and helps understand at which step the deployment failed with the exception message. 
+We recommend enabling CloudWatch for debugging in case of failure. The events which appear in the CloudFormation console are high-level and do not specify the root cause. All detailed logs are saved in the `C:\cfn\logs` folder in the EC2 instances.
 +
-We recommend enabling CloudWatch to debug in case of failure. The events in CloudFormation console are at very high level and not useful to know the cause. All detailed logs are saved in the `C:\cfn\logs`` folder in the EC2 instances.
+In CloudWatch, a Log group is created with the name of the stack and log stream for every validation node and SQL node that appear under it (under what?). This (what?) will show progress script wise and helps understand at which step the deployment failed with the exception message. 
 
 .. *Resource rollback*: Optional. Select to enable Resource rollback.
 +
-On rollback or stack deletion after testing deployment or of failed deployment, all the resources created during deployment are cleaned up. Only exception are entries in the Active Directory and DNS.
+If you roll back your resources, all resources created during deployment are cleaned up/removed (?) with the exception of Active Directory and DNS resources. 
 
 . Summary
 .. *Estimated cost*: Provides an estimate of charges that you might incur if you deployed the resources shown. 
