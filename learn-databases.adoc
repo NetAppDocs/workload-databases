@@ -34,7 +34,7 @@ Deployment options include a “Quick create” and an “Advanced create”.
 
 == Cost
 
-Databases includes a storage savings calculator to assess pre-deployment costs. 
+Databases includes a savings calculator to assess pre-deployment costs. 
 
 == Supported regions
 
