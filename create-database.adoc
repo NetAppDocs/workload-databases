@@ -1,15 +1,15 @@
 ---
 sidebar: sidebar
 permalink: create-database.html
-keywords: create, database, creation, MySQL
-summary: Create a MySQL database with Workload Factory Databases. 
+keywords: create, database, creation, Microsoft SQL
+summary: Create a Microsoft SQL database with Workload Factory Databases. 
 ---
 = Create a database
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Create a MySQL database with Workload Factory Databases. 
+Create a Microsoft SQL database with Workload Factory Databases. 
 
 .FSx for ONTAP
 + 

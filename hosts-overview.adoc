@@ -17,7 +17,7 @@ Workload Factory Databases detects and deploys database hosts. When AWS credenti
 * FSx for ONTAP
 * FSx for Windows File Servers
 * FSx for Elastic Block Storage (EBS)
-* FSx for Elastic File Storage (EFS)
+//* FSx for Elastic File Storage (EFS)
 
 In Databases, deploying a Microsoft SQL server is possible with the following tools:
 
