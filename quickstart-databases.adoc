@@ -22,25 +22,22 @@ Follow these steps to get started with Workload Factory Databases.
 
 First, you'll need to log in and set up an account with Workload Factory. 
 
+[role="quick-margin-para"]
 link:https://review.docs.netapp.com/us-en/workload-setup-admin_first-draft/sign-up-saas.html[Sign up to Workload Factory^].
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Choose the mode you want to operate in
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Add credentials and permissions
 
 [role="quick-margin-para"]
 
-Next, decide which operation mode to operate in. Choose between Basic, Read, and Automate modes. 
-
-If you choose to operate in Basic mode, you don't need to go any further. You can start using Workload Factory Databases to copy empty code templates. In the Databases tile, click *Deploy database*. link:deploy-host.html[Learn how to deploy a database host]. You can also start with the calculator (provide link to task-based page to use the calculator and link to calculator reference).  
-
-If you choose to operate in Read or Automate modes, continue to step 3. 
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Add credentials and permissions
+Choose between Basic, Read, and Automate modes. 
 
 [role="quick-margin-para"]
+If you choose to operate in Basic mode, you don't need to go any further. You can start using Workload Factory Databases to copy empty code templates. In the Databases tile, click *Deploy database*. link:deploy-host.html[Learn how to deploy a database host]. You can also start with the calculator (provide link to task-based page to use the calculator and link to calculator reference). If you choose to operate in Read or Automate modes, continue to step 3. 
 
+[role="quick-margin-para"]
 If you operate in Read or Automate mode, you'll need to link:https://review.docs.netapp.com/us-en/workload-setup-admin_first-draft/manage-credentials.html[add credentials to an account manually^] which includes selecting workload capabilities, such as Databases and AI, and creating the IAM policies to ensure you have the correct permissions for operating in Read or Automate mode.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Deploy a database host
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Deploy a database host
 
 [role="quick-margin-para"]
 

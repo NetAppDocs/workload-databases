@@ -1,0 +1,12 @@
+---
+sidebar: sidebar
+permalink: create-sandbox-clone.html
+keywords: create, clone, sandbox
+summary: Create a sandbox clone in Workload Factory Databases. 
+---
+= Create a sandbox clone
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Create a sandbox clone in Workload Factory Databases. 

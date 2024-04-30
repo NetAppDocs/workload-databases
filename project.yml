@@ -26,26 +26,30 @@ sidebar:
         url: /quick-start-databases.html
   - title: Use Database workloads
     entries: 
+    #  - title: Automate with Codebox
+    #    url: automate-codebox.html
       - title: About hosts
         url: /hosts-overview.html
-      - title: Deploy a host
-        url: /deploy-host.html
-      - title: Detect a host
+      - title: Create a new database host
+        url: /create-database-host.html
+      - title: Detect a database host
         url: /detect-host.html 
-      - title: Manage hosts 
-        url: /manage-hosts.html 
       - title: About databases
         url: /databases-overview.html
       - title: Create a database
         url: /create-database.html
-      - title: Manage databases
-        url: /manage-databases.html  
-      - title: Monitor databases
-        url: /monitor-databases.html  
-  - title: Reference
+  - title: Administer and monitor
     entries:
-      - title: Automate with Codebox
-        utl: /automate-codebox.html            
+    #  - title: Manage database servers
+    #    entries: 
+    #  - title: Manage databases
+    #    entries: 
+      - title: Monitor databases
+        url: /monitor-databases.html
+      - title: Manage clones
+        entries: 
+          - title: Create a sandbox clone 
+            url: create-sandbox-clone.html                  
   - title: Knowledge and support
     entries: 
       - title: Register for support

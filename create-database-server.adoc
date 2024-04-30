@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar
-permalink: deploy-host.html
+permalink: create-database-host.html
 keywords: create, server, Microsoft SQL, deploy, host, deploy a database host, database host 
 summary: Deploy a database host in Workload Factory Databases. 
 ---
-= Create a Microsoft SQL server
+= Create a database host
 :icons: font
 :imagesdir: ./media/
 
@@ -39,11 +39,9 @@ The following occurs for Active Directory during deployment:
 NOTE: If you decide to rollback your resources, these entries are not removed automatically and can be cleaned up from the DNS server. For more information, refer to (add link to rollback information).
 
 == Before you begin
-You must have link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html[AWS credentials^] and permissions to deploy a new database host in Workload Factory. 
+You must have link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html[AWS credentials and permissions^] to create a new database host in Workload Factory. 
 
-Alternatively, you can use the Codebox to copy an empty template or create a completed template so that you can deploy a database outside of Workload Factory using REST API, AWS CLI, or AWS CloudFormation. 
-
-link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html[Learn more about Codebox automation^].
+Alternatively, you can use the Codebox to copy an empty template or create a completed template so that you can deploy a database outside of Workload Factory using REST API, AWS CLI, or AWS CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html[Learn more about Codebox automation^].
 
 When connecting to Active Directory, you must have administrative access with permissions to do the following: 
 
