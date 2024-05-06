@@ -4,39 +4,115 @@ permalink: learn-databases.html
 keywords: Databases
 summary: Databases is an end-to-end database deployment and maintenance service with built-in best practices for optimization, automatic thin cloning, application aware backup, disaster recovery, and monitoring and resolution capabilities. 
 ---
-= Learn about Databases
+= Learn about Workload Factory Databases
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Databases is an end-to-end database deployment and maintenance service with built-in best practices for optimization, automatic thin cloning, application aware backup, disaster recovery, and monitoring and resolution capabilities. 
+Workload Factory Databases is an end-to-end database deployment and maintenance service with built-in best practices for optimization, automatic thin cloning, application aware backup, disaster recovery, and monitoring and resolution capabilities. 
 
-== Features
+== What is Workload Factory Databases?
+(need input)
 
+=== Features
 Workload Factory Databases offers the following features: 
 
 * AWS resource provisioning
 * Storage provisioning
+* FCI and stand-alone architectures
 * Database cloning for testing, development, QA, and training
-* Cost comparison calculators for Elastic Block Storage (EBS), FSx for Windows File Servers, and Elastic File Storage (EFS)
+* A savings calculator to compare storage costs between AWS Elastic Block Storage (EBS) and Amazon FSx for NetApp ONTAP
 * Networking
 * OS configurations
 * AWS, Microsoft, and NetApp best practices integration
+* Automated orchestration 
+* _Quick create_ and _Advanced create_ deployment options 
 
+== Benefits of Amazon FSx for ONTAP for self-managed databases
 
-== Additional features in Workload Factory
+* *Durability, availability, and reliability*: FSx for ONTAP offers multiple features that enhance the durability and availability of self-managed databases hosted on FSx for ONTAP, such as high availability supporting single and multiple Availability Zones deployments, application-aware snapshots, improved disaster recovery using replication, and efficient backup. 
+* *Performance and scalability*: FSx for ONTAP offers performance optimization with high throughput, low latency, and high-speed network connections, and scalability with multiple file systems for scaling aggregate performance required for a workload.
+* *Data management and efficiency*: FSx for ONTAP offers multiple features that enhance data management and efficiency, such as space efficient thin clones, thin provisioning, compression and deduplication, and tiering to the capacity pool. 
 
-Databases supports both FCI and stand-alone architectures providing flexible costs and performance for any organizational database workloads.
+For more details about FSx for ONTAP features, refer to (Learn about FSx for ONTAP for Workload Factory). 
 
-Automated orchestration via UI and API is available with AWS CloudFormation and Workload Factory's Chatbot. 
+== Workload Factory benefits for self-managed databases
+Workload Factory offers the following beneficial best practices and automation for self-managed databases. 
 
-Deployment options include a “Quick create” and an “Advanced create”. 
+=== Best practices
 
-== Cost
+* Integrated knowledge from AWS Cloud, Microsoft Windows and SQL servers, and NetApp ONTAP for SQL server deployments on EC2 instances.
+* Total cost of ownership optimized deployment  
+* End-to-end deployment automation that follows AWS, Microsoft and ONTAP best practices 
+* “Quick create” deployment mode helps you avoid potential pitfalls with manual configuration. 
 
-Databases includes a savings calculator to assess pre-deployment costs. 
+=== Automation with Workload Factory Codebox
+Workload Factory introduces built-in automation with the _Codebox_. The Codebox offers the following automation benefits: 
 
-== Supported regions
+* *Code snippet generation*: Infrastructure-as-Code (IaC) snippets are generated during resource creation, allowing seamless integration with existing orchestration workflows. 
+* *Infrastructure-as-code co-pilot*: the Codebox is an IaC co-pilot that helps developers and DevOps generate code to execute any operation supported by Workload Factory.  
+* *Code viewer and automation catalog*: the Codebox provides a code viewer for quick analysis of automation and an automation catalog for quick future re-use. 
+
+=== Operational modes in Workload Factory
+Three different operational modes - _Basic_, _Read_, and _Automate_ - offer flexible options for deployment inside and outside of Workload Factory. Gain immediate value at zero-trust in _Basic_ mode with code snippets for use outside Workload Factory. Get incremental value with incremental trust in _Read_ and _Automate_ modes. 
+
+Learn more about link:https://review.docs.netapp.com/us-en/workload-setup-admin_first-draft/operational-modes.html[operational modes in Workload Factory^].
+
+== Deployment details
+
+=== Supported configurations
+Workload Factory for Microsoft SQL Server supports both high availability (Always on Failover Cluster Instances) and single instance deployments according to AWS, NetApp ONTAP and SQL Server best practices. 
+
+[cols="2a,2a,2a,2a" options="header"]
+|===
+// header row
+| SQL Server Version
+| Windows Server 2016
+| Windows Server 2019
+| Windows Server 2022
+
+// first body row
+| SQL Server 2016
+| Yes
+| Yes
+| Unsupported
+
+// second body row
+| SQL Server 2019
+| Yes
+| Yes
+| Unsupported
+
+// third body row
+| SQL Server 2022
+| Yes
+| Yes
+| Unsupported
+
+//table end
+|===
+
+=== Deployment architecture
+(need input)
+
+=== Integrated AWS services
+Databases includes the following integrated AWS services: 
+
+* CloudFormation
+* Simple Notification Service 
+* CloudWatch
+* Systems Manager
+* Secrets Manager 
+
+=== Supported regions
+Databases is supported in all commercial regions where FSx for ONTAP is supported. 
+
+The following AWS regions aren't supported: 
+
+* China regions
+* GovCloud (US) regions
+* Secret Cloud
+* Top Secret Cloud
 
 https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/[View supported Amazon regions.^]
 
