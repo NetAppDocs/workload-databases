@@ -4,7 +4,7 @@ permalink: create-database-host.html
 keywords: create, server, Microsoft SQL, deploy, host, deploy a database host, database host 
 summary: Deploy a database host in Workload Factory Databases. 
 ---
-= Create a database host
+= Create a database server in Workload Factory Databases
 :icons: font
 :imagesdir: ./media/
 

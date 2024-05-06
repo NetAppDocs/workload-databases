@@ -12,7 +12,7 @@ indexpage:
           url: /requirements.html
     - title: Use Databases
       links:
-        - title: Deploy a host
+        - title: Create a database server
           url: /deploy-host.html
         - title: Create a database
           url: /create-database.html

@@ -4,7 +4,7 @@ permalink: detect-host.html
 keywords: detect, detect server, discover host, detect a database host, database host 
 summary: Detect a Microsoft SQL server in Workload Factory Databases. 
 ---
-= Detect a Microsoft SQL server
+= Detect a Microsoft SQL server in Workload Factory Databases
 :icons: font
 :imagesdir: ./media/
 
