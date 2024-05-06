@@ -1,52 +1,56 @@
 ---
 sidebar: sidebar
 permalink: detect-host.html
-keywords: detest, discover host, detect a database host, database host 
-summary: Detect a database host in Workload Factory Databases. 
+keywords: detect, detect server, discover host, detect a database host, database host 
+summary: Detect a Microsoft SQL server in Workload Factory Databases. 
 ---
-= Detect a host
+= Detect a Microsoft SQL server
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Detect a database host in Workload Factory Databases. 
+Detect a Microsoft SQL server in Workload Factory Databases. 
 
 == About this task
-When the requirements are met, hosts are automatically discovered in Workload Factory. You can also manually discover a host. 
+The first step to managing Microsoft SQL servers, or hosts, in Workload Factory Databases is detecting an unidentifiable host.  
 
-Hosts cannot be detected without AWS account credentials.
+In Databases, hosts are categorized as follows: 
 
-Hosts are categorized as follows: 
-
-* _Unidentifiable hosts_: hosts that are not detected
+* _Unidentifiable hosts_: undetected hosts that have been automatically discovered by Workload Factory
 * _Unmanaged hosts_: detected hosts that are not managed by Workload Factory
 * _Managed hosts_: detected hosts that are managed by Workload Factory
 
-This task is for detecting an unidentifiable host. 
-
-=== MS-SQL host detection 
-When a Microsoft SQL host is detected, the existing environment isn't modified. Detection happens through AWS Systems Manager Session Manager (SSM). So, the EC2 instances should have role/instance profile that allows SSM connection for detection to work. link:https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-troubleshooting.html[Learn more about SSM troubleshooting^].
-
+This task is for detecting an _unidentifiable host_.
 
 == Before you begin
-You need the following to complete this task: 
+The requirements for detecting an unidentifiable host are as follows: 
 
-* AWS credentials (Link to credentials)
-* Anything else? 
+* You must have AWS account credentials (Link to credentials)
+* The storage type for the host must be one of the following: 
+** FSx for ONTAP
+** AWS Elastic Block Storage (EBS) 
+** AWS Elastic File Storage (EFS), 
+** FSx for Windows File Servers (FSx for Windows)
+** Cloud Volumes ONTAP 
+* EC2 instances must have a role/instance profile that allows SSM connection for detection to work. 
++
+When a Microsoft SQL host is detected, the existing environment isn't modified. Detection happens through AWS Systems Manager Session Manager (SSM). Without the right role/instance profile, detection will fail. link:https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-troubleshooting.html[Learn more about SSM troubleshooting^].
 
 .Steps
+. Log in to Workload Factory console.
+. In the Databases tile, click *Go to Databases Inventory*.
 . In Databases, select the *Inventory* tab. 
+. Select the *Unidentified hosts* tab. 
 . Click *Detect host* for the unidentified host you want to detect.
 +
-Workload Factory tries to validate your SQL credentials or FSx for ONTAP credentials. 
+Workload Factory tries to validate your Microsoft SQL credentials or FSx for ONTAP credentials. 
 +
-If either of these credentials isn't available on system, Workload Factory tries to install AWS.Tools.SimpleSystemsManagement module in PowerShell.
-
-. A dialog appears. In the dialog, provide the Microsoft SQL Server user name and password, and the FSx for ONTAP system user name and password. 
+If either of these credentials isn't available, Workload Factory tries to install the `aws.tools.SimpleSystemsManagement` module in PowerShell.
+. The *Detect host* dialog appears. In the dialog, provide the Microsoft SQL Server user name and password. 
 . Click *Detect*.
-. Detected host information appears if detection is successful. The host is now listed in the *Unmanaged hosts* tab. 
-.. The storage types for hosts can be FSx for ONTAP, AWS EBS, AWS EFS, FSx for Windows, and Cloud Volumes ONTAP. After detection when the storage type isn't FSx for ONTAP, the hosts are listed in the *Unmanaged hosts* tab. 
-.. When the storage type is FSx for ONTAP, you have the option to manage the host via Workload Factory. 
++
+Detected host information appears. The host is now listed in the *Unmanaged hosts* tab. 
 . Click *Done*. 
 
-If detection fails, …?
+== What's next
+When the storage type for the host is FSx for ONTAP, you have the option to link:manage-hosts.adoc[manage the host via Workload Factory]. 
