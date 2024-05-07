@@ -40,8 +40,10 @@ sidebar:
         url: /create-database.html
   - title: Administer and monitor
     entries:
-    #  - title: Manage database servers
-    #    entries: 
+      - title: Manage database servers
+        entries: 
+          - title: Manage a Microsoft SQL server in Workload Factory
+            url: manage-server.html
     #  - title: Manage databases
     #    entries: 
       - title: Monitor databases
