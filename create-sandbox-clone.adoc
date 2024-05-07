@@ -4,9 +4,39 @@ permalink: create-sandbox-clone.html
 keywords: create, clone, sandbox
 summary: Create a sandbox clone in Workload Factory Databases. 
 ---
-= Create a sandbox clone
+= Create a sandbox clone in Workload Factory Databases
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Create a sandbox clone in Workload Factory Databases. 
+Create a sandbox clone from an existing database in Workload Factory Databases. 
+
+== About this task
+Creating a sandbox clone of a database in Workload Factory Databases lets you use the clone for development, testing, integration, analytics, training, QA, and more without altering the source database. 
+
+A sandbox clone is created from the most recent snapshot on the source database. It may be cloned in the same server as the source database or cloned in another server. 
+
+== Before you begin
+Ensure you have the following prerequisites before you create a sandbox clone.
+
+* You need a source database available for the clone. 
+* You need enough capacity for the clone. 
+
+.Steps
+. Log in to Workload Factory console.
+. In the Databases tile, click *Go to Databases Inventory*.
+. In Databases, select the *Sandboxes* tab. 
+. Select *Create new sandbox*.
+. On the Create new sandbox page, under Database source, provide the following: 
+.. *Source database host*: Select the source database host. 
+.. *Source database instance*: Select the source database instance.
+.. *Source database*: Select the source database to clone from.
+. Under Database target, provide the following: 
+.. *Target database host*: Select a target database host for the sandbox clone that is in the same VPC and has the same FSx for ONTAP file system as the source host. 
+.. *Target database instance*: Select the target database instance for the sandbox clone. 
+.. *Target database*: Enter a name for the sandbox clone. 
+. *Mount*: Select *Auto-assign mount point* or *Define mount point path*. If you select *Define mount point path*, enter the mount point path. 
+. *Define tag*: Select a tag to define the sandbox clone.
+. Click *Create*. 
+
+To check the job's progress, go to the *Job monitoring* tab. 

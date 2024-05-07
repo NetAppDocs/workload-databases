@@ -75,3 +75,4 @@ You can use _Quick create_ or _Advanced create_ deployment modes to complete thi
 .Advanced create
 --
 
+To check the job's progress, go to the *Job monitoring* tab. 
