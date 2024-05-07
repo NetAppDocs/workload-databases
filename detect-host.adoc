@@ -29,7 +29,7 @@ The requirements for detecting an unidentifiable host are as follows:
 * The storage type for the host must be one of the following: 
 ** FSx for ONTAP
 ** AWS Elastic Block Storage (EBS) 
-** AWS Elastic File Storage (EFS), 
+** AWS Elastic File Storage (EFS) 
 ** FSx for Windows File Servers (FSx for Windows)
 ** Cloud Volumes ONTAP 
 * EC2 instances must have a role/instance profile that allows SSM connection for detection to work. 
@@ -51,6 +51,8 @@ If either of these credentials isn't available, Workload Factory tries to instal
 +
 Detected host information appears. The host is now listed in the *Unmanaged hosts* tab. 
 . Click *Done*. 
+
+To check the job's progress, go to the *Job monitoring* tab. 
 
 == What's next
 When the storage type for the host is FSx for ONTAP, you have the option to link:manage-hosts.adoc[manage the host via Workload Factory]. 
