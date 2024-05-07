@@ -2,16 +2,28 @@
 sidebar: sidebar
 permalink: manage-hosts.html
 keywords: 
-summary: Manage existing hosts. 
+summary: Manage existing hosts within Workload Factory Databases. 
 ---
 = Manage hosts
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Manage existing hosts within Workload Factory Databases. 
+The second step to managing Microsoft SQL servers, or hosts, in Workload Factory Databases is managing an unmanaged host. 
 
-== Managed hosts
+== Manage a host
+The second step to managing Microsoft SQL servers, or hosts, in Workload Factory Databases is managing an unmanaged host.  
+
+In Databases, hosts are categorized as follows: 
+
+* _Unidentifiable hosts_: undetected hosts that have been automatically discovered by Workload Factory
+* _Unmanaged hosts_: detected hosts that are not managed by Workload Factory
+* _Managed hosts_: detected hosts that are managed by Workload Factory
+
+This task is for managing an _unmanaged host_.
+
+== Before you begin
+You must have detected an unidentifiable host. The 
 
 === View host overview
 
@@ -19,9 +31,4 @@ Manage existing hosts within Workload Factory Databases.
 
 === Remove a managed host
 
-== Unmanaged hosts
-
-=== Manage host
-
-=== Unidentifiable hosts
 
