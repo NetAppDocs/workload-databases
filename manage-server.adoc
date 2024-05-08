@@ -31,8 +31,11 @@ The server you want to manage must be an unmanaged Microsoft SQL server with FSx
 . In Databases, select the *Inventory* tab. 
 . Select the *Unmanaged hosts* tab. 
 . Click on the three dots menu of the unmanaged host you want to manage in Workload Factory. 
-. Select *Manage host*. 
++
 Unmanaged hosts that have storage types other than FSx for ONTAP cannot be managed in Workload Factory. Select *Explore savings* if you want to compare your storage type to FSx for ONTAP. 
+. Select *Manage host*. 
++
+The server is now under the *Managed hosts* tab. 
 
 == What's next
 Now you can view host details, view the list of databases in the host, and create a user database from the *Managed hosts* tab. (Provide links to each topic)
