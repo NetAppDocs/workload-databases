@@ -1,6 +1,6 @@
 indexpage:
   title: Databases
-  lead: NetApp Workload Factory Databases is a life-cycle management service for database and infrastructure administrators. This documentation describes how to Databases in NetApp Workload Factory.
+  lead: Databases is a life-cycle management service for database and infrastructure administrators. This documentation describes how to manage databases in BlueXP Workload Factory.
   tiles: 
     - title: Get started
       links:
