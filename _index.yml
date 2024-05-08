@@ -1,6 +1,6 @@
 indexpage:
-  title: Databases
-  lead: Databases is a life-cycle management service for database and infrastructure administrators. This documentation describes how to manage databases in BlueXP Workload Factory.
+  title: Workload Factory for Databases workloads documentation
+  lead: Deploy Microsoft SQL server configurations and manage database environments on top of FSx for ONTAP file system storage in BlueXP Workload Factory.
   tiles: 
     - title: Get started
       links:

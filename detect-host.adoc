@@ -34,7 +34,7 @@ The requirements for detecting an unidentifiable host are as follows:
 ** Cloud Volumes ONTAP 
 * EC2 instances must have a role/instance profile that allows SSM connection for detection to work. 
 +
-When a Microsoft SQL host is detected, the existing environment isn't modified. Detection happens through AWS Systems Manager Session Manager (SSM). Without the right role/instance profile, detection will fail. link:https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-troubleshooting.html[Learn more about SSM troubleshooting^].
+When a Microsoft SQL host is detected, the existing environment isn't modified. Detection happens through AWS Systems Manager Session Manager (SSM). Without the right IAM instance profile, detection will fail. link:https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-troubleshooting.html[Learn more about SSM troubleshooting^].
 
 .Steps
 . Log in to Workload Factory console.

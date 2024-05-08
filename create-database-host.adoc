@@ -172,13 +172,13 @@ For FCI deployments:::
 +
 Three security groups get attached to the SQL nodes (EC2 instances) during new server deployment. 
 +
-1. A workload security group is created to allow ports and protocols required for the SQL and Windows cluster communication on nodes. 
+1. A workload security group is created to allow ports and protocols required for Microsoft SQL and Windows cluster communication on nodes. 
 +
-2. In case of AWS-managed Active Directory, the security group attached to the directory service gets automatically added to the SQL nodes to allow communication with the Active Directory.  
+2. In case of AWS-managed Active Directory, the security group attached to the directory service gets automatically added to the Microsoft SQL nodes to allow communication with the Active Directory.  
 +
 3. In case of an existing FSx for ONTAP file system, the security group associated with it is added automatically to the SQL nodes which allows communication to the file system. When a new FSx for ONTAP system is created, a new security group is created for the FSx file system and the same security group also gets attached to SQL nodes.
 +
-For a user-managed Active Directory, you can select additional security groups that allows traffic from your existing host farm/Windows clients. The additional security groups should allow communication to this domain from the subnets where EC2 instances for SQL are configured. 
+For a user-managed Active Directory, you can select a security group that allows traffic from your existing systems which need to connect to the database. The security group should allow communication to the Active Directory domain controllers from the subnets where EC2 instances for Microsoft SQL are configured. 
 
 . Under *Application settings*, provide the following: 
 .. *Operating system*: Select *Windows server 2016* or *Windows server 2019*. 
@@ -217,7 +217,7 @@ A new FSx for ONTAP file system may add 30 minutes or more of installation time.
 In certain regions, you may select 4 GBps throughput capacity. To provision 4 GBps of throughput capacity, your FSx for ONTAP file system must be configured with a minimum of 5,120 GiB of SSD storage capacity and 160,000 SSD IOPS.
 .. *Encryption*: Select a key from your account or a key from another account. You must enter the encryption key ARN from another account.
 +
-FSx for ONTAP custom encryption keys aren't listed based on service applicability. You must choose an appropriate key. 
+FSx for ONTAP custom encryption keys aren't listed based on service applicability. Select an appropriate FSx encryption key. Non-FSx encryption keys will cause server creation failure.  
 +
 AWS-managed keys are filtered based on service applicability.  
 .. *Tags*: Optionally, you can add up to 40 tags. 
