@@ -29,13 +29,13 @@ link:https://review.docs.netapp.com/us-en/workload-setup-admin_first-draft/sign-
 
 [role="quick-margin-para"]
 
-Choose between Basic, Read, and Automate modes. 
+Choose between link:https://review.docs.netapp.com/us-en/workload-setup-admin_first-draft/operational-modes.html[_Basic_, _Read_, and _Automate_ operational modes^]. 
 
 [role="quick-margin-para"]
-If you choose to operate in Basic mode, you don't need to go any further. You can start using Workload Factory Databases to copy empty code templates. In the Databases tile, click *Deploy database*. link:deploy-host.html[Learn how to deploy a database host]. You can also start with the calculator (provide link to task-based page to use the calculator and link to calculator reference). If you choose to operate in Read or Automate modes, continue to step 3. 
+If you choose to operate in _Basic_ mode, you don't need to go any further. You can start using Workload Factory Databases to copy empty code templates. In the Databases tile, click *Deploy database*. link:deploy-host.html[Learn how to deploy a database host]. You can also start with the calculator (provide link to task-based page to use the calculator and link to calculator reference). 
 
 [role="quick-margin-para"]
-If you operate in Read or Automate mode, you'll need to link:https://review.docs.netapp.com/us-en/workload-setup-admin_first-draft/manage-credentials.html[add credentials to an account manually^] which includes selecting workload capabilities, such as Databases and AI, and creating the IAM policies to ensure you have the correct permissions for operating in Read or Automate mode.
+If you operate in _Read_ or _Automate_ mode, you'll need to link:https://review.docs.netapp.com/us-en/workload-setup-admin_first-draft/manage-credentials.html[add credentials to an account manually^] which includes selecting workload capabilities, such as Databases and AI, and creating the IAM policies to ensure you have the correct permissions for operating in Read or Automate mode.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Deploy a database host
 
