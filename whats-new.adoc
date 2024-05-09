@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: whats-new.html
 keywords: what's new, features, new, release notes, enhancements, fixes, new features, workload factory, databases, workload factory
-summary: Learn what's new with Workload Factory Databases.
+summary: Learn what's new with Workload Factory for Databases.
 ---
 = What's new
 :icons: font

@@ -4,18 +4,18 @@ permalink: learn-databases.html
 keywords: Databases
 summary: Databases is an end-to-end database deployment and maintenance service with built-in best practices for optimization, automatic thin cloning, application aware backup, disaster recovery, and monitoring and resolution capabilities. 
 ---
-= Learn about Workload Factory Databases
+= Learn about Workload Factory for Databases
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Workload Factory Databases is an end-to-end database deployment and maintenance service with built-in best practices for optimization, automatic thin cloning, application aware backup, disaster recovery, and monitoring and resolution capabilities. 
+Workload Factory for Databases is an end-to-end database deployment and maintenance service with built-in best practices for optimization, automatic thin cloning, application aware backup, disaster recovery, and monitoring and resolution capabilities. 
 
-== What is Workload Factory Databases?
+== What is Workload Factory for Databases?
 (need input)
 
 === Features
-Workload Factory Databases offers the following features: 
+Workload Factory for Databases offers the following features: 
 
 * AWS resource provisioning
 * Storage provisioning

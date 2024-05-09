@@ -2,9 +2,9 @@
 sidebar: sidebar
 permalink: detect-host.html
 keywords: detect, detect server, discover host, detect a database host, database host 
-summary: Detect a Microsoft SQL server in Workload Factory Databases. 
+summary: Detect a Microsoft SQL server in Workload Factory for Databases. 
 ---
-= Detect a Microsoft SQL server in Workload Factory Databases
+= Detect a Microsoft SQL server in Workload Factory for Databases
 :icons: font
 :imagesdir: ./media/
 
@@ -12,7 +12,7 @@ summary: Detect a Microsoft SQL server in Workload Factory Databases.
 Detect a Microsoft SQL server in Workload Factory Databases. 
 
 == About this task
-The first step to managing Microsoft SQL servers, or hosts, in Workload Factory Databases is detecting an unidentifiable host.  
+The first step to managing Microsoft SQL servers, or hosts, in Workload Factory for Databases is detecting an unidentifiable host.  
 
 In Databases, hosts are categorized as follows: 
 

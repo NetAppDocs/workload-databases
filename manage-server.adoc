@@ -4,15 +4,15 @@ permalink: manage-server.html
 keywords: manage server
 summary: Manage a Microsoft SQL server within Workload Factory Databases. 
 ---
-= Manage a Microsoft SQL server in Workload Factory Databases
+= Manage a Microsoft SQL server in Workload Factory for Databases
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Manage an Microsoft SQL server with FSx for ONTAP storage in Workload Factory databases. 
+Manage an Microsoft SQL server with FSx for ONTAP storage in Workload Factory for Databases. 
 
 == Manage a host
-The second step to managing Microsoft SQL servers, or hosts, in Workload Factory Databases is managing an unmanaged host.  
+The second step to managing Microsoft SQL servers, or hosts, in Workload Factory for Databases is managing an unmanaged host.  
 
 In Databases, hosts are categorized as follows: 
 

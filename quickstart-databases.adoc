@@ -4,12 +4,12 @@ permalink: quick-start-databases.html
 keywords: requirements, basic mode, read mode, automate mode 
 summary: Databases has three different modes that have different requirements. 
 ---
-= Quick start for databases
+= Quick start for Databases
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-With Workload Factory Databases, you can get started immediately in Basic mode. If you'd like to use Workload Factory to discover hosts, manage resources, and more, you can get started in a few steps. 
+With Databases, you can get started immediately in Basic mode. If you'd like to use Workload Factory to discover hosts, manage resources, and more, you can get started in a few steps. 
 
 You must have an AWS account to get started. 
 

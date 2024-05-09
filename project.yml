@@ -20,7 +20,7 @@ sidebar:
         url: /known-limitations.html 
   - title: Get started
     entries: 
-      - title: Learn about Workload Factory Databases
+      - title: Learn about Workload Factory for Databases
         url: /learn-databases.html 
       - title: Quick start
         url: /quick-start-databases.html

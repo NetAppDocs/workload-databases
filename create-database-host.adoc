@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: create-database-host.html
 keywords: create, server, Microsoft SQL, deploy, host, deploy a database host, database host 
-summary: Deploy a database host in Workload Factory Databases. 
+summary: Deploy a database host in Workload Factory for Databases. 
 ---
-= Create a database server in Workload Factory Databases
+= Create a database server in Workload Factory for Databases
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Create a new Microsoft SQL server, or database host, within Workload Factory Databases. You'll need AWS account credentials and _automate_ permissions. 
+Create a new Microsoft SQL server, or database host, within Workload Factory for Databases. You'll need AWS account credentials and _automate_ permissions. 
 
 == About this task
 A new Microsoft SQL server in Workload Factory Databases requires an FSx for ONTAP file system deployment and resources for Active Directory. 
