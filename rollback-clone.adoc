@@ -1,0 +1,26 @@
+---
+sidebar: sidebar
+permalink: rollback-clone.html
+keywords: rollback, roll back, clone, snapshot, source database
+summary: Roll back a sandbox clone in Workload Factory for Databases.
+---
+= Roll back a sandbox clone in Workload Factory for Databases
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Roll back a database clone to a snapshot copy of its source database.
+
+== About this task
+
+== Before you begin
+To roll back a database clone, the source database must be active and have at least one snapshot for the rollback operation. 
+
+.Steps
+. Log in to the Workload Factory console. 
+. In the Databases tile, click *Go to Databases Inventory*. 
+. In Databases, select the *Sandboxes* tab.
+. Click the three dots menu of the sandbox clone you want to roll back.
+. Select *Roll back*. 
+. In the Roll back dialog, select an original database snapshot from the dropdown. 
+. Click *Rollback*. 

@@ -21,6 +21,6 @@ A refresh is only possible when the source database is active.
 . Log in to the Workload Factory console. 
 . In the Databases tile, click *Go to Databases Inventory*. 
 . In Databases, select the *Sandboxes* tab.
-. Click the three dots menu of the sandbox clone you want to revert.
+. Click the three dots menu of the sandbox clone you want to refresh.
 . Select *Refresh*. 
 . In the Refresh dialog, click *Refresh*. 
