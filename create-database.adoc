@@ -58,21 +58,42 @@ You can use _Quick create_ or _Advanced create_ deployment modes to complete thi
 
 .Quick create
 -- 
-. Log in to Workload Factory console.
+. Log in to the Workload Factory console.
 . In the Databases tile, click *Go to Databases Inventory*.
 . In Databases, select the *Inventory* tab. 
 . Select the *Managed hosts* tab. 
 . Click the three dots menu of the managed host you'd like to create a database in. 
-. Select *Create user database*
+. Select *Create user database*.
 . On the Create user database page, under Database information, provide the following: 
 .. *Database name*: Enter name for the database. 
 .. *Collation*: Select the collation for the database. 
 . Under File settings, provide the following: 
 .. *File settings mode*: Select *Quick create*. 
-
+.. *File names & path*:
+... *Data file name*: Enter the data file name.
+... *Log file name*: Enter the log file name. 
+.. *File sizes*: Enter the data size and log size for the database. 
+. Click *Create*. 
 --
 
 .Advanced create
+--
+. Log in to the Workload Factory console.
+. In the Databases tile, click *Go to Databases Inventory*.
+. In Databases, select the *Inventory* tab. 
+. Select the *Managed hosts* tab. 
+. Click the three dots menu of the managed host you'd like to create a database in. 
+. Select *Create user database*.
+. On the Create user database page, under Database information, provide the following: 
+.. *Database name*: Enter name for the database. 
+.. *Collation*: Select the collation for the database. 
+. Under File settings, provide the following: 
+.. *File settings mode*: Select *Advanced create*. 
+.. *File names & path*:
+... *Data file*: Select a drive letter and enter the data file name.
+... *Log file*: Select a drive letter and enter the log file name. 
+.. *File sizes*: Enter the data size and log size for the database.
+. Click *Create*.
 --
 
 To check the job's progress, go to the *Job monitoring* tab. 
