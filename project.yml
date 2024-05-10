@@ -51,7 +51,9 @@ sidebar:
       - title: Manage clones
         entries: 
           - title: Create a sandbox clone 
-            url: create-sandbox-clone.html                  
+            url: create-sandbox-clone.html 
+          - title: Revert a sandbox clone
+            url: revert-clone.html                   
   - title: Knowledge and support
     entries: 
       - title: Register for support
