@@ -1,0 +1,26 @@
+---
+sidebar: sidebar
+permalink: refresh-clone.html
+keywords: refresh clone, sync, update, database, Microsoft SQL
+summary: Refresh a sandbox clone in Workload Factory for Databases.
+---
+= Refresh a sandbox clone in Workload Factory for Databases
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Refresh a database clone so that it is equivalent to the source database at the current moment. 
+
+== About this task
+Refreshing a clone updates the clone to the source database at the current moment. Any changes made to the sandbox clone will be deleted. 
+
+== Before you begin
+A refresh is only possible when the source database is active. 
+
+.Steps
+. Log in to the Workload Factory console. 
+. In the Databases tile, click *Go to Databases Inventory*. 
+. In Databases, select the *Sandboxes* tab.
+. Click the three dots menu of the sandbox clone you want to revert.
+. Select *Refresh*. 
+. In the Refresh dialog, click *Refresh*. 
