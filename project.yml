@@ -57,7 +57,9 @@ sidebar:
           - title: Refresh a sandbox clone
             url: refresh-clone.html  
           - title: Roll back a sandbox clone
-            url: rollback-clone.html                    
+            url: rollback-clone.html 
+          - title: View clone connection information
+            url: view-clone-connection.html                     
   - title: Knowledge and support
     entries: 
       - title: Register for support
