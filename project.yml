@@ -61,7 +61,9 @@ sidebar:
           - title: View clone connection information
             url: view-clone-connection.html  
           - title: Split a sandbox clone
-            url: split-clone.html                     
+            url: split-clone.html  
+          - title: Delete a sandbox clone
+            url: delete-clone.html                     
   - title: Knowledge and support
     entries: 
       - title: Register for support
