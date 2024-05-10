@@ -12,11 +12,9 @@ summary: Create a Microsoft SQL database with Workload Factory Databases.
 Create a Microsoft SQL database in Workload Factory Databases with automate permissions. 
 
 == About this task
-Creating a new Microsoft SQL database within Workload Factory Databases means you can manage the resource within Workload Factory. 
+Creating a new Microsoft SQL database in the Workload Factory console makes it possible for you to manage the resource within Workload Factory. 
 
-If easy create is selected or new drive option is selected from Advanced create, two new volumes are created consisting of independent LUNs to host data and log files for the database.
-
-Upon creation, the database files in the new database are thin-provisioned and consume only a few MBs of the total size allocated for the new database. 
+Upon creation, two new volumes are created in the FSx for ONTAP file system consisting of independent LUNs to host data and log files for the database. The database files in the new database are thin-provisioned and consume only a few MBs of the total size allocated for the new database. 
 
 You can create a database in Workload Factory or copy or download a code template to complete the operation outside Workload Factory. Review the Workload Factory operational modes to decide which mode you'd like to use. 
 
@@ -42,13 +40,7 @@ Alternatively, you can use the Codebox to copy an empty template or create a com
 
 Windows host::: You must have enough drive letters available on the Microsoft SQL server to create new drives for the new database. 
 
-Microsoft SQL server::: You must have a managed Microsoft SQL server in Workload Factory Databases to host the new database. 
-
-.FSx for ONTAP
-+ 
-Actions: If easy create is selected or new drive option is selected from Advanced create, two new volumes are created consisting of independent LUNs to host data and log files for the database.
-+ 
-Conditions: By default, the default collation on SQL server is selected. User can change this in the create database wizard.
+Microsoft SQL server::: You must have a managed Microsoft SQL server in Workload Factory for Databases to host the new database. 
 
 .Steps
 You can use _Quick create_ or _Advanced create_ deployment modes to complete this task in Workload Factory with _Automate_ mode permissions.
@@ -66,7 +58,7 @@ You can use _Quick create_ or _Advanced create_ deployment modes to complete thi
 . Select *Create user database*.
 . On the Create user database page, under Database information, provide the following: 
 .. *Database name*: Enter name for the database. 
-.. *Collation*: Select the collation for the database. 
+.. *Collation*: Select a collation for the database. The default collation on Microsoft SQL server is selected. 
 . Under File settings, provide the following: 
 .. *File settings mode*: Select *Quick create*. 
 .. *File names & path*:
