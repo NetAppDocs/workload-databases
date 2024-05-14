@@ -1,0 +1,23 @@
+---
+sidebar: sidebar
+permalink: connect-clone-cicd.html
+keywords: connect ci/cd pipeline, clone 
+summary: Delete a sandbox clone when you no longer need it. 
+---
+= Connect a sandbox clone to CI/CD tools
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Connecting a sandbox clone to a continuous integration and continuous delivery (CI/CD) pipeline with REST API code to improve software delivery via automation. 
+
+== About this task 
+To deliver a new version of software automatically to your database clone, you should connect to a CI/CD pipeline. Use the REST API code provided from this operation to make the connection. 
+
+.Steps. Log in to the Workload Factory console. 
+. In the Databases tile, click *Go to Databases Inventory*. 
+. In Databases, select the *Sandboxes* tab.
+. Click the three dots menu of the sandbox clone to connect to CI/CD tools.
+. Select *Connect to CI/CD tools*. 
+. In the CI/CD dialog, copy or download the REST API code needed to connect to CI/CD tools. 
+. Click *Close*. 
