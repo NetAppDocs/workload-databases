@@ -12,7 +12,7 @@ summary: Deploy a database host in Workload Factory for Databases.
 Create a new Microsoft SQL server, or database host, within Workload Factory for Databases. You'll need AWS account credentials and _automate_ permissions. 
 
 == About this task
-A new Microsoft SQL server in Workload Factory Databases requires an FSx for ONTAP file system deployment and resources for Active Directory. 
+Creating a new Microsoft SQL server in Databases requires an FSx for ONTAP file system deployment and resources for Active Directory. 
 
 Before you begin, learn about the storage deployment for the database host configuration, Active Directory deployment, Workload Factory modes of operation, and the <<requirements>> to complete this operation.
 

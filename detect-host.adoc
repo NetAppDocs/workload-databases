@@ -11,6 +11,14 @@ summary: Detect a Microsoft SQL server in Workload Factory for Databases.
 [.lead]
 Detect a Microsoft SQL server in Workload Factory Databases. 
 
+When AWS credentials are associated in Workload Factory, Databases allows automated discovery of Microsoft SQL servers beginning with SQL server 2016 with the following storage types: 
+
+* FSx for ONTAP
+* FSx for Windows File Servers
+* FSx for Elastic Block Storage (EBS)
+
+You can also detect a host manually. 
+
 == About this task
 The first step to managing Microsoft SQL servers, or hosts, in Workload Factory for Databases is detecting an unidentifiable host.  
 

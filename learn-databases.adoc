@@ -12,7 +12,7 @@ summary: Databases is an end-to-end database deployment and maintenance service 
 Workload Factory for Databases is an end-to-end database deployment and maintenance service with built-in best practices for optimization, automatic thin cloning, application aware backup, disaster recovery, and monitoring and resolution capabilities. 
 
 == What is Workload Factory for Databases?
-(need input)
+Workload Factory for Databases helps you discover, deploy, protect, and manage Microsoft SQL server environments using Amazon FSx for NetApp ONTAP as the storage backend. FSx for ONTAP provides the foundation for your database management like host discovery and deployment, job monitoring, and pre-deployment cost assessment, and a full suite of protection options.
 
 === Features
 Workload Factory for Databases offers the following features: 

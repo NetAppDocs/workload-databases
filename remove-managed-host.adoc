@@ -1,0 +1,20 @@
+---
+sidebar: sidebar
+permalink: remove-managed-host.html
+keywords: remove host, remove server 
+summary: Remove a managed host from Databases. 
+---
+= Remove a managed host
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Remove a managed host from Databases.  
+
+.Steps
+. Log in to the Workload Factory console. 
+. In the Databases tile, click *Go to Databases Inventory*. 
+. In Databases on the , select the *Inventory* tab.
+. In the Managed hosts tab, click the three dots menu of the host to remove.
+. Select *Remove*. 
+. In the Remove host dialog, click *Remove*. 
