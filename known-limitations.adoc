@@ -11,3 +11,36 @@ summary: Known limitations identify platforms, devices, or functions that are no
 
 [.lead]
 Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
+
+== AMI image version support
+We only show up to four recent versions or revisions of AMI images for each SQL version. We don't allow installation from an AMI image that is older than the latest four versions.
+
+== Terraform deployment
+Deployment using Terraform isn't currently supported.
+
+== Roll back and retry for failed deployments 
+Rollback and retry for failed deployments aren't supported in Workload Factory. You can roll back or retry a failed stack from the CloudFormation console in AWS. 
+
+== Active Directory and DNS resource rollback
+The following DNS resources aren't removed from Active Directory and DNS when you roll back a test or failed deployment from the CloudFormation console in AWS: 
+
+* Each node of the SQL deployment to its management IP address
+* Windows Cluster name to the reserved secondary IP addresses of EC2 instances in cases of FCI 
+* SQL FCI name to the two reserved IP addresses from both EC2 instances in FCI
+
+You'll need to cleanup these up manually or wait for the domain to purge stale entries. 
+
+== Always On Availability Groups configuration support
+Always On Availability Groups configuration isn't supported in Workload Factory. 
+
+== User-managed Active Directory security groups
+If you select “user-managed Active Directory” during Microsoft SQL server deployment in Workload Factory, you must provide a security group that allows traffic between the EC2 instances to the directory service for deployment. Workload Factory doesn't automatically attach the security group for user-managed Active Directory like it does for AWS Managed Microsoft AD.
+
+== Custom encryption keys
+Custom encryption keys for FSx for ONTAP aren't listed based on service applicability. You must choose the appropriate key. AWS managed keys are filtered based on applicability to service.
+
+== Microsoft SQL server detection
+Microsoft SQL server detection isn't saved. Each time you access Databases in Workload Factory, Microsoft SQL server detection runs again to identify SQL installations in the region.
+
+== CloudFormation template 
+A downloaded or copied Codebox-generated CloudFormation template (YAML file) has a limited retention period of seven days. 
