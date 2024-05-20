@@ -11,11 +11,6 @@ summary: Databases is an end-to-end database deployment and maintenance service 
 [.lead]
 Workload Factory for Databases is an end-to-end database deployment and maintenance service with built-in best practices for optimization, automatic thin cloning, and monitoring and resolution capabilities. 
 
-== What is Workload Factory for Databases?
-Workload Factory for Databases helps you discover, deploy, protect, and manage Microsoft SQL server environments using Amazon FSx for NetApp ONTAP (FSx for ONTAP) as the storage backend. FSx for ONTAP provides the foundation for your database management like host discovery and deployment, job monitoring, and pre-deployment cost assessment, and a full suite of protection options.
-
-Workload Factory for Databases detects, assesses, plans, provisions, and moves Microsoft SQL Server data to Amazon FSx for NetApp ONTAP (FSx for ONTAP) deployments optimized to meet your desired performance and costs while adhering to industry best practices. Throughout the life cycle, Workload Factory delivers continuous optimization and management for databases on FSx for ONTAP. 
-
 === What is Workload Factory? 
 Workload Factory is a NetApp co-pilot for automated and optimized FSx for ONTAP workloads. 
 
@@ -23,18 +18,27 @@ It's a free, Software as a service (SaaS) workload-oriented control plane and au
 
 Workload Factory focuses on enterprise workload operations instead of storage operations. It helps you focus on desired workload outcomes rather than the operations required to meet these outcomes. 
 
-=== Workload Factory benefits for self-managed databases
+== What is Workload Factory for Databases?
+Workload Factory for Databases helps you discover, deploy, protect, and manage Microsoft SQL server environments using Amazon FSx for NetApp ONTAP (FSx for ONTAP) as the storage backend. FSx for ONTAP provides the foundation for your database management like host discovery and deployment, job monitoring, and pre-deployment cost assessment, and a full suite of protection options.
 
-* Best practices 
-** Integrated knowledge from AWS Cloud, Microsoft Windows and SQL servers, and NetApp ONTAP for SQL server deployments on EC2 instances.
-** Total cost of ownership optimized deployment  
-** End-to-end deployment automation that follows AWS, Microsoft and ONTAP best practices 
-**  “Quick create” deployment mode helps you avoid potential pitfalls with manual configuration. 
-* Automation with Workload Factory Codebox
-** *Code snippet generation*: Infrastructure-as-Code (IaC) snippets are generated during resource creation, allowing seamless integration with existing orchestration workflows 
-** *Infrastructure-as-code co-pilot*: the Codebox is an IaC (Infrastructure as Code) co-pilot that helps developers and DevOps generate the needed code to execute any operation supported by Workload Factory.  
-** *Code viewer and automation catalog*: the Codebox provides a code viewer for quick analysis of automation and an automation catalog for quick future code re-use. 
-* Zero trust: Immediate value at zero-trust, incremental value with incremental trust. Democratizes ONTAP knowledge by templatizing operations. 
+Workload Factory for Databases detects, assesses, plans, provisions, and moves Microsoft SQL Server data to Amazon FSx for NetApp ONTAP (FSx for ONTAP) deployments optimized to meet your desired performance and costs while adhering to industry best practices. Throughout the life cycle, Workload Factory delivers continuous optimization and management for databases on FSx for ONTAP. 
+
+== Workload Factory benefits for self-managed databases
+Workload Factory offers the following beneficial best practices and automation for self-managed databases. 
+
+=== Best practices
+
+* Integrated knowledge from AWS Cloud, Microsoft Windows and SQL servers, and NetApp ONTAP for SQL server deployments on EC2 instances.
+* Total cost of ownership optimized deployment  
+* End-to-end deployment automation that follows AWS, Microsoft and ONTAP best practices 
+* “Quick create” deployment mode helps you avoid potential pitfalls with manual configuration. 
+
+=== Automation with Workload Factory Codebox
+Workload Factory introduces built-in automation with the _Codebox_. The Codebox offers the following automation benefits: 
+
+* *Code snippet generation*: Infrastructure-as-Code (IaC) snippets are generated during resource creation, allowing seamless integration with existing orchestration workflows. 
+* *Infrastructure-as-code co-pilot*: the Codebox is an IaC co-pilot that helps developers and DevOps generate code to execute any operation supported by Workload Factory.  
+* *Code viewer and automation catalog*: the Codebox provides a code viewer for quick analysis of automation and an automation catalog for quick future re-use. 
 
 === Workload Factory for Databases features
 Workload Factory for Databases offers the following features: 
@@ -71,23 +75,6 @@ Workload Factory for Databases offers the following features:
 * *Data management and efficiency*: FSx for ONTAP offers multiple features that enhance data management and efficiency, such as space efficient thin clones, thin provisioning, compression and deduplication, and tiering to the capacity pool. 
 
 For more details about FSx for ONTAP features, refer to (Learn about FSx for ONTAP for Workload Factory). 
-
-== Workload Factory benefits for self-managed databases
-Workload Factory offers the following beneficial best practices and automation for self-managed databases. 
-
-=== Best practices
-
-* Integrated knowledge from AWS Cloud, Microsoft Windows and SQL servers, and NetApp ONTAP for SQL server deployments on EC2 instances.
-* Total cost of ownership optimized deployment  
-* End-to-end deployment automation that follows AWS, Microsoft and ONTAP best practices 
-* “Quick create” deployment mode helps you avoid potential pitfalls with manual configuration. 
-
-=== Automation with Workload Factory Codebox
-Workload Factory introduces built-in automation with the _Codebox_. The Codebox offers the following automation benefits: 
-
-* *Code snippet generation*: Infrastructure-as-Code (IaC) snippets are generated during resource creation, allowing seamless integration with existing orchestration workflows. 
-* *Infrastructure-as-code co-pilot*: the Codebox is an IaC co-pilot that helps developers and DevOps generate code to execute any operation supported by Workload Factory.  
-* *Code viewer and automation catalog*: the Codebox provides a code viewer for quick analysis of automation and an automation catalog for quick future re-use. 
 
 === Operational modes in Workload Factory
 Three different operational modes - _Basic_, _Read_, and _Automate_ - offer flexible options for deployment inside and outside of Workload Factory. Gain immediate value at zero-trust in _Basic_ mode with code snippets for use outside Workload Factory. Get incremental value with incremental trust in _Read_ and _Automate_ modes. 
