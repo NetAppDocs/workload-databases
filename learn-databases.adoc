@@ -11,17 +11,10 @@ summary: Databases is an end-to-end database deployment and maintenance service 
 [.lead]
 Workload Factory for Databases is an end-to-end database deployment and maintenance service with built-in best practices for optimization, automatic thin cloning, and monitoring and resolution capabilities. 
 
-=== What is Workload Factory? 
-Workload Factory is a NetApp co-pilot for automated and optimized FSx for ONTAP workloads. 
-
-It's a free, Software as a service (SaaS) workload-oriented control plane and automation platform for workloads on FSx for ONTAP. It helps you get started and apply best practices, reduce costs, and get the most out of FSx ONTAP. 
-
-Workload Factory focuses on enterprise workload operations instead of storage operations. It helps you focus on desired workload outcomes rather than the operations required to meet these outcomes. 
-
 == What is Workload Factory for Databases?
-Workload Factory for Databases helps you discover, deploy, protect, and manage Microsoft SQL server environments using Amazon FSx for NetApp ONTAP (FSx for ONTAP) as the storage backend. FSx for ONTAP provides the foundation for your database management like host discovery and deployment, job monitoring, and pre-deployment cost assessment, and a full suite of protection options.
+Workload Factory for Databases detects, assesses, plans, provisions, and moves Microsoft SQL Server data to Amazon FSx for NetApp ONTAP (FSx for ONTAP) deployments optimized to meet your performance and cost expectations while adhering to industry best practices. Throughout the life cycle, Workload Factory delivers continuous optimization and management for databases on FSx for ONTAP. 
 
-Workload Factory for Databases detects, assesses, plans, provisions, and moves Microsoft SQL Server data to Amazon FSx for NetApp ONTAP (FSx for ONTAP) deployments optimized to meet your desired performance and costs while adhering to industry best practices. Throughout the life cycle, Workload Factory delivers continuous optimization and management for databases on FSx for ONTAP. 
+For more information about Workload Factory, refer to the link:https://review.docs.netapp.com/us-en/workload-setup-admin_first-draft/workload-factory-overview.html[Workload Factory overview^].
 
 == Workload Factory benefits for self-managed databases
 Workload Factory offers the following beneficial best practices and automation for self-managed databases. 
@@ -43,30 +36,15 @@ Workload Factory introduces built-in automation with the _Codebox_. The Codebox 
 === Workload Factory for Databases features
 Workload Factory for Databases offers the following features: 
 
-* AWS resource provisioning
-* Storage provisioning
-* FCI and stand-alone architectures
-* Database cloning for testing, development, QA, and training
-* A savings calculator to compare storage costs between AWS Elastic Block Storage (EBS) and Amazon FSx for NetApp ONTAP
-* Networking
-* OS configurations
-* AWS, Microsoft, and NetApp best practices integration
-* Automated orchestration 
-* _Quick create_ and _Advanced create_ deployment options 
-
-* *Detection*: Automatically detect Microsoft SQL Servers on FSx for ONTAP, FSx for Windows File Servers, and Elastic Block Storage deployed from your AWS account. The Databases Inventory serves as a launching point for exploring costs savings opportunities for servers in other AWS storage systems or a management tool for FSx for ONTAP based servers and instances. 
-* *Assessment and Planning*: assess potential cost savings with Workload Factory’s storage calculator that estimates and details storage, compute, SQL licensing, snapshot, and clone itemized costs for existing Microsoft SQL Server deployments with FSxW or EBS compared with FSx for ONTAP. 
-* *Provisioning*: 	
-** *Simple, fast deployments* - Simplify and streamline your provisioning experience by selecting answers to specification questions and eliminating the time typically required to investigate how to provision and configure your Microsoft SQL Server on AWS. 
-** *Automated orchestration* - Available via the Workload Factory user interface with Quick and Advanced Create deployment modes, Workload Factory's Chatbot, and API with AWS CloudFormation. 
-** *Built-in best practices* 
-** *Built-in AWS resource selection* 
-** *Cost estimation* - Get a cost estimate for each complete deployment in the user interface. The estimates provided are for general comparisons only. The estimates are based on on-demand costs and actual costs may be lower. 
-** *Reusable automation templates* - Create, re-use, and customize CloudFormation templates from the Workload Factory Codebox for future Microsoft SQL Server deployments in multiple environments. 
-* *Operations*:
-** *Sandbox creation* - Create an on-demand, isolated database environment that can be used for testing, integration, diagnostics, and training, without affecting production data. 
-** *Database creation* - Create a user database for your existing Microsoft SQL Server with Quick or Advanced create modes to configure your database collation, file names, and sizes. Storage configuration is included. 
-** *Job Monitoring* - Monitor and track database job execution progress and diagnose and troubleshoot issues in case any failure occurs.  
+* *Simple, fast deployments* - Simplify and streamline your provisioning experience by selecting answers to specification questions and eliminating the time typically required to investigate how to provision and configure your Microsoft SQL Server on AWS. 
+* *Automated orchestration* - available via the Workload Factory user interface with Quick and Advanced Create deployment modes, Workload Factory's Chatbot, and API with AWS CloudFormation.
+* *Built-in features*: utilize NetApp, Microsoft, and Amazon best practices and AWS resource selections built in to deployment configuration.
+* *Cost estimation* - assess potential cost savings with Workload Factory’s storage calculator that estimates and details storage, compute, SQL licensing, snapshot, and clone itemized costs for existing Microsoft SQL Server deployments with FSxW or EBS compared with FSx for ONTAP. 
+* *Reusable automation templates* - Create, re-use, and customize CloudFormation templates from the Workload Factory Codebox for future Microsoft SQL Server deployments in multiple environments. 
+* *AWS resource discovery and provisioning*: Automatically detect Microsoft SQL Servers on FSx for ONTAP, FSx for Windows File Servers, and Elastic Block Storage deployed from your AWS account. The Databases Inventory serves as a launching point for exploring costs savings opportunities for servers in other AWS storage systems or a management tool for FSx for ONTAP based servers and instances.
+* *Sandbox creation* - Create an on-demand, isolated database environment that can be used for testing, integration, diagnostics, and training, without affecting production data. 
+* *Database creation* - Create a user database for your existing Microsoft SQL Servers with _Quick_ or _Advanced_ create modes to configure your database collation, file names, and sizes. Storage configuration is included. 
+* *Job Monitoring* - Monitor and track database job execution progress and diagnose and troubleshoot issues in case any failure occurs.  
 
 == Benefits of Amazon FSx for ONTAP for self-managed databases
 
