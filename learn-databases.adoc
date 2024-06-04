@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: learn-databases.html
 keywords: Databases
-summary: Databases is an end-to-end database deployment and maintenance service with built-in best practices for optimization, automatic thin cloning, application aware backup, disaster recovery, and monitoring and resolution capabilities. 
+summary: Databases is an end-to-end database deployment and maintenance service with built-in best practices for optimization, automatic thin cloning, and monitoring and resolution capabilities. 
 ---
 = Learn about Workload Factory for Databases
 :icons: font

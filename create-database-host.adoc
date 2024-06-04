@@ -21,7 +21,7 @@ Creating a new Microsoft SQL server requires an FSx for ONTAP file system as the
 
 FSx for ONTAP file systems have two Microsoft SQL deployment models: _Failover Cluster Instance (FCI)_ or _Standalone_. Different resources are created for the FSx for ONTAP file system depending on the FSx for ONTAP deployment model you select.
 
-NOTE: In _Quick create_, FCI is the default deployment model.
+NOTE: In _Quick create_, FCI is the default deployment model, Windows 2016 is the default Windows version, and SQL 2019 Standard Edition is the default SQL version. 
 
 .Failover Cluster Instance (FCI) Microsoft SQL deployment
 A multiple Availability Zone FSx for NetApp ONTAP filesystem is deployed when a new FSx for ONTAP file system is selected for FCI deployment. 

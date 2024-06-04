@@ -16,7 +16,7 @@ Creating a new Microsoft SQL database in the Workload Factory console makes it p
 
 Upon creation, two new volumes are created in the FSx for ONTAP file system consisting of independent LUNs to host data and log files for the database. The database files in the new database are thin-provisioned and consume only a few MBs of the total size allocated for the new database. 
 
-Workload Factory uses two drive letters for each new database. You can create up to 10 databases with a new drive letter. If you want to segregate storage for the database, you can do this by using a virtual mount point. The virtual mount point lets you consolidate databases to a few common drives on the host. 
+If you want to segregate storage for the database, you can do this by using a virtual mount point. The virtual mount point lets you consolidate databases to a few common drives on the host. 
 
 You can create a database in Workload Factory or copy or download a code template to complete the operation outside Workload Factory. Review the Workload Factory operational modes to decide which mode you'd like to use. 
 
