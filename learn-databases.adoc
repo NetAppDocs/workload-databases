@@ -41,7 +41,7 @@ Workload Factory for Databases offers the following features:
 * *Built-in features*: utilize NetApp, Microsoft, and Amazon best practices and AWS resource selections built in to deployment configuration.
 * *Cost estimation* - assess potential cost savings with Workload Factory’s storage calculator that estimates and details storage, compute, SQL licensing, snapshot, and clone itemized costs for existing Microsoft SQL Server deployments with FSxW or EBS compared with FSx for ONTAP. 
 * *Reusable automation templates* - create, re-use, and customize CloudFormation templates from the Workload Factory Codebox for future Microsoft SQL Server deployments in multiple environments. 
-* *AWS resource discovery and provisioning* - automatically detect Microsoft SQL Servers on FSx for ONTAP, FSx for Windows File Servers, and Elastic Block Storage deployed from your AWS account. The Databases Inventory serves as a launching point for exploring costs savings opportunities for servers in other AWS storage systems or a management tool for FSx for ONTAP based servers and instances.
+* *AWS resource discovery and provisioning* - automatically detect Microsoft SQL Servers on FSx for ONTAP, FSx for Windows File Servers, and Elastic Block Store deployed from your AWS account. The Databases Inventory serves as a launching point for exploring costs savings opportunities for servers in other AWS storage systems or a management tool for FSx for ONTAP based servers and instances.
 * *Sandbox creation* - create an on-demand, isolated database environment that can be used for testing, integration, diagnostics, and training, without affecting production data. 
 * *Database creation* - create a user database for your existing Microsoft SQL Servers with _Quick_ or _Advanced_ create modes to configure your database collation, file names, and sizes. Storage configuration is included. 
 * *Job Monitoring* - monitor and track database job execution progress and diagnose and troubleshoot issues in case any failure occurs.  
@@ -99,13 +99,12 @@ Single Availability Zone (SAZ) and multiple Availability Zone deployment archite
 .Single Availability Zone
 The following diagram displays standalone architecture with a single Availability Zone in a single region. 
 
-image:diagram-saz-database-architecture.png[diagram of standalone architecture with with a single Availability Zone deployment of Amazon FSx for NetApp ONTAP in a single region]
+image:diagram-SAZ-database-architecture.png[diagram of standalone architecture with with a single Availability Zone deployment of Amazon FSx for NetApp ONTAP in a single region]
 
 .Multiple Availability Zone
 The following diagram displays two-node high-availability (HA) architecture with failover cluster instance (FCI) cluster in a single region. 
 
-image:diagram-maz-database-architecture.png[diagram of two-node high-availability architecture with failover cluster instance cluster in a single region]
-
+image:diagram-MAZ-database-architecture.png[diagram of two-node high-availability architecture with failover cluster instance cluster in a single region]
 
 === Integrated AWS services
 Databases includes the following integrated AWS services: 

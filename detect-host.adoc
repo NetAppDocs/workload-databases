@@ -15,7 +15,7 @@ When AWS credentials are associated in Workload Factory, Databases allows automa
 
 * FSx for ONTAP
 * FSx for Windows File Servers
-* FSx for Elastic Block Storage (EBS)
+* FSx for Elastic Block Store (EBS)
 
 You can also detect a host manually. 
 
@@ -36,7 +36,7 @@ The requirements for detecting an unidentifiable host are as follows:
 * You must have AWS account credentials (Link to credentials)
 * The storage type for the host must be one of the following: 
 ** FSx for ONTAP
-** AWS Elastic Block Storage (EBS) 
+** AWS Elastic Block Store (EBS) 
 ** AWS Elastic File Storage (EFS) 
 ** FSx for Windows File Servers (FSx for Windows)
 ** Cloud Volumes ONTAP 
