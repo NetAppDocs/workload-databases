@@ -1,0 +1,43 @@
+---
+sidebar: sidebar
+permalink: explore-savings.html
+keywords: cost, savings, compare costs, EBS, FSx for ONTAP
+summary: Explore savings for your database workloads using AWS Elastic Block Store (EBS) storage. 
+---
+= Explore savings in Workload Factory for Databases
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Explore savings for your database workloads using AWS Elastic Block Store (EBS) storage. 
+
+== About this task
+Workload Factory provides a storage calculator so you can compare the costs of storage on FSx for ONTAP file systems against Elastic Block Store (EBS) storage. Depending on your storage requirements, you might find that FSx for ONTAP file systems are the most cost effective for you.
+
+When you click the Explore savings button and follow the wizard, the storage calculator displays whether the storage for the workloads on these storage systems would cost less if you used an FSx for ONTAP file system.
+
+You can also select specific volumes from this page and then click Explore savings to compare only those selected volumes.
+
+If Workload Factory determines that you could save money by running these workloads on an FSx for ONTAP file system, you can deploy the file system from the calculator directly from Workload Factory. In some cases, Workload Factory may recommend that you deploy multiple file systems based on the amount of storage you are currently using, and based on the performance characteristics of your workloads.
+
+== Before you begin
+Complete the following prerequisites before you begin: 
+
+* Make sure you link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html#grant-permissions[grant _Read_ permissions^] in your AWS account to detect EBS systems in your Databases inventory. 
+
+* Detect hosts using EBS storage in your Databases inventory. link:detect-host.html[Learn how to detect hosts^].
+
+.Steps
+. Go to the Workload Factory console. 
+. In the Databases tile, select *Go to Databases inventory*. 
+. Select the *Explore savings* tab.
+. Click *Explore savings* for the database server using EBS storage.
+. Optionally, provide the following details on clone and snapshots in your EBS storage for a more accurate cost savings estimate. 
+.. *Snapshot frequency*: Select a snapshot frequency from the dropdown. 
+.. *Clone refresh frequency*: Select a clone refresh frequency from the dropdown. 
+.. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.  
+. Review the details and recommendation provided on the page. 
++
+Additionally, scroll down to the bottom of the page to *Export PDF* or *View the calculations*.
+. If you'd like to switch to FSx for ONTAP to realize cost savings, click *Create* to deploy the file system(s) from the calculator directly from Workload Factory or click *Save* to save the recommended configuration(s) for later. 
+

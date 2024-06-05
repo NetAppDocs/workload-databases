@@ -29,13 +29,13 @@ link:https://review.docs.netapp.com/us-en/workload-setup-admin_first-draft/sign-
 
 [role="quick-margin-para"]
 
-Choose between link:https://review.docs.netapp.com/us-en/workload-setup-admin_first-draft/operational-modes.html[_Basic_, _Read_, and _Automate_ operational modes^]. 
+Choose between link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[_Basic_, _Read_, and _Automate_ operational modes^]. 
 
 [role="quick-margin-para"]
 If you choose to operate in _Basic_ mode, you don't need to go any further. You can start using Workload Factory Databases to copy empty code templates. In the Databases tile, click *Deploy database*. link:deploy-host.html[Learn how to deploy a database host]. You can also start with the Storage savings calculator (provide link to task-based page to use the calculator and link to calculator reference). 
 
 [role="quick-margin-para"]
-If you operate in _Read_ or _Automate_ mode, you'll need to link:https://review.docs.netapp.com/us-en/workload-setup-admin_first-draft/manage-credentials.html[add credentials to an account manually^] which includes selecting workload capabilities, such as Databases and AI, and creating the IAM policies to ensure you have the correct permissions for operating in Read or Automate mode.
+If you operate in _Read_ or _Automate_ mode, you'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html[add credentials to an account manually^] which includes selecting workload capabilities, such as Databases and AI, and creating the IAM policies to ensure you have the correct permissions for operating in Read or Automate mode.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Deploy a database host
 
@@ -44,8 +44,8 @@ If you operate in _Read_ or _Automate_ mode, you'll need to link:https://review.
 Lastly, if you chose to operate in Automate mode, you must link:https://review.docs.netapp.com/us-en/workload-databases_first-draft/deploy-host.html[deploy] or link:https://review.docs.netapp.com/us-en/workload-databases_first-draft/detect-host.html[detect a database host] to manage your host resources and before adding user databases.
 
 == What's next
-When you have FSx for ONTAP hosts in your Databases inventory, you can link:create-database.html[create a user database^] or clone your host to create a sandbox (link to clone). 
+When you have FSx for ONTAP managed hosts in your Databases inventory, you can link:create-database.html[create a user database^] or link:create-sandbox-clone.html[clone your host to create a sandbox^]. 
 
-When you have EBS hosts in your Databases inventory, you can explore savings with the Storage savings calculator. 
+When you have EBS hosts in your Databases inventory, you can link:explore-savings.html[explore savings with the Storage savings calculator^]. 
 
 

@@ -85,7 +85,11 @@ You can use _Quick create_ or _Advanced create_ deployment modes to complete thi
 .. *File settings mode*: Select *Advanced create*. 
 .. *File names & path*:
 ... *Data file*: Select a drive letter and enter the data file name.
++
+Optionally, click the box for *Virtual mount point*.
 ... *Log file*: Select a drive letter and enter the log file name. 
++
+Optionally, click the box for *Virtual mount point*.
 .. *File sizes*: Enter the data size and log size for the database.
 . Click *Create*.
 --

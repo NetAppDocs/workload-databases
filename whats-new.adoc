@@ -11,7 +11,7 @@ summary: Learn what's new with Workload Factory for Databases.
 [.lead]
 Learn what's new with Databases.
 
-== 29 April
-Databases is now generally available in Workload Factory. 
+== 8 July
+Databases is now generally available for Workload Factory. 
 
 link:learn-databases.html[Learn about Databases].

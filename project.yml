@@ -24,7 +24,7 @@ sidebar:
       - title: Learn about Workload Factory for Databases
         url: /learn-databases.html 
       - title: Quick start
-        url: /quick-start-databases.html
+        url: /quick-start-databases.html 
   - title: Use Database workloads
     entries: 
       - title: Create a new database host
@@ -33,6 +33,8 @@ sidebar:
         url: /detect-host.html 
       - title: Create a database
         url: /create-database.html
+      - title: Explore savings
+        url: /explore-savings.html 
       - title: Automate with Codebox
         url: automate-codebox.html
   - title: Administer and monitor

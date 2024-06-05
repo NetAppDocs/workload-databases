@@ -15,9 +15,6 @@ Known limitations identify platforms, devices, or functions that are not support
 == AMI image version support
 We only show up to four recent versions or revisions of AMI images for each SQL version. We don't allow installation from an AMI image that is older than the latest four versions.
 
-== Terraform deployment
-Deployment using Terraform isn't currently supported.
-
 == Roll back and retry for failed deployments 
 Rollback and retry for failed deployments aren't supported in Workload Factory. You can roll back or retry a failed stack from the CloudFormation console in AWS. 
 
@@ -30,7 +27,7 @@ The following DNS resources aren't removed from Active Directory and DNS when yo
 
 You'll need to cleanup these up manually or wait for the domain to purge stale entries. 
 
-== Always On Availability Groups configuration support
+== Always On availability groups configuration support
 Always On Availability Groups configuration isn't supported in Workload Factory. 
 
 == User-managed Active Directory security groups

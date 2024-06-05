@@ -13,7 +13,9 @@ Track database jobs and monitor databases with the Workload Factory Database cap
 
 Workload Factory Databases provides database job monitoring so you can always track job progress and diagnose and troubleshoot in case any failure occurs. 
 
-Job monitoring supports three levels of monitoring per deployment:
+Job monitoring supports up to three levels of monitoring.
+
+For example, when creating a database, three levels of monitoring appear in Job monitoring. When creating a sandbox, two levels of monitoring appear. 
 
 * Level 1 (job): Tracks the host deployment job.
 * Level 2 (sub-job): Tracks the backup sub-job. 

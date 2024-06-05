@@ -181,12 +181,14 @@ Three security groups get attached to the SQL nodes (EC2 instances) during new s
 For a user-managed Active Directory, you can select a security group that allows traffic from your existing systems which need to connect to the database. The security group should allow communication to the Active Directory domain controllers from the subnets where EC2 instances for Microsoft SQL are configured. 
 
 . Under *Application settings*, provide the following: 
-.. *Operating system*: Select *Windows server 2016* or *Windows server 2019*. 
-.. *Database edition*: Select *SQL Server Standard Edition* or *SQL Server Enterprise Edition*. 
-.. *Database version*: Select *SQL Server 2016* or *SQL Server 2019*.
-.. *SQL Server install type*: Select the SQL Server install type.
-... License included AMI: Select the SQL Server AMI from the dropdown.
-...	Use custom AMI: This option isn't currently supported.
+.. Under *SQL Server install type*, select *License included AMI* or *Use custom AMI*. 
++
+... If you select *License included AMI*, provide the following: 
+.... *Operating system*: Select *Windows server 2016*, *Windows server 2019*, or *Windows server 2022*. 
+.... *Database edition*: Select *SQL Server Standard Edition* or *SQL Server Enterprise Edition*. 
+.... *Database version*: Select *SQL Server 2016*, *SQL Server 2019*, or *SQL Server 2022*.
+.... *SQL Server AMI*: Select a SQL Server AMI from the dropdown. 
+... If you select *Use custom AMI*, select an AMI from the dropdown.
 .. *SQL Server collation*: Select a collation set for the server.
 +
 NOTE: If the selected collation set isn't compatible for installation, we recommend that you select the default collation "SQL_Latin1_General_CP1_CI_AS".
@@ -210,6 +212,9 @@ For AWS-managed Active Directories, the DNS IP address(es) appear in the dropdow
 +
 A new FSx for ONTAP file system may add 30 minutes or more of installation time. 
 ... *Select an existing FSx for ONTAP*: Select FSx for ONTAP name from the dropdown, and enter a user name and password for the file system. 
+.. *Snapshot policy*: Enabled by default. Snapshots are taken daily and have a 7-day retention period. 
++
+The snapshots are assigned to volumes created for SQL workloads. 
 .. *Data drive size*: Enter the data drive capacity and select the capacity unit. 
 .. *Provisioned IOPS*: Select *Automatic* or *User-provisioned*. If you select *User-provisioned*, enter the IOPS value. 
 .. *Throughput capacity*: Select the throughput capacity from the dropdown.
