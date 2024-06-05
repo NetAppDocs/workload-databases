@@ -9,13 +9,15 @@ summary: Refresh a sandbox clone in Workload Factory for Databases.
 :imagesdir: ./media/
 
 [.lead]
-Refresh a database clone so that it is equivalent to the source database at the current moment. 
+Refresh a database clone so that it is equivalent to the source database at the current moment or a previous point in time. 
 
 == About this task
-Refreshing a clone updates the clone to the source database at the current moment. Any changes made to the sandbox clone will be deleted. 
+Refreshing a clone updates the clone either to the source database at the current moment or to a snapshot of the source database taken at a previous point in time. Any changes made to the sandbox clone will be deleted. 
 
 == Before you begin
 A refresh is only possible when the source database is active. 
+
+To refresh a database clone from a snapshot, the source database must have at least one snapshot for the operation.
 
 .Steps
 . Log in to the Workload Factory console. 
@@ -23,4 +25,9 @@ A refresh is only possible when the source database is active.
 . In Databases, select the *Sandboxes* tab.
 . Click the three dots menu of the sandbox clone you want to refresh.
 . Select *Refresh*. 
-. In the Refresh dialog, click *Refresh*. 
+. In the Refresh dialog, select one of the following options: 
+.. *Refresh to current time*
+.. *Refresh to a previous point in time* 
++
+For this option, select the database snapshot from the dropdown to refresh to. 
+. Click *Refresh*. 

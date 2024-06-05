@@ -57,8 +57,6 @@ sidebar:
             url: revert-clone.html 
           - title: Refresh a sandbox clone
             url: refresh-clone.html  
-          - title: Roll back a sandbox clone
-            url: rollback-clone.html 
           - title: Connect to the CI/CD pipeline
             url: connect-clone-cicd.html  
           - title: View clone connection information
