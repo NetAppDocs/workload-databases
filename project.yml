@@ -44,7 +44,7 @@ sidebar:
     #      - title: Manage a Microsoft SQL server in Workload Factory
     #        url: manage-server.html
           - title: Remove a managed host
-            url: remove-managed-host.adoc   
+            url: remove-host.adoc   
     #  - title: Manage databases
     #    entries: 
       - title: Monitor databases

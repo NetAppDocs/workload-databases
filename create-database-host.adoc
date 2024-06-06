@@ -77,7 +77,7 @@ You can use _Quick create_ or _Advanced create_ deployment modes to complete thi
 
 .Quick create
 -- 
-. Log in to Workload Factory console.
+. Log in to the Workload Factory console.
 . In the Databases tile, click *Deploy database*.
 . Select *Quick create*.  
 . Under *AWS settings*, provide the following: 
@@ -139,7 +139,7 @@ Alternatively, if you want to change any of these default settings now, create t
 
 .Advanced create
 --
-. Log in to Workload Factory console.
+. Log in to the Workload Factory console.
 . In the Databases tile, click *Deploy database*. 
 . Select *Advanced create*. 
 . For *Deployment model*,  select *Failover Cluster Instance* or *Single instance*.

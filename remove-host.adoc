@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: remove-managed-host.html
+permalink: remove-host.html
 keywords: remove host, remove server 
 summary: Remove a managed host from Databases. 
 ---

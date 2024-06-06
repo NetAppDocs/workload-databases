@@ -11,11 +11,10 @@ summary: Detect a Microsoft SQL server in Workload Factory for Databases.
 [.lead]
 Detect a Microsoft SQL server in Workload Factory Databases. 
 
-When AWS credentials are associated in Workload Factory, Databases allows automated discovery of Microsoft SQL servers beginning with SQL server 2016 with the following storage types: 
+When AWS credentials are associated in Workload Factory, Databases allows automated discovery of Microsoft SQL servers beginning with SQL server 2016 with the following AWS storage types: 
 
 * FSx for ONTAP
-* FSx for Windows File Servers
-* FSx for Elastic Block Store (EBS)
+* Elastic Block Store (EBS)
 
 You can also detect a host manually. 
 
@@ -36,16 +35,13 @@ The requirements for detecting an unidentifiable host are as follows:
 * You must have AWS account credentials (Link to credentials)
 * The storage type for the host must be one of the following: 
 ** FSx for ONTAP
-** AWS Elastic Block Store (EBS) 
-** AWS Elastic File Storage (EFS) 
-** FSx for Windows File Servers (FSx for Windows)
-** Cloud Volumes ONTAP 
+** Elastic Block Store (EBS) 
 * EC2 instances must have a role/instance profile that allows SSM connection for detection to work. 
 +
 When a Microsoft SQL host is detected, the existing environment isn't modified. Detection happens through AWS Systems Manager Session Manager (SSM). Without the right IAM instance profile, detection will fail. link:https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-troubleshooting.html[Learn more about SSM troubleshooting^].
 
 .Steps
-. Log in to Workload Factory console.
+. Log in to the Workload Factory console.
 . In the Databases tile, click *Go to Databases Inventory*.
 . In Databases, select the *Inventory* tab. 
 . Select the *Unidentified hosts* tab. 
@@ -63,4 +59,4 @@ Detected host information appears. The host is now listed in the *Unmanaged host
 To check the job's progress, go to the *Job monitoring* tab. 
 
 == What's next
-When the storage type for the host is FSx for ONTAP, you have the option to link:manage-hosts.adoc[manage the host via Workload Factory]. 
+When the storage type for the host is FSx for ONTAP, you can link:manage-hosts.adoc[manage the host via Workload Factory]. 
