@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: manage-hosts.html
-keywords: 
+keywords: manage host
 summary: Manage existing hosts within Workload Factory Databases. 
 ---
 = Manage hosts

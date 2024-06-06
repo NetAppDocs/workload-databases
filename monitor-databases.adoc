@@ -22,8 +22,6 @@ Job monitoring events are retained in the user interface for 30 days.
 
 In addition, filters by type and status, the search function, and the option to download the jobs table help with database jobs navigation and reporting.
 
-== Before you begin
-
 .Steps
 . Log in to the Workload Factory console.
 . In the Databases tile, click *Go to Databases Inventory*.
