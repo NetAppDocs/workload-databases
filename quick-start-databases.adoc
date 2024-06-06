@@ -41,7 +41,7 @@ If you operate in _Read_ or _Automate_ mode, you'll need to link:https://docs.ne
 
 [role="quick-margin-para"]
 
-Lastly, if you chose to operate in Automate mode, you must link:https://review.docs.netapp.com/us-en/workload-databases_first-draft/deploy-host.html[deploy] or link:https://review.docs.netapp.com/us-en/workload-databases_first-draft/detect-host.html[detect a database host] to manage your host resources and before adding user databases.
+Lastly, if you chose to operate in Automate mode, you must link:deploy-host.html[deploy] or link:detect-host.html[detect a database host] to manage your host resources and before adding user databases.
 
 == What's next
 When you have FSx for ONTAP managed hosts in your Databases inventory, you can link:create-database.html[create a user database^] or link:create-sandbox-clone.html[clone your host to create a sandbox^]. 

@@ -14,7 +14,7 @@ Create a new Microsoft SQL server, or database host, within Workload Factory for
 == About this task
 Creating a new Microsoft SQL server in Databases requires an FSx for ONTAP file system deployment and resources for Active Directory. 
 
-Before you begin, learn about the storage deployment for the database host configuration, Active Directory deployment, Workload Factory modes of operation, and the <<requirements>> to complete this operation.
+Before you begin, learn about the storage deployment for the database host configuration, Active Directory deployment, Workload Factory modes of operation, and the <<Before you begin,requirements>> to complete this operation.
 
 === FSx for ONTAP file system deployments
 Creating a new Microsoft SQL server requires an FSx for ONTAP file system as the storage backend. You can use an existing FSx for ONTAP file system or create a new file system. If you select an existing FSx for ONTAP file system as your database server storage backend, we create a new storage VM for the Microsoft SQL workloads. 

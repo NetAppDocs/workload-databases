@@ -36,7 +36,7 @@ Complete the following prerequisites before you begin:
 .. *Snapshot frequency*: Select a snapshot frequency from the dropdown. 
 .. *Clone refresh frequency*: Select a clone refresh frequency from the dropdown. 
 .. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.  
-. Review the details and recommendation provided on the page. 
+. Review the calculations and recommendation provided on the page. 
 +
 Additionally, scroll down to the bottom of the page to *Export PDF* or *View the calculations*.
 . If you'd like to switch to FSx for ONTAP to realize cost savings, click *Create* to deploy the file system(s) from the calculator directly from Workload Factory or click *Save* to save the recommended configuration(s) for later. 
