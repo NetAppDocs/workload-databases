@@ -14,9 +14,7 @@ Explore savings for your database workloads using AWS Elastic Block Store (EBS) 
 == About this task
 Workload Factory provides a storage calculator so you can compare the costs of storage on FSx for ONTAP file systems against Elastic Block Store (EBS) storage. Depending on your storage requirements, you might find that FSx for ONTAP file systems are the most cost effective for you.
 
-When you click the Explore savings button and follow the wizard, the storage calculator displays whether the storage for the workloads on these storage systems would cost less if you used an FSx for ONTAP file system.
-
-You can also select specific volumes from this page and then click Explore savings to compare only those selected volumes.
+When you click the Explore savings button and follow the wizard, the Storage savings calculator displays whether the storage for the workloads on these storage systems would cost less if you used an FSx for ONTAP file system.
 
 If Workload Factory determines that you could save money by running these workloads on an FSx for ONTAP file system, you can deploy the file system from the calculator directly from Workload Factory. In some cases, Workload Factory may recommend that you deploy multiple file systems based on the amount of storage you are currently using, and based on the performance characteristics of your workloads.
 
@@ -25,7 +23,7 @@ Complete the following prerequisites before you begin:
 
 * Make sure you link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html#grant-permissions[grant _Read_ permissions^] in your AWS account to detect EBS systems in your Databases inventory. 
 
-* Detect hosts using EBS storage in your Databases inventory. link:detect-host.html[Learn how to detect hosts^].
+* Detect hosts in EBS storage in your Databases inventory. link:detect-host.html[Learn how to detect hosts^].
 
 .Steps
 . Log in to the Workload Factory console. 

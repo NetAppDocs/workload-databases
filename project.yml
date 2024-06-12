@@ -41,12 +41,10 @@ sidebar:
     entries:
       - title: Manage database servers
         entries: 
-    #      - title: Manage a Microsoft SQL server in Workload Factory
-    #        url: manage-server.html
-          - title: Manage a host 
+          - title: Manage a Microsoft SQL server 
             url: /manage-host.html
-          - title: Remove a managed host
-            url: /remove-host.html   
+        #  - title: Remove a managed host
+        #    url: /remove-host.html   
     #  - title: Manage databases
     #    entries: 
       - title: Monitor databases

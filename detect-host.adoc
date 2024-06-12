@@ -1,40 +1,38 @@
 ---
 sidebar: sidebar
 permalink: detect-host.html
-keywords: detect, detect server, discover host, detect a database host, database host 
-summary: Detect a Microsoft SQL server in Workload Factory for Databases. 
+keywords: detect, detect server instance, instance, detect a database host, instance
+summary: Detect a Microsoft SQL server instance in Workload Factory for Databases. 
 ---
-= Detect a Microsoft SQL server in Workload Factory for Databases
+= Detect a Microsoft SQL server instance
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Detect a Microsoft SQL server in Workload Factory Databases. 
+Detect a Microsoft SQL server instance in Workload Factory for Databases. 
 
-When AWS credentials are associated in Workload Factory, Databases allows automated discovery of Microsoft SQL servers beginning with SQL server 2016 with the following AWS storage types: 
+This task is for detecting an _undetected host_.
+
+== About this task
+When AWS credentials are associated in Workload Factory, Databases allows automated discovery of Microsoft SQL servers, or beginning with SQL server 2016 with the following AWS storage types: 
 
 * FSx for ONTAP
 * Elastic Block Store (EBS)
 
-You can also detect a host manually. 
+In Databases, discovered hosts are categorized as follows: 
 
-== About this task
-The first step to managing Microsoft SQL servers, or hosts, in Workload Factory for Databases is detecting an unidentifiable host.  
-
-In Databases, hosts are categorized as follows: 
-
-* _Unidentifiable hosts_: undetected hosts that have been automatically discovered by Workload Factory. Hosts are undetected in the following cases: 
+* _Undetected hosts_: undetected hosts that have been automatically discovered by Workload Factory. Hosts are undetected in the following cases: 
 ** Microsoft SQL server authentication fails.
 ** The FSx for ONTAP file system for the Microsoft SQL server isn't registered with your account in Workload Factory.  
 * _Unmanaged hosts_: detected hosts that are not managed by Workload Factory
 * _Managed hosts_: detected hosts that are managed by Workload Factory
 
-This task is for detecting an _unidentifiable host_.
+The first step to managing Microsoft SQL servers instances, or host instances, in Workload Factory for Databases is detecting an undetected host instance.  
 
 == Before you begin
-The requirements for detecting an unidentifiable host are as follows: 
+The requirements for detecting an undetected host are as follows: 
 
-* You must have AWS account credentials (Link to credentials)
+* You must have link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html[AWS account credentials^] to detect a host instance in Workload Factory. 
 * The storage type for the host must be one of the following: 
 ** FSx for ONTAP
 ** Elastic Block Store (EBS) 
@@ -46,17 +44,20 @@ When a Microsoft SQL host is detected, the existing environment isn't modified. 
 . Log in to the Workload Factory console.
 . In the Databases tile, click *Go to Databases Inventory*.
 . In Databases, select the *Inventory* tab. 
- 
-. Click *Detect host* for the unidentified host you want to detect.
+. Click the dropdown arrow to expand the row of the host to detect.
++
+The host expands and the host instances appear.  
+. Click the three dots menu of the instance to detect.
+. Click *Detect*.
+. In the *Detect host* dialog, provide the Microsoft SQL Server user name and password or FSx for ONTAP user name and password. 
 +
 Workload Factory tries to validate your Microsoft SQL credentials or FSx for ONTAP credentials. 
 +
 If either of these credentials isn't available, Workload Factory tries to install the `aws.tools.SimpleSystemsManagement` module in PowerShell.
-. In the *Detect host* dialog, provide the Microsoft SQL Server user name and password or FSx for ONTAP user name and password. 
 . Click *Detect*.
 +
 Detected host information appears. 
-. Select *Yes, Manage host via Workload Factory* or *No, move host to the Unmanaged hosts tab*. 
+. Select *Yes, Manage host via Workload Factory* or *No*. 
 . Click *Done*. 
 
 == What's next

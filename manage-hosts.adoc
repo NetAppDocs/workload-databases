@@ -2,35 +2,88 @@
 sidebar: sidebar
 permalink: manage-hosts.html
 keywords: manage host
-summary: Manage existing hosts within Workload Factory Databases. 
+summary: Manage Microsoft SQL server instances in Databases. 
 ---
-= Manage hosts
+= Manage Microsoft SQL server instances
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-The second step to managing Microsoft SQL servers, or hosts, in Workload Factory Databases is managing an unmanaged host. 
+Manage Microsoft SQL server instances in Databases. 
 
-== Manage a host
-The second step to managing Microsoft SQL servers, or hosts, in Workload Factory Databases is managing an unmanaged host.  
+Databases can only manage Microsoft SQL server instances with FSx for ONTAP file system storage. 
 
-In Databases, hosts are categorized as follows: 
+== Host management 
+Host management includes the following tasks: 
 
-* _Unidentifiable hosts_: undetected hosts that have been automatically discovered by Workload Factory
-* _Unmanaged hosts_: detected hosts that are not managed by Workload Factory
-* _Managed hosts_: detected hosts that are managed by Workload Factory
+* Manage a host instance
+* View a managed instance
+* View databases
+* Unmanage a host instance
+* Remove a managed host
 
-This task is for managing an _unmanaged host_.
+To complete any of these tasks, you must link:detect-host.html[detect one or more host instances^]. 
 
-== Before you begin
-You must have detected an unidentifiable host. The 
+=== Manage a host instance 
+Manage a detected or unmanaged instance for a host.
 
-If prerequisites (PowerShell modules and management scripts) haven't been met, the manage host job fails. Workload Factory triggers a repair job to install missing modules. When the job completes, retry to manage the host.
+=== Before you begin
+You must have a detected instance in the host that is available for management. 
 
-=== View host overview
+.Steps
+. Log in to the Workload Factory console.
+. In the Databases tile, click *Go to Databases Inventory*.
+. In Databases, select the *Inventory* tab. 
+. Click *Manage* in the row of the host to manage. 
+. Select one or more instances to manage. 
+. Click *Manage*. 
 
-=== View databases list
+The operation fails when the Microsoft SQL server is missing certain PowerShell modules and management scripts. Workload Factory triggers a repair job to install missing modules and scripts which you can view in the Job monitoring tab. When the job completes, retry to manage the host.
+
+=== View a managed instance
+You can view a managed instance by following these steps.
+
+.Steps
+. Log in to the Workload Factory console.
+. In the Databases tile, click *Go to Databases Inventory*.
+. In Databases, select the *Inventory* tab. 
+. Click the dropdown arrow to expand the row of the host to view its managed instances. 
++
+The host expands and the host instances appear. 
+. Click the three dots menu of the instance to view.
+. Select *View instance*. 
+
+The overview of the instance appears in the Inventory tab. 
+
+=== View databases 
+You can view the databases managed by the managed instance by following these steps. 
+
+.Steps
+. Log in to the Workload Factory console.
+. In the Databases tile, click *Go to Databases Inventory*.
+. In Databases, select the *Inventory* tab. 
+. Click the dropdown arrow to expand the row of the host to view its managed instances.
++
+The host expands and the host instances appear.  
+. Click the three dots menu of the instance that manages the databases to view.
+. Select *View databases*. 
+
+=== Unmanage a host instance
+Unmanage a host instance by following these steps.
+
+.Steps
+. Log in to the Workload Factory console.
+. In the Databases tile, click *Go to Databases Inventory*.
+. In Databases, select the *Inventory* tab. 
+. Click the dropdown arrow to expand the row of the host instance to unmanage. 
++
+The host expands and the host instances appear. 
+. Click the three dots menu of the instance to unmanage. 
+. Select *Unmanage*. 
+
+The host instance is now unmanaged. 
 
 === Remove a managed host
+??
 
 
