@@ -36,7 +36,7 @@ sidebar:
       - title: Create a database
         url: /create-database.html 
       - title: Automate with Codebox
-        url: automate-codebox.html
+        url: /automate-codebox.html
   - title: Administer and monitor
     entries:
       - title: Manage database servers
@@ -44,9 +44,9 @@ sidebar:
     #      - title: Manage a Microsoft SQL server in Workload Factory
     #        url: manage-server.html
           - title: Manage a host 
-            url: manage-host.html
+            url: /manage-host.html
           - title: Remove a managed host
-            url: remove-host.html   
+            url: /remove-host.html   
     #  - title: Manage databases
     #    entries: 
       - title: Monitor databases
@@ -54,19 +54,21 @@ sidebar:
       - title: Manage clones
         entries: 
           - title: Create a sandbox clone 
-            url: create-sandbox-clone.html 
+            url: /create-sandbox-clone.html 
+          - title: Run an integrity check 
+            url: /run-integrity-check.html  
           - title: Revert a sandbox clone
-            url: revert-clone.html 
+            url: /revert-clone.html 
           - title: Refresh a sandbox clone
-            url: refresh-clone.html  
+            url: /refresh-clone.html  
           - title: Connect to the CI/CD pipeline
-            url: connect-clone-cicd.html  
+            url: /connect-clone-cicd.html  
           - title: View clone connection information
-            url: view-clone-connection.html  
+            url: /view-clone-connection.html  
           - title: Split a sandbox clone
-            url: split-clone.html  
+            url: /split-clone.html  
           - title: Delete a sandbox clone
-            url: delete-clone.html                     
+            url: /delete-clone.html                     
   - title: Knowledge and support
     entries: 
       - title: Register for support
