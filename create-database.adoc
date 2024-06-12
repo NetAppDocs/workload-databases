@@ -22,25 +22,14 @@ You can create a database in Workload Factory or copy or download a code templat
 
 NOTE: Microsoft SQL servers using SMB protocol don't support database creation. 
 
-=== Workload Factory operational modes
-Workload Factory offers three operational modes depending on how comfortable you are with letting Workload Factory manage your AWS resources. 
-
-*_Basic_ mode*: in this mode of operation, you don't need to associate any AWS account credentials in Workload Factory. You can copy or download an empty template from the Codebox to be completed outside Workload Factory. 
-
-*_Read_ mode*: in this mode of operation, you provide AWS account credentials with read permissions which lets you complete the _Quick create_ or _Advanced create_ form and then copy or download it. 
-
-*_Automate_ mode*: in this mode of operation, you provide AWS account credentials with automate permissions which lets you create and manage AWS resources within Workload Factory. 
-
-In _Basic_ mode, you'll copy or download the empty template from the Codebox. In _Read_ mode, you can complete the _Quick create_ or _Advanced create_ form and then copy or download it. Depending on your level of trust, you can create the new server within Workload Factory with _automate_ permissions, download a completed YAML template with _read_ permissions, or download an empty YAML template in _basic_ mode. 
-
 == Before you begin
-Ensure you have the following prerequisites before you create a new database host. 
+Ensure you have the following prerequisites before you create a new database. 
 
-Credentials and permissions::: You must have link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html[AWS account credentials and automate mode permissions^] to create a new database host in Workload Factory. 
+Credentials and permissions::: You must have link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html[AWS account credentials and read or automate mode permissions^] to create a new database in Workload Factory. 
 +
-Alternatively, you can use the Codebox to copy an empty template or create a completed template so that you can deploy a database outside of Workload Factory using REST API, AWS CLI, or AWS CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html[Learn more about Codebox automation^].
+Alternatively, you can use the Codebox to copy an empty template or create a completed template so that you can deploy a database outside of Workload Factory using REST API. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html[Learn more about Codebox automation^].
 
-Windows host::: You must have enough drive letters available on the Microsoft SQL server to create new drives for the new database. 
+Windows host::: You must have enough drive letters available on the Microsoft SQL server to create new drives for the new database if you use _Quick create_ mode. 
 
 Microsoft SQL server::: You must have a managed Microsoft SQL server in Workload Factory for Databases to host the new database. 
 

@@ -25,6 +25,8 @@ This task is for managing an _unmanaged host_.
 == Before you begin
 You must have detected an unidentifiable host. The 
 
+If prerequisites (PowerShell modules and management scripts) haven't been met, the manage host job fails. Workload Factory triggers a repair job to install missing modules. When the job completes, retry to manage the host.
+
 === View host overview
 
 === View databases list

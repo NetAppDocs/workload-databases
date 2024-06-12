@@ -23,7 +23,9 @@ The first step to managing Microsoft SQL servers, or hosts, in Workload Factory 
 
 In Databases, hosts are categorized as follows: 
 
-* _Unidentifiable hosts_: undetected hosts that have been automatically discovered by Workload Factory
+* _Unidentifiable hosts_: undetected hosts that have been automatically discovered by Workload Factory. Hosts are undetected in the following cases: 
+** Microsoft SQL server authentication fails.
+** The FSx for ONTAP file system for the Microsoft SQL server isn't registered with your account in Workload Factory.  
 * _Unmanaged hosts_: detected hosts that are not managed by Workload Factory
 * _Managed hosts_: detected hosts that are managed by Workload Factory
 
@@ -44,19 +46,18 @@ When a Microsoft SQL host is detected, the existing environment isn't modified. 
 . Log in to the Workload Factory console.
 . In the Databases tile, click *Go to Databases Inventory*.
 . In Databases, select the *Inventory* tab. 
-. Select the *Unidentified hosts* tab. 
+ 
 . Click *Detect host* for the unidentified host you want to detect.
 +
 Workload Factory tries to validate your Microsoft SQL credentials or FSx for ONTAP credentials. 
 +
 If either of these credentials isn't available, Workload Factory tries to install the `aws.tools.SimpleSystemsManagement` module in PowerShell.
-. The *Detect host* dialog appears. In the dialog, provide the Microsoft SQL Server user name and password. 
+. In the *Detect host* dialog, provide the Microsoft SQL Server user name and password or FSx for ONTAP user name and password. 
 . Click *Detect*.
 +
-Detected host information appears. The host is now listed in the *Unmanaged hosts* tab. 
+Detected host information appears. 
+. Select *Yes, Manage host via Workload Factory* or *No, move host to the Unmanaged hosts tab*. 
 . Click *Done*. 
-
-To check the job's progress, go to the *Job monitoring* tab. 
 
 == What's next
 When the storage type for the host is FSx for ONTAP, you can link:manage-hosts.adoc[manage the host via Workload Factory]. 

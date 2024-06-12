@@ -1,0 +1,13 @@
+Integrity checks 
+
+Create a sandbox from a source database when the source database is busy. This could cause data corruption when the sandbox is cloned because the snapshot.
+
+Check the integrity of all the objects in the sandbox are intact. 
+
+. Sandbox tab. 
+. Click the three dots menu of the sandbox clone to check integrity for. 
+. Select *Run integrity check*. 
+. In the Integrity check dialog, click *Integrity check*. 
+. Check the status of the sandbox clone in Sandboxes or in Job monitoring. 
+
+If the check fails, we recommend that you do not use this sandbox clone and create a new sandbox clone. 
