@@ -29,9 +29,9 @@ sidebar:
     entries: 
       - title: Explore savings
         url: /explore-savings.html
-      - title: Create a new database host
+      - title: Create a new database server
         url: /create-database-host.html
-      - title: Detect a database host
+      - title: Detect a database server
         url: /detect-host.html 
       - title: Create a database
         url: /create-database.html 
