@@ -47,14 +47,12 @@ sidebar:
         #    url: /remove-host.html   
     #  - title: Manage databases
     #    entries: 
-      - title: Monitor databases
-        url: /monitor-databases.html
       - title: Manage clones
         entries: 
           - title: Create a sandbox clone 
             url: /create-sandbox-clone.html 
-          - title: Run an integrity check 
-            url: /run-integrity-check.html  
+          - title: Check integrity of a sandbox clone
+            url: /check-clone-integrity.html  
           - title: Revert a sandbox clone
             url: /revert-clone.html 
           - title: Refresh a sandbox clone
@@ -66,7 +64,9 @@ sidebar:
           - title: Split a sandbox clone
             url: /split-clone.html  
           - title: Delete a sandbox clone
-            url: /delete-clone.html                     
+            url: /delete-clone.html 
+      - title: Monitor databases
+        url: /monitor-databases.html                                
   - title: Knowledge and support
     entries: 
       - title: Register for support

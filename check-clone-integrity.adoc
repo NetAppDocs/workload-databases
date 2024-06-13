@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar
-permalink: run-integrity-check.html
+permalink: check-clone-integrity.html
 keywords: integrity check, data corruption
-summary: Run an integrity check to determine if sandbox clone data is corrupt.
+summary: Run an integrity check to determine if sandbox clone data is intact or corrupt.
 ---
-= Run an integrity check of the data for a sandbox clone
+= Check the integrity of the data in a sandbox clone
 :icons: font
 :imagesdir: ./media/
 
@@ -12,7 +12,7 @@ summary: Run an integrity check to determine if sandbox clone data is corrupt.
 Run an integrity check to determine if sandbox clone data is intact or corrupt. 
  
 == About this task
-When you create a sandbox from a source database when the source database is busy, the data may not be in sync with the most recent snapshot of the source database. This operation checks the integrity of all the objects in the sandbox clone. 
+When you create a sandbox clone from a source database while it is busy, the clone's data may not be in sync with the most recent snapshot of the source database. This operation checks the integrity of all the objects in the sandbox clone to determine if the sandbox clone data is current. 
 
 .Steps
 . Log in to the Workload Factory console. 
@@ -23,4 +23,4 @@ When you create a sandbox from a source database when the source database is bus
 . In the Integrity check dialog, click *Integrity check*. 
 . Check the status of the integrity check in Sandboxes or in Job monitoring. 
 
-If the check fails, we recommend that you do not use this sandbox clone and create a new sandbox clone. 
+If the integrity check fails, we recommend that you do not use the sandbox clone and create a new sandbox clone. 
