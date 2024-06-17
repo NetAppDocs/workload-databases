@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: manage-servers.html
+permalink: manage-server.html
 keywords: manage host
 summary: Manage Microsoft SQL server instances in Databases. 
 ---
