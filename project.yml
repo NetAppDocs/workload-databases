@@ -41,7 +41,7 @@ sidebar:
     entries:
       - title: Manage a Microsoft SQL server
         url: /manage-server.html
-        entries: 
+      #  entries: 
         #  - title: Manage a Microsoft SQL server 
         #    url: /manage-microsoft-server.html 
     #  - title: Manage databases
