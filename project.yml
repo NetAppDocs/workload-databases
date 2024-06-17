@@ -43,9 +43,7 @@ sidebar:
         url: /manage-server.html
         entries: 
         #  - title: Manage a Microsoft SQL server 
-        #    url: /manage-microsoft-server.html
-        #  - title: Remove a managed host
-        #    url: /remove-host.html   
+        #    url: /manage-microsoft-server.html 
     #  - title: Manage databases
     #    entries: 
       - title: Manage clones

@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: manage-hosts.html
+permalink: manage-servers.html
 keywords: manage host
 summary: Manage Microsoft SQL server instances in Databases. 
 ---
@@ -20,7 +20,6 @@ Host management includes the following tasks:
 * View a managed instance
 * View databases
 * Unmanage a host instance
-* Remove a managed host
 
 To complete any of these tasks, you must link:detect-host.html[detect one or more host instances^]. 
 
@@ -82,8 +81,5 @@ The host expands and the host instances appear.
 . Select *Unmanage*. 
 
 The host instance is now unmanaged. 
-
-=== Remove a managed host
-??
 
 
