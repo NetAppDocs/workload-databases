@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: create-database-host.html
+permalink: create-database-server.html
 keywords: create, server, Microsoft SQL, deploy, host, deploy a database host, database host 
 summary: Deploy a database host in Workload Factory for Databases. 
 ---
@@ -15,6 +15,8 @@ Create a new Microsoft SQL server, or database host, within Workload Factory for
 Creating a new Microsoft SQL server in Databases requires an FSx for ONTAP file system deployment and resources for Active Directory. 
 
 Before you begin, learn about the storage deployment for the database host configuration, Active Directory deployment, Workload Factory modes of operation, and the <<Before you begin,requirements>> to complete this operation.
+
+After deployment, you'll need to enable remote connection on the Microsoft SQL server. 
 
 === FSx for ONTAP file system deployments
 Creating a new Microsoft SQL server requires an FSx for ONTAP file system as the storage backend. You can use an existing FSx for ONTAP file system or create a new file system. If you select an existing FSx for ONTAP file system as your database server storage backend, we create a new storage VM for the Microsoft SQL workloads. 
@@ -68,6 +70,7 @@ Active Directory::: When connecting to Active Directory, you must have administr
 * Create SQL Server service user in the AD, if it doesn't exist already 
 
 PowerShell7::: PowerShell7 modules are required to manage the database server. Install the modules manually by referring to link:https://learn.microsoft.com/en-us/powershell/scripting/developer/module/installing-a-powershell-module?view=powershell-7.4[Microsoft PowerShell documentation for Windows^].
+
 
 .Steps
 You can use _Quick create_ or _Advanced create_ deployment modes to complete this task in Workload Factory with _Automate_ mode permissions.
@@ -248,8 +251,7 @@ In CloudWatch, a log group is created with the name of the stack. A log stream f
 
 ====
 
-== What's next
-
+== Enable remote connection on the Microsoft SQL server
 After the server deploys, Workload Factory does not enable remote connection on the Microsoft SQL server. To enable the remote connection, complete the following steps: 
 
 . Use computer identity for NTLM by referring to link:https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-allow-local-system-to-use-computer-identity-for-ntlm["Network security: Allow Local System to use computer identity for NTLM"^] in Microsoft documentation. 
@@ -257,4 +259,5 @@ After the server deploys, Workload Factory does not enable remote connection on 
 . Allow the required client IP or subnet in the security group. 
 . Ensure that the "Allow remote connections to this server" is enabled in Microsoft SQL Server Management Studio.  
 
+== What's next
 Now you can link:create-database.html[create a database in Workload Factory]. 

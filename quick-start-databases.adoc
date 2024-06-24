@@ -37,11 +37,11 @@ If you operate in _Basic_ mode, you don't need to go any further. You can start 
 [role="quick-margin-para"]
 If you operate in _Read_ or _Automate_ mode, you'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html[add credentials to an account manually^] which includes selecting workload capabilities, such as Databases and AI, and creating the IAM policies to ensure you have the correct permissions for operating in _Read_ or _Automate_ mode.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Deploy a database host
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Deploy a database server
 
 [role="quick-margin-para"]
 
-Lastly, if you chose to operate in _Automate_ mode, you must link:create-database-host.html[deploy] or link:detect-host.html[detect a database host] to manage your host resources and before adding user databases.
+Lastly, if you chose to operate in _Automate_ mode, you must link:create-database-server.html[deploy] or link:detect-host.html[detect a database server] to manage your host resources and before adding user databases.
 
 == What's next
 When you have FSx for ONTAP managed hosts in your Databases inventory, you can link:create-database.html[create a user database^] or link:create-sandbox-clone.html[clone your host to create a sandbox^]. 

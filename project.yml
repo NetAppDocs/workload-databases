@@ -30,7 +30,7 @@ sidebar:
       - title: Explore savings
         url: /explore-savings.html
       - title: Create a new database server
-        url: /create-database-host.html
+        url: /create-database-server.html
       - title: Detect a database server
         url: /detect-host.html 
       - title: Create a database
