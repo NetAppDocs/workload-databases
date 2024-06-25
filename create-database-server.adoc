@@ -71,6 +71,7 @@ Active Directory::: When connecting to Active Directory, you must have administr
 
 PowerShell7::: PowerShell7 modules are required to manage the database server. Install the modules manually by referring to link:https://learn.microsoft.com/en-us/powershell/scripting/developer/module/installing-a-powershell-module?view=powershell-7.4[Microsoft PowerShell documentation for Windows^].
 
+== Step 1: Create a database server
 
 .Steps
 You can use _Quick create_ or _Advanced create_ deployment modes to complete this task in Workload Factory with _Automate_ mode permissions.
@@ -251,7 +252,7 @@ In CloudWatch, a log group is created with the name of the stack. A log stream f
 
 ====
 
-== Enable remote connection on the Microsoft SQL server
+== Step 2: Enable remote connection on the Microsoft SQL server
 After the server deploys, Workload Factory does not enable remote connection on the Microsoft SQL server. To enable the remote connection, complete the following steps: 
 
 . Use computer identity for NTLM by referring to link:https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-allow-local-system-to-use-computer-identity-for-ntlm["Network security: Allow Local System to use computer identity for NTLM"^] in Microsoft documentation. 
