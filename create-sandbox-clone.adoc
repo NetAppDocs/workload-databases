@@ -25,6 +25,8 @@ Alternatively, you can use the Codebox to copy an empty template or create a com
 
 Microsoft SQL server::: You must have a managed Microsoft SQL server in Workload Factory for Databases to host the new sandbox clone.
 
+AWS Systems Manager::: Ensure the `NT Authority\SYSTEM user` privilege is enabled in the Microsoft SQL host via AWS Systems Manager. 
+
 Source database::: You need a source database available for the clone. 
 
 .Steps

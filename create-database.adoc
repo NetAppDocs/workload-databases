@@ -33,6 +33,8 @@ Windows host::: You must have enough drive letters available on the Microsoft SQ
 
 Microsoft SQL server::: You must have a managed Microsoft SQL server in Workload Factory for Databases to host the new database. 
 
+AWS Systems Manager::: Ensure the `NT Authority\SYSTEM user` privilege is enabled in the Microsoft SQL host via AWS System Manager. 
+
 .Steps
 You can use _Quick create_ or _Advanced create_ deployment modes to complete this task in Workload Factory with _Automate_ mode permissions.
 

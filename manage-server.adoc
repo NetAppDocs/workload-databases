@@ -27,7 +27,11 @@ To complete any of these tasks, you must link:detect-host.html[detect one or mor
 Manage a detected or unmanaged instance for a host.
 
 .Before you begin
-You must have a detected instance in the host that is available for management. 
+Complete the following prerequisites before you begin: 
+
+* You must have a detected instance in the host that is available for management. 
+
+* Ensure the `NT Authority\SYSTEM user` privilege is enabled in the Microsoft SQL host via AWS System Manager. 
 
 .Steps
 . Log in to the Workload Factory console.

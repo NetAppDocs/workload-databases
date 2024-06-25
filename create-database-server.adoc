@@ -101,7 +101,7 @@ Optionally, you can download an empty YAML file template from the Codebox to cre
 +
 Ensure security groups for an existing interface endpoint allow access to HTTPS (443) protocol to the selected subnets. 
 +
-AWS service interface endpoints (SQS, FSx, EC2, CloudWatch, Cloud Formation, SSM) and the S3 gateway endpoint are created during deployment if not found.  
+AWS service interface endpoints (SQS, FSx, EC2, CloudWatch, CloudFormation, SSM) and the S3 gateway endpoint are created during deployment if not found.  
 +
 VPC DNS attributes `EnableDnsSupport` and `EnableDnsHostnames` are modified to enable endpoint address resolution if they aren't already set to `true`.
 .. *Availability zones*: Select availability zones and subnets according to the Failover Cluster Instance (FCI) deployment model. 
