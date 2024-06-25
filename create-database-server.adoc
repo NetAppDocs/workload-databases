@@ -23,29 +23,27 @@ Creating a new Microsoft SQL server requires an FSx for ONTAP file system as the
 
 FSx for ONTAP file systems have two Microsoft SQL deployment models: _Failover Cluster Instance (FCI)_ or _Standalone_. Different resources are created for the FSx for ONTAP file system depending on the FSx for ONTAP deployment model you select.
 
-NOTE: In _Quick create_, FCI is the default deployment model, Windows 2016 is the default Windows version, and SQL 2019 Standard Edition is the default SQL version. 
+* *Failover Cluster Instance (FCI) Microsoft SQL deployment*: A Multiple Availability Zone FSx for NetApp ONTAP filesystem is deployed when a new FSx for ONTAP file system is selected for FCI deployment. Separate volumes and LUNs are created for data, log, and tempdb files for an FCI deployment. An additional volume and LUN is created for Quorum or witness disk for Windows cluster. 
 
-.Failover Cluster Instance (FCI) Microsoft SQL deployment
-A multiple Availability Zone FSx for NetApp ONTAP filesystem is deployed when a new FSx for ONTAP file system is selected for FCI deployment. 
-
-Separate volumes and LUNs are created for data, log, and tempdb files for an FCI deployment. An additional volume and LUN is created for Quorum or witness disk for Windows cluster. 
-
-.Standalone Microsoft SQL deployment
-A single Availability Zone FSx for ONTAP filesystem is created when a new Microsoft SQL server is created. In addition, separate volumes and LUNs are created for data, log, and tempdb files.
+* *Standalone Microsoft SQL deployment*: A Single Availability Zone FSx for ONTAP filesystem is created when a new Microsoft SQL server is created. In addition, separate volumes and LUNs are created for data, log, and tempdb files.
 
 === Active Directory
-The following occurs for Active Directory during deployment: 
+The following occurs for Active Directory (AD) during deployment: 
 
 * A new Microsoft SQL service account is created in the domain if you don't provide an existing SQL service account.
 * The Windows cluster, node host names, and Microsoft SQL FCI name are added as managed computers to the Microsoft SQL service account. 
 * The Windows cluster entry is assigned permissions to add computers to the domain. 
 
-NOTE: If you decide to rollback your resources, these entries are not removed automatically and can be cleaned up from the DNS server. For more information, refer to (add link to rollback information).
+==== Resource rollback
+If you decide to rollback your DNS resources, the resource records are not removed automatically. You can remove the records from the DNS server as follows.
+
+* For user-managed AD, first link:https://learn.microsoft.com/en-us/powershell/module/activedirectory/remove-adcomputer?view=windowsserver2022-ps[remove the AD computer^]. Then, connect to the DNS server from DNS manager and link:https://learn.microsoft.com/en-us/windows-server/networking/technologies/ipam/delete-dns-resource-records[delete the DNS Resource Records^].
+* For AWS Managed Microsoft AD, link:https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_install_ad_tools.htmle-records[install the AD administration tools^]. Next, link:https://learn.microsoft.com/en-us/powershell/module/activedirectory/remove-adcomputer?view=windowsserver2022-ps[remove the AD computer^]. Lastly, connect to the DNS server from DNS manager and link:https://learn.microsoft.com/en-us/windows-server/networking/technologies/ipam/delete-dns-resource-records[delete the DNS Resource Records^].
 
 === Workload Factory operation modes
 Workload Factory offers three operation modes depending on how comfortable you are with letting Workload Factory manage your AWS resources. 
 
-*_Basic_ mode*: in this mode of operation, you don't need to associate any AWS account credentials in Workload Factory. You can copy or download an empty template from the Codebox to be completed outside Workload Factory. 
+*_Basic_ mode*: in this mode of operation, you don't need to associate any AWS account credentials in Workload Factory. You can copy or download a partially filled template from the Codebox to be completed outside Workload Factory. 
 
 *_Read_ mode*: in this mode of operation, you provide AWS account credentials with read permissions which lets you complete the _Quick create_ or _Advanced create_ form and then copy or download it. 
 
@@ -81,6 +79,8 @@ You can use _Quick create_ or _Advanced create_ deployment modes to complete thi
 
 .Quick create
 -- 
+NOTE: In _Quick create_, FCI is the default deployment model, Windows 2016 is the default Windows version, and SQL 2019 Standard Edition is the default SQL version. 
+
 . Log in to the Workload Factory console.
 . In the Databases tile, click *Deploy database*.
 . Select *Quick create*.  
