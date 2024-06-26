@@ -76,19 +76,19 @@ Workload Factory for Microsoft SQL Server supports both high availability (Alway
 | SQL Server 2016
 | Yes
 | Yes
-| Unsupported
+| No
 
 // second body row
 | SQL Server 2019
 | Yes
 | Yes
-| Unsupported
+| Yes
 
 // third body row
 | SQL Server 2022
+| No
 | Yes
 | Yes
-| Unsupported
 
 //table end
 |===

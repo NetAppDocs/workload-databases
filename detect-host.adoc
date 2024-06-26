@@ -11,34 +11,36 @@ summary: Detect a Microsoft SQL server instance in Workload Factory for Database
 [.lead]
 Detect a Microsoft SQL server instance in Workload Factory for Databases. 
 
-This task is for detecting an _undetected host_.
+This task is for detecting an _undetected instance_.
 
 == About this task
-When AWS credentials are associated in Workload Factory, Databases allows automated discovery of Microsoft SQL servers, or beginning with SQL server 2016 with the following AWS storage types: 
+When AWS credentials are associated in Workload Factory, Databases allows automated discovery of Microsoft SQL servers beginning with SQL server 2016 with the following AWS storage types: 
 
 * FSx for ONTAP
 * Elastic Block Store (EBS)
+* FSx for Windows File Server
 
-In Databases, discovered hosts are categorized as follows: 
+In Databases, discovered instances are categorized as follows: 
 
-* _Undetected hosts_: undetected hosts that have been automatically discovered by Workload Factory. Hosts are undetected in the following cases: 
+* _Undetected instances_: undetected instances that have been automatically discovered by Workload Factory. Instances are undetected in the following cases: 
 ** Microsoft SQL server authentication fails.
 ** The FSx for ONTAP file system for the Microsoft SQL server isn't registered with your account in Workload Factory.  
-* _Unmanaged hosts_: detected hosts that are not managed by Workload Factory
-* _Managed hosts_: detected hosts that are managed by Workload Factory
+* _Unmanaged instances_: detected instances that are not managed by Workload Factory
+* _Managed instances_: detected instances that are managed by Workload Factory
 
-The first step to managing Microsoft SQL servers instances, or host instances, in Workload Factory for Databases is detecting an undetected host instance.  
+The first step to managing a Microsoft SQL server instance, or host instance, in Workload Factory for Databases is detecting an undetected database server instance.  
 
 == Before you begin
-The requirements for detecting an undetected host are as follows: 
+The requirements for detecting an undetected database server instance are as follows: 
 
-* You must have link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html[AWS account credentials^] to detect a host instance in Workload Factory. 
-* The storage type for the host must be one of the following: 
+* You must have link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html[AWS account credentials^] to detect a database server instance in Workload Factory. 
+* The storage type for the instance must be one of the following: 
 ** FSx for ONTAP
 ** Elastic Block Store (EBS) 
+** FSx for Windows File Server
 * EC2 instances must have a role/instance profile that allows SSM connection for detection to work. 
 +
-When a Microsoft SQL host is detected, the existing environment isn't modified. Detection happens through AWS Systems Manager Session Manager (SSM). Without the right IAM instance profile, detection will fail. link:https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-troubleshooting.html[Learn more about SSM troubleshooting^].
+When a Microsoft SQL instance is detected, the existing environment isn't modified. Detection happens through AWS Systems Manager Session Manager (SSM). Without the right IAM instance profile, detection will fail. link:https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-troubleshooting.html[Learn more about SSM troubleshooting^].
 
 .Steps
 . Log in to the Workload Factory console.
@@ -49,16 +51,16 @@ When a Microsoft SQL host is detected, the existing environment isn't modified. 
 The host expands and the host instances appear.  
 . Click the three dots menu of the instance to detect.
 . Click *Detect*.
-. In the *Detect host* dialog, provide the Microsoft SQL Server user name and password or FSx for ONTAP user name and password. 
+. In the *Detect instance* dialog, provide the Microsoft SQL Server user name and password or FSx for ONTAP user name and password. 
 +
 Workload Factory tries to validate your Microsoft SQL credentials or FSx for ONTAP credentials. 
 +
 If either of these credentials isn't available, Workload Factory tries to install the `aws.tools.SimpleSystemsManagement` module in PowerShell.
 . Click *Detect*.
 +
-Detected host information appears. 
-. Select *Yes, Manage host via Workload Factory* or *No*. 
+Detected instance information appears. 
+. Select *Yes, Manage instance via Workload Factory* or *No*. 
 . Click *Done*. 
 
 == What's next
-When the storage type for the host is FSx for ONTAP, you can link:manage-hosts.adoc[manage the host via Workload Factory]. 
+When the storage type for the host instance is FSx for ONTAP, you can link:manage-server.adoc[manage the instance via Workload Factory]. 

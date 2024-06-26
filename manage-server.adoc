@@ -30,8 +30,15 @@ Manage a detected or unmanaged instance for a host.
 Complete the following prerequisites before you begin: 
 
 * You must have a detected instance in the host that is available for management. 
+* PowerShell7 is required to manage the database instance. Install PowerShell7 manually by referring to link:https://learn.microsoft.com/en-us/powershell/scripting/developer/module/installing-a-powershell-module?view=powershell-7.4[Microsoft PowerShell documentation for Windows^].
+* All manage operations are run by the AWS System Manager Agent using `NT Authority\SYSTEM user` privilege. Provide the following permissions for `NT Authority\SYSTEM user` in the database server: 
 
-* Ensure the `NT Authority\SYSTEM user` privilege is enabled in the Microsoft SQL host via AWS System Manager. 
+* `“ALTER SETTINGS”`
+* `“CONTROL SERVER”` 
+* `“ALTER ANY DATABASE”` 
+* `“VIEW ANY DEFINITION”` 
+* `“CONNECT ANY DATABASE”`
+* `“CREATE ANY DATABASE”` 
 
 .Steps
 . Log in to the Workload Factory console.
@@ -41,7 +48,7 @@ Complete the following prerequisites before you begin:
 . Select one or more instances to manage. 
 . Click *Manage*. 
 
-The operation fails when the Microsoft SQL server is missing certain PowerShell modules and management scripts. Workload Factory triggers a repair job to install missing modules and scripts which you can view in the Job monitoring tab. When the job completes, retry to manage the host.
+The operation fails when the Microsoft SQL server is missing certain PowerShell modules and management scripts. Workload Factory triggers a prepare resource job to install missing modules and scripts which you can view in the Job monitoring tab. When the job completes, retry to manage the host.
 
 === View a managed instance
 You can view a managed instance by following these steps.
