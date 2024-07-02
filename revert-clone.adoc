@@ -16,8 +16,8 @@ When you clone a database, the clone at creation is a _baseline_ clone. The data
 
 .Steps
 . Log in to the Workload Factory console. 
-. In the Databases tile, click *Go to Databases Inventory*. 
+. In the Databases tile, select *Go to Databases Inventory*. 
 . In Databases, select the *Sandboxes* tab.
-. Click the three dots menu of the sandbox clone you want to revert.
+. In the Sandboxes tab, click the three dots menu of the sandbox clone you want to revert.
 . Select *Re-baseline*. 
 . In the Re-baseline dialog, click *Re-baseline*. 

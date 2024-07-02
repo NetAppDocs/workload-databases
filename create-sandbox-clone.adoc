@@ -19,21 +19,21 @@ A sandbox clone is created from the most recent snapshot on the source database.
 == Before you begin
 Ensure you have the following prerequisites before you create a sandbox clone.
 
-Credentials and permissions::: You must have link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html[AWS account credentials and read or automate mode permissions^] to create a new database in Workload Factory. 
+Credentials and permissions::: You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and _read_ or _automate_ mode permissions^] to create a sandbox clone in Workload Factory. 
 +
-Alternatively, you can use the Codebox to copy an empty template or create a completed template so that you can deploy a database outside of Workload Factory using REST API. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html[Learn more about Codebox automation^].
+Alternatively, you can use the Codebox to copy a partially completed template or create a completed template so that you can create the sandbox clone outside of Workload Factory using REST API. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html[Learn more about Codebox automation^].
 
 Microsoft SQL server::: You must have a managed Microsoft SQL server in Workload Factory for Databases to host the new sandbox clone.
 
-AWS Systems Manager::: Ensure the `NT Authority\SYSTEM user` privilege is enabled in the Microsoft SQL host via AWS Systems Manager. 
+AWS Systems Manager::: Ensure the `NT Authority\SYSTEM` user privilege is enabled in the Microsoft SQL host via AWS Systems Manager. 
 
 Source database::: You need a source database available for the clone. 
 
 .Steps
 . Log in to Workload Factory console.
-. In the Databases tile, click *Go to Databases Inventory*.
+. In the Databases tile, select *Go to Databases Inventory*.
 . In Databases, select the *Sandboxes* tab. 
-. Select *Create new sandbox*.
+. In the Sandboxes tab, select *Create new sandbox*.
 . On the Create new sandbox page, under Database source, provide the following: 
 .. *Source database host*: Select the source database host. 
 .. *Source database instance*: Select the source database instance.

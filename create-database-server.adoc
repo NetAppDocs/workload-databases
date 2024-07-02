@@ -2,30 +2,30 @@
 sidebar: sidebar
 permalink: create-database-server.html
 keywords: create, server, Microsoft SQL, deploy, host, deploy a database host, database host 
-summary: Deploy a database host in Workload Factory for Databases. 
+summary: Create a new Microsoft SQL server within Workload Factory for Databases. 
 ---
 = Create a database server in Workload Factory for Databases
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Create a new Microsoft SQL server, or database host, within Workload Factory for Databases. You'll need AWS account credentials and _automate_ permissions. 
+Create a new Microsoft SQL server within Workload Factory for Databases. You'll need AWS account credentials and _automate_ permissions. 
 
 == About this task
-Creating a new Microsoft SQL server in Databases requires an FSx for ONTAP file system deployment and resources for Active Directory. 
+Creating a new Microsoft SQL server, or databast host, in Databases requires an FSx for ONTAP file system deployment and resources for Active Directory. 
 
 Before you begin, learn about the storage deployment for the database host configuration, Active Directory deployment, Workload Factory modes of operation, and the <<Before you begin,requirements>> to complete this operation.
 
-After deployment, you'll need to enable remote connection on the Microsoft SQL server. 
+After deployment, you'll need to <<Enable remote connection on the Microsoft SQL server,enable remote connection on the Microsoft SQL server>>. 
 
 === FSx for ONTAP file system deployments
 Creating a new Microsoft SQL server requires an FSx for ONTAP file system as the storage backend. You can use an existing FSx for ONTAP file system or create a new file system. If you select an existing FSx for ONTAP file system as your database server storage backend, we create a new storage VM for the Microsoft SQL workloads. 
 
 FSx for ONTAP file systems have two Microsoft SQL deployment models: _Failover Cluster Instance (FCI)_ or _Standalone_. Different resources are created for the FSx for ONTAP file system depending on the FSx for ONTAP deployment model you select.
 
-* *Failover Cluster Instance (FCI) Microsoft SQL deployment*: A Multiple Availability Zone FSx for NetApp ONTAP filesystem is deployed when a new FSx for ONTAP file system is selected for FCI deployment. Separate volumes and LUNs are created for data, log, and tempdb files for an FCI deployment. An additional volume and LUN is created for Quorum or witness disk for Windows cluster. 
+* *Failover Cluster Instance (FCI) Microsoft SQL deployment*: A Multiple Availability Zone FSx for NetApp ONTAP filesystem is deployed when a new FSx for ONTAP file system is selected for FCI deployment. Separate volumes and LUNs are created for data, log, and tempdb files for an FCI deployment. An additional volume and LUN are created for Quorum or witness disk for Windows cluster. 
 
-* *Standalone Microsoft SQL deployment*: A Single Availability Zone FSx for ONTAP filesystem is created when a new Microsoft SQL server is created. In addition, separate volumes and LUNs are created for data, log, and tempdb files.
+* *Standalone Microsoft SQL deployment*: A Single Availability Zone FSx for ONTAP file system is created when a new Microsoft SQL server is created. In addition, separate volumes and LUNs are created for data, log, and tempdb files.
 
 === Active Directory
 The following occurs for Active Directory (AD) during deployment: 
@@ -35,26 +35,24 @@ The following occurs for Active Directory (AD) during deployment:
 * The Windows cluster entry is assigned permissions to add computers to the domain. 
 
 ==== Resource rollback
-If you decide to rollback your DNS resources, the resource records in AD and Dns are not removed automatically. You can remove the records from the DNS server AND AD as follows.
+If you decide to rollback your Domain Name System (DNS) resources, the resource records in AD and DNS are not removed automatically. You can remove the records from the DNS server and AD as follows.
 
 * For user-managed AD, first link:https://learn.microsoft.com/en-us/powershell/module/activedirectory/remove-adcomputer?view=windowsserver2022-ps[remove the AD computer^]. Then, connect to the DNS server from DNS manager and link:https://learn.microsoft.com/en-us/windows-server/networking/technologies/ipam/delete-dns-resource-records[delete the DNS Resource Records^].
 * For AWS Managed Microsoft AD, link:https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_install_ad_tools.htmle-records[install the AD administration tools^]. Next, link:https://learn.microsoft.com/en-us/powershell/module/activedirectory/remove-adcomputer?view=windowsserver2022-ps[remove the AD computer^]. Lastly, connect to the DNS server from DNS manager and link:https://learn.microsoft.com/en-us/windows-server/networking/technologies/ipam/delete-dns-resource-records[delete the DNS Resource Records^].
 
 === Workload Factory operation modes
-Workload Factory offers three operation modes depending on how comfortable you are with letting Workload Factory manage your AWS resources. 
+Workload Factory offers three operational modes depending on how comfortable you are with letting Workload Factory manage your AWS resources. 
 
-*_Basic_ mode*: in this mode of operation, you don't need to associate any AWS account credentials in Workload Factory. You can copy or download a partially filled template from the Codebox to be completed outside Workload Factory. 
+*_Basic_ mode*: in this mode of operation, you don't need to associate any AWS account credentials in Workload Factory. You can copy or download a partially filled YAML template from the Codebox to be completed outside Workload Factory. 
 
 *_Read_ mode*: in this mode of operation, you provide AWS account credentials with read permissions which lets you complete the _Quick create_ or _Advanced create_ form and then copy or download it. You can also redirect to CloudFormation from Workload Factory with the completed form details. And you will be able to manage the deployed database server in Workload Factory. 
 
 *_Automate_ mode*: in this mode of operation, you provide AWS account credentials with automate permissions which lets you create and manage AWS resources within Workload Factory. 
 
-In _Basic_ mode, you'll copy or download the empty template from the Codebox. In _Read_ mode, you can complete the _Quick create_ or _Advanced create_ form and then copy or download it. Depending on your level of trust, you can create the new server within Workload Factory with _automate_ permissions, download a completed YAML template with _read_ permissions, or download an empty YAML template in _basic_ mode. 
-
 == Before you begin
 Ensure you have the following prerequisites before you create a new database host. 
 
-Credentials and permissions::: You must have link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html[AWS account credentials and automate mode permissions^] to create a new database host in Workload Factory. 
+Credentials and permissions::: You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and automate mode permissions^] to create a new database host in Workload Factory. 
 +
 Alternatively, you can use the Codebox to copy an empty template or create a completed template so that you can deploy a database outside of Workload Factory using REST API, AWS CLI, or AWS CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html[Learn more about Codebox automation^].
 
@@ -62,10 +60,10 @@ Active Directory::: When connecting to Active Directory, you must have administr
 +
 * Join the domain  
 * Create Computer Objects 
-* Create objects in default Organization Unit (OU) 
+* Create objects in the default Organization Unit (OU) 
 * Read all properties 
-* Make this domain user as a local admin on the AD nodes 
-* Create SQL Server service user in the AD, if it doesn't exist already 
+* Make the domain user a local admin on the AD nodes 
+* Create a Microsoft SQL Server service user in the AD, if it doesn't exist already 
 
 == Step 1: Create a database server
 
@@ -80,20 +78,20 @@ You can use _Quick create_ or _Advanced create_ deployment modes to complete thi
 NOTE: In _Quick create_, FCI is the default deployment model, Windows 2016 is the default Windows version, and SQL 2019 Standard Edition is the default SQL version. 
 
 . Log in to the Workload Factory console.
-. In the Databases tile, click *Deploy database*.
+. In the Databases tile, select *Deploy database host*.
 . Select *Quick create*.  
 . Under *AWS settings*, provide the following: 
-.. *AWS credentials*: Select AWS credentials with automate permissions to deploy the new host. 
+.. *AWS credentials*: Select AWS credentials with automate permissions to deploy the new database host. 
 +
 AWS credentials with _automate_ permissions let Workload Factory deploy and manage the new database host from your AWS account within Workload Factory.
 +
 AWS credentials with _read_ permissions let Workload Factory generate a CloudFormation template for you to use in the AWS CloudFormation console. 
 +
-If you don't have AWS credentials associated in Workload Factory and you want to create the new server in Workload Factory, follow *Option 1* to go to the Credentials page. Manually add the required credentials and permissions for _Automate_ mode for Database workloads.  
+If you don't have AWS credentials associated in Workload Factory and you want to create the new server in Workload Factory, follow *Option 1* to go to the Credentials page. Manually add the required credentials and permissions for _automate_ mode for Database workloads.  
 +
-If you want to complete the create new server form in Workload Factory so you can download a complete YAML file template for deployment in AWS CloudFormation, follow *Option 2* to ensure you have the required permissions to create the new server within AWS CloudFormation. Manually add the required credentials and permissions for _Read_ mode for Database workloads. 
+If you want to complete the create new server form in Workload Factory so you can download a complete YAML file template for deployment in AWS CloudFormation, follow *Option 2* to ensure you have the required permissions to create the new server within AWS CloudFormation. Manually add the required credentials and permissions for _read_ mode for Database workloads. 
 +
-Optionally, you can download an empty YAML file template from the Codebox to create the stack outside Workload Factory without any credentials or permissions. Select *CloudFormation* from the dropdown in the Codebox to download the YAML file. 
+Optionally, you can download a partially completed YAML file template from the Codebox to create the stack outside Workload Factory without any credentials or permissions. Select *CloudFormation* from the dropdown in the Codebox to download the YAML file. 
 
 .. *Region & VPC*: Select a Region and VPC network. 
 +
@@ -111,8 +109,7 @@ Subnets should not share the same route table for high availability.
 ... In the *Cluster configuration - Node 1* field, select the primary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the primary availability zone from the *Subnet* dropdown menu. 
 ... In the *Cluster configuration - Node 2* field, select the secondary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the secondary availability zone from the *Subnet* dropdown menu. 
 
-. Under *Application settings*, provide the following: 
-.. *Database credentials*: Enter a user name and password.
+. Under *Application settings*, enter a user name and password for *Database credentials*. 
 . *Connectivity*
 .. *Key pair*: Select a key pair.
 .. *Active Directory*: 
@@ -129,26 +126,36 @@ For AWS-managed Active Directories, the DNS IP address(es) appear in the dropdow
 ... *Create new FSx for ONTAP*: Enter user name and password.
 +
 A new FSx for ONTAP file system may add 30 minutes or more of installation time. 
-... *Select an existing FSx for ONTAP*: Select FSx for ONTAP name from the dropdown, and enter a user name and password for the file system. 
+... *Select an existing FSx for ONTAP*: Select FSx for ONTAP name from the dropdown menu, and enter a user name and password for the file system. 
 .. *Data drive size*: Enter the data drive capacity and select the capacity unit. 
 . Summary: 
-.. *Preview default*: Review the default configurations set by Quick create. To finish the file system creation process, click *Create*.
-+ 
-Alternatively, if you want to change any of these default settings now, create the file system with Advanced create. 
+.. *Preview default*: Review the default configurations set by Quick create. 
 .. *Estimated cost*: Provides an estimate of charges that you might incur if you deployed the resources shown. 
-
+. Click *Create*.
++ 
+Alternatively, if you want to change any of these default settings now, create the database server with Advanced create. 
++
+You can also select *Save configuration* to deploy the host later. 
 --
 
 .Advanced create
 --
 . Log in to the Workload Factory console.
-. In the Databases tile, click *Deploy database*. 
+. In the Databases tile, select *Deploy database host*. 
 . Select *Advanced create*. 
 . For *Deployment model*,  select *Failover Cluster Instance* or *Single instance*.
 . Under *AWS settings*, provide the following: 
-.. *AWS credentials*: Select AWS credentials to deploy the new host. 
-... AWS credentials with read permissions let Workload Factory generate a CloudFormation template for you to use in the AWS CloudFormation console. 
-... AWS credentials with automate permissions let Workload Factory deploy and manage the new database host in your AWS account.
+.. *AWS credentials*: Select AWS credentials with automate permissions to deploy the new database host. 
++
+AWS credentials with _automate_ permissions let Workload Factory deploy and manage the new database host from your AWS account within Workload Factory.
++
+AWS credentials with _read_ permissions let Workload Factory generate a CloudFormation template for you to use in the AWS CloudFormation console. 
++
+If you don't have AWS credentials associated in Workload Factory and you want to create the new server in Workload Factory, follow *Option 1* to go to the Credentials page. Manually add the required credentials and permissions for _automate_ mode for Database workloads.  
++
+If you want to complete the create new server form in Workload Factory so you can download a complete YAML file template for deployment in AWS CloudFormation, follow *Option 2* to ensure you have the required permissions to create the new server within AWS CloudFormation. Manually add the required credentials and permissions for _read_ mode for Database workloads. 
++
+Optionally, you can download a partially completed YAML file template from the Codebox to create the stack outside Workload Factory without any credentials or permissions. Select *CloudFormation* from the dropdown in the Codebox to download the YAML file. 
 .. *Region & VPC*: Select a Region and VPC network. 
 +
 Ensure security groups for an existing interface endpoint allow access to HTTPS (443) protocol to the selected subnets. 
@@ -176,9 +183,9 @@ Three security groups get attached to the SQL nodes (EC2 instances) during new s
 +
 1. A workload security group is created to allow ports and protocols required for Microsoft SQL and Windows cluster communication on nodes. 
 +
-2. In case of AWS-managed Active Directory, the security group attached to the directory service gets automatically added to the Microsoft SQL nodes to allow communication with the Active Directory.  
+2. In case of AWS-managed Active Directory, the security group attached to the directory service gets automatically added to the Microsoft SQL nodes to allow communication with Active Directory.  
 +
-3. In case of an existing FSx for ONTAP file system, the security group associated with it is added automatically to the SQL nodes which allows communication to the file system. When a new FSx for ONTAP system is created, a new security group is created for the FSx file system and the same security group also gets attached to SQL nodes.
+3. For an existing FSx for ONTAP file system, the security group associated with it is added automatically to the SQL nodes which allows communication to the file system. When a new FSx for ONTAP system is created, a new security group is created for the FSx for ONTAP file system and the same security group also gets attached to SQL nodes.
 +
 For a user-managed Active Directory, you can select a security group that allows traffic from your existing systems which need to connect to the database. The security group should allow communication to the Active Directory domain controllers from the subnets where EC2 instances for Microsoft SQL are configured. 
 
@@ -189,8 +196,8 @@ For a user-managed Active Directory, you can select a security group that allows
 .... *Operating system*: Select *Windows server 2016*, *Windows server 2019*, or *Windows server 2022*. 
 .... *Database edition*: Select *SQL Server Standard Edition* or *SQL Server Enterprise Edition*. 
 .... *Database version*: Select *SQL Server 2016*, *SQL Server 2019*, or *SQL Server 2022*.
-.... *SQL Server AMI*: Select a SQL Server AMI from the dropdown. 
-... If you select *Use custom AMI*, select an AMI from the dropdown.
+.... *SQL Server AMI*: Select a SQL Server AMI from the dropdown menu. 
+... If you select *Use custom AMI*, select an AMI from the dropdown menu.
 .. *SQL Server collation*: Select a collation set for the server.
 +
 NOTE: If the selected collation set isn't compatible for installation, we recommend that you select the default collation "SQL_Latin1_General_CP1_CI_AS".
@@ -208,18 +215,18 @@ For AWS-managed Active Directories, the DNS IP address(es) appear in the dropdow
 ... In the *User name* field, enter the user name for the Active Directory domain. 
 ... In the *Password* field, enter a password for the Active Directory domain.
 . Under *Infrastructure settings*, provide the following:  
-.. *DB Instance type*: Select the database instance type from the dropdown. 
+.. *DB Instance type*: Select the database instance type from the dropdown menu. 
 .. *FSx for ONTAP system*: Create a new FSx for ONTAP file system or use an existing FSx for ONTAP file system. 
 ... *Create new FSx for ONTAP*: Enter user name and password.
 +
 A new FSx for ONTAP file system may add 30 minutes or more of installation time. 
-... *Select an existing FSx for ONTAP*: Select FSx for ONTAP name from the dropdown, and enter a user name and password for the file system. 
+... *Select an existing FSx for ONTAP*: Select FSx for ONTAP name from the dropdown menu, and enter a user name and password for the file system. 
 .. *Snapshot policy*: Enabled by default. Snapshots are taken daily and have a 7-day retention period. 
 +
 The snapshots are assigned to volumes created for SQL workloads. 
 .. *Data drive size*: Enter the data drive capacity and select the capacity unit. 
 .. *Provisioned IOPS*: Select *Automatic* or *User-provisioned*. If you select *User-provisioned*, enter the IOPS value. 
-.. *Throughput capacity*: Select the throughput capacity from the dropdown.
+.. *Throughput capacity*: Select the throughput capacity from the dropdown menu.
 +
 In certain regions, you may select 4 GBps throughput capacity. To provision 4 GBps of throughput capacity, your FSx for ONTAP file system must be configured with a minimum of 5,120 GiB of SSD storage capacity and 160,000 SSD IOPS.
 .. *Encryption*: Select a key from your account or a key from another account. You must enter the encryption key ARN from another account.
@@ -228,14 +235,14 @@ FSx for ONTAP custom encryption keys aren't listed based on service applicabilit
 +
 AWS-managed keys are filtered based on service applicability.  
 .. *Tags*: Optionally, you can add up to 40 tags. 
-.. *Simple Notification Service*: Optionally, you can enable the Simple Notification Service (SNS) for this configuration by selecting an SNS topic for Microsoft SQL Server from the dropdown. 
-... Select to enable the Simple Notification Service. 
-... Select an ARN from the dropdown.
+.. *Simple Notification Service*: Optionally, you can enable the Simple Notification Service (SNS) for this configuration by selecting an SNS topic for Microsoft SQL Server from the dropdown menu. 
+... Enable the Simple Notification Service. 
+... Select an ARN from the dropdown menu.
 .. *CloudWatch monitoring*: Optionally, you can enable CloudWatch monitoring.
 +
 We recommend enabling CloudWatch for debugging in case of failure. The events that appear in the AWS CloudFormation console are high-level and don't specify the root cause. All detailed logs are saved in the `C:\cfn\logs` folder in the EC2 instances.
 +
-In CloudWatch, a log group is created with the name of the stack. A log stream for every validation node and SQL node that appear under the log group. CloudWatch shows script progress and provides information to help you understand if and when deployment fails. 
+In CloudWatch, a log group is created with the name of the stack. A log stream for every validation node and SQL node appear under the log group. CloudWatch shows script progress and provides information to help you understand if and when deployment fails. 
 
 .. *Resource rollback*: This feature isn't currently supported.
 //Optional. Select to enable Resource rollback.
@@ -244,6 +251,9 @@ In CloudWatch, a log group is created with the name of the stack. A log stream f
 
 . Summary
 .. *Estimated cost*: Provides an estimate of charges that you might incur if you deployed the resources shown. 
+. Click *Create* to deploy the new database host. 
++
+Alternatively, you can save the configuration.
 
 --
 

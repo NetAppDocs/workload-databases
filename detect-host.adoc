@@ -33,7 +33,7 @@ The first step to managing a Microsoft SQL server instance, or host instance, in
 == Before you begin
 The requirements for detecting an undetected database server instance are as follows: 
 
-* You must have link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html[AWS account credentials^] to detect a database server instance in Workload Factory. 
+* You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials^] to detect a database server instance in Workload Factory. 
 * The storage type for the instance must be one of the following: 
 ** FSx for ONTAP
 ** Elastic Block Store (EBS) 
@@ -44,11 +44,11 @@ When a Microsoft SQL instance is detected, the existing environment isn't modifi
 
 .Steps
 . Log in to the Workload Factory console.
-. In the Databases tile, click *Go to Databases Inventory*.
+. In the Databases tile, select *Go to Databases Inventory*.
 . In Databases, select the *Inventory* tab. 
 . Click the dropdown arrow to expand the row of the host to detect.
 +
-The host expands and the host instances appear.  
+The host expands and host instances appear.  
 . Click the three dots menu of the instance to detect.
 . Click *Detect*.
 . In the *Detect instance* dialog, provide the Microsoft SQL Server user name and password or FSx for ONTAP user name and password. 
@@ -63,4 +63,4 @@ Detected instance information appears.
 . Click *Done*. 
 
 == What's next
-When the storage type for the host instance is FSx for ONTAP, you can link:manage-server.adoc[manage the instance via Workload Factory]. 
+When the storage type for the host instance is FSx for ONTAP, you can link:manage-server.html[manage the instance via Workload Factory]. 
