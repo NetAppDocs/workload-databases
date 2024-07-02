@@ -62,5 +62,5 @@ Detected instance information appears.
 . Select *Yes, Manage instance via Workload Factory* or *No*. 
 . Click *Done*. 
 
-== What's next
+.What's next
 When the storage type for the host instance is FSx for ONTAP, you can link:manage-server.html[manage the instance via Workload Factory]. 

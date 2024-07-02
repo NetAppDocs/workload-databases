@@ -25,7 +25,7 @@ NOTE: Microsoft SQL servers using SMB protocol don't support database creation.
 == Before you begin
 Ensure you complete the following prerequisites before you create a new database. 
 
-Credentials and permissions::: You must have link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html[AWS account credentials and _read_ or _automate_ mode permissions^] to create a new database in Workload Factory. 
+Credentials and permissions::: You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and _read_ or _automate_ mode permissions^] to create a new database in Workload Factory. 
 +
 Alternatively, you can use the Codebox to copy a template so that you can deploy a database outside of Workload Factory using REST API. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html[Learn more about Codebox automation^].
 
@@ -35,7 +35,7 @@ Microsoft SQL server::: You must have a managed Microsoft SQL server in Workload
 
 AWS Systems Manager::: Ensure the `NT Authority\SYSTEM user` privilege is enabled in the Microsoft SQL host via AWS System Manager. 
 
-.Steps
+== Create a database
 You can use _Quick create_ or _Advanced create_ deployment modes to complete this task in Workload Factory with _read_ or _automate_ mode permissions.
 
 [role="tabbed-block"]
@@ -43,6 +43,7 @@ You can use _Quick create_ or _Advanced create_ deployment modes to complete thi
 
 .Quick create
 -- 
+.Steps
 . Log in to the Workload Factory console.
 . In the Databases tile, select *Go to Databases Inventory*.
 . In Databases, select the *Inventory* tab. 
@@ -64,6 +65,7 @@ Alternatively, if you want to change any of these default settings now, change t
 
 .Advanced create
 --
+.Steps
 . Log in to the Workload Factory console.
 . In the Databases tile, select *Go to Databases Inventory*.
 . In Databases, select the *Inventory* tab. 

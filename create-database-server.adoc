@@ -66,8 +66,6 @@ Active Directory::: When connecting to Active Directory, you must have administr
 * Create a Microsoft SQL Server service user in the AD, if it doesn't exist already 
 
 == Step 1: Create a database server
-
-.Steps
 You can use _Quick create_ or _Advanced create_ deployment modes to complete this task in Workload Factory with _Automate_ mode permissions.
 
 [role="tabbed-block"]
@@ -77,6 +75,7 @@ You can use _Quick create_ or _Advanced create_ deployment modes to complete thi
 -- 
 NOTE: In _Quick create_, FCI is the default deployment model, Windows 2016 is the default Windows version, and SQL 2019 Standard Edition is the default SQL version. 
 
+.Steps
 . Log in to the Workload Factory console.
 . In the Databases tile, select *Deploy database host*.
 . Select *Quick create*.  
@@ -140,6 +139,7 @@ You can also select *Save configuration* to deploy the host later.
 
 .Advanced create
 --
+.Steps
 . Log in to the Workload Factory console.
 . In the Databases tile, select *Deploy database host*. 
 . Select *Advanced create*. 
@@ -261,11 +261,12 @@ Alternatively, you can save the configuration.
 ====
 
 == Step 2: Enable remote connection on the Microsoft SQL server
-After the server deploys, Workload Factory does not enable remote connection on the Microsoft SQL server. To enable the remote connection, complete the following steps: 
+After the server deploys, Workload Factory does not enable remote connection on the Microsoft SQL server. To enable the remote connection, complete the following steps.
 
-. Use computer identity for NTLM by referring to link:https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-allow-local-system-to-use-computer-identity-for-ntlm["Network security: Allow Local System to use computer identity for NTLM"^] in Microsoft documentation. 
-. Check dynamic port configuration by referring to link:https://learn.microsoft.com/en-us/troubleshoot/sql/database-engine/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection["A network-related or instance-specific error occurred while establishing a connection to SQL Server"] in Microsoft documentation.  
+.Steps
+. Use computer identity for NTLM by referring to link:https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-allow-local-system-to-use-computer-identity-for-ntlm[Network security: Allow Local System to use computer identity for NTLM^] in Microsoft documentation. 
+. Check dynamic port configuration by referring to link:https://learn.microsoft.com/en-us/troubleshoot/sql/database-engine/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection[A network-related or instance-specific error occurred while establishing a connection to SQL Server] in Microsoft documentation.  
 . Allow the required client IP or subnet in the security group. 
 
-== What's next
+.What's next
 Now you can link:create-database.html[create a database in Workload Factory]. 
