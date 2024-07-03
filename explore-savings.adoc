@@ -16,7 +16,7 @@ Workload Factory provides a calculator so you can compare various cost component
 
 The calculator displays whether the storage for the database workloads on these Microsoft SQL servers would cost less if you used an FSx for ONTAP file system.
 
-If Workload Factory determines that you could save money by running these workloads on an FSx for ONTAP file system, you can deploy Microsoft SQL over FSx for ONTAP directly from the calculator in Workload Factory. In some cases, Workload Factory may recommend that you deploy multiple file systems based on the amount of storage you are currently using, and based on the performance characteristics of your database workloads. In some cases, Workload Factory may recommend that you deploy multiple file systems based on the amount of storage you are currently using, and based on the performance characteristics of your database workloads. However it is currently not supported via our deployment.", 
+If Workload Factory determines that you could save money by running these workloads on an FSx for ONTAP file system, you can deploy Microsoft SQL over FSx for ONTAP directly from the calculator in Workload Factory. In some cases, Workload Factory may recommend that you deploy multiple file systems based on the amount of storage you are currently using, and based on the performance characteristics of your database workloads. In some cases, Workload Factory may recommend that you deploy multiple file systems based on the amount of storage you are currently using, and based on the performance characteristics of your database workloads. 
 
 == Provide your system requirements
 If you have enabled _automate_ mode (link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[learn more about modes]) by adding AWS credentials to your Workload Factory account, then Workload Factory can identify all the storage systems that are available in your AWS account and display the characteristics of the volumes on those systems in the Storage inventory page. The AWS account that is searched is based on the credentials you've defined in your Workload Factory account.
@@ -51,7 +51,8 @@ Complete the following prerequisites before you begin:
 .. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.  
 . Review the calculations and recommendation provided on the page. 
 +
-Additionally, scroll down to the bottom of the page to *Export PDF* or *View the calculations*.
+Additionally, scroll down to the bottom of the page to *Export PDF*. 
+//Add or *View the calculations*. when available.
 //. If you'd like to switch to FSx for ONTAP to realize cost savings, click *Create* to deploy the file system(s) from the calculator directly from Workload Factory or click *Save* to save the recommended configuration(s) for later. 
 
 == Deploy FSx for ONTAP file systems
