@@ -9,12 +9,12 @@ summary: Create a new Microsoft SQL Server within Workload Factory for Databases
 :imagesdir: ./media/
 
 [.lead]
-Creating a new Microsoft SQL Server, or databast host, in Databases requires an FSx for ONTAP file system deployment and resources for Active Directory. 
+Creating a new Microsoft SQL Server, or database host, in Databases requires an FSx for ONTAP file system deployment and resources for Active Directory. 
 
 .About this task
 You'll need AWS account credentials and _automate_ permissions. 
 
-Before you begin, learn about the storage deployment for the database host configuration, Active Directory deployment, Workload Factory modes of operation, and the <<Before you begin,requirements>> to complete this operation.
+Before you begin, learn about the storage deployment for the database host configuration, Active Directory deployment, Workload Factory modes of operation, and the requirements to complete this operation.
 
 After deployment, you'll need to <<Enable remote connection on the Microsoft SQL Server,enable remote connection on the Microsoft SQL Server>>. 
 
@@ -38,7 +38,7 @@ The following occurs for Active Directory (AD) during deployment:
 If you decide to rollback your Domain Name System (DNS) resources, the resource records in AD and DNS are not removed automatically. You can remove the records from the DNS server and AD as follows.
 
 * For user-managed AD, first link:https://learn.microsoft.com/en-us/powershell/module/activedirectory/remove-adcomputer?view=windowsserver2022-ps[remove the AD computer^]. Then, connect to the DNS server from DNS manager and link:https://learn.microsoft.com/en-us/windows-server/networking/technologies/ipam/delete-dns-resource-records[delete the DNS Resource Records^].
-* For AWS Managed Microsoft AD, link:https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_install_ad_tools.htmle-records[install the AD administration tools^]. Next, link:https://learn.microsoft.com/en-us/powershell/module/activedirectory/remove-adcomputer?view=windowsserver2022-ps[remove the AD computer^]. Lastly, connect to the DNS server from DNS manager and link:https://learn.microsoft.com/en-us/windows-server/networking/technologies/ipam/delete-dns-resource-records[delete the DNS Resource Records^].
+* For AWS Managed Microsoft AD, link:https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_install_ad_tools.html[install the AD administration tools^]. Next, link:https://learn.microsoft.com/en-us/powershell/module/activedirectory/remove-adcomputer?view=windowsserver2022-ps[remove the AD computer^]. Lastly, connect to the DNS server from DNS manager and link:https://learn.microsoft.com/en-us/windows-server/networking/technologies/ipam/delete-dns-resource-records[delete the DNS Resource Records^].
 
 == Workload Factory operation modes
 Workload Factory offers three operational modes depending on how comfortable you are with letting Workload Factory manage your AWS resources. 

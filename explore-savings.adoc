@@ -35,7 +35,7 @@ image:screenshot-ebs-calculator.png[The storage calculator page with a compariso
 .Before you begin
 Complete the following prerequisites before you begin: 
 
-* Make sure you link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html#grant-permissions[grant _automate_ permissions^] in your AWS account to detect Elastic Block Store (EBS) systems in your Databases inventory. 
+* Make sure you link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _automate_ permissions^] in your AWS account to detect Elastic Block Store (EBS) systems in your Databases inventory. 
 * Detect hosts in EBS storage in your Databases inventory. link:detect-host.html[Learn how to detect hosts].
 
 .Steps
