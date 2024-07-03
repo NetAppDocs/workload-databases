@@ -11,10 +11,10 @@ summary: Refresh a sandbox clone in Workload Factory for Databases.
 [.lead]
 Refresh a database clone so that it is equivalent to the source database at the current moment or a previous point in time. 
 
-== About this task
+.About this task
 Refreshing a clone updates the clone either to the source database at the current moment or to a snapshot of the source database taken at a previous point in time. Any changes made to the sandbox clone will be deleted. 
 
-== Before you begin
+.Before you begin
 A refresh is only possible when the source database is active. 
 
 To refresh a database clone from a snapshot, the source database must have at least one snapshot for the operation.

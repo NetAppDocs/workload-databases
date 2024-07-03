@@ -9,21 +9,19 @@ summary: Create a sandbox clone in Workload Factory for Databases.
 :imagesdir: ./media/
 
 [.lead]
-Create a sandbox clone from an existing database in Workload Factory for Databases. 
-
-== About this task
 Creating a sandbox clone of a database in Workload Factory for Databases lets you use the clone for development, testing, integration, analytics, training, QA, and more without altering the source database. 
 
-A sandbox clone is created from the most recent snapshot on the source database. It may be cloned in the same Microsoft SQL server as the source database or cloned in another Microsoft SQL server as long as they share the same FSx for ONTAP file system. 
+.About this task
+A sandbox clone is created from the most recent snapshot on the source database. It may be cloned in the same Microsoft SQL Server as the source database or cloned in another Microsoft SQL Server as long as they share the same FSx for ONTAP file system. 
 
-== Before you begin
+.Before you begin
 Ensure you have the following prerequisites before you create a sandbox clone.
 
 Credentials and permissions::: You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and _read_ or _automate_ mode permissions^] to create a sandbox clone in Workload Factory. 
 +
 Alternatively, you can use the Codebox to copy a partially completed template or create a completed template so that you can create the sandbox clone outside of Workload Factory using REST API. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html[Learn more about Codebox automation^].
 
-Microsoft SQL server::: You must have a managed Microsoft SQL server in Workload Factory for Databases to host the new sandbox clone.
+Microsoft SQL Server::: You must have a managed Microsoft SQL Server in Workload Factory for Databases to host the new sandbox clone.
 
 AWS Systems Manager::: Ensure the `NT Authority\SYSTEM` user privilege is enabled in the Microsoft SQL host via AWS Systems Manager. 
 

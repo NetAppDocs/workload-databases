@@ -39,10 +39,10 @@ sidebar:
         url: /automate-codebox.html
   - title: Administer and monitor
     entries:
-      - title: Manage a Microsoft SQL server
+      - title: Manage a Microsoft SQL Server
         url: /manage-server.html
       #  entries: 
-        #  - title: Manage a Microsoft SQL server 
+        #  - title: Manage a Microsoft SQL Server 
         #    url: /manage-microsoft-server.html 
     #  - title: Manage databases
     #    entries: 

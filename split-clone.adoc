@@ -9,12 +9,9 @@ summary: Split a sandbox clone from the source database to create a new database
 :imagesdir: ./media/
 
 [.lead]
-Split a sandbox clone from the source database to create a new database. 
-
-== About this task
 Splitting a sandbox clone from its source database creates a new database which will consume a certain amount of storage capacity. The clone gets deleted when the split is complete and the new database appears in the Inventory. 
 
-== Before you begin
+.Before you begin
 Consider how much storage capacity is needed for the new database. If needed, link:https://docs.netapp.com/us-en/workload-fsx-ontap/increase-file-system-capacity.html[increase file system capacity^] for the FSx for ONTAP file system before you begin.  
 
 .Steps

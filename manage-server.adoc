@@ -1,20 +1,20 @@
 ---
 sidebar: sidebar
 permalink: manage-server.html
-keywords: Microsoft SQL server instance, server instance, manage host, view host, database host, database instance, manage, unmanage
-summary: Manage Microsoft SQL server instances in Workload Factory for Databases. 
+keywords: Microsoft SQL Server instance, server instance, manage host, view host, database host, database instance, manage, unmanage
+summary: Manage Microsoft SQL Server instances in Workload Factory for Databases. 
 ---
-= Manage Microsoft SQL server instances
+= Manage Microsoft SQL Server instances
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Manage Microsoft SQL server instances in Workload Factory for Databases. 
+Manage Microsoft SQL Server instances to monitor instance and database status, resource utilization, protection, and storage performance in Workload Factory for Databases. 
 
-Databases can only manage Microsoft SQL server instances with FSx for ONTAP file system storage. 
+Databases can only manage Microsoft SQL Server instances with FSx for ONTAP file system storage. 
 
-== Microsoft SQL server instance management 
-Microsoft SQL server instance management includes the following tasks: 
+== Microsoft SQL Server instance management 
+Microsoft SQL Server instance management includes the following tasks: 
 
 * Manage a host instance
 * View a managed instance
@@ -24,7 +24,7 @@ Microsoft SQL server instance management includes the following tasks:
 To complete any of these tasks, you must link:detect-host.html[detect one or more host instances^]. 
 
 == Manage a host instance 
-Manage a detected or unmanaged Microsoft SQL server instances for a host.
+Manage a detected or unmanaged Microsoft SQL Server instances for a host.
 
 .Before you begin
 Complete the following prerequisites before you begin: 
@@ -48,7 +48,7 @@ Complete the following prerequisites before you begin:
 . Select one or more host instances to manage. 
 . Click *Manage*. 
 
-The operation fails when the Microsoft SQL server is missing certain PowerShell modules and management scripts. Workload Factory triggers a prepare resource job to install missing modules and scripts which you can view in the Job monitoring tab. When the job completes, retry to manage the host instance.
+The operation fails when the Microsoft SQL Server is missing certain PowerShell modules and management scripts. Workload Factory triggers a prepare resource job to install missing modules and scripts which you can view in the Job monitoring tab. When the job completes, retry to manage the host instance.
 
 == View a managed instance
 You can view a managed instance by following these steps.
@@ -62,6 +62,7 @@ You can view a managed instance by following these steps.
 The host expands and the host instances appear. 
 . Click the three dots menu of the instance to view and then select *View instance*. 
 
+.Result 
 The overview of the instance appears in the Inventory tab. 
 
 == View databases 
@@ -77,6 +78,7 @@ The host expands and the host instances appear.
 . Click the three dots menu of the instance containing the databases to view.
 . Select *View databases*. 
 
+.Result
 The list of databases in the instance appears in the Inventory tab.
 
 == Unmanage a host instance
@@ -92,6 +94,7 @@ The host expands and the host instances appear.
 . Click the three dots menu of the instance to unmanage. 
 . Select *Unmanage*. 
 
+.Result
 The host instance is now unmanaged. 
 
 

@@ -11,7 +11,7 @@ summary: Track database jobs and monitor databases within Workload Factory for D
 [.lead]
 Track database jobs and monitor databases with Workload Factory for Databases. 
 
-== About this task 
+.About this task 
 Databases provides job monitoring so you can track job progress, and diagnose and troubleshoot in case any failure occurs. In addition, filters by type and status, the search function, and the option to download the jobs table help with database jobs navigation and reporting.
 
 Job monitoring supports up to three levels of monitoring depending on the job. For example, for new database and sandbox clone creation, job monitoring tracks parent jobs and sub-jobs.  

@@ -2,19 +2,19 @@
 sidebar: sidebar
 permalink: detect-host.html
 keywords: detect, detect server instance, instance, detect a database host, instance
-summary: Detect a Microsoft SQL server instance in Workload Factory for Databases. 
+summary: Detect a Microsoft SQL Server instance in Workload Factory for Databases. 
 ---
-= Detect a Microsoft SQL server instance
+= Detect a Microsoft SQL Server instance
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Detect a Microsoft SQL server instance in Workload Factory for Databases. 
+Detect a Microsoft SQL Server instance in Workload Factory for Databases. 
 
 This task is for detecting an _undetected instance_.
 
-== About this task
-When AWS credentials are associated in Workload Factory, Databases allows automated discovery of Microsoft SQL servers beginning with SQL server 2016 with the following AWS storage types: 
+.About this task
+When AWS credentials are associated in Workload Factory, Databases allows automated discovery of Microsoft SQL Servers beginning with SQL server 2016 with the following AWS storage types: 
 
 * FSx for ONTAP
 * Elastic Block Store (EBS)
@@ -23,14 +23,14 @@ When AWS credentials are associated in Workload Factory, Databases allows automa
 In Databases, discovered instances are categorized as follows: 
 
 * _Undetected instances_: undetected instances that have been automatically discovered by Workload Factory. Instances are undetected in the following cases: 
-** Microsoft SQL server authentication fails.
-** The FSx for ONTAP file system for the Microsoft SQL server isn't registered with your account in Workload Factory.  
+** Microsoft SQL Server authentication fails.
+** The FSx for ONTAP file system for the Microsoft SQL Server isn't registered with your account in Workload Factory.  
 * _Unmanaged instances_: detected instances that are not managed by Workload Factory
 * _Managed instances_: detected instances that are managed by Workload Factory
 
-The first step to managing a Microsoft SQL server instance, or host instance, in Workload Factory for Databases is detecting an undetected database server instance.  
+The first step to managing a Microsoft SQL Server instance, or host instance, in Workload Factory for Databases is detecting an undetected database server instance.  
 
-== Before you begin
+.Before you begin
 The requirements for detecting an undetected database server instance are as follows: 
 
 * You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials^] to detect a database server instance in Workload Factory. 

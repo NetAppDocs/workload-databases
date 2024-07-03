@@ -11,7 +11,7 @@ summary: Revert a sandbox clone in Workload Factory for Databases.
 [.lead]
 Revert a database clone to its original version at the time of creation. 
 
-== About this task
+.About this task
 When you clone a database, the clone at creation is a _baseline_ clone. The data in the cloned database is the same as the source database at the time of creation. As data in a sandbox database clone changes over time, you might want to revert the data back to the baseline when the clone was first created. This operation is called re-baselining a clone. Re-baselining a clone rather than creating a new clone saves space; however, any changes made to the sandbox clone will be deleted. 
 
 .Steps
