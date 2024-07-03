@@ -11,12 +11,12 @@ summary: Explore savings for your database workloads using AWS Elastic Block Sto
 [.lead]
 Explore savings for your database workloads using AWS Elastic Block Store (EBS) storage. 
 
-Workload Factory provides a storage calculator so you can compare the costs of storage for your database workloads on FSx for ONTAP file systems against Elastic Block Store (EBS) storage. Depending on your storage requirements, you might find that FSx for ONTAP file systems are the most cost effective for your database workloads.
+Workload Factory provides a calculator so you can compare various cost components of running Microsoft SQL server workloads like storage, compute, SQL license, snapshots, and clones for your database workloads on FSx for ONTAP file systems against Elastic Block Store (EBS) storage. Depending on your storage requirements, you might find that FSx for ONTAP file systems are the most cost effective for your database workloads.
 //Add  and FSx for Windows File Server when available.
 
-The storage calculator displays whether the storage for the database workloads on these storage systems would cost less if you used an FSx for ONTAP file system.
+The calculator displays whether the storage for the database workloads on these Microsoft SQL servers would cost less if you used an FSx for ONTAP file system.
 
-If Workload Factory determines that you could save money by running these workloads on an FSx for ONTAP file system, you can deploy the file system from the calculator directly from Workload Factory. In some cases, Workload Factory may recommend that you deploy multiple file systems based on the amount of storage you are currently using, and based on the performance characteristics of your database workloads.
+If Workload Factory determines that you could save money by running these workloads on an FSx for ONTAP file system, you can deploy Microsoft SQL over FSx for ONTAP directly from the calculator in Workload Factory. In some cases, Workload Factory may recommend that you deploy multiple file systems based on the amount of storage you are currently using, and based on the performance characteristics of your database workloads. In some cases, Workload Factory may recommend that you deploy multiple file systems based on the amount of storage you are currently using, and based on the performance characteristics of your database workloads. However it is currently not supported via our deployment.", 
 
 == Provide your system requirements
 If you have enabled _automate_ mode (link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[learn more about modes]) by adding AWS credentials to your Workload Factory account, then Workload Factory can identify all the storage systems that are available in your AWS account and display the characteristics of the volumes on those systems in the Storage inventory page. The AWS account that is searched is based on the credentials you've defined in your Workload Factory account.
