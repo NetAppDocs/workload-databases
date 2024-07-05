@@ -4,17 +4,15 @@ permalink: create-database.html
 keywords: create, database, creation, Microsoft SQL
 summary: Create a Microsoft SQL database with Workload Factory Databases. 
 ---
-= Create a Microsoft SQL database in Workload Factory Databases
+= Create a Microsoft SQL database in Workload Factory for Databases
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Create a Microsoft SQL database in Workload Factory for Databases. 
+Creating a new Microsoft SQL database in the Workload Factory console enables you to manage the resource within Workload Factory.  
 
 .About this task
-Creating a new Microsoft SQL database in the Workload Factory console makes it possible for you to manage the resource within Workload Factory. 
-
-Upon creation, two new volumes are created in the FSx for ONTAP file system consisting of independent LUNs to host data and log files for the database. The database files in the new database are thin-provisioned and consume only a few MBs of the total size allocated for the new database. 
+Upon database creation, two new volumes are created in the FSx for ONTAP file system consisting of independent LUNs to host data and log files for the database. The database files in the new database are thin-provisioned and consume only a few MBs of the total size allocated for the new database. 
 
 If you want to segregate storage for the database, you can do this by using a _virtual mount point_. The virtual mount point lets you consolidate databases to a few common drives on the host. 
 

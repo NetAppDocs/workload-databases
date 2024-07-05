@@ -16,7 +16,11 @@ Known limitations identify platforms, devices, or functions that are not support
 We only show up to four recent versions or revisions of AMI images for each SQL version. We don't allow installation from an AMI image that is older than the latest four versions.
 
 == Custom AMI
-Deployment with a custom AMI assumes that install media is present in the image. This is needed for FCI configuration as we uninstall and reconfigure to form FCI cluster. This is also needed if selecting a collation other than the collation set in the image for standalone deployment.
+Deployment with a custom AMI assumes that install media is present in the image. This is needed for FCI configuration for the following reasons: 
+
+* To uninstall and reconfigure to form the FCI cluster
+* When selecting a collation other than the collation set in the image for standalone deployment
+
 As part of deployment, Workload Factory doesn't install a custom AMI with multiple Microsoft SQL Server instances. Only the default Microsoft SQL Server instance is selected and configured as part of deployment.
 
 == Roll back and retry for failed deployments 
