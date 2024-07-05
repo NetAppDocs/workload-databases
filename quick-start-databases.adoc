@@ -1,0 +1,47 @@
+---
+sidebar: sidebar
+permalink: quick-start-databases.html  
+keywords: requirements, basic mode, read mode, automate mode 
+summary: Databases has three different modes that have different requirements. 
+---
+= Quick start for Databases
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+With Databases, you can get started immediately in _basic_ mode. If you'd like to use Workload Factory to discover hosts, manage resources, and more, you can get started in a few steps. 
+
+You must have an AWS account to get started. 
+
+Follow these steps to get started with Workload Factory Databases. 
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Log in to Workload Factory
+
+[role="quick-margin-para"]
+
+You'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html[set up an account with Workload Factory^] and link:https://console.workloads.netapp.com[log in^] 
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Add credentials and permissions
+
+[role="quick-margin-para"]
+
+Choose between link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[_basic_, _read_, and _automate_ operational modes^]. 
+
+[role="quick-margin-para"]
+If you operate in _basic_ mode, you don't need to go any further. You can start using Workload Factory Databases to copy partially completed code samples. In the Databases tile, click *Deploy database host*. link:create-database-server.html[Learn how to deploy a database server]. 
+
+[role="quick-margin-para"]
+If you operate in _read_ or _automate_ mode, you'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[add credentials to an account manually^] which includes selecting workload capabilities, such as Databases and AI, and creating the IAM policies to ensure you have the correct permissions for operating in _read_ or _automate_ mode.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Deploy a database server
+
+[role="quick-margin-para"]
+
+Lastly, if you chose to operate in _automate_ mode, you must link:create-database-server.html[deploy] or link:detect-host.html[detect a database server] to manage your host resources and before adding user databases.
+
+.What's next
+When you have FSx for ONTAP managed hosts in your Databases inventory, you can link:create-database.html[create a user database] or link:create-sandbox-clone.html[clone your host to create a sandbox]. 
+
+When you have Elastic Block Store hosts in your Databases inventory, you can link:explore-savings.html[explore savings with the Storage savings calculator]. 
+
+

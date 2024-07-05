@@ -1,12 +1,80 @@
 settings:
-  name: "Product Name"
+  name: "Database workloads"
+  platform: cloud
   internal:
     pdf_enabled: true
+    termcheck_enabled: true
   prod:
     pdf_enabled: true
     harmony_enabled: true
+  rss_page: "whats-new.html"  
 
 sidebar: 
   entries:
+  - title: Database workloads docs
+    url: /index.html
+  - title: Release notes  
+    entries:
+      - title: What's new
+        url: /whats-new.html
+      - title: Known limitations
+        url: /known-limitations.html 
+  - title: Get started
+    entries: 
+      - title: Learn about Workload Factory for Databases
+        url: /learn-databases.html 
+      - title: Quick start
+        url: /quick-start-databases.html 
+  - title: Use Database workloads
+    entries: 
+      - title: Explore savings
+        url: /explore-savings.html
+      - title: Create a new database server
+        url: /create-database-server.html
+      - title: Detect a database server
+        url: /detect-host.html 
+      - title: Create a database
+        url: /create-database.html 
+      - title: Automate with Codebox
+        url: /automate-codebox.html
+  - title: Administer and monitor
+    entries:
+      - title: Manage a Microsoft SQL Server
+        url: /manage-server.html
+      #  entries: 
+        #  - title: Manage a Microsoft SQL Server 
+        #    url: /manage-microsoft-server.html 
+    #  - title: Manage databases
+    #    entries: 
+      - title: Manage clones
+        entries: 
+          - title: Create a sandbox clone 
+            url: /create-sandbox-clone.html 
+          - title: Check integrity of a sandbox clone
+            url: /check-clone-integrity.html  
+          - title: Revert a sandbox clone
+            url: /revert-clone.html 
+          - title: Refresh a sandbox clone
+            url: /refresh-clone.html  
+          - title: Connect to the CI/CD pipeline
+            url: /connect-clone-cicd.html  
+          - title: View clone connection information
+            url: /view-clone-connection.html  
+          - title: Split a sandbox clone
+            url: /split-clone.html  
+          - title: Delete a sandbox clone
+            url: /delete-clone.html 
+      - title: Monitor databases
+        url: /monitor-databases.html                                
+  - title: Knowledge and support
+    entries: 
+      - title: Register for support
+        url: /support-registration-databases.html
+      - title: Get help
+        url: /get-help-databases.html                  
   - title: Legal notices
     url: /legal-notices.html
+
+product-family:
+  name: BlueXP Workload Factory for AWS
+  repo: workload-family

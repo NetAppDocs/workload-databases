@@ -1,0 +1,93 @@
+---
+sidebar: sidebar
+permalink: create-database.html
+keywords: create, database, creation, Microsoft SQL
+summary: Create a Microsoft SQL database with Workload Factory Databases. 
+---
+= Create a Microsoft SQL database in Workload Factory for Databases
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Creating a new Microsoft SQL database in the Workload Factory console enables you to manage the resource within Workload Factory.  
+
+.About this task
+Upon database creation, two new volumes are created in the FSx for ONTAP file system consisting of independent LUNs to host data and log files for the database. The database files in the new database are thin-provisioned and consume only a few MBs of the total size allocated for the new database. 
+
+If you want to segregate storage for the database, you can do this by using a _virtual mount point_. The virtual mount point lets you consolidate databases to a few common drives on the host. 
+
+Creating a database in Workload Factory requires automate mode permissions. Alternatively, in basic mode, you can copy or download a partially completed code template to complete the operation outside Workload Factory. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[Learn about operational modes in Workload Factory^] to decide which mode you'd like to use. 
+
+NOTE: Microsoft SQL Servers using SMB protocol don't support database creation. 
+
+.Before you begin
+Ensure you complete the following prerequisites before you create a new database. 
+
+Credentials and permissions::: You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and _read_ or _automate_ mode permissions^] to create a new database in Workload Factory. 
++
+Alternatively, you can use the Codebox to copy a template so that you can deploy a database outside of Workload Factory using REST API. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html[Learn more about Codebox automation^].
+
+Windows host::: You must have enough drive letters available on the Microsoft SQL Server to create new drives for the new database if you use _Quick create_ mode. 
+
+Microsoft SQL Server::: You must have a managed Microsoft SQL Server in Workload Factory for Databases to host the new database. 
+
+AWS Systems Manager::: Ensure the `NT Authority\SYSTEM user` privilege is enabled in the Microsoft SQL host via AWS System Manager. 
+
+== Create a database
+You can use _Quick create_ or _Advanced create_ deployment modes to complete this task in Workload Factory with _read_ or _automate_ mode permissions.
+
+[role="tabbed-block"]
+====
+
+.Quick create
+-- 
+.Steps
+. Log in to the link:https://console.workloads.netapp.com[Workload Factory console^].
+. In the Databases tile, select *Go to Databases Inventory*.
+. In Databases, select the *Inventory* tab. 
+. In the Inventory tab, select a database server with a managed SQL server instance to create the database in.
+. Click the three dots menu of the managed instance and then select *Create user database*.
+. On the Create user database page, under Database information, provide the following: 
+.. *Database name*: Enter name for the database. 
+.. *Collation*: Select a collation for the database. The default collation SQL_Latin1_General_CP1_CI_AS" on Microsoft SQL Server is selected. 
+. Under File settings, provide the following: 
+.. *File settings mode*: Select *Quick create*. 
+.. *File names & path*:
++
+* *Data file name*: Enter the data file name.
+* *Log file name*: Enter the log file name. 
+.. *File sizes*: Enter the data size and log size for the database. 
+. Click *Create*.
++ 
+Alternatively, if you want to change any of these default settings now, change the *File settings mode* to *Advanced create*. 
+--
+
+.Advanced create
+--
+.Steps
+. Log in to the link:https://console.workloads.netapp.com[Workload Factory console^].
+. In the Databases tile, select *Go to Databases Inventory*.
+. In Databases, select the *Inventory* tab. 
+. In the Inventory tab, select a database server with a managed SQL server instance to create the database in.
+. Click the three dots menu of the managed instance and then select *Create user database*.
+. Select *Create user database*.
+. On the Create user database page, under Database information, provide the following: 
+.. *Database name*: Enter name for the database. 
+.. *Collation*: Select the collation for the database. The default collation SQL_Latin1_General_CP1_CI_AS" on Microsoft SQL Server is selected. 
+. Under File settings, provide the following: 
+.. *File settings mode*: Select *Advanced create*. 
+.. *File names & path*:
+... *Data file*: Select a drive letter and enter the data file name.
++
+Optionally, click the box for *Virtual mount point*.
+... *Log file*: Select a drive letter and enter the log file name. 
++
+Optionally, click the box for *Virtual mount point*.
+.. *File sizes*: Enter the data size and log size for the database.
+. Click *Create*.
+ 
+--
+
+====
+
+If you created the database host, you can check the job's progress in the *Job monitoring* tab. 

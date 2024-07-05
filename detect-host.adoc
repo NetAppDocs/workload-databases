@@ -1,0 +1,66 @@
+---
+sidebar: sidebar
+permalink: detect-host.html
+keywords: detect, detect server instance, instance, detect a database host, instance
+summary: Detect a Microsoft SQL Server instance in Workload Factory for Databases. 
+---
+= Detect a Microsoft SQL Server instance
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Detect a Microsoft SQL Server instance in Workload Factory for Databases. 
+
+This task is for detecting an _undetected instance_.
+
+.About this task
+When AWS credentials are associated in Workload Factory, Databases allows automated discovery of Microsoft SQL Servers beginning with SQL server 2016 with the following AWS storage types: 
+
+* FSx for ONTAP
+* Elastic Block Store (EBS)
+* FSx for Windows File Server
+
+In Databases, discovered instances are categorized as follows: 
+
+* _Undetected instances_: undetected instances that have been automatically discovered by Workload Factory. Instances are undetected in the following cases: 
+** Microsoft SQL Server authentication fails.
+** The FSx for ONTAP file system for the Microsoft SQL Server isn't registered with your account in Workload Factory.  
+* _Unmanaged instances_: detected instances that are not managed by Workload Factory
+* _Managed instances_: detected instances that are managed by Workload Factory
+
+The first step to managing a Microsoft SQL Server instance, or host instance, in Workload Factory for Databases is detecting an undetected database server instance.  
+
+.Before you begin
+The requirements for detecting an undetected database server instance are as follows: 
+
+* You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials^] to detect a database server instance in Workload Factory. 
+* The storage type for the instance must be one of the following: 
+** FSx for ONTAP
+** Elastic Block Store (EBS) 
+** FSx for Windows File Server
+* EC2 instances must have a role/instance profile that allows SSM connection for detection to work. 
++
+When a Microsoft SQL instance is detected, the existing environment isn't modified. Detection happens through AWS Systems Manager Session Manager (SSM). Without the right IAM instance profile, detection will fail. link:https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-troubleshooting.html[Learn more about SSM troubleshooting^].
+
+.Steps
+. Log in to the link:https://console.workloads.netapp.com[Workload Factory console^].
+. In the Databases tile, select *Go to Databases Inventory*.
+. In Databases, select the *Inventory* tab. 
+. Click the dropdown arrow to expand the row of the host to detect.
++
+The host expands and host instances appear.  
+. Click the three dots menu of the instance to detect.
+. Click *Detect*.
+. In the *Detect instance* dialog, provide the Microsoft SQL Server user name and password or FSx for ONTAP user name and password. 
++
+Workload Factory tries to validate your Microsoft SQL credentials or FSx for ONTAP credentials. 
++
+If either of these credentials isn't available, Workload Factory tries to install the `aws.tools.SimpleSystemsManagement` module in PowerShell.
+. Click *Detect*.
++
+Detected instance information appears. 
+. Select *Yes, Manage instance via Workload Factory* or *No*. 
+. Click *Done*. 
+
+.What's next
+When the storage type for the host instance is FSx for ONTAP, you can link:manage-server.html[manage the instance via Workload Factory]. 

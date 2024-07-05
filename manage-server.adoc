@@ -1,0 +1,100 @@
+---
+sidebar: sidebar
+permalink: manage-server.html
+keywords: Microsoft SQL Server instance, server instance, manage host, view host, database host, database instance, manage, unmanage
+summary: Manage Microsoft SQL Server instances in Workload Factory for Databases. 
+---
+= Manage Microsoft SQL Server instances
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Manage Microsoft SQL Server instances to monitor instance and database status, resource utilization, protection, and storage performance in Workload Factory for Databases. 
+
+Databases can only manage Microsoft SQL Server instances with FSx for ONTAP file system storage. 
+
+== Microsoft SQL Server instance management 
+Microsoft SQL Server instance management includes the following tasks: 
+
+* Manage a host instance
+* View a managed instance
+* View databases
+* Unmanage a host instance
+
+To complete any of these tasks, you must link:detect-host.html[detect one or more host instances^]. 
+
+== Manage a host instance 
+Manage a detected or unmanaged Microsoft SQL Server instances for a host.
+
+.Before you begin
+Complete the following prerequisites before you begin: 
+
+* You must have a detected instance in the host that is available for management. 
+* PowerShell7 is required to manage the database instance. Install PowerShell7 manually by referring to link:https://learn.microsoft.com/en-us/powershell/scripting/developer/module/installing-a-powershell-module?view=powershell-7.4[Microsoft PowerShell documentation for Windows^].
+* All manage operations are run by the AWS System Manager Agent using `NT Authority\SYSTEM` user privilege. Provide the following permissions for `NT Authority\SYSTEM` user in the database server: 
+
+** `“ALTER SETTINGS”`
+** `“CONTROL SERVER”` 
+** `“ALTER ANY DATABASE”` 
+** `“VIEW ANY DEFINITION”` 
+** `“CONNECT ANY DATABASE”`
+** `“CREATE ANY DATABASE”` 
+
+.Steps
+. Log in to the link:https://console.workloads.netapp.com[Workload Factory console^].
+. In the Databases tile, select *Go to Databases Inventory*.
+. In Databases, select the *Inventory* tab. 
+. Click *Manage* in the row of the host to manage. 
+. Select one or more host instances to manage. 
+. Click *Manage*. 
+
+The operation fails when the Microsoft SQL Server is missing certain PowerShell modules and management scripts. Workload Factory triggers a prepare resource job to install missing modules and scripts which you can view in the Job monitoring tab. When the job completes, retry to manage the host instance.
+
+== View a managed instance
+You can view a managed instance by following these steps.
+
+.Steps
+. Log in to the link:https://console.workloads.netapp.com[Workload Factory console^].
+. In the Databases tile, select *Go to Databases Inventory*.
+. In Databases, select the *Inventory* tab. 
+. Click the dropdown arrow to expand the row of the host to view its managed instances. 
++
+The host expands and the host instances appear. 
+. Click the three dots menu of the instance to view and then select *View instance*. 
+
+.Result 
+The overview of the instance appears in the Inventory tab. 
+
+== View databases 
+You can view the databases managed by the managed instance by following these steps. 
+
+.Steps
+. Log in to the link:https://console.workloads.netapp.com[Workload Factory console^].
+. In the Databases tile, select *Go to Databases Inventory*.
+. In Databases, select the *Inventory* tab. 
+. Click the dropdown arrow to expand the row of the host to view its databases.
++
+The host expands and the host instances appear.  
+. Click the three dots menu of the instance containing the databases to view.
+. Select *View databases*. 
+
+.Result
+The list of databases in the instance appears in the Inventory tab.
+
+== Unmanage a host instance
+Unmanage a host instance by following these steps.
+
+.Steps
+. Log in to the link:https://console.workloads.netapp.com[Workload Factory console^].
+. In the Databases tile, select *Go to Databases Inventory*.
+. In Databases, select the *Inventory* tab. 
+. Click the dropdown arrow to expand the row of the host instance to unmanage. 
++
+The host expands and the host instances appear. 
+. Click the three dots menu of the instance to unmanage. 
+. Select *Unmanage*. 
+
+.Result
+The host instance is now unmanaged. 
+
+

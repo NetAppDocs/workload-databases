@@ -1,0 +1,20 @@
+---
+sidebar: sidebar
+permalink: delete-clone.html
+keywords: delete, clone 
+summary: Delete a sandbox clone when you no longer need it. 
+---
+= Split a sandbox clone from the source database
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Delete a sandbox clone when you no longer need it and want to free up storage capacity.  
+
+.Steps
+. Log in to the link:https://console.workloads.netapp.com[Workload Factory console^]. 
+. In the Databases tile, click *Go to Databases Inventory*. 
+. In Databases, select the *Sandboxes* tab.
+. Click the three dots menu of the sandbox clone you want to delete.
+. Select *Delete*. 
+. In the Delete dialog, click *Delete*. 
