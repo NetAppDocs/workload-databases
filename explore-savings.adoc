@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: explore-savings.html
 keywords: cost, savings, compare costs, EBS, FSx for ONTAP
-summary: Explore savings for your database workloads using AWS Elastic Block Store (EBS) storage. 
+summary: Explore savings for your database workloads using Amazon Elastic Block Store (EBS) storage. 
 ---
 = Explore savings in Workload Factory for Databases
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Explore savings for your database workloads using AWS Elastic Block Store (EBS) storage. 
+Explore savings for your database workloads using Amazon Elastic Block Store (EBS) storage. 
 
 Workload Factory provides a calculator so you can compare various cost components of running Microsoft SQL Server workloads like storage, compute, SQL license, snapshots, and clones for your database workloads on FSx for ONTAP file systems against Elastic Block Store (EBS) storage. Depending on your storage requirements, you might find that FSx for ONTAP file systems are the most cost effective for your database workloads.
 //Add  and FSx for Windows File Server when available.

@@ -27,7 +27,7 @@ To refresh a database clone from a snapshot, the source database must have at le
 . Select *Refresh*. 
 . In the Refresh dialog, select one of the following options: 
 .. *Refresh to current time*
-.. *Refresh to previous point in time* 
+.. *Refresh to point in time* 
 +
 For this option, select the database snapshot from the dropdown menu to refresh to. 
 . Click *Refresh*. 
