@@ -19,7 +19,7 @@ Follow these steps to get started with Workload Factory Databases.
 
 [role="quick-margin-para"]
 
-You'll need to log in and set up an account with Workload Factory. 
+You'll need to link:https://console.workloads.netapp.com[log in^] and set up an account with Workload Factory. 
 
 [role="quick-margin-para"]
 link:https://review.docs.netapp.com/us-en/workload-setup-admin_first-draft/sign-up-saas.html[Sign up to Workload Factory^].

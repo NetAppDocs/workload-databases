@@ -44,7 +44,7 @@ You can use _Quick create_ or _Advanced create_ deployment modes to complete thi
 .Quick create
 -- 
 .Steps
-. Log in to the Workload Factory console.
+. Log in to the link:https://console.workloads.netapp.com[Workload Factory console^].
 . In the Databases tile, select *Go to Databases Inventory*.
 . In Databases, select the *Inventory* tab. 
 . In the Inventory tab, select a database server with a managed SQL server instance to create the database in.
@@ -67,7 +67,7 @@ Alternatively, if you want to change any of these default settings now, change t
 .Advanced create
 --
 .Steps
-. Log in to the Workload Factory console.
+. Log in to the link:https://console.workloads.netapp.com[Workload Factory console^].
 . In the Databases tile, select *Go to Databases Inventory*.
 . In Databases, select the *Inventory* tab. 
 . In the Inventory tab, select a database server with a managed SQL server instance to create the database in.

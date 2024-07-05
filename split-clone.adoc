@@ -15,7 +15,7 @@ Splitting a sandbox clone from its source database creates a new database which 
 Consider how much storage capacity is needed for the new database. If needed, link:https://docs.netapp.com/us-en/workload-fsx-ontap/increase-file-system-capacity.html[increase file system capacity^] for the FSx for ONTAP file system before you begin.  
 
 .Steps
-. Log in to the Workload Factory console. 
+. Log in to the link:https://console.workloads.netapp.com[Workload Factory console^]. 
 . In the Databases tile, select *Go to Databases Inventory*. 
 . In Databases, select the *Sandboxes* tab.
 . In the Sandboxes tab, click the three dots menu of the sandbox clone you want to split.

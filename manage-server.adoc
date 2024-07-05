@@ -41,7 +41,7 @@ Complete the following prerequisites before you begin:
 ** `“CREATE ANY DATABASE”` 
 
 .Steps
-. Log in to the Workload Factory console.
+. Log in to the link:https://console.workloads.netapp.com[Workload Factory console^].
 . In the Databases tile, select *Go to Databases Inventory*.
 . In Databases, select the *Inventory* tab. 
 . Click *Manage* in the row of the host to manage. 
@@ -54,7 +54,7 @@ The operation fails when the Microsoft SQL Server is missing certain PowerShell 
 You can view a managed instance by following these steps.
 
 .Steps
-. Log in to the Workload Factory console.
+. Log in to the link:https://console.workloads.netapp.com[Workload Factory console^].
 . In the Databases tile, select *Go to Databases Inventory*.
 . In Databases, select the *Inventory* tab. 
 . Click the dropdown arrow to expand the row of the host to view its managed instances. 
@@ -69,7 +69,7 @@ The overview of the instance appears in the Inventory tab.
 You can view the databases managed by the managed instance by following these steps. 
 
 .Steps
-. Log in to the Workload Factory console.
+. Log in to the link:https://console.workloads.netapp.com[Workload Factory console^].
 . In the Databases tile, select *Go to Databases Inventory*.
 . In Databases, select the *Inventory* tab. 
 . Click the dropdown arrow to expand the row of the host to view its databases.
@@ -85,7 +85,7 @@ The list of databases in the instance appears in the Inventory tab.
 Unmanage a host instance by following these steps.
 
 .Steps
-. Log in to the Workload Factory console.
+. Log in to the link:https://console.workloads.netapp.com[Workload Factory console^].
 . In the Databases tile, select *Go to Databases Inventory*.
 . In Databases, select the *Inventory* tab. 
 . Click the dropdown arrow to expand the row of the host instance to unmanage. 

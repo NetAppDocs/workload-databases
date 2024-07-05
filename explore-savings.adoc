@@ -39,7 +39,7 @@ Complete the following prerequisites before you begin:
 * Detect hosts in EBS storage in your Databases inventory. link:detect-host.html[Learn how to detect hosts].
 
 .Steps
-. Log in to the Workload Factory console. 
+. Log in to the link:https://console.workloads.netapp.com[Workload Factory console^]. 
 . In the Databases tile, select *Go to Databases inventory*. 
 . Select the *Explore savings* tab.
 . Click *Explore savings* for the database server using EBS storage.

@@ -43,7 +43,7 @@ The requirements for detecting an undetected database server instance are as fol
 When a Microsoft SQL instance is detected, the existing environment isn't modified. Detection happens through AWS Systems Manager Session Manager (SSM). Without the right IAM instance profile, detection will fail. link:https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-troubleshooting.html[Learn more about SSM troubleshooting^].
 
 .Steps
-. Log in to the Workload Factory console.
+. Log in to the link:https://console.workloads.netapp.com[Workload Factory console^].
 . In the Databases tile, select *Go to Databases Inventory*.
 . In Databases, select the *Inventory* tab. 
 . Click the dropdown arrow to expand the row of the host to detect.
