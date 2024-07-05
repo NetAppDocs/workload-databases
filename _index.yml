@@ -9,7 +9,7 @@ indexpage:
         - title: Learn about Databases
           url: /learn-databases.html
         - title: Quick start
-          url: /quick-start.html
+          url: /quick-start-databases.html
     - title: Use Databases
       links:
         - title: Create a database server
@@ -21,7 +21,7 @@ indexpage:
     - title: Knowledge and support
       links:
         - title: Register for support
-          url: /support-registration.html
+          url: /support-registration-databases.html
         - title: Get help
           url: /get-help-databases.html
 #    - title: Blogs & community

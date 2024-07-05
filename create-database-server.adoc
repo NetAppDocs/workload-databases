@@ -16,7 +16,7 @@ You'll need AWS account credentials and _automate_ permissions.
 
 Before you begin, learn about the storage deployment for the database host configuration, Active Directory deployment, Workload Factory modes of operation, and the requirements to complete this operation.
 
-After deployment, you'll need to <<Enable remote connection on the Microsoft SQL Server,enable remote connection on the Microsoft SQL Server>>. 
+After deployment, you'll need to <<Step 2: Enable remote connection on the Microsoft SQL Server,enable remote connection on the Microsoft SQL Server>>. 
 
 == FSx for ONTAP file system deployments
 Creating a new Microsoft SQL Server requires an FSx for ONTAP file system as the storage backend. You can use an existing FSx for ONTAP file system or create a new file system. If you select an existing FSx for ONTAP file system as your database server storage backend, we create a new storage VM for the Microsoft SQL workloads. 
