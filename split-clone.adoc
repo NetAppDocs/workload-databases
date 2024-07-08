@@ -1,0 +1,23 @@
+---
+sidebar: sidebar
+permalink: split-clone.html
+keywords: split, clone, source, new database 
+summary: Split a sandbox clone from the source database to create a new database. 
+---
+= Split a sandbox clone from the source database
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Splitting a sandbox clone from its source database creates a new database which will consume a certain amount of storage capacity. The clone gets deleted when the split is complete and the new database appears in the Inventory. 
+
+.Before you begin
+Consider how much storage capacity is needed for the new database. If needed, link:https://docs.netapp.com/us-en/workload-fsx-ontap/increase-file-system-capacity.html[increase file system capacity^] for the FSx for ONTAP file system before you begin.  
+
+.Steps
+. Log in to the link:https://console.workloads.netapp.com[Workload Factory console^]. 
+. In the Databases tile, select *Go to Databases Inventory*. 
+. In Databases, select the *Sandboxes* tab.
+. In the Sandboxes tab, click the three dots menu of the sandbox clone you want to split.
+. Select *Split*. 
+. In the Split dialog, click *Split*. 

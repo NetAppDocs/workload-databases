@@ -1,0 +1,132 @@
+---
+sidebar: sidebar
+permalink: learn-databases.html
+keywords: Databases
+summary: Databases is an end-to-end database deployment and maintenance service with built-in best practices for optimization, automatic thin cloning, and monitoring and resolution capabilities. 
+---
+= Learn about Workload Factory for Databases
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Workload Factory for Databases is an end-to-end database deployment and maintenance service with built-in best practices for optimization, automatic thin cloning, and monitoring and resolution capabilities. 
+
+== What is Workload Factory for Databases?
+Workload Factory for Databases detects, assesses, plans, provisions, and moves Microsoft SQL Server data to Amazon FSx for NetApp ONTAP (FSx for ONTAP) deployments optimized to meet your performance and cost expectations while adhering to industry best practices. Throughout the life cycle, Workload Factory delivers continuous optimization and management for databases on FSx for ONTAP. 
+
+For more information about Workload Factory, refer to the link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html[Workload Factory overview^].
+
+== Workload Factory benefits for self-managed databases
+Workload Factory offers the following beneficial best practices and automation for self-managed databases. 
+
+=== Best practices
+
+* Integrated knowledge from AWS Cloud, Microsoft Windows and SQL servers, and NetApp ONTAP for SQL server deployments on EC2 instances.
+* Total cost of ownership optimized deployment.  
+* End-to-end deployment automation that follows AWS, Microsoft and ONTAP best practices. 
+* “Quick create” deployment mode helps you avoid potential pitfalls with manual configuration. 
+
+=== Automation with Workload Factory Codebox
+Workload Factory introduces built-in automation with the _Codebox_. The Codebox offers the following automation benefits: 
+
+* *Code snippet generation*: Infrastructure-as-Code (IaC) snippets are generated during resource creation, allowing seamless integration with existing orchestration workflows. 
+* *Infrastructure-as-code co-pilot*: the Codebox is an Infrastructure-as-code (IaC) co-pilot that helps developers and DevOps generate code to execute any operation supported by Workload Factory.  
+* *Code viewer and automation catalog*: the Codebox provides a code viewer for quick analysis of automation and an automation catalog for quick future re-use. 
+
+=== Workload Factory for Databases features
+Workload Factory for Databases offers the following features: 
+
+* *Simple, fast deployments*: simplify and streamline your provisioning experience by selecting answers to specification questions and eliminating the time typically required to investigate how to provision and configure your Microsoft SQL Server on AWS. 
+* *Automated orchestration*: available via the Workload Factory user interface with _Quick_ and _Advanced_ create deployment modes, Workload Factory's Chatbot, and API with AWS CloudFormation.
+* *Built-in features*: utilize NetApp, Microsoft, and Amazon best practices and AWS resource selections built in to deployment configuration.
+* *Cost estimation*: assess potential cost savings with Workload Factory's storage calculator that estimates and details storage, compute, SQL licensing, snapshot, and clone itemized costs for existing Microsoft SQL Server deployments with Elastic Block Store compared with FSx for ONTAP. 
+//Add AWS FSx for Windows File Server when known limitation is removed.
+* *Reusable automation templates*: create, re-use, and customize CloudFormation templates from the Workload Factory Codebox for future Microsoft SQL Server deployments in multiple environments. 
+* *AWS resource discovery and provisioning*: automatically detect Microsoft SQL Servers on FSx for ONTAP, FSx for Windows File Servers, and Elastic Block Store deployed from your AWS account. The Databases Inventory serves as a launching point for exploring costs savings opportunities for servers in other AWS storage systems or a management tool for FSx for ONTAP based servers and instances.
+* *Sandbox creation*: create an on-demand, isolated database environment that can be used for testing, integration, diagnostics, and training, without affecting production data. 
+* *Database creation*: create a user database for your existing Microsoft SQL Servers with _Quick_ or _Advanced_ create modes to configure your database collation, file names, and sizes. Storage configuration is included. 
+* *Job Monitoring*: monitor and track database job execution progress and diagnose and troubleshoot issues in case any failure occurs.  
+
+== Benefits of Amazon FSx for ONTAP for self-managed databases
+
+* *Durability, availability, and reliability*: FSx for ONTAP offers multiple features that enhance the durability and availability of self-managed databases hosted on FSx for ONTAP, such as high availability supporting Single and Multiple Availability Zones deployments, application-aware snapshots, improved disaster recovery using replication, and efficient backup. 
+* *Performance and scalability*: FSx for ONTAP offers performance optimization with high throughput, low latency, high-speed network connections, and scalability with multiple file systems for scaling aggregate performance required for a workload.
+* *Data management and efficiency*: FSx for ONTAP offers multiple features that enhance data management and efficiency, such as space efficient thin clones, thin provisioning, compression and deduplication, and tiering infrequently accessed data to the capacity pool. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html[Learn about FSx for ONTAP for Workload Factory^]. 
+
+=== Operational modes in Workload Factory
+Three different operational modes - _basic_, _read_ and _automate_ - offer flexible options for deployment inside and outside of Workload Factory. Gain immediate value at zero-trust in _basic_ mode with code snippets for use outside Workload Factory. Get incremental value with incremental trust in _read_ and _automate_ modes. 
+
+Learn more about link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[operational modes in Workload Factory^].
+
+== Deployment details
+
+=== Supported configurations
+Workload Factory for Microsoft SQL Server supports both high availability (Always on Failover Cluster Instances) and single instance deployments according to AWS, NetApp ONTAP and SQL Server best practices. 
+
+[cols="2a,2a,2a,2a" options="header"]
+|===
+// header row
+| SQL Server Version
+| Windows Server 2016
+| Windows Server 2019
+| Windows Server 2022
+
+// first body row
+| SQL Server 2016
+| Yes
+| Yes
+| No
+
+// second body row
+| SQL Server 2019
+| Yes
+| Yes
+| Yes
+
+// third body row
+| SQL Server 2022
+| No
+| Yes
+| Yes
+
+//table end
+|===
+
+=== Deployment architectures
+Single Availability Zone and Multiple Availability Zones deployment architectures are supported for Databases. 
+
+.Single Availability Zone
+The following diagram displays standalone architecture with a Single Availability Zone in a single region. 
+
+image:diagram-SAZ-database-architecture.png[diagram of standalone architecture with with a single Availability Zone deployment of Amazon FSx for NetApp ONTAP in a single region]
+
+.Multiple Availability Zones
+The following diagram displays two-node high-availability (HA) architecture with failover cluster instance (FCI) cluster in a single region. 
+
+image:diagram-MAZ-database-architecture.png[diagram of two-node high-availability architecture with failover cluster instance cluster in a single region]
+
+=== Integrated AWS services
+Databases includes the following integrated AWS services: 
+
+* CloudFormation
+* Simple Notification Service 
+* CloudWatch
+* Systems Manager
+* Secrets Manager 
+
+=== Supported regions
+Databases is supported in all commercial regions where FSx for ONTAP is supported. https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/[View supported Amazon regions.^]
+
+The following AWS regions aren't supported: 
+
+* China regions
+* GovCloud (US) regions
+* Secret Cloud
+* Top Secret Cloud
+
+== Getting help
+Amazon FSx for NetApp ONTAP is an AWS first-party solution. For questions or technical support issues associated with your FSx for ONTAP file system, infrastructure, or any solution using this service, use the Support Center in your AWS Management Console to open a support case with AWS. Select the “FSx for ONTAP” service and appropriate category. Provide the remaining information required to create your AWS support case.
+
+For general questions about Workload Factory or Workload Factory applications and services, refer to link:get-help-databases.html[Get help for Databases for Workload Factory].

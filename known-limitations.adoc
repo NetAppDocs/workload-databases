@@ -1,0 +1,66 @@
+---
+sidebar: sidebar
+permalink: known-limitations.html
+keywords: limitations, databases
+summary: Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
+---
+
+= Known limitations
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
+
+== AMI image version support
+We only show up to four recent versions or revisions of AMI images for each SQL version. We don't allow installation from an AMI image that is older than the latest four versions.
+
+== Custom AMI
+Deployment with a custom AMI assumes that install media is present in the image. This is needed for FCI configuration for the following reasons: 
+
+* To uninstall and reconfigure to form the FCI cluster
+* When selecting a collation other than the collation set in the image for standalone deployment
+
+As part of deployment, Workload Factory doesn't install a custom AMI with multiple Microsoft SQL Server instances. Only the default Microsoft SQL Server instance is selected and configured as part of deployment.
+
+== Roll back and retry for failed deployments 
+Rollback and retry for failed deployments aren't supported in Workload Factory. You can roll back or retry a failed stack from the CloudFormation console in AWS. 
+
+== Active Directory and DNS resource rollback
+The following DNS resources aren't removed from Active Directory and DNS when you roll back a test or failed deployment from the CloudFormation console in AWS: 
+
+* Each node of the SQL deployment to its management IP address
+* Windows Cluster name to the reserved secondary IP addresses of EC2 instances in cases of FCI 
+* SQL FCI name to the two reserved IP addresses from both EC2 instances in FCI
+
+You'll need to cleanup these up manually or wait for the domain to purge stale entries. 
+
+== Always On availability groups configuration support
+Managing Always On availability groups configurations isn't supported in Workload Factory. 
+
+== User-managed Active Directory security groups
+If you select “user-managed Active Directory” during Microsoft SQL Server deployment in Workload Factory, you must provide a security group that allows traffic between the EC2 instances to the directory service for deployment. Workload Factory doesn't automatically attach the security group for user-managed Active Directory like it does for AWS Managed Microsoft AD.
+
+== Custom encryption keys
+Custom encryption keys for FSx for ONTAP aren't listed based on service applicability. You must choose the appropriate key. AWS managed keys are filtered based on applicability to service.
+
+== Microsoft SQL Server detection
+Microsoft SQL Server detection isn't saved. Each time you access Databases in Workload Factory, Microsoft SQL Server detection runs again to identify SQL installations in the region.
+
+== CloudFormation template 
+A downloaded or copied Codebox-generated CloudFormation template (YAML file) has a limited retention period of seven days. 
+
+== Sandbox support
+
+* The maximum number of sandbox clones that can be created from a database server is 50. 
+* Sandbox creation isn't supported in the following cases: 
+** Data and log files reside on the same disk. 
+** The source database has multiple data files. 
+
+== Microsoft SQL Server detection and management
+* Detecting and managing Microsoft SQL instances aren't supported when using a private network with no external connectivity.
+* When Microsoft SQL instances block Windows-based authentication and allow only Microsoft SQL user authentication, Microsoft SQL Server detection is supported but manage operations aren't supported.
+
+== Explore savings
+* In the Inventory tab, the estimated cost shown for each Microsoft SQL instance is calculated at the FSx for ONTAP file system level and not for volumes hosting the SQL instance.
+* Explore savings calculations are not supported for FSx for Windows File Server. 
