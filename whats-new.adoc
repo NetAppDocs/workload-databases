@@ -11,6 +11,28 @@ summary: Learn what's new with Workload Factory for Databases.
 [.lead]
 Learn what's new with Databases.
 
+== 4 August
+
+=== Cost savings calculator enhancements
+
+* View cost savings calculations
++
+Now you can learn how cost estimates are calculated in the cost savings calculator with the option to view calculations. You'll be able to view a granular comparison of your Amazon Elastic Block Store storage as compared to Amazon FSx for ONTAP storage. 
+
+* Support for Always On availability group in cost savings calculator
++
+Databases now provides cost savings calculations for the Always On availability group deployment type with Amazon Elastic Block Store. 
+
+* Calculations for multiple Amazon Elastic Block Store volume types in cost savings calculator 
++
+You can view cost savings calculations for the following volume types in Amazon Elastic Block Store when exploring savings with the calculator. 
++
+** General SSD: gp3 and gp2
+** Provisioned IOPS SSD: io2 and io1
+** HDD: st1
+
+link:explore-savings.html[Explore savings with FSx for ONTAP for your database workloads.]
+
 == 7 July
 
 === Initial release of Workload Factory for Databases
