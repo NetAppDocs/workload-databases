@@ -30,7 +30,7 @@ If you haven't added credentials to link your Workload Factory account with an A
 
 This figure shows the storage calculator page with a comparison between FSx for ONTAP and EBS storage.
 
-image:screenshot-ebs-calculator.png[The storage calculator page with a comparison between FSx for ONTAP and Elastic Block Store storage.]
+image:screenshot-ebs-savings-calculator.png[The storage calculator page with a comparison between FSx for ONTAP and Elastic Block Store storage.]
 
 .Before you begin
 Complete the following prerequisites before you begin: 
