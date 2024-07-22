@@ -26,11 +26,11 @@ This figure shows the volumes on FSx for Windows File Server systems that have b
 
 image:screenshot-storage-inventory.png[The storage inventory page showing your current inventory of volumes on FSx for Windows File Servers.]
 
-If you haven't added credentials to link your Workload Factory account with an AWS account (called _basic_ mode), you can manually enter the characteristics required for a storage system you are planning to deploy and the storage calculator will determine the best file system based on cost. You can use this method to scope a new FSx for ONTAP file system while using _automate_ mode as well.
+If you haven't added credentials to link your Workload Factory account with an AWS account (called _basic_ mode), you can manually enter the characteristics required for a storage system you are planning to deploy and the savings calculator will determine the best file system based on cost. You can use this method to scope a new FSx for ONTAP file system while using _automate_ mode as well.
 
-This figure shows the storage calculator page with a comparison between FSx for ONTAP and EBS storage.
+This figure shows the savings calculator page with a comparison between Microsoft SQL Server on Amazon Elastic Block Store and FSx for ONTAP and storage.
 
-image:screenshot-ebs-savings-calculator.png[The storage calculator page with a comparison between FSx for ONTAP and Elastic Block Store storage.]
+image:screenshot-ebs-savings-calculator.png[A screenshot of the savings calculator page shows the selected Microsoft SQL Server on Amazon Elastic Block Store (EBS) configuration on the left with the option to customize snapshot and clone values. On the right, cost savings in dollar amount and percentage savings displays as well as the total monthly cost for using Microsoft SQL Server on FSx for ONTAP and Elastic Block Store storage.]
 
 .Before you begin
 Complete the following prerequisites before you begin: 
@@ -50,7 +50,7 @@ Complete the following prerequisites before you begin:
 . Review the calculations and recommendation provided on the page. 
 +
 Additionally, scroll down to the bottom of the page to *Export PDF*. 
-//Add or *View the calculations*. when available.
+//Add or *View calculations*. when available.
 //. If you'd like to switch to FSx for ONTAP to realize cost savings, click *Create* to deploy the file system(s) from the calculator directly from Workload Factory or click *Save* to save the recommended configuration(s) for later. 
 
 == Deploy FSx for ONTAP file systems
