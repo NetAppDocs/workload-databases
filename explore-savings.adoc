@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: explore-savings.html
 keywords: cost, savings, compare costs, EBS, FSx for ONTAP
-summary: Explore savings for your database workloads using Amazon Elastic Block Store (EBS) storage. 
+summary: Explore savings for your database workloads by comparing the costs of using Amazon Elastic Block Store (EBS) storage with FSx for ONTAP storage. 
 ---
 = Explore savings in Workload Factory for Databases
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Explore savings for your database workloads by comparing the costs of using Amazon Elastic Block Store (EBS) storage with FSx for ONTAP. 
+Explore savings for your database workloads by comparing the costs of using Amazon Elastic Block Store (EBS) storage with FSx for ONTAP storage. 
 
 Workload Factory provides a savings calculator so you can compare various cost components of running Microsoft SQL Server workloads like storage, compute, SQL license, snapshots, and clones for your database workloads on FSx for ONTAP file systems against Elastic Block Store (EBS) storage. Depending on your storage requirements, you might find that FSx for ONTAP file systems are the most cost effective for your database workloads.
 //Add  and FSx for Windows File Server when available.
@@ -38,8 +38,8 @@ Complete the following prerequisites before you begin:
 . Select the *Explore savings* tab.
 . Click *Explore savings* for the database server using EBS storage.
 . Optionally, provide the following details on clone and snapshots in your EBS storage for a more accurate cost savings estimate. 
-.. *Snapshot frequency*: Select a snapshot frequency from the dropdown. 
-.. *Clone refresh frequency*: Select a clone refresh frequency from the dropdown. 
+.. *Snapshot frequency*: Select a snapshot frequency from the dropdown menu. 
+.. *Clone refresh frequency*: Select a clone refresh frequency from the dropdown menu. 
 .. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.  
 . Review the calculations and recommendation provided on the page. 
 +
