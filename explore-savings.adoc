@@ -16,7 +16,7 @@ Workload Factory provides a savings calculator so you can compare various cost c
 
 The calculator displays whether the storage for the database workloads on these Microsoft SQL Servers would cost less if you used an FSx for ONTAP file system.
 
-image:screenshot-ebs-savings-calculator.png[A screenshot of the savings calculator page shows the selected Microsoft SQL Server on Amazon Elastic Block Store (EBS) configuration on the left with the option to customize snapshot and clone values. On the right, cost savings in dollar amount and percentage savings displays as well as the total monthly cost for using Microsoft SQL Server on FSx for ONTAP and Elastic Block Store storage.]
+image:screenshot-ebs-savings-calculator.png["A screenshot of the savings calculator page shows the selected Microsoft SQL Server on Amazon Elastic Block Store configuration on the left with the option to customize snapshot and clone values. Cost savings in dollar amount and percentage savings as well as the total monthly cost for using Microsoft SQL Server on FSx for ONTAP and Elastic Block Store storage display on the left."]
 
 If Workload Factory determines that you could save money by running these workloads on an FSx for ONTAP file system, you can deploy Microsoft SQL over FSx for ONTAP directly from the calculator in Workload Factory. In some cases, Workload Factory may recommend that you deploy multiple file systems based on the amount of storage you are currently using, and based on the performance characteristics of your database workloads. 
 
@@ -26,7 +26,7 @@ If you have enabled _automate_ mode (link:https://docs.netapp.com/us-en/workload
 
 This figure shows detected and unmanaged Microsoft SQL Server hosts in the inventory that have been discovered in an AWS account.
 
-image:screenshot-host-inventory.png[This figure shows detected and unmanaged Microsoft SQL Server hosts in the Inventory that have been discovered in an AWS account.]
+image:screenshot-host-inventory.png["This figure shows detected and unmanaged Microsoft SQL Server hosts in the Inventory that have been discovered in an AWS account."]
 
 If you haven't added credentials to link your Workload Factory account with an AWS account (called _basic_ mode), you can manually enter the characteristics required for a storage system you are planning to deploy and the savings calculator will determine the best file system based on cost. You can use this method to scope a new FSx for ONTAP file system while using _automate_ mode as well.
 
@@ -52,6 +52,8 @@ Additionally, scroll down to the bottom of the page to *Export PDF* or *View cal
 
 == Deploy FSx for ONTAP file systems
 If you'd like to switch to FSx for ONTAP to realize cost savings, click *Create* to create the file system(s) directly from the Create an FSx for ONTAP file system wizard or click *Save* to save the recommended configuration(s) for later. 
+
+Workload Factory doesn't support saving or creating multiple FSx for ONTAP file systems. 
 
 Deployment methods:::
 In _automate_ mode, you can deploy the FSx for ONTAP file system directly from Workload Factory. You can also copy the content from the Codebox window and deploy the system using one of the Codebox methods.
