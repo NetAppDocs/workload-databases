@@ -15,9 +15,9 @@ Learn what's new with Databases.
 
 === Savings calculator enhancements
 
-* View cost savings calculations
+* Cost estimate descriptions in the savings calculator
 +
-Now you can learn how cost estimates are calculated in the savings calculator with the option to view calculations. You'll be able to view a granular comparison of your Amazon Elastic Block Store storage as compared to Amazon FSx for ONTAP storage. 
+You can now learn how cost estimates are calculated in the savings calculator. You'll be able to review descriptions of all calculations for your Amazon Elastic Block Store storage and for the same database workloads using Amazon FSx for ONTAP storage. 
 
 * Support for Always On availability group in savings calculator
 +
@@ -32,6 +32,10 @@ You can view cost savings calculations for the following volume types in Amazon 
 ** HDD: st1
 
 link:explore-savings.html[Explore savings with FSx for ONTAP for your database workloads.]
+
+* Optimize SQL edition and license with FSx for ONTAP
++
+The storage calculator determines whether the SQL edition and license you use with Amazon Elastic Block Store storage are optimized for your database workloads. You'll get a recommendation for the optimal SQL edition and license with FSx for ONTAP storage.  
 
 == 7 July 2024
 
