@@ -45,8 +45,9 @@ Complete the following prerequisites before you begin:
 ====
 
 .Explore savings of selected host
+--
 Workload Factory enters the selected host characteristics so that you can explore savings automatically. 
--- 
+
 .Steps
 . Log in to the link:https://console.workloads.netapp.com[Workload Factory console^]. 
 . In the Databases tile, select *Go to Databases inventory*. 
@@ -62,8 +63,8 @@ Additionally, scroll down to the bottom of the page to *Export PDF* or *View cal
 --
 
 .Explore savings manually
-You can customize settings for Microsoft SQL Server, Amazon EC2, and Elastic Block Store settings to explore savings manually. 
 --
+You can customize settings for Microsoft SQL Server, Amazon EC2, and Elastic Block Store settings to explore savings manually. 
 
 .Steps
 . Log in to the link:https://console.workloads.netapp.com[Workload Factory console^]. 
