@@ -15,11 +15,11 @@ Learn what's new with Databases.
 
 === Savings calculator enhancements
 
-* Cost estimate descriptions in the savings calculator
+* Cost estimate descriptions
 +
 You can now learn how cost estimates are calculated in the savings calculator. You'll be able to review descriptions of all calculations for your Microsoft SQL Server instances using Amazon Elastic Block Store storage as compared to using Amazon FSx for ONTAP storage.
 
-* Support for Always On availability group in savings calculator
+* Support for Always On availability group 
 +
 Databases now provides cost savings calculations for the Always On availability group deployment type with Microsoft SQL Server using Amazon Elastic Block Store.
 
