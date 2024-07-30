@@ -20,6 +20,8 @@ image:screenshot-ebs-savings-calculator.png["A screenshot of the savings calcula
 
 If Workload Factory determines that you could save money by running these workloads on an FSx for ONTAP file system, you can deploy Microsoft SQL over FSx for ONTAP directly from the calculator in Workload Factory. In some cases, Workload Factory may recommend that you deploy multiple file systems based on the amount of storage you are currently using, and based on the performance characteristics of your database workloads. 
 
+NOTE: Workload Factory doesn't support saving configurations for or creating Microsoft SQL Server with multiple FSx for ONTAP file systems.
+
 == Provide your system requirements
 If you have enabled _automate_ mode (link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[learn more about modes]) by adding AWS credentials to your Workload Factory account, then Workload Factory can identify all the storage systems running Microsoft SQL Server that are available in your AWS account. The AWS account that is searched is based on the credentials you've defined in your Workload Factory account.
 //add _read_ mode above when it is supported
@@ -28,8 +30,7 @@ This figure shows Microsoft SQL Server hosts on EBS storage in the Explore savin
 
 image:screenshot-explore-savings-tab.png["This figure shows detected and unmanaged Microsoft SQL Server hosts in the Explore savings tab that have been discovered in an AWS account."]
 
-//Add when manual mode is available.
-//If you haven't added credentials to link your Workload Factory account with an AWS account (called _basic_ mode), you can manually enter the characteristics required for a Microsoft SQL Server configuration you are planning to deploy and the savings calculator will determine the best file system based on cost. You can use the manual method while using _automate_ mode as well.
+If you haven't added credentials to link your Workload Factory account with an AWS account (called _basic_ mode), you can manually enter the use case at a minimum and other characteristics required for a Microsoft SQL Server configuration you are planning to deploy and the savings calculator will determine the best file system based on cost. You can use the manual method while using _automate_ mode as well.
 
 .Before you begin
 Complete the following prerequisites before you begin: 
@@ -49,7 +50,6 @@ Complete the following prerequisites before you begin:
 . Review the calculations and recommendation provided on the page. 
 +
 Additionally, scroll down to the bottom of the page to *Export PDF* or *View calculations*. 
-//. If you'd like to switch to FSx for ONTAP to realize cost savings, click *Create* to deploy the file system(s) from the calculator directly from Workload Factory or click *Save* to save the recommended configuration(s) for later. 
 
 == Deploy FSx for ONTAP file systems
 If you'd like to switch to FSx for ONTAP to realize cost savings, click *Create* to create the file system(s) directly from the Create an FSx for ONTAP file system wizard or click *Save* to save the recommended configuration(s) for later. 

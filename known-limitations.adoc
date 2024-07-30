@@ -64,3 +64,6 @@ A downloaded or copied Codebox-generated CloudFormation template (YAML file) has
 == Explore savings
 * In the Inventory tab, the estimated cost shown for each Microsoft SQL instance is calculated at the FSx for ONTAP file system level and not for volumes hosting the SQL instance.
 * Explore savings calculations are not supported for FSx for Windows File Server. 
+
+== Multiple Microsoft SQL Server instances 
+When Workload Factory recommends more than one FSx for ONTAP file system for your Microsoft SQL Server instances, Workload Factory doesn't support saving configurations for or creating Microsoft SQL Server with multiple FSx for ONTAP file systems.
