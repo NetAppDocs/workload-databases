@@ -31,6 +31,10 @@ The storage calculator determines whether the SQL edition and license you use wi
 +
 Databases now provides cost savings calculations for multiple Microsoft SQL Server instances using Amazon Elastic Block Store.
 
+* Manual mode
++
+Now you can manually enter the use case at a minimum and other characteristics required for a Microsoft SQL Server configuration you are planning to deploy. The savings calculator will determine the best file system based on cost.
+
 link:explore-savings.html[Explore savings with FSx for ONTAP for your database workloads.]
 
 == 7 July 2024
