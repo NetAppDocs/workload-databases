@@ -23,7 +23,7 @@ If Workload Factory determines that you could save money by running these worklo
 //In some cases, Workload Factory may recommend that you deploy multiple file systems based on the amount of storage you are currently using, and based on the performance characteristics of your database workloads. 
 
 == Provide your system requirements
-If you have enabled _automate_ mode (link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[learn more about modes]) by adding AWS credentials to your Workload Factory account, then Workload Factory can identify all the storage systems running Microsoft SQL Server that are available in your AWS account. The AWS account that is searched is based on the credentials you've defined in your Workload Factory account. You can explore savings automatically.
+If you have enabled _automate_ mode (link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[learn more about modes]) by adding AWS credentials to your Workload Factory account, then Workload Factory can identify all the storage systems running Microsoft SQL Server that are available in your AWS account. The AWS account that is searched is based on the credentials you've defined in your Workload Factory account.  
 //add _read_ mode above when it is supported
 
 This figure shows Microsoft SQL Server hosts on EBS storage in the Explore savings tab that have been discovered in an AWS account.
@@ -33,7 +33,7 @@ image:screenshot-explore-savings-tab.png["This figure shows detected and unmanag
 //Add when manual mode is available in basic mode.
 //If you haven't added credentials to link your Workload Factory account with an AWS account (called _basic_ mode), 
 
-You can also manually enter the use case at a minimum and other characteristics required for a Microsoft SQL Server configuration you are planning to deploy and the savings calculator will determine the best file system based on cost. 
+You can explore savings automatically for a selected host or manually enter settings for a Microsoft SQL Server configuration you are planning to deploy. The savings calculator will determine the best file system based on cost.
 
 .Before you begin
 Complete the following prerequisites before you begin: 
