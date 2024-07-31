@@ -33,7 +33,7 @@ image:screenshot-explore-savings-tab.png["This figure shows detected and unmanag
 //Add when manual mode is available in basic mode.
 //If you haven't added credentials to link your Workload Factory account with an AWS account (called _basic_ mode), 
 
-You can explore savings automatically for a selected host or manually enter settings for a Microsoft SQL Server configuration you are planning to deploy. The savings calculator will determine the best file system based on cost.
+You can explore savings automatically for a selected host or manually enter settings for a Microsoft SQL Server configuration you are planning to deploy. The savings calculator will determine the best FSX for ONTAP configuration based on cost.
 
 .Before you begin
 Complete the following prerequisites before you begin: 
@@ -57,8 +57,8 @@ Workload Factory enters the selected host characteristics so that you can explor
 . Select the *Explore savings* tab.
 . Click *Explore savings* for the database server using EBS storage.
 . Optionally, provide the following details on clone and snapshots in your EBS storage for a more accurate cost savings estimate. 
-.. *Snapshot frequency*: Select a snapshot frequency from the dropdown menu. 
-.. *Clone refresh frequency*: Select a clone refresh frequency from the dropdown menu. 
+.. *Snapshot frequency*: Select a snapshot frequency from the dropdown menu.
+.. *Number of cloned copies*: Enter the number of cloned copies in the EBS configuration. 
 .. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.  
 . Review the calculations and recommendation provided on the page. 
 +
@@ -80,8 +80,8 @@ You can customize settings for Microsoft SQL Server, Amazon EC2, and Elastic Blo
 .. *SQL Server edition*: Select the SQL Server edition from the dropdown menu.
 .. *Monthly data change rate (%)*: Enter the percentage that clone and snapshot data changes on average per month.  
 .. *Snapshot frequency*: Select a snapshot frequency from the dropdown menu. 
-.. *Clone refresh frequency*: Select a clone refresh frequency from the dropdown menu. 
-.. *Monthly SQL BYOL cost ($)*: Optionally, enter the monthly SQL BYOL cost in dollars.  
+.. *Number of cloned copies*: Enter the number of cloned copies in the EBS configuration.
+//.. *Monthly SQL BYOL cost ($)*: Optionally, enter the monthly SQL BYOL cost in dollars.  
 .. Under EC2 specifications, provide the following: 
 +
 * *Machine description*: Optionally, enter a name to describe the machine.

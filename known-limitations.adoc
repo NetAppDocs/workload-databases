@@ -66,4 +66,4 @@ A downloaded or copied Codebox-generated CloudFormation template (YAML file) has
 * Explore savings calculations are not supported for FSx for Windows File Server. 
 
 == Multiple FSx for ONTAP file systems 
-Workload Factory doesn't support creating or saving configurations for multiple Microsoft SQL Server instances with multiple FSx for ONTAP file systems. Only one FSx for ONTAP file system configuration deployment is supported. 
+Workload Factory doesn't support creating or saving configurations for Microsoft SQL Server with multiple FSx for ONTAP file systems. Only one FSx for ONTAP file system configuration deployment is supported. 

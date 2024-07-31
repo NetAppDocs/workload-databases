@@ -33,7 +33,7 @@ Databases now provides cost savings calculations for multiple Microsoft SQL Serv
 
 * Manual mode
 +
-Now you can customize settings for Microsoft SQL Server, Amazon EC2, and Elastic Block Store settings to explore savings manually. The savings calculator will determine the best file system based on cost.
+Now you can customize settings for Microsoft SQL Server, Amazon EC2, and Elastic Block Store settings to explore savings manually. The savings calculator will determine the best FSx for ONTAP configuration based on cost.
 
 link:explore-savings.html[Explore savings with FSx for ONTAP for your database workloads.]
 
