@@ -58,6 +58,7 @@ Workload Factory enters the selected host characteristics so that you can explor
 . Click *Explore savings* for the database server using EBS storage.
 . Optionally, provide the following details on clone and snapshots in your EBS storage for a more accurate cost savings estimate. 
 .. *Snapshot frequency*: Select a snapshot frequency from the dropdown menu.
+.. *Clone refresh frequency*: Select the frequency that clones refresh from the dropdown menu.
 .. *Number of cloned copies*: Enter the number of cloned copies in the EBS configuration. 
 .. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.  
 . Review the calculations and recommendation provided on the page. 
