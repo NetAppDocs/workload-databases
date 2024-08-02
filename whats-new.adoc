@@ -23,13 +23,13 @@ You can now learn how cost estimates are calculated in the savings calculator. Y
 +
 Databases now provides cost savings calculations for the Always On availability group deployment type with Microsoft SQL Server using Amazon Elastic Block Store.
 
-* Optimize SQL edition and license with FSx for ONTAP
+* Optimize SQL server licensing with FSx for ONTAP
 +
-The storage calculator determines whether the SQL edition and license you use with Amazon Elastic Block Store storage are optimized for your database workloads. You'll get a recommendation for the optimal SQL edition and license with FSx for ONTAP storage.  
+The Databases calculator determines whether the SQL license edition you use with Amazon Elastic Block Store storage is optimized for your database workloads. You'll get a recommendation for the optimal SQL license with FSx for ONTAP storage.
 
 * Multiple SQL server instances 
 +
-Databases now provides cost savings calculations for multiple Microsoft SQL Server instances using Amazon Elastic Block Store.
+Databases now provides cost savings calculations for a configuration hosting multiple Microsoft SQL Server instances using Amazon Elastic Block Store. 
 
 * Manual mode
 +

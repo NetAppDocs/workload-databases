@@ -18,7 +18,7 @@ The calculator displays whether the storage for the database workloads on these 
 
 image:screenshot-ebs-savings-calculator.png["A screenshot of the savings calculator page shows the selected Microsoft SQL Server on Amazon Elastic Block Store configuration on the left with the option to customize snapshot and clone values. Cost savings in dollar amount and percentage savings as well as the total monthly cost for using Microsoft SQL Server on FSx for ONTAP and Elastic Block Store storage display on the left."]
 
-If Workload Factory determines that you could save money by running these workloads on an FSx for ONTAP file system, you can deploy Microsoft SQL over FSx for ONTAP directly from the calculator in Workload Factory. When you have multiple Microsoft SQL Server instances over Elastic Block Store storage, we'll recommend a FSx for ONTAP configuration with a single SQL instance.
+If Workload Factory determines that you could save money by running these workloads on an FSx for ONTAP file system, you can deploy Microsoft SQL over FSx for ONTAP directly from the calculator in Workload Factory. When you have multiple Microsoft SQL Server instances over Elastic Block Store storage, we'll recommend an FSx for ONTAP configuration with a single SQL instance.
 
 //In some cases, Workload Factory may recommend that you deploy multiple file systems based on the amount of storage you are currently using, and based on the performance characteristics of your database workloads. 
 
