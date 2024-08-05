@@ -31,7 +31,7 @@ The Databases calculator determines whether the SQL license edition you use with
 +
 Databases now provides cost savings calculations for a configuration hosting multiple Microsoft SQL Server instances using Amazon Elastic Block Store. 
 
-* Manual mode
+* Customize calculator settings 
 +
 Now you can customize settings for Microsoft SQL Server, Amazon EC2, and Elastic Block Store settings to explore savings manually. The savings calculator will determine the best configuration based on cost.
 
