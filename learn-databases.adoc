@@ -100,12 +100,12 @@ Single Availability Zone and Multiple Availability Zones deployment architecture
 .Single Availability Zone
 The following diagram displays standalone architecture with a Single Availability Zone in a single region. 
 
-image:diagram-SAZ-database-architecture.png[diagram of standalone architecture with with a single Availability Zone deployment of Amazon FSx for NetApp ONTAP in a single region]
+image:diagram-SAZ-database-architecture.png["A diagram of standalone architecture with a single Availability Zone deployment of Amazon FSx for NetApp ONTAP in a single region"]
 
 .Multiple Availability Zones
 The following diagram displays two-node high-availability (HA) architecture with failover cluster instance (FCI) cluster in a single region. 
 
-image:diagram-MAZ-database-architecture.png[diagram of two-node high-availability architecture with failover cluster instance cluster in a single region]
+image:diagram-MAZ-database-architecture.png["A diagram of two-node high-availability architecture with failover cluster instance cluster in a single region"]
 
 === Integrated AWS services
 Databases includes the following integrated AWS services: 
