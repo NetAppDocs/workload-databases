@@ -114,7 +114,7 @@ Subnets should not share the same route table for high availability.
 .. *Active Directory*: 
 ... In the *Domain name* field, select or enter a name for the domain.
 .... For AWS-managed Active Directories, domain names appear in the dropdown menu. 
-.... For a user-managed Active Directory, enter a name in the *Search and Add* field, and click *Add*. 
+.... For a user-managed Active Directory, enter a name in the *Search and Add* field, and click *Add*.
 ... In the *DNS address* field, enter the DNS IP address for the domain. You can add up to 3 IP addresses. 
 +
 For AWS-managed Active Directories, the DNS IP address(es) appear in the dropdown menu.
@@ -126,6 +126,11 @@ For AWS-managed Active Directories, the DNS IP address(es) appear in the dropdow
 +
 A new FSx for ONTAP file system may add 30 minutes or more of installation time. 
 ... *Select an existing FSx for ONTAP*: Select FSx for ONTAP name from the dropdown menu, and enter a user name and password for the file system. 
++
+For existing FSx for ONTAP file systems, ensure the following: 
+
+* The routing group attached to FSx for ONTAP allows routes to the subnets to be used for deployment. 
+* The security group allows traffic from the subnets used for deployment, specifically HTTPS (443) and iSCSI (3260) TCP ports. 
 .. *Data drive size*: Enter the data drive capacity and select the capacity unit. 
 . Summary: 
 .. *Preview default*: Review the default configurations set by Quick create. 
@@ -187,7 +192,7 @@ Three security groups get attached to the SQL nodes (EC2 instances) during new s
 +
 3. For an existing FSx for ONTAP file system, the security group associated with it is added automatically to the SQL nodes which allows communication to the file system. When a new FSx for ONTAP system is created, a new security group is created for the FSx for ONTAP file system and the same security group also gets attached to SQL nodes.
 +
-For a user-managed Active Directory, you can select a security group that allows traffic from your existing systems which need to connect to the database. The security group should allow communication to the Active Directory domain controllers from the subnets where EC2 instances for Microsoft SQL are configured. 
+For a user-managed Active Directory, ensure the security group configured on the AD instance allows traffic from subnets used for deployment. The security group should allow communication to the Active Directory domain controllers from the subnets where EC2 instances for Microsoft SQL are configured. 
 
 . Under *Application settings*, provide the following: 
 .. Under *SQL Server install type*, select *License included AMI* or *Use custom AMI*. 
@@ -221,6 +226,11 @@ For AWS-managed Active Directories, the DNS IP address(es) appear in the dropdow
 +
 A new FSx for ONTAP file system may add 30 minutes or more of installation time. 
 ... *Select an existing FSx for ONTAP*: Select FSx for ONTAP name from the dropdown menu, and enter a user name and password for the file system. 
++
+For existing FSx for ONTAP file systems, ensure the following: 
+
+* The routing group attached to FSx for ONTAP allows routes to the subnets to be used for deployment. 
+* The security group allows traffic from the subnets used for deployment, specifically HTTPS (443) and iSCSI (3260) TCP ports. 
 .. *Snapshot policy*: Enabled by default. Snapshots are taken daily and have a 7-day retention period. 
 +
 The snapshots are assigned to volumes created for SQL workloads. 
