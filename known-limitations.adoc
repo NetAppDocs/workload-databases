@@ -51,15 +51,10 @@ Microsoft SQL Server detection isn't saved. Each time you access Databases in Wo
 A downloaded or copied Codebox-generated CloudFormation template (YAML file) has a limited retention period of seven days. 
 
 == Sandbox support
-
-* The maximum number of sandbox clones that can be created from a database server is 50. 
-* Sandbox creation isn't supported in the following cases: 
-** Data and log files reside on the same disk. 
-** The source database has multiple data files. 
+The maximum number of sandbox clones that can be created from a database server is 50.  
 
 == Microsoft SQL Server detection and management
-* Detecting and managing Microsoft SQL instances aren't supported when using a private network with no external connectivity.
-* When Microsoft SQL instances block Windows-based authentication and allow only Microsoft SQL user authentication, Microsoft SQL Server detection is supported but manage operations aren't supported.
+When Microsoft SQL instances block Windows-based authentication and allow only Microsoft SQL user authentication, Microsoft SQL Server detection is supported but manage operations aren't supported.
 
 == Explore savings
 * In the Inventory tab, the estimated cost shown for each Microsoft SQL instance is calculated at the FSx for ONTAP file system level and not for volumes hosting the SQL instance.
