@@ -2,87 +2,50 @@
 sidebar: sidebar
 permalink: explore-savings.html
 keywords: cost, savings, compare costs, EBS, FSx for ONTAP
-summary: Explore savings for your database workloads by comparing the costs of using Amazon Elastic Block Store (EBS) storage with FSx for ONTAP storage. 
+summary: Explore savings for your database workloads by comparing the costs of using Amazon Elastic Block Store (EBS) and FSx for Windows File Server storage with FSx for ONTAP storage. 
 ---
 = Explore savings in Workload Factory for Databases
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Explore savings for your database workloads by comparing the costs of using Amazon Elastic Block Store (EBS) storage with FSx for ONTAP storage. 
+Explore savings for your database workloads by comparing the costs of using Amazon Elastic Block Store (EBS) and FSx for Windows File Server storage with FSx for ONTAP storage. 
 
-Workload Factory provides a savings calculator so you can compare various cost components of running Microsoft SQL Server workloads like storage, compute, SQL license, snapshots, and clones for your database workloads on FSx for ONTAP file systems against Elastic Block Store (EBS) storage. Depending on your storage requirements, you might find that FSx for ONTAP file systems are the most cost effective for your database workloads.
-//Add  and FSx for Windows File Server when available.
-
+Workload Factory provides a savings calculator so you can compare various cost components of running Microsoft SQL Server workloads like storage, compute, SQL license, snapshots, and clones for your database workloads on FSx for ONTAP file systems against Elastic Block Store (EBS) and FSx for Windows File Server storage. Depending on your storage requirements, you might find that FSx for ONTAP file systems are the most cost effective for your database workloads.
 The calculator displays whether the storage for the database workloads on these Microsoft SQL Servers would cost less if you used an FSx for ONTAP file system.
 
 image:screenshot-ebs-savings-calculator.png["A screenshot of the savings calculator page shows the selected Microsoft SQL Server on Amazon Elastic Block Store configuration on the left with the option to customize snapshot and clone values. Cost savings in dollar amount and percentage savings as well as the total monthly cost for using Microsoft SQL Server on FSx for ONTAP and Elastic Block Store storage display on the left."]
 
-If Workload Factory determines that you could save money by running these workloads on an FSx for ONTAP file system, you can deploy Microsoft SQL over FSx for ONTAP directly from the calculator in Workload Factory. When you have multiple Microsoft SQL Server instances over Elastic Block Store storage, we'll recommend an FSx for ONTAP configuration with a single SQL instance.
+If Workload Factory determines that you could save money by running these workloads on an FSx for ONTAP file system, you can deploy Microsoft SQL over FSx for ONTAP directly from the calculator in Workload Factory. When you have multiple Microsoft SQL Server instances over Elastic Block Store or FSx for Windows File Server storage, we'll recommend an FSx for ONTAP configuration with a single SQL instance.
 
 //In some cases, Workload Factory may recommend that you deploy multiple file systems based on the amount of storage you are currently using, and based on the performance characteristics of your database workloads. 
 
-== Provide your system requirements
-If you have enabled _automate_ mode (link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[learn more about modes]) by adding AWS credentials to your Workload Factory account, then Workload Factory can identify all the storage systems running Microsoft SQL Server that are available in your AWS account. The AWS account that is searched is based on the credentials you've defined in your Workload Factory account.  
-//add _read_ mode above when it is supported
+== Calculator options
+Two calculator options are available for making the cost comparison between your systems and FSx for ONTAP — customization and automatic detection for your Amazon storage environments.
 
-This figure shows Microsoft SQL Server hosts on EBS storage in the Explore savings tab that have been discovered in an AWS account.
+Explore savings via customization: You provide the configuration settings for Microsoft SQL server on Amazon EC2 with EBS or FSx for Windows File Server including the region, deployment model, SQL server edition, monthly data change rate, snapshot frequency, and more.
 
-image:screenshot-explore-savings-tab.png["This figure shows detected and unmanaged Microsoft SQL Server hosts in the Explore savings tab that have been discovered in an AWS account."]
+Explore savings for detected storage environments: Workload Factory links to your existing AWS storage environments and pulls in the details to the calculator for automatic comparison. You'll need to grant automate permissions to use this calculator option. You can change the use case, but all other details are automatically determined in the calculation.
 
-//Add when manual mode is available in basic mode.
-//If you haven't added credentials to link your Workload Factory account with an AWS account (called _basic_ mode), 
-
-You can explore savings automatically for a selected host or manually enter settings for a Microsoft SQL Server configuration you are planning to deploy. The savings calculator will determine the best FSX for ONTAP configuration based on cost.
-
-.Before you begin
-Complete the following prerequisites before you begin: 
-
-* Make sure you link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _automate_ permissions^] in your AWS account to detect Elastic Block Store (EBS) systems in your Databases inventory. 
-* Detect hosts in EBS storage in your Databases inventory. link:detect-host.html[Learn how to detect hosts].
-
-== Explore savings
-You can explore savings of a selected host or use the manual method.
+== Explore savings via customization
+Follow the steps under the tab for your storage type.
 
 [role="tabbed-block"]
 ====
 
-.Explore savings of selected host
+.Amazon Elastic Block Store (EBS)
 --
-Workload Factory enters the selected host characteristics so that you can explore savings automatically. 
-
 .Steps
-. Log in to the link:https://console.workloads.netapp.com[Workload Factory console^]. 
-. In the Databases tile, select *Go to Databases inventory*. 
-. Select the *Explore savings* tab.
-. Click *Explore savings* for the database server using EBS storage.
-. Optionally, provide the following details on clone and snapshots in your EBS storage for a more accurate cost savings estimate. 
-.. *Snapshot frequency*: Select a snapshot frequency from the dropdown menu.
-.. *Clone refresh frequency*: Select the frequency that clones refresh from the dropdown menu.
-.. *Number of cloned copies*: Enter the number of cloned copies in the EBS configuration. 
-.. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.  
-. Review the calculations and recommendation provided on the page. 
-+
-Additionally, scroll down to the bottom of the page to *Export PDF* or *View calculations*. 
---
-
-.Explore savings manually
---
-You can customize settings for Microsoft SQL Server, Amazon EC2, and Elastic Block Store settings to explore savings manually. 
-
-.Steps
-. Log in to the link:https://console.workloads.netapp.com[Workload Factory console^]. 
-. In the Databases tile, select *Go to Databases inventory*. 
-. Select the *Explore savings* tab.
-. Under Manual explore savings, click *Explore savings manually*.
-. In the Explore savings manually page, provide the following details: 
+. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^] 
+. From Databases, select *Explore savings* then *Microsoft SQL Server on EBS*. 
+. In the Savings calculator, provide the following details: 
 .. *Region*: Select a region from the dropdown menu. 
 .. *Deployment model*: Select a deployment model from the dropdown menu.
-.. *SQL Server edition*: Select the SQL Server edition from the dropdown menu.
+.. *SQL server edition*: Select the SQL server edition from the dropdown menu.
 .. *Monthly data change rate (%)*: Enter the percentage that clone and snapshot data changes on average per month.  
 .. *Snapshot frequency*: Select a snapshot frequency from the dropdown menu. 
 .. *Number of cloned copies*: Enter the number of cloned copies in the EBS configuration.
-//.. *Monthly SQL BYOL cost ($)*: Optionally, enter the monthly SQL BYOL cost in dollars.  
+.. *Monthly SQL BYOL cost ($)*: Optionally, enter the monthly SQL BYOL cost in dollars.  
 .. Under EC2 specifications, provide the following: 
 +
 * *Machine description*: Optionally, enter a name to describe the machine.
@@ -98,14 +61,104 @@ You can customize settings for Microsoft SQL Server, Amazon EC2, and Elastic Blo
 +
 Additionally, scroll down to the bottom of the page to *Export PDF* or *View calculations*. 
 --
+.Amazon FSx for Windows File Server
+--
+.Steps
+. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^] 
+. From Databases, select *Explore savings* then *Microsoft SQL Server on FSx for Windows*. 
+. In the Savings calculator, provide the following details: 
+.. *Region*: Select a region from the dropdown menu. 
+.. *Deployment model*: Select a deployment model from the dropdown menu.
+.. *SQL server edition*: Select the SQL server edition from the dropdown menu.
+.. *Monthly data change rate (%)*: Enter the percentage that clone and snapshot data changes on average per month.  
+.. *Snapshot frequency*: Select a snapshot frequency from the dropdown menu. 
+.. *Number of cloned copies*: Enter the number of cloned copies in the EBS configuration.
+.. *Monthly SQL BYOL cost ($)*: Optionally, enter the monthly SQL BYOL cost in dollars.  
+.. Under FSx for Windows File Server settings, provide the following: 
++
+* *Deployment type*: Select the deployment type from the dropdown menu.
+* *Storage type*: 
+* *Total storage capacity*: Enter the storage capacity and select the capacity unit for the configuration.  
+* *Provisioned SSD IOPS*: Enter the provisioned SSD IOPS for the configuration. 
+* *Throughput (MB/s)*: Enter throughput in MB/s. 
+.. Under EC2 specifications, select the *Instance type* from the dropdown menu. 
+. Review the calculations and recommendation provided on the page. 
++
+Additionally, scroll down to the bottom of the page to *Export PDF* or *View calculations*. 
+
+--
 ====
+== Explore savings for detected EBS hosts
+Workload Factory enters the detected Elastic Block Store host characteristics so that you can explore savings automatically.
 
-== Deploy FSx for ONTAP file systems
-If you'd like to switch to FSx for ONTAP to realize cost savings, click *Create* to create the file system(s) directly from the Create an FSx for ONTAP file system wizard or click *Save* to save the recommended configuration(s) for later. 
+.Before you begin
+Complete the following prerequisites before you begin: 
 
-Workload Factory doesn't support saving or creating multiple FSx for ONTAP file systems. 
+* Make sure you link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _automate_ permissions^] in your AWS account to detect Elastic Block Store (EBS) systems in your Databases inventory. 
+* Detect hosts in EBS storage in your Databases inventory. link:detect-host.html[Learn how to detect hosts].
+
+//For tabs - Follow the steps under the tab for your storage type.
+
+//Unsure if this is true for Databases - NOTE: Automatic mode doesn’t support calculations for EBS snapshots and FSx for Windows File Server shadow copies. In manual mode, you can provide EBS and FSx for Windows File Server snapshot details.   
+
+.Steps
+. Log in to the link:https://console.workloads.netapp.com[Workload Factory console^]. 
+. From Databases, select *Go to Databases inventory*. 
+. Select the *Explore savings* tab.
+. Click *Explore savings* for the database server using EBS storage.
+. Optionally, provide the following details on clone and snapshots in your EBS storage for a more accurate cost savings estimate. 
+.. *Snapshot frequency*: Select a snapshot frequency from the dropdown menu.
+.. *Clone refresh frequency*: Select the frequency that clones refresh from the dropdown menu.
+.. *Number of cloned copies*: Enter the number of cloned copies in the EBS configuration. 
+.. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.  
+. Review the calculations and recommendation provided on the page. 
++
+Additionally, scroll down to the bottom of the page to *Export PDF* or *View calculations*. 
+
+//For tabs:
+//.Elastic Block Store (EBS) 
+//--
+//.Steps
+//. Log in to the link:https://console.workloads.netapp.com[Workload Factory //console^]. 
+//. From Databases, select *Go to Databases inventory*. 
+//. Select the *Explore savings* tab.
+//. Click *Explore savings* for the database server using EBS storage.
+//. Optionally, provide the following details on clone and snapshots in your EBS //storage for a more accurate cost savings estimate. 
+//.. *Snapshot frequency*: Select a snapshot frequency from the dropdown menu.
+//.. *Clone refresh frequency*: Select the frequency that clones refresh from the //dropdown menu.
+//.. *Number of cloned copies*: Enter the number of cloned copies in the EBS //configuration. 
+//.. *Monthly change rate*: Enter the percentage that clone and snapshot data //changes on average per month.  
+//. Review the calculations and recommendation provided on the page. 
+//+
+//Additionally, scroll down to the bottom of the page to *Export PDF* or *View //calculations*. 
+
+//--
+//.FSx for Windows File Server 
+//--
+//.Steps
+//. Log in to the link:https://console.workloads.netapp.com[Workload Factory //console^]. 
+//. From Databases, select *Go to Databases inventory*. 
+//. Select the *Explore savings* tab.
+//. Click *Explore savings* for the database server using FSx for Windows File //Server storage.
+//. Optionally, provide the following details on clone and snapshots in your EBS //storage for a more accurate cost savings estimate. 
+//.. *Snapshot frequency*: Select a snapshot frequency from the dropdown menu.
+//.. *Clone refresh frequency*: Select the frequency that clones refresh from the //dropdown menu.
+//.. *Number of cloned copies*: Enter the number of cloned copies in the EBS //configuration. 
+//.. *Monthly change rate*: Enter the percentage that clone and snapshot data //changes on average per month.  
+//. Review the calculations and recommendation provided on the page. 
+//+
+//Additionally, scroll down to the bottom of the page to *Export PDF* or *View //calculations*. 
+
+//--
+
+== Deploy Microsoft SQL Server on AWS EC2 using FSx for ONTAP
+If you'd like to switch to FSx for ONTAP to realize cost savings, click *Create* to create the recommended configuration(s) directly from the Create new Microsoft SQL server wizard or click *Save* to save the recommended configuration(s) for later. 
+
+NOTE: Workload Factory doesn't support saving or creating multiple FSx for ONTAP file systems. 
 
 Deployment methods:::
-In _automate_ mode, you can deploy the FSx for ONTAP file system directly from Workload Factory. You can also copy the content from the Codebox window and deploy the system using one of the Codebox methods.
+In _automate_ mode, you can deploy the new Microsoft SQL server on AWS EC2 using FSx for ONTAP directly from Workload Factory. You can also copy the content from the Codebox window and deploy the recommended configuration using one of the Codebox methods.
 +
-In  _basic_ mode, you can copy the content from the Codebox window and deploy the FSx for ONTAP file system using one of the Codebox methods.
+In  _basic_ mode, you can copy the content from the Codebox window and deploy the recommended configuration using one of the Codebox methods.
+
+
