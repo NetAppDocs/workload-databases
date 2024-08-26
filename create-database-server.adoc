@@ -28,7 +28,7 @@ FSx for ONTAP file systems have two Microsoft SQL Server deployment models: _Fai
 * *Standalone Microsoft SQL deployment*: A Single Availability Zone FSx for ONTAP file system is created when a new Microsoft SQL Server is created. In addition, separate volumes and LUNs are created for data, log, and tempdb files.
 
 Microsoft Multi-path I/O configuration:::
-Microsoft SQL Server deployment models both require LUN creation using the iSCSI storage protocol. Workload Factory requires Microsoft Multi-path I/O (MPIO) installation when configuring LUNs for SQL Server over FSx for ONTAP. MPIO is installed and maintained based on AWS and NetApp best practices. 
+Microsoft SQL Server deployment models both require LUN creation using the iSCSI storage protocol. Workload Factory configures Microsoft Multi-path I/O (MPIO) as part of configuring LUNs for SQL Server over FSx for ONTAP. MPIO is configured based on AWS and NetApp best practices. 
 
 For more information, refer to link:https://aws.amazon.com/blogs/modernizing-with-aws/sql-server-high-availability-amazon-fsx-for-netapp-ontap/[SQL Server High Availability Deployments Using Amazon FSx for NetApp ONTAP^].
 
