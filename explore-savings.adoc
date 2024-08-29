@@ -77,7 +77,7 @@ Additionally, scroll down to the bottom of the page to *Export PDF* or *View cal
 .. Under FSx for Windows File Server settings, provide the following: 
 +
 * *Deployment type*: Select the deployment type from the dropdown menu.
-* *Storage type*: 
+* *Storage type*: SSD storage is the supported storage type.
 * *Total storage capacity*: Enter the storage capacity and select the capacity unit for the configuration.  
 * *Provisioned SSD IOPS*: Enter the provisioned SSD IOPS for the configuration. 
 * *Throughput (MB/s)*: Enter throughput in MB/s. 
