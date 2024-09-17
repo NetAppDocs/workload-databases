@@ -103,14 +103,11 @@ Follow the steps under the tab for your storage type.
 
 [role="tabbed-block"]
 ====
-.Elastic Block Store (EBS) 
+.Amazon Elastic Block Store (EBS)
 --
 .Steps
 . Log in to the link:https://console.workloads.netapp.com[Workload Factory console^]. 
-. In the Databases tile, select *Explore savings*. 
-+
-image:screenshot-explore-savings-home-small.png[screenshot of the Workload Factory console home page. Image shows databases tile with a new explore savings button. Click the button to open a dropdown menu. The dropdown menu has two options - Microsoft SQL Server on EBS and Microsoft SQL Server on FSx for Windows File Server.]
-. Select the *Microsoft SQL Server on FSx for Windows* from the dropdown menu.
+. In the Databases tile, select *Explore savings* then *Microsoft SQL Server on FSx for Windows* from the dropdown menu.
 +
 If Workload Factory detects EBS hosts, you'll be redirected to the Explore savings tab. If Workload Factory doesn't detect EBS hosts, you'll be redirected to the calculator to <<explore savings via customization,explore savings via customization>>.
 . In the Explore savings tab, click *Explore savings* of the database server using EBS storage.
@@ -124,14 +121,11 @@ If Workload Factory detects EBS hosts, you'll be redirected to the Explore savin
 Additionally, scroll down to the bottom of the page to *Export PDF* or *View calculations*. 
 
 --
-.FSx for Windows File Server 
+.Amazon FSx for Windows File Server
 --
 .Steps
 . Log in to the link:https://console.workloads.netapp.com[Workload Factory console^]. 
-. In the Databases tile, select *Explore savings*. 
-+
-image:screenshot-explore-savings-home-small.png[screenshot of the Workload Factory console home page. Image shows databases tile with a new explore savings button. Click the button to open a dropdown menu. The dropdown menu has two options - Microsoft SQL Server on EBS and Microsoft SQL Server on FSx for Windows File Server.]
-. Select the *Microsoft SQL Server on EBS* from the dropdown menu.
+. In the Databases tile, select *Explore savings* then *Microsoft SQL Server on EBS* from the dropdown menu.
 +
 If Workload Factory detects FSx for Windows hosts, you'll be redirected to the Explore savings tab. If Workload Factory doesn't detect EBS hosts, you'll be redirected to the calculator to <<explore savings via customization,explore savings via customization>>.
 . In the Explore savings tab, click *Explore savings* of the database server using using FSx for Windows File Server storage.
