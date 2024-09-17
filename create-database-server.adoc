@@ -20,11 +20,11 @@ After deployment, you'll need to <<Step 2: Enable remote connection on the Micro
 
 FSx for ONTAP file system deployments:::
 Creating a new Microsoft SQL Server requires an FSx for ONTAP file system as the storage backend. You can use an existing FSx for ONTAP file system or create a new file system. If you select an existing FSx for ONTAP file system as your database server storage backend, we create a new storage VM for the Microsoft SQL workloads. 
-
++
 FSx for ONTAP file systems have two Microsoft SQL Server deployment models: _Failover Cluster Instance (FCI)_ or _Standalone_. Different resources are created for the FSx for ONTAP file system depending on the FSx for ONTAP deployment model you select.
-
++
 * *Failover Cluster Instance (FCI) Microsoft SQL deployment*: A Multiple Availability Zone FSx for NetApp ONTAP file system is deployed when a new FSx for ONTAP file system is selected for FCI deployment. Separate volumes and LUNs are created for data, log, and tempdb files for an FCI deployment. An additional volume and LUN are created for Quorum or witness disk for Windows cluster. 
-
++
 * *Standalone Microsoft SQL deployment*: A Single Availability Zone FSx for ONTAP file system is created when a new Microsoft SQL Server is created. In addition, separate volumes and LUNs are created for data, log, and tempdb files.
 
 Microsoft Multi-path I/O configuration:::
@@ -34,24 +34,25 @@ For more information, refer to link:https://aws.amazon.com/blogs/modernizing-wit
 
 Active Directory:::
 The following occurs for Active Directory (AD) during deployment: 
-
++
 * A new Microsoft SQL service account is created in the domain if you don't provide an existing SQL service account.
 * The Windows cluster, node host names, and Microsoft SQL FCI name are added as managed computers to the Microsoft SQL service account. 
 * The Windows cluster entry is assigned permissions to add computers to the domain. 
 
-*Resource rollback*
-If you decide to rollback your Domain Name System (DNS) resources, the resource records in AD and DNS are not removed automatically. You can remove the records from the DNS server and AD as follows.
 
+Resource rollback:::
+If you decide to rollback your Domain Name System (DNS) resources, the resource records in AD and DNS are not removed automatically. You can remove the records from the DNS server and AD as follows.
++
 * For user-managed AD, first link:https://learn.microsoft.com/en-us/powershell/module/activedirectory/remove-adcomputer?view=windowsserver2022-ps[remove the AD computer^]. Then, connect to the DNS server from DNS manager and link:https://learn.microsoft.com/en-us/windows-server/networking/technologies/ipam/delete-dns-resource-records[delete the DNS Resource Records^].
 * For AWS Managed Microsoft AD, link:https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_install_ad_tools.html[install the AD administration tools^]. Next, link:https://learn.microsoft.com/en-us/powershell/module/activedirectory/remove-adcomputer?view=windowsserver2022-ps[remove the AD computer^]. Lastly, connect to the DNS server from DNS manager and link:https://learn.microsoft.com/en-us/windows-server/networking/technologies/ipam/delete-dns-resource-records[delete the DNS Resource Records^].
 
 Workload Factory operation modes:::
 Workload Factory offers three operational modes depending on how comfortable you are with letting Workload Factory manage your AWS resources. 
-
++
 *_Basic_ mode*: in this mode of operation, you don't need to associate any AWS account credentials in Workload Factory. You can copy or download a partially filled YAML template from the Codebox to be completed outside Workload Factory. 
-
++
 *_Read_ mode*: in this mode of operation, you provide AWS account credentials with read permissions which lets you complete the _Quick create_ or _Advanced create_ form and then copy or download it. You can also redirect to CloudFormation from Workload Factory with the completed form details. And you will be able to manage the deployed database server in Workload Factory. 
-
++
 *_Automate_ mode*: in this mode of operation, you provide AWS account credentials with automate permissions which lets you create and manage AWS resources within Workload Factory. 
 
 .Before you begin
