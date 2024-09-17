@@ -40,7 +40,17 @@ Source database::: You need a source database available for the clone.
 .. *Target database host*: Select a target database host for the sandbox clone that is in the same VPC and has the same FSx for ONTAP file system as the source host. 
 .. *Target database instance*: Select the target database instance for the sandbox clone. 
 .. *Target database*: Enter a name for the sandbox clone. 
-. *Mount*: Select *Auto-assign mount point* or *Define mount point path*. If you select *Define mount point path*, enter the mount point path. 
+. *Mount*: When cloning a SQL database that has multiple data and/or log files, Workload Factory clones all files under the auto-assigned or defined drive letter. 
++
+Select one of the following options: 
++
+.. *Auto-assign mount point* 
+.. *Define mount point path* 
++
+Provide the following to define the mount point path: 
++
+** Enter the drive letter for the data file path.
+** Enter the drive letter for the log file path. 
 . *Define tag*: Select a tag to define the sandbox clone.
 . Click *Create*. 
 
