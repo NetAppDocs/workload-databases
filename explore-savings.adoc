@@ -21,11 +21,11 @@ If Workload Factory determines that you could save money by running these worklo
 //In some cases, Workload Factory may recommend that you deploy multiple file systems based on the amount of storage you are currently using, and based on the performance characteristics of your database workloads. 
 
 == Calculator options
-Two calculator options are available for making the cost comparison between your systems and FSx for ONTAP — customization and automatic detection for your Amazon storage environments.
+Two calculator options are available for making the cost comparison between your systems and FSx for ONTAP — customization and detection.
 
 Explore savings via customization: You provide the configuration settings for Microsoft SQL server on Amazon EC2 with EBS or FSx for Windows File Server including the region, deployment model, SQL server edition, monthly data change rate, snapshot frequency, and more.
 
-Explore savings for detected storage environments: Workload Factory links to your existing AWS storage environments and pulls in the details to the calculator for automatic comparison. You'll need to grant automate permissions to use this calculator option. You can change the use case, but all other details are automatically determined in the calculation.
+Explore savings for detected hosts: Workload Factory links to your existing Microsoft SQL servers and pulls in the details to the calculator for automatic comparison. You'll need to grant automate permissions to use this calculator option. You can change the use case, but all other details are automatically determined in the calculation.
 
 == Explore savings via customization
 Follow the steps under the tab for your storage type.
