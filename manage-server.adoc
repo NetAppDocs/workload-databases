@@ -26,12 +26,12 @@ To complete any of these tasks, you must link:detect-host.html[detect one or mor
 == Manage a host instance 
 Manage a detected or unmanaged Microsoft SQL Server instances for a host.
 
-To manage a host instance in a private network with no external connectivity, the following endpoints need to be available in the VPC with association to the subnets where SQL servers are present. Also ensure the interface endpoints allow port 443 in the attached Security Group.
+To manage a host instance in a private network with no external connectivity, the following endpoints need to be available in the VPC with association to the subnets where SQL servers are present. Ensure the interface endpoints allow port 443 in the attached Security Group.
 
-* S3 Gateway/endpoint
-* ssm
-* ssmmessages
-* fsx 
+* `S3 Gateway/endpoint`
+* `ssm`
+* `ssmmessages`
+* `fsx` 
 
 .Before you begin
 Complete the following prerequisites before you begin: 
