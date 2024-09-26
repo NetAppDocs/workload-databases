@@ -125,14 +125,16 @@ Additionally, scroll down to the bottom of the page to *Export PDF* or *View cal
 --
 .Steps
 . Log in to the link:https://console.workloads.netapp.com[Workload Factory console^]. 
-. In the Databases tile, select *Explore savings* then *Microsoft SQL Server on EBS* from the dropdown menu.
+. In the Databases tile, select *Explore savings* then *Microsoft SQL Server on FSx for Windows* from the dropdown menu.
 +
-If Workload Factory detects FSx for Windows hosts, you'll be redirected to the Explore savings tab. If Workload Factory doesn't detect EBS hosts, you'll be redirected to the calculator to <<explore savings via customization,explore savings via customization>>.
-. In the Explore savings tab, click *Explore savings* of the database server using using FSx for Windows File Server storage.
-. In the Savings calculator, optionally, provide the following details on clones (shadow copies) and snapshots in your EBS storage for a more accurate cost savings estimate.  
+If Workload Factory detects FSx for Windows hosts, you'll be redirected to the Explore savings tab. If Workload Factory doesn't detect FSx for Windows hosts, you'll be redirected to the calculator to <<explore savings via customization,explore savings via customization>>.
+. In the Explore savings tab, click *Explore savings* of the database server using FSx for Windows File Server storage.
+. In the Savings calculator, optionally, provide the following details on clones (shadow copies) and snapshots in your FSx for Windows storage for a more accurate cost savings estimate.  
 .. *Snapshot frequency*: Select a snapshot frequency from the dropdown menu.
++
+If FSx for Windows shadow copies are detected, the default value is *Daily*. If shadow copies aren't detected, the default value is *No snapshot frequency*.
 .. *Clone refresh frequency*: Select the frequency that clones refresh from the dropdown menu.
-.. *Number of cloned copies*: Enter the number of cloned copies in the EBS configuration. 
+.. *Number of cloned copies*: Enter the number of cloned copies in the FSx for Windows configuration. 
 .. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.  
 . Review the calculations and recommendation provided on the page. 
 +
