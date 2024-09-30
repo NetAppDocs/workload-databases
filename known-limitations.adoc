@@ -48,16 +48,13 @@ Custom encryption keys for FSx for ONTAP aren't listed based on service applicab
 A downloaded or copied Codebox-generated CloudFormation template (YAML file) has a limited retention period of seven days. 
 
 == Sandbox support
-* The maximum number of sandbox clones that can be created from a database server is 50.
-* Sandbox creation is not supported when the source database has multiple data files spread over more than 2 disks.  
+The maximum number of sandbox clones that can be created from a database server is 50.
 
 == Microsoft SQL Server detection and management
-* Detecting and managing Microsoft SQL instances aren't supported when using a private network with no external connectivity.
-* Microsoft SQL Server detection isn't saved. Each time you access Databases in Workload Factory, Microsoft SQL Server detection runs again to identify SQL installations in the region.
+Microsoft SQL Server detection isn't saved. Each time you access Databases in Workload Factory, Microsoft SQL Server detection runs again to identify SQL installations in the region.
 
 == Explore savings
-* In the Inventory tab, the estimated cost shown for each Microsoft SQL instance is calculated at the FSx for ONTAP file system level and not for volumes hosting the SQL instance.
-* Explore savings calculations are not supported for FSx for Windows File Server. 
+In the Inventory tab, the estimated cost shown for each Microsoft SQL instance is calculated at the FSx for ONTAP file system level and not for volumes hosting the SQL instance.
 
 == Multiple FSx for ONTAP file systems 
 Workload Factory doesn't support creating or saving configurations for Microsoft SQL Server with multiple FSx for ONTAP file systems. Only one FSx for ONTAP file system configuration deployment is supported. 
