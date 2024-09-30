@@ -20,4 +20,4 @@ Databases now provides cost savings calculations for a configuration hosting mul
 +
 Now you can customize settings for Microsoft SQL Server, Amazon EC2, and Elastic Block Store to explore savings manually. The savings calculator will determine the best configuration based on cost.
 
-link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html[Explore savings with FSx for ONTAP for your database workloads^.]
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html[Explore savings with FSx for ONTAP for your database workloads^]
