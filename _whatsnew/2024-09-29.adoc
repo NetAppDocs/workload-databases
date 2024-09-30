@@ -1,0 +1,4 @@
+=== Explore savings for detected Microsoft SQL servers on FSx for Windows File Server  
+You can now explore savings of detected Microsoft SQL servers on Amazon EC2 with FSx for Windows File Server storage in the savings calculator. Depending on your SQL server and storage requirements, you might find that FSx for ONTAP storage is the most cost effective for your database workloads.
+
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html[Explore savings with FSx for ONTAP for your database workloads^.]
