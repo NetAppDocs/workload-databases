@@ -109,7 +109,7 @@ Follow the steps under the tab for your storage type.
 . Log in to the link:https://console.workloads.netapp.com[Workload Factory console^]. 
 . In the Databases tile, select *Explore savings* then *Microsoft SQL Server on FSx for Windows* from the dropdown menu.
 +
-If Workload Factory detects EBS hosts, you'll be redirected to the Explore savings tab. If Workload Factory doesn't detect EBS hosts, you'll be redirected to the calculator to <<explore savings via customization,explore savings via customization>>.
+If Workload Factory detects EBS hosts, you'll be redirected to the Explore savings tab. If Workload Factory doesn't detect EBS hosts, you'll be redirected to the calculator to <<Explore savings via customization,explore savings via customization>>.
 . In the Explore savings tab, click *Explore savings* of the database server using EBS storage.
 . In the Savings calculator, optionally, provide the following details on clones and snapshots in your EBS storage for a more accurate cost savings estimate. 
 .. *Snapshot frequency*: Select a snapshot frequency from the dropdown menu.
@@ -127,7 +127,7 @@ Additionally, scroll down to the bottom of the page to *Export PDF* or *View cal
 . Log in to the link:https://console.workloads.netapp.com[Workload Factory console^]. 
 . In the Databases tile, select *Explore savings* then *Microsoft SQL Server on FSx for Windows* from the dropdown menu.
 +
-If Workload Factory detects FSx for Windows hosts, you'll be redirected to the Explore savings tab. If Workload Factory doesn't detect FSx for Windows hosts, you'll be redirected to the calculator to <<explore savings via customization,explore savings via customization>>.
+If Workload Factory detects FSx for Windows hosts, you'll be redirected to the Explore savings tab. If Workload Factory doesn't detect FSx for Windows hosts, you'll be redirected to the calculator to <<Explore savings via customization,explore savings via customization>>.
 . In the Explore savings tab, click *Explore savings* of the database server using FSx for Windows File Server storage.
 . In the Savings calculator, optionally, provide the following details on clones (shadow copies) and snapshots in your FSx for Windows storage for a more accurate cost savings estimate.  
 .. *Snapshot frequency*: Select a snapshot frequency from the dropdown menu.
