@@ -48,7 +48,7 @@ Custom encryption keys for FSx for ONTAP aren't listed based on service applicab
 A downloaded or copied Codebox-generated CloudFormation template (YAML file) has a limited retention period of seven days. 
 
 == Sandbox support
-The maximum number of sandbox clones that can be created from a database server is 50.
+The maximum number of sandbox clones that can be created from a database server is 90.
 
 == Microsoft SQL Server detection and management
 Microsoft SQL Server detection isn't saved. Each time you access Databases in Workload Factory, Microsoft SQL Server detection runs again to identify SQL installations in the region.
