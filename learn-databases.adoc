@@ -47,6 +47,15 @@ Workload Factory for Databases offers the following features:
 * *Database creation*: create a user database for your existing Microsoft SQL Servers with _Quick_ or _Advanced_ create modes to configure your database collation, file names, and sizes. Storage configuration is included. 
 * *Job Monitoring*: monitor and track database job execution progress and diagnose and troubleshoot issues in case any failure occurs.  
 
+== Tools to use Workload Factory
+You can use BlueXP Workload Factory with the following tools:
+
+* *Workload Factory console*: the Workload Factory console provides a visual interface that gives you a holistic view of your applications and projects
+* *BlueXP console*: the BlueXP console provides a hybrid interface experience so that you can use BlueXP workload factory along with other BlueXP services
+* *REST API*: Workload Factory REST APIs let you deploy and manage your FSx for ONTAP file systems and other AWS resources
+* *CloudFormation*: AWS CloudFormation code lets you perform the actions you defined in the Workload Factory console to model, provision, and manage AWS and third-party resources from the CloudFormation stack in your AWS account.
+* *Terraform BlueXP Workload Factory Provider*: Terraform lets you build and manage infrastructure workflows generated in the Workload Factory console.
+
 == Benefits of Amazon FSx for ONTAP for self-managed databases
 
 * *Durability, availability, and reliability*: FSx for ONTAP offers multiple features that enhance the durability and availability of self-managed databases hosted on FSx for ONTAP, such as high availability supporting Single and Multiple Availability Zones deployments, application-aware snapshots, improved disaster recovery using replication, and efficient backup. 
@@ -115,6 +124,9 @@ Databases includes the following integrated AWS services:
 * CloudWatch
 * Systems Manager
 * Secrets Manager 
+
+== Cost
+Your FSx for ONTAP account is maintained by AWS and not by Workload Factory. Refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap[Pricing for Amazon FSx for NetApp ONTAP^].
 
 === Supported regions
 Databases is supported in all commercial regions where FSx for ONTAP is supported. https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/[View supported Amazon regions.^]
