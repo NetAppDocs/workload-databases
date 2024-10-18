@@ -125,9 +125,6 @@ Databases includes the following integrated AWS services:
 * Systems Manager
 * Secrets Manager 
 
-== Cost
-Your FSx for ONTAP account is maintained by AWS and not by Workload Factory. Refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap[Pricing for Amazon FSx for NetApp ONTAP^].
-
 === Supported regions
 Databases is supported in all commercial regions where FSx for ONTAP is supported. https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/[View supported Amazon regions.^]
 
