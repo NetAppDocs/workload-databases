@@ -1,0 +1,4 @@
+=== Continuously optimize your Microsoft SQL server workloads with Databases
+BlueXP workload factory introduces continuous guidance and guardrails to ensure ongoing optimization and adherence to best practices for the storage component of your Microsoft SQL server workloads on Amazon FSx for NetApp ONTAP. 
+
+link:Optimize your SQL server workloads
