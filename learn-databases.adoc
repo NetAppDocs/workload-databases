@@ -45,7 +45,8 @@ Workload Factory for Databases offers the following features:
 * *AWS resource discovery and provisioning*: automatically detect Microsoft SQL Servers on FSx for ONTAP, FSx for Windows File Servers, and Elastic Block Store deployed from your AWS account. The Databases Inventory serves as a launching point for exploring costs savings opportunities for servers in other AWS storage systems or a management tool for FSx for ONTAP based servers and instances.
 * *Sandbox creation*: create an on-demand, isolated database environment that can be used for testing, integration, diagnostics, and training, without affecting production data. 
 * *Database creation*: create a user database for your existing Microsoft SQL Servers with _Quick_ or _Advanced_ create modes to configure your database collation, file names, and sizes. Storage configuration is included. 
-* *Job Monitoring*: monitor and track database job execution progress and diagnose and troubleshoot issues in case any failure occurs.  
+* *Job Monitoring*: monitor and track database job execution progress and diagnose and troubleshoot issues in case any failure occurs.
+* *Continuous optimization*: continuously scans your Microsoft SQL Server estate offline, providing you with a comprehensive report of insights, opportunities, and recommendations to help you achieve operational excellence.
 
 == Benefits of Amazon FSx for ONTAP for self-managed databases
 

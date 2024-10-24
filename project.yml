@@ -38,7 +38,7 @@ sidebar:
       - title: Create a database
         url: /create-database.html 
       - title: Automate with Codebox
-        url: /automate-codebox.html
+        url: /automate-codebox.html  
   - title: Administer and monitor
     entries:
       - title: Manage a Microsoft SQL Server
@@ -67,7 +67,13 @@ sidebar:
           - title: Delete a sandbox clone
             url: /delete-clone.html 
       - title: Monitor databases
-        url: /monitor-databases.html                                
+        url: /monitor-databases.html
+      - title: Optimize SQL server
+        entries: 
+          - title: Continuous optimization overview
+            url: optimize-overview.html
+          - title: Optimize storage
+            url: optimize-storage.html                                    
   - title: Knowledge and support
     entries: 
       - title: Register for support
