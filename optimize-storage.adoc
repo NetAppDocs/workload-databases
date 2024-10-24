@@ -14,29 +14,23 @@ BlueXP workload factory for Databases continuously scans and assesses the storag
 .About this task
 The storage assessment runs automatically and continuously once every 2 days for Microsoft SQL Server host instances with FSx for ONTAP storage managed in workload factory. If needed, you can run an on-demand assessment.
 
-The following assessment findings are provided for scanned host instances in the user interface: 
-
-* Total optimization score
-* Optimization percentages per category
-** Storage
-** Resiliency
-** Compute
-** Cloning
-** Application
+Workload factory provides detailed recommendations to optimize storage settings and configurations based on best practices for FSx for ONTAP storage. 
 
 What is scanned::
-Workload factory fetches the status of the following settings and configurations for Microsoft SQL Server host instances with FSx for ONTAP storage:  
+Workload factory assesses the optimization status of the following settings and configurations for Microsoft SQL Server host instances with FSx for ONTAP storage:  
 
-* *Storage sizing*: Over-provisioned, Under-provisioned, Optimized
-* *Storage layout*: Optimized, Not optimized (Warning), and Not optimized (Action required)
-* *Storage configuration*: Optimized, Not optimized (Warning), and Not optimized (Action required)
-* *Compute*: Over-provisioned, Under-provisioned, Optimized
+* *Storage sizing*: includes storage tier, file system headroom, log drive size, TempDB drive size,  
+* *Storage layout*: includes user data files placement, transaction log files placement, and TempDB placement
+* *Storage configuration*: includes capacity management, thin provisioning, tiering policy, snapshots, and Multi-path I/O status, policy, and sessions, and more.  
+* *Compute*: includes rightsizing, operating system patches 
 
 Where scans are reported::
 The storage assessment is reported as a job-based event in *Job monitoring*. The job includes a detailed description of when the assessment was performed, what was scanned, and the findings.
 
 .Before you begin
-To assess the storage of a Microsoft SQL Server host instance, the host must be managed by workload factory and the storage type must be FSx for ONTAP. 
+* You must have credentials with read/automate permissions. 
+* To assess the storage of a Microsoft SQL Server host instance, the host must be managed by workload factory and the storage type must be FSx for ONTAP. 
+* Make sure you review each recommendation carefully before selecting to optimize a setting or configuration. 
 
 .Steps
 . Log in to the link:https://console.workloads.netapp.com[Workload Factory console^].
@@ -51,6 +45,8 @@ The host expands and the host instances appear.
 Filters are available to sort by categories, sub categories, status, severity, and tags. 
 + 
 If needed, you can download a report of the findings by selecting *Export PDF*.  
-. Select the dropdown arrow for any configuration to view the recommendation. 
+. Select the dropdown arrow to view the recommendation for any configuration. Make sure you review the recommendation carefully. 
++ 
+The recommendation explains what will happen if you choose to optimize. Some remediation jobs cause downtimes or service interruptions for the host instance. 
 . Select to *Optimize* unoptimized configurations. 
    
