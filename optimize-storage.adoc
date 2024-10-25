@@ -49,4 +49,10 @@ If needed, you can download a report of the findings by selecting *Export PDF*.
 + 
 The recommendation explains what will happen if you choose to optimize. Some remediation jobs cause host instance downtimes or service interruptions.
 . Select to *Optimize* unoptimized configurations. 
-   
+. Review the optimization summary and action items. 
+. Select *Continue* to optimize the configuration. 
+
+.Result
+The optimization process initiates. Select the *Job monitoring* tab to view the status of the operation. 
+
+
