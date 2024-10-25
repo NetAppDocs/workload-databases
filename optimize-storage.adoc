@@ -9,7 +9,7 @@ summary: Databases scans storage configurations of Microsoft SQL Servers providi
 :imagesdir: ./media/
 
 [.lead]
-BlueXP workload factory for Databases continuously scans and assesses the storage settings and configurations of your Microsoft SQL Server host instances offline, providing you with a comprehensive report of insights, opportunities, and recommendations to help you achieve operational excellence. 
+BlueXP workload factory for Databases continuously scans and assesses the storage settings and configurations of your Microsoft SQL Server deployments on Amazon FSx for NetAPP ONTAP. 
 
 .About this task
 The storage assessment runs automatically and continuously once every 2 days for Microsoft SQL Server host instances with FSx for ONTAP storage managed in workload factory. If needed, you can run an on-demand assessment.
@@ -47,6 +47,6 @@ Filters are available to sort by categories, sub categories, status, severity, a
 If needed, you can download a report of the findings by selecting *Export PDF*.  
 . Select the dropdown arrow to view the recommendation for any configuration. Make sure you review the recommendation carefully. 
 + 
-The recommendation explains what will happen if you choose to optimize. Some remediation jobs cause downtimes or service interruptions for the host instance. 
+The recommendation explains what will happen if you choose to optimize. Some remediation jobs cause host instance downtimes or service interruptions.
 . Select to *Optimize* unoptimized configurations. 
    
