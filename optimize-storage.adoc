@@ -28,7 +28,7 @@ Where scans are reported::
 The storage assessment is reported as a job-based event in *Job monitoring*. The job includes a detailed description of when the assessment was performed, what was scanned, and the findings.
 
 .Before you begin
-* You must have credentials with read/automate permissions. 
+* You must have credentials with read/automate permissions. - Which permissions are required, Aviram? 
 * To assess the storage of a Microsoft SQL Server host instance, the host must be managed by workload factory and the storage type must be FSx for ONTAP. 
 * Make sure you review each recommendation carefully before selecting to optimize a setting or configuration. 
 
