@@ -1,0 +1,28 @@
+---
+sidebar: sidebar
+permalink: optimize-overview.html
+keywords: continuous optimization, optimize, assess, assessment, scan, optimization, Microsoft SQL Server, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations
+summary: BlueXP workload factory for Databases provides continuous optimization for Microsoft SQL Server deployments on Amazon FSx for NetApp ONTAP storage.  
+---
+= Continuous optimization in Databases overview
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+BlueXP workload factory for Databases provides continuous optimization for Microsoft SQL Server deployments on Amazon FSx for NetApp ONTAP storage. 
+
+Continuous optimization automatically scans and assesses your database infrastructure at scale to ensure large estates achieve peak performance, cost efficiency, and compliance with best practices. The feature provides you with a comprehensive report of insights and recommendations for optimization. 
+
+With continuous optimization, you can detect problems in your database infrastructure, understand what needs to change, and take action. 
+
+Key capabilities include: 
+
+* Continuous assessment
+* Automatic best practice validations
+* Right-sizing recommendations
+* Proactive observability
+* Insights to action
+* AWS Well-Architected Framework advisor
+
+link:optimize-storage.html[Optimize storage for your Microsoft SQL Server host instances]
+
