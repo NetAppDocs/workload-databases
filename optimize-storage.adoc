@@ -17,12 +17,12 @@ The storage assessment runs automatically and continuously once every 2 days for
 Workload factory provides detailed recommendations to optimize storage settings and configurations based on best practices for FSx for ONTAP storage. 
 
 What is scanned::
-Workload factory assesses the optimization status of the following settings and configurations for Microsoft SQL Server host instances with FSx for ONTAP storage:  
+Workload factory assesses the optimization status of the following settings and configurations for Microsoft SQL Server host instances:  
 
-* *Storage sizing*: includes storage tier, file system headroom, log drive size, TempDB drive size,  
-* *Storage layout*: includes user data files placement, transaction log files placement, and TempDB placement
-* *Storage configuration*: includes capacity management, thin provisioning, tiering policy, snapshots, and Multi-path I/O status, policy, and sessions, and more.  
-* *Compute*: includes rightsizing, operating system patches 
+* Storage sizing: includes storage tier, file system headroom, log drive size, and TempDB drive size  
+* Storage layout: includes user data files placement, transaction log files placement, and TempDB placement
+* Storage configuration: includes capacity management, thin provisioning, tiering policy, snapshots, and Multi-path I/O status, policy, and sessions, and more.  
+* Compute: includes rightsizing and operating system patches 
 
 Where scans are reported::
 The storage assessment is reported as a job-based event in *Job monitoring*. The job includes a detailed description of when the assessment was performed, what was scanned, and the findings.
