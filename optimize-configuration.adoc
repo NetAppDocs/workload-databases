@@ -12,7 +12,7 @@ summary: Databases scans storage configurations of Microsoft SQL Servers providi
 BlueXP workload factory for Databases continuously scans and assesses Microsoft SQL server deployment configurations running on Amazon FSx for NetAPP ONTAP. Assessments provide insights, recommendations, and optimizations so you can achieve operational excellence.  
 
 .About this task
-The storage assessment runs automatically and continuously once every day for Microsoft SQL Server instances with FSx for ONTAP storage managed in workload factory. Assessment reports are available in the optimization dashboard only if a daily scheduled job has run after deployment or an instance has been managed.
+The storage assessment runs automatically and continuously once every day for Microsoft SQL Server instances with FSx for ONTAP storage managed in workload factory. Assessment reports are available in the optimization dashboard only if a daily scheduled job has run after deployment or after managing an instance.
 
 Workload factory provides detailed recommendations to optimize storage settings and configurations based on best practices for FSx for ONTAP storage. 
 
@@ -49,9 +49,7 @@ If needed, you can download a report of the findings by selecting *Export PDF*.
 + 
 The recommendation explains best practices and potential pitfalls of unoptimized configurations.
 . Select to *Optimize* unoptimized configurations.
-+
-The optimization dialog provides what will happen if you choose to optimize. Some optimization jobs cause instance downtimes or service interruptions.
-. Review the optimization summary and action items. 
+. Review the optimization summary and action items that appear in the optimization dialog to learn what will happen if you choose to optimize. Some optimization operations may cause instance downtimes or service interruptions. 
 . Select *Continue* to optimize the configuration. 
 
 .Result
