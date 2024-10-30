@@ -73,7 +73,7 @@ sidebar:
           - title: Continuous optimization overview
             url: optimize-overview.html
           - title: Optimize configurations
-            url: optimize-configuration.html                                    
+            url: optimize-configurations.html                                    
   - title: Knowledge and support
     entries: 
       - title: Register for support

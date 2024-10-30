@@ -26,5 +26,5 @@ Key capabilities include:
 
 The scope of optimization is different depending on which component is being assessed. For example, storage optimization occurs at the instance level whereas compute optimization occurs at the host level. 
 
-link:optimize-configuration.html[Optimize configurations for Microsoft SQL Server deployments]
+link:optimize-configurations.html[Optimize configurations for Microsoft SQL Server deployments]
 
