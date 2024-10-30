@@ -24,5 +24,7 @@ Key capabilities include:
 * Insights to action
 * AWS Well-Architected Framework advisor
 
-link:optimize-storage.html[Optimize storage for your Microsoft SQL Server host instances]
+The scope of optimization is different depending on which component is being assessed. For example, storage optimization occurs at the instance level whereas compute optimization occurs at the host level. 
+
+link:optimize-configuration.html[Optimize configurations for Microsoft SQL Server deployments]
 

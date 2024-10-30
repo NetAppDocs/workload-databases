@@ -72,8 +72,8 @@ sidebar:
         entries: 
           - title: Continuous optimization overview
             url: optimize-overview.html
-          - title: Optimize storage
-            url: optimize-storage.html                                    
+          - title: Optimize configurations
+            url: optimize-configurations.html                                    
   - title: Knowledge and support
     entries: 
       - title: Register for support
