@@ -12,9 +12,9 @@ summary: Databases scans storage configurations of Microsoft SQL Servers providi
 BlueXP workload factory for Databases continuously scans and assesses Microsoft SQL server deployment configurations running on Amazon FSx for NetAPP ONTAP. Assessments provide insights, recommendations, and optimizations so you can achieve operational excellence.  
 
 .About this task
-The storage assessment runs automatically and continuously once every day for Microsoft SQL Server instances with FSx for ONTAP storage managed in workload factory. Assessment reports are available in the optimization dashboard only if a daily scheduled job has run after deployment or after managing an instance.
+The assessment runs automatically and continuously once every day for Microsoft SQL Server instances with FSx for ONTAP storage managed in workload factory. Assessment reports are available in the optimization dashboard only if a daily scheduled job has run after deployment or after managing an instance.
 
-Workload factory provides detailed recommendations to optimize storage settings and configurations based on best practices for FSx for ONTAP storage. 
+Workload factory provides detailed recommendations to optimize configurations based on best practices for FSx for ONTAP storage. 
 
 What is scanned::
 Workload factory assesses the optimization status of the following configurations for Microsoft SQL Server instances:  
@@ -23,9 +23,6 @@ Workload factory assesses the optimization status of the following configuration
 * Storage layout: includes user data files placement, log files placement, and TempDB placement
 * Storage configuration: includes capacity management, thin provisioning, tiering policy, snapshots, and Multi-path I/O status, policy, and sessions, and more 
 * Compute: includes rightsizing
-
-Where scans are reported::
-The storage assessment is reported as a job-based event in *Job monitoring*. The job includes a detailed description of when the assessment was performed, what was scanned, and the findings.
 
 .Before you begin
 * You must have credentials with read or automate permissions.
