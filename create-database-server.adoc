@@ -81,7 +81,7 @@ You can use _Quick create_ or _Advanced create_ deployment modes to complete thi
 NOTE: In _Quick create_, FCI is the default deployment model, Windows 2016 is the default Windows version, and SQL 2019 Standard Edition is the default SQL version. 
 
 .Steps
-. Log in to the link:https://console.workloads.netapp.com[Workload Factory console^].
+. Log in to Workload Factory using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Deploy database host*.
 . Select *Quick create*.  
 . Under *AWS settings*, provide the following: 
@@ -150,7 +150,7 @@ You can also select *Save configuration* to deploy the host later.
 .Advanced create
 --
 .Steps
-. Log in to the link:https://console.workloads.netapp.com[Workload Factory console^].
+. Log in to Workload Factory using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Deploy database host*. 
 . Select *Advanced create*. 
 . For *Deployment model*,  select *Failover Cluster Instance* or *Single instance*.

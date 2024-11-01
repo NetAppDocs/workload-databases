@@ -36,7 +36,7 @@ Follow the steps under the tab for your storage type.
 .Amazon Elastic Block Store (EBS)
 --
 .Steps
-. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^] 
+. Log in to Workload Factory using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^] 
 . From Databases, select *Explore savings* then *Microsoft SQL Server on EBS*. 
 . In the Savings calculator, provide the following details: 
 .. *Region*: Select a region from the dropdown menu. 

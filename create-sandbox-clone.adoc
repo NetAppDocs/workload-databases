@@ -28,7 +28,7 @@ AWS Systems Manager::: Ensure the `NT Authority\SYSTEM` user privilege is enable
 Source database::: You need a source database available for the clone. 
 
 .Steps
-. Log in to the link:https://console.workloads.netapp.com[Workload Factory console^].
+. Log in to Workload Factory using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases Inventory*.
 . In Databases, select the *Sandboxes* tab. 
 . In the Sandboxes tab, select *Create new sandbox*.
