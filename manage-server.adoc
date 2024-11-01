@@ -4,12 +4,12 @@ permalink: manage-server.html
 keywords: Microsoft SQL Server instance, server instance, manage host, view host, database host, database instance, manage, unmanage
 summary: Manage Microsoft SQL Server instances in Workload Factory for Databases. 
 ---
-= Manage Microsoft SQL Server instances
+= Manage Microsoft SQL Server instances in BlueXP workload factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Manage Microsoft SQL Server instances to monitor instance and database status, resource utilization, protection, and storage performance in Workload Factory for Databases. 
+Manage Microsoft SQL Server instances to monitor instance and database status, resource utilization, protection, and storage performance in BlueXP workload factory for Databases. 
 
 Databases can only manage Microsoft SQL Server instances with FSx for ONTAP file system storage. 
 
@@ -48,20 +48,20 @@ Complete the following prerequisites before you begin:
 ** `“CREATE ANY DATABASE”` 
 
 .Steps
-. Log in to Workload Factory using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases Inventory*.
 . In Databases, select the *Inventory* tab. 
 . Click *Manage* in the row of the host to manage. 
 . Select one or more host instances to manage. 
 . Click *Manage*. 
 
-The operation fails when the Microsoft SQL Server is missing certain PowerShell modules and management scripts. Workload Factory triggers a prepare resource job to install missing modules and scripts which you can view in the Job monitoring tab. When the job completes, retry to manage the host instance.
+The operation fails when the Microsoft SQL Server is missing certain PowerShell modules and management scripts. Workload factory triggers a prepare resource job to install missing modules and scripts which you can view in the Job monitoring tab. When the job completes, retry to manage the host instance.
 
 == View a managed instance
 You can view a managed instance by following these steps.
 
 .Steps
-. Log in to Workload Factory using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^]. 
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^]. 
 . In the Databases tile, select *Go to Databases Inventory*.
 . In Databases, select the *Inventory* tab. 
 . Click the dropdown arrow to expand the row of the host to view its managed instances. 
@@ -76,7 +76,7 @@ The overview of the instance appears in the Inventory tab.
 You can view the databases managed by the managed instance by following these steps. 
 
 .Steps
-. Log in to Workload Factory using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].Log in to the link:https://console.workloads.netapp.com[Workload Factory console^].
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].Log in to the link:https://console.workloads.netapp.com[Workload Factory console^].
 . In the Databases tile, select *Go to Databases Inventory*.
 . In Databases, select the *Inventory* tab. 
 . Click the dropdown arrow to expand the row of the host to view its databases.
@@ -92,7 +92,7 @@ The list of databases in the instance appears in the Inventory tab.
 Unmanage a host instance by following these steps.
 
 .Steps
-. Log in to Workload Factory using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases Inventory*.
 . In Databases, select the *Inventory* tab. 
 . Click the dropdown arrow to expand the row of the host instance to unmanage. 
