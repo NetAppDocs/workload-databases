@@ -1,0 +1,10 @@
+=== Continuously optimize your Microsoft SQL Server workloads with Databases
+BlueXP workload factory introduces continuous guidance and guardrails to ensure ongoing optimization and adherence to best practices for the storage component of your Microsoft SQL Server workloads on Amazon FSx for NetApp ONTAP. This feature continuously scans your Microsoft SQL Server estate offline, providing you with a comprehensive report of insights, opportunities, and recommendations to help you achieve peak performance, cost-efficiency, and compliance. 
+
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Optimize your SQL Server workloads]
+
+=== Terraform support 
+You can now use Terraform from the Codebox to deploy Microsoft SQL Server. 
+
+* link:https://docs.netapp.com/us-en/workload-databases/create-database-server.html[Create a database server^]
+* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html[Use Terraform from Codebox^]

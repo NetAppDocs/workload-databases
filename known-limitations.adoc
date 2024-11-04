@@ -58,3 +58,6 @@ In the Inventory tab, the estimated cost shown for each Microsoft SQL instance i
 
 == Multiple FSx for ONTAP file systems 
 Workload Factory doesn't support creating or saving configurations for Microsoft SQL Server with multiple FSx for ONTAP file systems. Only one FSx for ONTAP file system configuration deployment is supported. 
+
+== Regional availability for Microsoft SQL Server deployment in a private network with Terraform
+Microsoft SQL Server deployment in a private network with no outbound connectivity using Terraform is only supported in us-east-1 (N. Virginia) region.

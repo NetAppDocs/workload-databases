@@ -1,0 +1,55 @@
+---
+sidebar: sidebar
+permalink: optimize-configurations.html
+keywords: optimize, configuration, storage, compute, application, resiliency assessment, scan, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP
+summary: Databases scans storage configurations of Microsoft SQL Servers providing insights and recommendations to help you achieve operational excellence. 
+---
+= Optimize configurations for Microsoft SQL Server deployments 
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+BlueXP workload factory for Databases continuously scans and assesses Microsoft SQL server deployment configurations running on Amazon FSx for NetAPP ONTAP. Assessments provide insights, recommendations, and optimizations so you can achieve operational excellence.  
+
+.About this task
+The assessment runs automatically and continuously once every day for Microsoft SQL Server instances with FSx for ONTAP storage managed in workload factory. Assessment reports are available in the optimization dashboard only if a daily scheduled job has run after deployment or after managing an instance.
+
+Workload factory provides detailed recommendations to optimize configurations based on best practices for FSx for ONTAP storage. 
+
+What is scanned::
+Workload factory assesses the optimization status of the following configurations for Microsoft SQL Server instances:  
+
+* Storage sizing: includes storage tier, file system headroom, log drive size, and TempDB drive size  
+* Storage layout: includes user data files placement, log files placement, and TempDB placement
+* Storage configuration: includes capacity management, thin provisioning, tiering policy, snapshots, and Multi-path I/O status, policy, and sessions, and more 
+* Compute: includes rightsizing
+
+.Before you begin
+* You must have credentials with read or automate permissions.
+* To assess the storage of a Microsoft SQL Server instance, the instance must be managed by workload factory and the storage type must be FSx for ONTAP. 
+* Make sure you review each recommendation carefully before selecting to optimize a setting or configuration. 
+
+.Steps
+. Log in to the link:https://console.workloads.netapp.com[Workload Factory console^].
+. In the Databases tile, select *Go to Databases Inventory*.
+. In Databases, select the *Inventory* tab. 
+. Click the dropdown arrow to expand the row of the host to view its managed instances. 
++
+The host expands and the host instances appear. 
+. Select the three dots menu of the instance to scan and then select *Optimize*. 
+. On the Optimize instance page for the host, review the findings from the storage assessment. 
++
+Filters are available to sort by categories, sub categories, status, severity, and tags. 
++ 
+If needed, you can download a report of the findings by selecting *Export PDF*.  
+. Select the dropdown arrow to view the recommendation for any configuration. Make sure you review the recommendation carefully. 
++ 
+The recommendation explains best practices and potential pitfalls of unoptimized configurations.
+. Select to *Optimize* unoptimized configurations.
+. Review the optimization summary and action items that appear in the optimization dialog to learn what will happen if you choose to optimize. Some optimization operations may cause instance downtimes or service interruptions. 
+. Select *Continue* to optimize the configuration. 
+
+.Result
+The optimization process initiates. Select the *Job monitoring* tab to view the status of the operation. 
+
+
