@@ -44,7 +44,8 @@ Workload factory for Databases offers the following features:
 * *AWS resource discovery and provisioning*: automatically detect Microsoft SQL Servers on FSx for ONTAP, FSx for Windows File Servers, and Elastic Block Store deployed from your AWS account. The Databases Inventory serves as a launching point for exploring costs savings opportunities for servers in other AWS storage systems or a management tool for FSx for ONTAP based servers and instances.
 * *Sandbox creation*: create an on-demand, isolated database environment that can be used for testing, integration, diagnostics, and training, without affecting production data. 
 * *Database creation*: create a user database for your existing Microsoft SQL Servers with _Quick_ or _Advanced_ create modes to configure your database collation, file names, and sizes. Storage configuration is included. 
-* *Job Monitoring*: monitor and track database job execution progress and diagnose and troubleshoot issues in case any failure occurs.  
+* *Job Monitoring*: monitor and track database job execution progress and diagnose and troubleshoot issues in case any failure occurs.
+* *Continuous optimization*: continuously scans your Microsoft SQL Server estate offline, providing you with a comprehensive report of insights, opportunities, and recommendations to help you achieve operational excellence.
 
 == Tools to use workload factory
 You can use Workload factory with the following tools:
@@ -67,6 +68,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html[Learn
 Three different operational modes - _basic_, _read_ and _automate_ - offer flexible options for deployment inside and outside of workload factory. Gain immediate value at zero-trust in _basic_ mode with code snippets for use outside workload factory. Get incremental value with incremental trust in _read_ and _automate_ modes. 
 
 Learn more about link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[operational modes in workload factory^].
+
+== Tools to use Workload Factory
+You can use BlueXP Workload Factory with the following tools:
+
+* *Workload Factory console*: the Workload Factory console provides a visual interface that gives you a holistic view of your applications and projects
+* *REST API*: Workload Factory REST APIs let you deploy and manage Microsoft SQL Server and other AWS resources
+* *CloudFormation*: AWS CloudFormation code lets you perform the actions you defined in the Workload Factory console to model, provision, and manage AWS and third-party resources from the CloudFormation stack in your AWS account.
+* *Terraform BlueXP Workload Factory Provider*: Terraform lets you build and manage infrastructure workflows generated in the Workload Factory console.
 
 == Deployment details
 
