@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: view-clone-connection.html
 keywords: view clone connection, copy connection information 
-summary: View and copy the connection information of a sandbox clone in BlueXP workload factory for Databases. 
+summary: "View and copy the connection information of a sandbox clone in BlueXP workload factory for Databases." 
 ---
 = View connection information of a sandbox clone
 :icons: font

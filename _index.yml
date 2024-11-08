@@ -1,5 +1,5 @@
 indexpage:
-  title: BlueXP Workload Factory for Databases documentation
+  title: BlueXP workload factory for Databases documentation
   lead: Deploy Microsoft SQL Server configurations and manage database environments on top of FSx for ONTAP file system storage in BlueXP workload factory.
   tiles: 
     - title: Get started

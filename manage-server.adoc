@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: manage-server.html
 keywords: Microsoft SQL Server instance, server instance, manage host, view host, database host, database instance, manage, unmanage
-summary: Manage Microsoft SQL Server instances in Workload Factory for Databases. 
+summary: "Manage Microsoft SQL Server instances in BlueXP workload factory for Databases." 
 ---
 = Manage Microsoft SQL Server instances in BlueXP workload factory
 :icons: font

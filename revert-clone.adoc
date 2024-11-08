@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: revert-clone.html
 keywords: re-baseline, revert clone, database, Microsoft SQL
-summary: Revert a sandbox clone in BlueXP workload factory for Databases.
+summary: "Revert a sandbox clone in BlueXP workload factory for Databases."
 ---
 = Revert a sandbox clone in BlueXP workload factory for Databases
 :icons: font

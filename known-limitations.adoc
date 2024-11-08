@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: known-limitations.html
 keywords: limitations, databases
-summary: Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
+summary: "Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully."
 ---
 
-= Known limitations
+= Known limitations for BlueXP workload factory for Databases
 :icons: font
 :imagesdir: ./media/
 

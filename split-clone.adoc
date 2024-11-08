@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: split-clone.html
 keywords: split, clone, source, new database 
-summary: Split a sandbox clone from the source database to create a new database in BlueXP workload factory for Databases. 
+summary: "Split a sandbox clone from the source database to create a new database in BlueXP workload factory for Databases." 
 ---
 = Split a sandbox clone from the source database
 :icons: font

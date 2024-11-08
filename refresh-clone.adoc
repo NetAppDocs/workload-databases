@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: refresh-clone.html
 keywords: refresh clone, sync, update, database, Microsoft SQL
-summary: Refresh a sandbox clone in BlueXP workload factory for Databases.
+summary: "Refresh a sandbox clone in BlueXP workload factory for Databases."
 ---
 = Refresh a sandbox clone in BlueXP workload factory for Databases
 :icons: font

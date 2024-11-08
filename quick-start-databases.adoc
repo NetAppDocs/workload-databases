@@ -4,18 +4,18 @@ permalink: quick-start-databases.html
 keywords: requirements, basic mode, read mode, automate mode 
 summary: Databases has three different modes that have different requirements. 
 ---
-= Quick start for Databases
+= Quick start for BlueXP workload factory for Databases
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-With Databases, you can get started immediately in _basic_ mode. If you'd like to use Workload Factory to discover hosts, manage resources, and more, you can get started in a few steps. 
+With BlueXP workload factory for Databases, you can get started immediately in _basic_ mode. If you'd like to use workload Factory to discover hosts, manage resources, and more, you can get started in a few steps. 
 
-You must have an AWS account to get started. 
+You must have an AWS account to use Databases. 
 
-Follow these steps to get started with Workload Factory Databases. 
+Follow these steps to get started. 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Log in to Workload Factory
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Log in to BlueXP workload factory
 
 [role="quick-margin-para"]
 
@@ -28,10 +28,10 @@ You'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-s
 Choose between link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[_basic_, _read_, and _automate_ operational modes^]. 
 
 [role="quick-margin-para"]
-If you operate in _basic_ mode, you don't need to go any further. You can start using Workload Factory Databases to copy partially completed code samples. In the Databases tile, click *Deploy database host*. link:create-database-server.html[Learn how to deploy a database server]. 
+If you operate in _basic_ mode, you don't need to go any further. You can start using Databases to copy partially completed code samples. In the Databases tile, click *Deploy database host*. link:create-database-server.html[Learn how to deploy a database server]. 
 
 [role="quick-margin-para"]
-If you operate in _read_ or _automate_ mode, you'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[add credentials to an account manually^] which includes selecting workload capabilities, such as Databases and AI, and creating the IAM policies to ensure you have the correct permissions for operating in _read_ or _automate_ mode.
+If you operate in _read_ or _automate_ mode, you'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[add credentials to an account manually^] which includes selecting workload capabilities, such as Databases and GenAI, and creating the IAM policies to ensure you have the correct permissions for operating in _read_ or _automate_ mode.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Deploy a database server
 

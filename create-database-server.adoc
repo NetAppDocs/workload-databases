@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: create-database-server.html
 keywords: create, server, Microsoft SQL, deploy, host, deploy a database host, database host 
-summary: Create a new Microsoft SQL Server within Workload Factory for Databases. 
+summary: "Create a new Microsoft SQL Server within BlueXP workload factory for Databases." 
 ---
 = Create a database server in BlueXP workload factory for Databases
 :icons: font

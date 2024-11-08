@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: create-database.html
 keywords: create, database, creation, Microsoft SQL
-summary: Create a Microsoft SQL database with Workload Factory Databases. 
+summary: "Create a Microsoft SQL database with BlueXP workload factory for Databases." 
 ---
 = Create a Microsoft SQL database in BlueXP workload factory for Databases
 :icons: font

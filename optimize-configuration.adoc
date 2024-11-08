@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: optimize-configurations.html
 keywords: optimize, configuration, storage, compute, application, resiliency assessment, scan, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP
-summary: Databases scans storage configurations of Microsoft SQL Servers providing insights and recommendations to help you achieve operational excellence. 
+summary: "BlueXP workload factory for Databases scans storage configurations of Microsoft SQL Servers providing insights and recommendations to help you achieve operational excellence." 
 ---
 = Optimize configurations for Microsoft SQL Server deployments 
 :icons: font

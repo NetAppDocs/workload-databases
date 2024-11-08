@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: detect-host.html
 keywords: detect, detect server instance, instance, detect a database host, instance
-summary: Detect a Microsoft SQL Server instance in BlueXP workload factory for Databases. 
+summary: "Detect a Microsoft SQL Server instance in BlueXP workload factory for Databases." 
 ---
 = Detect a Microsoft SQL Server instance
 :icons: font

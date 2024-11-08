@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: delete-clone.html
 keywords: delete, clone 
-summary: Delete a sandbox clone when you no longer need it. 
+summary: "Delete a sandbox clone in BlueXP workload factory when you no longer need it." 
 ---
 = Split a sandbox clone from the source database
 :icons: font

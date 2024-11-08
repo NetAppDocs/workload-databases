@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: check-clone-integrity.html
 keywords: integrity check, data corruption
-summary: Run an integrity check to determine if sandbox clone data is intact or corrupt.
+summary: "Run an integrity check to determine if sandbox clone data is intact or corrupt in BlueXP workload factory for Databases."
 ---
 = Check the integrity of the data in a sandbox clone
 :icons: font

@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: monitor-databases.html 
 keywords: monitor databases, monitor jobs, track database jobs
-summary: Track database jobs and monitor databases within BlueXP workload factory for Databases.  
+summary: "Track database jobs and monitor databases within BlueXP workload factory for Databases."  
 ---
 = Monitor databases in BlueXP workload factory
 :icons: font
