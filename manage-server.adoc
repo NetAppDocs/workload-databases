@@ -76,7 +76,7 @@ The overview of the instance appears in the Inventory tab.
 You can view the databases managed by the managed instance by following these steps. 
 
 .Steps
-. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].Log in to the link:https://console.workloads.netapp.com[Workload Factory console^].
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases Inventory*.
 . In Databases, select the *Inventory* tab. 
 . Click the dropdown arrow to expand the row of the host to view its databases.

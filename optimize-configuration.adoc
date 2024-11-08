@@ -30,7 +30,7 @@ Workload factory assesses the optimization status of the following configuration
 * Make sure you review each recommendation carefully before selecting to optimize a setting or configuration. 
 
 .Steps
-. Log in to the link:https://console.workloads.netapp.com[Workload Factory console^].
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases Inventory*.
 . In Databases, select the *Inventory* tab. 
 . Click the dropdown arrow to expand the row of the host to view its managed instances. 

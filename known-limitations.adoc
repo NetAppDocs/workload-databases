@@ -21,10 +21,10 @@ Deployment with a custom AMI assumes that install media is present in the image.
 * To uninstall and reconfigure to form the FCI cluster
 * When selecting a collation other than the collation set in the image for standalone deployment
 
-As part of deployment, Workload Factory doesn't install a custom AMI with multiple Microsoft SQL Server instances. Only the default Microsoft SQL Server instance is selected and configured as part of deployment.
+As part of deployment, workload factory doesn't install a custom AMI with multiple Microsoft SQL Server instances. Only the default Microsoft SQL Server instance is selected and configured as part of deployment.
 
 == Roll back and retry for failed deployments 
-Rollback and retry for failed deployments aren't supported in Workload Factory. You can roll back or retry a failed stack from the CloudFormation console in AWS. 
+Rollback and retry for failed deployments aren't supported in workload factory. You can roll back or retry a failed stack from the CloudFormation console in AWS. 
 
 == Active Directory and DNS resource rollback
 The following DNS resources aren't removed from Active Directory and DNS when you roll back a test or failed deployment from the CloudFormation console in AWS: 
@@ -36,10 +36,10 @@ The following DNS resources aren't removed from Active Directory and DNS when yo
 You'll need to cleanup these up manually or wait for the domain to purge stale entries. 
 
 == Always On availability groups configuration support
-Managing Always On availability groups configurations isn't supported in Workload Factory. 
+Managing Always On availability groups configurations isn't supported in workload factory. 
 
 == User-managed Active Directory security groups
-If you select “user-managed Active Directory” during Microsoft SQL Server deployment in Workload Factory, you must provide a security group that allows traffic between the EC2 instances to the directory service for deployment. Workload Factory doesn't automatically attach the security group for user-managed Active Directory like it does for AWS Managed Microsoft AD.
+If you select “user-managed Active Directory” during Microsoft SQL Server deployment in workload factory, you must provide a security group that allows traffic between the EC2 instances to the directory service for deployment. Workload factory doesn't automatically attach the security group for user-managed Active Directory like it does for AWS Managed Microsoft AD.
 
 == Custom encryption keys
 Custom encryption keys for FSx for ONTAP aren't listed based on service applicability. You must choose the appropriate key. AWS managed keys are filtered based on applicability to service.
@@ -51,7 +51,7 @@ A downloaded or copied Codebox-generated CloudFormation template (YAML file) has
 The maximum number of sandbox clones that can be created from a database server is 90.
 
 == Microsoft SQL Server detection and management
-Microsoft SQL Server detection isn't saved. Each time you access Databases in Workload Factory, Microsoft SQL Server detection runs again to identify SQL installations in the region.
+Microsoft SQL Server detection isn't saved. Each time you access Databases in workload factory, Microsoft SQL Server detection runs again to identify SQL installations in the region.
 
 == Explore savings
 In the Inventory tab, the estimated cost shown for each Microsoft SQL instance is calculated at the FSx for ONTAP file system level and not for volumes hosting the SQL instance.

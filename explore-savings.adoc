@@ -18,7 +18,7 @@ image:screenshot-ebs-savings-calculator.png["A screenshot of the savings calcula
 
 If workload factory determines that you could save money by running these workloads on an FSx for ONTAP file system, you can deploy Microsoft SQL over FSx for ONTAP directly from the calculator in workload factory. When you have multiple Microsoft SQL Server instances over Elastic Block Store or FSx for Windows File Server storage, we'll recommend an FSx for ONTAP configuration with a single SQL instance.
 
-//In some cases, Workload Factory may recommend that you deploy multiple file systems based on the amount of storage you are currently using, and based on the performance characteristics of your database workloads. 
+//In some cases, workload factory may recommend that you deploy multiple file systems based on the amount of storage you are currently using, and based on the performance characteristics of your database workloads. 
 
 == Calculator options
 Two calculator options are available for making the cost comparison between your systems and FSx for ONTAP — customization and detection.
@@ -149,7 +149,7 @@ If you'd like to switch to FSx for ONTAP to realize cost savings, click *Create*
 NOTE: Workload factory doesn't support saving or creating multiple FSx for ONTAP file systems. 
 
 Deployment methods:::
-In _automate_ mode, you can deploy the new Microsoft SQL server on AWS EC2 using FSx for ONTAP directly from Workload Factory. You can also copy the content from the Codebox window and deploy the recommended configuration using one of the Codebox methods.
+In _automate_ mode, you can deploy the new Microsoft SQL server on AWS EC2 using FSx for ONTAP directly from workload factory. You can also copy the content from the Codebox window and deploy the recommended configuration using one of the Codebox methods.
 +
 In  _basic_ mode, you can copy the content from the Codebox window and deploy the recommended configuration using one of the Codebox methods.
 
