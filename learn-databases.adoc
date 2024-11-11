@@ -2,22 +2,22 @@
 sidebar: sidebar
 permalink: learn-databases.html
 keywords: Databases
-summary: Databases is an end-to-end database deployment and maintenance service with built-in best practices for optimization, automatic thin cloning, and monitoring and resolution capabilities. 
+summary: "BlueXP workload factory for Databases is an end-to-end database deployment and maintenance service with built-in best practices for optimization, automatic thin cloning, and monitoring and resolution capabilities." 
 ---
-= Learn about Workload Factory for Databases
+= Learn about BlueXP workload factory for Databases
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Workload Factory for Databases is an end-to-end database deployment and maintenance service with built-in best practices for optimization, automatic thin cloning, and monitoring and resolution capabilities. 
+BlueXP workload factory for Databases is an end-to-end database deployment and maintenance service with built-in best practices for optimization, automatic thin cloning, and monitoring and resolution capabilities. 
 
-== What is Workload Factory for Databases?
-Workload Factory for Databases detects, assesses, plans, provisions, and moves Microsoft SQL Server data to Amazon FSx for NetApp ONTAP (FSx for ONTAP) deployments optimized to meet your performance and cost expectations while adhering to industry best practices. Throughout the life cycle, Workload Factory delivers continuous optimization and management for databases on FSx for ONTAP. 
+== What is BlueXP workload factory for Databases?
+BlueXP workload factory for Databases detects, assesses, plans, provisions, and moves Microsoft SQL Server data to Amazon FSx for NetApp ONTAP (FSx for ONTAP) deployments optimized to meet your performance and cost expectations while adhering to industry best practices. Throughout the life cycle, workload factory delivers continuous optimization and management for databases on FSx for ONTAP. 
 
-For more information about Workload Factory, refer to the link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html[Workload Factory overview^].
+For more information about workload factory, refer to the link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html[workload factory overview^].
 
-== Workload Factory benefits for self-managed databases
-Workload Factory offers the following beneficial best practices and automation for self-managed databases. 
+== Workload factory benefits for self-managed databases
+Workload factory offers the following beneficial best practices and automation for self-managed databases. 
 
 === Best practices
 
@@ -26,27 +26,35 @@ Workload Factory offers the following beneficial best practices and automation f
 * End-to-end deployment automation that follows AWS, Microsoft and ONTAP best practices. 
 * “Quick create” deployment mode helps you avoid potential pitfalls with manual configuration. 
 
-=== Automation with Workload Factory Codebox
-Workload Factory introduces built-in automation with the _Codebox_. The Codebox offers the following automation benefits: 
+=== Automation with workload factory Codebox
+Workload factory introduces built-in automation with the _Codebox_. The Codebox offers the following automation benefits: 
 
 * *Code snippet generation*: Infrastructure-as-Code (IaC) snippets are generated during resource creation, allowing seamless integration with existing orchestration workflows. 
-* *Infrastructure-as-code co-pilot*: the Codebox is an Infrastructure-as-code (IaC) co-pilot that helps developers and DevOps generate code to execute any operation supported by Workload Factory.  
+* *Infrastructure-as-code co-pilot*: the Codebox is an Infrastructure-as-code (IaC) co-pilot that helps developers and DevOps generate code to execute any operation supported by workload factory.  
 * *Code viewer and automation catalog*: the Codebox provides a code viewer for quick analysis of automation and an automation catalog for quick future re-use. 
 
-=== Workload Factory for Databases features
-Workload Factory for Databases offers the following features: 
+=== Workload factory for Databases features
+Workload factory for Databases offers the following features: 
 
 * *Simple, fast deployments*: simplify and streamline your provisioning experience by selecting answers to specification questions and eliminating the time typically required to investigate how to provision and configure your Microsoft SQL Server on AWS. 
-* *Automated orchestration*: available via the Workload Factory user interface with _Quick_ and _Advanced_ create deployment modes, Workload Factory's Chatbot, and API with AWS CloudFormation.
+* *Automated orchestration*: available via the workload factory user interface with _Quick_ and _Advanced_ create deployment modes, workload factory's Chatbot, and API with AWS CloudFormation.
 * *Built-in features*: utilize NetApp, Microsoft, and Amazon best practices and AWS resource selections built in to deployment configuration.
-* *Cost estimation*: assess potential cost savings with Workload Factory's storage calculator that estimates and details storage, compute, SQL licensing, snapshot, and clone itemized costs for existing Microsoft SQL Server deployments with Elastic Block Store compared with FSx for ONTAP. 
-//Add AWS FSx for Windows File Server when known limitation is removed.
-* *Reusable automation templates*: create, re-use, and customize CloudFormation templates from the Workload Factory Codebox for future Microsoft SQL Server deployments in multiple environments. 
+* *Cost estimation*: assess potential cost savings with the Savings calculator that estimates and details storage, compute, SQL licensing, snapshot, and clone itemized costs for existing Microsoft SQL Server deployments with Elastic Block Store and FSx for Windows File Server compared with FSx for ONTAP. 
+* *Reusable automation templates*: create, re-use, and customize CloudFormation templates from the workload factory Codebox for future Microsoft SQL Server deployments in multiple environments. 
 * *AWS resource discovery and provisioning*: automatically detect Microsoft SQL Servers on FSx for ONTAP, FSx for Windows File Servers, and Elastic Block Store deployed from your AWS account. The Databases Inventory serves as a launching point for exploring costs savings opportunities for servers in other AWS storage systems or a management tool for FSx for ONTAP based servers and instances.
 * *Sandbox creation*: create an on-demand, isolated database environment that can be used for testing, integration, diagnostics, and training, without affecting production data. 
 * *Database creation*: create a user database for your existing Microsoft SQL Servers with _Quick_ or _Advanced_ create modes to configure your database collation, file names, and sizes. Storage configuration is included. 
 * *Job Monitoring*: monitor and track database job execution progress and diagnose and troubleshoot issues in case any failure occurs.
 * *Continuous optimization*: continuously scans your Microsoft SQL Server estate offline, providing you with a comprehensive report of insights, opportunities, and recommendations to help you achieve operational excellence.
+
+== Tools to use workload factory
+You can use workload factory with the following tools:
+
+* *Workload factory console*: the workload factory console provides a visual interface that gives you a holistic view of your applications and projects
+* *BlueXP console*: the BlueXP console provides a hybrid interface experience so that you can use BlueXP workload factory along with other BlueXP services
+* *REST API*: Workload factory REST APIs let you deploy and manage your FSx for ONTAP file systems and other AWS resources
+* *CloudFormation*: AWS CloudFormation code lets you perform the actions you defined in the workload factory console to model, provision, and manage AWS and third-party resources from the CloudFormation stack in your AWS account.
+* *Terraform BlueXP Workload Factory provider*: Terraform lets you build and manage infrastructure workflows generated in the workload factory console.
 
 == Benefits of Amazon FSx for ONTAP for self-managed databases
 
@@ -54,25 +62,25 @@ Workload Factory for Databases offers the following features:
 * *Performance and scalability*: FSx for ONTAP offers performance optimization with high throughput, low latency, high-speed network connections, and scalability with multiple file systems for scaling aggregate performance required for a workload.
 * *Data management and efficiency*: FSx for ONTAP offers multiple features that enhance data management and efficiency, such as space efficient thin clones, thin provisioning, compression and deduplication, and tiering infrequently accessed data to the capacity pool. 
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html[Learn about FSx for ONTAP for Workload Factory^]. 
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html[Learn about FSx for ONTAP for workload factory^]. 
 
-=== Operational modes in Workload Factory
-Three different operational modes - _basic_, _read_ and _automate_ - offer flexible options for deployment inside and outside of Workload Factory. Gain immediate value at zero-trust in _basic_ mode with code snippets for use outside Workload Factory. Get incremental value with incremental trust in _read_ and _automate_ modes. 
+=== Operational modes in workload factory
+Three different operational modes - _basic_, _read_ and _automate_ - offer flexible options for deployment inside and outside of workload factory. Gain immediate value at zero-trust in _basic_ mode with code snippets for use outside workload factory. Get incremental value with incremental trust in _read_ and _automate_ modes. 
 
-Learn more about link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[operational modes in Workload Factory^].
+Learn more about link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[operational modes in workload factory^].
 
-== Tools to use Workload Factory
-You can use BlueXP Workload Factory with the following tools:
+== Tools to use workload factory
+You can use BlueXP workload factory with the following tools:
 
-* *Workload Factory console*: the Workload Factory console provides a visual interface that gives you a holistic view of your applications and projects
-* *REST API*: Workload Factory REST APIs let you deploy and manage Microsoft SQL Server and other AWS resources
-* *CloudFormation*: AWS CloudFormation code lets you perform the actions you defined in the Workload Factory console to model, provision, and manage AWS and third-party resources from the CloudFormation stack in your AWS account.
-* *Terraform BlueXP Workload Factory Provider*: Terraform lets you build and manage infrastructure workflows generated in the Workload Factory console.
+* *Workload factory console*: the workload factory console provides a visual interface that gives you a holistic view of your applications and projects
+* *REST API*: workload factory REST APIs let you deploy and manage Microsoft SQL Server and other AWS resources
+* *CloudFormation*: AWS CloudFormation code lets you perform the actions you defined in the workload factory console to model, provision, and manage AWS and third-party resources from the CloudFormation stack in your AWS account.
+* *Terraform BlueXP workload factory provider*: Terraform lets you build and manage infrastructure workflows generated in the workload factory console.
 
 == Deployment details
 
 === Supported configurations
-Workload Factory for Microsoft SQL Server supports both high availability (Always on Failover Cluster Instances) and single instance deployments according to AWS, NetApp ONTAP and SQL Server best practices. 
+Workload factory for Microsoft SQL Server supports both high availability (Always on Failover Cluster Instances) and single instance deployments according to AWS, NetApp ONTAP and SQL Server best practices. 
 
 [cols="2a,2a,2a,2a" options="header"]
 |===
@@ -138,4 +146,4 @@ The following AWS regions aren't supported:
 == Getting help
 Amazon FSx for NetApp ONTAP is an AWS first-party solution. For questions or technical support issues associated with your FSx for ONTAP file system, infrastructure, or any solution using this service, use the Support Center in your AWS Management Console to open a support case with AWS. Select the “FSx for ONTAP” service and appropriate category. Provide the remaining information required to create your AWS support case.
 
-For general questions about Workload Factory or Workload Factory applications and services, refer to link:get-help.html[Get help for Databases for Workload Factory].
+For general questions about workload factory or workload factory applications and services, refer to link:get-help.html[Get help for BlueXP workload factory for Databases].
