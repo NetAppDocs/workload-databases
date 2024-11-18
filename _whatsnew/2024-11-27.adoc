@@ -1,0 +1,9 @@
+=== Continuous optimization adds compute remediation and assessment 
+Databases now provides insights and recommendations to help you optimize compute resources for Microsoft SQL Server instances. We measure CPU utilization and leverage AWS Compute Optimizer service to recommend optimal right-sized instance types and notify you of available operating system patches. Optimizing compute resources can help you make informed decisions about instance types, leading to cost savings and efficient resource utilization.
+
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Optimize compute resource configurations]
+
+=== PostgreSQL support
+You can now deploy and manage PostgreSQL server standalone deployments in Databases. PostgreSQL can be used as a vector database to store and query OpenAI embeddings. 
+
+link:https://docs.netapp.com/us-en/workload-databases/create-postgresql-server.html[Create a  PostgreSQL server]
