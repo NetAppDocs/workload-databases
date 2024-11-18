@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: create-database-server.html
+permalink: create-postgresql-server.html
 keywords: create, server, PostgreSQL, deploy, host, deploy a database host, database host 
 summary: "Create a new PostgreSQL SQL server within BlueXP workload factory for Databases." 
 ---
