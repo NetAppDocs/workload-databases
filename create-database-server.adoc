@@ -59,7 +59,7 @@ Ensure you have the following prerequisites before you create a new database hos
 
 Credentials and permissions::: You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and automate mode permissions^] to create a new database host in workload factory. 
 +
-Alternatively, you can use the Codebox to copy an empty template or create a completed template so that you can deploy a database outside of workload factory using REST API, AWS CLI, or AWS CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html[Learn more about Codebox automation^].
+Alternatively, you can use the Codebox to copy an empty template or create a completed template so that you can deploy a database outside of workload factory using REST API, AWS CLI, AWS CloudFormation, or Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html[Learn more about Codebox automation^].
 
 Active Directory::: When connecting to Active Directory, you must have administrative access with permissions to do the following: 
 +
@@ -110,8 +110,6 @@ VPC DNS attributes `EnableDnsSupport` and `EnableDnsHostnames` are modified to e
 +
 NOTE: FCI deployments are only supported on Multiple Availability Zone (MAZ) FSx for ONTAP configurations.
 +
-Subnets should not share the same route table for high availability. 
-
 ... In the *Cluster configuration - Node 1* field, select the primary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the primary availability zone from the *Subnet* dropdown menu. 
 ... In the *Cluster configuration - Node 2* field, select the secondary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the secondary availability zone from the *Subnet* dropdown menu. 
 

@@ -35,8 +35,8 @@ sidebar:
         entries:
           - title: Create Microsoft SQL Server    
             url: /create-database-server.html
-          - title: Create PostgreSQL Server
-            url: /create-postgresql-server.html  
+          - title: Create PostgreSQL
+            url: /create-postgresql.html  
       - title: Detect a database server
         url: /detect-host.html 
       - title: Create a database
