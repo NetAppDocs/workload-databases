@@ -37,7 +37,7 @@ Credentials and permissions::: You must have link:https://docs.netapp.com/us-en/
 +
 Alternatively, you can use the Codebox to copy an empty template or create a completed template so that you can deploy a database outside of workload factory using REST API, AWS CLI, or AWS CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html[Learn more about Codebox automation^].
 
-== Step 1: Create a database server
+== Create a database server
 You can use _Quick create_ or _Advanced create_ deployment modes to complete this task in workload factory with _Automate_ mode permissions. You can also use the following tools available in the Codebox: REST API and CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox[Learn how to use Codebox for automation^]. 
 
 //Add Terraform if needed.
@@ -113,9 +113,9 @@ You can use _Quick create_ or _Advanced create_ deployment modes to complete thi
 //--
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Databases tile, select *Deploy database host*. 
+. In the Databases tile, select *Deploy database host* and then select *PostgreSQL* from the dropdown menu. 
 . Select *Advanced create*. 
-. For *Deployment model*,  select *Failover Cluster Instance* or *Single instance*.
+. For *Deployment model*,  *Standalone instance* is the default.
 . Under *AWS settings*, provide the following: 
 .. *AWS credentials*: Select AWS credentials with automate permissions to deploy the new database host. 
 +
@@ -139,7 +139,7 @@ VPC DNS attributes `EnableDnsSupport` and `EnableDnsHostnames` are modified to e
 .. *Availability zones*: Select availability zones and subnets.
 +
 For single instance deployments::: 
-... In the *Cluster configuration - Node 1* field, select an availability zone from the *Availability zone* from the dropdown menu and a subnet from the *Subnet* dropdown menu. 
+... In the *Cluster configuration - Node 1* field, select an availability zone from the *Availability zone* dropdown menu and a subnet from the *Subnet* dropdown menu. 
 +
 //For FCI deployments::: 
 //... In the *Cluster configuration - Node 1* field, select the primary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the primary availability zone from the *Subnet* dropdown menu. 
@@ -154,18 +154,11 @@ Two security groups get attached to the SQL nodes (EC2 instances) during new ser
 2. For an existing FSx for ONTAP file system, the security group associated with it is added automatically to the PostgreSQL node which allows communication to the file system. When a new FSx for ONTAP system is created, a new security group is created for the FSx for ONTAP file system and the same security group also gets attached to SQL node.
 
 . Under *Application settings*, provide the following: 
-.. Under *SQL Server install type*, select *License included AMI* or *Use custom AMI*. 
-+
-... If you select *License included AMI*, provide the following: 
-.... *Operating system*: Select *Windows server 2016*, *Windows server 2019*, or *Windows server 2022*. 
-.... *Database edition*: Select *SQL Server Standard Edition* or *SQL Server Enterprise Edition*. 
-.... *Database version*: Select *SQL Server 2016*, *SQL Server 2019*, or *SQL Server 2022*.
-.... *SQL Server AMI*: Select a SQL Server AMI from the dropdown menu. 
-... If you select *Use custom AMI*, select an AMI from the dropdown menu.
+.. Select the *Operating system* from the dropdown menu.
+.. Select the *PostgreSQL version* from the dropdown menu.
 .. *Database server name*: Enter the database cluster name.
 .. *Database credentials*: Enter a user name and password for a new service account or use existing service account credentials in the Active Directory.
-. Under *Connectivity*, provide the following:
-.. *Key pair*: Select a key pair to connect securely to your instance.
+. Under *Connectivity*, select a key pair to connect securely to your instance.
 . Under *Infrastructure settings*, provide the following:  
 .. *DB Instance type*: Select the database instance type from the dropdown menu. 
 .. *FSx for ONTAP system*: Create a new FSx for ONTAP file system or use an existing FSx for ONTAP file system. 
@@ -180,7 +173,7 @@ For existing FSx for ONTAP file systems, ensure the following:
 * The security group allows traffic from the subnets used for deployment, specifically HTTPS (443) and iSCSI (3260) TCP ports. 
 .. *Snapshot policy*: Enabled by default. Snapshots are taken daily and have a 7-day retention period. 
 +
-The snapshots are assigned to volumes created for SQL workloads. 
+The snapshots are assigned to volumes created for PostgreSQL workloads. 
 .. *Data drive size*: Enter the data drive capacity and select the capacity unit. 
 .. *Provisioned IOPS*: Select *Automatic* or *User-provisioned*. If you select *User-provisioned*, enter the IOPS value. 
 .. *Throughput capacity*: Select the throughput capacity from the dropdown menu.
@@ -212,18 +205,10 @@ In CloudWatch, a log group is created with the name of the stack. A log stream f
 +
 Alternatively, you can save the configuration.
 
---
+//--
 
 
-====
-
-== Step 2: Enable remote connection on the Microsoft SQL Server
-After the server deploys, workload factory does not enable remote connection on the Microsoft SQL Server. To enable the remote connection, complete the following steps.
-
-.Steps
-. Use computer identity for NTLM by referring to link:https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-allow-local-system-to-use-computer-identity-for-ntlm[Network security: Allow Local System to use computer identity for NTLM^] in Microsoft documentation. 
-. Check dynamic port configuration by referring to link:https://learn.microsoft.com/en-us/troubleshoot/sql/database-engine/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection[A network-related or instance-specific error occurred while establishing a connection to SQL Server] in Microsoft documentation.  
-. Allow the required client IP or subnet in the security group. 
+//====
 
 .What's next
 Now you can link:create-database.html[create a database in BlueXP workload factory for Databases]. 
