@@ -13,7 +13,7 @@ Learn what's new with Databases.
 
 == 27 November 2024
 
-include::_whatsnew/2024-11-27.adoc[]
+include::_whatsnew/2024-12-01.adoc[]
 
 == 3 November 2024
 
