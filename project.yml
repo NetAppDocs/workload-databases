@@ -32,7 +32,11 @@ sidebar:
       - title: Explore savings
         url: /explore-savings.html
       - title: Create a new database server
-        url: /create-database-server.html
+        entries:
+          - title: Create Microsoft SQL Server    
+            url: /create-database-server.html
+          - title: Create PostgreSQL server
+            url: /create-postgresql-server.html  
       - title: Detect a database server
         url: /detect-host.html 
       - title: Create a database
