@@ -210,5 +210,5 @@ Alternatively, you can save the configuration.
 
 //====
 
-.What's next
-Now you can link:create-database.html[create a database in BlueXP workload factory for Databases]. 
+//.What's next
+//Now you can link:create-database.html[create a database in BlueXP workload factory for Databases]. 
