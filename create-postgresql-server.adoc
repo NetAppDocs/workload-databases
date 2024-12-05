@@ -210,5 +210,6 @@ Alternatively, you can save the configuration.
 
 //====
 
-//.What's next
+.What's next
+You can manually configure users, remote access, and databases on the deployed PostgreSQL server. 
 //Now you can link:create-database.html[create a database in BlueXP workload factory for Databases]. 
