@@ -53,7 +53,7 @@ Explore savings via customization: You provide the configuration settings for Mi
 
 Explore savings for detected hosts: workload factory links to your existing Microsoft SQL servers and pulls in the details to the calculator for automatic comparison. You'll need to grant automate permissions to use this calculator option. You can change the use case, but all other details are automatically determined in the calculation.
 
-== Explore savings via customization
+=== Explore savings via customization
 Follow the steps under the tab for your storage type.
 
 [role="tabbed-block"]
@@ -114,7 +114,7 @@ Additionally, scroll down to the bottom of the page to *Export PDF* or *View cal
 
 --
 ====
-== Explore savings for detected hosts
+=== Explore savings for detected hosts
 Workload factory enters the detected Elastic Block Store and FSx for Windows File Server host characteristics so that you can explore savings automatically.
 
 .Before you begin
