@@ -23,7 +23,7 @@ If workload factory determines that you could save money by running these worklo
 //In some cases, workload factory may recommend that you deploy multiple file systems based on the amount of storage you are currently using, and based on the performance characteristics of your database workloads. 
 
 == SQL Server deployment analysis
-The workload factory calculator performs a comprehensive analysis of your SQL Server deployment to ensure that the resources and features being utilized are appropriately matched to the SQL Server edition. Here are the key factors and conditions the calculator checks before recommending a downgrade to Standard Edition:
+The calculator performs a comprehensive analysis of your SQL Server deployment to ensure that the resources and features being utilized are appropriately matched to the SQL Server edition. Here are the key factors and conditions the calculator checks before recommending a downgrade to Standard Edition:
 
 Deployment model:: 
 The calculator evaluates the deployment model and whether Enterprise edition is required.
