@@ -11,7 +11,9 @@ summary: Explore savings for your database workloads by comparing the costs of u
 [.lead]
 Explore savings in BlueXP workload factory for Databases for your database workloads by comparing the costs of using Amazon Elastic Block Store (EBS) and FSx for Windows File Server storage with FSx for ONTAP storage. 
 
+== About this task
 Workload factory provides a savings calculator so you can compare various cost components of running Microsoft SQL Server workloads like storage, compute, SQL license, snapshots, and clones for your database workloads on FSx for ONTAP file systems against Elastic Block Store (EBS) and FSx for Windows File Server storage. Depending on your storage requirements, you might find that FSx for ONTAP file systems are the most cost effective for your database workloads.
+
 The calculator displays whether the storage for the database workloads on these Microsoft SQL Servers would cost less if you used an FSx for ONTAP file system.
 
 image:screenshot-ebs-savings-calculator.png["A screenshot of the savings calculator page shows the selected Microsoft SQL Server on Amazon Elastic Block Store configuration on the left with the option to customize snapshot and clone values. Cost savings in dollar amount and percentage savings as well as the total monthly cost for using Microsoft SQL Server on FSx for ONTAP and Elastic Block Store storage display on the left."]
@@ -19,6 +21,30 @@ image:screenshot-ebs-savings-calculator.png["A screenshot of the savings calcula
 If workload factory determines that you could save money by running these workloads on an FSx for ONTAP file system, you can deploy Microsoft SQL over FSx for ONTAP directly from the calculator in workload factory. When you have multiple Microsoft SQL Server instances over Elastic Block Store or FSx for Windows File Server storage, we'll recommend an FSx for ONTAP configuration with a single SQL instance.
 
 //In some cases, workload factory may recommend that you deploy multiple file systems based on the amount of storage you are currently using, and based on the performance characteristics of your database workloads. 
+
+== SQL Server deployment analysis
+The workload factory calculator performs a comprehensive analysis of your SQL Server deployment to ensure that the resources and features being utilized are appropriately matched to the SQL Server edition. Here are the key factors and conditions the calculator checks before recommending a downgrade to Standard Edition:
+
+Deployment model:: 
+The calculator evaluates the deployment model and whether Enterprise edition is required.
+
+Allocated resources:: 
+The calculator assesses the conditions of the following license-dependent allocated resources:
++
+* Target Instance vCPUs: The instance has 48 or fewer virtual CPUs.
+* Memory Allocation: The instance has 128GB or less of memory.
+
+Enterprise feature usage:: 
+The calculator verifies if any of the following Enterprise features are in use:
++
+* Database-level Enterprise features
+* Online index operations
+* Resource Governor
+* Peer-to-peer or Oracle replication
+* R/Python extensions
+* Memory-optimized TempDB
+
+If the assessed SQL Server instance doesn't utilize any of the above Enterprise features and meets the resource constraints, the calculator will recommend downgrading the license to Standard Edition. This recommendation is made to help you optimize your SQL Server licensing costs without compromising performance or functionality.
 
 == Calculator options
 Two calculator options are available for making the cost comparison between your systems and FSx for ONTAP — customization and detection.
