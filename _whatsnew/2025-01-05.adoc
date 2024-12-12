@@ -1,0 +1,2 @@
+=== New 'Completed with issues' status in Job monitoring
+Job monitoring now provides the new 'Completed with issues' status so that you can learn which sub jobs had issues and what the issues are. . 
