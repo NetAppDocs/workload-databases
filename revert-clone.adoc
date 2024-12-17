@@ -16,7 +16,7 @@ When you clone a database, the clone at creation is a _baseline_ clone. The data
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Databases tile, select *Go to Databases Inventory*. 
+. In the Databases tile, select *Go to Databases inventory*. 
 . In Databases, select the *Sandboxes* tab.
 . In the Sandboxes tab, click the three dots menu of the sandbox clone you want to revert.
 . Select *Re-baseline*. 

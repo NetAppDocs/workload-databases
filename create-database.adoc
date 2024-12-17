@@ -43,7 +43,7 @@ You can use _Quick create_ or _Advanced create_ deployment modes to complete thi
 -- 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Databases tile, select *Go to Databases Inventory*.
+. In the Databases tile, select *Go to Databases inventory*.
 . In Databases, select the *Inventory* tab. 
 . In the Inventory tab, select a database server with a managed SQL server instance to create the database in.
 . Click the three dots menu of the managed instance and then select *Create user database*.
@@ -66,7 +66,7 @@ Alternatively, if you want to change any of these default settings now, change t
 --
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Databases tile, select *Go to Databases Inventory*.
+. In the Databases tile, select *Go to Databases inventory*.
 . In Databases, select the *Inventory* tab. 
 . In the Inventory tab, select a database server with a managed SQL server instance to create the database in.
 . Click the three dots menu of the managed instance and then select *Create user database*.

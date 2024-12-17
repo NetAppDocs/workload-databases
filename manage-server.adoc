@@ -49,7 +49,7 @@ Complete the following prerequisites before you begin:
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Databases tile, select *Go to Databases Inventory*.
+. In the Databases tile, select *Go to Databases inventory*.
 . In Databases, select the *Inventory* tab. 
 . Click *Manage* in the row of the host to manage. 
 . Select one or more host instances to manage. 
@@ -62,7 +62,7 @@ You can view a managed instance by following these steps.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^]. 
-. In the Databases tile, select *Go to Databases Inventory*.
+. In the Databases tile, select *Go to Databases inventory*.
 . In Databases, select the *Inventory* tab. 
 . Click the dropdown arrow to expand the row of the host to view its managed instances. 
 +
@@ -77,7 +77,7 @@ You can view the databases managed by the managed instance by following these st
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Databases tile, select *Go to Databases Inventory*.
+. In the Databases tile, select *Go to Databases inventory*.
 . In Databases, select the *Inventory* tab. 
 . Click the dropdown arrow to expand the row of the host to view its databases.
 +
@@ -93,7 +93,7 @@ Unmanage a host instance by following these steps.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Databases tile, select *Go to Databases Inventory*.
+. In the Databases tile, select *Go to Databases inventory*.
 . In Databases, select the *Inventory* tab. 
 . Click the dropdown arrow to expand the row of the host instance to unmanage. 
 +

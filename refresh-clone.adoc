@@ -21,7 +21,7 @@ To refresh a database clone from a snapshot, the source database must have at le
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Databases tile, select *Go to Databases Inventory*. 
+. In the Databases tile, select *Go to Databases inventory*. 
 . In Databases, select the *Sandboxes* tab.
 . In the Sandboxes tab, click the three dots menu of the sandbox clone you want to refresh.
 . Select *Refresh*. 
