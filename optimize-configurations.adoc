@@ -35,12 +35,12 @@ Workload factory assesses the optimization status of the following configuration
 . In the *Inventory* tab, select the dropdown arrow to expand the row of the host to view its managed instances. 
 +
 The host expands and host instances appear. 
-. Select the three-dot menu of the instance to scan and then select *Optimize*. 
-. On the Optimize instance page for the host, review the findings from the storage assessment. 
+. Select the three-dot menu of the instance and then select *Optimize*. 
+. On the Optimize instance page for the SQL Server instance, review the findings from the assessment. 
 +
-Filters are available to sort by categories, sub categories, status, severity, and tags. 
+You can filter by categories, subcategories, status, severity, and tags. 
 + 
-If needed, you can download a report of the findings by selecting *Export PDF*.  
+You can also download a report of the assessment findings by selecting *Export PDF*.  
 . Select the dropdown arrow to view the recommendation for any configuration. Make sure you review the recommendation carefully. 
 + 
 The recommendation explains best practices and potential pitfalls of unoptimized configurations.
