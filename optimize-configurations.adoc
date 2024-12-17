@@ -32,11 +32,10 @@ Workload factory assesses the optimization status of the following configuration
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*.
-. In Databases, select the *Inventory* tab. 
-. Click the dropdown arrow to expand the row of the host to view its managed instances. 
+. In the *Inventory* tab, select the dropdown arrow to expand the row of the host to view its managed instances. 
 +
-The host expands and the host instances appear. 
-. Select the three dots menu of the instance to scan and then select *Optimize*. 
+The host expands and host instances appear. 
+. Select the three-dot menu of the instance to scan and then select *Optimize*. 
 . On the Optimize instance page for the host, review the findings from the storage assessment. 
 +
 Filters are available to sort by categories, sub categories, status, severity, and tags. 

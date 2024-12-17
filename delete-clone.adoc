@@ -15,6 +15,6 @@ Delete a sandbox clone in BlueXP workload factory for Databases when you no long
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, click *Go to Databases inventory*. 
 . In Databases, select the *Sandboxes* tab.
-. Click the three dots menu of the sandbox clone you want to delete.
+. Click the three-dot menu of the sandbox clone you want to delete.
 . Select *Delete*. 
 . In the Delete dialog, click *Delete*. 

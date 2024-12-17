@@ -67,7 +67,7 @@ You can view a managed instance by following these steps.
 . Click the dropdown arrow to expand the row of the host to view its managed instances. 
 +
 The host expands and the host instances appear. 
-. Click the three dots menu of the instance to view and then select *View instance*. 
+. Click the three-dot menu of the instance to view and then select *View instance*. 
 
 .Result 
 The overview of the instance appears in the Inventory tab. 
@@ -82,7 +82,7 @@ You can view the databases managed by the managed instance by following these st
 . Click the dropdown arrow to expand the row of the host to view its databases.
 +
 The host expands and the host instances appear.  
-. Click the three dots menu of the instance containing the databases to view.
+. Click the three-dot menu of the instance containing the databases to view.
 . Select *View databases*. 
 
 .Result
@@ -98,7 +98,7 @@ Unmanage a host instance by following these steps.
 . Click the dropdown arrow to expand the row of the host instance to unmanage. 
 +
 The host expands and the host instances appear. 
-. Click the three dots menu of the instance to unmanage. 
+. Click the three-dot menu of the instance to unmanage. 
 . Select *Unmanage*. 
 
 .Result
