@@ -23,7 +23,7 @@ Job monitoring levels:::
 * Level 3 (task): Lists the sequence of actions taken on each resource.
 
 Job status:::
-The job monitoring feature tracks _in progress_, _completed_, _completed with warnings_, and _failed_ jobs daily, weekly, bi-weekly, and monthly. 
+The job monitoring feature tracks _in progress_, _completed_, _completed with issues_, and _failed_ jobs daily, weekly, bi-weekly, and monthly.
 
 Job events retention:::
 Job monitoring events are retained in the user interface for 30 days. 
