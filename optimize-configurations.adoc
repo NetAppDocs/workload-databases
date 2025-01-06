@@ -51,6 +51,6 @@ The recommendation explains best practices and potential pitfalls of unoptimized
 . Select *Continue* to optimize the configuration. 
 
 .Result
-The optimization process initiates. 
+The optimization process initiates. Select the *Job monitoring* tab to view the status of the operation.
 
 
