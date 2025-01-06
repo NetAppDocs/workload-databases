@@ -11,9 +11,9 @@ summary: "Learn what's new with BlueXP workload factory for Databases."
 [.lead]
 Learn what's new with Databases.
 
-== 05 January 2025
+== 06 January 2025
 
-include::_whatsnew/2025-01-05.adoc[]
+include::_whatsnew/2025-01-06.adoc[]
 
 == 01 December 2024
 
