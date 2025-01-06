@@ -1,0 +1,21 @@
+=== Databases Dashboard enhancements
+A new design of the Dashboard includes the following graphics and enhancements: 
+
+* Host distribution graph shows the number of Microsoft SQL Server hosts and PostgreSQL hosts 
+* Instances distribution details include the total number of detected instances and the number of managed Microsoft SQL Server and PostgreSQL instances 
+* Databases distribution details include the total number of databases and the number of managed Microsoft SQL Server and PostgreSQL databases
+* Optimization score and statuses for managed and online instances 
+* Optimization details for storage, compute, and application categories
+* Optimization details for Microsoft SQL Server instance configurations like storage sizing, storage layout, ONTAP storage, compute, and applications
+* Potential savings for database workloads running on Amazon Elastic Block Store and FSx for Windows File Server storage environments compared to Amazon FSx for NetApp ONTAP storage
+
+=== New 'Completed with issues' status in Job monitoring
+The job monitoring feature for Databases now provides the new 'Completed with issues' status so that you can learn which sub jobs had issues and what the issues are.
+
+link:https://docs.netapp.com/us-en/workload-databases/monitor-databases.html[Monitor your databases]
+
+=== Assessment and optimization for over-provisioned Microsoft SQL Server licenses
+The savings calculator now evaluates whether Enterprise edition is required for your Microsoft SQL Server deployment. If a license is over-provisioned, the calculator recommends downgrading. You'll be able to automatically downgrade the license in Databases by optimizing the application.
+
+* link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html[Explore savings with FSx for ONTAP for your database workloads^]
+* link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Optimize your SQL Server workloads]
