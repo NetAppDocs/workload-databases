@@ -42,6 +42,7 @@ Lastly, if you chose to operate in _automate_ mode, you must link:create-databas
 .What's next
 When you have FSx for ONTAP managed hosts in your Databases inventory, you can link:create-database.html[create a user database] or link:create-sandbox-clone.html[clone your host to create a sandbox]. 
 
-When you have Elastic Block Store hosts in your Databases inventory, you can link:explore-savings.html[explore savings with the Storage savings calculator]. 
+When you have Elastic Block Store or FSx for Windows File Server hosts in your Databases inventory, you can link:explore-savings.html[explore savings with the savings calculator]. 
+
 
 

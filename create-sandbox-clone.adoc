@@ -29,7 +29,7 @@ Source database::: You need a source database available for the clone.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Databases tile, select *Go to Databases Inventory*.
+. In the Databases tile, select *Go to Databases inventory*.
 . In Databases, select the *Sandboxes* tab. 
 . In the Sandboxes tab, select *Create new sandbox*.
 . On the Create new sandbox page, under Database source, provide the following: 
