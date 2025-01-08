@@ -17,5 +17,5 @@ link:https://docs.netapp.com/us-en/workload-databases/monitor-databases.html[Mon
 === Assessment and optimization for over-provisioned Microsoft SQL Server licenses
 The savings calculator now evaluates whether Enterprise edition is required for your Microsoft SQL Server deployment. If a license is over-provisioned, the calculator recommends downgrading. You'll be able to automatically downgrade the license in Databases by optimizing the application.
 
-* link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html[Explore savings with FSx for ONTAP for your database workloads^]
+* link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html[Explore savings with FSx for ONTAP for your database workloads]
 * link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Optimize your SQL Server workloads]
