@@ -59,12 +59,8 @@ In the Inventory tab, the estimated cost shown for each Microsoft SQL instance i
 == Multiple FSx for ONTAP file systems 
 Workload Factory doesn't support creating or saving configurations for Microsoft SQL Server with multiple FSx for ONTAP file systems. Only one FSx for ONTAP file system configuration deployment is supported. 
 
-== Regional availability for Microsoft SQL Server deployment in a private network with Terraform
-Microsoft SQL Server deployment in a private network with no outbound connectivity using Terraform is only supported in us-east-1 (N. Virginia) region.
-PostgreSQL doesn't support Amazon CloudWatch or deployment in a private network. 
-
 == Operating system patch assessment
 The operating system patch assessment may not work in a private network. The assessment relies on AWS Patch Manager. To understand how to patch Windows EC2 instances in a private network, refer to link:https://aws.amazon.com/blogs/mt/how-to-patch-windows-ec2-instances-in-private-subnets-using-aws-systems-manager/[the AWS Cloud Operations Blog "How to patch Windows EC2 instances in private subnets Using AWS Systems Manager"^].
 
 == Compute rightsizing optimization
-When changing to certain instance types, network configuration may be reset which may then cause node connection failure during optimization and result in job failure. Manual intervention may be needed to check and update the DNS setting and iSCSI sessions. Refer to link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/resize-limitations.html[Amazon Elastic Compute Cloud documentation^] for more information.
+When changing to certain instance types, network configuration may be reset which may then cause node connection failure during optimization and result in job failure. Manual intervention may be needed to check and update the DNS setting and iSCSI sessions. Refer to link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/resize-limitations.html[Amazon Elastic Compute Cloud documentation^] for more information about EC2 resize limitations.
