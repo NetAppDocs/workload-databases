@@ -23,7 +23,7 @@ Workload factory assesses the optimization status of the following configuration
 * Storage layout: includes user data files placement, log files placement, and TempDB placement
 * Storage configuration: includes capacity management, thin provisioning, tiering policy, snapshots, and Multi-path I/O status, policy, and sessions, and more 
 * Compute: includes rightsizing, operating system patches, and network adapter settings like Receive Side Scaling (RSS) and TCP offloading
-* Applications: includes Microsoft SQL Server licenses and MAXDOP settings 
+* Applications: includes Microsoft SQL Server licenses, Microsoft SQL Server patch, and MAXDOP settings 
 
 .Before you begin
 * You must have credentials with read or automate permissions.
