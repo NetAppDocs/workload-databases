@@ -165,7 +165,33 @@ If FSx for Windows shadow copies are detected, the default value is *Daily*. If 
 . Review the calculations and recommendation provided on the page. 
 +
 Additionally, scroll down to the bottom of the page to *Export PDF* or *View calculations*. 
-
+--
+.Microsoft SQL Server on-premises 
+--
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In the Databases tile, select *Explore savings* then *Microsoft SQL Server on-premises* from the dropdown menu.
+. From the SQL Server on-premises tab, download the script to assess your on-premises SQL Server environments. 
+.. Download the assessment script. The script  is a data collection tool based on PowerShell. It gathers and then uploads SQL Server configuration and performance data to BlueXP workload factory. The migration advisor assesses the data and plans FSx for ONTAP deployment for your SQL Server environment.
++
+image:screenshot-download-script-on-premises.png["A screenshot of the SQL Server on-premises tab shows the option to download the assessment script."]
+.. Run the script on the SQL Server host. 
+.. Upload the script output in the SQL Server on-premises tab in workload factory.
++
+image:screenshot-upload-script-on-premises.png["A screenshot of the SQL Server on-premises tab shows the option to upload the assessment script."]
+. From the SQL Server on-premises tab, select *Explore savings* to run a cost analysis of the SQL Server on-premises host against FSx for ONTAP. 
+. In the Savings calculator, select the region for the on-premises host. 
+. For more accurate results, update Compute information and Storage and performance details.
+. Optionally, provide the following details on clones (shadow copies) and snapshots in your FSx for Windows storage for a more accurate cost savings estimate.  
+.. *Snapshot frequency*: Select a snapshot frequency from the dropdown menu.
++
+If FSx for Windows shadow copies are detected, the default value is *Daily*. If shadow copies aren't detected, the default value is *No snapshot frequency*.
+.. *Clone refresh frequency*: Select the frequency that clones refresh from the dropdown menu.
+.. *Number of cloned copies*: Enter the number of cloned copies in the FSx for Windows configuration. 
+.. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.  
+. Review the calculations and recommendation provided on the page. 
++
+Additionally, scroll down to the bottom of the page to *Export PDF* or *View calculations*. 
 --
 ====
 
