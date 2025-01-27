@@ -182,12 +182,12 @@ image:screenshot-upload-script-on-premises.png["A screenshot of the SQL Server o
 . From the SQL Server on-premises tab, select *Explore savings* to run a cost analysis of the SQL Server on-premises host against FSx for ONTAP. 
 . In the Savings calculator, select the region for the on-premises host. 
 . For more accurate results, update Compute information and Storage and performance details.
-. Optionally, provide the following details on clones (shadow copies) and snapshots in your FSx for Windows storage for a more accurate cost savings estimate.  
+. Optionally, provide the following details on clones (shadow copies) and snapshots in your on-premises database environment for a more accurate cost savings estimate.  
 .. *Snapshot frequency*: Select a snapshot frequency from the dropdown menu.
 +
 If FSx for Windows shadow copies are detected, the default value is *Daily*. If shadow copies aren't detected, the default value is *No snapshot frequency*.
 .. *Clone refresh frequency*: Select the frequency that clones refresh from the dropdown menu.
-.. *Number of cloned copies*: Enter the number of cloned copies in the FSx for Windows configuration. 
+.. *Number of cloned copies*: Enter the number of cloned copies in the on-premises configuration. 
 .. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.  
 . Review the calculations and recommendation provided on the page. 
 +
