@@ -14,7 +14,7 @@ BlueXP workload factory for Databases continuously scans and assesses Microsoft 
 .About this task
 The assessment runs automatically and continuously once every day for Microsoft SQL Server instances with FSx for ONTAP storage managed in workload factory. Assessment reports are available in the optimization dashboard only if a daily scheduled job has run after deployment or after managing an instance.
 
-Workload factory provides detailed recommendations to optimize configurations based on best practices for FSx for ONTAP storage. 
+Workload factory provides detailed recommendations to optimize configurations based on best practices for FSx for ONTAP storage. You can review the recommendations and choose to optimize unoptimized configurations.
 
 What is scanned::
 Workload factory assesses the optimization status of the following configurations for Microsoft SQL Server instances:  
@@ -22,13 +22,15 @@ Workload factory assesses the optimization status of the following configuration
 * Storage sizing: includes storage tier, file system headroom, log drive size, and TempDB drive size  
 * Storage layout: includes user data files placement, log files placement, and TempDB placement
 * Storage configuration: includes capacity management, thin provisioning, tiering policy, snapshots, and Multi-path I/O status, policy, and sessions, and more 
-* Compute: includes rightsizing and operating system patches
-* Applications: includes Microsoft SQL Server licenses  
+* Compute: includes rightsizing, operating system patches, and network adapter settings like Receive Side Scaling (RSS) and TCP offloading
+* Applications: includes Microsoft SQL Server licenses, Microsoft SQL Server patch, and MAXDOP settings 
 
 .Before you begin
 * You must have credentials with read or automate permissions.
 * To assess the storage of a Microsoft SQL Server instance, the instance must be managed by workload factory and the storage type must be FSx for ONTAP. 
-* Make sure you review each recommendation carefully before selecting to optimize a setting or configuration. 
+* Make sure you review each recommendation carefully before selecting to optimize a setting or configuration. For RSS and MAXDOP settings, we suggest that you test the recommended settings to determine performance improvements before making changes to your production environment. 
+
+NOTE: The optimization process may cause instance downtimes or service interruptions. Make sure you review the optimization summary and action items before you choose to optimize a configuration.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -51,5 +53,4 @@ The recommendation explains best practices and potential pitfalls of unoptimized
 
 .Result
 The optimization process initiates. Select the *Job monitoring* tab to view the status of the operation.
-
 
