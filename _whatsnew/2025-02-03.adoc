@@ -1,0 +1,13 @@
+=== On-premises database environments cost analysis and migration planning
+BlueXP workload factory for Databases now detects, analyzes, and help you plan for on-premises database migration to Amazon FSx for NetApp ONTAP. You can use the savings calculator to estimate the cost of running your on-premises database environment in the cloud and review recommendations for migrating your on-premises database environment to the cloud.
+
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html[Explore savings for on-premises database environments]
+
+=== New optimization assessments for Databases
+The following assessments are now available in BlueXP workload factory for Databases. These assessments are focused on detecting and protecting against potential security vulnerabilities and detecting and alleviating performance bottlenecks. 
+
+* *Receive side scaling (RSS) configuration*: checks if the RSS configuration is enabled and if the number of queues is set to the recommended value. The assessment also provides recommendations to optimize the RSS configuration.
+* *Maximum Degree of Parallelism (MAXDOP) server configuration*: The assessment checks if MAXDOP is configured correctly and provides recommendations to optimize performance.
+* *Microsoft SQL Server patches*: The assessment checks if the latest patches are installed on the SQL Server instances and provides recommendations to install the latest patches.
+
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Optimize configurations]
