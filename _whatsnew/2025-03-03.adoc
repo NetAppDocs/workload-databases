@@ -22,4 +22,4 @@ BlueXP workload factory for Databases now supports remediation for the maximum d
 link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Optimize configurations]
 
 === Email savings analysis report
-When you explore savings for your Amazon Elastic Block Store and FSx for Windows File Server storage environments when compared with FSx for ONTAP, you can now send the recommendation report via email. 
+When exploring savings for your Amazon Elastic Block Store and FSx for Windows File Server storage environments when compared with FSx for ONTAP, you can now send the recommendation report via email to yourself, team members, and customers. 
