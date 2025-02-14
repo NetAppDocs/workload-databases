@@ -12,6 +12,8 @@ indexpage:
           url: /quick-start-databases.html
     - title: Use Databases
       links:
+        - title: Explore savings
+          url: /explore-savings.html
         - title: Create a database server
           url: /create-database-server.html
         - title: Create a database
