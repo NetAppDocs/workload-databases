@@ -12,7 +12,7 @@ summary: "Compare the costs of using Amazon Elastic Block Store (EBS), FSx for W
 Explore savings in BlueXP workload factory for Databases for your database workloads by comparing the costs of using Microsoft SQL Server on Amazon Elastic Block Store (EBS), FSx for Windows File Server, and on-premises storage with FSx for ONTAP storage. 
 
 == About this task
-Workload factory has several ways for you to explore savings for your database workloads running on Amazon Elastic Block Store (EBS), FSx for Windows File Server, and on-premises storage - from the Dashboard, from the Inventory tab, and from the Explore savings tab. In all cases, you can to use the savings calculator to compare various cost components of running Microsoft SQL Server workloads like storage, compute, SQL license, snapshots, and clones for your database workloads on FSx for ONTAP file systems against Elastic Block Store (EBS), FSx for Windows File Server, and on-premises storage.
+Workload factory has several ways for you to explore savings for your database workloads running on Amazon Elastic Block Store (EBS), FSx for Windows File Server, and on-premises storage - from the Dashboard, from the Inventory tab, and from the Explore savings tab. In all cases, you can use the savings calculator to compare various cost components of running Microsoft SQL Server workloads like storage, compute, SQL license, snapshots, and clones for your database workloads on FSx for ONTAP file systems against Elastic Block Store (EBS), FSx for Windows File Server, and on-premises storage.
 
 If workload factory determines that you could save money by running these workloads on an FSx for ONTAP file system, you can deploy Microsoft SQL over FSx for ONTAP directly from the savings calculator in workload factory. When you have multiple Microsoft SQL Server instances over Elastic Block Store, FSx for Windows File Server, or on-premises storage, we'll recommend an FSx for ONTAP configuration with a single SQL instance.
 
@@ -24,7 +24,7 @@ image:screenshot-dashboard-potential-savings-tile.png["A screenshot of the poten
 .Savings calculator
 You can utilize the savings calculator so you can compare various cost components of running Microsoft SQL Server workloads like storage, compute, SQL license, snapshots, and clones for your database workloads on FSx for ONTAP file systems against Elastic Block Store (EBS), FSx for Windows File Server, and on-premises storage. Depending on your storage requirements, you might find that FSx for ONTAP file systems are the most cost effective for your database workloads.
 
-The calculator displays whether the storage for the database workloads on these Microsoft SQL Servers would cost less if you used an FSx for ONTAP file system. <<Calculator options,Learn how to use the calculator>>
+The calculator displays whether the storage for the database workloads on these Microsoft SQL Servers would cost less if you used an FSx for ONTAP file system. <<Calculator options,Learn how to use the calculator.>>
 
 image:screenshot-ebs-savings-calculator-update.png["A screenshot of the savings calculator page shows the selected Microsoft SQL Server on Amazon Elastic Block Store configuration on the left with the option to customize snapshot and clone values. Cost savings in dollar amount and percentage savings as well as the total monthly cost for using Microsoft SQL Server on FSx for ONTAP and Elastic Block Store storage display on the left."]
 
