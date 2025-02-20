@@ -1,8 +1,8 @@
-=== PostgreSQL HA configuration and quick create
+=== PostgreSQL high availability configuration and quick create
 Two new features area supported in BlueXP workload factory for Databases: 
 
-* PostgreSQL HA configuration: You can now deploy an HA configuration for PostgreSQL server. 
-* Quick create: You can use this fast deployment option to create a PostgreSQL server with FCI configuration and embedded best practices. 
+* PostgreSQL high availability (HA) configuration: You can now deploy an HA configuration for PostgreSQL server. 
+* Quick create: You can use this fast deployment option to create a PostgreSQL server with HA configuration and embedded best practices. 
 
 link:https://review.docs.netapp.com/us-en/workload-databases_explore-savings-updates/create-postgresql-server.html[Create a PostgreSQL server]
 
