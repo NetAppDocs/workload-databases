@@ -48,13 +48,13 @@ You can use the _Advanced create_ deployment mode to complete this task in workl
 
 //.Quick create
 //-- 
-//NOTE: In _Quick create_, FCI is the default deployment model, Windows 2016 is the default Windows version, and SQL 2019 Standard Edition is the default SQL version. 
+//NOTE: In _Quick create_, HA is the default deployment model, Windows 2016 is the default Windows version, and SQL 2019 Standard Edition is the default SQL version. 
 
 //.Steps
 //. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-//. In the Databases tile, select *Deploy database host*.
+//. In the Databases tile, select *Deploy database host* and then select *PostgreSQL Server* from the dropdown menu.
 //. Select *Quick create*.  
-//. Under *AWS settings*, provide the following: 
+//. Under *Landing zone*, provide the following: 
 //.. *AWS credentials*: Select AWS credentials with automate permissions to deploy the new database host. 
 //+
 //AWS credentials with _automate_ permissions let workload factory deploy and manage the new database host from your AWS account within workload factory.
@@ -76,7 +76,7 @@ You can use the _Advanced create_ deployment mode to complete this task in workl
 //VPC DNS attributes `EnableDnsSupport` and `EnableDnsHostnames` are modified to enable endpoint address resolution if they aren't already set to `true`.
 //.. *Availability zones*: Select availability zones and subnets. 
 //+
-//NOTE: FCI deployments are only supported on Multiple Availability Zone (MAZ) FSx for ONTAP configurations.
+//NOTE: HA deployments are only supported on Multiple Availability Zone (MAZ) FSx for ONTAP configurations.
 //+
 //Subnets should not share the same route table for high availability. 
 
@@ -84,8 +84,7 @@ You can use the _Advanced create_ deployment mode to complete this task in workl
 //... In the *Cluster configuration - Node 2* field, select the secondary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the secondary availability zone from the *Subnet* dropdown menu. 
 //
 //. Under *Application settings*, enter a user name and password for *Database credentials*. 
-//. Under *Connectivity*, provide the following: 
-//.. *Key pair*: Select a key pair.
+//. Under *Connectivity*, select a key pair to connect securely to your instance.
 //. Under *Infrastructure settings*, provide the following:  
 //.. *FSx for ONTAP system*: Create a new FSx for ONTAP file system or use an existing FSx for ONTAP file system. 
 //... *Create new FSx for ONTAP*: Enter user name and password.
@@ -113,10 +112,10 @@ You can use the _Advanced create_ deployment mode to complete this task in workl
 //--
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Databases tile, select *Deploy database host* and then select *PostgreSQL* from the dropdown menu. 
+. In the Databases tile, select *Deploy database host* and then select *PostgreSQL Server* from the dropdown menu. 
 . Select *Advanced create*. 
-. For *Deployment model*,  *Standalone instance* is the default.
-. Under *AWS settings*, provide the following: 
+. Under *Deployment model*,  select *Standalone instance* or *High availability (HA)*.
+. Under *Landing zone*, provide the following: 
 .. *AWS credentials*: Select AWS credentials with automate permissions to deploy the new database host. 
 +
 AWS credentials with _automate_ permissions let workload factory deploy and manage the new database host from your AWS account within workload factory.
@@ -141,9 +140,9 @@ VPC DNS attributes `EnableDnsSupport` and `EnableDnsHostnames` are modified to e
 For single instance deployments::: 
 ... In the *Cluster configuration - Node 1* field, select an availability zone from the *Availability zone* dropdown menu and a subnet from the *Subnet* dropdown menu. 
 +
-//For FCI deployments::: 
-//... In the *Cluster configuration - Node 1* field, select the primary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the primary availability zone from the *Subnet* dropdown menu. 
-//... In the *Cluster configuration - Node 2* field, select the secondary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the secondary availability zone from the *Subnet* dropdown menu. 
+For HA deployments::: 
+... In the *Cluster configuration - Node 1* field, select the primary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the primary availability zone from the *Subnet* dropdown menu. 
+... In the *Cluster configuration - Node 2* field, select the secondary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the secondary availability zone from the *Subnet* dropdown menu. 
 
 .. *Security group*: Select an existing security group or create a new security group. 
 +
