@@ -37,7 +37,9 @@ Credentials and permissions::: You must have link:https://docs.netapp.com/us-en/
 
 == Create a database server
 //Add _Quick create_ when available. -Rachel
-You can use the _Advanced create_ deployment mode to complete this task in workload factory with _Automate_ mode permissions. You can also use the following tools available in the Codebox: REST API, AWS CLI, and AWS CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox[Learn how to use Codebox for automation^]. 
+You can use the _Advanced create_ deployment mode to complete this task in workload factory with _Automate_ mode permissions. You can also use the following tools available in the Codebox: REST API, AWS CLI, AWS CloudFormation, and Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox[Learn how to use Codebox for automation^]. 
+
+NOTE: When using Terraform from Codebox, the code you copy or download hides `fsxadmin` and `vsadmin` passwords. You'll need to re-enter the passwords when you run the code. You'll need to include the following permissions for the user account in addition to _Automate_ mode permissions: `iam:TagRole` and `iam:TagInstanceProfile`. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#use-terraform-from-codebox[Learn how to use Terraform from Codebox^].
 
 //Add Terraform if needed.
 //NOTE: When using Terraform from Codebox, the code you copy or download hides `fsxadmin` and `vsadmin` passwords. You'll need to re-enter the passwords when you run the code. You'll need to include the following permissions for the user account in addition to _Automate_ mode permissions: `iam:TagRole` and `iam:TagInstanceProfile`. 
