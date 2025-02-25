@@ -33,6 +33,13 @@ To manage a host instance in a private network with no external connectivity, th
 * `ssmmessages`
 * `fsx` 
 
+If you use a proxy server for all outbound connections from EC2 instances, you must allow access to the following domains so that management operations work:
+ 
+* ``.microsoft.com``
+* ``.powershellgallery.com``
+* ``.aws.amazon.com``
+* ``.amazonaws.com``
+
 .Before you begin
 Complete the following prerequisites before you begin: 
 
