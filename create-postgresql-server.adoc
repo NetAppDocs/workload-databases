@@ -137,12 +137,14 @@ VPC DNS attributes `EnableDnsSupport` and `EnableDnsHostnames` are modified to e
 
 .. *Availability zones*: Select availability zones and subnets.
 +
-For single instance deployments::: 
-... In the *Cluster configuration - Node 1* field, select an availability zone from the *Availability zone* dropdown menu and a subnet from the *Subnet* dropdown menu. 
+For single instance deployments: 
 +
-For HA deployments::: 
-... In the *Cluster configuration - Node 1* field, select the primary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the primary availability zone from the *Subnet* dropdown menu. 
-... In the *Cluster configuration - Node 2* field, select the secondary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the secondary availability zone from the *Subnet* dropdown menu. 
+In the *Cluster configuration - Node 1* field, select an availability zone from the *Availability zone* dropdown menu and a subnet from the *Subnet* dropdown menu. 
++
+For HA deployments:
++
+* In the *Cluster configuration - Node 1* field, select the primary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the primary availability zone from the *Subnet* dropdown menu. 
+* In the *Cluster configuration - Node 2* field, select the secondary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the secondary availability zone from the *Subnet* dropdown menu. 
 
 .. *Security group*: Select an existing security group or create a new security group. 
 +
@@ -150,7 +152,7 @@ Two security groups get attached to the SQL nodes (EC2 instances) during new ser
 +
 1. A workload security group is created to allow ports and protocols required for PostgreSQL. 
 +
-2. For an existing FSx for ONTAP file system, the security group associated with it is added automatically to the PostgreSQL node which allows communication to the file system. When a new FSx for ONTAP system is created, a new security group is created for the FSx for ONTAP file system and the same security group also gets attached to SQL node.
+2. For a new FSx for ONTAP file system, a new security group is created and attached to the SQL node. For an existing FSx for ONTAP file system, the security group associated with it is added automatically to the PostgreSQL node which allows communication to the file system. 
 
 . Under *Application settings*, provide the following: 
 .. Select the *Operating system* from the dropdown menu.
