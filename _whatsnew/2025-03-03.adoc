@@ -6,12 +6,7 @@ Two new features area supported in BlueXP workload factory for Databases:
 
 link:https://review.docs.netapp.com/us-en/workload-databases_explore-savings-updates/create-postgresql-server.html[Create a PostgreSQL server]
 
-=== AWS credentials improve savings calculator analysis
-You now have the option to add AWS credentials from the savings calculator. Adding credentials improves the accuracy of the savings calculator analysis of your Amazon Elastic Block Store and FSx for Windows File Server storage environments when compared with FSx for ONTAP.
-
-link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html[Explore savings with FSx for ONTAP for your database workloads]
-
-=== Resiliency assessment for database workloads
+=== Resiliency assessment for local snapshot schedule
 A new resiliency assessment is available for database workloads. We assess if volumes for your Microsoft SQL Server instances have valid scheduled snapshot policies. Snapshots are point-in time copies of your data and help keep your database environments resilient in case of data loss. 
 
 link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Optimize configurations]
