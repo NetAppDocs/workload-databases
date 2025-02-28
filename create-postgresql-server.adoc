@@ -12,16 +12,14 @@ summary: "Create a new PostgreSQL SQL server within BlueXP workload factory for 
 Creating a new PostgreSQL server, or database host, in BlueXP workload factory for Databases requires an FSx for ONTAP file system deployment and resources for Active Directory. 
 
 .About this task
-You'll need AWS account credentials and _automate_ permissions. 
-
-Before you begin, learn about the available storage deployment types for the database host configuration, Active Directory deployment, workload factory modes of operation, and the requirements to complete this operation. 
+Before creating a PostgreSQL server from BlueXP workload factory, learn about the available storage deployment types for the database host configuration, workload factory modes of operation, and the requirements to complete this operation. 
 
 FSx for ONTAP file system deployments:::
 Creating a new PostgreSQL server requires an FSx for ONTAP file system as the storage backend. You can use an existing FSx for ONTAP file system or create a new file system. If you select an existing FSx for ONTAP file system as your database server storage backend, we create a new storage VM for the PostgreSQL workloads. 
 +
 FSx for ONTAP file systems have two PostgreSQL server deployment models: _High Availability (HA)_ or _single instance_. Different resources are created for the FSx for ONTAP file system depending on the FSx for ONTAP deployment model you select.
 
-* *High Availability (HA) deployment*: A Multiple Availability Zone FSx for NetApp ONTAP file system is deployed when a new FSx for ONTAP file system is selected for HA deployment. Separate volumes and LUNs are created for data, log, and tempdb files for an HA deployment. An additional volume and LUN are created for Quorum or witness disk for Windows cluster. HA deployment configures streaming replication between the primary and secondary PostgreSQL servers.
+* *High Availability (HA) deployment*: A Multiple Availability Zone FSx for NetApp ONTAP file system is deployed when a new FSx for ONTAP file system is selected for HA deployment. Separate volumes and LUNs are created for data, log, and tempdb files for an HA deployment. An additional volume and LUN are created for Quorum or witness disk for Windows cluster. HA deployment configures Streaming replication between the primary and secondary PostgreSQL servers.
 
 * *Single instance deployment*: A Single Availability Zone FSx for ONTAP file system is created when a new PostgreSQL server is created. In addition, separate volumes and LUNs are created for data, log, and tempdb files.
 
