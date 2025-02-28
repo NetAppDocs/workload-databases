@@ -1,0 +1,26 @@
+=== PostgreSQL high availability configuration and quick create
+Two new features area supported in BlueXP workload factory for Databases: 
+
+* PostgreSQL high availability (HA) configuration: You can now deploy an HA configuration for PostgreSQL server. 
+* Quick create: You can use this fast deployment option to create a PostgreSQL server with HA configuration and embedded best practices. 
+
+link:https://review.docs.netapp.com/us-en/workload-databases_explore-savings-updates/create-postgresql-server.html[Create a PostgreSQL server]
+
+=== Terraform support for PostgreSQL server creation
+You can now use Terraform from the Codebox to deploy PostgreSQL. 
+
+* link:https://docs.netapp.com/us-en/workload-databases/create-postgresql-server.html[Create a PostgreSQL database server^]
+* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html[Use Terraform from Codebox^]
+
+=== Resiliency assessment for local snapshot schedule
+A new resiliency assessment is available for database workloads. We assess if volumes for your Microsoft SQL Server instances have valid scheduled snapshot policies. Snapshots are point-in time copies of your data and help keep your database environments resilient in case of data loss. 
+
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Optimize configurations]
+
+=== MAXDOP remediation for database workloads 
+BlueXP workload factory for Databases now supports remediation for the maximum degree of parallelism (MAXDOP) server configuration. When MAXDOP configuration is suboptimal, you can let BlueXP workload factory optimize the configuration for you.
+
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Optimize configurations]
+
+=== Email savings analysis report
+When exploring savings for your Amazon Elastic Block Store and FSx for Windows File Server storage environments when compared with FSx for ONTAP, you can now send the recommendation report via email to yourself, team members, and customers. 
