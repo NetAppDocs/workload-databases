@@ -21,7 +21,7 @@ Creating a new PostgreSQL server requires an FSx for ONTAP file system as the st
 +
 FSx for ONTAP file systems have two PostgreSQL server deployment models: _High Availability (HA)_ or _single instance_. Different resources are created for the FSx for ONTAP file system depending on the FSx for ONTAP deployment model you select.
 
-* *High Availability (HA) deployment*: A Multiple Availability Zone FSx for NetApp ONTAP file system is deployed when a new FSx for ONTAP file system is selected for HA deployment. Separate volumes and LUNs are created for data, log, and tempdb files for an FCI deployment. An additional volume and LUN are created for Quorum or witness disk for Windows cluster. HA deployment configures streaming replication between the primary and secondary PostgreSQL servers.
+* *High Availability (HA) deployment*: A Multiple Availability Zone FSx for NetApp ONTAP file system is deployed when a new FSx for ONTAP file system is selected for HA deployment. Separate volumes and LUNs are created for data, log, and tempdb files for an HA deployment. An additional volume and LUN are created for Quorum or witness disk for Windows cluster. HA deployment configures streaming replication between the primary and secondary PostgreSQL servers.
 
 * *Single instance deployment*: A Single Availability Zone FSx for ONTAP file system is created when a new PostgreSQL server is created. In addition, separate volumes and LUNs are created for data, log, and tempdb files.
 
@@ -40,7 +40,7 @@ Ensure you have the following prerequisites before you create a new database hos
 Credentials and permissions::: You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and automate mode permissions^] to create a new database host in workload factory. 
 
 == Create a database server
-You can use the _Advanced create_ deployment mode to complete this task in workload factory with _Automate_ mode permissions. You can also use the following tools available in the Codebox: REST API, AWS CLI, AWS CloudFormation, and Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox[Learn how to use Codebox for automation^]. 
+You can use _Quick create_ or _Advanced create_ deployment modes to complete this task in workload factory with _Automate_ mode permissions. You can also use the following tools available in the Codebox: REST API, AWS CLI, AWS CloudFormation, and Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox[Learn how to use Codebox for automation^]. 
 
 NOTE: When using Terraform from Codebox, the code you copy or download hides `fsxadmin` and `vsadmin` passwords. You'll need to re-enter the passwords when you run the code. You'll need to include the following permissions for the user account in addition to _Automate_ mode permissions: `iam:TagRole` and `iam:TagInstanceProfile`. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#use-terraform-from-codebox[Learn how to use Terraform from Codebox^].
 
