@@ -137,14 +137,14 @@ VPC DNS attributes `EnableDnsSupport` and `EnableDnsHostnames` are modified to e
 
 .. *Availability zones*: Select availability zones and subnets.
 +
-For single instance deployments: 
+For single instance deployments::: 
 +
 In the *Cluster configuration - Node 1* field, select an availability zone from the *Availability zone* dropdown menu and a subnet from the *Subnet* dropdown menu. 
 +
-For HA deployments:
+For HA deployments:::
 +
-* In the *Cluster configuration - Node 1* field, select the primary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the primary availability zone from the *Subnet* dropdown menu. 
-* In the *Cluster configuration - Node 2* field, select the secondary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the secondary availability zone from the *Subnet* dropdown menu. 
+... In the *Cluster configuration - Node 1* field, select the primary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the primary availability zone from the *Subnet* dropdown menu. 
+... In the *Cluster configuration - Node 2* field, select the secondary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the secondary availability zone from the *Subnet* dropdown menu. 
 
 .. *Security group*: Select an existing security group or create a new security group. 
 +
