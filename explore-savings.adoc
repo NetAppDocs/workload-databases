@@ -12,13 +12,21 @@ summary: "Compare the costs of using Amazon Elastic Block Store (EBS), FSx for W
 Explore savings in BlueXP workload factory for Databases for your database workloads by comparing the costs of using Microsoft SQL Server on Amazon Elastic Block Store (EBS), FSx for Windows File Server, and on-premises storage with FSx for ONTAP storage. 
 
 == About this task
-Workload factory provides a savings calculator so you can compare various cost components of running Microsoft SQL Server workloads like storage, compute, SQL license, snapshots, and clones for your database workloads on FSx for ONTAP file systems against Elastic Block Store (EBS), FSx for Windows File Server, and on-premises storage. Depending on your storage requirements, you might find that FSx for ONTAP file systems are the most cost effective for your database workloads.
+Workload factory has several ways for you to explore savings for your database workloads running on Amazon Elastic Block Store (EBS), FSx for Windows File Server, and on-premises storage - from the Dashboard, from the Inventory tab, and from the Explore savings tab. In all cases, you can use the savings calculator to compare various cost components of running Microsoft SQL Server workloads like storage, compute, SQL license, snapshots, and clones for your database workloads on FSx for ONTAP file systems against Elastic Block Store (EBS), FSx for Windows File Server, and on-premises storage.
 
-The calculator displays whether the storage for the database workloads on these Microsoft SQL Servers would cost less if you used an FSx for ONTAP file system.
+If workload factory determines that you could save money by running these workloads on an FSx for ONTAP file system, you can deploy Microsoft SQL over FSx for ONTAP directly from the savings calculator in workload factory. When you have multiple Microsoft SQL Server instances over Elastic Block Store, FSx for Windows File Server, or on-premises storage, we'll recommend an FSx for ONTAP configuration with a single SQL instance.
 
-image:screenshot-ebs-savings-calculator.png["A screenshot of the savings calculator page shows the selected Microsoft SQL Server on Amazon Elastic Block Store configuration on the left with the option to customize snapshot and clone values. Cost savings in dollar amount and percentage savings as well as the total monthly cost for using Microsoft SQL Server on FSx for ONTAP and Elastic Block Store storage display on the left."]
+.Potential savings for all database workloads
+Go to the Databases *Dashboard* from the workload factory console to get an overview of potential cost savings for running all of your database workloads on FSx for ONTAP. In the *Potential savings* tile, you can view the number of all database workloads you have on Elastic Block Store and FSx for Windows File Server, the potential cost savings, the savings percentage, and visual representation in the bar graph.
 
-If workload factory determines that you could save money by running these workloads on an FSx for ONTAP file system, you can deploy Microsoft SQL over FSx for ONTAP directly from the calculator in workload factory. When you have multiple Microsoft SQL Server instances over Elastic Block Store,  FSx for Windows File Server, or on-premises storage, we'll recommend an FSx for ONTAP configuration with a single SQL instance.
+image:screenshot-dashboard-potential-savings-tile.png["A screenshot of the potential savings tile from the databases dashboard in the workload factory console. The potential savings tile shows the number of all database workloads you have on Elastic Block Store and FSx for Windows File Server, the potential cost savings, the savings percentage, and visual representation in the bar graph."]
+
+.Savings calculator
+You can utilize the savings calculator so you can compare various cost components of running Microsoft SQL Server workloads like storage, compute, SQL license, snapshots, and clones for your database workloads on FSx for ONTAP file systems against Elastic Block Store (EBS), FSx for Windows File Server, and on-premises storage. Depending on your storage requirements, you might find that FSx for ONTAP file systems are the most cost effective for your database workloads.
+
+The calculator displays whether the storage for the database workloads on these Microsoft SQL Servers would cost less if you used an FSx for ONTAP file system. <<Calculator options,Learn how to use the calculator.>>
+
+image:screenshot-ebs-savings-calculator-update.png["A screenshot of the savings calculator page shows the selected Microsoft SQL Server on Amazon Elastic Block Store configuration on the left with the option to customize snapshot and clone values. Cost savings in dollar amount and percentage savings as well as the total monthly cost for using Microsoft SQL Server on FSx for ONTAP and Elastic Block Store storage display on the left."]
 
 //In some cases, workload factory may recommend that you deploy multiple file systems based on the amount of storage you are currently using, and based on the performance characteristics of your database workloads. 
 
@@ -53,6 +61,8 @@ Explore savings via customization: You provide the configuration settings for Mi
 
 Explore savings for detected hosts: Workload factory links to your existing Microsoft SQL servers and pulls in the details to the calculator for automatic comparison. You'll need to grant automate permissions to use this calculator option. You can change the use case, but all other details are automatically determined in the calculation.
 
+Additionally, you can link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[add AWS credentials^] to improve the accuracy of the calculator analysis. Select *Calculate savings based on existing resources*. You'll be redirected to the Add credentials page. After you add credentials, select the existing resources to compare with FSx for ONTAP, and select *Explore savings*.
+
 === Explore savings via customization
 Follow the steps under the tab for your storage type.
 
@@ -82,10 +92,7 @@ Follow the steps under the tab for your storage type.
 * *Storage amount per volume (GiB)*
 * *Provisioned IOPS per volume*
 * *Throughput MB/s*
-.. If you selected the Always On availability deployment model, provide details for *Secondary EC2 specifications* and *Volume types*. 
-. Review the calculations and recommendation provided on the page. 
-+
-Additionally, scroll down to the bottom of the page to *Export PDF* or *View calculations*. 
+.. If you selected the Always On availability deployment model, provide details for *Secondary EC2 specifications* and *Volume types*.  
 --
 .Amazon FSx for Windows File Server
 --
@@ -108,12 +115,20 @@ Additionally, scroll down to the bottom of the page to *Export PDF* or *View cal
 * *Provisioned SSD IOPS*: Enter the provisioned SSD IOPS for the configuration. 
 * *Throughput (MB/s)*: Enter throughput in MB/s. 
 .. Under EC2 specifications, select the *Instance type* from the dropdown menu. 
-. Review the calculations and recommendation provided on the page. 
-+
-Additionally, scroll down to the bottom of the page to *Export PDF* or *View calculations*. 
 
 --
 ====
+
+After you provide details for your database host configuration, review the calculations and recommendations provided on the page.
+
+Additionally, scroll down to the bottom of the page to view the report by selecting one of the following:
+
+* *Export PDF*
+* *Send by email*
+* *View the calculations*
+
+To switch to FSx for ONTAP, follow the instructions to <<Deploy Microsoft SQL Server on AWS EC2 using FSx for ONTAP,deploy Microsoft SQL Server on AQS EC2 using FSx for ONTAP file systems>>.
+
 === Explore savings for detected hosts
 Workload factory enters the detected Elastic Block Store and FSx for Windows File Server host characteristics so that you can explore savings automatically.
 
@@ -142,10 +157,6 @@ If workload factory detects EBS hosts, you'll be redirected to the Explore savin
 .. *Clone refresh frequency*: Select the frequency that clones refresh from the dropdown menu.
 .. *Number of cloned copies*: Enter the number of cloned copies in the EBS configuration. 
 .. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.  
-. Review the calculations and recommendation provided on the page. 
-+
-Additionally, scroll down to the bottom of the page to *Export PDF* or *View calculations*. 
-
 --
 .Amazon FSx for Windows File Server
 --
@@ -162,9 +173,6 @@ If FSx for Windows shadow copies are detected, the default value is *Daily*. If 
 .. *Clone refresh frequency*: Select the frequency that clones refresh from the dropdown menu.
 .. *Number of cloned copies*: Enter the number of cloned copies in the FSx for Windows configuration. 
 .. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.  
-. Review the calculations and recommendation provided on the page. 
-+
-Additionally, scroll down to the bottom of the page to *Export PDF* or *View calculations*. 
 --
 .Microsoft SQL Server on-premises 
 --
@@ -189,11 +197,17 @@ If FSx for Windows shadow copies are detected, the default value is *Daily*. If 
 .. *Clone refresh frequency*: Select the frequency that clones refresh from the dropdown menu.
 .. *Number of cloned copies*: Enter the number of cloned copies in the on-premises configuration. 
 .. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.  
-. Review the calculations and recommendation provided on the page. 
-+
-Additionally, scroll down to the bottom of the page to *Export PDF* or *View calculations*. 
---
+
 ====
+After you provide details for your database host configuration, review the calculations and recommendations provided on the page.
+
+Additionally, scroll down to the bottom of the page to view the report by selecting one of the following:
+
+* *Export PDF*
+* *Send by email*
+* *View the calculations*
+
+To switch to FSx for ONTAP, follow the instructions to <<Deploy Microsoft SQL Server on AWS EC2 using FSx for ONTAP,deploy Microsoft SQL Server on AQS EC2 using FSx for ONTAP file systems>>.
 
 == Deploy Microsoft SQL Server on AWS EC2 using FSx for ONTAP
 If you'd like to switch to FSx for ONTAP to realize cost savings, click *Create* to create the recommended configuration(s) directly from the Create new Microsoft SQL server wizard or click *Save* to save the recommended configuration(s) for later. 
