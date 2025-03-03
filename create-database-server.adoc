@@ -12,9 +12,7 @@ summary: "Create a new Microsoft SQL Server within BlueXP workload factory for D
 Creating a new Microsoft SQL Server, or database host, in BlueXP workload factory for Databases requires an FSx for ONTAP file system deployment and resources for Active Directory. 
 
 .About this task
-You'll need AWS account credentials and _automate_ permissions. 
-
-Before you begin, learn about the available storage deployment types for the database host configuration, Active Directory deployment, workload factory modes of operation, and the requirements to complete this operation.
+Before creating a Microsoft SQL Server from workload factory, learn about the available storage deployment types for the database host configuration, Active Directory deployment, workload factory modes of operation, and the requirements to complete this operation.
 
 After deployment, you'll need to <<Step 2: Enable remote connection on the Microsoft SQL Server,enable remote connection on the Microsoft SQL Server>>. 
 
