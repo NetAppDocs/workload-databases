@@ -9,8 +9,8 @@ link:https://review.docs.netapp.com/us-en/workload-databases_explore-savings-upd
 === Terraform support for PostgreSQL server creation
 You can now use Terraform from the Codebox to deploy PostgreSQL. 
 
-* link:https://docs.netapp.com/us-en/workload-databases/create-postgresql-server.html[Create a PostgreSQL database server^]
-* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html[Use Terraform from Codebox^]
+* link:https://docs.netapp.com/us-en/workload-databases/create-postgresql-server.html[Create a PostgreSQL database server]
+* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html[Use Terraform from Codebox]
 
 === Resiliency assessment for local snapshot schedule
 A new resiliency assessment is available for database workloads. We assess if volumes for your Microsoft SQL Server instances have valid scheduled snapshot policies. Snapshots are point-in time copies of your data and help keep your database environments resilient in case of data loss. 
