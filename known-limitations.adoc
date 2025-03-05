@@ -38,9 +38,6 @@ You'll need to cleanup these up manually or wait for the domain to purge stale e
 == Always On availability groups configuration support
 Managing Always On availability groups configurations isn't supported in workload factory. 
 
-== User-managed Active Directory security groups
-If you select “user-managed Active Directory” during Microsoft SQL Server deployment in workload factory, you must provide a security group that allows traffic between the EC2 instances to the directory service for deployment. Workload factory doesn't automatically attach the security group for user-managed Active Directory like it does for AWS Managed Microsoft AD.
-
 == Custom encryption keys
 Custom encryption keys for FSx for ONTAP aren't listed based on service applicability. You must choose the appropriate key. AWS managed keys are filtered based on applicability to service.
 
