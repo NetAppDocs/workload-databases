@@ -24,7 +24,7 @@ Workload factory assesses the optimization status of the following configuration
 * Storage configuration: includes capacity management, thin provisioning, tiering policy, snapshots, and Multi-path I/O status, policy, and sessions, and more 
 * Compute: includes rightsizing, operating system patches, and network adapter settings like Receive Side Scaling (RSS) and TCP offloading
 * Applications: includes Microsoft SQL Server licenses, Microsoft SQL Server patch, and MAXDOP settings 
-* Resiliency: includes local snapshots, FSx backup, and cross-region replication (CRR)
+* Resiliency: includes local snapshots, FSx for ONTAP backups, and cross-region replication (CRR)
 
 .Before you begin
 * You must have credentials with read or automate permissions.
