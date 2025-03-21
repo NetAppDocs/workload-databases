@@ -49,6 +49,8 @@ You can also download a report of the assessment findings by selecting *Export P
 + 
 The recommendation explains best practices and potential pitfalls of unoptimized configurations.
 . Select to *Optimize* unoptimized configurations.
++
+*Select all* is the default, but you can select specific resources to optimize.
 . Review the optimization summary and action items that appear in the optimization dialog to learn what will happen if you choose to optimize. Some optimization operations may cause instance downtimes or service interruptions. 
 . Select *Continue* to optimize the configuration. 
 
