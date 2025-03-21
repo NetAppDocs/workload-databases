@@ -13,6 +13,8 @@ The optimization enhancements also include receive side scaling (RSS) remediatio
 ==== Enhanced database configuration visibility
 When optimizing database configurations, you'll now benefit from an improved display that presents a comprehensive overview of all resources associated with a database instance. This update, visible during optimization workflows, includes detailed information on the number and types of resources, including databases, volumes, and drives, allowing for a more informed optimization process.
 
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Optimize configurations]
+
 === Quick create available for PostgreSQL server deployment
 You can use this fast deployment option to create a PostgreSQL server with HA configuration and embedded best practices.
 
