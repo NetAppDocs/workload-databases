@@ -7,10 +7,8 @@ The enhancements include new resiliency assessments to check that data redundanc
 * FSx for ONTAP backups: analyzes if FSx for ONTAP file systems serving the SQL Server instance's volumes are configured with scheduled FSx for ONTAP backups.
 * Cross-region replication: assesses if FSx for ONTAP file systems serving Microsoft SQL Server instances are configured with cross-region replication.
 
-=== Compute remediation
-The enhancements also include the following remediation:
-
-Receive side scaling (RSS) remediation: configures RSS to distribute network processing across multiple processors and ensure efficient load distribution.
+==== Compute remediation
+The optimization enhancements also include receive side scaling (RSS) remediation. RSS remediation configures RSS to distribute network processing across multiple processors and ensure efficient load distribution.
 
 ==== Enhanced database configuration visibility
 When optimizing database configurations, you'll now benefit from an improved display that presents a comprehensive overview of all resources associated with a database instance. This update, visible during optimization workflows, includes detailed information on the number and types of resources, including databases, volumes, and drives, allowing for a more informed optimization process.
