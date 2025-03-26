@@ -69,3 +69,10 @@ The operating system patch assessment that is made for optimization purposes may
 
 == On-premises savings calculation
 Cost and percentage savings calculations of volume size for Microsoft SQL Server on-premises storage isn't taken into consideration.
+
+== Cross-region replication assessment
+* The assessment can't determine if cross-region replication (CRR) is being used when the target FSx for ONTAP file system is in different AWS account.
+* Workload factory assesses only the CRR configuration of the source FSx for ONTAP file system. When the assessment appears as "Optimized", this result is based only on the source file system CRR configuration.
+
+== Number of databases within SQL server instances
+In the Inventory tab and on the Dashboard, workload factory supports up to 850 databases within SQL server instances.
