@@ -1,5 +1,5 @@
 === Optimization enhancements
-New optimization assessments, remediation, and the display of multiple resources are available when optimizing your database environments.
+New optimization assessments, remediations, and the display of multiple resources are available when optimizing your database environments.
 
 ==== Resiliency assessments
 The enhancements include new resiliency assessments to check that data redundancy and disaster recovery capabilities are configured for your database environments.
@@ -8,12 +8,20 @@ The enhancements include new resiliency assessments to check that data redundanc
 * Cross-region replication: assesses if FSx for ONTAP file systems serving Microsoft SQL Server instances are configured with cross-region replication.
 
 ==== Compute remediation
-The optimization enhancements also include receive side scaling (RSS) remediation. RSS remediation configures RSS to distribute network processing across multiple processors and ensure efficient load distribution.
+RSS remediation configures RSS to distribute network processing across multiple processors and ensure efficient load distribution.
 
-==== Enhanced database configuration visibility
-When optimizing database configurations, you'll now benefit from an improved display that presents a comprehensive overview of all resources associated with a database instance. This update, visible during optimization workflows, includes detailed information on the number and types of resources, including databases, volumes, and drives, allowing for a more informed optimization process.
+==== Local snapshot remediation
+Local snapshot remediation sets up snapshot policies for volumes for your Microsoft SQL Server instances to keep your database environments resilient in case of data loss. 
 
 link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Optimize configurations]
+
+==== Enhanced database configuration visibility
+When optimizing database configurations, you'll now benefit from an improved display that presents a comprehensive overview of all resources associated with a database instance. This update, visible during optimization workflows, includes detailed information on the number and types of resources, including databases, volumes, and drives, allowing for a more informed optimization process. Also, you'll be able to select multiple resources to optimize. 
+
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Optimize configurations]
+
+=== Improved Inventory view
+The Inventory tab in the workload factory console has been streamlined so that it contains only SQL servers running on Amazon FSx for NetApp ONTAP. Now you'll find SQL servers on-premises and running on Amazon Elastic Block Store and Amazon FSx for Windows File Server in the Explores savings tab. 
 
 === Quick create available for PostgreSQL server deployment
 You can use this fast deployment option to create a PostgreSQL server with HA configuration and embedded best practices.
