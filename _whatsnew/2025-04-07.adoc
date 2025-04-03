@@ -7,6 +7,9 @@ The enhancements include new resiliency assessments to check that data redundanc
 * FSx for ONTAP backups: analyzes if FSx for ONTAP file systems serving the SQL Server instance's volumes are configured with scheduled FSx for ONTAP backups.
 * Cross-region replication: assesses if FSx for ONTAP file systems serving Microsoft SQL Server instances are configured with cross-region replication.
 
+==== Compute remediation
+Receive Side Scaling (RSS) remediation configures RSS to distribute network processing across multiple processors and ensure efficient load distribution.
+
 ==== Local snapshot remediation
 Local snapshot remediation sets up snapshot policies for volumes for your Microsoft SQL Server instances to keep your database environments resilient in case of data loss. 
 
