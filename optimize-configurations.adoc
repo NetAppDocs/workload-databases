@@ -24,7 +24,7 @@ Workload factory assesses the optimization status of the following configuration
 * Storage configuration: includes capacity management, thin provisioning, tiering policy, snapshots, and Multi-path I/O status, policy, and sessions, and more 
 * Compute: includes rightsizing, operating system patches, and network adapter settings like Receive Side Scaling (RSS) and TCP offloading
 * Applications: includes Microsoft SQL Server licenses, Microsoft SQL Server patch, and MAXDOP settings 
-* Resiliency: includes local snapshots
+* Resiliency: includes local snapshots, FSx for ONTAP backups, and cross-region replication (CRR)
 
 .Before you begin
 * You must have credentials with read or automate permissions.
@@ -49,6 +49,8 @@ You can also download a report of the assessment findings by selecting *Export P
 + 
 The recommendation explains best practices and potential pitfalls of unoptimized configurations.
 . Select to *Optimize* unoptimized configurations.
++
+*Select all* is the default, but you can select specific resources to optimize.
 . Review the optimization summary and action items that appear in the optimization dialog to learn what will happen if you choose to optimize. Some optimization operations may cause instance downtimes or service interruptions. 
 . Select *Continue* to optimize the configuration. 
 

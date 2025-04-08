@@ -1,0 +1,29 @@
+=== Optimization enhancements
+New optimization assessments, remediations, and the display of multiple resources are available when optimizing your database environments.
+
+==== Resiliency assessments
+The enhancements include new resiliency assessments to check that data redundancy and disaster recovery capabilities are configured for your database environments.
+
+* FSx for ONTAP backups: analyzes if FSx for ONTAP file systems serving the SQL Server instance's volumes are configured with scheduled FSx for ONTAP backups.
+* Cross-region replication: assesses if FSx for ONTAP file systems serving Microsoft SQL Server instances are configured with cross-region replication.
+
+==== Compute remediation
+Receive Side Scaling (RSS) remediation configures RSS to distribute network processing across multiple processors and ensure efficient load distribution.
+
+==== Local snapshot remediation
+Local snapshot remediation sets up snapshot policies for volumes for your Microsoft SQL Server instances to keep your database environments resilient in case of data loss. 
+
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Optimize configurations]
+
+==== Support for multiple resource selection
+When optimizing database configurations, you'll now be able to select specific resources instead of all resources. 
+
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Optimize configurations]
+
+=== Improved Inventory view
+The Inventory tab in the workload factory console has been streamlined so that it contains only SQL servers running on Amazon FSx for NetApp ONTAP. Now you'll find SQL servers on-premises and running on Amazon Elastic Block Store and Amazon FSx for Windows File Server in the Explore savings tab. 
+
+=== Quick create available for PostgreSQL server deployment
+You can use this fast deployment option to create a PostgreSQL server with HA configuration and embedded best practices.
+
+link:https://docs.netapp.com/us-en/workload-databases/create-postgresql-server.html[Create a PostgreSQL server in BlueXP workload factory]

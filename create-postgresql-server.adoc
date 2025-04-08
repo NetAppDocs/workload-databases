@@ -38,16 +38,76 @@ Ensure you have the following prerequisites before you create a new database hos
 Credentials and permissions::: You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and automate mode permissions^] to create a new database host in workload factory. 
 
 == Create a database server
-You can use the _Advanced create_ deployment mode to complete this task in workload factory with _Automate_ mode permissions. You can also use the following tools available in the Codebox: REST API, AWS CLI, AWS CloudFormation, and Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox[Learn how to use Codebox for automation^]. 
+You can use _Quick create_ or _Advanced create_ deployment modes to complete this task in workload factory with _Automate_ mode permissions. You can also use the following tools available in the Codebox: REST API, AWS CLI, AWS CloudFormation, and Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox[Learn how to use Codebox for automation^]. 
 
 NOTE: When using Terraform from Codebox, the code you copy or download hides `fsxadmin` and `vsadmin` passwords. You'll need to re-enter the passwords when you run the code. You'll need to include the following permissions for the user account in addition to _Automate_ mode permissions: `iam:TagRole` and `iam:TagInstanceProfile`. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#use-terraform-from-codebox[Learn how to use Terraform from Codebox^].
 
-//[role="tabbed-block"]
-//====
-//Add quick create when released
+[role="tabbed-block"]
+====
+
+.Quick create
+-- 
+NOTE: In _Quick create_, HA is the default deployment model, Windows 2016 is the default Windows version, and SQL 2019 Standard Edition is the default SQL version. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In the Databases tile, select *Deploy database host* and then select *PostgreSQL Server* from the dropdown menu.
+. Select *Quick create*.  
+. Under *Landing zone*, provide the following: 
+.. *AWS credentials*: Select AWS credentials with automate permissions to deploy the new database host. 
++
+AWS credentials with _automate_ permissions let workload factory deploy and manage the new database host from your AWS account within workload factory.
++
+AWS credentials with _read_ permissions let workload factory generate a CloudFormation template for you to use in the AWS CloudFormation console. 
++
+If you don't have AWS credentials associated in workload factory and you want to create the new server in workload factory, follow *Option 1* to go to the Credentials page. Manually add the required credentials and permissions for _automate_ mode for Database workloads.  
++
+If you want to complete the create new server form in workload factory so you can download a complete YAML file template for deployment in AWS CloudFormation, follow *Option 2* to ensure you have the required permissions to create the new server within AWS CloudFormation. Manually add the required credentials and permissions for _read_ mode for Database workloads. 
++
+Optionally, you can download a partially completed YAML file template from the Codebox to create the stack outside workload factory without any credentials or permissions. Select *CloudFormation* from the dropdown in the Codebox to download the YAML file. 
+
+.. *Region & VPC*: Select a Region and VPC network. 
++
+Ensure security groups for an existing interface endpoint allow access to HTTPS (443) protocol to the selected subnets. 
++
+AWS service interface endpoints (SQS, FSx, EC2, CloudWatch, CloudFormation, SSM) and the S3 gateway endpoint are created during deployment if not found.  
++
+VPC DNS attributes `EnableDnsSupport` and `EnableDnsHostnames` are modified to enable endpoint address resolution if they aren't already set to `true`.
+.. *Availability zones*: Select availability zones and subnets. 
++
+NOTE: HA deployments are only supported on Multiple Availability Zone (MAZ) FSx for ONTAP configurations.
++
+Subnets should not share the same route table for high availability. 
+
+... In the *Cluster configuration - Node 1* field, select the primary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the primary availability zone from the *Subnet* dropdown menu. 
+... In the *Cluster configuration - Node 2* field, select the secondary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the secondary availability zone from the *Subnet* dropdown menu. 
+
+. Under *Application settings*, enter a user name and password for *Database credentials*. 
+. Under *Connectivity*, select a key pair to connect securely to your instance.
+. Under *Infrastructure settings*, provide the following:  
+.. *FSx for ONTAP system*: Create a new FSx for ONTAP file system or use an existing FSx for ONTAP file system. 
+... *Create new FSx for ONTAP*: Enter user name and password.
++
+A new FSx for ONTAP file system may add 30 minutes or more of installation time. 
+... *Select an existing FSx for ONTAP*: Select FSx for ONTAP name from the dropdown menu, and enter a user name and password for the file system. 
++
+For existing FSx for ONTAP file systems, ensure the following: 
+
+* The routing group attached to FSx for ONTAP allows routes to the subnets to be used for deployment. 
+* The security group allows traffic from the subnets used for deployment, specifically HTTPS (443) and iSCSI (3260) TCP ports. 
+.. *Data drive size*: Enter the data drive capacity and select the capacity unit. 
+. Summary: 
+.. *Preview default*: Review the default configurations set by Quick create. 
+.. *Estimated cost*: Provides an estimate of charges that you might incur if you deployed the resources shown. 
+. Click *Create*.
++ 
+Alternatively, if you want to change any of these default settings now, create the database server with Advanced create. 
++
+You can also select *Save configuration* to deploy the host later. 
+--
 
 .Advanced create
-//--
+--
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Deploy database host* and then select *PostgreSQL Server* from the dropdown menu. 
@@ -144,8 +204,8 @@ In CloudWatch, a log group is created with the name of the stack. A log stream f
 +
 Alternatively, you can save the configuration.
 
-//--
-//====
+--
+====
 
 .What's next
 You can manually configure users, remote access, and databases on the deployed PostgreSQL server. 
