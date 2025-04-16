@@ -25,6 +25,7 @@ Workload factory assesses the optimization status of the following configuration
 * Compute: includes rightsizing, operating system patches, and network adapter settings like Receive Side Scaling (RSS) and TCP offloading
 * Applications: includes Microsoft SQL Server licenses, Microsoft SQL Server patch, and MAXDOP settings 
 * Resiliency: includes local snapshots, FSx for ONTAP backups, and cross-region replication (CRR)
+* Clones: includes options to refresh and delete clones (sandboxes)
 
 .Before you begin
 * You must have credentials with read or automate permissions.
