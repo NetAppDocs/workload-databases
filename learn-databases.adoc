@@ -47,14 +47,8 @@ Workload factory for Databases offers the following features:
 * *Job Monitoring*: monitor and track database job execution progress and diagnose and troubleshoot issues in case any failure occurs.
 * *Continuous optimization*: continuously scans your Microsoft SQL Server estate offline, providing you with a comprehensive report of insights, opportunities, and recommendations to help you achieve operational excellence.
 
-== Tools to use workload factory
-You can use workload factory with the following tools:
-
-* *Workload factory console*: the workload factory console provides a visual interface that gives you a holistic view of your applications and projects
-* *BlueXP console*: the BlueXP console provides a hybrid interface experience so that you can use BlueXP workload factory along with other BlueXP services
-* *REST API*: Workload factory REST APIs let you deploy and manage your FSx for ONTAP file systems and other AWS resources
-* *CloudFormation*: AWS CloudFormation code lets you perform the actions you defined in the workload factory console to model, provision, and manage AWS and third-party resources from the CloudFormation stack in your AWS account.
-* *Terraform BlueXP Workload Factory provider*: Terraform lets you build and manage infrastructure workflows generated in the workload factory console.
+//Cross-repo include for Tools section
+https://raw.githubusercontent.com/NetAppDocs/workload-family/main/_include/learn-about-tools.adoc[]
 
 == Benefits of Amazon FSx for ONTAP for self-managed databases
 
