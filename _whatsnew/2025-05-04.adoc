@@ -1,0 +1,23 @@
+=== Dashboard enhancements 
+
+* Cross-account and cross-region views are available as you navigate between tabs in the BlueXP workload factory console. The new views improve resource management, monitoring, and optimization. 
+* From the *Potential savings* tile in the dashboard, you'll be able to quickly review what you might save by switching to FSx for ONTAP from Amazon Elastic Block Store or Amazon FSx for Windows File Server. 
+
+=== Ad hoc scan available for database configurations
+
+BlueXP workload factory for Databases automatically scans managed Microsoft SQL Server instances with FSx for ONTAP storage for potential configuration issues. Now in addition to the daily scan, you can scan at any time. 
+
+=== PostgreSQL detection API
+
+You can now discover the instances that are running PostgreSQL server databases in your AWS account with the new PostgreSQL detection API. 
+
+link:https://console.workloads.netapp.com/api-doc[BlueXP workload factory API documentation^]
+
+=== Optimization enhancement
+The clone cleanup assessment and remediation identifies and manages old and costly clones. Clones that are older than 60 days can be refreshed or deleted from the BlueXP workload factory console. 
+
+
+
+
+
+
