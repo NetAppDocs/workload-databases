@@ -13,9 +13,13 @@ You can now discover the instances that are running PostgreSQL server databases 
 
 link:https://console.workloads.netapp.com/api-doc[BlueXP workload factory API documentation^]
 
-=== Optimization enhancement
+=== Optimization enhancements
+
+==== Clone cleanup
 The clone cleanup assessment and remediation identifies and manages old and costly clones. Clones that are older than 60 days can be refreshed or deleted from the BlueXP workload factory console. 
 
+==== Postpone and dismiss configuration analysis
+Some configurations might not apply to your database environments. You now have options to postpone a particular configuration analysis by 30 days or dismiss the analysis.
 
 
 
