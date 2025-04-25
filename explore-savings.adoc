@@ -198,6 +198,7 @@ If FSx for Windows shadow copies are detected, the default value is *Daily*. If 
 .. *Number of cloned copies*: Enter the number of cloned copies in the on-premises configuration. 
 .. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.  
 
+On-premises host removal::: After the assessment, you can remove a detected on-premises host. Select the three-dot menu of the host and then select *Delete*. 
 ====
 After you provide details for your database host configuration, review the calculations and recommendations provided on the page.
 
