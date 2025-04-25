@@ -25,7 +25,7 @@ Workload factory assesses the optimization status of the following configuration
 * Compute: includes rightsizing, operating system patches, and network adapter settings like Receive Side Scaling (RSS) and TCP offloading
 * Applications: includes Microsoft SQL Server licenses, Microsoft SQL Server patch, and MAXDOP settings 
 * Resiliency: includes local snapshots, FSx for ONTAP backups, and cross-region replication (CRR)
-* Clones: includes options to refresh and delete clones (sandboxes)
+* Clones: includes options to refresh and delete clones (sandboxes) that are older than 60 days
 
 .Before you begin
 * You must have credentials with read or automate permissions.
@@ -37,10 +37,8 @@ NOTE: The optimization process may cause instance downtimes or service interrupt
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*.
-. In the *Inventory* tab, select the dropdown arrow to expand the row of the host to view its managed instances. 
-+
-The host expands and host instances appear. 
-. Select the three-dot menu of the instance and then select *Optimize*. 
+. In the *Inventory* tab, select the *Instances* tab.
+. Select the three-dot menu of the instance to optimize and then select *Optimize*. 
 . On the Optimize instance page for the SQL Server instance, review the findings from the assessment. 
 +
 You can filter by categories, subcategories, status, severity, and tags. 
@@ -52,7 +50,13 @@ The recommendation explains best practices and potential pitfalls of unoptimized
 . Select to *Optimize* unoptimized configurations.
 +
 *Select all* is the default, but you can select specific resources to optimize.
-. Review the optimization summary and action items that appear in the optimization dialog to learn what will happen if you choose to optimize. Some optimization operations may cause instance downtimes or service interruptions. 
++
+.. For all configurations except clone cleanup, review the optimization details in the optimization dialog to learn what will happen if you choose to optimize. Some optimization operations may cause instance downtimes or service interruptions. 
+.. For clone cleanup, select cloned databases (sandboxes) to refresh or delete.
++
+* Refreshing a clone synchronizes it with its source database. Refresh is available only for clones created in workload factory.
+* Deleting a clone removes it permanently, frees up storage space, and reduces costs. You can delete clones created in and outside of workload factory.
+
 . Select *Continue* to optimize the configuration. 
 
 .Result
