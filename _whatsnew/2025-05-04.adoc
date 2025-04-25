@@ -21,7 +21,6 @@ Some configurations might not apply to your database environments. You now have 
 === Removal of on-premises assessment records
 After you've explored savings for a Microsoft SQL server on-premises host, you have the option to remove the on-premises host record from BlueXP workload factory. 
 
+=== Updated permissions terminology
 
-
-
-
+The workload factory user interface and documentation now use "Read-only" to refer to read permissions and "Read-Write" to refer to automate permissions.
