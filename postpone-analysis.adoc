@@ -1,0 +1,92 @@
+---
+sidebar: sidebar
+permalink: postpone-analysis.html
+keywords: postpone configuration analysis, dismiss configuration analysis, postpone, dismiss, stop, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP
+summary: "Postpone or dismiss the analysis of specific database configurations that don't apply to your database environment to avoid unnecessary alerts and inaccurate optimization results." 
+---
+= Postpone or dismiss the analysis of database configurations
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Postpone or dismiss the analysis of specific database configurations that don't apply to your database environment to avoid unnecessary alerts and inaccurate optimization results. You can reactivate a postponed or dismissed configuration analysis at any time.  
+
+.About this task
+The application requirements for database configurations vary. Workload factory gives you two options for skipping the analysis of specific database configurations so that you can monitor only relevant issues and get an accurate view of the health of relevant configurations. When a specific configuration analysis is postponed or dismissed, the configuration isn't included in the total optimization score.
+
+You can postpone, dismiss, and reactivate the configuration analysis at the configuration level and at the SQL Server instance level. 
+
+* *Postpone for 30 days*: Postponing the analysis will stop the analysis for 30 days. After 30 days, the analysis will restart automatically. 
+
+* *Dismiss*: Dismissing the analysis postpones the analysis indefinitely. You can restart the analysis if needed. 
+
+You can postpone or dismiss the following configurations for Microsoft SQL Server instances:  
+
+* Storage sizing: includes storage tier, file system headroom, log drive size, and TempDB drive size  
+* Storage layout: includes user data files placement, log files placement, and TempDB placement
+* Storage configuration: includes capacity management, thin provisioning, tiering policy, snapshots, and Multi-path I/O status, policy, and sessions, and more 
+* Compute: includes rightsizing, operating system patches, and network adapter settings like Receive Side Scaling (RSS) and TCP offloading
+* Applications: includes Microsoft SQL Server licenses, Microsoft SQL Server patch, and MAXDOP settings 
+* Resiliency: includes local snapshots, FSx for ONTAP backups, and cross-region replication (CRR)
+* Clones
+
+.Before you begin - Are there any prereqs? 
+
+
+The following instructions describe how to postpone, dismiss, or reactivate an analysis at the configuration level. To complete the following tasks for specific SQL Server instances, start in the *Dashboard* tab. 
+
+[role="tabbed-block"]
+====
+
+.Postpone
+--
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In the Databases tile, select *Go to Databases inventory*.
+. In the *Inventory* tab, under scroll down to the configuration to postpone, select the three-dot menu, and then select *Postpone for 30 days*.  
+
+
+.Result
+The configuration analysis is postponed for 30 days.
+--
+
+.Dismiss
+--
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In the Databases tile, select *Go to Databases inventory*.
+In the *Inventory* tab, under scroll down to the configuration to dismiss, select the three-dot menu, and then select *Dismiss*. 
+
+.Result
+The configuration analysis is dismissed. 
+--
+
+.Reactivate
+--
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In the Databases tile, select *Go to Databases inventory*.
+. In the *Inventory* tab, under scroll down to the configuration to reactivate, select the three-dot menu, and then select *Reactivate*. 
+
+
+.Result
+The configuration analysis is reactivated and occurs daily moving forward.
+--
+
+====
+
+//Instructions at the instance level - may be needed or wanted by the team
+//Dismiss
+//. In the *Dashboard* tab, under *Managed instances breakdown by configurations*, select the pencil icon next to the configuration to dismiss. 
+//. on the Update scan frequency, select the SQL Server instances to dismiss. 
+//. Select the *Update state* dropdown menu and then select *Dismiss*.  
+//. Select *Continue* to optimize the configuration. 
+
+//Reactivate
+//. In the *Dashboard* tab, under *Managed instances breakdown by configurations*, select the pencil icon next to the configuration to reactivate. 
+//. on the Update scan frequency, select the SQL Server instances to reactivate. 
+//. Select the *Update state* dropdown menu and then select *Reactivate*.  
+//. Select *Reactivate* to restart the configuration analysis. 
+
+
+
