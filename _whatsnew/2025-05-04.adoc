@@ -7,11 +7,8 @@
 
 BlueXP workload factory for Databases automatically scans managed Microsoft SQL Server instances with FSx for ONTAP storage for potential configuration issues. Now in addition to the daily scan, you can scan at any time. 
 
-=== PostgreSQL detection API
-
-You can now discover the instances that are running PostgreSQL server databases in your AWS account with the new PostgreSQL detection API. 
-
-link:https://console.workloads.netapp.com/api-doc[BlueXP workload factory API documentation^]
+=== Removal of on-premises assessment records
+After you've explored savings for a Microsoft SQL server on-premises host, you have the option to remove the on-premises host record from BlueXP workload factory. 
 
 === Optimization enhancements
 
