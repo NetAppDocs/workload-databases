@@ -21,6 +21,9 @@ The clone cleanup assessment and remediation identifies and manages old and cost
 ==== Postpone and dismiss configuration analysis
 Some configurations might not apply to your database environments. You now have options to postpone a particular configuration analysis by 30 days or dismiss the analysis.
 
+=== Removal of on-premises assessment records
+After you've explored savings for a Microsoft SQL server on-premises host, you have the option to remove the on-premises host record from BlueXP workload factory. 
+
 
 
 
