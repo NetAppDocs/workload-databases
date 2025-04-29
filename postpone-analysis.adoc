@@ -30,8 +30,6 @@ You can postpone or dismiss the following configurations for Microsoft SQL Serve
 * Resiliency: includes local snapshots, FSx for ONTAP backups, and cross-region replication (CRR)
 * Clones
 
-.Before you begin - Are there any prereqs? 
-
 
 The following instructions describe how to postpone, dismiss, or reactivate an analysis at the configuration level. To complete the following tasks for specific SQL Server instances, start in the *Dashboard* tab. 
 
@@ -39,34 +37,40 @@ The following instructions describe how to postpone, dismiss, or reactivate an a
 ====
 
 .Postpone
+Postpone to stop a configuration analysis for 30 days. After 30 days, the analysis will restart automatically. 
 --
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*.
-. In the *Inventory* tab, under scroll down to the configuration to postpone, select the three-dot menu, and then select *Postpone for 30 days*.  
+. In the *Inventory* tab, scroll down to the configuration to postpone, select the three-dot menu, and then select *Postpone for 30 days*.
+. Select *Continue*.   
 
 
 .Result
-The configuration analysis is postponed for 30 days.
+The configuration analysis stops for 30 days.
 --
 
 .Dismiss
+Dismiss to stop a configuration analysis indefinitely. You can restart the analysis when needed. 
 --
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*.
-. In the *Inventory* tab, under scroll down to the configuration to dismiss, select the three-dot menu, and then select *Dismiss*. 
+. In the *Inventory* tab, scroll down to the configuration to dismiss, select the three-dot menu, and then select *Dismiss*. 
+. Select *Continue*.
 
 .Result
-The configuration analysis is dismissed. 
+The configuration analysis stops. 
 --
 
 .Reactivate
+Reactivate a postponed or dismissed configuration analysis at any time. 
 --
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*.
-. In the *Inventory* tab, under scroll down to the configuration to reactivate, select the three-dot menu, and then select *Reactivate*. 
+. In the *Inventory* tab, scroll down to the configuration to reactivate, select the three-dot menu, and then select *Reactivate*. 
+. Select *Continue*. 
 
 
 .Result
