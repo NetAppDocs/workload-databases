@@ -46,13 +46,35 @@ Complete the following prerequisites before you begin:
 * You must have a detected instance in the host that is available for management. 
 * PowerShell7 is required to manage the database instance. Install PowerShell7 manually by referring to link:https://learn.microsoft.com/en-us/powershell/scripting/developer/module/installing-a-powershell-module?view=powershell-7.4[Microsoft PowerShell documentation for Windows^].
 * All manage operations are run by the AWS System Manager Agent using `NT Authority\SYSTEM` user privilege. Provide the following permissions for `NT Authority\SYSTEM` user in the database server: 
++
+[cols="2,2a" options="header"]
+|===
+| Login securables
+| Where required?
 
-** `“ALTER SETTINGS”`
-** `“CONTROL SERVER”` 
-** `“ALTER ANY DATABASE”` 
-** `“VIEW ANY DEFINITION”` 
-** `“CONNECT ANY DATABASE”`
-** `“CREATE ANY DATABASE”` 
+| `VIEW ANY DEFINITION` 
+| Inventory/Detection, assessment, remediation, create database, create sandbox clone, explore savings
+
+| `CONNECT ANY DATABASE`
+| Inventory/Detection, assessment, remediation, create database, create sandbox clone
+
+| `VIEW SERVER STATE`
+| Inventory/Detection, assessment, remediation, create database, create sandbox clone
+
+| `CREATE ANY DATABASE`
+| Create database, create sandbox clone
+
+| `CONTROL SERVER`
+| Create sandbox clone
+
+| `ALTER ANY DATABASE`
+| Create sandbox clone
+
+| `ALTER SETTINGS`
+| Create sandbox clone, remediation for MAXDOP
+
+
+|===
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
