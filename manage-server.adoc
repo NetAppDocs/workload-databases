@@ -53,13 +53,13 @@ Complete the following prerequisites before you begin:
 | Where required?
 
 | `VIEW ANY DEFINITION` 
-| Inventory/Detection, assessment, remediation, create database, create sandbox clone, explore savings
+| Inventory, assessment, remediation, create database, create sandbox clone, explore savings
 
 | `CONNECT ANY DATABASE`
-| Inventory/Detection, assessment, remediation, create database, create sandbox clone
+| Inventory, assessment, remediation, create database, create sandbox clone
 
 | `VIEW SERVER STATE`
-| Inventory/Detection, assessment, remediation, create database, create sandbox clone
+| Inventory, assessment, remediation, create database, create sandbox clone
 
 | `CREATE ANY DATABASE`
 | Create database, create sandbox clone
