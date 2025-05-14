@@ -45,8 +45,8 @@ Postpone to stop a configuration analysis for 30 days. After 30 days, the analys
 . In the *Inventory* tab, scroll down to the configuration to postpone, select the three-dot menu, and then select *Postpone for 30 days*.
 . Select *Continue*.   
 
-.Result
-The configuration analysis stops for 30 days.
+//.Result
+//The configuration analysis stops for 30 days.
 --
 
 .Dismiss
@@ -58,8 +58,8 @@ Dismiss to stop a configuration analysis indefinitely. You can restart the analy
 . In the *Inventory* tab, scroll down to the configuration to dismiss, select the three-dot menu, and then select *Dismiss*. 
 . Select *Continue*.
 
-.Result
-The configuration analysis stops. 
+//.Result
+//The configuration analysis stops. 
 --
 
 .Reactivate
@@ -71,8 +71,8 @@ Reactivate a postponed or dismissed configuration analysis at any time.
 . In the *Inventory* tab, scroll down to the configuration to reactivate, select the three-dot menu, and then select *Reactivate*. 
 . Select *Continue*. 
 
-.Result
-The configuration analysis is reactivated and occurs daily moving forward.
+//.Result
+//The configuration analysis is reactivated and occurs daily moving forward.
 --
 
 ====
