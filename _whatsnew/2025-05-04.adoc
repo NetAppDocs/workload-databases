@@ -1,0 +1,26 @@
+=== Dashboard enhancements 
+
+* Cross-account and cross-region views are available as you navigate between tabs in the BlueXP workload factory console. The new views improve resource management, monitoring, and optimization. 
+* From the *Potential savings* tile in the dashboard, you'll be able to quickly review what you might save by switching to FSx for ONTAP from Amazon Elastic Block Store or Amazon FSx for Windows File Server. 
+
+=== Ad hoc scan available for database configurations
+
+BlueXP workload factory for Databases automatically scans managed Microsoft SQL Server instances with FSx for ONTAP storage for potential configuration issues. Now in addition to the daily scan, you can scan at any time. 
+
+=== Removal of on-premises assessment records
+After you've explored savings for a Microsoft SQL server on-premises host, you have the option to remove the on-premises host record from BlueXP workload factory. 
+
+=== Optimization enhancements
+
+==== Clone cleanup
+The clone cleanup assessment and remediation identifies and manages old and costly clones. Clones that are older than 60 days can be refreshed or deleted from the BlueXP workload factory console. 
+
+==== Postpone and dismiss configuration analysis
+Some configurations might not apply to your database environments. You now have options to postpone a particular configuration analysis by 30 days or dismiss the analysis.
+
+=== Removal of on-premises assessment records
+After you've explored savings for a Microsoft SQL server on-premises host, you have the option to remove the on-premises host record from BlueXP workload factory. 
+
+=== Updated permissions terminology
+
+The workload factory user interface and documentation now use "Read-only" to refer to read permissions and "Read-Write" to refer to automate permissions.
