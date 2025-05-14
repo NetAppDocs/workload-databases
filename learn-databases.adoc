@@ -63,14 +63,8 @@ Three different operational modes - _basic_, _read_ and _automate_ - offer flexi
 
 Learn more about link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[operational modes in workload factory^].
 
-== Tools to use workload factory
-You can use BlueXP workload factory with the following tools:
-
-* *BlueXP console*: the BlueXP console provides a hybrid interface experience so that you can use BlueXP workload factory along with other BlueXP services
-* *Workload factory console*: the workload factory console provides a visual interface that gives you a holistic view of your applications and projects
-* *REST API*: workload factory REST APIs let you deploy and manage Microsoft SQL Server and other AWS resources
-* *CloudFormation*: AWS CloudFormation code lets you perform the actions you defined in the workload factory console to model, provision, and manage AWS and third-party resources from the CloudFormation stack in your AWS account.
-* *Terraform BlueXP workload factory provider*: Terraform lets you build and manage infrastructure workflows generated in the workload factory console.
+//Cross-repo include for Tools section
+include::https://raw.githubusercontent.com/NetAppDocs/workload-family/main/_include/learn-about-tools.adoc[]
 
 == Deployment details
 
