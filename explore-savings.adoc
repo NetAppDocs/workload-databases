@@ -59,7 +59,7 @@ Two calculator options are available for making the cost comparison between your
 
 Explore savings via customization: You provide the configuration settings for Microsoft SQL server on Amazon EC2 with EBS or FSx for Windows File Server including the region, deployment model, SQL server edition, monthly data change rate, snapshot frequency, and more.
 
-Explore savings for detected hosts: Workload factory links to your existing Microsoft SQL servers and pulls in the details to the calculator for automatic comparison. You'll need to grant automate permissions to use this calculator option. You can change the use case, but all other details are automatically determined in the calculation.
+Explore savings for detected hosts: Workload factory links to your existing Microsoft SQL servers and pulls in the details to the calculator for automatic comparison. You'll need to grant _read-only_ or _read/write_ permissions to use this calculator option. You can change the use case, but all other details are automatically determined in the calculation.
 
 Additionally, you can link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[add AWS credentials^] to improve the accuracy of the calculator analysis. Select *Calculate savings based on existing resources*. You'll be redirected to the Add credentials page. After you add credentials, select the existing resources to compare with FSx for ONTAP, and select *Explore savings*.
 
@@ -135,7 +135,7 @@ Workload factory enters the detected Elastic Block Store and FSx for Windows Fil
 .Before you begin
 Complete the following prerequisites before you begin: 
 
-* Make sure you link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _automate_ permissions^] in your AWS account to detect Elastic Block Store (EBS) and FSx for Windows systems in your Databases inventory. 
+* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Grant _read-only_ or _read/write_ permissions^] in your AWS account to detect Elastic Block Store (EBS) and FSx for Windows systems under the *Explore savings* tab and to show the savings calculation in the savings calculator. 
 * Detect hosts in EBS and FSx for Windows storage in your Databases inventory. link:detect-host.html[Learn how to detect hosts].
 
 //Unsure if this is true for Databases - NOTE: Automatic mode doesn’t support calculations for EBS snapshots and FSx for Windows File Server shadow copies. In manual mode, you can provide EBS and FSx for Windows File Server snapshot details.   
@@ -197,7 +197,6 @@ If FSx for Windows shadow copies are detected, the default value is *Daily*. If 
 .. *Clone refresh frequency*: Select the frequency that clones refresh from the dropdown menu.
 .. *Number of cloned copies*: Enter the number of cloned copies in the on-premises configuration. 
 .. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.  
-
 ====
 After you provide details for your database host configuration, review the calculations and recommendations provided on the page.
 
@@ -208,6 +207,8 @@ Additionally, scroll down to the bottom of the page to view the report by select
 * *View the calculations*
 
 To switch to FSx for ONTAP, follow the instructions to <<Deploy Microsoft SQL Server on AWS EC2 using FSx for ONTAP,deploy Microsoft SQL Server on AQS EC2 using FSx for ONTAP file systems>>.
+
+On-premises host removal::: After you've explored savings for a Microsoft SQL server on-premises host, you have the option to remove the on-premises host record from BlueXP workload factory. Select the three-dot menu of the Microsoft SQL Server on-premises host and then select *Delete*. 
 
 == Deploy Microsoft SQL Server on AWS EC2 using FSx for ONTAP
 If you'd like to switch to FSx for ONTAP to realize cost savings, click *Create* to create the recommended configuration(s) directly from the Create new Microsoft SQL server wizard or click *Save* to save the recommended configuration(s) for later. 
