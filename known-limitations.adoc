@@ -75,4 +75,4 @@ Cost and percentage savings calculations of volume size for Microsoft SQL Server
 * Workload factory assesses only the CRR configuration of the source FSx for ONTAP file system. 
 
 == Number of databases within SQL server instances
-In the Inventory tab and on the Dashboard, workload factory supports up to 850 databases within SQL server instances.
+In the Inventory tab and on the Dashboard, workload factory supports up to 1,500 databases within SQL server instances.
