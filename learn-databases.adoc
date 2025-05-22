@@ -56,7 +56,7 @@ Workload factory for Databases offers the following features:
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html[Learn about FSx for ONTAP for workload factory^]. 
 
 === Operational modes in workload factory
-Three different operational modes - _basic_, _read_ and _automate_ - offer flexible options for deployment inside and outside of workload factory. Gain immediate value at zero-trust in _basic_ mode with code snippets for use outside workload factory. Get incremental value with incremental trust in _read_ and _automate_ modes. 
+Three different operational modes - _basic_, _read-only_ and _read/write_ - offer flexible options for deployment inside and outside of workload factory. Gain immediate value at zero-trust in _basic_ mode with code snippets for use outside workload factory. Get incremental value with incremental trust in _read-only_ and _read/write_ modes. 
 
 Learn more about link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[operational modes in workload factory^].
 
