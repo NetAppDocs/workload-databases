@@ -1,30 +1,47 @@
 ---
 sidebar: sidebar
-permalink: optimize-overview.html
-keywords: continuous optimization, optimize, assess, assessment, scan, optimization, Microsoft SQL Server, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations
-summary: "BlueXP workload factory for Databases provides continuous optimization for Microsoft SQL Server deployments on Amazon FSx for NetApp ONTAP storage."  
+permalink: optimize-configurations.html
+keywords: database configuration issues, issues, analyze, scan, optimize, improve, database configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations, storage, compute, application, resiliency, scan, optimization, SQL Server, host, instance
+summary: "BlueXP workload factory for Databases analyzes Microsoft SQL Server configurations regularly to determine if any there are any issues."   
 ---
-= Continuous optimization for BlueXP workload factory for Databases
+= Configuration analysis for database environments in workload factory 
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-BlueXP workload factory for Databases provides continuous optimization for Microsoft SQL Server deployments on Amazon FSx for NetApp ONTAP storage. 
-
-Continuous optimization automatically scans and assesses your database infrastructure at scale to ensure large estates achieve peak performance, cost efficiency, and compliance with best practices. The feature provides you with a comprehensive report of insights and recommendations for optimization. 
-
-With continuous optimization, you can detect problems in your database infrastructure, understand what needs to change, and take action. 
+BlueXP workload factory for Databases analyzes database configurations regularly to determine if there are any issues with Microsoft SQL Server deployments on Amazon FSx for NetApp ONTAP storage. When issues are found, workload factory shows you what the issues are and explains what needs to change to ensure your database configurations achieve peak performance, cost efficiency, and compliance with best practices. 
 
 Key capabilities include: 
 
-* Continuous assessment
+* Daily configuration analysis
 * Automatic best practice validations
 * Right-sizing recommendations
 * Proactive observability
 * Insights to action
 * AWS Well-Architected Framework advisor
 
-The scope of optimization is different depending on which component is being assessed. For example, storage optimization occurs at the SQL instance level whereas compute optimization occurs at the host level. 
+== Well-architected status
+In the workload factory console at the file-system level, well-architected status is listed for all FSx for ONTAP file systems. Well-architected statuses are categorized as "issues", "not analyzed", or "well-architected". Selecting the well-architected status redirects you to the well-architected status tab within the file system where you can find the well-architected score, configuration categories, all configurations for the file system.
 
-link:optimize-configurations.html[Optimize configurations for Microsoft SQL Server deployments]
+Well-architected score::: The score includes all currently analyzed configurations and appears as a percentage. A 25% score means that 25% of the file system configurations are well-architected. 
+
+Configuration categories::: The file system configurations are organized into categories aligned with the following five pillars of the AWS Well-Architected Framework.
+
+* _Reliability_: Ensures that workloads perform their intended functions correctly and consistently, even when there are disruptions. An example configuration is FSx for ONTAP backups.
+* _Security_: Emphasizes protecting data, systems, and assets through risk assessments and mitigation strategies.
+* _Operational excellence_: Focuses on delivering the most optimal architecture and business value.
+* _Cost optimization_: Aims to deliver business value while minimizing costs.
+* _Performance efficiency_: Focuses on using resources efficiently to meet system requirements and to maintain optimal performance as demands change.
+
+Analysis scope::: The scope of optimization is different depending on which component is being assessed. For example, storage optimization occurs at the SQL instance level whereas compute optimization occurs at the host level. 
+
+== Analysis requirements
+For a complete database environment analysis, you must associate a link. Link connectivity lets workload factory analyze all database and FSx for ONTAP configurations like data protection and performance.
+
+link:create-link.html[Learn how to create and associate a link.]
+
+.What's next
+
+link:optimize-configurations.html[Implement well-architected database configurations]
+
 

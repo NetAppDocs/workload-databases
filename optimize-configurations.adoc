@@ -4,20 +4,20 @@ permalink: optimize-configurations.html
 keywords: optimize, configuration, storage, compute, application, resiliency assessment, scan, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP
 summary: "BlueXP workload factory for Databases scans Microsoft SQL Server configurations providing insights and recommendations to help you achieve operational excellence." 
 ---
-= Optimize configurations for Microsoft SQL Server deployments 
+= Implement well-architected database configurations in workload factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-BlueXP workload factory for Databases continuously scans and assesses Microsoft SQL server deployment configurations running on Amazon FSx for NetAPP ONTAP. This feature provides insights and recommendations with the option to automatically optimize unoptimized configurations so that your database workloads can achieve operational excellence.  
+Using configuration analysis insights and recommendations, leverage workload factory to implement best practices for your database configurations. You can easily find issues and take action to improve the architecture of any configurations that aren't optimized for reliability, security, efficiency, performance, and cost.
 
 .About this task
-The assessment runs automatically and continuously once every day for Microsoft SQL Server instances with FSx for ONTAP storage managed in workload factory. Assessment reports are available in the optimization dashboard only if a daily scheduled job has run after deployment or after managing an instance.
+Workload factory analyzes database configurations daily. The daily analysis provides insights and recommendations with options to automatically fix configuration issues so that your configurations meet best practices. 
 
-Workload factory provides detailed recommendations to optimize configurations based on best practices for FSx for ONTAP storage. You can review the recommendations and choose to optimize unoptimized configurations.
+You have options to review the recommendations for configuration issues and fix those issues from the Databases inventory within the workload factory console. 
 
-What is scanned::
-Workload factory assesses the optimization status of the following configurations for Microsoft SQL Server instances:  
+What is analyzed::
+Workload factory analyzes the well-architected status of the following configurations for Microsoft SQL Server instances:  
 
 * Storage sizing: includes storage tier, file system headroom, log drive size, and TempDB drive size  
 * Storage layout: includes user data files placement, log files placement, and TempDB placement
@@ -28,17 +28,17 @@ Workload factory assesses the optimization status of the following configuration
 * Clones: includes options to refresh and delete clones (sandboxes) that are older than 60 days
 
 .Before you begin
-* You must have credentials with read or automate permissions.
-* To assess the storage of a Microsoft SQL Server instance, the instance must be managed by workload factory and the storage type must be FSx for ONTAP. 
-* Make sure you review each recommendation carefully before selecting to optimize a setting or configuration. For RSS and MAXDOP settings, we suggest that you test the recommended settings to determine performance improvements before making changes to your production environment. 
+* You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and read/write permissions^] to analyze your database configurations. 
+* To assess the storage of a Microsoft SQL Server instance, the instance must be registered in workload factory and the storage type must be FSx for ONTAP. link:register-instance.html[Learn how to register a host instance.]
+* Make sure you review each recommendation carefully before selecting to fix a setting or configuration. For RSS and MAXDOP settings, we suggest that you test the recommended settings to determine performance improvements before making changes to your production environment. 
 
-NOTE: The optimization process may cause instance downtimes or service interruptions. Make sure you review the optimization summary and action items before you choose to optimize a configuration.
+NOTE: The remediation process may cause instance downtimes or service interruptions. Make sure you review the recommendation carefully before you choose to fix a configuration.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*.
 . In the *Inventory* tab, select the *Instances* tab.
-. Select the three-dot menu of the instance to optimize and then select *Optimize*. 
+. Select the three-dot menu of the instance to analyze and then select *Optimize*. 
 . On the Optimize instance page for the SQL Server instance, review the findings from the assessment. 
 +
 You can filter by categories, subcategories, status, severity, and tags. 
@@ -51,14 +51,14 @@ The recommendation explains best practices and potential pitfalls of unoptimized
 +
 *Select all* is the default, but you can select specific resources to optimize.
 +
-.. For all configurations except clone cleanup, review the optimization details in the optimization dialog to learn what will happen if you choose to optimize. Some optimization operations may cause instance downtimes or service interruptions. 
+.. For all configurations except clone cleanup, review the recommendation details to learn what will happen if you choose to optimize. Some remediation operations may cause instance downtimes or service interruptions. 
 .. For clone cleanup, select cloned databases (sandboxes) to refresh or delete.
 +
 * Refreshing a clone synchronizes it with its source database. Refresh is available only for clones created in workload factory.
 * Deleting a clone removes it permanently, frees up storage space, and reduces costs. You can delete clones created in and outside of workload factory.
 
-. Select *Continue* to optimize the configuration. 
+. Select *Continue* to fix the configuration issue. 
 
 .Result
-The optimization process initiates. Select the *Job monitoring* tab to view the status of the operation.
+The remediation process initiates. Select the *Job monitoring* tab to view the status of the operation.
 
