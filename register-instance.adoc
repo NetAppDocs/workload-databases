@@ -18,7 +18,7 @@ Registering a host instance includes two steps - authenticating the instance and
 
 You can authentic links using SQL Server credentials or with Windows credentials.
 
-NOTE: Workload factory supports only Microsoft SQL Server host instance registration and management. Depending on the AWS account credentials you select in workload factory, PostgreSQL and Oracle hosts might appear in the Inventory. Currently, workload factory supports PostgreSQL instances running only on the Amazon Linux operating systems and Oracle instances running only on HREL. 
+NOTE: Workload factory supports only Microsoft SQL Server host instance registration and management. Depending on the AWS account credentials you select in workload factory, PostgreSQL and Oracle hosts might appear in the Inventory. Currently, workload factory supports unregistered PostgreSQL instances running only on the Amazon Linux operating systems and Oracle instances running only on HREL. 
 
 == Registering host instance in a private network
 To register a host instance in a private network with no external connectivity, the following endpoints need to be available in the VPC with association to the subnets where SQL servers are present. Ensure the interface endpoints allow port 443 in the attached Security Group.
