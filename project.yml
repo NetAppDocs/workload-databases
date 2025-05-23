@@ -47,7 +47,7 @@ sidebar:
     entries:
       - title: Monitor databases
         url: /monitor-databases.html
-      - title: Optimize SQL server
+      - title: Implement configuration best practices
         entries: 
           - title: Configuration analysis for Databases
             url: /optimize-overview.html
