@@ -39,6 +39,8 @@ sidebar:
             url: /create-postgresql-server.html  
       - title: Manage instances
         entries: 
+          - title: Instance management
+            url: manage-server.html
           - title: Register an instance
             url: /register-instance.html
           - title: View databases 
@@ -46,13 +48,11 @@ sidebar:
           - title: Create a database
             url: /create-database.html 
           - title: Create a sandbox clone 
-            url: /create-sandbox-clone.html         
+            url: /create-sandbox-clone.html             
       - title: Automate with Codebox
         url: /automate-codebox.html  
   - title: Administer and monitor
     entries:
-      - title: Manage a Microsoft SQL Server
-        url: /manage-server.html
     #  - title: Manage databases
     #    entries: 
       - title: Manage clones
@@ -80,7 +80,9 @@ sidebar:
           - title: Optimize configurations
             url: /optimize-configurations.html   
           - title: Postpone configuration analysis
-            url: /postpone-analysis.html                                   
+            url: /postpone-analysis.html  
+      - title: Deregister a host instance
+        url: /deregister-instance.html                                        
   - title: Knowledge and support
     entries: 
       - title: Register for support

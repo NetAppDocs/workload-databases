@@ -4,69 +4,19 @@ permalink: manage-server.html
 keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle host instance, manage host, view host, database host, database instance, manage, unregister
 summary: "Manage Microsoft SQL Server instances in BlueXP workload factory for Databases." 
 ---
-= Manage instances in workload factory for Databases
+= Instance management in workload factory for Databases
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Manage host instances so that you can monitor instance and database status, resource utilization, protection, and storage performance in workload factory for Databases. To manage a host instance, you must register the instance.  
-
-Databases can only manage instances with FSx for ONTAP file system storage. 
-
-.About this task
-Instance management in workload factory requires authentication. You can authentic links using SQL Server credentials or with Windows credentials. 
-
-== Manage a registered host instance
 Managing registered host instances in workload factory includes deploying resources for your instances like creating databases and database clones, and monitoring instance and database status, resource utilization, protection, and storage performance in workload factory for Databases. Additionally, you can analyze the well-architected status of your database configurations and implement configuration best practices to improve performance and lower operational costs. 
 
-Management tasks are detailed on the following pages: 
-* Create a database
-* Create a sandbox
-* Monitor databases
-* Implement well-architected database configurations
+Management tasks include:
 
-.Steps
-. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^]. 
-. In the Databases tile, select *Go to Databases inventory*.
-. In Databases, select the *Inventory* tab. 
-. Click the dropdown arrow to expand the row of the host to view its managed instances. 
-+
-The host expands and the host instances appear. 
-. Click the three-dot menu of the instance to view and then select *View instance*. 
-
-.Result 
-The overview of the instance appears in the Inventory tab. 
-
-== View databases 
-You can view the databases managed by the managed instance by following these steps. 
-
-.Steps
-. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Databases tile, select *Go to Databases inventory*.
-. In Databases, select the *Inventory* tab. 
-. Click the dropdown arrow to expand the row of the host to view its databases.
-+
-The host expands and the host instances appear.  
-. Click the three-dot menu of the instance containing the databases to view.
-. Select *View databases*. 
-
-.Result
-The list of databases in the instance appears in the Inventory tab.
-
-== Deregister a host instance
-Deregister a host instance if you want to remove a registered instance.
-
-.Steps
-. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Databases tile, select *Go to Databases inventory*.
-. In Databases, select the *Inventory* tab. 
-. Click the dropdown arrow to expand the row of the host instance to unmanage. 
-+
-The host expands and the host instances appear. 
-. Click the three-dot menu of the instance to unmanage. 
-. Select *Unmanage*. 
-
-.Result
-The host instance is now unmanaged. 
+* Creating a database
+* Creating a database clone (sandbox)
+* Viewing databases
+* Monitoring
+* Implementing well-architected database configurations
 
 

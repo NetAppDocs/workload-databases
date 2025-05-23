@@ -1,0 +1,27 @@
+---
+sidebar: sidebar
+permalink: deregister-instance.html
+keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle host instance, deregister instance, unregister instance, remove instance
+summary: "Deregister a host instance if you no longer want to deploy or monitor instance resources." 
+---
+= Deregister a host instance in workload factory
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Deregister a host instance if you no longer want to deploy or monitor instance resources. Deregistering instances also removes the amount of storage capacity used by the host instance. 
+
+You can re-register the instance later.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In the Databases tile, select *Go to Databases inventory*.
+. In Databases, select the *Inventory* tab. 
+. Click the dropdown arrow to expand the row of the host instance to deregister. 
++
+The host expands and the host instances appear. 
+. Click the three-dot menu of the instance to deregister. 
+. Select *Unmanage*. 
+
+.Result
+The host instance is now deregistered. You can register the instance again later.  
