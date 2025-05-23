@@ -1,0 +1,7 @@
+=== PostgreSQL and Oracle detection
+
+You can now discover the instances that are running PostgreSQL server databases in your AWS account within the workload factory console.
+
+=== Updated "Optimization" terminology
+
+Previously called "Optimization", workload factory now uses "well-architected issues" and "well-architected status" to describe opportunities to improve database environment infrastructure and configurations to support better performance and data protection.
