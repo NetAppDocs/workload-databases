@@ -37,10 +37,10 @@ If you operate in _read-only_ or _read/write_ mode, you'll need to link:https://
 
 [role="quick-margin-para"]
 
-Lastly, if you chose to operate in _read/write_ mode, you must link:create-database-server.html[deploy] or link:detect-host.html[register a database server] to manage your host resources and before adding user databases.
+Lastly, if you chose to operate in _read/write_ mode, you must link:create-database-server.html[deploy a host server] or link:register-instance.html[register an instance ] to manage your host resources and before adding user databases.
 
 .What's next
-When you have registered FSx for ONTAP hosts in your Databases inventory, you can link:create-database.html[create a user database] or link:create-sandbox-clone.html[clone your host to create a sandbox]. 
+When you have registered host instances with FSx for ONTAP file system storage in your Databases inventory, you can link:create-database.html[create a user database] or link:create-sandbox-clone.html[clone your host to create a sandbox]. 
 
 When you have Elastic Block Store or FSx for Windows File Server hosts in your Databases inventory, you can link:explore-savings.html[explore savings with the savings calculator]. 
 
