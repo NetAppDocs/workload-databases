@@ -2,17 +2,17 @@
 sidebar: sidebar
 permalink: learn-databases.html
 keywords: Databases
-summary: "BlueXP workload factory for Databases is an end-to-end database deployment and maintenance service with built-in best practices for optimization, automatic thin cloning, and monitoring and resolution capabilities." 
+summary: "Workload factory for Databases is an end-to-end database deployment and maintenance service with built-in best practices for optimization, automatic thin cloning, and monitoring and resolution capabilities." 
 ---
-= Learn about BlueXP workload factory for Databases
+= Learn about workload factory for Databases
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-BlueXP workload factory for Databases is an end-to-end database deployment and maintenance service with built-in best practices for optimization, automatic thin cloning, and monitoring and resolution capabilities. 
+Workload factory for Databases is an end-to-end database deployment and maintenance service with built-in best practices for optimization, automatic thin cloning, and monitoring and resolution capabilities. 
 
-== What is BlueXP workload factory for Databases?
-BlueXP workload factory for Databases detects, assesses, plans, provisions, and moves Microsoft SQL Server data to Amazon FSx for NetApp ONTAP (FSx for ONTAP) deployments optimized to meet your performance and cost expectations while adhering to industry best practices. Throughout the life cycle, workload factory delivers continuous optimization and management for databases on FSx for ONTAP. 
+== What is workload factory for Databases?
+Workload factory for Databases detects, assesses, plans, provisions, and moves Microsoft SQL Server data to Amazon FSx for NetApp ONTAP (FSx for ONTAP) deployments optimized to meet your performance and cost expectations while adhering to industry best practices. Throughout the life cycle, workload factory delivers continuous optimization and management for databases on FSx for ONTAP. 
 
 For more information about workload factory, refer to the link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html[workload factory overview^].
 

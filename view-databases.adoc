@@ -1,0 +1,52 @@
+---
+sidebar: sidebar
+permalink: view-databases.html
+keywords: 
+summary: "To get a summary of the database resources in workload factory, view all databases in the database inventory. You may also view databases per a single registered instance." 
+---
+= View databases in workload factory for Databases
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+To get a summary of the database resources in workload factory, view all databases in the database inventory. You may also view databases per a single registered instance.  
+
+.Before you begin
+* Host instances that contain database resources must have FSx for ONTAP file system storage. 
+* Host instances must be registered in workload factory. Learn how to link:register-instance.html[register host instances].
+
+.Steps
+
+[role="tabbed-block"]
+====
+
+.View databases for a single instance
+
+--
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In the Databases tile, select *Go to Databases inventory*.
+. In Databases, select the *Inventory* tab. 
+. Click the dropdown arrow to expand the row of the host to view its databases.
++
+The host expands and the host instances appear.  
+. Click the three-dot menu of the instance containing the databases to view.
+. Select *View databases*. 
+--
+
+.View databases for all instances
+
+--
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In the Databases tile, select *Go to Databases inventory*.
+. In Databases, select the *Inventory* tab. 
+. Click the dropdown arrow to expand the row of the host to view its databases.
++
+The host expands and the host instances appear.  
+. Click the three-dot menu of the instance containing the databases to view.
+. Select *View databases*. 
+--
+
+====
+
+.Result
+You have viewed the database resources within workload factory.

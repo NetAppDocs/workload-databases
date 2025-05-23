@@ -37,25 +37,26 @@ sidebar:
             url: /create-database-server.html
           - title: Create PostgreSQL server
             url: /create-postgresql-server.html  
-      - title: Detect a database server
-        url: /detect-host.html 
-      - title: Create a database
-        url: /create-database.html 
+      - title: Manage instances
+        entries: 
+          - title: Register an instance
+            url: /register-instance.html
+          - title: View databases 
+            url: /view-databases.html  
+          - title: Create a database
+            url: /create-database.html 
+          - title: Create a sandbox clone 
+            url: /create-sandbox-clone.html         
       - title: Automate with Codebox
         url: /automate-codebox.html  
   - title: Administer and monitor
     entries:
       - title: Manage a Microsoft SQL Server
         url: /manage-server.html
-      #  entries: 
-        #  - title: Manage a Microsoft SQL Server 
-        #    url: /manage-microsoft-server.html 
     #  - title: Manage databases
     #    entries: 
       - title: Manage clones
         entries: 
-          - title: Create a sandbox clone 
-            url: /create-sandbox-clone.html 
           - title: Check integrity of a sandbox clone
             url: /check-clone-integrity.html  
           - title: Revert a sandbox clone
