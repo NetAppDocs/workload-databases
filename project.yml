@@ -40,7 +40,7 @@ sidebar:
       - title: Manage instances
         entries: 
           - title: Instance management
-            url: manage-server.html
+            url: manage-instance.html
           - title: Register an instance
             url: /register-instance.html
           - title: View databases 
