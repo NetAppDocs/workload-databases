@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: manage-server.html
+permalink: manage-instance.html
 keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle host instance, manage host, view host, database host, database instance, manage, unregister
 summary: "Manage Microsoft SQL Server instances in BlueXP workload factory for Databases." 
 ---
@@ -13,10 +13,10 @@ Managing registered host instances in workload factory includes deploying resour
 
 Management tasks include:
 
-* Creating a database
-* Creating a database clone (sandbox)
-* Viewing databases
-* Monitoring
-* Implementing well-architected database configurations
+* link:create-database.html[Creating a database]
+* link:create-sandbox-clone.html[Creating a database clone (sandbox)]
+* link:view-databases.html[Viewing databases]
+* link:monitory-databases.html[Monitoring]
+* link:optimize-configurations.html[Implementing well-architected database configurations]
 
 
