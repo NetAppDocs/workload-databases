@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: optimize-configurations.html
+permalink: optimize-overview.html
 keywords: database configuration issues, issues, analyze, scan, optimize, improve, database configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations, storage, compute, application, resiliency, scan, optimization, SQL Server, host, instance
 summary: "BlueXP workload factory for Databases analyzes Microsoft SQL Server configurations regularly to determine if any there are any issues."   
 ---
