@@ -21,7 +21,7 @@ You can re-register the instance later.
 +
 The host expands and the host instances appear. 
 . Click the three-dot menu of the instance to deregister. 
-. Select *Unmanage*. 
+. Select *Deregister*. 
 
 .Result
 The host instance is now deregistered. You can register the instance again later.  
