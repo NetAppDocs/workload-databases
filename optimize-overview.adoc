@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: optimize-overview.html
 keywords: database configuration issues, issues, analyze, scan, optimize, improve, database configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations, storage, compute, application, resiliency, scan, optimization, SQL Server, host, instance
-summary: "BlueXP workload factory for Databases analyzes Microsoft SQL Server configurations regularly to determine if any there are any issues."   
+summary: "Workload factory for Databases analyzes Microsoft SQL Server configurations regularly to determine if any there are any issues."   
 ---
 = Configuration analysis for database environments in workload factory 
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-BlueXP workload factory for Databases analyzes database configurations regularly to determine if there are any issues with Microsoft SQL Server deployments on Amazon FSx for NetApp ONTAP storage. When issues are found, workload factory shows you what the issues are and explains what needs to change to ensure your database configurations achieve peak performance, cost efficiency, and compliance with best practices. 
+Workload factory for Databases analyzes database configurations regularly to determine if there are any issues with Microsoft SQL Server deployments on Amazon FSx for NetApp ONTAP storage. When issues are found, workload factory shows you what the issues are and explains what needs to change to ensure your database configurations achieve peak performance, cost efficiency, and compliance with best practices. 
 
 Key capabilities include: 
 
@@ -36,9 +36,9 @@ Configuration categories::: The file system configurations are organized into ca
 Analysis scope::: The scope of optimization is different depending on which component is being assessed. For example, storage optimization occurs at the SQL instance level whereas compute optimization occurs at the host level. 
 
 == Analysis requirements
-For a complete database environment analysis, you must associate a link. Link connectivity lets workload factory analyze all database and FSx for ONTAP configurations like data protection and performance.
+For a complete database environment analysis, host instances must be registered and online.
 
-link:create-link.html[Learn how to create and associate a link.]
+link:register-instance.html[Learn how to register a host instance.]
 
 .What's next
 

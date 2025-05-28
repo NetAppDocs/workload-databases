@@ -25,7 +25,7 @@ Workload factory analyzes the well-architected status of the following configura
 * Compute: includes rightsizing, operating system patches, and network adapter settings like Receive Side Scaling (RSS) and TCP offloading
 * Applications: includes Microsoft SQL Server licenses, Microsoft SQL Server patch, and MAXDOP settings 
 * Resiliency: includes local snapshots, FSx for ONTAP backups, and cross-region replication (CRR)
-* Clones: includes options to refresh and delete clones (sandboxes) that are older than 60 days
+* Clones: includes options to refresh and delete clones (sandboxes) that were created in or outside of workload factory and are older than 60 days
 
 .Before you begin
 * You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and read/write permissions^] to analyze your database configurations. 
@@ -38,16 +38,14 @@ NOTE: The remediation process may cause instance downtimes or service interrupti
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*.
 . In the *Inventory* tab, select the *Instances* tab.
-. Select the three-dot menu of the instance to analyze and then select *Optimize*. 
-. On the Optimize instance page for the SQL Server instance, review the findings from the assessment. 
+. Select *Fix issues* to view configuration issues for the instance. 
+. On the Well-architected status page for the host instance, review the findings from the analysis. 
 +
-You can filter by categories, subcategories, status, severity, and tags. 
+You can filter configuration issues by categories, subcategories, status, severity, and tags. 
 + 
-You can also download a report of the assessment findings by selecting *Export PDF*.  
-. Select the dropdown arrow to view the recommendation for any configuration. Make sure you review the recommendation carefully. 
-+ 
-The recommendation explains best practices and potential pitfalls of unoptimized configurations.
-. Select to *Optimize* unoptimized configurations.
+You can also download a report of the findings by selecting *Export PDF*.  
+. Select the dropdown arrow to view the recommendation for any configuration. Recommendations include best practices, potential pitfalls of unoptimized configurations, and important considerations. Make sure you review the recommendation carefully. 
+. Select to *View and fix* configuration issues when the option is available.
 +
 *Select all* is the default, but you can select specific resources to optimize.
 +
