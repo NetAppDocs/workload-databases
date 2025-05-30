@@ -130,7 +130,7 @@ Additionally, scroll down to the bottom of the page to view the report by select
 To switch to FSx for ONTAP, follow the instructions to <<Deploy Microsoft SQL Server on AWS EC2 using FSx for ONTAP,deploy Microsoft SQL Server on AQS EC2 using FSx for ONTAP file systems>>.
 
 === Explore savings for detected hosts
-Workload factory enters the detected Elastic Block Store and FSx for Windows File Server host instance characteristics so that you can explore savings automatically.
+Workload factory enters the detected Elastic Block Store and FSx for Windows File Server host characteristics so that you can explore savings automatically.
 
 .Before you begin
 Complete the following prerequisites before you begin: 
