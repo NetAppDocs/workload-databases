@@ -136,6 +136,7 @@ Workload factory enters the detected Elastic Block Store and FSx for Windows Fil
 Complete the following prerequisites before you begin: 
 
 * link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Grant _read-only_ or _read/write_ permissions^] in your AWS account to detect Elastic Block Store (EBS) and FSx for Windows systems under the *Explore savings* tab and to show the savings calculation in the savings calculator. 
+* Detect hosts in EBS and FSx for Windows storage in your Databases inventory. link:detect-host.html[Learn how to detect hosts].
 * To get instance type recommendations and improve cost accuracy, do the following: 
 . Grant Amazon CloudWatch and AWS Compute Optimizer permissions.
 .. Sign in to the AWS Management Console and open the IAM service.
@@ -180,7 +181,6 @@ Complete the following prerequisites before you begin:
 }
 ----
 . Opt the billable AWS account in to AWS Compute Optimizer.
-* Detect hosts in EBS and FSx for Windows storage in your Databases inventory. link:detect-host.html[Learn how to detect hosts].
 
 //Unsure if this is true for Databases - NOTE: Automatic mode doesn’t support calculations for EBS snapshots and FSx for Windows File Server shadow copies. In manual mode, you can provide EBS and FSx for Windows File Server snapshot details.   
 
