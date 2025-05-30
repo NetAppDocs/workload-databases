@@ -55,11 +55,11 @@ The calculator verifies if any of the following Enterprise features are in use:
 If the assessed SQL Server instance doesn't utilize any of the above Enterprise features and meets the resource constraints, the calculator will recommend downgrading the license to Standard Edition. This recommendation is made to help you optimize your SQL Server licensing costs without compromising performance or functionality.
 
 == Calculator options
-Two calculator options are available for making the cost comparison between your systems and FSx for ONTAP — customization and detection.
+Two calculator options are available for making the cost comparison between your systems and FSx for ONTAP — customization and host instance registration.
 
 Explore savings via customization: You provide the configuration settings for Microsoft SQL server on Amazon EC2 with EBS or FSx for Windows File Server including the region, deployment model, SQL server edition, monthly data change rate, snapshot frequency, and more.
 
-Explore savings for detected hosts: Workload factory links to your existing Microsoft SQL servers and pulls in the details to the calculator for automatic comparison. You'll need to grant _read-only_ or _read/write_ permissions to use this calculator option. You can change the use case, but all other details are automatically determined in the calculation.
+Explore savings for registered host instances: Workload factory links to your existing Microsoft SQL servers and pulls in the details to the calculator for automatic comparison. You'll need to grant _read-only_ or _read/write_ permissions to use this calculator option. You can change the use case, but all other details are automatically determined in the calculation.
 
 Additionally, you can link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[add AWS credentials^] to improve the accuracy of the calculator analysis. Select *Calculate savings based on existing resources*. You'll be redirected to the Add credentials page. After you add credentials, select the existing resources to compare with FSx for ONTAP, and select *Explore savings*.
 
@@ -129,14 +129,14 @@ Additionally, scroll down to the bottom of the page to view the report by select
 
 To switch to FSx for ONTAP, follow the instructions to <<Deploy Microsoft SQL Server on AWS EC2 using FSx for ONTAP,deploy Microsoft SQL Server on AQS EC2 using FSx for ONTAP file systems>>.
 
-=== Explore savings for detected hosts
-Workload factory enters the detected Elastic Block Store and FSx for Windows File Server host characteristics so that you can explore savings automatically.
+=== Explore savings for registered host instances
+Workload factory enters the registered Elastic Block Store and FSx for Windows File Server host instance characteristics so that you can explore savings automatically.
 
 .Before you begin
 Complete the following prerequisites before you begin: 
 
 * link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Grant _read-only_ or _read/write_ permissions^] in your AWS account to detect Elastic Block Store (EBS) and FSx for Windows systems under the *Explore savings* tab and to show the savings calculation in the savings calculator. 
-* Detect hosts in EBS and FSx for Windows storage in your Databases inventory. link:detect-host.html[Learn how to detect hosts].
+* Register host instances for EBS and FSx for Windows storage in your Databases inventory. link:register-instance.html[Learn how to register host instances].
 * To get instance type recommendations and improve cost accuracy, do the following: 
 . Grant Amazon CloudWatch and AWS Compute Optimizer permissions.
 .. Sign in to the AWS Management Console and open the IAM service.
