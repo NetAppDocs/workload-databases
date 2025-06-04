@@ -23,4 +23,4 @@ After you've explored savings for a Microsoft SQL server on-premises host, you h
 
 === Updated permissions terminology
 
-The workload factory user interface and documentation now use "Read-only" to refer to read permissions and "Read-Write" to refer to automate permissions.
+The workload factory user interface and documentation now use "read-only" to refer to read permissions and "read/write" to refer to automate permissions.

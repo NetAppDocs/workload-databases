@@ -37,7 +37,7 @@ If you use a proxy server for all outbound connections from EC2 instances, you m
 
 == Before you begin
 
-The host for the instance must appear in the Inventory tab. For hosts to appear in the inventory, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[you must add AWS account credentials and _read_ or _automate_ mode permissions^].
+The host for the instance must appear in the Inventory tab. For hosts to appear in the inventory, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[you must add AWS account credentials and _read-only_ or _read/write_ mode permissions^].
 
 == Register a host instance
 Registering a host instance includes instance authentication and preparation. 
