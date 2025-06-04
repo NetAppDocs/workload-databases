@@ -1,15 +1,15 @@
 ---
 sidebar: sidebar
 permalink: quick-start-databases.html  
-keywords: requirements, basic mode, read mode, automate mode 
-summary: Databases has three different modes that have different requirements. 
+keywords: requirements, basic mode, read-only mode, read/write mode 
+summary: "Get started with workload factory for Databases to use Infrastructure-as-Code snippets, discover hosts, manage resources, and more." 
 ---
-= Quick start for BlueXP workload factory for Databases
+= Quick start for workload factory for Databases
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-With BlueXP workload factory for Databases, you can get started immediately in _basic_ mode. If you'd like to use workload factory to discover hosts, manage resources, and more, you can get started in a few steps. 
+With workload factory for Databases, you can get started immediately in _basic_ mode. If you'd like to use workload factory to discover hosts, manage resources, and more, you can get started in a few steps. 
 
 You must have an AWS account to use Databases. 
 
@@ -25,22 +25,22 @@ You'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-s
 
 [role="quick-margin-para"]
 
-Choose between link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[_basic_, _read_, and _automate_ operational modes^]. 
+Choose between link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[_basic_, _read-only_, and _read/write_ operational modes^]. 
 
 [role="quick-margin-para"]
 If you operate in _basic_ mode, you don't need to go any further. You can start using Databases to copy partially completed code samples. In the Databases tile, click *Deploy database host*. link:create-database-server.html[Learn how to deploy a database server]. 
 
 [role="quick-margin-para"]
-If you operate in _read_ or _automate_ mode, you'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[add credentials to an account manually^] which includes selecting workload capabilities, such as Databases and GenAI, and creating the IAM policies to ensure you have the correct permissions for operating in _read_ or _automate_ mode.
+If you operate in _read-only_ or _read/write_ mode, you'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[add credentials to an account manually^] which includes selecting workload capabilities, such as Databases and GenAI, and creating the IAM policies to ensure you have the correct permissions for operating in _read-only_ or _read/write_ mode.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Deploy a database server
 
 [role="quick-margin-para"]
 
-Lastly, if you chose to operate in _automate_ mode, you must link:create-database-server.html[deploy] or link:detect-host.html[detect a database server] to manage your host resources and before adding user databases.
+Lastly, if you chose to operate in _read/write_ mode, you must link:create-database-server.html[deploy a host server] or link:register-instance.html[register an instance ] to manage your host resources and before adding user databases.
 
 .What's next
-When you have FSx for ONTAP managed hosts in your Databases inventory, you can link:create-database.html[create a user database] or link:create-sandbox-clone.html[clone your host to create a sandbox]. 
+When you have registered host instances with FSx for ONTAP file system storage in your Databases inventory, you can link:create-database.html[create a user database] or link:create-sandbox-clone.html[clone your host to create a sandbox]. 
 
 When you have Elastic Block Store or FSx for Windows File Server hosts in your Databases inventory, you can link:explore-savings.html[explore savings with the savings calculator]. 
 
