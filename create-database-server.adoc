@@ -79,11 +79,11 @@ NOTE: In _Quick create_, FCI is the default deployment model, Windows 2016 is th
 . Under *AWS settings*, provide the following: 
 .. *AWS credentials*: Select AWS credentials with automate permissions to deploy the new database host. 
 +
-AWS credentials with _automate_ permissions let workload factory deploy and manage the new database host from your AWS account within workload factory.
+AWS credentials with _read/write_ permissions let workload factory deploy and manage the new database host from your AWS account within workload factory.
 +
-AWS credentials with _read_ permissions let workload factory generate a CloudFormation template for you to use in the AWS CloudFormation console. 
+AWS credentials with _read-only_ permissions let workload factory generate a CloudFormation template for you to use in the AWS CloudFormation console. 
 +
-If you don't have AWS credentials associated in workload factory and you want to create the new server in workload factory, follow *Option 1* to go to the Credentials page. Manually add the required credentials and permissions for _automate_ mode for Database workloads.  
+If you don't have AWS credentials associated in workload factory and you want to create the new server in workload factory, follow *Option 1* to go to the Credentials page. Manually add the required credentials and permissions for _read/write_ mode for Database workloads.  
 +
 If you want to complete the create new server form in workload factory so you can download a complete YAML file template for deployment in AWS CloudFormation, follow *Option 2* to ensure you have the required permissions to create the new server within AWS CloudFormation. Manually add the required credentials and permissions for _read_ mode for Database workloads. 
 +
@@ -149,13 +149,13 @@ You can also select *Save configuration* to deploy the host later.
 . Under *AWS settings*, provide the following: 
 .. *AWS credentials*: Select AWS credentials with automate permissions to deploy the new database host. 
 +
-AWS credentials with _automate_ permissions let workload factory deploy and manage the new database host from your AWS account within workload factory.
+AWS credentials with _read/write_ permissions let workload factory deploy and manage the new database host from your AWS account within workload factory.
 +
-AWS credentials with _read_ permissions let workload factory generate a CloudFormation template for you to use in the AWS CloudFormation console. 
+AWS credentials with _read-only_ permissions let workload factory generate a CloudFormation template for you to use in the AWS CloudFormation console. 
 +
-If you don't have AWS credentials associated in workload factory and you want to create the new server in workload factory, follow *Option 1* to go to the Credentials page. Manually add the required credentials and permissions for _automate_ mode for Database workloads.  
+If you don't have AWS credentials associated in workload factory and you want to create the new server in workload factory, follow *Option 1* to go to the Credentials page. Manually add the required credentials and permissions for _read/write_ mode for Database workloads.  
 +
-If you want to complete the create new server form in workload factory so you can download a complete YAML file template for deployment in AWS CloudFormation, follow *Option 2* to ensure you have the required permissions to create the new server within AWS CloudFormation. Manually add the required credentials and permissions for _read_ mode for Database workloads. 
+If you want to complete the create new server form in workload factory so you can download a complete YAML file template for deployment in AWS CloudFormation, follow *Option 2* to ensure you have the required permissions to create the new server within AWS CloudFormation. Manually add the required credentials and permissions for _read-only_ mode for Database workloads. 
 +
 Optionally, you can download a partially completed YAML file template from the Codebox to create the stack outside workload factory without any credentials or permissions. Select *CloudFormation* from the dropdown in the Codebox to download the YAML file. 
 .. *Region & VPC*: Select a Region and VPC network. 
