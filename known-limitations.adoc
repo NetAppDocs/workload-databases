@@ -12,6 +12,9 @@ summary: "Known limitations identify platforms, devices, or functions that are n
 [.lead]
 Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
 
+== Host instance detection support
+Workload factory supports the detection of PostgreSQL instances running only on Amazon Linux operating systems and Oracle instances running only on Red Hat Enterprise Linux.
+
 == AMI image version support
 We only show up to four recent versions or revisions of AMI images for each SQL version. We don't allow installation from an AMI image that is older than the latest four versions.
 
@@ -73,6 +76,3 @@ Cost and percentage savings calculations of volume size for Microsoft SQL Server
 == Cross-region replication assessment
 * The optimization assessment can't determine if cross-region replication (CRR) is being used when the target FSx for ONTAP file system is in a different AWS account.
 * Workload factory assesses only the CRR configuration of the source FSx for ONTAP file system. 
-
-== Number of databases within SQL server instances
-In the Inventory tab and on the Dashboard, workload factory supports up to 1,500 databases within SQL server instances.

@@ -46,7 +46,7 @@ You can use _Quick create_ or _Advanced create_ deployment modes to complete thi
 . In the Databases tile, select *Go to Databases inventory*.
 . In Databases, select the *Inventory* tab. 
 . In the Inventory tab, select a database server with a managed SQL server instance to create the database in.
-. Click the three-dot menuof the managed instance and then select *Create user database*.
+. Click the three-dot menu of the managed instance and then select *Create user database*.
 . On the Create user database page, under Database information, provide the following: 
 .. *Database name*: Enter name for the database. 
 .. *Collation*: Select a collation for the database. The default collation SQL_Latin1_General_CP1_CI_AS" on Microsoft SQL Server is selected. 
