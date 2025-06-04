@@ -1,0 +1,15 @@
+=== PostgreSQL and Oracle detection
+
+You can now discover the instances that are running PostgreSQL server databases and Oracle database deployments in your AWS account within the workload factory console. Discovered instances will appear in the Databases inventory. 
+
+=== Updated "Optimization" terminology
+
+Previously called "Optimization", workload factory now uses "well-architected issues" and "well-architected status" to describe the analysis of database configurations and "fix" to describe remediation for opportunities to improve database configurations to meet best practice recommendations.
+
+link:https://docs.netapp.com/us-en/workload-databases/optimize-overview.html[Configuration analysis for database environments in workload factory]
+
+=== Improved onboarding for host instances
+
+Instead of "undetected", "unmanaged", or "managed" term usage for host instance management, workload factory now uses "register" for onboarding host instances. The new registration process includes authenticating and preparing host instances so that you can create, monitor, analyze, and fix resources in your database configurations within the workload factory console. The preparation step in the registration process indicates whether your host instances are ready for management. 
+
+link:https://docs.netapp.com/us-en/workload-databases/manage-instance.html[Instance management]
