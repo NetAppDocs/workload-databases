@@ -48,9 +48,7 @@ Registering a host instance includes instance authentication and preparation.
 . In Databases, select the *Inventory* tab. 
 . In the Inventory tab, select the *Instances* tab. 
 . Navigate to the instance to manage and select *Register instance*. 
-. On the Register instance page, select the instance authentication mode. 
-* *SQL Server authentication*: Enter the SQL Server user name and password, and the FSx for ONTAP file system user name and password.
-* *Windows authentication*: Enter the Windows user name and password, and the FSx for ONTAP file system user name and password.
+. On the Register instance page, enter the SQL Server user name and password, and the FSx for ONTAP file system user name and password.
 . Select *Next*.
 . Prepare the instance by making sure the instance meets required prerequisites.
 If all required modules are installed and prerequisites are met, select *Next* to register the instance. If you need to take action, follow these steps.  
