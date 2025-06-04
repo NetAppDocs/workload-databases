@@ -4,15 +4,15 @@ permalink: create-database-server.html
 keywords: create, server, Microsoft SQL, deploy, host, deploy a database host, database host 
 summary: "Create a new Microsoft SQL Server within BlueXP workload factory for Databases." 
 ---
-= Create a database server in BlueXP workload factory for Databases
+= Create a Microsoft SQL Server in workload factory for Databases
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Creating a new Microsoft SQL Server, or database host, in BlueXP workload factory for Databases requires an FSx for ONTAP file system deployment and resources for Active Directory. 
+Creating a new Microsoft SQL Server, or database host, in workload factory for Databases requires an FSx for ONTAP file system deployment and resources for Active Directory. 
 
 .About this task
-Before creating a Microsoft SQL Server from workload factory, learn about the available storage deployment types for the database host configuration, Active Directory deployment, workload factory modes of operation, and the requirements to complete this operation.
+Before creating a Microsoft SQL Server from workload factory, learn about the available storage deployment types for the database host configuration, Microsoft Multi-path I/O configuration, Active Directory deployment, networking details, and the requirements to complete this operation.
 
 After deployment, you'll need to <<Step 2: Enable remote connection on the Microsoft SQL Server,enable remote connection on the Microsoft SQL Server>>. 
 
@@ -46,19 +46,10 @@ If you decide to rollback your Domain Name System (DNS) resources, the resource 
 * For user-managed AD, first link:https://learn.microsoft.com/en-us/powershell/module/activedirectory/remove-adcomputer?view=windowsserver2022-ps[remove the AD computer^]. Then, connect to the DNS server from DNS manager and link:https://learn.microsoft.com/en-us/windows-server/networking/technologies/ipam/delete-dns-resource-records[delete the DNS Resource Records^].
 * For AWS Managed Microsoft AD, link:https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_install_ad_tools.html[install the AD administration tools^]. Next, link:https://learn.microsoft.com/en-us/powershell/module/activedirectory/remove-adcomputer?view=windowsserver2022-ps[remove the AD computer^]. Lastly, connect to the DNS server from DNS manager and link:https://learn.microsoft.com/en-us/windows-server/networking/technologies/ipam/delete-dns-resource-records[delete the DNS Resource Records^].
 
-Workload factory operation modes:::
-Workload factory offers three operational modes depending on how comfortable you are with letting workload factory manage your AWS resources. 
-
-*_Basic_ mode*: in this mode of operation, you don't need to associate any AWS account credentials in workload factory. You can copy or download a partially filled YAML template from the Codebox to be completed outside workload factory. 
-
-*_Read_ mode*: in this mode of operation, you provide AWS account credentials with read permissions which lets you complete the _Quick create_ or _Advanced create_ form and then copy or download it. You can also redirect to CloudFormation from workload factory with the completed form details. And you will be able to manage the deployed database server in workload factory. 
-
-*_Automate_ mode*: in this mode of operation, you provide AWS account credentials with automate permissions which lets you create and manage AWS resources within workload factory. 
-
 .Before you begin
 Ensure you have the following prerequisites before you create a new database host. 
 
-Credentials and permissions::: You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and automate mode permissions^] to create a new database host in workload factory. 
+Credentials and permissions::: You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and _read/write_ mode permissions^] to create a new database host in workload factory. 
 
 Active Directory::: When connecting to Active Directory, you must have administrative access with permissions to do the following: 
 +
@@ -100,11 +91,13 @@ Optionally, you can download a partially completed YAML file template from the C
 
 .. *Region & VPC*: Select a Region and VPC network. 
 +
-Ensure security groups for an existing interface endpoint allow access to HTTPS (443) protocol to the selected subnets. 
+Ensure deployment subnets are associated with existing interface endpoints and security groups allow access to HTTPS (443) protocol to the selected subnets. 
 +
 AWS service interface endpoints (SQS, FSx, EC2, CloudWatch, CloudFormation, SSM) and the S3 gateway endpoint are created during deployment if not found.  
 +
 VPC DNS attributes `EnableDnsSupport` and `EnableDnsHostnames` are modified to enable endpoint address resolution if they aren't already set to `true`.
++
+When using a cross-VPC DNS, the security group for endpoints on the other VPC where DNS resides should allow port 443 to deployment subnets. If not, you should provide a DNS resolver from the local VPC when joining a cross-VPC Active Directory. In a multiple replicated Domain Controller environment, if some domain controllers are not reachable from the subnet, you can *Redirect to CloudFormation* and enter `Preferred domain controller` to connect to Active Directory.
 .. *Availability zones*: Select availability zones and subnets according to the Failover Cluster Instance (FCI) deployment model. 
 +
 NOTE: FCI deployments are only supported on Multiple Availability Zone (MAZ) FSx for ONTAP configurations.
