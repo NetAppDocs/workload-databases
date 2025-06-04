@@ -14,14 +14,12 @@ indexpage:
       links:
         - title: Explore savings
           url: /explore-savings.html
+        - title: Register an instance
+          url: /register-instance.html
         - title: Create a Microsoft SQL Server
           url: /create-database-server.html
         - title: Create a PostgreSQL server
           url: /create-postgresql-server.html  
-        - title: Create a database
-          url: /create-database.html
-        - title: Optimize configurations
-          url: /optimize-configurations.html
     - title: Knowledge and support
       links:
         - title: Register for support
