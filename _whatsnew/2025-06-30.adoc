@@ -5,13 +5,13 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.
 
 === Onboarding enhancement for registering host instances
 
-Workload factory for Databases has improved its onboarding process for registering host instances running on Amazon FSx for NetApp ONTAP storage. You'll be able to select host instances in bulk for registration. Once a host instance is registered, you can create and manage database host resources within the workload factory console. 
+Workload factory for Databases has improved its onboarding process for registering host instances running on Amazon FSx for NetApp ONTAP storage. You can now select host instances in bulk for registration. Once a host instance is registered, you can create and manage database host resources within the workload factory console. 
 
 link:https://docs.netapp.com/us-en/workload-databases/manage-instance.html[Instance management]
 
 === Analysis and fix for Microsoft Multipath I/O timeout setting
 
-The well-architected status for your database host instances now includes the analysis and the fix for the Microsoft Multipath I/O (MPIO) timeout setting. When the MPIO timeout setting is set to the best practice value of 60 seconds, it ensures that the underlying FSx for ONTAP storage has connectivity and stability during file system failovers. If the MPIO setting isn't set accordingly, workload factory will provide a fix to set the MPIO timeout value to 60 seconds.
+The well-architected status for your database host instances now includes the analysis and the fix for the Microsoft Multipath I/O (MPIO) timeout setting. Setting the MPIO timeout to 60 seconds ensures FSx for ONTAP storage connectivity and stability during failovers. If the MPIO setting isn't set accordingly, workload factory will provide a fix to set the MPIO timeout value to 60 seconds.
 
 link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Implement well-architected database configurations in workload factory]
 
