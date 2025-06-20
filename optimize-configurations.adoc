@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: optimize-configurations.html
 keywords: optimize, configuration, storage, compute, application, resiliency assessment, scan, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP
-summary: "BlueXP workload factory for Databases scans Microsoft SQL Server configurations providing insights and recommendations to help you achieve operational excellence." 
+summary: "Workload factory for Databases scans Microsoft SQL Server configurations providing insights and recommendations to help you achieve operational excellence." 
 ---
 = Implement well-architected database configurations in workload factory
 :icons: font
@@ -21,7 +21,7 @@ Workload factory analyzes the well-architected status of the following configura
 
 * Storage sizing: includes storage tier, file system headroom, log drive size, and TempDB drive size  
 * Storage layout: includes user data files placement, log files placement, and TempDB placement
-* Storage configuration: includes capacity management, thin provisioning, tiering policy, snapshots, and Multi-path I/O status, policy, and sessions, and more 
+* Storage configuration: includes capacity management, thin provisioning, tiering policy, snapshots, Microsoft Multipath I/O (MPIO) status, and MPIO timeout setting
 * Compute: includes rightsizing, operating system patches, and network adapter settings like Receive Side Scaling (RSS) and TCP offloading
 * Applications: includes Microsoft SQL Server licenses, Microsoft SQL Server patch, and MAXDOP settings 
 * Resiliency: includes local snapshots, FSx for ONTAP backups, and cross-region replication (CRR)
@@ -47,9 +47,9 @@ You can also download a report of the findings by selecting *Export PDF*.
 . Select the dropdown arrow to view the recommendation for any configuration. Recommendations include best practices, potential pitfalls of unoptimized configurations, and important considerations. Make sure you review the recommendation carefully. 
 . Select to *View and fix* configuration issues when the option is available.
 +
-*Select all* is the default, but you can select specific resources to optimize.
+*Select all* is the default, but you can select specific resources to fix.
 +
-.. For all configurations except clone cleanup, review the recommendation details to learn what will happen if you choose to optimize. Some remediation operations may cause instance downtimes or service interruptions. 
+.. For all configurations except clone cleanup, review the recommendation details to learn what will happen if you choose to fix the issue. Some remediation operations may cause instance downtimes or service interruptions. 
 .. For clone cleanup, select cloned databases (sandboxes) to refresh or delete.
 +
 * Refreshing a clone synchronizes it with its source database. Refresh is available only for clones created in workload factory.
@@ -58,5 +58,5 @@ You can also download a report of the findings by selecting *Export PDF*.
 . Select *Continue* to fix the configuration issue. 
 
 .Result
-The remediation process initiates. Select the *Job monitoring* tab to view the status of the operation.
+Workload factory begins fixing the issue(s). Select the *Job monitoring* tab to view the status of the operation.
 
