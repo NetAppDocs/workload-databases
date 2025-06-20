@@ -47,16 +47,23 @@ Registering a host instance includes instance authentication and preparation.
 . In the Databases tile, select *Go to Databases inventory*.
 . In Databases, select the *Inventory* tab. 
 . In the Inventory tab, select the *Instances* tab. 
-. Navigate to the instance to manage and select *Register instance*. 
-. On the Register instance page, select the instance authentication mode.
+. Select to register a single instance or register multiple instances. 
+.. Single instance registration: Navigate to the instance to manage and select *Register instance*. 
+.. Multiple instance registration: Select the *Register multiple instances* button.
++
+Two options are available for registering multiple instances. In both cases, the instances must share the same authentication status (unauthenticated or authenticated).
+
+* Unauthenticated instances: Select multiple unauthenticated instances to register. These instances must share the same authentication credentials and FSx for ONTAP credentials. Select *Apply* and then *Next*. 
+* Authenticated instances: Select multiple authenticated instances to register and then select *Next*. 
+. In step 2 on the Register instances page, select the instance authentication mode, enter the following details, and select *Next*. If instances are already authenticated, select *Next*.
 * *SQL Server authentication*: Enter the SQL Server user name and password, and the FSx for ONTAP file system user name and password.
 * *Windows authentication*: Enter the Windows user name and password, and the FSx for ONTAP file system user name and password.
-. Select *Next*.
-. Prepare the instance by making sure the instance meets required prerequisites.
+. In step 3, prepare the instance by making sure the instance meets required prerequisites.
 If all required modules are installed and prerequisites are met, select *Next* to register the instance. If you need to take action, follow these steps.  
 .. If missing, select workload factory to *Install missing AWS and NetApp PowerShell modules*.
 .. If missing, select workload factory to *Install missing PowerShell 7*. Installing missing PowerShell module 7 requires a system reboot. 
 .. Review the prerequisites list for the following capabilities. One prerequisite must be complete to register the instance. 
+
 * *Review well-architected issues and recommendations*
 * *Fix well-architected issues*
 * *Create database*
