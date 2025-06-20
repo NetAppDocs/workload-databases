@@ -18,3 +18,9 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 === Enhancements to graphics in host inventory
 
 Various resource utilization graphs like throughput and IOPS now display 7 days of data so that you can monitor performance from the workload factory console more efficiently.
+ 
+=== Support for Windows authentication in workload factory
+
+Now workload factory supports SQL Server authentication using Windows authenticated users to register host instances and benefit from host management features. 
+
+link:https://docs.netapp.com/us-en/workload-databases/register-instance.html[Register host instances in workload factory for Databases]
