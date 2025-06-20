@@ -53,10 +53,7 @@ sidebar:
         url: /automate-codebox.html  
   - title: Administer and monitor
     entries:
-    #-title: Manage databases
-        #  - title: Manage databases
-    #    entries: 
-      - title: Monitor databases
+      - title: Monitor database jobs
         url: /monitor-databases.html
       - title: Implement configuration best practices
         entries: 
@@ -66,11 +63,6 @@ sidebar:
             url: /optimize-configurations.html   
           - title: Postpone configuration analysis
             url: /postpone-analysis.html   
-      - title: Manage a Microsoft SQL Server
-        url: /manage-server.html
-      #  entries: 
-        #  - title: Manage a Microsoft SQL Server 
-        #    url: /manage-microsoft-server.html 
       - title: Manage clones
         entries: 
           - title: Check integrity of a sandbox clone
