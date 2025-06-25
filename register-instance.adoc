@@ -36,8 +36,10 @@ If you use a proxy server for all outbound connections from EC2 instances, you m
 * ``.amazonaws.com``
 
 == Before you begin
+Consider the following before registering a host instance:
 
-The host for the instance must appear in the Inventory tab. For hosts to appear in the inventory, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[you must add AWS account credentials and _read-only_ or _read/write_ mode permissions^].
+* The host for the instance must appear in the Inventory tab. For hosts to appear in the inventory, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[you must add AWS account credentials and _read-only_ or _read/write_ mode permissions^].
+* When using Windows domain user credentials to authenticate for SQL Server management operations, workload factory enables CredSSP delegation on the SQL nodes. If the CredSSP delegation is blocked for all domain computers with the group policy, authenticating with Windows user credentials doesn't work.
 
 == Register a host instance
 Registering a host instance includes instance authentication and preparation. 
