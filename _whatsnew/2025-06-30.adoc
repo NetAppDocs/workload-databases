@@ -3,8 +3,8 @@ The BlueXP workload factory notification service enables workload factory to sen
 
 link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[Configure BlueXP workload factory notifications^]
 
-The following events are supported for notifications:
-+
+Workload factory provides the following notifications for Databases:
+
 * Well-architected report
 * Host deployment
 * Protection
