@@ -37,25 +37,34 @@ sidebar:
             url: /create-database-server.html
           - title: Create PostgreSQL server
             url: /create-postgresql-server.html  
-      - title: Detect a database server
-        url: /detect-host.html 
-      - title: Create a database
-        url: /create-database.html 
+      - title: Manage instances
+        entries: 
+          - title: Instance management
+            url: manage-instance.html
+          - title: Register an instance
+            url: /register-instance.html
+          - title: View databases 
+            url: /view-databases.html  
+          - title: Create a database
+            url: /create-database.html 
+          - title: Create a sandbox clone 
+            url: /create-sandbox-clone.html                       
       - title: Automate with Codebox
         url: /automate-codebox.html  
   - title: Administer and monitor
     entries:
-      - title: Manage a Microsoft SQL Server
-        url: /manage-server.html
-      #  entries: 
-        #  - title: Manage a Microsoft SQL Server 
-        #    url: /manage-microsoft-server.html 
-    #  - title: Manage databases
-    #    entries: 
+      - title: Monitor database jobs
+        url: /monitor-databases.html
+      - title: Implement configuration best practices
+        entries: 
+          - title: Configuration analysis for Databases
+            url: /optimize-overview.html
+          - title: Implement well-architected database configurations
+            url: /optimize-configurations.html   
+          - title: Postpone configuration analysis
+            url: /postpone-analysis.html   
       - title: Manage clones
         entries: 
-          - title: Create a sandbox clone 
-            url: /create-sandbox-clone.html 
           - title: Check integrity of a sandbox clone
             url: /check-clone-integrity.html  
           - title: Revert a sandbox clone
@@ -69,17 +78,7 @@ sidebar:
           - title: Split a sandbox clone
             url: /split-clone.html  
           - title: Delete a sandbox clone
-            url: /delete-clone.html 
-      - title: Monitor databases
-        url: /monitor-databases.html
-      - title: Optimize SQL server
-        entries: 
-          - title: Continuous optimization overview
-            url: /optimize-overview.html
-          - title: Optimize configurations
-            url: /optimize-configurations.html   
-          - title: Postpone configuration analysis
-            url: /postpone-analysis.html                                   
+            url: /delete-clone.html                                 
   - title: Knowledge and support
     entries: 
       - title: Register for support

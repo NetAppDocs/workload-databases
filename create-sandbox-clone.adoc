@@ -17,7 +17,7 @@ A sandbox clone is created from the most recent snapshot on the source database.
 .Before you begin
 Ensure you complete the following prerequisites before you create a sandbox clone.
 
-Credentials and permissions::: You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and _read_ or _automate_ mode permissions^] to create a sandbox clone in workload factory. 
+Credentials and permissions::: You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and _read-only_ or _read/write_ mode permissions^] to create a sandbox clone in workload factory. 
 +
 Alternatively, you can use the Codebox to copy a partially completed template or create a completed template so that you can create the sandbox clone outside of workload factory using REST API. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html[Learn more about Codebox automation^].
 

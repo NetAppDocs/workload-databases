@@ -23,7 +23,7 @@ NOTE: Microsoft SQL Servers using SMB protocol don't support database creation.
 .Before you begin
 Ensure you complete the following prerequisites before you create a new database. 
 
-Credentials and permissions::: You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and _read_ or _automate_ mode permissions^] to create a new database in workload factory. 
+Credentials and permissions::: You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and _read-only_ or _read/write_ mode permissions^] to create a new database in workload factory. 
 +
 Alternatively, you can use the Codebox to copy a template so that you can deploy a database outside of workload factory using REST API. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html[Learn more about Codebox automation^].
 
@@ -34,7 +34,7 @@ Microsoft SQL Server::: You must have a managed Microsoft SQL Server in workload
 AWS Systems Manager::: Ensure the `NT Authority\SYSTEM user` privilege is enabled in the Microsoft SQL host via AWS System Manager. 
 
 == Create a database
-You can use _Quick create_ or _Advanced create_ deployment modes to complete this task in workload factory with _read_ or _automate_ mode permissions.
+You can use _Quick create_ or _Advanced create_ deployment modes to complete this task in workload factory with _read-only_ or _read/write_ mode permissions.
 
 [role="tabbed-block"]
 ====
@@ -46,7 +46,7 @@ You can use _Quick create_ or _Advanced create_ deployment modes to complete thi
 . In the Databases tile, select *Go to Databases inventory*.
 . In Databases, select the *Inventory* tab. 
 . In the Inventory tab, select a database server with a managed SQL server instance to create the database in.
-. Click the three-dot menuof the managed instance and then select *Create user database*.
+. Click the three-dot menu of the managed instance and then select *Create user database*.
 . On the Create user database page, under Database information, provide the following: 
 .. *Database name*: Enter name for the database. 
 .. *Collation*: Select a collation for the database. The default collation SQL_Latin1_General_CP1_CI_AS" on Microsoft SQL Server is selected. 
