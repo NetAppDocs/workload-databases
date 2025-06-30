@@ -9,19 +9,19 @@ summary: "Manage Microsoft SQL Server instances in BlueXP workload factory for D
 :imagesdir: ./media/
 
 [.lead]
-Register host instances so that you can monitor instance and database status, resource utilization, protection, and storage performance in workload factory for Databases. 
+Register instances so that you can monitor instance and database status, resource utilization, protection, and storage performance in workload factory for Databases. 
 
 Databases can only register instances with FSx for ONTAP file system storage. 
 
 == About the task
-Registering a host instance includes two steps - authenticating the instance and preparing the instance by making sure all AWS, NetApp, and PowerShell modules are installed on the instance.
+Registering an instance includes two steps - authenticating the instance and preparing the instance by making sure all AWS, NetApp, and PowerShell modules are installed on the instance.
 
 You can authentic links using SQL Server credentials or with Windows credentials.
 
-NOTE: Workload factory supports only Microsoft SQL Server host instance registration and management. Depending on the AWS account credentials you select in workload factory, PostgreSQL and Oracle hosts might appear in the Inventory. Currently, workload factory supports unregistered PostgreSQL instances running only on Amazon Linux operating systems and Oracle instances running only on Red Hat Enterprise Linux. 
+NOTE: Workload factory supports only Microsoft SQL Server instance registration and management. Depending on the AWS account credentials you select in workload factory, PostgreSQL and Oracle hosts might appear in the Inventory. Currently, workload factory supports unregistered PostgreSQL instances running only on Amazon Linux operating systems and Oracle instances running only on Red Hat Enterprise Linux. 
 
-== Registering host instance in a private network
-To register a host instance in a private network with no external connectivity, the following endpoints need to be available in the VPC with association to the subnets where SQL servers are present. Ensure the interface endpoints allow port 443 in the attached Security Group.
+== Registering an instance in a private network
+To register an instance in a private network with no external connectivity, the following endpoints need to be available in the VPC with association to the subnets where SQL servers are present. Ensure the interface endpoints allow port 443 in the attached Security Group.
 
 * `S3 Gateway/endpoint`
 * `ssm`
@@ -36,25 +36,36 @@ If you use a proxy server for all outbound connections from EC2 instances, you m
 * ``.amazonaws.com``
 
 == Before you begin
+Consider the following before registering an instance:
 
-The host for the instance must appear in the Inventory tab. For hosts to appear in the inventory, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[you must add AWS account credentials and _read-only_ or _read/write_ mode permissions^].
+* The host for the instance must appear in the Inventory tab. For hosts to appear in the inventory, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[you must add AWS account credentials and _read-only_ or _read/write_ mode permissions^].
+* When using Windows domain user credentials to authenticate for SQL Server management operations, workload factory enables CredSSP delegation on the SQL nodes. If the CredSSP delegation is blocked for all domain computers with the group policy, authenticating with Windows user credentials doesn't work.
 
-== Register a host instance
-Registering a host instance includes instance authentication and preparation. 
+== Register an instance
+Registering an instance includes instance authentication and preparation. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*.
 . In Databases, select the *Inventory* tab. 
 . In the Inventory tab, select the *Instances* tab. 
-. Navigate to the instance to manage and select *Register instance*. 
-. On the Register instance page, enter the SQL Server user name and password, and the FSx for ONTAP file system user name and password.
-. Select *Next*.
-. Prepare the instance by making sure the instance meets required prerequisites.
+. Select to register a single instance or register multiple instances. 
+.. Single instance registration: Navigate to the instance to manage and select *Register instance*. 
+.. Multiple instance registration: Select the *Register multiple instances* button.
++
+Two options are available for registering multiple instances. In both cases, the instances must share the same authentication status (unauthenticated or authenticated).
+
+* Unauthenticated instances: Select multiple unauthenticated instances to register. These instances must share the same authentication credentials and FSx for ONTAP credentials. Select *Apply* and then *Next*. 
+* Authenticated instances: Select multiple authenticated instances to register and then select *Next*. 
+. In step 2 on the Register instances page, select the instance authentication mode, enter the following details, and select *Next*. If instances are already authenticated, select *Next*.
+* *SQL Server authentication*: Enter the SQL Server user name and password, and the FSx for ONTAP file system user name and password.
+* *Windows authentication*: Enter the Windows user name and password, and the FSx for ONTAP file system user name and password.
+. In step 3, prepare the instance by making sure the instance meets required prerequisites.
 If all required modules are installed and prerequisites are met, select *Next* to register the instance. If you need to take action, follow these steps.  
 .. If missing, select workload factory to *Install missing AWS and NetApp PowerShell modules*.
 .. If missing, select workload factory to *Install missing PowerShell 7*. Installing missing PowerShell module 7 requires a system reboot. 
 .. Review the prerequisites list for the following capabilities. One prerequisite must be complete to register the instance. 
+
 * *Review well-architected issues and recommendations*
 * *Fix well-architected issues*
 * *Create database*
@@ -66,37 +77,3 @@ Completing prerequisites includes updating your AWS IAM policy permissions, EC2 
 
 .Result
 The request to register the instance initiates. Select the *Job monitoring* tab to to track progress. 
-
-
-//Rachel: With the June 3 release, this Before you begin step is probably obsolete with new preparation step as part of registering instances. Remove after verification.
-
-//* All manage operations are run by the AWS System Manager Agent using `NT Authority\SYSTEM` user privilege. Provide the following permissions for `NT Authority\SYSTEM` user in the database server: 
-//+
-//[cols="2,2a" options="header"]
-//|===
-//| Login securables
-//| Where required?
-
-//| `VIEW ANY DEFINITION` 
-//| Inventory, assessment, remediation, create database, create sandbox clone, explore savings
-
-//| `CONNECT ANY DATABASE`
-//| Inventory, assessment, remediation, create database, create sandbox clone
-
-//| `VIEW SERVER STATE`
-//| Inventory, assessment, remediation, create database, create sandbox clone
-
-//| `CREATE ANY DATABASE`
-//| Create database, create sandbox clone
-
-//| `CONTROL SERVER`
-//| Create sandbox clone
-
-//| `ALTER ANY DATABASE`
-//| Create sandbox clone
-
-//| `ALTER SETTINGS`
-//| Create sandbox clone, remediation for MAXDOP
-
-
-//|===

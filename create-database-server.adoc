@@ -65,6 +65,8 @@ You can use _Quick create_ or _Advanced create_ deployment modes to complete thi
 
 NOTE: When using Terraform from Codebox, the code you copy or download hides `fsxadmin` and `vsadmin` passwords. You'll need to re-enter the passwords when you run the code. You'll need to include the following permissions for the user account in addition to _Automate_ mode permissions: `iam:TagRole` and `iam:TagInstanceProfile`. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#use-terraform-from-codebox[Learn how to use Terraform from Codebox^].
 
+During deployment, workload factory enables CredSSP for credential delegation to scripts for provisioning SQL. When the CredSSP delegation is blocked for all domain computers with the group policy, deployment fails. Post-deployment, workload factory disables CredSSP.
+
 [role="tabbed-block"]
 ====
 
