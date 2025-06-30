@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: whats-new.html
-keywords: what's new, features, new, release notes, enhancements, fixes, new features, workload factory, databases, workload factory
+keywords: what's new, features, new, release notes, enhancements, fixes, new features, workload factory, databases, workload factory, databases
 summary: "Learn what's new with BlueXP workload factory for Databases."
 ---
 = What's new with BlueXP workload factory for Databases
