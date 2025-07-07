@@ -20,14 +20,14 @@ You can authentic links using SQL Server credentials or with Windows credentials
 
 NOTE: Workload factory supports only Microsoft SQL Server instance registration and management. Depending on the AWS account credentials you select in workload factory, PostgreSQL and Oracle hosts might appear in the Inventory. Currently, workload factory supports unregistered PostgreSQL instances running only on Amazon Linux operating systems and Oracle instances running only on Red Hat Enterprise Linux. 
 
-== Registering an instance in a private network
+Registering an instance in a private network:::
 To register an instance in a private network with no external connectivity, the following endpoints need to be available in the VPC with association to the subnets where SQL servers are present. Ensure the interface endpoints allow port 443 in the attached Security Group.
 
 * `S3 Gateway/endpoint`
 * `ssm`
 * `ssmmessages`
 * `fsx` 
-
++
 If you use a proxy server for all outbound connections from EC2 instances, you must allow access to the following domains so that management operations work:
  
 * ``.microsoft.com``
