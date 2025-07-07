@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: deregister-instance.html
-keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle host instance, deregister instance, unregister instance, remove instance
+keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle instance, deregister instance, unregister instance, remove instance
 summary: "Deregister an instance if you no longer want to deploy or monitor instance resources." 
 ---
 = Deregister an instance in workload factory

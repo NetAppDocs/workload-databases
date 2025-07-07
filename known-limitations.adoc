@@ -12,7 +12,7 @@ summary: "Known limitations identify platforms, devices, or functions that are n
 [.lead]
 Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
 
-== Host instance detection support
+== Instance detection support
 Workload factory supports the detection of PostgreSQL instances running only on Amazon Linux operating systems and Oracle instances running only on Red Hat Enterprise Linux.
 
 == AMI image version support
