@@ -12,8 +12,8 @@ summary: "To get a summary of the database resources in workload factory, view a
 To get a summary of the database resources in workload factory, view all databases in the database inventory. You may also view databases per a single registered instance.  
 
 .Before you begin
-* Host instances that contain database resources must have FSx for ONTAP file system storage. 
-* Host instances must be registered in workload factory. Learn how to link:register-instance.html[register host instances].
+* Instances that contain database resources must have FSx for ONTAP file system storage. 
+* Instances must be registered in workload factory. Learn how to link:register-instance.html[register an instance].
 
 .Steps
 
@@ -28,7 +28,7 @@ To get a summary of the database resources in workload factory, view all databas
 . In Databases, select the *Inventory* tab. 
 . Click the dropdown arrow to expand the row of the host to view its databases.
 +
-The host expands and the host instances appear.  
+The host expands and the instances appear.  
 . Click the three-dot menu of the instance containing the databases to view.
 . Select *View databases*. 
 --
@@ -41,7 +41,7 @@ The host expands and the host instances appear.
 . In Databases, select the *Inventory* tab. 
 . Click the dropdown arrow to expand the row of the host to view its databases.
 +
-The host expands and the host instances appear.  
+The host expands and the instances appear.  
 . Click the three-dot menu of the instance containing the databases to view.
 . Select *View databases*. 
 --

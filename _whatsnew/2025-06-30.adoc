@@ -7,28 +7,27 @@ Workload factory provides the following notifications for Databases:
 
 * Well-architected report
 * Host deployment
-* Protection
 
 === Onboarding enhancement for registering instances
 
-Workload factory for Databases has improved its onboarding process for registering instances running on Amazon FSx for NetApp ONTAP storage. You can now select instances in bulk for registration. Once an instance is registered, you can create and manage database host resources within the workload factory console. 
+Workload factory for Databases has improved its onboarding process for registering instances running on Amazon FSx for NetApp ONTAP storage. You can now select instances in bulk for registration. Once an instance is registered, you can create and manage database resources within the workload factory console. 
 
 link:https://docs.netapp.com/us-en/workload-databases/manage-instance.html[Instance management]
 
 === Analysis and fix for Microsoft Multipath I/O timeout setting
 
-The well-architected status for your database host instances now includes the analysis and the fix for the Microsoft Multipath I/O (MPIO) timeout setting. Setting the MPIO timeout to 60 seconds ensures FSx for ONTAP storage connectivity and stability during failovers. If the MPIO setting isn't set accordingly, workload factory will provide a fix to set the MPIO timeout value to 60 seconds.
+The well-architected status for your database instances now includes the analysis and the fix for the Microsoft Multipath I/O (MPIO) timeout setting. Setting the MPIO timeout to 60 seconds ensures FSx for ONTAP storage connectivity and stability during failovers. If the MPIO setting isn't set accordingly, workload factory will provide a fix to set the MPIO timeout value to 60 seconds.
 
 link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Implement well-architected database configurations in workload factory]
 
-=== Enhancements to graphics in host inventory
+=== Enhancements to graphics in instance inventory
 
-From the host inventory screen, various resource utilization graphs like throughput and IOPS now display 7 days of data so that you can monitor performance of SQL nodes from the workload factory console more efficiently. The performance metrics gathered from the SQL nodes will be saved in Amazon CloudWatch which can be used for Logs Insights or integrating with other analytic services in your environment.
+From the instance inventory screen, various resource utilization graphs like throughput and IOPS now display 7 days of data so that you can monitor performance of SQL nodes from the workload factory console more efficiently. The performance metrics gathered from the SQL nodes will be saved in Amazon CloudWatch which can be used for Logs Insights or integrating with other analytic services in your environment.
 
-From the Instances and Databases tabs within the host inventory, we've enhanced the description and visualization for host protection.
- 
+From the Instances and Databases tabs within the inventory, we've enhanced the description and visualization for protection.
+
 === Support for Windows authentication in workload factory
 
-Now workload factory supports SQL Server authentication using Windows authenticated users to register host instances and benefit from host management features. 
+Now workload factory supports SQL Server authentication using Windows authenticated users to register instances and benefit from management features.
 
-link:https://docs.netapp.com/us-en/workload-databases/register-instance.html[Register host instances in workload factory for Databases]
+link:https://docs.netapp.com/us-en/workload-databases/register-instance.html[Register instances in workload factory for Databases]
