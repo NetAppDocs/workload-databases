@@ -11,7 +11,7 @@ summary: "Create a new Microsoft SQL Server within BlueXP workload factory for D
 [.lead]
 Creating a new Microsoft SQL Server, or database host, in workload factory for Databases requires an FSx for ONTAP file system deployment and resources for Active Directory. 
 
-.About this task
+== About this task
 Before creating a Microsoft SQL Server from workload factory, learn about the available storage deployment types for the database host configuration, Microsoft Multi-path I/O configuration, Active Directory deployment, networking details, and the requirements to complete this operation.
 
 After deployment, you'll need to <<Step 2: Enable remote connection on the Microsoft SQL Server,enable remote connection on the Microsoft SQL Server>>. 
@@ -37,7 +37,7 @@ The following occurs for Active Directory (AD) during deployment:
 * The Windows cluster, node host names, and Microsoft SQL FCI name are added as managed computers to the Microsoft SQL service account. 
 * The Windows cluster entry is assigned permissions to add computers to the domain.
 
-== User-managed Active Directory security groups
+User-managed Active Directory security groups:::
 If you select “user-managed Active Directory” during Microsoft SQL Server deployment in workload factory, you must provide a security group that allows traffic between the EC2 instances to the directory service for deployment. Workload factory doesn't automatically attach the security group for user-managed Active Directory like it does for AWS Managed Microsoft AD.
 
 Resource rollback:::
@@ -46,7 +46,7 @@ If you decide to rollback your Domain Name System (DNS) resources, the resource 
 * For user-managed AD, first link:https://learn.microsoft.com/en-us/powershell/module/activedirectory/remove-adcomputer?view=windowsserver2022-ps[remove the AD computer^]. Then, connect to the DNS server from DNS manager and link:https://learn.microsoft.com/en-us/windows-server/networking/technologies/ipam/delete-dns-resource-records[delete the DNS Resource Records^].
 * For AWS Managed Microsoft AD, link:https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_install_ad_tools.html[install the AD administration tools^]. Next, link:https://learn.microsoft.com/en-us/powershell/module/activedirectory/remove-adcomputer?view=windowsserver2022-ps[remove the AD computer^]. Lastly, connect to the DNS server from DNS manager and link:https://learn.microsoft.com/en-us/windows-server/networking/technologies/ipam/delete-dns-resource-records[delete the DNS Resource Records^].
 
-.Before you begin
+== Before you begin
 Ensure you have the following prerequisites before you create a new database host. 
 
 Credentials and permissions::: You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and _read/write_ mode permissions^] to create a new database host in workload factory. 
