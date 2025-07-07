@@ -29,7 +29,7 @@ Workload factory analyzes the well-architected status of the following configura
 
 .Before you begin
 * You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and read/write permissions^] to analyze your database configurations. 
-* To assess the storage of a Microsoft SQL Server instance, the instance must be registered in workload factory and the storage type must be FSx for ONTAP. link:register-instance.html[Learn how to register a host instance.]
+* To assess the storage of a Microsoft SQL Server instance, the instance must be registered in workload factory and the storage type must be FSx for ONTAP. link:register-instance.html[Learn how to register an instance.]
 * Make sure you review each recommendation carefully before selecting to fix a setting or configuration. For RSS and MAXDOP settings, we suggest that you test the recommended settings to determine performance improvements before making changes to your production environment. 
 
 NOTE: The remediation process may cause instance downtimes or service interruptions. Make sure you review the recommendation carefully before you choose to fix a configuration.
@@ -39,7 +39,7 @@ NOTE: The remediation process may cause instance downtimes or service interrupti
 . In the Databases tile, select *Go to Databases inventory*.
 . In the *Inventory* tab, select the *Instances* tab.
 . Select *Fix issues* to view configuration issues for the instance. 
-. On the Well-architected status page for the host instance, review the findings from the analysis. 
+. On the Well-architected status page for the instance, review the findings from the analysis. 
 +
 You can filter configuration issues by categories, subcategories, status, severity, and tags. 
 + 

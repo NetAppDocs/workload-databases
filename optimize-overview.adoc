@@ -36,9 +36,9 @@ Configuration categories::: The file system configurations are organized into ca
 Analysis scope::: The scope of optimization is different depending on which component is being assessed. For example, storage optimization occurs at the SQL instance level whereas compute optimization occurs at the host level. 
 
 == Analysis requirements
-For a complete database environment analysis, host instances must be registered and online.
+For a complete database environment analysis, instances must be registered and online.
 
-link:register-instance.html[Learn how to register a host instance.]
+link:register-instance.html[Learn how to register an instance.]
 
 .What's next
 
