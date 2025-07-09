@@ -11,6 +11,8 @@ summary: "Workload factory for Databases scans Microsoft SQL Server configuratio
 [.lead]
 Using configuration analysis insights and recommendations, leverage workload factory to implement best practices for your database configurations. You can easily find issues and take action to improve the architecture of any configurations that aren't optimized for reliability, security, efficiency, performance, and cost.
 
+link:configuration-analysis.html[Learn about the configuration analysis and how well-architected status is determined.]
+
 .About this task
 Workload factory analyzes database configurations daily. The daily analysis provides insights and recommendations with options to automatically fix configuration issues so that your configurations meet best practices. 
 

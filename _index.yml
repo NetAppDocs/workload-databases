@@ -17,7 +17,7 @@ indexpage:
         - title: Register an instance
           url: /register-instance.html
         - title: View the well-architected status of your instances  
-          url: /optimize-overview.html
+          url: /optimize-configurations.html
         - title: Create a Microsoft SQL Server
           url: /create-database-server.html
         - title: Create a PostgreSQL server
