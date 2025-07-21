@@ -1,0 +1,21 @@
+=== Well-architected analysis includes high-availability cluster validation
+
+The well-architected analysis now includes validation for high-availability clusters. This validation checks all cluster-related configurations from the server side, including disk availability and configuration on both nodes, Windows cluster configuration, and failover readiness. This ensures that the Windows cluster is properly set up and can successfully failover when needed.
+
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Implement well-architected database configurations in workload factory]
+
+=== Multi-level menu implemented for instances  
+The workload factory console has been updated to implement a multi-level menu for instances. This change enhances the user experience by providing a more organized and intuitive navigation structure, making it easier to access various instance management features and settings.
+The instance table menu has been updated to a multi-level menu structure, allowing for easier navigation and management of instances.
+
+image:manage-instance-table-menu.png["A screenshot of the instance table menu with a multi-level menu structure. Select the instance table menu and then manage instance to view databases, create a database, and create a sandbox clone."]
+
+=== Discover database resources in workload factory
+
+Now you can now discover existing database resources from the Learn more page in the workload factory console. After discovery, your resources are available in the inventory page, which provides insights into your current database resources and helps you identify opportunities for optimization and improvement. To discover resources, you must have read-only or read/write permissions for the workload factory console.
+
+link to Learn more page?
+
+=== Authentication required to explore savings
+
+To explore potential savings for your database environments with Amazon FSx for NetApp ONTAP, authentication is required. Two authentication options are available. You can authenticate with SQL Server credentials or by adding missing SQL Server permissions to `NT Authority\SYSTEM`.
