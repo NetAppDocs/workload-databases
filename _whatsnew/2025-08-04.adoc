@@ -7,7 +7,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 === Multi-level menu available for instances  
 The workload factory console now includes a multi-level menu for instances. This change enhances the user experience by providing a more organized and intuitive navigation structure for managing instances. Menu options for instance management includes viewing the instance dashboard, viewing databases, creating a database, and creating a sandbox clone.
 
-image:manage-instance-table-menu.png["A screenshot of the instance table menu with a multilevel menu structure. Select the instance table menu and then manage instance to view databases, create a database, and create a sandbox clone."]
+image:manage-instance-table-menu.png["A screenshot of the instance table menu with a multilevel menu structure. Select the instance table menu and then manage instance to view databases and create a database and create a sandbox clone."]
 
 === Discover database resources in workload factory
 
