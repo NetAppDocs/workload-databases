@@ -11,10 +11,12 @@ image:manage-instance-table-menu.png["A screenshot of the instance table menu wi
 
 === Discover database resources in workload factory
 
-Now you can now discover existing database resources from the Learn more page in the workload factory console. After discovery, your resources are available in the inventory page, which provides insights into your current database resources and helps you identify opportunities for optimization and improvement. To discover resources, you must have read-only or read/write permissions for the workload factory console.
+Now you can now discover existing database resources from the Learn more page in the workload factory console. After discovery, your resources are available in the inventory page, which provides insights into your current database resources and helps you identify opportunities for optimization and improvement. To discover resources, you must have _read-only_ or _read/write_ permissions for the workload factory console.
 
-link to Learn more page?
+*Link to Learn more page or Add credentials?* 
 
 === Authentication required to explore savings
 
 To explore potential savings for your database environments with Amazon FSx for NetApp ONTAP, authentication is required. Two authentication options are available. You can authenticate with SQL Server credentials or by adding missing SQL Server permissions to `NT Authority\SYSTEM`.
+
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html[Explore potential savings for your database environments with Amazon FSx for NetApp ONTAP]
