@@ -10,6 +10,8 @@ indexpage:
           url: /learn-databases.html
         - title: Quick start
           url: /quick-start-databases.html
+        - title: Discover resources
+          url: /discover-resources.html  
     - title: Use Databases
       links:
         - title: Explore savings

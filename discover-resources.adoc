@@ -1,0 +1,18 @@
+---
+sidebar: sidebar
+permalink: discover-resources.html
+keywords: discover resources, discover, resources, inventory, database host
+summary: "Discover existing database resources within workload factory for Databases." 
+---
+= Discover existing database resources in workload factory for Databases
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Discover existing database resources within workload factory for Databases to view configuration details from the inventory page and to explore savings.
+
+== About this task
+To discover existing database resources, you must add credentials to workload factory.
+
+*The next step is adding credentials - https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html. This content is hosted in the setup admin guide. I'm not sure we have enough here to warrant a separate page for this task. What else could go here?*
+
