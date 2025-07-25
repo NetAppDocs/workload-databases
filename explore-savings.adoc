@@ -195,6 +195,7 @@ Follow the steps under the tab for your storage type.
 +
 If workload factory detects EBS hosts, you'll be redirected to the Explore savings tab. If workload factory doesn't detect EBS hosts, you'll be redirected to the calculator to <<Explore savings via customization,explore savings via customization>>.
 . In the Explore savings tab, click *Explore savings* of the database server using EBS storage.
+. If required, authenticate the database host with SQL Server credentials, Windows credentials, or by adding missing SQL Server permissions.
 . In the Savings calculator, optionally, provide the following details on clones and snapshots in your EBS storage for a more accurate cost savings estimate. 
 .. *Snapshot frequency*: Select a snapshot frequency from the dropdown menu.
 .. *Clone refresh frequency*: Select the frequency that clones refresh from the dropdown menu.
@@ -209,6 +210,7 @@ If workload factory detects EBS hosts, you'll be redirected to the Explore savin
 +
 If workload factory detects FSx for Windows hosts, you'll be redirected to the Explore savings tab. If workload factory doesn't detect FSx for Windows hosts, you'll be redirected to the calculator to <<Explore savings via customization,explore savings via customization>>.
 . In the Explore savings tab, click *Explore savings* of the database server using FSx for Windows File Server storage.
+. If required, authenticate the database host with SQL Server credentials, Windows credentials, or by adding missing SQL Server permissions.
 . In the Savings calculator, optionally, provide the following details on clones (shadow copies) and snapshots in your FSx for Windows storage for a more accurate cost savings estimate.  
 .. *Snapshot frequency*: Select a snapshot frequency from the dropdown menu.
 +
