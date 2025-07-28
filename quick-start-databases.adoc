@@ -39,6 +39,8 @@ If you operate in _read-only_ or _read/write_ mode, you'll need to link:https://
 
 If you chose to operate in _read-only_ mode, you can link:discover-resources.html[discover existing resources] to explore savings or view configurations from the inventory.
 
+[role="quick-margin-para"]
+
 If you chose to operate in _read/write_ mode, you can link:create-database-server.html[deploy a host server] so that you can register instances for the purpose of creating databases or sandbox clones.    
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Register an instance
