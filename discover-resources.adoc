@@ -14,5 +14,5 @@ Discover existing database resources within workload factory for Databases to vi
 == About this task
 To discover existing database resources, you must add credentials to workload factory.
 
-*The next step is adding credentials - https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html. This content is hosted in the setup admin guide. I'm not sure we have enough here to warrant a separate page for this task. What else could go here?*
+*The next step is adding credentials - https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html. This content is hosted in the setup and admin guide. I'm not sure we have enough here to have this page. What else could go here?*
 

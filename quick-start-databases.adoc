@@ -31,13 +31,13 @@ Choose between link:https://docs.netapp.com/us-en/workload-setup-admin/operation
 If you operate in _basic_ mode, you don't need to go any further. You can start using Databases to copy partially completed code samples. In the Databases tile, click *Deploy database host*. link:create-database-server.html[Learn how to deploy a database server]. 
 
 [role="quick-margin-para"]
-If you operate in _read-only_ or _read/write_ mode, you'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[add credentials to an account manually^] which includes selecting workload capabilities, such as Databases and GenAI, and creating the IAM policies to ensure you have the correct permissions for operating in _read-only_ or _read/write_ mode.
+If you operate in _read-only_ or _read/write_ mode, you'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[add credentials to an account manually^] which includes selecting workload capabilities, such as Databases and GenAI, and create the IAM policies to ensure you have the correct permissions for operating in _read-only_ or _read/write_ mode.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Discover or deploy a database server
 
 [role="quick-margin-para"]
 
-If you chose to operate in _read-only_ mode, you can link:discover-resources.html[discover existing resources] to explore savings or view configurations from the inventory.
+If you chose to operate in _read-only_ mode, and you have added credentials and IAM policies, you can link:discover-resources.html[discover existing resources] to explore savings or view configurations from the inventory. *This is a redundant step because you already added credentials in the previous step.*
 
 [role="quick-margin-para"]
 If you chose to operate in _read/write_ mode, you can link:create-database-server.html[deploy a host server] so that you can register instances for the purpose of creating databases or sandbox clones.    
