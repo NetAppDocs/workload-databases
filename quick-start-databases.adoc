@@ -42,15 +42,18 @@ With added credentials and IAM policies, you can either discover existing databa
 
 [role="quick-margin-para"]
 
-When you have Amazon Elastic Block Store (EBS) or FSx for Windows File Server hosts in your Databases inventory, you can link:explore-savings.html[explore savings with the savings calculator]. This calculator provides a cost comparison of EBS or FSx for Windows File Server hosts with FSx for ONTAP and saving opportunities. 
+When you have Amazon Elastic Block Store (EBS) or FSx for Windows File Server hosts in your Databases inventory, you can link:explore-savings.html[explore savings with the savings calculator]. 
+
+[role="quick-margin-para"]
+The savings calculator compares various cost components of running Microsoft SQL Server workloads like storage, compute, SQL license, snapshots, and clones for your database workloads on FSx for ONTAP file systems against EBS, FSx for Windows File Server, and on-premises storage, and provides savings opportunities. 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Troubleshoot issues
 
 [role="quick-margin-para"]
-Workload Factory for Databases regularly analyzes Microsoft SQL Server deployments on Amazon FSx for NetApp ONTAP storage. It identifies configuration issues and provides actionable recommendations to optimize performance, cost efficiency, and compliance with best practices.
+Workload Factory for Databases regularly analyzes Microsoft SQL Server deployments on Amazon FSx for NetApp ONTAP storage from the Well-architected dashboard. The dashboard displays configuration issues and provides actionable recommendations to optimize performance, cost efficiency, and compliance with best practices.
 
 [role="quick-margin-para"]
-To start using advanced troubleshooting from the well-architected dashboard for your database resources, you'll need to link:register-instance.html[register instances]. 
+To troubleshoot issues from the well-architected dashboard for your database resources, you'll need to link:register-instance.html[register instances]. 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png[Six] Operate
 
@@ -81,7 +84,7 @@ If you operate in _read-only_ or _read/write_ mode, you'll need to link:https://
 
 [role="quick-margin-para"]
 
-With added credentials and IAM policies, you can either discover existing database resources in the inventory or link:create-database-server.html[deploy a host server]. The inventory provides a single pane of glass to manage all database resources.
+With added credentials and IAM policies, you can either discover existing database resources in the inventory or link:create-database-server.html[deploy a server]. The inventory provides a single pane of glass to manage all database resources.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Register instances 
 
