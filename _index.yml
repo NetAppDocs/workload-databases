@@ -9,9 +9,7 @@ indexpage:
         - title: Learn about Databases
           url: /learn-databases.html
         - title: Quick start
-          url: /quick-start-databases.html
-        - title: Discover resources
-          url: /discover-resources.html  
+          url: /quick-start-databases.html 
     - title: Use Databases
       links:
         - title: Explore savings

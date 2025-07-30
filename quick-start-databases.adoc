@@ -13,7 +13,9 @@ With workload factory for Databases, you can get started immediately in _basic_ 
 
 You must have an AWS account to use Databases. 
 
-Follow these steps to get started. 
+Follow these steps to get started.
+
+== Option 1: Focused on user goals
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Log in to BlueXP workload factory
 
@@ -28,30 +30,68 @@ You'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-s
 Choose between link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[_basic_, _read-only_, and _read/write_ operational modes^]. 
 
 [role="quick-margin-para"]
-If you operate in _basic_ mode, you don't need to go any further. You can start using Databases to copy partially completed code samples. In the Databases tile, click *Deploy database host*. link:create-database-server.html[Learn how to deploy a database server]. 
+If you operate in _read-only_ or _read/write_ mode, you'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[add credentials to an account manually^] which includes selecting workload capabilities, such as Databases and GenAI, and create the IAM policies to ensure you have the correct permissions for operating in _read-only_ or _read/write_ mode.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Discover or deploy resources
 
 [role="quick-margin-para"]
-If you operate in _read-only_ or _read/write_ mode, you'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[add credentials to an account manually^] which includes selecting workload capabilities, such as Databases and GenAI, and create the IAM policies to ensure you have the correct permissions for operating in _read-only_ or _read/write_ mode.
+
+With added credentials and IAM policies, you can either discover existing database resources in the inventory or link:create-database-server.html[deploy a host server]. The inventory provides a single pane of glass to manage all database resources.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Assess database configurations
+
+[role="quick-margin-para"]
+
+When you have Amazon Elastic Block Store (EBS) or FSx for Windows File Server hosts in your Databases inventory, you can link:explore-savings.html[explore savings with the savings calculator]. This calculator provides a cost comparison of EBS or FSx for Windows File Server hosts with FSx for ONTAP and saving opportunities. 
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Troubleshoot issues
+
+[role="quick-margin-para"]
+Workload Factory for Databases regularly analyzes Microsoft SQL Server deployments on Amazon FSx for NetApp ONTAP storage. It identifies configuration issues and provides actionable recommendations to optimize performance, cost efficiency, and compliance with best practices.
+
+[role="quick-margin-para"]
+To start using advanced troubleshooting from the well-architected dashboard for your database resources, you'll need to link:register-instance.html[register instances]. 
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png[Six] Operate
+
+[role="quick-margin-para"]
+When you have registered instances with FSx for ONTAP file system storage in your Databases inventory, you can link:create-database.html[create a user database] or link:create-sandbox-clone.html[clone your host to create a sandbox]. 
+
+.What's next
+When you have registered instances with FSx for ONTAP file system storage in your Databases inventory, you can link:create-database.html[create a user database] or link:create-sandbox-clone.html[clone your host to create a sandbox]. 
+
+== Option 2: Focused on steps
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Log in to BlueXP workload factory
+
+[role="quick-margin-para"]
+
+You'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html[set up an account with workload factory^] and log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Add credentials and permissions
+
+[role="quick-margin-para"]
+
+Choose between link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[_basic_, _read-only_, and _read/write_ operational modes^]. 
+
+[role="quick-margin-para"]
+If you operate in _read-only_ or _read/write_ mode, you'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[add credentials to an account manually^] which includes selecting workload capabilities, such as Databases and GenAI, and creating the IAM policies to ensure you have the correct permissions for operating in _read-only_ or _read/write_ mode.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Discover or deploy a database server
 
 [role="quick-margin-para"]
 
-If you chose to operate in _read-only_ mode, and you have added credentials and IAM policies, you can link:discover-resources.html[discover existing resources] to explore savings or view configurations from the inventory. *This is a redundant step because you already added credentials in the previous step.*
+With added credentials and IAM policies, you can either discover existing database resources in the inventory or link:create-database-server.html[deploy a host server]. The inventory provides a single pane of glass to manage all database resources.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Register instances 
 
 [role="quick-margin-para"]
-If you chose to operate in _read/write_ mode, you can link:create-database-server.html[deploy a host server] so that you can register instances for the purpose of creating databases or sandbox clones.    
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Register an instance
-
-[role="quick-margin-para"]
-
 With resources in your inventory, you can link:register-instance.html[register instances] to complete the process of managing your resources and before adding user databases.
 
 .What's next
 When you have registered instances with FSx for ONTAP file system storage in your Databases inventory, you can link:create-database.html[create a user database] or link:create-sandbox-clone.html[clone your host to create a sandbox]. 
 
-When you have Elastic Block Store or FSx for Windows File Server hosts in your Databases inventory, you can link:explore-savings.html[explore savings with the savings calculator]. 
+When you have Elastic Block Store or FSx for Windows File Server hosts in your Databases inventory, you can link:explore-savings.html[explore savings with the savings calculator].
 
 
 
