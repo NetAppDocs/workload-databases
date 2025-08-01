@@ -52,11 +52,6 @@ Workload Factory for Databases regularly analyzes Microsoft SQL Server deploymen
 [role="quick-margin-para"]
 After registering instances, you can view the well-architected status and take action to link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[implement well-architected database configurations] in workload factory.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png[Six] Operate
-
-[role="quick-margin-para"]
-When you have registered instances with FSx for ONTAP file system storage in your Databases inventory, you can link:create-database.html[create a user database] or link:create-sandbox-clone.html[clone your host to create a sandbox]. 
-
 .What's next
 When you have registered instances with FSx for ONTAP file system storage in your Databases inventory, you can link:create-database.html[create a user database] or link:create-sandbox-clone.html[clone your host to create a sandbox]. 
 
