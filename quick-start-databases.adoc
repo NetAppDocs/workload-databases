@@ -38,13 +38,13 @@ If you operate in _read-only_ or _read/write_ mode, you'll need to link:https://
 
 With credentials and IAM policies, you can discover existing database resources in the inventory or link:create-database-server.html[deploy a host server]. The inventory provides a unified interface to manage resources.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Assess database configurations/Explore savings
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Explore cost-saving opportunities
 
 [role="quick-margin-para"]
 
 When you have Amazon Elastic Block Store (EBS) or FSx for Windows File Server hosts in your Databases inventory, you can link:explore-savings.html[use the savings calculator to analyze costs]. 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Troubleshoot issues
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Troubleshoot
 
 [role="quick-margin-para"]
 Workload Factory for Databases regularly analyzes Microsoft SQL Server deployments on Amazon FSx for NetApp ONTAP storage from the Well-architected dashboard. To troubleshoot issues from the well-architected dashboard for your database resources, you first need to link:register-instance.html[register instances]. 
