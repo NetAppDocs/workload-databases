@@ -30,30 +30,27 @@ You'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-s
 Choose between link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[_basic_, _read-only_, and _read/write_ operational modes^]. 
 
 [role="quick-margin-para"]
-If you operate in _read-only_ or _read/write_ mode, you'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[add credentials to an account manually^] which includes selecting workload capabilities, such as Databases and GenAI, and create the IAM policies to ensure you have the correct permissions for operating in _read-only_ or _read/write_ mode.
+If you operate in _read-only_ or _read/write_ mode, you'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[add credentials to an account manually^] select workload capabilities, such as Databases and GenAI, and create IAM policies for the required permissions.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Discover or deploy resources
 
 [role="quick-margin-para"]
 
-With added credentials and IAM policies, you can either discover existing database resources in the inventory or link:create-database-server.html[deploy a host server]. The inventory provides a single pane of glass to manage all database resources.
+With credentials and IAM policies, you can discover existing database resources in the inventory or link:create-database-server.html[deploy a host server]. The inventory provides a unified interface to manage resources.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Assess database configurations/Explore savings
 
 [role="quick-margin-para"]
 
-When you have Amazon Elastic Block Store (EBS) or FSx for Windows File Server hosts in your Databases inventory, you can link:explore-savings.html[explore savings with the savings calculator]. 
-
-[role="quick-margin-para"]
-The savings calculator compares various cost components of running Microsoft SQL Server workloads like storage, compute, SQL license, snapshots, and clones for your database workloads on FSx for ONTAP file systems against EBS, FSx for Windows File Server, and on-premises storage, and provides savings opportunities. 
+When you have Amazon Elastic Block Store (EBS) or FSx for Windows File Server hosts in your Databases inventory, you can link:explore-savings.html[use the savings calculator to analyze costs]. 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Troubleshoot issues
 
 [role="quick-margin-para"]
-Workload Factory for Databases regularly analyzes Microsoft SQL Server deployments on Amazon FSx for NetApp ONTAP storage from the Well-architected dashboard. The dashboard displays configuration issues and provides actionable recommendations to optimize performance, cost efficiency, and compliance with best practices.
+Workload Factory for Databases regularly analyzes Microsoft SQL Server deployments on Amazon FSx for NetApp ONTAP storage from the Well-architected dashboard. To troubleshoot issues from the well-architected dashboard for your database resources, you first need to link:register-instance.html[register instances]. 
 
 [role="quick-margin-para"]
-To troubleshoot issues from the well-architected dashboard for your database resources, you'll first need to link:register-instance.html[register instances]. After registering instances, you can view the well-architected status and take action to link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[implement well-architected database configurations] in workload factory.
+After registering instances, you can view the well-architected status and take action to link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[implement well-architected database configurations] in workload factory.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png[Six] Operate
 
@@ -78,13 +75,13 @@ You'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-s
 Choose between link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[_basic_, _read-only_, and _read/write_ operational modes^]. 
 
 [role="quick-margin-para"]
-If you operate in _read-only_ or _read/write_ mode, you'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[add credentials to an account manually^] which includes selecting workload capabilities, such as Databases and GenAI, and creating the IAM policies to ensure you have the correct permissions for operating in _read-only_ or _read/write_ mode.
+If you operate in _read-only_ or _read/write_ mode, you'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[add credentials to an account manually^] select workload capabilities, such as Databases and GenAI, and create IAM policies for the required permissions.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Discover or deploy a database server
 
 [role="quick-margin-para"]
 
-With added credentials and IAM policies, you can either discover existing database resources in the inventory or link:create-database-server.html[deploy a server]. The inventory provides a single pane of glass to manage all database resources.
+With credentials and IAM policies, you can either discover existing database resources in the inventory or link:create-database-server.html[deploy a server]. The inventory provides a unified interface to manage resources.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Register instances 
 
