@@ -1,0 +1,16 @@
+=== Well-architected analysis includes high-availability cluster validation
+
+The well-architected analysis now includes validation for high-availability clusters. This validation checks all cluster-related configurations from the server side, including disk availability and configuration on both nodes, Windows cluster configuration, and failover readiness. This ensures that the Windows cluster is properly set up and can successfully failover when needed.
+
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Implement well-architected database configurations in workload factory]
+
+=== Multi-level menu available for instances  
+The workload factory console now includes a multi-level menu for instances. This change provides a more organized and intuitive navigation structure for managing instances. Menu options for instance management include viewing the instance dashboard, viewing databases, creating a database, and creating a sandbox clone.
+
+image:manage-instance-table-menu.png["A screenshot of the instance table menu with a multi-level menu structure. Select the instance table menu and then manage instance to view databases, create a database, and create a sandbox clone."]
+
+=== New authentication option to explore savings
+
+When the `NT Authority\SYSTEM` user doesn't have sufficient permissions on the Microsoft SQL Server, you can authenticate with SQL Server credentials or add the missing SQL Server permissions to `NT Authority\SYSTEM`.
+
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html[Explore potential savings for your database environments with Amazon FSx for NetApp ONTAP]
