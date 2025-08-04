@@ -15,8 +15,6 @@ You must have an AWS account to use Databases.
 
 Follow these steps to get started.
 
-== Option 1: Focused on user goals
-
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Log in to BlueXP workload factory
 
 [role="quick-margin-para"]
