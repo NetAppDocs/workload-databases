@@ -28,8 +28,6 @@ The calculator displays whether the storage for the database workloads on these 
 
 image:screenshot-ebs-savings-calculator-update.png["A screenshot of the savings calculator page shows the selected Microsoft SQL Server on Amazon Elastic Block Store configuration on the left with the option to customize snapshot and clone values. Cost savings in dollar amount and percentage savings as well as the total monthly cost for using Microsoft SQL Server on FSx for ONTAP and Elastic Block Store storage display on the left."]
 
-//In some cases, workload factory may recommend that you deploy multiple file systems based on the amount of storage you are currently using, and based on the performance characteristics of your database workloads. 
-
 == SQL Server deployment analysis
 The calculator performs a comprehensive analysis of your SQL Server deployment to ensure that the resources and features being utilized are appropriately matched to the SQL Server edition. Here are the key factors and conditions the calculator checks before recommending a downgrade to Standard Edition:
 
@@ -181,8 +179,6 @@ Complete the following prerequisites before you begin:
 ----
 . Opt the billable AWS account in to AWS Compute Optimizer.
 
-//Unsure if this is true for Databases - NOTE: Automatic mode doesn’t support calculations for EBS snapshots and FSx for Windows File Server shadow copies. In manual mode, you can provide EBS and FSx for Windows File Server snapshot details.   
-
 Follow the steps under the tab for your storage type.
 
 [role="tabbed-block"]
@@ -196,26 +192,30 @@ Follow the steps under the tab for your storage type.
 If workload factory detects EBS hosts, you'll be redirected to the Explore savings tab. If workload factory doesn't detect EBS hosts, you'll be redirected to the calculator to <<Explore savings via customization,explore savings via customization>>.
 . In the Explore savings tab, click *Explore savings* of the database server using EBS storage.
 . If required, authenticate the database host with SQL Server credentials, Windows credentials, or by adding missing SQL Server permissions.
-. In the Savings calculator, optionally, provide the following details on clones and snapshots in your EBS storage for a more accurate cost savings estimate. 
-.. *Snapshot frequency*: Select a snapshot frequency from the dropdown menu.
-.. *Clone refresh frequency*: Select the frequency that clones refresh from the dropdown menu.
-.. *Number of cloned copies*: Enter the number of cloned copies in the EBS configuration. 
-.. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.  
++
+If the Explore savings page doesn't load data after successful authentication, select the *Inventory* tab to reload the data, and then select the *Explore savings* tab again.
+. In the Savings calculator, optionally, provide the following details on clones and snapshots in your EBS storage for a more accurate cost savings estimate.
+.. *Snapshot frequency*: Select a snapshot frequency from the menu.
+.. *Clone refresh frequency*: Select the frequency that clones refresh from the menu.
+.. *Number of cloned copies*: Enter the number of cloned copies in the EBS configuration.
+.. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.
 --
 .Amazon FSx for Windows File Server
 --
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Databases tile, select *Explore savings* then *Microsoft SQL Server on FSx for Windows* from the dropdown menu.
+. In the Databases tile, select *Explore savings* then *Microsoft SQL Server on FSx for Windows* from the menu.
 +
 If workload factory detects FSx for Windows hosts, you'll be redirected to the Explore savings tab. If workload factory doesn't detect FSx for Windows hosts, you'll be redirected to the calculator to <<Explore savings via customization,explore savings via customization>>.
-. In the Explore savings tab, click *Explore savings* of the database server using FSx for Windows File Server storage.
+. In the Explore savings tab, select *Explore savings* of the database host using FSx for Windows File Server storage.
 . If required, authenticate the database host with SQL Server credentials, Windows credentials, or by adding missing SQL Server permissions.
-. In the Savings calculator, optionally, provide the following details on clones (shadow copies) and snapshots in your FSx for Windows storage for a more accurate cost savings estimate.  
-.. *Snapshot frequency*: Select a snapshot frequency from the dropdown menu.
++
+If the Explore savings page doesn't load data after successful authentication, select the *Inventory* tab to reload the data, and then select the *Explore savings* tab again.
+. In the Savings calculator, optionally, provide the following details on clones (shadow copies) and snapshots in your FSx for Windows storage for a more accurate cost savings estimate.
+.. *Snapshot frequency*: Select a snapshot frequency from the menu.
 +
 If FSx for Windows shadow copies are detected, the default value is *Daily*. If shadow copies aren't detected, the default value is *No snapshot frequency*.
-.. *Clone refresh frequency*: Select the frequency that clones refresh from the dropdown menu.
+.. *Clone refresh frequency*: Select the frequency that clones refresh from the menu.
 .. *Number of cloned copies*: Enter the number of cloned copies in the FSx for Windows configuration. 
 .. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.  
 --
@@ -223,7 +223,7 @@ If FSx for Windows shadow copies are detected, the default value is *Daily*. If 
 --
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Databases tile, select *Explore savings* then *Microsoft SQL Server on-premises* from the dropdown menu.
+. In the Databases tile, select *Explore savings* then *Microsoft SQL Server on-premises* from the menu.
 . From the SQL Server on-premises tab, download the script to assess your on-premises SQL Server environments. 
 .. Download the assessment script. The script  is a data collection tool based on PowerShell. It gathers and then uploads SQL Server configuration and performance data to BlueXP workload factory. The migration advisor assesses the data and plans FSx for ONTAP deployment for your SQL Server environment.
 +
@@ -236,10 +236,10 @@ image:screenshot-upload-script-on-premises.png["A screenshot of the SQL Server o
 . In the Savings calculator, select the region for the on-premises host. 
 . For more accurate results, update Compute information and Storage and performance details.
 . Optionally, provide the following details on clones (shadow copies) and snapshots in your on-premises database environment for a more accurate cost savings estimate.  
-.. *Snapshot frequency*: Select a snapshot frequency from the dropdown menu.
+.. *Snapshot frequency*: Select a snapshot frequency from the menu.
 +
 If FSx for Windows shadow copies are detected, the default value is *Daily*. If shadow copies aren't detected, the default value is *No snapshot frequency*.
-.. *Clone refresh frequency*: Select the frequency that clones refresh from the dropdown menu.
+.. *Clone refresh frequency*: Select the frequency that clones refresh from the menu.
 .. *Number of cloned copies*: Enter the number of cloned copies in the on-premises configuration. 
 .. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.  
 ====
