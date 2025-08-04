@@ -76,3 +76,6 @@ Cost and percentage savings calculations of volume size for Microsoft SQL Server
 == Cross-region replication assessment
 * The optimization assessment can't determine if cross-region replication (CRR) is being used when the target FSx for ONTAP file system is in a different AWS account.
 * Workload factory assesses only the CRR configuration of the source FSx for ONTAP file system. 
+
+== Authentication flow in Explore Savings
+In some cases with limited permissions, the explore savings page doesn't load data after successful authentication.
