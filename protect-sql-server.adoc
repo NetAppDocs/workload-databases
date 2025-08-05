@@ -19,7 +19,7 @@ The benefits of the 3-2-1 approach include:
 
 BlueXP backup and recovery leverages NetApp SnapMirror data replication technology to ensure that all the backups are fully synchronized by creating snapshot copies and transferring them to the backup locations.
 
-For details about BlueXP backup and recovery, refer to the link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-mssql-protect-overview.html[Protect Microsoft SQL workloads overview with BlueXP backup and recovery^].
+For details about protection with BlueXP backup and recovery, refer to the link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-mssql-protect-overview.html[Protect Microsoft SQL workloads overview with BlueXP backup and recovery^].
 
 == Protect Microsoft SQL Server instances and databases
 Protecting Microsoft SQL Server instances and databases involves resource discovery, prerequisites validation, and configuration and installation of the Plug-in for Microsoft SQL Server. The plug-in is a host-side component of NetApp Software that enables you to protect your Microsoft SQL Server workloads.
@@ -36,7 +36,7 @@ Protecting Microsoft SQL Server instances and databases involves resource discov
 
 .What's next
 From BlueXP backup and recovery, create a policy to protect your Microsoft SQL Server instance and databases.
-+
+
 link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-policies-create.html[Learn how to create a policy to protect your Microsoft SQL Server instance and databases^].
 
 Refer to the link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-mssql-protect-overview.html[BlueXP backup and recovery documentation^] for managing Microsoft SQL Server workloads for related information. 
