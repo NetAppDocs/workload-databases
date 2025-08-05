@@ -49,7 +49,9 @@ sidebar:
           - title: Create a sandbox clone 
             url: /create-sandbox-clone.html                       
       - title: Automate with Codebox
-        url: /automate-codebox.html  
+        url: /automate-codebox.html 
+      - title: Protect Microsoft SQL Server workloads
+        url: /protect-sql-server.html   
   - title: Administer and monitor
     entries:
       - title: Monitor database jobs
