@@ -9,7 +9,10 @@ summary: "Protect Microsoft SQL Server instances and databases."
 :imagesdir: ./media/
 
 [.lead]
-Protect your Microsoft SQL Server applications data using BlueXP backup and recovery from the workload factory console. Backups are automatically generated and stored in an object store in your public or private cloud account based on the policies you create. You can implement a 3-2-1 strategy, where you have 3 copies of your source data on 2 different storage systems along with 1 copy in the cloud.
+Protect your Microsoft SQL Server applications data using BlueXP backup and recovery from the workload factory console. Backups are automatically generated and stored in an object store in your public or private cloud account based on the policies you create. 
+
+== About this task
+Protecting your Microsoft SQL Server workloads involves implementing a 3-2-1 strategy, where you have 3 copies of your source data on 2 different storage systems along with 1 copy in the cloud.
 
 The benefits of the 3-2-1 approach include:
 
@@ -20,6 +23,9 @@ The benefits of the 3-2-1 approach include:
 BlueXP backup and recovery leverages NetApp SnapMirror data replication technology to ensure that all the backups are fully synchronized by creating snapshot copies and transferring them to the backup locations.
 
 For details about protection with BlueXP backup and recovery, refer to the link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-mssql-protect-overview.html[Protect Microsoft SQL workloads overview with BlueXP backup and recovery^].
+
+== Before you begin
+*What are the requirements?* 
 
 == Protect Microsoft SQL Server instances and databases
 Protecting Microsoft SQL Server instances and databases involves resource discovery, prerequisites validation, and configuration and installation of the Plug-in for Microsoft SQL Server. The plug-in is a host-side component of NetApp Software that enables you to protect your Microsoft SQL Server workloads.
