@@ -32,7 +32,10 @@ Protecting Microsoft SQL Server instances and databases involves resource discov
 . Select *Protect* from the menu for the instance to protect.
 . Select the *Connector* where you want the workload to be registered and protected.
 . To prepare for data protection, Workload factory automatically registers your SQL Server resources in BlueXP backup and recovery, configures and installs the Plug-in for Microsoft SQL Server, and discovers resources to meet the prerequisites for protecting your SQL Server instance. Select *Start* to begin the process.
-. After the prerequisites are met, you're redirected to the BlueXP backup and recovery console.
++
+NOTE: After adding hosts to BlueXP backup and Recovery for protection, database discovery sometimes fails. To discover databases, you must set host resolution on the Connector. In the Ubuntu machine/On the hosted device, add the mapping of the IP address to the hostname in the `/etc/hosts` file.
+
+. After the prerequisites are met, select *Redirect* to get redirected to the BlueXP backup and recovery console.
 
 .What's next
 From BlueXP backup and recovery, create a policy to protect your Microsoft SQL Server instance and databases.
