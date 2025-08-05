@@ -39,4 +39,4 @@ From BlueXP backup and recovery, create a policy to protect your Microsoft SQL S
 
 link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-policies-create.html[Learn how to create a policy to protect your Microsoft SQL Server instance and databases^].
 
-Refer to the link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-mssql-protect-overview.html[BlueXP backup and recovery documentation^] for managing Microsoft SQL Server workloads for related information. 
+For related information, refer to the link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-mssql-protect-overview.html[BlueXP backup and recovery documentation^] for managing Microsoft SQL Server workloads.
