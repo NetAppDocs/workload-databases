@@ -26,6 +26,13 @@ For details about protection with BlueXP backup and recovery, refer to the link:
 
 == Before you begin
 *What are the requirements?* 
+The following are requirements to begin protecting Microsoft SQL Server workloads:
+
+* A BlueXP Connector
++
+Refer to link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html[Learn how to configure a BlueXP Connector^] and link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html[standard BlueXP requirements^].
++
+The Ubuntu 22.04 LTS operating system is required for the Connector.
 
 == Protect Microsoft SQL Server instances and databases
 Protecting Microsoft SQL Server instances and databases involves resource discovery, prerequisites validation, and configuration and installation of the Plug-in for Microsoft SQL Server. The plug-in is a host-side component of NetApp Software that enables you to protect your Microsoft SQL Server workloads.
