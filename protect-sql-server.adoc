@@ -1,0 +1,53 @@
+---
+sidebar: sidebar
+permalink: protect-sql-server.html
+keywords: protect, server, Microsoft SQL Server, SQL Server, protect instance, protect database
+summary: "Protect Microsoft SQL Server instances and databases."
+---
+= Protect Microsoft SQL Server workloads
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Protect your Microsoft SQL Server applications data using BlueXP backup and recovery from the workload factory console. Backups are automatically generated and stored in an object store in your public or private cloud account based on the policies you create. 
+
+== About this task
+BlueXP backup and recovery leverages NetApp SnapMirror data replication technology to ensure that all the backups are fully synchronized by creating snapshot copies and transferring them to the backup locations.
+
+For details about protection with BlueXP backup and recovery, refer to the link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-mssql-protect-overview.html[Protect Microsoft SQL workloads overview with BlueXP backup and recovery^]. 
+
+== Before you begin
+The following are requirements to begin protecting Microsoft SQL Server workloads with BlueXP backup and recovery:
+
+* A BlueXP Connector
++
+Refer to link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html[Learn how to configure a BlueXP Connector^] and link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html[standard BlueXP requirements^].
++
+The Ubuntu 22.04 LTS operating system is required for the Connector.
+
+* A license for BlueXP backup and recovery
++
+link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-start-licensing.html[Set up licensing for BlueXP backup and recovery^]
+* Setting host resolution on the Connector
++
+To discover databases, you must set host resolution on the Connector. On the hosted device, add the mapping of the IP address to the hostname in the `/etc/hosts` file.
+
+== Protect Microsoft SQL Server instances and databases
+Protecting Microsoft SQL Server instances and databases involves resource discovery, prerequisites validation, and configuration and installation of the Plug-in for Microsoft SQL Server. The plug-in is a host-side component of NetApp Software that enables you to protect your Microsoft SQL Server workloads.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In the Databases tile, select *Go to Databases inventory*.
+. In Databases, select the *Inventory* tab. 
+. Filter the *Engine type* to *Microsoft SQL Server*.
+. Select *Protect* from the menu for the instance to protect.
+. Select the *Connector* where you want the workload to be registered and protected.
+. To prepare for data protection, Workload factory automatically registers your SQL Server resources in BlueXP backup and recovery, configures and installs the Plug-in for Microsoft SQL Server, and discovers resources to meet the prerequisites for protecting your SQL Server instance. Select *Start* to begin the process.
+. After the prerequisites are met, select *Redirect* to get redirected to BlueXP backup and recovery.
+
+.What's next
+From BlueXP backup and recovery, create a policy to protect your Microsoft SQL Server instance and databases.
+
+link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-policies-create.html[Learn how to create a policy to protect your Microsoft SQL Server instance and databases^].
+
+For related information, refer to the link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-mssql-protect-overview.html[BlueXP backup and recovery documentation^] for managing Microsoft SQL Server workloads.

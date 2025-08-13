@@ -79,3 +79,6 @@ Cost and percentage savings calculations of volume size for Microsoft SQL Server
 
 == Database host authentication in Explore savings
 In some cases with limited permissions, the explore savings page doesn't load data after successful authentication.
+
+== Integration with BlueXP backup and recovery
+After adding hosts to BlueXP backup and Recovery for protection, database discovery sometimes fails. 
