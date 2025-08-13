@@ -12,9 +12,9 @@ summary: "Learn what's new with BlueXP workload factory for Databases."
 Learn what's new with Databases.
 
 // tag::whats-new[]
-== 11 August 2025
+== 12 August 2025
 
-include::_whatsnew/2025-08-11.adoc[]
+include::_whatsnew/2025-08-12.adoc[]
 
 == 04 August 2025
 

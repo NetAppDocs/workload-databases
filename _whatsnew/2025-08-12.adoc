@@ -1,0 +1,7 @@
+=== BlueXP backup and recovery now supports Microsoft SQL Server workload
+
+BlueXP backup and recovery enables you to back up, restore, verify, and clone Microsoft SQL Server databases and availability groups. From the workload factory console, you can access and use BlueXP backup and recovery to protect Microsoft SQL Server workloads.
+
+link:protect-sql-server.html[Learn how to protect Microsoft SQL Server workloads via the workload factory console^]. 
+
+For details about BlueXP backup and recovery, refer to the link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-mssql-protect-overview.html[Protect Microsoft SQL workloads overview with BlueXP backup and recovery^].
