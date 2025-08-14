@@ -12,6 +12,8 @@ summary: "Protect Microsoft SQL Server instances and databases."
 Protect your Microsoft SQL Server applications data using BlueXP backup and recovery from the workload factory console. With this integration, you can achieve the following protection goals: back up workloads with local snapshots on local primary Amazon FSx for NetApp ONTAP (FSx for ONTAP) storage, and replicate workloads to secondary FSx for ONTAP storage. 
 
 == About this task
+Workload factory helps automate the process of discovering instance and database resources, validating prerequisites, and configuring and installing the Plug-in for Microsoft SQL Server, all of which are part of the preparation process for protecting your Microsoft SQL Server workloads with BlueXP backup and recovery. The plug-in is a host-side component of NetApp Software that enables you to protect your Microsoft SQL Server workloads.
+
 BlueXP backup and recovery leverages NetApp SnapMirror data replication technology to ensure that all the backups are fully synchronized by creating snapshot copies and transferring them to the backup locations.
 
 For details about protection with BlueXP backup and recovery, refer to the link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-mssql-protect-overview.html[Protect Microsoft SQL workloads overview with BlueXP backup and recovery^]. 
@@ -32,8 +34,8 @@ link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-start-licensing.htm
 +
 To discover databases, you must set host resolution on the Connector. On the hosted device, add the mapping of the IP address to the hostname in the `/etc/hosts` file.
 
-== Protect Microsoft SQL Server instances and databases
-Workload factory helps automate the process of discovering instance and database resources, validating prerequisites, and configuring and installing the Plug-in for Microsoft SQL Server, all of which are part of the preparation process for protecting your Microsoft SQL Server workloads with BlueXP backup and recovery. The plug-in is a host-side component of NetApp Software that enables you to protect your Microsoft SQL Server workloads.
+== Prepare for protection with BlueXP backup and recovery
+Complete the preparation process to protect your Microsoft SQL Server resources with BlueXP backup and recovery.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
