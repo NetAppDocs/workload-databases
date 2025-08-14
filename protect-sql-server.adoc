@@ -33,7 +33,7 @@ link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-start-licensing.htm
 To discover databases, you must set host resolution on the Connector. On the hosted device, add the mapping of the IP address to the hostname in the `/etc/hosts` file.
 
 == Protect Microsoft SQL Server instances and databases
-Protecting Microsoft SQL Server instances and databases involves resource discovery, prerequisites validation, and configuration and installation of the Plug-in for Microsoft SQL Server, a process that the workload factory helps automate. The plug-in is a host-side component of NetApp Software that enables you to protect your Microsoft SQL Server workloads. 
+Workload factory helps automate the process of discovering instance and database resources, validating prerequisites, and configuring and installing the Plug-in for Microsoft SQL Server, all of which are part of the preparation process for protecting your Microsoft SQL Server workloads with BlueXP backup and recovery. The plug-in is a host-side component of NetApp Software that enables you to protect your Microsoft SQL Server workloads.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
