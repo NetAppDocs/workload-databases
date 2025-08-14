@@ -21,7 +21,7 @@ For details about protection with BlueXP backup and recovery, refer to the link:
 == Before you begin
 The following requirements must be met to protect Microsoft SQL Server workloads with BlueXP backup and recovery.
 
-* Ensure that your environment meets link:https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-start-prereq.html#microsoft-sql-server-workload-requirements[the BlueXP backup and recovery SQL Server requirements^]
+* Ensure that your environment meets link:https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-start-prereq.html#microsoft-sql-server-workload-requirements[the BlueXP backup and recovery SQL Server requirements^].
 
 * link:https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-start-prereq.html#in-bluexp[Complete BlueXP requirements^] including setting up BlueXP, IAM roles, and a BlueXP Connector.
 +
@@ -35,7 +35,7 @@ To discover databases, you must set host resolution on the Connector. On the hos
 
 * link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-start-licensing.html[Set up licensing for BlueXP backup and recovery^]
 
-* In workload factory for Databases, make sure that you register instances using Windows credentials. To provide Windows credentials, go to the Instances tab from the Inventory. Identify the instance, select *Manage instances*, and then select *Instance dashboard*. From the instance dashboard, select the three-dot menu, and then select *Update *Microsoft SQL Server password*. Update the password using Windows authentication. 
+* In workload factory for Databases, make sure that you register instances using Windows credentials. To provide Windows credentials, go to the Instances tab from the Inventory. Identify the instance, select *Manage instances*, and then select *Instance dashboard*. From the instance dashboard, select the three-dot menu, and then select *Update Microsoft SQL Server password*. Update the password using Windows authentication. 
 
 == Prepare for protection with BlueXP backup and recovery
 Complete the preparation process to protect your Microsoft SQL Server resources with BlueXP backup and recovery.
