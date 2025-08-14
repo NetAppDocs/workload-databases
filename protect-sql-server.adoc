@@ -33,9 +33,7 @@ To discover databases, you must set host resolution on the Connector. On the hos
 
 ** Install the Ubuntu 22.04 LTS operating system. This is a requirement for the BlueXP Connector.
 
-* Purchase a license for BlueXP backup and recovery
-+
-link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-start-licensing.html[Set up licensing for BlueXP backup and recovery^]
+* link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-start-licensing.html[Set up licensing for BlueXP backup and recovery^]
 
 * In workload factory for Databases, make sure that you register instances using Windows credentials. To provide Windows credentials, go to the Instances tab from the Inventory. Identify the instance, select *Manage instances*, and then select *Instance dashboard*. From the instance dashboard, select the three-dot menu, and then select *Update *Microsoft SQL Server password*. Update the password using Windows authentication. 
 
