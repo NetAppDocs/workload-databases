@@ -1,0 +1,11 @@
+=== Agentic AI-powered log error analyzer
+
+The Agentic AI-powered log error analyzer is a new feature that leverages advanced machine learning algorithms to automatically detect and analyze errors in log files. This tool aims to streamline the troubleshooting process by providing developers with actionable insights and recommendations based on the patterns it identifies in the logs.
+
+=== Oracle support
+
+Workload factory includes support for Oracle databases. In the workload factory console, you can view your Oracle databases from the inventory, register databases to use advanced features in workload factory, and analyze Oracle databases for alignment with best practices using the well-architected feature. The well-architected analysis determines whether the storage for Oracle databases, FSx for ONTAP storage configurations, and Oracle Automatic Storage Management (ASM) are optimized. You can use this information to make informed decisions about your database deployments and ensure they are running efficiently. 
+
+=== Support for Microsoft SQL Server deployments on second-generation FSx for ONTAP file systems
+
+Workload factory supports Microsoft SQL Server deployments on second-generation FSx for ONTAP file systems. This enhancement allows you to leverage the latest features and performance improvements available in the second-generation file systems while managing your SQL Server workloads.
