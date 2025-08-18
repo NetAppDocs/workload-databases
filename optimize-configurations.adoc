@@ -22,9 +22,9 @@ What is analyzed::
 Workload factory analyzes the well-architected status of the following configurations for Microsoft SQL Server instances and Oracle databases:  
 
 * Storage sizing: includes storage tier, file system headroom, log drive size, and TempDB drive size  
-* Storage layout: includes the following: 
+* Storage layout:  
 ** For SQL Server: user data files placement, log files placement, TempDB placement
-** For Oracle: number of LUNs per the following Oracle Automatic Storage Management (ASM) disk groups: data, logs, FRA or +ARCH
+** For Oracle: number of LUNs per the following Oracle Automatic Storage Management (ASM) disk groups: `data`, logs, `fra` (fast recovery area), and `archive`
 * Storage configuration: includes capacity management, thin provisioning, tiering policy, snapshots, Microsoft Multipath I/O (MPIO) status, and MPIO timeout setting
 * Compute: includes rightsizing, operating system patches, and network adapter settings like Receive Side Scaling (RSS) and TCP offloading
 * Applications: includes Microsoft SQL Server licenses, Microsoft SQL Server patch, and MAXDOP settings 
