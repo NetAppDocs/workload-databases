@@ -11,6 +11,8 @@ summary: "Workload factory for Databases scans Microsoft SQL Server configuratio
 [.lead]
 Using configuration analysis insights and recommendations, leverage workload factory to implement best practices for your database configurations with Microsoft SQL Server and Oracle. You can easily review the well-architected status, learn about issues with database configurations, and take action to improve any configurations that aren't optimized for reliability, security, efficiency, performance, and cost.
 
+You can also dismiss the analysis of specific configurations that don't apply to your environment to avoid unnecessary alerts and inaccurate optimization results.
+
 link:optimize-overview.html[Learn about the configuration analysis and well-architected status in workload factory.]
 
 .About this task
@@ -64,3 +66,62 @@ You can also download a report of the findings by selecting *Export PDF*.
 .Result
 Workload factory begins fixing the issue(s). Select the *Job monitoring* tab to view the status of the operation.
 
+== Postpone or dismiss the analysis of database configurations
+Postpone or dismiss the analysis of specific database configurations that don't apply to your database environment to avoid unnecessary alerts and inaccurate optimization results. You can reactivate a postponed or dismissed configuration analysis at any time.  
+
+The application requirements for database configurations vary. Workload factory gives you two options for skipping the analysis of specific database configurations so that you can monitor only relevant issues and get an accurate view of the health of relevant configurations. When a specific configuration analysis is postponed or dismissed, the configuration isn't included in the total optimization score.
+
+You can postpone, dismiss, and reactivate the configuration analysis at the configuration level and at the SQL Server instance or at the Oracle database level. 
+
+* *Postpone for 30 days*: Postponing the analysis will stop the analysis for 30 days. After 30 days, the analysis will restart automatically. 
+
+* *Dismiss*: Dismissing the analysis postpones the analysis indefinitely. You can restart the analysis if needed. 
+
+The following instructions describe how to postpone, dismiss, or reactivate an analysis at the configuration level. To complete the following tasks for specific SQL Server instances or Oracle databases, start in the *Dashboard* tab. 
+
+[role="tabbed-block"]
+====
+
+.Postpone
+--
+Postpone to stop a configuration analysis for 30 days. After 30 days, the analysis will restart automatically. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In the Databases tile, select *Go to Databases inventory*.
+. In the *Inventory* tab, scroll down to the configuration to postpone, select the three-dot menu, and then select *Postpone for 30 days*.
+. Select *Continue*.   
+
+.Result
+The configuration analysis stops for 30 days.
+--
+
+.Dismiss
+--
+Dismiss to stop a configuration analysis indefinitely. You can restart the analysis when needed. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In the Databases tile, select *Go to Databases inventory*.
+. In the *Inventory* tab, scroll down to the configuration to dismiss, select the three-dot menu, and then select *Dismiss*. 
+. Select *Continue*.
+
+.Result
+The configuration analysis stops. 
+--
+
+.Reactivate
+--
+Reactivate a postponed or dismissed configuration analysis at any time. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In the Databases tile, select *Go to Databases inventory*.
+. In the *Inventory* tab, scroll down to the configuration to reactivate, select the three-dot menu, and then select *Reactivate*. 
+. Select *Continue*. 
+
+.Result
+The configuration analysis is reactivated and occurs daily moving forward.
+--
+
+====
