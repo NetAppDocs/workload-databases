@@ -15,7 +15,7 @@ You can also dismiss the analysis of specific configurations that don't apply to
 
 link:optimize-overview.html[Learn about the configuration analysis and well-architected status in workload factory.]
 
-.About this task
+== About this task
 Workload factory analyzes database configurations daily. The daily analysis provides the well-architected status, and insights and recommendations with options to automatically fix configuration issues so that your configurations meet best practices. 
 
 You have options to review the recommendations for configuration issues and fix those issues from the Databases inventory within the workload factory console. 
@@ -33,12 +33,17 @@ Workload factory analyzes the well-architected status of the following configura
 * Resiliency: includes local snapshots, FSx for ONTAP backups, cross-region replication (CRR), and Microsoft SQL High Availability.
 * Clones: includes options to refresh and delete clones (sandboxes) that were created in or outside of workload factory and are older than 60 days
 
-.Before you begin
+== Before you begin
 * You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and read/write permissions^] to analyze your database configurations. 
 * To assess the storage of a Microsoft SQL Server instance, the instance must be registered in workload factory and the storage type must be FSx for ONTAP. link:register-instance.html[Learn how to register an instance.]
 * Make sure you review each recommendation carefully before selecting to fix a setting or configuration. For RSS and MAXDOP settings, we suggest that you test the recommended settings to determine performance improvements before making changes to your production environment. 
 
 NOTE: The remediation process may cause instance downtimes or service interruptions. Make sure you review the recommendation carefully before you choose to fix a configuration.
+
+== Fix a configuration issue
+Fix configuration issues for SQL Server or Oracle environments running on FSx for ONTAP storage.
+
+NOTE: The remediation process may cause instance downtimes or service interruptions. Make sure you review the recommendation carefully before you choose to fix a configuration issue.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
