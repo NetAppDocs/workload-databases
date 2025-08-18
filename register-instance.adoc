@@ -9,7 +9,7 @@ summary: "Manage Microsoft SQL Server instances in BlueXP workload factory for D
 :imagesdir: ./media/
 
 [.lead]
-Register instances for Microsoft SQL Server and databases for Oracle so that you can monitor instance and database status, resource utilization, protection, and storage performance in workload factory for Databases. 
+Register instances for Microsoft SQL Server and databases for Oracle so that you can monitor instance and database status, resource utilization, protection, and storage performance in workload factory for Databases.
 
 Registration is possible only for databases engines running on FSx for ONTAP file system storage.
 
@@ -114,3 +114,12 @@ Completing prerequisites includes updating your AWS IAM policy permissions, EC2 
 
 .Result
 Database registration initiates. Select the *Job monitoring* tab to to track progress. 
+
+.What's next
+
+After resource registration, you can perform the following tasks.
+
+* link:create-database.html[Create a database]
+* link:create-sandbox-clone.html[Create a database clone (sandbox)]
+* link:view-databases.html[View databases]
+* link:optimize-configurations.html[Implement well-architected database configurations]
