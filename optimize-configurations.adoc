@@ -9,7 +9,7 @@ summary: "Workload factory for Databases scans Microsoft SQL Server configuratio
 :imagesdir: ./media/
 
 [.lead]
-Using configuration analysis insights and recommendations, leverage workload factory to implement best practices for your database configurations. You can easily review the well-architected status, learn about issues with database configurations, and take action to improve any configurations that aren't optimized for reliability, security, efficiency, performance, and cost.
+Using configuration analysis insights and recommendations, leverage workload factory to implement best practices for your database configurations with Microsoft SQL Server and Oracle. You can easily review the well-architected status, learn about issues with database configurations, and take action to improve any configurations that aren't optimized for reliability, security, efficiency, performance, and cost.
 
 link:optimize-overview.html[Learn about the configuration analysis and well-architected status in workload factory.]
 
@@ -19,10 +19,12 @@ Workload factory analyzes database configurations daily. The daily analysis prov
 You have options to review the recommendations for configuration issues and fix those issues from the Databases inventory within the workload factory console. 
 
 What is analyzed::
-Workload factory analyzes the well-architected status of the following configurations for Microsoft SQL Server instances:  
+Workload factory analyzes the well-architected status of the following configurations for Microsoft SQL Server instances and Oracle databases:  
 
 * Storage sizing: includes storage tier, file system headroom, log drive size, and TempDB drive size  
-* Storage layout: includes user data files placement, log files placement, and TempDB placement
+* Storage layout: includes the following: 
+** For SQL Server: user data files placement, log files placement, TempDB placement
+** For Oracle: number of LUNs per the following Oracle Automatic Storage Management (ASM) disk groups: data, logs, FRA or +ARCH
 * Storage configuration: includes capacity management, thin provisioning, tiering policy, snapshots, Microsoft Multipath I/O (MPIO) status, and MPIO timeout setting
 * Compute: includes rightsizing, operating system patches, and network adapter settings like Receive Side Scaling (RSS) and TCP offloading
 * Applications: includes Microsoft SQL Server licenses, Microsoft SQL Server patch, and MAXDOP settings 

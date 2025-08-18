@@ -38,9 +38,9 @@ sidebar:
             url: /create-postgresql-server.html  
       - title: Manage instances
         entries: 
-          - title: Instance management
+          - title: Resource management
             url: manage-instance.html
-          - title: Register an instance
+          - title: Register resources
             url: /register-instance.html
           - title: View databases 
             url: /view-databases.html  
