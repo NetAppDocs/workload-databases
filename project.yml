@@ -64,8 +64,8 @@ sidebar:
             url: /optimize-configurations.html   
           - title: Postpone configuration analysis
             url: /postpone-analysis.html   
-      - title: Analyze log errors
-        url: /analyze-log-errors.html
+      - title: Analyze error logs
+        url: /analyze-error-logs.html
       - title: Manage clones
         entries: 
           - title: Check integrity of a sandbox clone

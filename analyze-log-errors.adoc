@@ -1,34 +1,32 @@
 ---
 sidebar: sidebar
-permalink: analyze-log-errors.html 
-keywords: analyze log errors, log errors, error severity, Microsoft SQL Server log errors, smart analysis, Agentic AI
-summary: "Analyze log errors within workload factory for Databases."  
+permalink: analyze-error-logs.html
+keywords: analyze error logs, errors, error severity, Microsoft SQL Server error logs, smart analysis, Agentic AI
+summary: "Analyze error logs within workload factory for Databases."
 ---
-= Analyze log errors in workload factory
+= Analyze error logs in workload factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Use the Smart log error analyzer to automatically interpret Microsoft SQL Server error logs so that you can quickly identify and resolve issues. The Agentic AI-based analysis requires Amazon Bedrock integration.
+Use the Smart error log analyzer to automatically interpret Microsoft SQL Server error logs so that you can quickly identify and resolve issues. The Agentic AI-based analysis requires Amazon Bedrock integration.
 
 .About this task
-Log error analysis and remediation help maintain the health and performance of SQL Server instances. Interpreting SQL Server error logs effectively requires careful analysis and expertise. Manual monitoring, error detection, and root cause analysis are time-intensive and prone to errors. These challenges can delay issue resolution, increased downtime, and operational inefficiencies. The Smart log error analyzer addresses these challenges with these key benefits: 
+Error log analysis and remediation help maintain the health and performance of SQL Server instances. Interpreting SQL Server error logs effectively requires careful analysis and expertise. Manual monitoring, error detection, and root cause analysis are time-intensive and prone to errors. These challenges can delay issue resolution, increased downtime, and operational inefficiencies. The Smart error log analyzer addresses these challenges with these key benefits:
 
 * Smart grouping: Intelligently consolidates errors by uniqueness, severity, and category, and simplifies the troubleshooting process for faster, more effective resolutions.
 * AI-driven investigation: Leverages AI to proactively analyze errors, providing clear, actionable insights to accelerate issue identification without requiring deep expertise.
 * Error enrichment: Enhances error logs with external references, offering contextual clarity to improve understanding and decision-making.
 * Best-practice remediation: Delivers tailored, remediation recommendations for SQL Server workloads running on FSx for ONTAP, empowering users of all skill levels to resolve issues confidently.
 
-Whenever you use the Smart log analyzer, you maintain full control over your environment while benefiting from advanced AI analysis.
+Whenever you use the Smart error log analyzer, you maintain full control over your environment while benefiting from advanced AI analysis.
 
-To use the Smart log error analyzer, you need to activate Amazon Bedrock, select the model workload factory uses, create a private endpoint to connect to Amazon Bedrock, add permissions, and create an enterprise license. 
+To use the Smart error log analyzer, you need to activate Amazon Bedrock, select the model workload factory uses, create a private endpoint to connect to Amazon Bedrock, add permissions, and create an enterprise license. 
 
 link:https://aws.amazon.com/bedrock/pricing/[Amazon Bedrock pricing^]
 
-*Error analysis overview*
-
 .Before you begin
-To use the Smart log error analyzer, you must meet the following prerequisites:
+To use the Smart error log analyzer, you must meet the following prerequisites:
 
 * You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and _read/write_ mode permissions^] to create a new database host in workload factory. 
 * link:https://docs.netapp.com/us-en/workload-databases/register-instance.html[Register a SQL Server instance^] in workload factory.
@@ -46,10 +44,10 @@ To use the Smart log error analyzer, you must meet the following prerequisites:
 * Amazon Bedrock
 * Networking: Private endpoint for Amazon Bedrock
 * Permissions for EC2 instance profile role
-* Credentials associated with wlmdb
-. When prerequisites are met, select *Investigate now* to use the Smart log error analyzer to gain insights into your SQL Server error logs.
+* Credentials associated with Workload Database Management (wlmdb)
+. When prerequisites are met, select *Investigate now* to use the Smart error log analyzer to gain insights into your SQL Server error logs.
 +
-After the scan, log errors are displayed in the console, providing a comprehensive view of the issues detected by the Smart log error analyzer.
-. Use filters to refine the displayed log errors based on criteria such as severity, time frame, and error code.
+After the scan, errors are displayed in the console, providing a comprehensive view of the issues detected by the Smart error log analyzer.
+. Use filters to refine the displayed errors based on criteria such as severity, time frame, and error code.
 . Review the detailed error information, including original error message, AI-based explanation, and suggested remediation steps to resolve the errors.
 
