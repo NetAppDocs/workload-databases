@@ -18,3 +18,9 @@ Workload factory supports Microsoft SQL Server deployments on second-generation 
 Authenticating Microsoft SQL Server instances with Windows credentials is embedded in the workflow to prepare Microsoft SQL Server hosts for protection with BlueXP backup and recovery. This used to be a prerequisite step to complete manually. Instead, you'll be prompted to share Windows credentials with administrative access if you haven't registered the hosts in workload factory using Windows credentials.
 
 link:https://docs.netapp.com/us-en/workload-databases/protect-sql-server.html[Learn how to protect Microsoft SQL Server workloads via the workload factory console]. 
+
+=== Well-architected analysis includes MTU alignment for SQL Server
+
+The well-architected analysis assesses and fixes Maximum Transmission Unit (MTU) misalignment across endpoints for Microsoft SQL Server on FSx for ONTAP storage. Aligning MTU settings helps to optimize network performance and reduce latency for SQL Server workloads.
+
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Implement well-architected database configurations in workload factory]
