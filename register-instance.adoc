@@ -2,9 +2,9 @@
 sidebar: sidebar
 permalink: register-instance.html
 keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle database, manage host, view host, database host, database instance, manage, unregister
-summary: "Manage Microsoft SQL Server instances in BlueXP workload factory for Databases." 
+summary: "Register resources so that you can monitor resource status, resource utilization, protection, and storage performance in workload factory for Databases."
 ---
-= Register instances and databases in workload factory for Databases
+= Register resources in workload factory for Databases
 :icons: font
 :imagesdir: ./media/
 
@@ -27,7 +27,7 @@ Consider the following before registering an instance:
 * When using Windows domain user credentials to authenticate for SQL Server management operations, workload factory enables CredSSP delegation on the SQL nodes. If the CredSSP delegation is blocked for all domain computers with the group policy, authenticating with Windows user credentials doesn't work.
 
 === Registering an instance in a private network
-To register an instance in a private network with no external connectivity, the following endpoints need to be available in the VPC with association to the subnets where SQL servers are present. Ensure the interface endpoints allow port 443 in the attached Security Group.
+To register an instance (SQL Server) in a private network with no external connectivity, the following endpoints need to be available in the VPC with association to the subnets where SQL servers are present. Ensure the interface endpoints allow port 443 in the attached Security Group.
 
 * `S3 Gateway/endpoint`
 * `ssm`
@@ -48,7 +48,8 @@ Registering an instance includes instance authentication and preparation.
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*.
 . In Databases, select the *Inventory* tab. 
-. In the Inventory tab, select the *Instances* tab. 
+. Select *Microsoft SQL Server* as the engine type.
+. Select the *Instances* tab. 
 . Select to register a single instance or multiple instances. 
 .. Single instance registration: Navigate to the instance to manage and select *Register instance*. 
 .. Multiple instance registration: Select the *Register multiple instances* button.
@@ -79,13 +80,14 @@ Completing prerequisites includes updating your AWS IAM policy permissions, EC2 
 Instance registration initiates. Select the *Job monitoring* tab to to track progress.
 
 == Register an Oracle database
-Registering an instance includes instance authentication and preparation. 
+Registering a database includes instance authentication and preparation. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*.
 . In Databases, select the *Inventory* tab. 
-. In the Inventory tab, select *Oracle* as the database engine. 
+. In the Inventory tab, select *Oracle* as the database engine.
+. Select the *Databases* tab.
 . Select to register a single database or multiple databases. 
 .. Single database registration: Navigate to the database to manage and select *Register database*. 
 .. Multiple database registration: Select the *Register multiple databases* button.
