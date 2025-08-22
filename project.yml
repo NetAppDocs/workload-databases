@@ -78,6 +78,8 @@ sidebar:
             url: /split-clone.html  
           - title: Delete a sandbox clone
             url: /delete-clone.html                                 
+      - title: Deregister resources
+        url: /deregister-instance.html
   - title: Knowledge and support
     entries: 
       - title: Register for support

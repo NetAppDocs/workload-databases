@@ -1,27 +1,21 @@
 ---
 sidebar: sidebar
 permalink: deregister-instance.html
-keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle instance, deregister instance, unregister instance, remove instance
-summary: "Deregister an instance if you no longer want to deploy or monitor instance resources." 
+keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle database, deregister instance, unregister instance, remove instance
+summary: "Deregister a resource if you no longer want to deploy or monitor resources from the workload factory console." 
 ---
-= Deregister an instance in workload factory
+= Deregister a resource in workload factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Deregister an instance if you no longer want to deploy or monitor instance resources. Deregistering instances also removes the amount of storage capacity used by the instance. 
+Deregister a resource, such as a Microsoft SQL Server instance or an Oracle database, if you no longer want to deploy or monitor resources from the workload factory console. Deregistering resources also removes the amount of FSx for ONTAP storage capacity used by the instance. 
 
-You can re-register the instance later.
+You can register the resource again.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*.
 . In Databases, select the *Inventory* tab. 
-. Click the dropdown arrow to expand the row of the instance to deregister. 
-+
-The host expands and the instances appear. 
-. Click the three-dot menu of the instance to deregister. 
-. Select *Deregister*. 
-
-.Result
-The instance is now deregistered. You can register the instance again later.  
+. In the inventory, select the engine type: Microsoft SQL Server, Oracle, or PostgreSQL. 
+. Locate the resource you want to deregister, select the three-dot menu, and then select *Deregister*.
