@@ -24,7 +24,7 @@ Workload factory analyzes the well-architected status of the following configura
 * Storage sizing: includes storage tier, file system headroom, log drive size, and TempDB drive size  
 * Storage layout: includes user data files placement, log files placement, and TempDB placement
 * Storage configuration: includes capacity management, thin provisioning, tiering policy, snapshots, Microsoft Multipath I/O (MPIO) status, and MPIO timeout setting
-* Compute: includes rightsizing, operating system patches, and network adapter settings like Receive Side Scaling (RSS), TCP offloading, and MTU misalignment
+* Compute: includes rightsizing, operating system patches, and network adapter settings like Receive Side Scaling (RSS), TCP offloading, and MTU alignment
 * Applications: includes Microsoft SQL Server licenses, Microsoft SQL Server patch, and MAXDOP settings 
 * Resiliency: includes local snapshots, FSx for ONTAP backups, cross-region replication (CRR), and Microsoft SQL High Availability.
 * Clones: includes options to refresh and delete clones (sandboxes) that were created in or outside of workload factory and are older than 60 days
