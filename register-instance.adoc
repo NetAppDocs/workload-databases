@@ -23,11 +23,10 @@ NOTE: Workload factory supports only Microsoft SQL Server instance and Oracle da
 == Before you begin
 Consider the following before registering an instance:
 
-* The host for the instance or database must appear in the Inventory tab. For hosts to appear in the inventory, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[you must add AWS account credentials and _read-only_ or _read/write_ mode permissions^].
-* When using Windows domain user credentials to authenticate for SQL Server management operations, workload factory enables CredSSP delegation on the SQL nodes. If the CredSSP delegation is blocked for all domain computers with the group policy, authenticating with Windows user credentials doesn't work.
+The host for the instance or database must appear in the Inventory tab. For hosts to appear in the inventory, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[you must add AWS account credentials and _read-only_ or _read/write_ mode permissions^].
 
 === Registering an instance in a private network
-To register an instance (SQL Server) in a private network with no external connectivity, the following endpoints need to be available in the VPC with association to the subnets where SQL servers are present. Ensure the interface endpoints allow port 443 in the attached Security Group.
+To register an instance (SQL Server) or database (Oracle) in a private network with no external connectivity, the following endpoints need to be available in the VPC with association to the subnets where SQL servers are present. Ensure the interface endpoints allow port 443 in the attached Security Group.
 
 * `S3 Gateway/endpoint`
 * `ssm`
@@ -36,8 +35,8 @@ To register an instance (SQL Server) in a private network with no external conne
 +
 If you use a proxy server for all outbound connections from EC2 instances, you must allow access to the following domains so that management operations work:
  
-* ``.microsoft.com``
-* ``.powershellgallery.com``
+* ``.microsoft.com`` (SQL Server)
+* ``.powershellgallery.com`` (SQL Server)
 * ``.aws.amazon.com``
 * ``.amazonaws.com``
 
@@ -65,7 +64,7 @@ Two options are available for registering multiple instances. In both cases, the
 If all required modules are installed and prerequisites are met, select *Next* to register the instance. If you need to take action, follow these steps.  
 .. If missing, select workload factory to *Install missing AWS and NetApp PowerShell modules*.
 .. If missing, select workload factory to *Install missing PowerShell 7*. Installing missing PowerShell module 7 requires a system reboot. 
-.. Review the prerequisites list for the following capabilities. One prerequisite must be complete to register the instance. 
+.. Review the prerequisites list for the following capabilities. Make sure that you meet all prerequisites per capability to register the instance. 
 
 * *Review well-architected issues and recommendations*
 * *Fix well-architected issues*
@@ -73,8 +72,7 @@ If all required modules are installed and prerequisites are met, select *Next* t
 * *Create database copies (sandbox)*
 +
 Completing prerequisites includes updating your AWS IAM policy permissions, EC2 IAM instance profile permissions, SQL Server permissions, and PowerShell modules.
-.. Complete at least one missing prerequisite to continue. 
-.. When one or more prerequisites are complete and checks are *Ready*, you can select to *Register* the instance.
+.. When prerequisites are complete and checks are *Ready*, you can select to *Register* the instance.
 
 .Result
 Instance registration initiates. Select the *Job monitoring* tab to to track progress.
@@ -91,28 +89,27 @@ Registering a database includes instance authentication and preparation.
 . Select to register a single database or multiple databases. 
 .. Single database registration: Navigate to the database to manage and select *Register database*. 
 .. Multiple database registration: Select the *Register multiple databases* button.
-
++
 Two options are available for registering multiple databases. In both cases, the databases must share the same authentication status (unauthenticated or authenticated).
 
 * Unauthenticated databases: Select multiple unauthenticated databases to register. These databases must share the same authentication credentials and FSx for ONTAP credentials. Select *Apply* and then *Next*. 
 * Authenticated databases: Select multiple authenticated databases to register and then select *Next*. 
 . In step 2 on the Register databases page, select the database authentication mode, enter the following details, and select *Next*. If databases are already authenticated, select *Next*.
-* *SQL Server authentication*: Enter the SQL Server user name and password, and the FSx for ONTAP file system user name and password.
-* *Windows authentication*: Enter the Windows user name and password, and the FSx for ONTAP file system user name and password.
+* *Oracle user authentication*: Enter the Oracle user name and password, and the FSx for ONTAP file system user name and password.
+* *Oracle ASM user authentication*: Optional. If the Oracle database uses Automatic Storage Management (ASM), enter the Oracle ASM (grid) user name and password.
 . In step 3, prepare the database by making sure the database meets required prerequisites.
 If all required modules are installed and prerequisites are met, select *Next* to register the database. If you need to take action, follow these steps.  
-.. If missing, select workload factory to *Install missing AWS and NetApp PowerShell modules*.
-.. If missing, select workload factory to *Install missing PowerShell 7*. Installing missing PowerShell module 7 requires a system reboot. 
-.. Review the prerequisites list for the following capabilities. One prerequisite must be complete to register the database.
+.. Review the prerequisites list for the following capability. All prerequisites for a single capability must be complete to register the database.
 
 * *Review well-architected issues and recommendations*
-* *Fix well-architected issues*
-* *Create database*
-* *Create database copies (sandbox)*
-+
-Completing prerequisites includes updating your AWS IAM policy permissions, EC2 IAM instance profile permissions, `aws-cli` permissions, and `jq`?.
-.. Complete at least one missing prerequisite to continue. 
-.. When one or more prerequisites are complete and checks are *Ready*, you can select to *Register* the database.
+
+.. Complete the following prerequisites: 
+
+* *AWS IAM policy permissions*: Copy and update AWS permissions in the AWS console.
+* *EC2 IAM instance profile permissions*: Copy and update EC2 IAM instance profile permissions on the Amazon EC2 instance in the AWS console.
+* *Deployment modules*: If required, select to install dependent modules which include the AWS Command Line interface (AWS CLI), jq (command-line JSON processor), and Python 3.12, if version 3.6 or greater isn't already installed. Workload factory automatically installs these modules as part of the registration process.
+* *Oracle user permissions*: If required, update the permissions for the Oracle user. 
+.. When prerequisites are complete and checks are *Ready*, you can select to *Register* the database.
 
 .Result
 Database registration initiates. Select the *Job monitoring* tab to to track progress. 
