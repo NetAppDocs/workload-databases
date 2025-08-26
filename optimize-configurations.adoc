@@ -20,18 +20,23 @@ Workload factory analyzes database configurations daily. The daily analysis prov
 
 You have options to review the recommendations for configuration issues and fix those issues from the Databases inventory within the workload factory console. 
 
-What is analyzed::
-Workload factory analyzes the well-architected status of the following configurations for Microsoft SQL Server instances and Oracle databases:  
+.What is analyzed
+Workload factory analyzes the well-architected status of the following configurations: 
+
+For Microsoft SQL Server instances:  
 
 * Storage sizing: includes storage tier, file system headroom, log drive size, and TempDB drive size  
-* Storage layout:  
-** For SQL Server: user data files placement, log files placement, TempDB placement
-** For Oracle: number of LUNs per the following Oracle Automatic Storage Management (ASM) disk groups: `data`, logs, `fra` (fast recovery area), and `archive`
+* Storage layout: includes user data files placement, log files placement, and TempDB placement
 * Storage configuration: includes capacity management, thin provisioning, tiering policy, snapshots, Microsoft Multipath I/O (MPIO) status, and MPIO timeout setting
-* Compute: includes rightsizing, operating system patches, and network adapter settings like Receive Side Scaling (RSS) and TCP offloading
+* Compute: includes rightsizing, operating system patches, and network adapter settings like Receive Side Scaling (RSS), TCP offloading, and MTU alignment
 * Applications: includes Microsoft SQL Server licenses, Microsoft SQL Server patch, and MAXDOP settings 
 * Resiliency: includes local snapshots, FSx for ONTAP backups, cross-region replication (CRR), and Microsoft SQL High Availability.
 * Clones: includes options to refresh and delete clones (sandboxes) that were created in or outside of workload factory and are older than 60 days
+
+For Oracle databases: 
+
+* Storage layout: includes redo log placement, temp tablespace placement, data files placement, archive log placement, control files placement and binaries placement, ASM disk groups LUN count
+* Storage configuration: includes capacity management, thin provisioning, tiering policy, snapshots, and storage efficiencies
 
 == Before you begin
 * You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and read/write permissions^] to analyze your database configurations. 
