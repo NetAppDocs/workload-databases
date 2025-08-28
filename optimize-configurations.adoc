@@ -35,7 +35,6 @@ For Microsoft SQL Server instances:
 
 For Oracle databases: 
 
-* Storage layout: includes redo log placement, temp tablespace placement, data files placement, archive log placement, control files placement and binaries placement, ASM disk groups LUN count
 * Storage configuration: includes capacity management, thin provisioning, tiering policy, snapshots, and storage efficiencies
 
 == Before you begin
