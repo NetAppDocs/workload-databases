@@ -15,7 +15,7 @@ You must link:register-instance.html[register resources] to do any of the follow
 
 Management tasks include:
 
-* Viewing databases
+* Viewing databases from the inventory
 * link:create-database.html[Creating a database]
 * link:create-sandbox-clone.html[Creating a database clone (sandbox)]
 * link:optimize-configurations.html[Implementing well-architected database configurations]
