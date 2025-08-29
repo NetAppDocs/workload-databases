@@ -11,13 +11,13 @@ summary: "Learn about instance and database management in workload factory for D
 [.lead]
 Managing resources in workload factory allows you to use advanced features including database and clone creation, resource utilization and monitoring. Additionally, you can analyze the well-architected status of your database configurations and implement configuration best practices to improve performance and lower operational costs. Resource management is only for Microsoft SQL Server and Oracle environments running on FSx for ONTAP file system storage.
 
-You must link:register-instance.html[register an instance] to do any of the following management tasks.
+You must link:register-instance.html[register resources] to do any of the following management tasks.
 
 Management tasks include:
 
+* Viewing databases
 * link:create-database.html[Creating a database]
 * link:create-sandbox-clone.html[Creating a database clone (sandbox)]
-* link:view-databases.html[Viewing databases]
 * link:optimize-configurations.html[Implementing well-architected database configurations]
 
 
