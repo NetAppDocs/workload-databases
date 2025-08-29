@@ -118,7 +118,7 @@ Database registration initiates. Select the *Job monitoring* tab to to track pro
 
 After resource registration, you can perform the following tasks.
 
+* View databases from the inventory
 * link:create-database.html[Create a database]
 * link:create-sandbox-clone.html[Create a database clone (sandbox)]
-* link:view-databases.html[View databases]
 * link:optimize-configurations.html[Implement well-architected database configurations]
