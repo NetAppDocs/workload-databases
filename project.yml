@@ -38,12 +38,10 @@ sidebar:
             url: /create-postgresql-server.html  
       - title: Manage instances
         entries: 
-          - title: Instance management
+          - title: Resource management
             url: manage-instance.html
-          - title: Register an instance
+          - title: Register resources
             url: /register-instance.html
-          - title: View databases 
-            url: /view-databases.html  
           - title: Create a database
             url: /create-database.html 
           - title: Create a sandbox clone 
@@ -60,7 +58,7 @@ sidebar:
         entries: 
           - title: Configuration analysis for Databases
             url: /optimize-overview.html
-          - title: Implement well-architected database configurations
+          - title: Implement well-architected database configurations   
             url: /optimize-configurations.html   
           - title: Postpone configuration analysis
             url: /postpone-analysis.html   
@@ -82,6 +80,8 @@ sidebar:
             url: /split-clone.html  
           - title: Delete a sandbox clone
             url: /delete-clone.html                                 
+      - title: Deregister resources
+        url: /deregister-instance.html
   - title: Knowledge and support
     entries: 
       - title: Register for support

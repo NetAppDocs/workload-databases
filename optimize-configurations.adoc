@@ -9,11 +9,13 @@ summary: "Workload factory for Databases scans Microsoft SQL Server configuratio
 :imagesdir: ./media/
 
 [.lead]
-Using configuration analysis insights and recommendations, leverage workload factory to implement best practices for your database configurations. You can easily review the well-architected status, learn about issues with database configurations, and take action to improve any configurations that aren't optimized for reliability, security, efficiency, performance, and cost.
+Using configuration analysis insights and recommendations, leverage workload factory to implement best practices for your database configurations with Microsoft SQL Server and Oracle. You can easily review the well-architected status, learn about issues with database configurations, and take action to improve any configurations that aren't optimized for reliability, security, efficiency, performance, and cost.
+
+You can also dismiss the analysis of specific configurations that don't apply to your environment to avoid unnecessary alerts and inaccurate optimization results.
 
 link:optimize-overview.html[Learn about the configuration analysis and well-architected status in workload factory.]
 
-.About this task
+== About this task
 Workload factory analyzes database configurations daily. The daily analysis provides the well-architected status, and insights and recommendations with options to automatically fix configuration issues so that your configurations meet best practices. 
 
 You have options to review the recommendations for configuration issues and fix those issues from the Databases inventory within the workload factory console. 
@@ -33,15 +35,20 @@ For Microsoft SQL Server instances:
 
 For Oracle databases: 
 
-* Storage layout: includes user data files placement, log files placement, and TempDB placement
 * Storage configuration: includes capacity management, thin provisioning, tiering policy, snapshots, and storage efficiencies
 
-.Before you begin
+== Before you begin
+
 * You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and read/write permissions^] to analyze your database configurations. 
-* To assess the storage of a Microsoft SQL Server instance, the instance must be registered in workload factory and the storage type must be FSx for ONTAP. link:register-instance.html[Learn how to register an instance.]
+* To assess the storage of a Microsoft SQL Server instance or Oracle database, the resource must be registered in workload factory and the storage type must be FSx for ONTAP. link:register-instance.html[Learn how to register resources.]
 * Make sure you review each recommendation carefully before selecting to fix a setting or configuration. For RSS and MAXDOP settings, we suggest that you test the recommended settings to determine performance improvements before making changes to your production environment. 
 
 NOTE: The remediation process may cause instance downtimes or service interruptions. Make sure you review the recommendation carefully before you choose to fix a configuration.
+
+== Fix a configuration issue
+Fix configuration issues for SQL Server or Oracle environments running on FSx for ONTAP storage.
+
+NOTE: The remediation process may cause instance downtimes or service interruptions. Make sure you review the recommendation carefully before you choose to fix a configuration issue.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -69,3 +76,62 @@ You can also download a report of the findings by selecting *Export PDF*.
 .Result
 Workload factory begins fixing the issue(s). Select the *Job monitoring* tab to view the status of the operation.
 
+== Postpone or dismiss the analysis of database configurations
+Postpone or dismiss the analysis of specific database configurations that don't apply to your database environment to avoid unnecessary alerts and inaccurate optimization results. You can reactivate a postponed or dismissed configuration analysis at any time.  
+
+The application requirements for database configurations vary. Workload factory gives you two options for skipping the analysis of specific database configurations so that you can monitor only relevant issues and get an accurate view of the health of relevant configurations. When a specific configuration analysis is postponed or dismissed, the configuration isn't included in the total optimization score.
+
+You can postpone, dismiss, and reactivate the configuration analysis at the configuration level and at the SQL Server instance or at the Oracle database level. 
+
+* *Postpone for 30 days*: Postponing the analysis will stop the analysis for 30 days. After 30 days, the analysis will restart automatically. 
+
+* *Dismiss*: Dismissing the analysis postpones the analysis indefinitely. You can restart the analysis if needed. 
+
+The following instructions describe how to postpone, dismiss, or reactivate an analysis at the configuration level. To complete the following tasks for specific SQL Server instances or Oracle databases, start in the *Dashboard* tab. 
+
+[role="tabbed-block"]
+====
+
+.Postpone
+--
+Postpone to stop a configuration analysis for 30 days. After 30 days, the analysis will restart automatically. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In the Databases tile, select *Go to Databases inventory*.
+. In the *Inventory* tab, scroll down to the configuration to postpone, select the three-dot menu, and then select *Postpone for 30 days*.
+. Select *Continue*.   
+
+.Result
+The configuration analysis stops for 30 days.
+--
+
+.Dismiss
+--
+Dismiss to stop a configuration analysis indefinitely. You can restart the analysis when needed. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In the Databases tile, select *Go to Databases inventory*.
+. In the *Inventory* tab, scroll down to the configuration to dismiss, select the three-dot menu, and then select *Dismiss*. 
+. Select *Continue*.
+
+.Result
+The configuration analysis stops. 
+--
+
+.Reactivate
+--
+Reactivate a postponed or dismissed configuration analysis at any time. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In the Databases tile, select *Go to Databases inventory*.
+. In the *Inventory* tab, scroll down to the configuration to reactivate, select the three-dot menu, and then select *Reactivate*. 
+. Select *Continue*. 
+
+.Result
+The configuration analysis is reactivated and occurs daily moving forward.
+--
+
+====

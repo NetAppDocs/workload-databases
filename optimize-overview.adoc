@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: optimize-overview.html
 keywords: database configuration issues, issues, analyze, scan, optimize, improve, database configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations, storage, compute, application, resiliency, scan, optimization, SQL Server, host, instance
-summary: "Workload factory for Databases analyzes Microsoft SQL Server configurations regularly to determine if any there are any issues."   
+summary: "Workload factory for Databases analyzes Microsoft SQL Server and Oracle configurations regularly to determine if any there are any issues."   
 ---
 = Configuration analysis for database environments in workload factory 
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Workload factory for Databases analyzes database configurations regularly to determine if there are any issues with Microsoft SQL Server deployments on Amazon FSx for NetApp ONTAP storage. When issues are found, workload factory shows you what the issues are and explains what needs to change to ensure your database configurations achieve peak performance, cost efficiency, and compliance with best practices. 
+Workload factory for Databases analyzes database configurations regularly to determine if there are any issues with Microsoft SQL Server and Oracle deployments on Amazon FSx for NetApp ONTAP storage. When issues are found, workload factory shows you what the issues are and explains what needs to change to ensure your database configurations achieve peak performance, cost efficiency, and compliance with best practices. 
 
 Key capabilities include: 
 
@@ -23,9 +23,12 @@ Key capabilities include:
 == Well-architected status
 In the workload factory console at the file-system level, well-architected status is listed for all FSx for ONTAP file systems. Well-architected statuses are categorized as "issues", "not analyzed", or "well-architected". Selecting the well-architected status redirects you to the well-architected status tab within the file system where you can find the well-architected score, configuration categories, all configurations for the file system.
 
-Well-architected score::: The score includes all currently analyzed configurations and appears as a percentage. A 25% score means that 25% of the file system configurations are well-architected. 
+== Well-architected score 
 
-Configuration categories::: The file system configurations are organized into categories aligned with the following five pillars of the AWS Well-Architected Framework.
+The score includes all currently analyzed configurations and appears as a percentage. A 25% score means that 25% of the file system configurations are well-architected. 
+
+== Configuration categories
+The file system configurations are organized into categories aligned with the following five pillars of the AWS Well-Architected Framework.
 
 * _Reliability_: Ensures that workloads perform their intended functions correctly and consistently, even when there are disruptions. An example configuration is FSx for ONTAP backups.
 * _Security_: Emphasizes protecting data, systems, and assets through risk assessments and mitigation strategies.
@@ -33,12 +36,13 @@ Configuration categories::: The file system configurations are organized into ca
 * _Cost optimization_: Aims to deliver business value while minimizing costs.
 * _Performance efficiency_: Focuses on using resources efficiently to meet system requirements and to maintain optimal performance as demands change.
 
-Analysis scope::: The scope of optimization is different depending on which component is being assessed. For example, storage optimization occurs at the SQL instance level whereas compute optimization occurs at the host level. 
+== Analysis scope 
+The scope of optimization is different depending on which component is being assessed. For example, storage optimization occurs at the SQL instance level whereas compute optimization occurs at the host level. 
 
 == Analysis requirements
-For a complete database environment analysis, instances must be registered and online.
+For a complete database environment analysis, resources must be registered and online.
 
-link:register-instance.html[Learn how to register an instance.]
+link:register-instance.html[Learn how to register resources.]
 
 .What's next
 
