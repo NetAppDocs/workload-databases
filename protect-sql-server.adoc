@@ -33,8 +33,6 @@ To discover databases, you must set host resolution on the Connector. On the hos
 
 * link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-start-licensing.html[Set up licensing for BlueXP backup and recovery^]
 
-* In workload factory for Databases, make sure that you register instances using Windows credentials. To provide Windows credentials, go to the Instances tab from the Inventory. Identify the instance, select *Manage instances*, and then select *Instance dashboard*. From the instance dashboard, select the three-dot menu, and then select *Update Microsoft SQL Server password*. Update the password using Windows authentication. 
-
 == Prepare for protection with BlueXP backup and recovery
 Complete the preparation process to protect your Microsoft SQL Server resources with BlueXP backup and recovery.
 
@@ -44,7 +42,10 @@ Complete the preparation process to protect your Microsoft SQL Server resources 
 . In Databases, select the *Inventory* tab. 
 . Filter the *Engine type* to *Microsoft SQL Server*.
 . Select *Protect* from the menu for the instance to protect.
-. Select the *Connector* where you want the workload to be registered and protected.
+. If prompted, provide Windows credentials with administrative access. 
++
+To use BlueXP backup and recovery for protection, SQL Server instances must be registered in workload factory with Windows credentials.
+. If several Connectors are active and available, select the *Connector* where you want the workload to be registered and protected.
 . To prepare for data protection, Workload factory automatically registers your SQL Server resources in BlueXP backup and recovery, configures and installs the Plug-in for Microsoft SQL Server, and discovers resources to meet the prerequisites for protecting your SQL Server instance. Select *Start* to begin the process.
 . After meeting the prerequisites, select *Redirect* to access BlueXP backup and recovery.
 

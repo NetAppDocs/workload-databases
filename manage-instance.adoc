@@ -2,22 +2,22 @@
 sidebar: sidebar
 permalink: manage-instance.html
 keywords: instance, instance management, FSx for ONTAP, instance, manage host, view host, database host, database instance, manage
-summary: "Learn about instance management in workload factory for Databases." 
+summary: "Learn about instance and database management in workload factory for Databases." 
 ---
-= Instance management in workload factory for Databases
+= Resource management in workload factory for Databases
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Managing registered instances in workload factory includes deploying resources for your instances like creating databases and database clones, and monitoring instance and database status, resource utilization, protection, and storage performance. Additionally, you can analyze the well-architected status of your database configurations and implement configuration best practices to improve performance and lower operational costs. Instance management is only for instances with FSx for ONTAP file system storage
+Managing resources in workload factory allows you to use advanced features including database and clone creation, resource utilization and monitoring. Additionally, you can analyze the well-architected status of your database configurations and implement configuration best practices to improve performance and lower operational costs. Resource management is only for Microsoft SQL Server and Oracle environments running on FSx for ONTAP file system storage.
 
-You must link:register-instance.html[register an instance] to do any of the following management tasks. 
+You must link:register-instance.html[register resources] to do any of the following management tasks.
 
 Management tasks include:
 
+* Viewing databases from the inventory
 * link:create-database.html[Creating a database]
 * link:create-sandbox-clone.html[Creating a database clone (sandbox)]
-* link:view-databases.html[Viewing databases]
 * link:optimize-configurations.html[Implementing well-architected database configurations]
 
 
