@@ -12,27 +12,26 @@ summary: "Protect Microsoft SQL Server instances and databases."
 Protect your Microsoft SQL Server applications data using BlueXP backup and recovery from the workload factory console. With this integration, you can achieve the following protection goals: back up workloads with local snapshots on local primary Amazon FSx for NetApp ONTAP (FSx for ONTAP) storage, and replicate workloads to secondary FSx for ONTAP storage. 
 
 == About this task
-Workload factory helps automate the process of discovering instance and database resources, validating prerequisites, and configuring and installing the Plug-in for Microsoft SQL Server, all of which are part of the preparation process for protecting your Microsoft SQL Server workloads with BlueXP backup and recovery. The plug-in is a host-side component of NetApp Software that enables you to protect your Microsoft SQL Server workloads.
+Workload factory automates discovering resources, validating prerequisites, and configuring and installing the Plug-in for Microsoft SQL Server, to prepare for protecting your workloads with BlueXP backup and recovery. The plug-in is a host-side component of NetApp Software that enables you to protect your Microsoft SQL Server workloads.
 
 BlueXP backup and recovery leverages NetApp SnapMirror data replication technology to ensure that all the backups are fully synchronized by creating snapshot copies and transferring them to the backup locations.
 
 For details about protection with BlueXP backup and recovery, refer to the link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-mssql-protect-overview.html[Protect Microsoft SQL workloads overview with BlueXP backup and recovery^]. 
 
 == Before you begin
-The following are requirements to begin protecting Microsoft SQL Server workloads with BlueXP backup and recovery:
+The following requirements must be met to protect Microsoft SQL Server workloads with BlueXP backup and recovery.
 
-* A BlueXP Connector
-+
-Refer to link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html[Learn how to configure a BlueXP Connector^] and link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html[standard BlueXP requirements^].
-+
-The Ubuntu 22.04 LTS operating system is required for the Connector.
+* Ensure that your environment meets link:https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-start-prereq.html#microsoft-sql-server-workload-requirements[the BlueXP backup and recovery SQL Server requirements^].
 
-* A license for BlueXP backup and recovery
+* link:https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-start-prereq.html#in-bluexp[Complete BlueXP requirements^] including setting up BlueXP, IAM roles, and a BlueXP Connector.
 +
-link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-start-licensing.html[Set up licensing for BlueXP backup and recovery^]
-* Setting host resolution on the Connector
+If you have organization administrator access to the BlueXP account, the `backup and recovery super admin` role is automatically assigned when you <<Prepare for protection with BlueXP backup and recovery,prepare for protection with BlueXP backup and recovery>>.
+
+** Set the host resolution on the Connector
 +
 To discover databases, you must set host resolution on the Connector. On the hosted device, add the mapping of the IP address to the hostname in the `/etc/hosts` file.
+
+* link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-start-licensing.html[Set up licensing for BlueXP backup and recovery^]
 
 == Prepare for protection with BlueXP backup and recovery
 Complete the preparation process to protect your Microsoft SQL Server resources with BlueXP backup and recovery.
@@ -43,9 +42,12 @@ Complete the preparation process to protect your Microsoft SQL Server resources 
 . In Databases, select the *Inventory* tab. 
 . Filter the *Engine type* to *Microsoft SQL Server*.
 . Select *Protect* from the menu for the instance to protect.
-. Select the *Connector* where you want the workload to be registered and protected.
+. If prompted, provide Windows credentials with administrative access. 
++
+To use BlueXP backup and recovery for protection, SQL Server instances must be registered in workload factory with Windows credentials.
+. If several Connectors are active and available, select the *Connector* where you want the workload to be registered and protected.
 . To prepare for data protection, Workload factory automatically registers your SQL Server resources in BlueXP backup and recovery, configures and installs the Plug-in for Microsoft SQL Server, and discovers resources to meet the prerequisites for protecting your SQL Server instance. Select *Start* to begin the process.
-. After the prerequisites are met, select *Redirect* to get redirected to BlueXP backup and recovery.
+. After meeting the prerequisites, select *Redirect* to access BlueXP backup and recovery.
 
 .What's next
 From BlueXP backup and recovery, create a policy to protect your Microsoft SQL Server instance and databases.
