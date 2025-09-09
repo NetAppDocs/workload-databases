@@ -1,0 +1,26 @@
+=== Agentic AI-powered error log analyzer
+
+The Agentic AI-powered error log analyzer is a new feature that leverages advanced machine learning algorithms to automatically detect and analyze errors in log files. This tool aims to streamline the troubleshooting process by providing developers with actionable insights and recommendations based on the patterns it identifies in the logs.
+
+link:https://docs.netapp.com/us-en/workload-databases/analyze-error-logs.html[Learn more about the Agentic AI-powered error log analyzer]
+
+=== Oracle support
+
+Workload factory includes support for Oracle databases. In the workload factory console, you can view your Oracle databases from the inventory, register databases to use advanced features in workload factory, and analyze Oracle databases for alignment with best practices using the well-architected feature. The well-architected analysis determines whether the storage configurations for Oracle databases are optimized. You can use this information to make informed decisions about your database deployments and ensure they are running efficiently. 
+
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Implement well-architected database configurations in workload factory]
+
+=== Support for Microsoft SQL Server deployments on second-generation FSx for ONTAP file systems
+
+Workload factory supports Microsoft SQL Server deployments on second-generation FSx for ONTAP file systems. This enhancement allows you to leverage the latest features and performance improvements available in the second-generation file systems while managing your SQL Server workloads.
+
+=== Windows authentication for SQL Server protection
+Authenticating Microsoft SQL Server instances with Windows credentials is embedded in the workflow to prepare Microsoft SQL Server hosts for protection with BlueXP backup and recovery. This used to be a prerequisite step to complete manually. Instead, you'll be prompted to share Windows credentials with administrative access if you haven't registered the hosts in workload factory using Windows credentials.
+
+link:https://docs.netapp.com/us-en/workload-databases/protect-sql-server.html[Learn how to protect Microsoft SQL Server workloads via the workload factory console]. 
+
+=== Well-architected analysis includes MTU alignment for SQL Server
+
+The well-architected analysis assesses and fixes Maximum Transmission Unit (MTU) misalignment across endpoints for Microsoft SQL Server on FSx for ONTAP storage. Aligning MTU settings helps to optimize network performance and reduce latency for SQL Server workloads.
+
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Implement well-architected database configurations in workload factory]
