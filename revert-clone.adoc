@@ -21,5 +21,3 @@ When you clone a database, the clone at creation is a _baseline_ clone. The data
 . In the Sandboxes tab, select the three-dot menu of the database clone you want to revert.
 . Select *Re-baseline*. 
 . In the Re-baseline dialog, select *Re-baseline*. 
-
-To check the job's progress, go to the *Job monitoring* tab.
