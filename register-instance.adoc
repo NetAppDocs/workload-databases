@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: register-instance.html
 keywords: manage, register, Microsoft SQL Server instance, Oracle database, manage database, manage instance
-summary: "Register resources so that you can monitor resource status, resource utilization, protection, and storage performance in workload factory for Databases."
+summary: "Register resources so that you can monitor resource status, resource utilization, protection, and storage performance in NetApp Workload Factory for Databases."
 ---
-= Register resources in workload factory for Databases
+= Register resources in NetApp Workload Factory for Databases
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Register instances for Microsoft SQL Server and databases for Oracle so that you can monitor instance and database status, resource utilization, protection, and storage performance in workload factory for Databases.
+Register instances for Microsoft SQL Server and databases for Oracle so that you can monitor instance and database status, resource utilization, protection, and storage performance in NetApp Workload Factory for Databases.
 
 Registration is possible only for databases engines running on FSx for ONTAP file system storage.
 
@@ -18,12 +18,12 @@ Registering an instance (SQL Server) or database (Oracle) includes two steps - a
 
 You can authenticate using SQL Server credentials or with Windows credentials.
 
-NOTE: Workload factory supports only Microsoft SQL Server instance and Oracle database registration and management. Depending on the AWS account credentials you select in workload factory, PostgreSQL hosts might appear in the Inventory. Currently, workload factory supports unregistered PostgreSQL instances running only on Amazon Linux operating systems.
+NOTE: Workload Factory supports only Microsoft SQL Server instance and Oracle database registration and management. Depending on the AWS account credentials you select in Workload Factory, PostgreSQL hosts might appear in the Inventory. Currently, Workload Factory supports unregistered PostgreSQL instances running only on Amazon Linux operating systems.
 
 == Before you begin
 Consider the following before registering an instance:
 
-The host for the instance or database must appear in the Inventory tab. For hosts to appear in the inventory, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[you must add AWS account credentials and _read-only_ or _read/write_ mode permissions^].
+The host for the instance or database must appear in the Inventory. For hosts to appear in the inventory, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[you must add AWS account credentials and _read-only_ or _read/write_ mode permissions^].
 
 === Registering an instance in a private network
 To register an instance (SQL Server) or database (Oracle) in a private network with no external connectivity, the following endpoints need to be available in the VPC with association to the subnets where SQL servers are present. Ensure the interface endpoints allow port 443 in the attached Security Group.
@@ -46,8 +46,7 @@ Registering an instance includes instance authentication and preparation.
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*.
-. In Databases, select the *Inventory* tab. 
-. Select *Microsoft SQL Server* as the engine type.
+. In the Inventory, select *Microsoft SQL Server* as the engine type.
 . Select the *Instances* tab. 
 . Select to register a single instance or multiple instances. 
 .. Single instance registration: Navigate to the instance to manage and select *Register instance*. 
@@ -83,8 +82,7 @@ Registering a database includes instance authentication and preparation.
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*.
-. In Databases, select the *Inventory* tab. 
-. In the Inventory tab, select *Oracle* as the database engine.
+. In the Inventory, select *Oracle* as the database engine.
 . Select the *Databases* tab.
 . Select to register a single database or multiple databases. 
 .. Single database registration: Navigate to the database to manage and select *Register database*. 

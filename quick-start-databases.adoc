@@ -2,24 +2,24 @@
 sidebar: sidebar
 permalink: quick-start-databases.html  
 keywords: requirements, basic mode, read-only mode, read/write mode 
-summary: "Get started with workload factory for Databases to use Infrastructure-as-Code snippets, discover hosts, manage resources, and more." 
+summary: "Get started with NetApp Workload Factory for Databases to use Infrastructure-as-Code snippets, discover hosts, manage resources, and more." 
 ---
-= Quick start for workload factory for Databases
+= Quick start for NetApp Workload Factory for Databases
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-With workload factory for Databases, you can get started immediately in _basic_ mode. If you'd like to use workload factory to discover hosts, manage resources, and more, you can get started in a few steps. 
+With NetApp Workload Factory for Databases, you can get started immediately in _basic_ mode. If you'd like to use Workload Factory to discover hosts, manage resources, and more, you can get started in a few steps. 
 
 You must have an AWS account to use Databases. 
 
 Follow these steps to get started.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Log in to BlueXP workload factory
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Log in to NetApp Workload Factory
 
 [role="quick-margin-para"]
 
-You'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html[set up an account with workload factory^] and log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+You'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html[set up an account with NetApp Workload Factory^] and log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Add credentials and permissions
 
@@ -45,10 +45,10 @@ When you have databases running on-premises or on AWS with storage on Amazon Ela
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Implement well-architected database configurations
 
 [role="quick-margin-para"]
-Workload Factory for Databases regularly analyzes Microsoft SQL Server deployments on Amazon FSx for NetApp ONTAP storage from the Well-architected dashboard. To troubleshoot issues from the well-architected dashboard for your database resources, you first need to link:register-instance.html[register instances]. 
+Workload Factory for Databases regularly analyzes Microsoft SQL Server and Oracle deployments on Amazon FSx for NetApp ONTAP storage from the Well-architected dashboard. To troubleshoot issues from the well-architected dashboard for your database resources, you first need to link:register-instance.html[register instances]. 
 
 [role="quick-margin-para"]
-After registering instances, you can view the well-architected status and take action to link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[implement well-architected database configurations] in workload factory.
+After registering instances, you can view the well-architected status and take action to link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[implement well-architected database configurations] in Workload Factory.
 
 .What's next
-When you have registered instances with FSx for ONTAP file system storage in your Databases inventory, you can link:create-database.html[create a user database] or link:create-sandbox-clone.html[clone your host to create a sandbox].
+When you have registered resources with FSx for ONTAP file system storage in your Databases inventory, you can link:create-database.html[create a user database] or link:create-sandbox-clone.html[clone your host to create a sandbox].

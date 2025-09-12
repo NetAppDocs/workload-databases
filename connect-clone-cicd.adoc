@@ -9,7 +9,7 @@ summary: Connect a sandbox clone to a CI/CD pipeline with REST API code to impro
 :imagesdir: ./media/
 
 [.lead]
-Connect a sandbox clone to a continuous integration and continuous delivery (CI/CD) pipeline with REST API code to improve software delivery via automation in BlueXP workload factory for Databases. 
+Connect a sandbox clone to a continuous integration and continuous delivery (CI/CD) pipeline with REST API code to improve software delivery via automation in BlueXP Workload Factory for Databases. 
 
 .About this task 
 To deliver a new version of software automatically to your database clone, you should connect to a CI/CD pipeline. Use the REST API code provided from this operation to make the connection. 
@@ -17,8 +17,8 @@ To deliver a new version of software automatically to your database clone, you s
 .Steps 
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*. 
-. In Databases, select the *Sandboxes* tab.
-. In the Sandboxes tab, click the three-dot menu of the sandbox clone to connect to CI/CD tools.
+. From the Databases menu, select *Sandboxes*. 
+. In Sandboxes, select the three-dot menu of the sandbox clone to connect to CI/CD tools.
 . Select *Connect to CI/CD tools*. 
 . In the CI/CD dialog, copy or download the REST API code needed to connect to CI/CD tools. 
 . Click *Close*. 

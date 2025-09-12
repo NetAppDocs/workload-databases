@@ -4,22 +4,22 @@ permalink: explore-savings.html
 keywords: cost, savings, compare costs, EBS, FSx for Windows File Server, SQL Server on-premises, on-premises, FSx for ONTAP
 summary: "Compare the costs of using Amazon Elastic Block Store (EBS), FSx for Windows File Server, and SQL Server on-premises database storage with FSx for ONTAP storage." 
 ---
-= Explore savings in BlueXP workload factory for Databases
+= Explore savings in NetApp Workload Factory for Databases
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Explore savings in BlueXP workload factory for Databases for your database workloads by comparing the costs of using Microsoft SQL Server on Amazon Elastic Block Store (EBS), FSx for Windows File Server, and on-premises storage with FSx for ONTAP storage. 
+Explore savings in NetApp Workload Factory for Databases for your database workloads by comparing the costs of using Microsoft SQL Server on Amazon Elastic Block Store (EBS), FSx for Windows File Server, and on-premises storage with FSx for ONTAP storage.
 
 == About this task
-Workload factory has several ways for you to explore savings for your database workloads running on Amazon Elastic Block Store (EBS), FSx for Windows File Server, and on-premises storage - from the Dashboard, from the Inventory tab, and from the Explore savings tab. In all cases, you can use the savings calculator to compare various cost components of running Microsoft SQL Server workloads like storage, compute, SQL license, snapshots, and clones for your database workloads on FSx for ONTAP file systems against Elastic Block Store (EBS), FSx for Windows File Server, and on-premises storage.
+Workload Factory has several ways for you to explore savings for your database workloads running on Amazon Elastic Block Store (EBS), FSx for Windows File Server, and on-premises storage - from the Dashboard, from the Inventory tab, and from the Explore savings tab. In all cases, you can use the savings calculator to compare various cost components of running Microsoft SQL Server workloads like storage, compute, SQL license, snapshots, and clones for your database workloads on FSx for ONTAP file systems against Elastic Block Store (EBS), FSx for Windows File Server, and on-premises storage.
 
-If workload factory determines that you could save money by running these workloads on an FSx for ONTAP file system, you can deploy Microsoft SQL over FSx for ONTAP directly from the savings calculator in workload factory. When you have multiple Microsoft SQL Server instances over Elastic Block Store, FSx for Windows File Server, or on-premises storage, we'll recommend an FSx for ONTAP configuration with a single SQL instance.
+If Workload Factory determines that you could save money by running these workloads on an FSx for ONTAP file system, you can deploy Microsoft SQL over FSx for ONTAP directly from the savings calculator in the Workload Factory console. When you have multiple Microsoft SQL Server instances over Elastic Block Store, FSx for Windows File Server, or on-premises storage, we'll recommend an FSx for ONTAP configuration with a single SQL instance.
 
 .Potential savings for all database workloads
-Go to the Databases *Dashboard* from the workload factory console to get an overview of potential cost savings for running all of your database workloads on FSx for ONTAP. In the *Potential savings* tile, you can view the number of all database workloads you have on Elastic Block Store and FSx for Windows File Server, the potential cost savings, the savings percentage, and visual representation in the bar graph.
+Visit the Databases *Dashboard* in the Workload Factory console to get an overview of potential cost savings for running all of your database workloads on FSx for ONTAP. In the *Potential savings* tile, you can view the number of all database workloads you have on Elastic Block Store and FSx for Windows File Server, the potential cost savings, the savings percentage, and visual representation in the bar graph.
 
-image:screenshot-dashboard-potential-savings-tile.png["A screenshot of the potential savings tile from the databases dashboard in the workload factory console. The potential savings tile shows the number of all database workloads you have on Elastic Block Store and FSx for Windows File Server, the potential cost savings, the savings percentage, and visual representation in the bar graph."]
+image:screenshot-dashboard-potential-savings-tile.png["A screenshot of the potential savings tile from the databases dashboard in the Workload Factory console. The potential savings tile shows the number of all database workloads you have on Elastic Block Store and FSx for Windows File Server, the potential cost savings, the savings percentage, and visual representation in the bar graph."]
 
 .Savings calculator
 You can utilize the savings calculator so you can compare various cost components of running Microsoft SQL Server workloads like storage, compute, SQL license, snapshots, and clones for your database workloads on FSx for ONTAP file systems against Elastic Block Store (EBS), FSx for Windows File Server, and on-premises storage. Depending on your storage requirements, you might find that FSx for ONTAP file systems are the most cost effective for your database workloads.
@@ -31,16 +31,16 @@ image:screenshot-ebs-savings-calculator-update.png["A screenshot of the savings 
 == SQL Server deployment analysis
 The calculator performs a comprehensive analysis of your SQL Server deployment to ensure that the resources and features being utilized are appropriately matched to the SQL Server edition. Here are the key factors and conditions the calculator checks before recommending a downgrade to Standard Edition:
 
-Deployment model:: 
+.Deployment model
 The calculator evaluates the deployment model and whether Enterprise edition is required.
 
-Allocated resources:: 
+.Allocated resources
 The calculator assesses the conditions of the following license-dependent allocated resources:
 +
 * Target Instance vCPUs: The instance has 48 or fewer virtual CPUs.
 * Memory Allocation: The instance has 128GB or less of memory.
 
-Enterprise feature usage:: 
+.Enterprise feature usage 
 The calculator verifies if any of the following Enterprise features are in use:
 +
 * Database-level Enterprise features
@@ -57,7 +57,7 @@ Two calculator options are available for making the cost comparison between your
 
 Explore savings via customization: You provide the configuration settings for Microsoft SQL server on Amazon EC2 with EBS or FSx for Windows File Server including the region, deployment model, SQL server edition, monthly data change rate, snapshot frequency, and more.
 
-Explore savings for detected hosts: Workload factory links to your existing Microsoft SQL servers and pulls in the details to the calculator for automatic comparison. You'll need to grant _read-only_ or _read/write_ permissions to use this calculator option. You can change the use case, but all other details are automatically determined in the calculation.
+Explore savings for detected hosts: Workload Factory links to your existing Microsoft SQL servers and pulls in the details to the calculator for automatic comparison. You'll need to grant _read-only_ or _read/write_ permissions to use this calculator option. You can change the use case, but all other details are automatically determined in the calculation.
 
 Additionally, you can link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[add AWS credentials^] to improve the accuracy of the calculator analysis. Select *Calculate savings based on existing resources*. You'll be redirected to the Add credentials page. After you add credentials, select the existing resources to compare with FSx for ONTAP, and select *Explore savings*.
 
@@ -128,7 +128,7 @@ Additionally, scroll down to the bottom of the page to view the report by select
 To switch to FSx for ONTAP, follow the instructions to <<Deploy Microsoft SQL Server on AWS EC2 using FSx for ONTAP,deploy Microsoft SQL Server on AQS EC2 using FSx for ONTAP file systems>>.
 
 === Explore savings for detected hosts
-Workload factory enters the detected Elastic Block Store and FSx for Windows File Server host characteristics so that you can explore savings automatically.
+Workload Factory enters the detected Elastic Block Store and FSx for Windows File Server host characteristics so that you can explore savings automatically.
 
 .Before you begin
 Complete the following prerequisites before you begin: 
@@ -189,7 +189,7 @@ Follow the steps under the tab for your storage type.
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Explore savings* then *Microsoft SQL Server on FSx for Windows* from the dropdown menu.
 +
-If workload factory detects EBS hosts, you'll be redirected to the Explore savings tab. If workload factory doesn't detect EBS hosts, you'll be redirected to the calculator to <<Explore savings via customization,explore savings via customization>>.
+If Workload Factory detects EBS hosts, you'll be redirected to the Explore savings tab. If Workload Factory doesn't detect EBS hosts, you'll be redirected to the calculator to <<Explore savings via customization,explore savings via customization>>.
 . In the Explore savings tab, click *Explore savings* of the database server using EBS storage.
 . If required, authenticate the database host with SQL Server credentials, Windows credentials, or by adding missing SQL Server permissions.
 +
@@ -206,7 +206,7 @@ If the Explore savings page doesn't load data after successful authentication, s
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Explore savings* then *Microsoft SQL Server on FSx for Windows* from the menu.
 +
-If workload factory detects FSx for Windows hosts, you'll be redirected to the Explore savings tab. If workload factory doesn't detect FSx for Windows hosts, you'll be redirected to the calculator to <<Explore savings via customization,explore savings via customization>>.
+If Workload Factory detects FSx for Windows hosts, you'll be redirected to the Explore savings tab. If Workload Factory doesn't detect FSx for Windows hosts, you'll be redirected to the calculator to <<Explore savings via customization,explore savings via customization>>.
 . In the Explore savings tab, select *Explore savings* of the database host using FSx for Windows File Server storage.
 . If required, authenticate the database host with SQL Server credentials, Windows credentials, or by adding missing SQL Server permissions.
 +
@@ -225,11 +225,11 @@ If FSx for Windows shadow copies are detected, the default value is *Daily*. If 
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Explore savings* then *Microsoft SQL Server on-premises* from the menu.
 . From the SQL Server on-premises tab, download the script to assess your on-premises SQL Server environments. 
-.. Download the assessment script. The script  is a data collection tool based on PowerShell. It gathers and then uploads SQL Server configuration and performance data to BlueXP workload factory. The migration advisor assesses the data and plans FSx for ONTAP deployment for your SQL Server environment.
+.. Download the assessment script. The script  is a data collection tool based on PowerShell. It gathers and then uploads SQL Server configuration and performance data to Workload Factory. The migration advisor assesses the data and plans FSx for ONTAP deployment for your SQL Server environment.
 +
 image:screenshot-download-script-on-premises.png["A screenshot of the SQL Server on-premises tab shows the option to download the assessment script."]
 .. Run the script on the SQL Server host. 
-.. Upload the script output in the SQL Server on-premises tab in workload factory.
+.. Upload the script output in the SQL Server on-premises tab in Workload Factory.
 +
 image:screenshot-upload-script-on-premises.png["A screenshot of the SQL Server on-premises tab shows the option to upload the assessment script."]
 . From the SQL Server on-premises tab, select *Explore savings* to run a cost analysis of the SQL Server on-premises host against FSx for ONTAP. 
@@ -253,15 +253,16 @@ Additionally, scroll down to the bottom of the page to view the report by select
 
 To switch to FSx for ONTAP, follow the instructions to <<Deploy Microsoft SQL Server on AWS EC2 using FSx for ONTAP,deploy Microsoft SQL Server on AQS EC2 using FSx for ONTAP file systems>>.
 
-On-premises host removal::: After you've explored savings for a Microsoft SQL server on-premises host, you have the option to remove the on-premises host record from BlueXP workload factory. Select the three-dot menu of the Microsoft SQL Server on-premises host and then select *Delete*. 
+.On-premises host removal
+After you've explored savings for a Microsoft SQL server on-premises host, you have the option to remove the on-premises host record from Workload Factory. Select the three-dot menu of the Microsoft SQL Server on-premises host and then select *Delete*.
 
 == Deploy Microsoft SQL Server on AWS EC2 using FSx for ONTAP
 If you'd like to switch to FSx for ONTAP to realize cost savings, click *Create* to create the recommended configuration(s) directly from the Create new Microsoft SQL server wizard or click *Save* to save the recommended configuration(s) for later. 
 
-NOTE: Workload factory doesn't support saving or creating multiple FSx for ONTAP file systems. 
+NOTE: Workload Factory doesn't support saving or creating multiple FSx for ONTAP file systems. 
 
-Deployment methods:::
-In _automate_ mode, you can deploy the new Microsoft SQL server on AWS EC2 using FSx for ONTAP directly from workload factory. You can also copy the content from the Codebox window and deploy the recommended configuration using one of the Codebox methods.
+.Deployment methods
+In _read/write_ mode, you can deploy the new Microsoft SQL server on AWS EC2 using FSx for ONTAP directly from Workload Factory. You can also copy the content from the Codebox window and deploy the recommended configuration using one of the Codebox methods.
 +
 In  _basic_ mode, you can copy the content from the Codebox window and deploy the recommended configuration using one of the Codebox methods.
 

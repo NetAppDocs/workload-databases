@@ -2,22 +2,24 @@
 sidebar: sidebar
 permalink: revert-clone.html
 keywords: re-baseline, revert clone, database, Microsoft SQL
-summary: "Revert a sandbox clone in BlueXP workload factory for Databases."
+summary: "Revert a database (sandbox) clone to its original version at the time of creation in NetApp Workload Factory for Databases."
 ---
-= Revert a sandbox clone in BlueXP workload factory for Databases
+= Revert a database clone in NetApp Workload Factory for Databases
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Revert a database clone to its original version at the time of creation in BlueXP workload factory for Databases. 
+Revert a database (sandbox) clone to its original version at the time of creation in NetApp Workload Factory for Databases. 
 
 .About this task
-When you clone a database, the clone at creation is a _baseline_ clone. The data in the cloned database is the same as the source database at the time of creation. As data in a sandbox database clone changes over time, you might want to revert the data back to the baseline when the clone was first created. This operation is called re-baselining a clone. Re-baselining a clone rather than creating a new clone saves space; however, any changes made to the sandbox clone will be deleted. 
+When you clone a database, the clone at creation is a _baseline_ clone. The data in the cloned database is the same as the source database at the time of creation. As data in a database clone changes over time, you might want to revert the data back to the baseline when the clone was first created. This operation is called re-baselining a clone. Re-baselining a clone rather than creating a new clone saves space; however, any changes made to the database clone will be deleted.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*. 
-. In Databases, select the *Sandboxes* tab.
-. In the Sandboxes tab, click the three-dot menu of the sandbox clone you want to revert.
+. In the Inventory, select the *Sandboxes* tab.
+. In the Sandboxes tab, select the three-dot menu of the database clone you want to revert.
 . Select *Re-baseline*. 
-. In the Re-baseline dialog, click *Re-baseline*. 
+. In the Re-baseline dialog, select *Re-baseline*. 
+
+To check the job's progress, go to the *Job monitoring* tab.
