@@ -102,7 +102,7 @@ Postpone to stop a configuration analysis for 30 days. After 30 days, the analys
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*.
-. In the *Inventory*, scroll down to the configuration to postpone, select the three-dot menu, and then select *Postpone for 30 days*.
+. In the *Inventory*, scroll down to the configuration to postpone, select the action menu, and then select *Postpone for 30 days*.
 . Select *Continue*.   
 
 .Result
@@ -116,7 +116,8 @@ Dismiss to stop a configuration analysis indefinitely. You can restart the analy
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*.
-. In the *Inventory*, scroll down to the configuration to dismiss, select the three-dot menu, and then select *Dismiss*. 
+. From the Databases menu, select *Inventory*. 
+. In the *Inventory*, scroll down to the configuration to dismiss, select the action menu, and then select *Dismiss*. 
 . Select *Continue*.
 
 .Result
@@ -130,7 +131,8 @@ Reactivate a postponed or dismissed configuration analysis at any time.
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*.
-. In the *Inventory*, scroll down to the configuration to reactivate, select the three-dot menu, and then select *Reactivate*. 
+. From the Databases menu, select *Inventory*. 
+. In the Inventory, scroll down to the configuration to reactivate, select the action menu, and then select *Reactivate*. 
 . Select *Continue*. 
 
 .Result

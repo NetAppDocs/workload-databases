@@ -39,7 +39,8 @@ Complete the preparation process to protect your Microsoft SQL Server resources 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*.
-. In the *Inventory*, select *Microsoft SQL Server* as the engine type.
+. From the Databases menu, select *Inventory*. 
+. In the Inventory, select *Microsoft SQL Server* as the engine type.
 . Locate the instance that you want to protect, and then select *Protect* from the menu.
 . If prompted, provide Windows credentials with administrative access. 
 +

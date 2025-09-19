@@ -36,8 +36,8 @@ To use the error log analyzer, you must meet the following prerequisites:
 
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*.
-. In Databases, select the *Inventory* tab. 
-. Select *Microsoft SQL Server* as the database engine type. 
+. From the Databases menu, select *Inventory*. 
+. In the Inventory, select *Microsoft SQL Server* as the database engine type. 
 . From the Instances tab, locate the specific SQL Server instance you want to analyze and then select *Investigate errors* from the menu.
 . From the *Error investigation* tab, complete the following prerequisites as described in the console: 
 +

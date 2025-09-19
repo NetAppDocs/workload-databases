@@ -15,6 +15,6 @@ Delete a sandbox clone in NetApp Workload Factory for Databases when you no long
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*. 
 . From the Databases menu, select *Sandboxes*. 
-. In Sandboxes, select the three-dot menu of the sandbox clone you want to delete.
+. In Sandboxes, select the action menu of the sandbox clone you want to delete.
 . Select *Delete*. 
 . In the Delete dialog, select *Delete* to confirm deletion. 
