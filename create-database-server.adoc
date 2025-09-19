@@ -185,7 +185,7 @@ NOTE: FCI deployments are only supported on Multiple Availability Zone (MAZ) FSx
 
 .. *Security group*: Select an existing security group or create a new security group.
 Three security groups get attached to the SQL nodes (EC2 instances) during new server deployment. 
-+
+
 1. A workload security group is created to allow ports and protocols required for Microsoft SQL and Windows cluster communication on nodes. 
 +
 2. In case of AWS-managed Active Directory, the security group attached to the directory service gets automatically added to the Microsoft SQL nodes to allow communication with Active Directory.  
