@@ -20,6 +20,6 @@ The well-architected analysis includes assessments of configuration issues with 
 
 link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Implement well-architected database configurations in workload factory]
 
-=== Improvements to configuration dismissal for the well-architected analysis
+=== Configuration actions for the well-architected analysis available in the Databases dashboard and inventory
 
-From the well-architected analysis screen, you can select to *Dismiss* any configuration that isn't relevant to your environment. You can also select *Dismissed configurations* to show only dismissed configurations from the list of configuration issues. Remember that you can reactivate a dismissed configuration issue from the list of dismissed configurations at any time.
+From the Databases dashboard, you can select to *View & fix* a configuration for your environment. From the instance screen in the Inventory, the options to *Fix*, *Postpone*, or *Dismiss* a configuration issue are available for single or multiple instances for Microsoft SQL Server or for single or multiple databases for Oracle.
