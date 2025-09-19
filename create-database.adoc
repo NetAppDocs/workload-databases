@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: create-database.html
 keywords: create, database, creation, Microsoft SQL
-summary: "Create a Microsoft SQL database with BlueXP workload factory for Databases." 
+summary: "Create a Microsoft SQL database with NetApp Workload Factory for Databases." 
 ---
-= Create a Microsoft SQL database in BlueXP workload factory for Databases
+= Create a Microsoft SQL database in NetApp Workload Factory for Databases
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Creating a new Microsoft SQL database enables you to manage the resource within BlueXP workload factory for Databases.  
+Creating a new Microsoft SQL database enables you to manage the resource within NetApp Workload Factory for Databases.  
 
 .About this task
 Upon database creation, two new volumes are created in the FSx for ONTAP file system consisting of independent LUNs to host data and log files for the database. The database files in the new database are thin-provisioned and consume only a few MBs of the total size allocated for the new database. 
