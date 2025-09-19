@@ -66,35 +66,36 @@ include::https://raw.githubusercontent.com/NetAppDocs/workload-family/main/_incl
 == Deployment details
 
 === Supported configurations
-Workload Factory supports the following Microsoft SQL Server high availability (Always on Failover Cluster Instances) and single instance deployments according to AWS, NetApp ONTAP and SQL Server best practices.
+Workload Factory supports the following database engines, versions, operating systems, and deployment models according to AWS, NetApp ONTAP, Microsoft SQL Server, Oracle, and PostgreSQL best practices.
 
-[cols="2a,2a,2a,2a" options="header"]
+[cols="1,1,1,1", options="header"]
 |===
-// header row
-| SQL Server Version
-| Windows Server 2016
-| Windows Server 2019
-| Windows Server 2022
+| Engine                | Version         | Operating System      | Deployment Model
 
-// first body row
-| SQL Server 2016
-| Yes
-| Yes
-| No
+| Microsoft SQL Server  | SQL Server 2016 | Windows Server 2016   | FCI, Single instance
+| Microsoft SQL Server  | SQL Server 2019 | Windows Server 2016   | FCI, Single instance
+| Microsoft SQL Server  | SQL Server 2022 | Windows Server 2016   | FCI, Single instance
+| Microsoft SQL Server  | SQL Server 2016 | Windows Server 2019   | FCI, Single instance
+| Microsoft SQL Server  | SQL Server 2019 | Windows Server 2019   | FCI, Single instance
+| Microsoft SQL Server  | SQL Server 2022 | Windows Server 2019   | FCI, Single instance
+| Microsoft SQL Server  | SQL Server 2016 | Windows Server 2022   | FCI, Single instance
+| Microsoft SQL Server  | SQL Server 2019 | Windows Server 2022   | FCI, Single instance
+| Microsoft SQL Server  | SQL Server 2022 | Windows Server 2022   | FCI, Single instance
+| Microsoft SQL Server  | SQL Server 2017 | Any                   | FCI, Single instance
+| Microsoft SQL Server  | SQL Server 2016, 2017,2019, 2022  | Any | FCI, Single instance
+| Microsoft SQL Server  | SQL Server 2016, 2019, 2022  | Any      | Always On Availability Groups
 
-// second body row
-| SQL Server 2019
-| Yes
-| Yes
-| Yes
+| Oracle                | 19c             | RHEL, SuSe Linux      | Standalone (Single/Multi tenant)
+| Oracle                | 21c             | RHEL, SuSe Linux      | Standalone (Single/Multi tenant)
+| Oracle                | 19c             | RHEL, SuSe Linux      | Standalone (Single/Multi tenant)
+| Oracle                | 21c             | RHEL, SuSe Linux      | Standalone (Single/Multi tenant)
+| Oracle                | 19c             | RHEL, SuSe Linux      | Standalone with ASM (Single/Multi tenant)
+| Oracle                | 21c             | RHEL, SuSe Linux      | Standalone with ASM (Single/Multi tenant)
+| Oracle                | 19c             | RHEL, SuSe Linux      | Dataguard
+| Oracle                | 21c             | RHEL, SuSe Linux      | Dataguard
 
-// third body row
-| SQL Server 2022
-| No
-| Yes
-| Yes
-
-//table end
+| PostgreSQL            | PostgreSQL 15   | Amazon Linux 2023 AMI | HA, Standalone instance
+| PostgreSQL            | PostgreSQL 16   | Amazon Linux 2023 AMI | HA, Standalone instance
 |===
 
 === Deployment architectures
