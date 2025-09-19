@@ -16,5 +16,6 @@ You can register the resource again.
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*. 
-. In the inventory, select the engine type: Microsoft SQL Server, Oracle, or PostgreSQL. 
-. Locate the resource you want to deregister, select the three-dot menu, and then select *Deregister*.
+. From the Databases menu, select *Inventory*. 
+. In the Inventory, select the engine type: *Microsoft SQL Server*, *Oracle*, or *PostgreSQL*. 
+. Locate the resource you want to deregister, select the action menu, and then select *Deregister*.

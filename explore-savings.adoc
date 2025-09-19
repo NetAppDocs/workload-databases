@@ -254,7 +254,7 @@ Additionally, scroll down to the bottom of the page to view the report by select
 To switch to FSx for ONTAP, follow the instructions to <<Deploy Microsoft SQL Server on AWS EC2 using FSx for ONTAP,deploy Microsoft SQL Server on AQS EC2 using FSx for ONTAP file systems>>.
 
 .On-premises host removal
-After you've explored savings for a Microsoft SQL server on-premises host, you have the option to remove the on-premises host record from Workload Factory. Select the three-dot menu of the Microsoft SQL Server on-premises host and then select *Delete*.
+After you've explored savings for a Microsoft SQL server on-premises host, you have the option to remove the on-premises host record from Workload Factory. Select the action menu of the Microsoft SQL Server on-premises host and then select *Delete*.
 
 == Deploy Microsoft SQL Server on AWS EC2 using FSx for ONTAP
 If you'd like to switch to FSx for ONTAP to realize cost savings, click *Create* to create the recommended configuration(s) directly from the Create new Microsoft SQL server wizard or click *Save* to save the recommended configuration(s) for later. 

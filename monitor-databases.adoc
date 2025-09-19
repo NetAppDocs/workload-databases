@@ -36,5 +36,5 @@ Monitor jobs to track the progress of database operations, and diagnose and trou
 . In the Databases tile, select *Go to Databases inventory*.
 . From the Databases menu, select *Job monitoring*. 
 . In Job monitoring, use the filters or search to narrow job results. You can also download a jobs report. 
-. Optionally, select the three-dot menu of the job and click *Go to CloudFormation* to view the job log in the AWS CloudFormation console.
+. Optionally, select the action menu of the job and click *Go to CloudFormation* to view the job log in the AWS CloudFormation console.
 

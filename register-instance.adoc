@@ -46,6 +46,7 @@ Registering an instance includes instance authentication and preparation.
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*.
+. From the Databases menu, select *Inventory*. 
 . In the Inventory, select *Microsoft SQL Server* as the engine type.
 . Select the *Instances* tab. 
 . Select to register a single instance or multiple instances. 
@@ -82,6 +83,7 @@ Registering a database includes instance authentication and preparation.
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*.
+. From the Databases menu, select *Inventory*. 
 . In the Inventory, select *Oracle* as the database engine.
 . Select the *Databases* tab.
 . Select to register a single database or multiple databases. 
