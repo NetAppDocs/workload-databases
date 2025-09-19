@@ -35,7 +35,8 @@ For Microsoft SQL Server instances:
 
 For Oracle databases: 
 
-* Storage configuration: includes capacity management, thin provisioning, tiering policy, snapshots, and storage efficiencies
+* Storage configuration: includes capacity management, thin provisioning, tiering policy, snapshots, storage efficiencies, and operating system configurations for deployments using iSCSI with or without Automatic Storage Management (ASM) including Microsoft Multipath I/O (MPIO) status and settings
+* Storage layout: includes redo log placement, temp tablespace placement, data files placement, archive log placement, control files placement and binaries placement, ASM disk groups LUN count
 
 == Before you begin
 
@@ -102,8 +103,11 @@ Postpone to stop a configuration analysis for 30 days. After 30 days, the analys
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*.
-. In the *Inventory*, scroll down to the configuration to postpone, select the action menu, and then select *Postpone for 30 days*.
-. Select *Continue*.   
+. From the Databases menu, select *Inventory*.
+. In the Inventory, select the database engine type: *Microsoft SQL Server* or *Oracle*.
+. Navigate to the SQL Server instance or Oracle database with the configuration to postpone, select the action menu, and then select *Well-architected*.
+. On the Well-architected analysis page, scroll down to the configuration to postpone, select the action menu, and then select *Dismiss*.
+. In the Dismiss configuration dialog, select *Postpone for 30 days* and then select *Dismiss*.
 
 .Result
 The configuration analysis stops for 30 days.
@@ -117,8 +121,10 @@ Dismiss to stop a configuration analysis indefinitely. You can restart the analy
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*.
 . From the Databases menu, select *Inventory*. 
-. In the *Inventory*, scroll down to the configuration to dismiss, select the action menu, and then select *Dismiss*. 
-. Select *Continue*.
+. In the Inventory, select the database engine type: *Microsoft SQL Server* or *Oracle*.
+. Navigate to the SQL Server instance or Oracle database with the configuration to postpone, select the action menu, and then select *Well-architected*.
+. On the Well-architected analysis page, scroll down to the configuration to postpone, select the action menu, and then select *Dismiss*.
+. In the Dismiss configuration dialog, select the *Dismiss* option and then select *Dismiss* to confirm dismissal.
 
 .Result
 The configuration analysis stops. 
@@ -132,8 +138,10 @@ Reactivate a postponed or dismissed configuration analysis at any time.
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*.
 . From the Databases menu, select *Inventory*. 
-. In the Inventory, scroll down to the configuration to reactivate, select the action menu, and then select *Reactivate*. 
-. Select *Continue*. 
+. In the Inventory, select the database engine type: *Microsoft SQL Server* or *Oracle*.
+. Navigate to the SQL Server instance or Oracle database with the configuration to postpone, select the action menu, and then select *Well-architected*.
+. On the Well-architected analysis page, select *Dismissed configuration* to display only dismissed configurations. 
+. Select *Reactivate* to restart the configuration analysis for the postponed or dismissed configuration.
 
 .Result
 The configuration analysis is reactivated and occurs daily moving forward.
