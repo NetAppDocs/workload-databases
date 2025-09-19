@@ -63,9 +63,7 @@ Learn more about link:https://docs.netapp.com/us-en/workload-setup-admin/operati
 //Cross-repo include for Tools section
 include::https://raw.githubusercontent.com/NetAppDocs/workload-family/main/_include/learn-about-tools.adoc[]
 
-== Deployment details
-
-=== Supported configurations
+== Supported configurations
 Workload Factory supports the following database engines, versions, operating systems, and deployment models according to AWS, NetApp ONTAP, Microsoft SQL Server, Oracle, and PostgreSQL best practices.
 
 [cols="1,1,1,1", options="header"]
@@ -98,20 +96,7 @@ Workload Factory supports the following database engines, versions, operating sy
 | PostgreSQL            | PostgreSQL 16   | Amazon Linux 2023 AMI | HA, Standalone instance
 |===
 
-=== Deployment architectures
-Single Availability Zone and Multiple Availability Zones deployment architectures are supported for Databases. 
-
-.Single Availability Zone
-The following diagram displays standalone architecture with a Single Availability Zone in a single region. 
-
-image:diagram-SAZ-database-architecture.png["A diagram of standalone architecture with a single Availability Zone deployment of Amazon FSx for NetApp ONTAP in a single region"]
-
-.Multiple Availability Zones
-The following diagram displays two-node high-availability (HA) architecture with failover cluster instance (FCI) cluster in a single region. 
-
-image:diagram-MAZ-database-architecture.png["A diagram of two-node high-availability architecture with failover cluster instance cluster in a single region"]
-
-=== Integrated AWS services
+== Integrated AWS services
 Databases includes the following integrated AWS services: 
 
 * CloudFormation
@@ -120,7 +105,7 @@ Databases includes the following integrated AWS services:
 * Systems Manager
 * Secrets Manager 
 
-=== Regions
+== Regions
 Databases is supported in all commercial regions where FSx for ONTAP is supported. https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/[View supported Amazon regions.^]
 
 The following AWS regions aren't supported: 
