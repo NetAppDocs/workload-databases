@@ -20,6 +20,10 @@ The well-architected analysis includes assessments of configuration issues with 
 
 link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Implement well-architected database configurations in workload factory]
 
-=== Configuration actions for the well-architected analysis available in the Databases dashboard and inventory
+=== Database dashboard and inventory enhancements
+Configuration actions for the well-architected analysis are available in the Databases dashboard and inventory. From the Databases dashboard, you can select to *View & fix* a configuration for your environment. From the instance screen in the Inventory, the options to *Fix*, *Postpone*, or *Dismiss* a configuration issue are available for single or multiple instances for Microsoft SQL Server or for single or multiple databases for Oracle.
 
-From the Databases dashboard, you can select to *View & fix* a configuration for your environment. From the instance screen in the Inventory, the options to *Fix*, *Postpone*, or *Dismiss* a configuration issue are available for single or multiple instances for Microsoft SQL Server or for single or multiple databases for Oracle.
+=== Optimize savings in the Storage calculator for Amazon Elastic Block Store (EBS)
+Workload Factory can analyze your EBS performance usage and then suggest the best and most cost-efficient FSx for ONTAP configuration so that you can save more by switching to FSx for ONTAP.
+
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html#explore-savings-for-detected-hosts[Explore savings for detected storage environments in the Workload Factory console]
