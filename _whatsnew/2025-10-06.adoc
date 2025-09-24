@@ -18,7 +18,7 @@ Oracle pluggable databases are viewable in the Databases inventory and from the 
 
 The well-architected analysis includes assessments of configuration issues with the storage layout for Oracle databases using iSCSI with or without Automatic Storage Management (ASM) and storage configuration issues on the operating system using iSCSI. You can use this information to make informed decisions about your database deployments and ensure they are running efficiently.
 
-link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Implement well-architected database configurations in workload factory]
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Implement well-architected database configurations in Workload Factory]
 
 === Database dashboard and inventory enhancements
 Configuration actions for the well-architected analysis are available in the Databases dashboard and inventory. From the Databases dashboard, you can select to *View & fix* a configuration for your environment. From the instance screen in the Inventory, the options to *Fix*, *Postpone*, or *Dismiss* a configuration issue are available for single or multiple instances for Microsoft SQL Server or for single or multiple databases for Oracle.
