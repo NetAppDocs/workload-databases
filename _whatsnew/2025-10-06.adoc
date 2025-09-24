@@ -10,7 +10,7 @@ Each Oracle database has its own dedicated resource screen available from the Da
 
 From the resource screen, you can view information about the Oracle server (deployment model, OS, edition, version, and more), location (AWS account, region, Availability Zone, and subnet), storage and compute (FSx for ONTAP file system details, database instance type, and associated LUNs and volumes), and connectivity (VPC and access protocol). You can also check the well-architected status of the database configurations and view pluggable databases (PDBs) associated with the database. 
 
-==== Oracle pluggable databases
+==== Support for Oracle pluggable databases
 
 Oracle pluggable databases are viewable in the Databases inventory and from the resource screen of their parent container database. The following information about your PDBs is available: CDB name, host name, protection status, database size, FSx for ONTAP file system, AWS credentials, AWS account, and region.
 
