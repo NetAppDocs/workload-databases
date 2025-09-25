@@ -36,7 +36,7 @@ Log data and aggregations stay within your AWS account, communicated via private
 
 Customer data is not used to train or improve models. Amazon Bedrock processes logs in real time but does not train on your data. Results are stored in your environment for reference only. For more details, refer to the link:https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html[Amazon Bedrock data protection documentation^]. 
 
-.Before you begin
+== Before you begin
 To use the error log analyzer, you must meet the following prerequisites:
 
 * You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and _read/write_ mode permissions^] to create a new database host in Workload Factory. 
@@ -61,6 +61,9 @@ This permission enables the EC2 instance on the corresponding SQL node to invoke
 
 *** AWS credentials associated with Workload Factory: "bedrock:GetFoundationModelAvailability" and "bedrock:ListInferenceProfiles" permissions 
 These permissions verify model availability and configuration in the region of the SQL node, and ensure reliable, region-specific performance.
+
+== Analyze error logs
+Use the Workload Factory console to analyze SQL Server error logs.
 
 .Steps
 
