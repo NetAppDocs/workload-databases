@@ -9,10 +9,10 @@ summary: "Analyze error logs within Workload Factory for Databases."
 :imagesdir: ./media/
 
 [.lead]
-Use the Smart error log analyzer to automatically interpret Microsoft SQL Server error logs so that you can quickly identify and resolve issues. The Agentic AI-based analysis requires Amazon Bedrock integration.
+Use the smart error log analyzer to automatically interpret Microsoft SQL Server error logs so that you can quickly identify and resolve issues. The Agentic AI-based analysis requires Amazon Bedrock integration.
 
 == About this task
-Error log analysis and remediation help maintain the health and performance of SQL Server instances. Interpreting SQL Server error logs effectively requires careful analysis and expertise. Manual monitoring, error detection, and root cause analysis are time-intensive and prone to errors. These challenges can delay issue resolution, increased downtime, and operational inefficiencies. The Smart error log analyzer addresses these challenges with these key benefits:
+Error log analysis and remediation help maintain the health and performance of SQL Server instances. Interpreting SQL Server error logs effectively requires careful analysis and expertise. Manual monitoring, error detection, and root cause analysis are time-intensive and prone to errors. These challenges can delay issue resolution, increased downtime, and operational inefficiencies. The smart error log analyzer addresses these challenges with these key benefits:
 
 * Smart grouping: Intelligently consolidates errors by uniqueness, severity, and category, and simplifies the troubleshooting process for faster, more effective resolutions.
 * AI-driven investigation: Leverages AI to proactively analyze errors, providing clear, actionable insights to accelerate issue identification without requiring deep expertise.
@@ -50,16 +50,18 @@ Amazon Bedrock is required so that the AI agent running on the SQL node from Wor
 ** *Networking* 
 +
 The Amazon Bedrock VPC endpoint ensures private communication of your SQL node with Amazon Bedrock APIs and eliminates public internet exposure. 
-Ensure Amazon Bedrock VPC endpoint is associated with the SQL Server node's subnet (E.g.: vpce-050cb2f33a1380ffd). 
+Ensure Amazon Bedrock VPC endpoint is associated with the SQL Server node's subnet (example: vpce-050cb2f33a1380ffd). 
 
 ** *AWS IAM permissions* 
 +
 The following permissions are required for the EC2 instance profile role associated with the SQL node and for the AWS credentials associated with Workload Factory.
 
-*** EC2 instance profile role with "bedrock:InvokeModel" permission 
+*** EC2 instance profile role with "bedrock:InvokeModel" permission
++ 
 This permission enables the EC2 instance on the corresponding SQL node to invoke Bedrock models for proactive error investigation and remediation guidance. This profile also ensures secure AI access for tailored insights. 
 
-*** AWS credentials associated with Workload Factory: "bedrock:GetFoundationModelAvailability" and "bedrock:ListInferenceProfiles" permissions 
+*** AWS credentials associated with Workload Factory: "bedrock:GetFoundationModelAvailability" and "bedrock:ListInferenceProfiles" permissions
++ 
 These permissions verify model availability and configuration in the region of the SQL node, and ensure reliable, region-specific performance.
 
 == Analyze error logs
