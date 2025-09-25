@@ -11,7 +11,7 @@ summary: "Analyze error logs within Workload Factory for Databases."
 [.lead]
 Use the Smart error log analyzer to automatically interpret Microsoft SQL Server error logs so that you can quickly identify and resolve issues. The Agentic AI-based analysis requires Amazon Bedrock integration.
 
-.About this task
+== About this task
 Error log analysis and remediation help maintain the health and performance of SQL Server instances. Interpreting SQL Server error logs effectively requires careful analysis and expertise. Manual monitoring, error detection, and root cause analysis are time-intensive and prone to errors. These challenges can delay issue resolution, increased downtime, and operational inefficiencies. The Smart error log analyzer addresses these challenges with these key benefits:
 
 * Smart grouping: Intelligently consolidates errors by uniqueness, severity, and category, and simplifies the troubleshooting process for faster, more effective resolutions.
@@ -25,12 +25,42 @@ To use the error log analyzer, you need to activate Amazon Bedrock, select the m
 
 link:https://aws.amazon.com/bedrock/pricing/[Amazon Bedrock pricing^]
 
+=== Data privacy and security
+The feature ensures data privacy and security with the following measures: 
+
+.Data sovereignty 
+
+Log data and aggregations stay within your AWS account, communicated via private VPC endpoint (Amazon Bedrock), ensuring no public internet exposure. 
+
+.No AI Training 
+
+Customer data is not used to train or improve models. Amazon Bedrock processes logs in real time but does not train on your data. Results are stored in your environment for reference only. For more details, refer to the link:https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html[Amazon Bedrock data protection documentation^]. 
+
 .Before you begin
 To use the error log analyzer, you must meet the following prerequisites:
 
 * You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and _read/write_ mode permissions^] to create a new database host in Workload Factory. 
 * link:https://docs.netapp.com/us-en/workload-databases/register-instance.html[Register a SQL Server instance^] in Workload Factory.
-* 
+* The following prerequisites also must be met. You will be prompted to complete these prerequisites as part of the steps to analyze log errors. 
+
+** *Amazon Bedrock activation* 
++
+Amazon Bedrock is required so that the AI agent running on the SQL node from Workload Factory can seamlessly connect with Bedrock and fetch AI-based insights for the identified error logs. 
+
+** *Networking* 
++
+The Amazon Bedrock VPC endpoint ensures private communication of your SQL node with Amazon Bedrock APIs and eliminates public internet exposure. 
+Ensure Amazon Bedrock VPC endpoint is associated with the SQL Server node's subnet (E.g.: vpce-050cb2f33a1380ffd). 
+
+** *AWS IAM permissions* 
++
+The following permissions are required for the EC2 instance profile role associated with the SQL node and for the AWS credentials associated with Workload Factory.
+
+*** EC2 instance profile role with "bedrock:InvokeModel" permission 
+This permission enables the EC2 instance on the corresponding SQL node to invoke Bedrock models for proactive error investigation and remediation guidance. This profile also ensures secure AI access for tailored insights. 
+
+*** AWS credentials associated with Workload Factory: "bedrock:GetFoundationModelAvailability" and "bedrock:ListInferenceProfiles" permissions 
+These permissions verify model availability and configuration in the region of the SQL node, and ensure reliable, region-specific performance.
 
 .Steps
 
