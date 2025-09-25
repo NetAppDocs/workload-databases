@@ -16,7 +16,7 @@ Oracle pluggable databases are viewable in the Databases inventory and from the 
 
 ==== Well-architected analysis for Oracle
 
-The well-architected analysis includes assessments of configuration issues with the storage layout for Oracle databases using iSCSI with or without Automatic Storage Management (ASM) and storage configuration issues on the operating system using iSCSI. You can use this information to make informed decisions about your database deployments and ensure they are running efficiently.
+The well-architected analysis includes assessments of configuration issues with the storage layout for Oracle databases over NFS or over iSCSI with or without Automatic Storage Management (ASM) and storage configuration issues on the operating system for Oracle over iSCSI LUNs. You can use this information to make informed decisions about your database deployments and ensure they are running efficiently.
 
 link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Implement well-architected database configurations in Workload Factory]
 
