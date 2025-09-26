@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: create-database-server.html
 keywords: create, server, Microsoft SQL, deploy, host, deploy a database host, database host 
-summary: "Create a new Microsoft SQL Server within BlueXP Workload Factory for Databases." 
+summary: "Create a new Microsoft SQL Server within NetApp Workload Factory for Databases." 
 ---
 = Create a Microsoft SQL Server in Workload Factory for Databases
 :icons: font
@@ -274,4 +274,4 @@ After the server deploys, Workload Factory does not enable remote connection on 
 . Allow the required client IP or subnet in the security group. 
 
 .What's next
-Now you can link:create-database.html[create a database in BlueXP Workload Factory for Databases]. 
+Now you can link:create-database.html[create a database in Workload Factory for Databases]. 

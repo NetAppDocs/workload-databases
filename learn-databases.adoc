@@ -132,4 +132,4 @@ The following AWS regions aren't supported:
 == Getting help
 Amazon FSx for NetApp ONTAP is an AWS first-party solution. For questions or technical support issues associated with your FSx for ONTAP file system, infrastructure, or any solution using this service, use the Support Center in your AWS Management Console to open a support case with AWS. Select the “FSx for ONTAP” service and appropriate category. Provide the remaining information required to create your AWS support case.
 
-For general questions about Workload Factory or Workload Factory applications and services, refer to link:get-help.html[Get help for BlueXP Workload Factory for Databases].
+For general questions about Workload Factory or Workload Factory applications and services, refer to link:get-help.html[Get help for NetApp Workload Factory for Databases].
