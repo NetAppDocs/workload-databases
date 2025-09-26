@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: check-clone-integrity.html
 keywords: integrity check, data corruption
-summary: "Run an integrity check to determine if sandbox clone data is intact or corrupt in BlueXP Workload Factory for Databases."
+summary: "Run an integrity check to determine if sandbox clone data is intact or corrupt in NetApp Workload Factory for Databases."
 ---
 = Check the integrity of the data in a sandbox clone
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Run an integrity check to determine if sandbox clone data is intact or corrupt in BlueXP Workload Factory for Databases. 
+Run an integrity check to determine if sandbox clone data is intact or corrupt in NetApp Workload Factory for Databases. 
  
 .About this task
 When you create a sandbox clone from a source database while it is busy, the clone's data may not be in sync with the most recent snapshot of the source database. This operation checks the integrity of all the objects in the sandbox clone to determine if the sandbox clone data is current. 
