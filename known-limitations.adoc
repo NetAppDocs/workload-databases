@@ -91,5 +91,5 @@ The following AWS regions aren't supported:
 * Secret Cloud
 * Top Secret 
 
-== Registering Oracle on SLES 12
-While registering Oracle Database on Suse Linux 12,  Workload Factory does not install Python dependencies. You must manually configure the required Python version.  Workload Factory requires minimum version of 3.6; however, we recommend version 3.11.
+== Registering Oracle on SUSE Linux Enterprise Server 12
+When registering Oracle Database on SUSE Linux Enterprise Server 12, Workload Factory does not install Python dependencies. You must manually configure the required Python version. Workload Factory requires the minimum version of 3.6; however, we recommend version 3.11.
