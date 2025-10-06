@@ -1,6 +1,6 @@
 indexpage:
-  title: BlueXP workload factory for Databases documentation
-  lead: Deploy Microsoft SQL Server configurations and manage database environments on top of FSx for ONTAP file system storage in BlueXP workload factory.
+  title: NetApp Workload Factory for Databases documentation
+  lead: Deploy Microsoft SQL Server configurations and manage database environments on top of FSx for ONTAP file system storage in NetApp Workload Factory.
   tiles: 
     - title: Get started
       links:
@@ -30,9 +30,9 @@ indexpage:
           url: /get-help.html
     - title: Blogs & community
       links:
-        - title: NetApp Community 
-          url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
-        - title: BlueXP blogs 
-          url: https://bluexp.netapp.com/blog
-        - title: Cloud webinars 
-          url: https://bluexp.netapp.com/events   
+        - title: NetApp Console
+          url: https://www.netapp.com/console
+        - title: NetApp Data Services
+          url: https://www.netapp.com/data-services/
+        - title: NetApp Community
+          url: https://community.netapp.com/  

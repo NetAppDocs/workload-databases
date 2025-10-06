@@ -2,19 +2,19 @@
 sidebar: sidebar
 permalink: create-postgresql-server.html
 keywords: create, server, PostgreSQL, deploy, host, deploy a database host, database host 
-summary: "Create a new PostgreSQL SQL server within BlueXP workload factory for Databases." 
+summary: "Create a new PostgreSQL SQL server within NetApp Workload Factory for Databases." 
 ---
-= Create a PostgreSQL server in BlueXP workload factory
+= Create a PostgreSQL server in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Creating a new PostgreSQL server, or database host, in BlueXP workload factory for Databases requires an FSx for ONTAP file system deployment and resources for Active Directory. 
+Creating a new PostgreSQL server, or database host, in NetApp Workload Factory for Databases requires an FSx for ONTAP file system deployment and resources for Active Directory.
 
-.About this task
-Before creating a PostgreSQL server from BlueXP workload factory, learn about the available storage deployment types for the database host configuration, workload factory modes of operation, and the requirements to complete this operation. 
+== About this task
+Before creating a PostgreSQL server from Workload Factory, learn about the available storage deployment types for the database host configuration, workload factory modes of operation, and the requirements to complete this operation.
 
-FSx for ONTAP file system deployments:::
+.FSx for ONTAP file system deployments
 Creating a new PostgreSQL server requires an FSx for ONTAP file system as the storage backend. You can use an existing FSx for ONTAP file system or create a new file system. If you select an existing FSx for ONTAP file system as your database server storage backend, we create a new storage VM for the PostgreSQL workloads. 
 +
 FSx for ONTAP file systems have two PostgreSQL server deployment models: _High Availability (HA)_ or _single instance_. Different resources are created for the FSx for ONTAP file system depending on the FSx for ONTAP deployment model you select.
@@ -23,12 +23,10 @@ FSx for ONTAP file systems have two PostgreSQL server deployment models: _High A
 
 * *Single instance deployment*: A Single Availability Zone FSx for ONTAP file system is created when a new PostgreSQL server is created. In addition, separate volumes and LUNs are created for data, log, and tempdb files.
 
-.Before you begin
-Ensure you have the following prerequisites before you create a new database host. 
+== Before you begin
+You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and _read/write_ mode permissions^] to create a new database host in workload factory. 
 
-Credentials and permissions::: You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and _read/write_ mode permissions^] to create a new database host in workload factory. 
-
-== Create a database server
+== Create a PostgreSQL server
 You can use _Quick create_ or _Advanced create_ deployment modes to complete this task in workload factory with _Automate_ mode permissions. You can also use the following tools available in the Codebox: REST API, AWS CLI, AWS CloudFormation, and Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox[Learn how to use Codebox for automation^]. 
 
 NOTE: When using Terraform from Codebox, the code you copy or download hides `fsxadmin` and `vsadmin` passwords. You'll need to re-enter the passwords when you run the code. You'll need to include the following permissions for the user account in addition to _Automate_ mode permissions: `iam:TagRole` and `iam:TagInstanceProfile`. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#use-terraform-from-codebox[Learn how to use Terraform from Codebox^].
@@ -42,7 +40,7 @@ NOTE: In _Quick create_, HA is the default deployment model, Windows 2016 is the
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Databases tile, select *Deploy database host* and then select *PostgreSQL Server* from the dropdown menu.
+. In the Databases tile, select *Deploy host* and then select *PostgreSQL Server* from the menu.
 . Select *Quick create*.  
 . Under *Landing zone*, provide the following: 
 .. *AWS credentials*: Select AWS credentials with automate permissions to deploy the new database host. 
@@ -101,7 +99,7 @@ You can also select *Save configuration* to deploy the host later.
 --
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Databases tile, select *Deploy database host* and then select *PostgreSQL Server* from the dropdown menu. 
+. In the Databases tile, select *Deploy host* and then select *PostgreSQL Server* from the menu.
 . Select *Advanced create*. 
 . Under *Deployment model*,  select *Standalone instance* or *High availability (HA)*.
 . Under *Landing zone*, provide the following: 
@@ -126,11 +124,11 @@ VPC DNS attributes `EnableDnsSupport` and `EnableDnsHostnames` are modified to e
 
 .. *Availability zones*: Select availability zones and subnets.
 +
-For single instance deployments::: 
+*For single instance deployments*
 +
 In the *Cluster configuration - Node 1* field, select an availability zone from the *Availability zone* dropdown menu and a subnet from the *Subnet* dropdown menu. 
 +
-For HA deployments:::
+*For HA deployments*
 +
 ... In the *Cluster configuration - Node 1* field, select the primary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the primary availability zone from the *Subnet* dropdown menu. 
 ... In the *Cluster configuration - Node 2* field, select the secondary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the secondary availability zone from the *Subnet* dropdown menu. 
@@ -185,10 +183,6 @@ We recommend enabling CloudWatch for debugging in case of failure. The events th
 In CloudWatch, a log group is created with the name of the stack. A log stream for every validation node and SQL node appear under the log group. CloudWatch shows script progress and provides information to help you understand if and when deployment fails. 
 
 .. *Resource rollback*: This feature isn't currently supported.
-//Optional. Select to enable Resource rollback.
-//+
-//If you roll back your resources, all resources created during deployment are cleaned up/removed (?) with the exception of Active Directory and DNS resources. 
-
 . Summary
 .. *Estimated cost*: Provides an estimate of charges that you might incur if you deployed the resources shown. 
 . Click *Create* to deploy the new database host. 
@@ -200,4 +194,3 @@ Alternatively, you can save the configuration.
 
 .What's next
 You can manually configure users, remote access, and databases on the deployed PostgreSQL server. 
-//Now you can link:create-database.html[create a database in BlueXP workload factory for Databases]. 

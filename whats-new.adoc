@@ -2,16 +2,20 @@
 sidebar: sidebar
 permalink: whats-new.html
 keywords: what's new, features, new, release notes, enhancements, fixes, new features, workload factory, databases, workload factory, databases
-summary: "Learn what's new with BlueXP workload factory for Databases."
+summary: "Learn what's new with NetApp Workload Factory for Databases."
 ---
-= What's new with BlueXP workload factory for Databases
+= What's new with NetApp Workload Factory for Databases
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Learn what's new with Databases.
+Learn what's new with NetApp Workload Factory for Databases.
 
 // tag::whats-new[]
+== 06 October 2026
+
+include::_whatsnew/2025-10-06.adoc[]
+
 == 1 September 2025
 
 include::_whatsnew/2025-09-01.adoc[]
@@ -19,11 +23,11 @@ include::_whatsnew/2025-09-01.adoc[]
 == 12 August 2025
 
 include::_whatsnew/2025-08-12.adoc[]
+// end::whats-new[]
 
 == 04 August 2025
 
 include::_whatsnew/2025-08-04.adoc[]
-// end::whats-new[]
 
 == 30 June 2025
 
