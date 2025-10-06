@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: split-clone.html
 keywords: split, clone, source, new database 
-summary: "Split a sandbox clone from the source database to create a new database in BlueXP workload factory for Databases." 
+summary: "Split a database clone from the source database to create a new database in NetApp Workload Factory for Databases." 
 ---
-= Split a sandbox clone from the source database
+= Split a database clone from the source database
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-In BlueXP workload factory for Databases, splitting a sandbox clone from its source database creates a new database which will consume a certain amount of storage capacity. The clone gets deleted when the split is complete and the new database appears in the Inventory. 
+In NetApp Workload Factory for Databases, splitting a database clone from its source database creates a new database which will consume a certain amount of storage capacity. The clone gets deleted when the split is complete and the new database appears in the Inventory. 
 
 .Before you begin
 Consider how much storage capacity is needed for the new database. If needed, link:https://docs.netapp.com/us-en/workload-fsx-ontap/increase-file-system-capacity.html[increase file system capacity^] for the FSx for ONTAP file system before you begin.  
@@ -17,7 +17,9 @@ Consider how much storage capacity is needed for the new database. If needed, li
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*. 
-. In Databases, select the *Sandboxes* tab.
-. In the Sandboxes tab, click the three-dot menu of the sandbox clone you want to split.
+. From the Databases menu, select *Sandboxes*.
+. In Sandboxes, select the action menu of the database clone you want to split.
 . Select *Split*. 
-. In the Split dialog, click *Split*. 
+. In the Split dialog, select *Split*. 
+
+

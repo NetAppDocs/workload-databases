@@ -1,0 +1,29 @@
+=== BlueXP workload factory now NetApp Workload Factory
+ 
+BlueXP has been renamed and redesigned to better reflect the role it has in managing your data infrastructure. As a result, BlueXP workload factory has been renamed to NetApp Workload Factory.
+
+=== Enhancements for Oracle in the Workload Factory console
+
+==== Oracle database resource screen
+
+Each Oracle database has its own dedicated resource screen available from the Databases inventory. The resource screen provides an overview with the database name, status (on or offline), tenancy, and deployment type. Also included are charts with the following data over a three-month period: CPU utilization, latency, IOPS, and throughput. Capacity utilization provides total size for the database, written data size, used solid-state drive capacity, and used capacity pool storage. 
+
+From the resource screen, you can view information about the Oracle server (deployment model, OS, edition, version, and more), location (AWS account, region, Availability Zone, and subnet), storage and compute (FSx for ONTAP file system details, database instance type, and associated LUNs and volumes), and connectivity (VPC and access protocol). You can also check the well-architected status of the database configurations and view pluggable databases (PDBs) associated with the database. 
+
+==== Support for Oracle pluggable databases
+
+Oracle pluggable databases are viewable in the Databases inventory and from the resource screen of their parent container database. The following information about your PDBs is available: CDB name, host name, protection status, database size, FSx for ONTAP file system, AWS credentials, AWS account, and region.
+
+==== Well-architected analysis for Oracle
+
+The well-architected analysis includes assessments of configuration issues with the storage layout for Oracle databases over NFS or over iSCSI with or without Automatic Storage Management (ASM) and storage configuration issues on the operating system for Oracle over iSCSI LUNs. You can use this information to make informed decisions about your database deployments and ensure they are running efficiently.
+
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Implement well-architected database configurations in Workload Factory]
+
+=== Databases inventory enhancements
+From the instance screen in the Databases inventory, the options to fix, postpone, and dismiss a configuration issue are available for single or multiple instances for Microsoft SQL Server or for single or multiple databases for Oracle.
+
+=== Optimize savings in the Storage calculator for Amazon Elastic Block Store (EBS)
+Workload Factory can analyze your EBS performance usage and then suggest the best and most cost-efficient FSx for ONTAP configuration so that you can save more by switching to FSx for ONTAP.
+
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html#explore-savings-for-detected-hosts[Explore savings for detected storage environments in the Workload Factory console]
