@@ -16,14 +16,14 @@ Workload Factory automates discovering resources, validating prerequisites, and 
 
 NetApp Backup and Recovery leverages NetApp SnapMirror data replication technology to ensure that all the backups are fully synchronized by creating snapshot copies and transferring them to the backup locations.
 
-For details about protection with Backup and Recovery, refer to the link:https://docs.netapp.com/us-en/console-backup-recovery/br-use-mssql-protect-overview.html[Protect Microsoft SQL workloads overview with Backup and Recovery^]. 
+For details about protection with Backup and Recovery, refer to the link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-mssql-protect-overview.html[Protect Microsoft SQL workloads overview with Backup and Recovery^]. 
 
 == Before you begin
 The following requirements must be met to protect Microsoft SQL Server workloads with Backup and Recovery.
 
-* Ensure that your environment meets link:https://docs.netapp.com/us-en/console-backup-recovery/concept-start-prereq.html#microsoft-sql-server-workload-requirements[the Backup and Recovery SQL Server requirements^].
+* Ensure that your environment meets link:https://docs.netapp.com/us-en/data-services-backup-recovery/concept-start-prereq.html#microsoft-sql-server-workload-requirements[the Backup and Recovery SQL Server requirements^].
 
-* link:https://docs.netapp.com/us-en/console-backup-recovery/concept-start-prereq.html#in-netapp-console[Complete NetApp Console requirements^] including setting up, assigning IAM roles, and installing a Console agent.
+* link:https://docs.netapp.com/us-en/data-services-backup-recovery/concept-start-prereq.html#in-netapp-console[Complete NetApp Console requirements^] including setting up, assigning IAM roles, and installing a Console agent.
 
 If you have organization administrator access to the NetApp account, the `backup and recovery super admin` role is automatically assigned when you <<Prepare for protection with NetApp Backup and Recovery,prepare for protection with NetApp Backup and Recovery>>.
 
@@ -31,7 +31,7 @@ If you have organization administrator access to the NetApp account, the `backup
 +
 To discover databases, you must set host resolution on the Connector. On the hosted device, add the mapping of the IP address to the hostname in the `/etc/hosts` file.
 
-* link:https://docs.netapp.com/us-en/console-backup-recovery/br-start-licensing.html[Set up licensing for NetApp Backup and Recovery^]
+* link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-licensing.html[Set up licensing for NetApp Backup and Recovery^]
 
 == Prepare for protection with NetApp Backup and Recovery
 Complete the preparation process to protect your Microsoft SQL Server resources with NetApp Backup and Recovery.
@@ -52,6 +52,6 @@ To use NetApp Backup and Recovery for protection, SQL Server instances must be r
 .What's next
 From Backup and Recovery, create a policy to protect your Microsoft SQL Server instance and databases.
 
-link:https://docs.netapp.com/us-en/console-backup-recovery/br-use-policies-create.html[Learn how to create a policy to protect your Microsoft SQL Server instance and databases^].
+link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-policies-create.html[Learn how to create a policy to protect your Microsoft SQL Server instance and databases^].
 
-For related information, refer to the link:https://docs.netapp.com/us-en/console-backup-recovery/br-use-mssql-protect-overview.html[Backup and Recovery documentation^] for managing Microsoft SQL Server workloads.
+For related information, refer to the link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-mssql-protect-overview.html[Backup and Recovery documentation^] for managing Microsoft SQL Server workloads.
