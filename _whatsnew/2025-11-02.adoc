@@ -1,0 +1,33 @@
+=== Dashboard improvements
+
+The new dashboard is streamlined and better organized to provide a clearer overview of your database resources and the key functionalities of Workload Factory on one screen; one card highlights database resources, one card provides information about the well-architected score and analysis, one card displays error analysis, two cards display monthly cost and potential savings, and one card displays information on sandboxes.
+
+=== Well-architected analysis for Oracle
+
+The well-architected analysis includes the following assessments and fixes for the following configurations in Oracle: 
+
+* Storage configuration operating system using the NFS protocol: assesses and fixes configuration issues with the NFS configuration for existing Oracle database deployments.
+* Storage configuration operating system using the iSCSI protocol: assesses and fixes configuration issues with the iSCSI configuration for existing Oracle database deployments.
+* Storage configuration operating system using Automatic Storage Management: assesses and fixes configuration issues with the ASM configuration for existing Oracle database deployments.
+
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Implement well-architected database configurations in Workload Factory]
+
+=== Permissions changes for Workload Factory for Databases
+
+Workload Factory for Databases updated the permissions policies to provide more clarity into what it requires for specific actions. When you add credentials, you'll have three permissions options to choose from instead of the previous permissions model which was _read-only_ and _read/write_. The new permissions model breaks up the permissions policies as follows: 
+
+* _*View, planning, and analysis*_: permissions for viewing, planning, and analyzing databases, including resource monitoring and the well-architected analysis
+* _*Operations and remediation*_: additional permissions for operating databases and fixing configuration issues beyond view, planning, and analyzing capabilities
+* _*Database host creation*_: additional permissions for creating and managing database host deployments beyond operate and remediate capabilities
+
+When adding credentials, you can select one or more of these permissions policies based on the level of access you want to provide to Workload Factory for Databases.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html[Workload Factory permissions reference^]
+
+=== Well-architected menu item added
+
+A new _Well-architected_ menu item has been added to the Databases menu. From this menu item, you can access the well-architected dashboard, which provides an overview of the well-architected score for your database deployments, along with detailed information about configuration issues and recommendations for improving your database configurations.
+
+=== Well-architected dashboard export PDF report
+
+You can now export a PDF report from the well-architected dashboard. This report includes an overview of your well-architected score, detailed information about configuration issues including such configurations for operating system and ONTAP. The PDF report can be useful for sharing with stakeholders or for keeping a record of your database configurations and improvements over time.
