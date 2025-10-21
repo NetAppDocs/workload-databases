@@ -23,7 +23,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 === Databases inventory enhancements
 From the instance screen in the Databases inventory, the options to fix, postpone, and dismiss a configuration issue are available for single or multiple instances for Microsoft SQL Server or for single or multiple databases for Oracle.
 
-=== Optimize savings in the Storage calculator for Amazon Elastic Block Store (EBS)
+=== Optimize savings based on usage for Amazon Elastic Block Store (EBS)
 Workload Factory can analyze your EBS performance usage and then suggest the best and most cost-efficient FSx for ONTAP configuration so that you can save more by switching to FSx for ONTAP.
 
 link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html#explore-savings-for-detected-hosts[Explore savings for detected storage environments in the Workload Factory console]

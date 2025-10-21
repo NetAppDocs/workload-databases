@@ -31,3 +31,12 @@ A new _Well-architected_ menu item has been added to the Databases menu. From th
 === Well-architected dashboard export PDF report
 
 You can now export a PDF report from the well-architected dashboard. This report includes an overview of your well-architected score, detailed information about configuration issues including such configurations for operating system and ONTAP. The PDF report can be useful for sharing with stakeholders or for keeping a record of your database configurations and improvements over time.
+
+=== Edit protection for database deployments in NetApp Backup and Recovery  
+Edit protection is available for resources that are protected in NetApp Backup and Recovery. From the Workload Factory console, you can select to edit protection for a protected resource and then you'll be redirected to Backup and Recovery in the NetApp Console where you can modify the protection policy or schedule.
+
+=== Improved cost savings for several database hosts on Amazon Elastic Block Store (EBS)
+The cost savings analysis for EBS storage has been enhanced to provide a consolidated storage solution for several database hosts on one FSx for ONTAP file system. This enhancement helps to optimize storage costs by reducing the number of file systems required for multiple database hosts, leading to improved cost savings.
+
+=== Error filtering available from the Agentic AI-powered error log analyzer
+You can filter and view SQL Server error logs by infrastructure-oriented categories and specific error types in the *Error Investigation* screen. This enhancement helps you quickly triage and resolve issues by narrowing down the error logs to the most relevant entries.
