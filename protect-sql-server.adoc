@@ -56,8 +56,8 @@ link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-policies
 
 For related information, refer to the link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-mssql-protect-overview.html[Backup and Recovery documentation^] for managing Microsoft SQL Server workloads.
 
-== Edit protection for Microsoft SQL Server instances
-You can edit protection for Microsoft SQL Server instances that are already protected in NetApp Backup and Recovery. Editing protection allows you to modify the protection policy or schedule for your protected SQL Server instances.
+== Edit protection for Microsoft SQL Server resources
+You can edit protection for Microsoft SQL Server instances and databases that are already protected in NetApp Backup and Recovery. Editing protection allows you to modify the protection policy or schedule for your protected SQL Server instances.
 
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Databases tile, select *Go to Databases inventory*.
@@ -65,5 +65,6 @@ You can edit protection for Microsoft SQL Server instances that are already prot
 . In the Inventory, select *Microsoft SQL Server* as the engine type.
 . Select the *Databases* tab. 
 . Locate the database to edit protection for, and then select *Edit protection* from the menu.
-. Select *Redirect* to access Backup and Recovery.
++
+You'll be redirected to Backup and Recovery in the NetApp Console where you can modify the protection policy or schedule.
 
