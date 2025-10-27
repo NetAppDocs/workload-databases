@@ -201,7 +201,7 @@ If the Explore savings page doesn't load data after successful authentication, s
 .. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.
 .. *Add hosts*: Optionally, select up to five detected EBS hosts to include in the savings calculation.
 +
-Workload Factory consolidates multiple EBS hosts into a single FSx for ONTAP configuration recommendation to optimize cost savings unless the selected EBS hosts exceed throughput, capacity, or IOPS limits for a single FSx for ONTAP file system.
+Workload Factory consolidates multiple SQL Server hosts into a single FSx for ONTAP configuration recommendation to optimize cost savings unless the selected EBS hosts exceed throughput, capacity, or IOPS limits for a single FSx for ONTAP file system.
 --
 .Amazon FSx for Windows File Server
 --
