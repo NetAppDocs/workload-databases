@@ -199,9 +199,9 @@ If the Explore savings page doesn't load data after successful authentication, s
 .. *Clone refresh frequency*: Select the frequency that clones refresh from the menu.
 .. *Number of cloned copies*: Enter the number of cloned copies in the EBS configuration.
 .. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.
-.. *Add hosts*: Optionally, select additional detected EBS hosts to include in the savings calculation.
+.. *Add hosts*: Optionally, select up to five detected EBS hosts to include in the savings calculation.
 +
-Depending on the size of the hosts, Workload Factory might consolidate multiple EBS hosts into a single FSx for ONTAP configuration recommendation to optimize cost savings.
+Workload Factory consolidates multiple EBS hosts into a single FSx for ONTAP configuration recommendation to optimize cost savings unless the selected EBS hosts exceed throughput, capacity, or IOPS limits for a single FSx for ONTAP file system.
 --
 .Amazon FSx for Windows File Server
 --
