@@ -187,10 +187,10 @@ Follow the steps under the tab for your storage type.
 --
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Databases tile, select *Explore savings* then *Microsoft SQL Server on FSx for Windows* from the dropdown menu.
+. In the Databases tile, select *Explore savings* then *Microsoft SQL Server on FSx for Windows* from the menu.
 +
 If Workload Factory detects EBS hosts, you'll be redirected to the Explore savings tab. If Workload Factory doesn't detect EBS hosts, you'll be redirected to the calculator to <<Explore savings via customization,explore savings via customization>>.
-. In the Explore savings tab, click *Explore savings* of the database server using EBS storage.
+. From *Explore savings*, select one or more database hosts running on EBS and then select *Explore savings*.
 . If required, authenticate the database host with SQL Server credentials, Windows credentials, or by adding missing SQL Server permissions.
 +
 If the Explore savings page doesn't load data after successful authentication, select the *Inventory* tab to reload the data, and then select the *Explore savings* tab again.
@@ -199,6 +199,9 @@ If the Explore savings page doesn't load data after successful authentication, s
 .. *Clone refresh frequency*: Select the frequency that clones refresh from the menu.
 .. *Number of cloned copies*: Enter the number of cloned copies in the EBS configuration.
 .. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.
+.. *Add hosts*: Optionally, select additional detected EBS hosts to include in the savings calculation.
++
+Depending on the size of the hosts, Workload Factory might consolidate multiple EBS hosts into a single FSx for ONTAP configuration recommendation to optimize cost savings.
 --
 .Amazon FSx for Windows File Server
 --
