@@ -50,7 +50,7 @@ If you decide to rollback your Domain Name System (DNS) resources, the resource 
 Ensure you have the following prerequisites before you create a new database host. 
 
 .Credentials and permissions 
-You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and _read/write_ mode permissions^] to create a new database host in Workload Factory. 
+You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _database host creation_ permissions^] in your AWS account to create a new database host in Workload Factory. 
 
 .Active Directory 
 When connecting to Active Directory, you must have administrative access with permissions to do the following: 

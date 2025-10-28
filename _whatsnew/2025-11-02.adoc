@@ -14,13 +14,13 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 === Permissions changes for Workload Factory for Databases
 
-Workload Factory for Databases updated the permissions policies to provide more clarity into what it requires for specific actions. When you add credentials, you'll have three permissions options to choose from instead of the previous permissions model which was _read-only_ and _read/write_. The new permissions model breaks up the permissions policies as follows: 
+Workload Factory for Databases provides more clarity about the permissions it requires for specific actions. When you add credentials, you'll have three permissions options to choose from instead of the previous permissions model which was _read-only_ and _read/write_. The new permissions model breaks up the permission policies as follows: 
 
 * _*View, planning, and analysis*_: view the inventory of database resources, learn about the health of your resources, review the well-architected analysis of your database configurations, get error log analysis, and explore savings
 * _*Operations and remediation*_: perform operational tasks for your database resources and fix issues for database configurations and the underlying FSx for ONTAP file system storage
 * _*Database host creation*_: deploy database hosts and the underlying FSx for ONTAP file system storage according to best practices
 
-When adding credentials, you can select one or more of these permissions policies based on the level of access you want to provide to Workload Factory for Databases.
+When adding credentials, you can select one or more of these permission policies based on the level of access you want to provide to Workload Factory for Databases.
 
 link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html[Workload Factory permissions reference^]
 

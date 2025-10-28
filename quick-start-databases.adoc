@@ -25,10 +25,10 @@ You'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-s
 
 [role="quick-margin-para"]
 
-Choose between link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[_basic_, _read-only_, and _read/write_ operational modes^]. 
+Choose the link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html[permission policies^] to meet your needs. You can opt out of granting permissions and use Workload Factory to generate Infrastructure-as-Code templates for external use.
 
 [role="quick-margin-para"]
-If you operate in _read-only_ or _read/write_ mode, you'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[add credentials to an account manually^] select workload capabilities, such as Databases and GenAI, and create IAM policies for the required permissions.
+If you choose to grant permissions, you'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[add credentials to an account manually^] select workload capabilities, such as Databases and GenAI, and create IAM policies for the required permissions.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Discover or deploy resources
 
