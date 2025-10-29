@@ -83,6 +83,6 @@ Use the Workload Factory console to analyze SQL Server error logs.
 . When prerequisites are met, select *Investigate now* to use the error log analyzer to gain insights into your SQL Server error logs.
 +
 After the scan, errors are displayed in the console, providing a comprehensive view of the issues detected by the Smart error log analyzer.
-. Use filters to refine the displayed errors based on criteria such as severity, time frame, and error code, or infrastructure-oriented categories such as compute or storage, or error types.
+. Use filters to refine the displayed errors based on criteria such as severity, time frame, and error code, or by infrastructure-oriented tags such as compute, storage, network, and security.
 . Review the detailed error information, including original error message, AI-based explanation, and suggested remediation steps to resolve the errors.
 
