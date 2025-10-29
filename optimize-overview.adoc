@@ -20,21 +20,18 @@ Key capabilities include:
 * Insights to action
 * AWS Well-Architected Framework advisor
 
-== Well-architected status
-In the Workload Factory console at the file-system level, well-architected status is listed for all FSx for ONTAP file systems. Well-architected statuses are categorized as "issues", "not analyzed", or "well-architected". Selecting the well-architected status redirects you to the well-architected status tab within the file system where you can find the well-architected score, configuration categories, all configurations for the file system.
+== Components of the configuration analysis
+The configuration analysis includes the following components:
 
-== Well-architected score 
+Well-architected status::
+The well-architected status refers to the overall health of your database configurations; configurations are categorized as "optimized", "not optimized", or "over-provisioned". The well-architected status of a configuration is referenced from within a Microsoft SQL Server instance or Oracle database in the Workload Factory console.
 
-The score includes all currently analyzed configurations and appears as a percentage. A 25% score means that 25% of the file system configurations are well-architected. 
+Well-architected score:: 
 
-== Configuration categories
-The file system configurations are organized into categories aligned with the following five pillars of the AWS Well-Architected Framework.
+The score includes all currently analyzed configurations and appears as a percentage. A 25% score means that 25% of your database deployments are well-architected. The well-architected score is referenced from the *Well-architected* screen and from within a Microsoft SQL Server instance or Oracle database in the Workload Factory console. 
 
-* _Reliability_: Ensures that workloads perform their intended functions correctly and consistently, even when there are disruptions. An example configuration is FSx for ONTAP backups.
-* _Security_: Emphasizes protecting data, systems, and assets through risk assessments and mitigation strategies.
-* _Operational excellence_: Focuses on delivering the most optimal architecture and business value.
-* _Cost optimization_: Aims to deliver business value while minimizing costs.
-* _Performance efficiency_: Focuses on using resources efficiently to meet system requirements and to maintain optimal performance as demands change.
+Configuration categories::
+The configurations are organized into the following categories: storage, compute, application, resiliency, and cloning. Each category includes specific configuration assessments that are analyzed regularly. Configuration categories are referenced from the *Well-architected* screen and from within a Microsoft SQL Server instance or Oracle database in the Workload Factory console.
 
 == Analysis scope 
 The scope of optimization is different depending on which component is being assessed. For example, storage optimization occurs at the SQL instance level whereas compute optimization occurs at the host level. 
