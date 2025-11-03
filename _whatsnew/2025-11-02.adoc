@@ -1,0 +1,39 @@
+=== Dashboard improvements
+
+The new dashboard is streamlined and better organized to provide a clearer overview of your database resources and the key functionalities of Workload Factory on one screen; one card highlights database resources, one card provides information about the well-architected score and analysis, one card displays error analysis, two cards display monthly cost and potential savings, and one card displays information on sandboxes.
+
+=== Well-architected analysis for Oracle
+
+The well-architected analysis includes the following assessments and fixes for Oracle configurations: 
+
+* Storage configuration operating system using the NFS protocol: assesses and fixes configuration issues with the NFS configuration for existing Oracle database deployments.
+* Storage configuration operating system using the iSCSI protocol: assesses and fixes configuration issues with the iSCSI configuration for existing Oracle database deployments.
+* Storage configuration operating system using Automatic Storage Management (ASM): assesses configuration issues with the ASM configuration for existing Oracle database deployments.
+
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Implement well-architected database configurations in Workload Factory]
+
+=== Permissions changes for Workload Factory for Databases
+
+Workload Factory for Databases updated the permissions policies to provide more clarity into what it requires for specific actions and granularity for selecting only the permissions you need. When you add credentials, you'll have three permissions options to choose from instead of the previous permissions model which was _read-only_ and _read/write_. The new permissions model breaks up the permissions policies as follows: 
+
+* _View, planning, and analysis_: view the inventory of database resources, learn about the health of your resources, review the well-architected analysis of your database configurations, get error log analysis, and explore savings
+* _Operations and remediation_: perform operational tasks for your database resources and fix issues for database configurations and the underlying FSx for ONTAP file system storage
+* _Database host creation_: deploy database hosts and the underlying FSx for ONTAP file system storage according to best practices
+
+When adding credentials, you can select one or more of these permissions policies based on the level of access you want to provide to Workload Factory for Databases.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html[Workload Factory permissions reference^]
+
+=== Well-architected dashboard screen added
+
+A new _Well-architected_ dashboard screen has been added to the Databases menu. From this screen, you can get an aggregated view of the configuration status of your entire database estate.
+
+=== Edit protection for database deployments in NetApp Backup and Recovery  
+From the Workload Factory console, you can select to edit protection for a protected resource and then you'll be redirected to Backup and Recovery in the NetApp Console where you can modify the protection policy or schedule.
+
+link:https://docs.netapp.com/us-en/workload-databases/protect-sql-server.html[Edit protection for database deployments]
+
+=== Error filtering by tags available for the error analysis feature
+You can filter and view Microsoft SQL Server error logs by infrastructure-oriented tags when using the error analysis feature in Workload Factory. This enhancement helps you quickly triage, troubleshoot, and resolve issues.
+
+link:https://docs.netapp.com/us-en/workload-databases/analyze-error-logs.html[Analyze error logs with tag filtering^]
