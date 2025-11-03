@@ -16,14 +16,14 @@ Upon database creation, two new volumes are created in the FSx for ONTAP file sy
 
 If you want to segregate storage for the database, you can do this by using a _virtual mount point_. The virtual mount point lets you consolidate databases to a few common drives on the host. 
 
-Creating a database in workload factory requires automate mode permissions. Alternatively, in basic mode, you can copy or download a partially completed code template to complete the operation outside workload factory. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[Learn about operational modes in workload factory^] to decide which mode you'd like to use. 
+Creating a database in workload factory requires _view, planning, and analysis_ permissions. Alternatively, you can copy or download a partially completed code template to complete the operation outside workload factory. link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html[Learn about Workload Factory permissions^] to decide which mode you'd like to use. 
 
 NOTE: Microsoft SQL Servers using SMB protocol don't support database creation. 
 
 .Before you begin
 Ensure you complete the following prerequisites before you create a new database. 
 
-* *Credentials and permissions*: You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and _read-only_ or _read/write_ mode permissions^] to create a new database in workload factory. 
+* *Credentials and permissions*: You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and _view, planning, and analysis_ permissions^] to create a new database in Workload Factory. 
 +
 Alternatively, you can use the Codebox to copy a template so that you can deploy a database outside of workload factory using REST API. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html[Learn more about Codebox automation^].
 
@@ -34,7 +34,7 @@ Alternatively, you can use the Codebox to copy a template so that you can deploy
 * *AWS Systems Manager*: Ensure the `NT Authority\SYSTEM` user privilege is enabled in the Microsoft SQL host via AWS Systems Manager.
 
 == Create a database
-You can use _Quick create_ or _Advanced create_ deployment modes to complete this task in workload factory with _read-only_ or _read/write_ mode permissions.
+You can use _Quick create_ or _Advanced create_ deployment modes to complete this task in Workload Factory.
 
 [role="tabbed-block"]
 ====
