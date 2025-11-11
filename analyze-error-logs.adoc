@@ -39,7 +39,7 @@ Customer data is not used to train or improve models. Amazon Bedrock processes l
 == Before you begin
 To use the error log analyzer, you must meet the following prerequisites:
 
-* You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and _read/write_ mode permissions^] to create a new database host in Workload Factory. 
+* You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _view, planning, and analysis_ permissions^] in your AWS account to create a new database host in Workload Factory. 
 * link:https://docs.netapp.com/us-en/workload-databases/register-instance.html[Register a SQL Server instance^] in Workload Factory.
 * The following prerequisites also must be met. You will be prompted to complete these prerequisites as part of the steps to analyze log errors. 
 

@@ -24,7 +24,7 @@ FSx for ONTAP file systems have two PostgreSQL server deployment models: _High A
 * *Single instance deployment*: A Single Availability Zone FSx for ONTAP file system is created when a new PostgreSQL server is created. In addition, separate volumes and LUNs are created for data, log, and tempdb files.
 
 == Before you begin
-You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and _read/write_ mode permissions^] to create a new database host in workload factory. 
+You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _database host creation_ permissions^] in your AWS account to create a new database host in workload factory. 
 
 == Create a PostgreSQL server
 You can use _Quick create_ or _Advanced create_ deployment modes to complete this task in workload factory with _Automate_ mode permissions. You can also use the following tools available in the Codebox: REST API, AWS CLI, AWS CloudFormation, and Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox[Learn how to use Codebox for automation^]. 

@@ -20,7 +20,7 @@ Workload Factory for Databases updated the permissions policies to provide more 
 * _Operations and remediation_: perform operational tasks for your database resources and fix issues for database configurations and the underlying FSx for ONTAP file system storage
 * _Database host creation_: deploy database hosts and the underlying FSx for ONTAP file system storage according to best practices
 
-When adding credentials, you can select one or more of these permissions policies based on the level of access you want to provide to Workload Factory for Databases.
+When adding credentials, you can select one or more of these permission policies based on the level of access you want to provide to Workload Factory for Databases.
 
 link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html[Workload Factory permissions reference^]
 
