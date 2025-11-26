@@ -1,5 +1,8 @@
-=== Improved cost savings for several database hosts on Amazon Elastic Block Store (EBS)
-The cost savings analysis for EBS storage has been enhanced to provide a consolidated storage solution for several database hosts on one FSx for ONTAP file system. This consolidation optimizes storage costs by reducing the number of file systems required for multiple database hosts, leading to improved cost savings.
+=== Optimize savings in the Databases calculator for Amazon Elastic Block Store (EBS)
+Two new features are available to improve the cost savings analysis for running multiple instances with EBS storage so that you can save more by switching to FSx for ONTAP. 
+
+* Workload Factory provides a consolidated storage solution for several database hosts on one FSx for ONTAP file system. This consolidation optimizes storage costs by reducing the number of file systems required for multiple database hosts, leading to improved cost savings.
+* Workload Factory analyzes your EBS performance usage and then suggests the best and most cost-efficient FSx for ONTAP configuration.
 
 link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html#explore-savings-for-detected-hosts[Explore savings for detected EBS hosts]
 
