@@ -45,24 +45,28 @@ To use the error log analyzer, you must meet the following prerequisites:
 
 ** *Amazon Bedrock activation* 
 +
-Amazon Bedrock is required so that the AI agent running on the SQL Server or Oracle node from Workload Factory can seamlessly connect with Bedrock and fetch AI-based insights for the identified error logs. 
+Amazon Bedrock is required so that the AI agent running on the SQL Server or Oracle host from Workload Factory can seamlessly connect with Bedrock and fetch AI-based insights for the identified error logs. 
 
 ** *Networking* 
 +
-The Amazon Bedrock VPC endpoint ensures private communication of your SQL Server or Oracle node with Amazon Bedrock APIs and eliminates public internet exposure. 
-Ensure Amazon Bedrock VPC endpoint is associated with the SQL Server or Oracle node's subnet (example: vpce-050cb2f33a1380ffd). 
+The Amazon Bedrock VPC endpoint ensures private communication of your SQL Server or Oracle host with Amazon Bedrock APIs and eliminates public internet exposure. 
+Ensure Amazon Bedrock VPC endpoint is associated with the SQL Server or Oracle host's subnet (example: vpce-050cb2f33a1380ffd). 
 
 ** *AWS IAM permissions* 
 +
-The following permissions are required for the EC2 instance profile role associated with the SQL Server or Oracle node and for the AWS credentials associated with Workload Factory.
+The following permissions are required for the EC2 instance profile role associated with the SQL Server or Oracle host and for the AWS credentials associated with Workload Factory.
 
 *** EC2 instance profile role with "bedrock:InvokeModel" permission
 + 
-This permission enables the EC2 instance on the corresponding SQL Server or Oracle node to invoke Bedrock models for proactive error investigation and remediation guidance. This profile also ensures secure AI access for tailored insights. 
+This permission enables the EC2 instance on the corresponding SQL Server or Oracle host to invoke Bedrock models for proactive error investigation and remediation guidance. This profile also ensures secure AI access for tailored insights. 
 
 *** AWS credentials associated with Workload Factory: "bedrock:GetFoundationModelAvailability" and "bedrock:ListInferenceProfiles" permissions
 + 
-These permissions verify model availability and configuration in the region of the SQL Server or Oracle node, and ensure reliable, region-specific performance.
+These permissions verify model availability and configuration in the region of the SQL Server or Oracle host, and ensure reliable, region-specific performance.
+
+** *Oracle user permissions*
++
+The following permission grants read access to extended diagnostic alerts, enabling extraction of error/trace details from logs for AI-powered pattern detection and remediation: `V$DIAG_ALERT_EXT`. This permission is required only for Oracle databases.
 
 == Analyze error logs
 Use the Workload Factory console to analyze SQL Server error logs.
