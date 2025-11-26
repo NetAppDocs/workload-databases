@@ -64,7 +64,7 @@ This permission enables the EC2 instance on the corresponding SQL Server or Orac
 + 
 These permissions verify model availability and configuration in the region of the SQL Server or Oracle host, and ensure reliable, region-specific performance.
 
-** *Oracle user permissions*
+** *Oracle user permission*
 +
 The following permission grants read access to extended diagnostic alerts, enabling extraction of error/trace details from logs for AI-powered pattern detection and remediation: `V$DIAG_ALERT_EXT`. This permission is required only for Oracle databases.
 
