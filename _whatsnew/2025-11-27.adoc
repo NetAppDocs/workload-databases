@@ -1,0 +1,22 @@
+=== Optimize savings in the Databases calculator for Amazon Elastic Block Store (EBS)
+Two new calculator features improve the cost savings analysis when running multiple instances with EBS storage so that you can save more by switching to FSx for ONTAP. 
+
+* Workload Factory provides a consolidated storage solution for several database hosts on one FSx for ONTAP file system. This consolidation optimizes storage costs by reducing the number of file systems required for multiple database hosts, leading to improved cost savings.
+* Workload Factory analyzes your EBS performance usage and then suggests the best and most cost-efficient FSx for ONTAP configuration.
+
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html#explore-savings-for-detected-hosts[Explore savings for detected EBS hosts]
+
+=== Excel report available for the well-architected dashboard
+You can download an Excel report of the well-architected dashboard. The report provides the well-architected status for the database resource and recommendations for all resource configurations, including sub-configurations for operating system and ONTAP. 
+
+=== Error log analyzer available for Oracle databases
+
+The Agentic AI-powered error log analyzer is available for Oracle databases. The feature leverages advanced machine learning algorithms to automatically detect and analyze errors in log files. This tool aims to streamline the troubleshooting process by providing developers with actionable insights and recommendations based on the patterns it identifies in the logs.
+
+link:https://docs.netapp.com/us-en/workload-databases/analyze-error-logs.html[Learn more about the Agentic AI-powered error log analyzer]
+
+=== Well-architected analysis for Oracle
+
+The well-architected analysis includes two new storage sizing configurations. The analysis assesses and fixes configuration issues related to swap space allocation and file system headroom for existing Oracle database deployments.
+
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Implement well-architected database configurations in Workload Factory]

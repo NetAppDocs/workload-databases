@@ -11,7 +11,10 @@ summary: "Learn what's new with NetApp Workload Factory for Databases."
 [.lead]
 Learn what's new with NetApp Workload Factory for Databases.
 
-// tag::whats-new[]
+== 27 November 2025
+
+include::_whatsnew/2025-11-27.adoc[]
+
 == 02 November 2025
 
 include::_whatsnew/2025-11-02.adoc[]
@@ -23,7 +26,6 @@ include::_whatsnew/2025-10-06.adoc[]
 == 1 September 2025
 
 include::_whatsnew/2025-09-01.adoc[]
-// end::whats-new[]
 
 == 12 August 2025
 
