@@ -1,0 +1,17 @@
+=== Home page integration
+
+The Workload Factory console home page includes Ask me AI assistant to ask questions and learn more about Workload Factory without leaving the Workload Factory console. The redesigned home page displays Storage, Databases, and VMware tiles with details about workload resources and easy navigation to the respective workloads. The new *Focus* tile displays any FSx for ONTAP EMS events and well-architected issues for storage and database workloads. 
+
+=== Active Directory integration enhancements
+Workload Factory for Databases includes three new Active Directory (AD) fields when deploying Microsoft SQL Server using the *Advanced create* option. These enhancements let you to specify Active Directory join preferences and use a managed service account. 
+
+The new AD fields are:
+
+* Preferred Domain Controller
+* Preferred Organizational Unit Path
+* Target Active Directory Group
+
+link:https://docs.netapp.com/us-en/workload-databases/create-database.html[Deploy Microsoft SQL Server]
+
+=== Updated defaults for the Amazon Elastic Block Store (EBS) savings calculation
+The savings calculator for EBS has been updated with new default values for the number of clones copies and the monthly change rate. The new default value for the number of cloned copies changed is three copies, and the monthly change rate is 10%. These updated defaults provide a more accurate estimation of potential cost savings with FSx for ONTAP for database workloads running on EBS storage.
