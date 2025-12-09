@@ -208,6 +208,8 @@ For a user-managed Active Directory, ensure the security group configured on the
 NOTE: If the selected collation set isn't compatible for installation, we recommend that you select the default collation "SQL_Latin1_General_CP1_CI_AS".
 .. *Database name*: Enter the database cluster name.
 .. *Database credentials*: Enter a user name and password for a new service account or use existing service account credentials in the Active Directory.
++
+*Use managed service account*: Select this option to use a managed service account for the SQL Server service account.
 . Under *Connectivity*, provide the following:
 .. *Key pair*: Select a key pair to connect securely to your instance.
 .. *Active Directory*: Provide the following Active Directory details: 
@@ -219,6 +221,9 @@ NOTE: If the selected collation set isn't compatible for installation, we recomm
 For AWS-managed Active Directories, the DNS IP address(es) appear in the dropdown menu.
 ... In the *User name* field, enter the user name for the Active Directory domain. 
 ... In the *Password* field, enter a password for the Active Directory domain.
+... *Preferred domain controller*: Optionally, enter the preferred domain controller to use for the Active Directory to join. 
+... *Preferred organizational unit path*: Optionally, enter the preferred organizational unit (OU) in the Active Directory to join.
+... *Target Active Directory group*: Optionally, enter the target Active Directory group to add the computers to.
 . Under *Infrastructure settings*, provide the following:  
 .. *DB Instance type*: Select the database instance type from the dropdown menu. 
 .. *FSx for ONTAP system*: Create a new FSx for ONTAP file system or use an existing FSx for ONTAP file system. 
