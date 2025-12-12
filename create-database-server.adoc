@@ -209,7 +209,7 @@ NOTE: If the selected collation set isn't compatible for installation, we recomm
 .. *Database name*: Enter the database cluster name.
 .. *Database credentials*: Enter a user name and password for a new service account or use existing service account credentials in the Active Directory.
 +
-Optional: Select to *Use managed service account* for the SQL Server service account. If your environment uses service accounts with password management policies, we recommend using a managed service account.
+Optional: Select to *Use managed service account* for the SQL Server service account. Use this option if your environment uses MSA (Managed Service Account) or Group Managed Service Accounts (gMSA) where password management is handled by Active Directory.
 . Under *Connectivity*, provide the following:
 .. *Key pair*: Select a key pair to connect securely to your instance.
 .. *Active Directory*: Provide the following Active Directory details: 
