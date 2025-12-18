@@ -1,0 +1,10 @@
+=== Active Directory integration enhancements
+Workload Factory for Databases includes three new Active Directory (AD) fields when deploying Microsoft SQL Server using the *Advanced create* option. These enhancements let you to specify Active Directory join preferences and use a managed service account. 
+
+The new AD fields are:
+
+* Preferred Domain Controller
+* Preferred Organizational Unit Path
+* Target Active Directory Group
+
+link:https://docs.netapp.com/us-en/workload-databases/create-database.html[Deploy Microsoft SQL Server]
