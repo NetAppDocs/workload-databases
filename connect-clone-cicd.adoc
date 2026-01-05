@@ -16,7 +16,7 @@ To deliver a new version of software automatically to your database clone, you s
 
 .Steps 
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Databases tile, select *Go to Databases inventory*. 
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Databases*. 
 . From the Databases menu, select *Sandboxes*. 
 . In Sandboxes, select the actions menu of the sandbox clone to connect to CI/CD tools.
 . Select *Connect to CI/CD tools*. 
