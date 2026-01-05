@@ -43,7 +43,7 @@ You can use _Quick create_ or _Advanced create_ deployment modes to complete thi
 -- 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Databases tile, select *Go to Databases inventory*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Databases*.
 . From the Databases menu, select *Inventory*. 
 . In the Inventory, select *Microsoft SQL Server* as the database engine type. 
 . Select a database server with a managed SQL server instance to create the database in.
@@ -67,7 +67,7 @@ Alternatively, if you want to change any of these default settings now, change t
 --
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Databases tile, select *Go to Databases inventory*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Databases*.
 . From the Databases menu, select *Inventory*. 
 . In the Inventory, select *Microsoft SQL Server* as the database engine type. 
 . Select a database server with a managed SQL server instance to create the database in.

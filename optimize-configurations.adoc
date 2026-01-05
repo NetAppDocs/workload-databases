@@ -54,7 +54,7 @@ NOTE: The remediation process may cause instance downtimes or service interrupti
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Databases tile, select *Go to Databases inventory*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Databases*.
 . In the *Inventory*, select the engine type: Microsoft SQL Server or Oracle.
 . Select resources to fix for specific configurations. 
 * If you selected Microsoft SQL Server, select the *Instances* tab.
@@ -103,7 +103,7 @@ Postpone to stop a configuration analysis for 30 days. After 30 days, the analys
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Databases tile, select *Go to Databases inventory*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Databases*.
 . From the Databases menu, select *Inventory*.
 . In the Inventory, select the database engine type: *Microsoft SQL Server* or *Oracle*.
 . Navigate to the SQL Server instance or Oracle database with the configuration to postpone, select the action menu, and then select *Well-architected*.
@@ -120,7 +120,7 @@ Dismiss to stop a configuration analysis indefinitely. You can restart the analy
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Databases tile, select *Go to Databases inventory*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Databases*.
 . From the Databases menu, select *Inventory*. 
 . In the Inventory, select the database engine type: *Microsoft SQL Server* or *Oracle*.
 . Navigate to the SQL Server instance or Oracle database with the configuration to postpone, select the action menu, and then select *Well-architected*.
@@ -137,7 +137,7 @@ Reactivate a postponed or dismissed configuration analysis at any time.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Databases tile, select *Go to Databases inventory*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Databases*.
 . From the Databases menu, select *Inventory*. 
 . In the Inventory, select the database engine type: *Microsoft SQL Server* or *Oracle*.
 . Navigate to the SQL Server instance or Oracle database with the configuration to postpone, select the action menu, and then select *Well-architected*.
