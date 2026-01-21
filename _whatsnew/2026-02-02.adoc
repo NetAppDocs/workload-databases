@@ -1,0 +1,5 @@
+=== Improved cost savings for several database hosts on Microsoft SQL Server on-premises
+
+The cost savings analysis for Microsoft SQL Server on-premises storage has been enhanced to provide a consolidated storage solution for several database hosts on one FSx for ONTAP file system. This consolidation optimizes storage costs by reducing the number of file systems required for multiple database hosts, leading to improved cost savings.
+
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html#explore-savings-for-detected-hosts[Explore savings for detected hosts on Microsoft SQL Server on-premises]
