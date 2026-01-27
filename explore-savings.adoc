@@ -36,13 +36,13 @@ The calculator evaluates the deployment model and whether Enterprise edition is 
 
 .Allocated resources
 The calculator assesses the conditions of the following license-dependent allocated resources:
-+
+
 * Target Instance vCPUs: The instance has 48 or fewer virtual CPUs.
 * Memory Allocation: The instance has 128GB or less of memory.
 
 .Enterprise feature usage 
 The calculator verifies if any of the following Enterprise features are in use:
-+
+
 * Database-level Enterprise features
 * Online index operations
 * Resource Governor
