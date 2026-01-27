@@ -248,6 +248,8 @@ If FSx for Windows shadow copies are detected, the default value is *Daily*. If 
 .. *Number of cloned copies*: Enter the number of cloned copies in the on-premises configuration. 
 .. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.  
 . For more accurate results, update Compute information and Storage and performance details.
++
+Workload Factory consolidates multiple SQL Server on-premises hosts into a single FSx for ONTAP configuration recommendation to optimize cost savings unless the selected on-premises hosts exceed throughput, capacity, or IOPS limits for a single FSx for ONTAP file system.
 ====
 After you provide details for your database host configuration, review the calculations and recommendations provided on the page.
 
