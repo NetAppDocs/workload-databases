@@ -4,7 +4,8 @@ The cost savings analysis for Microsoft SQL Server on-premises storage has been 
 
 link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html#explore-savings-for-detected-hosts[Explore savings for detected hosts on Microsoft SQL Server on-premises]
 
-=== Registration support for Always On availability groups on Microsoft SQL Server
-You can now discover and register Microsoft SQL Server instances with the Always On availability group deployment model in the Databases workload of NetApp Workload Factory. This enhancement allows for better management and monitoring of SQL Server instances configured in high-availability setups within the Workload Factory console.
+=== Well-architected analysis for Oracle
 
-link:https://docs.netapp.com/us-en/workload-databases/register-instance.html#register-a-sql-server-instance[Register an Always On availability group SQL Server instance]
+The well-architected analysis includes four new sub assessments for the storage configuration analysis for Oracle: dNFS enablement, dNFS consistent IP resolution, dNFS configuration file, and dNFS no shared cache. These assessments relate to enabling and setting up Direct NFS (dNFS) for your Oracle environment, which bypasses the host NFS client and performs NFS file operations directly on an NFS server, improving I/O performance and decreasing the load on the host and the storage system because I/O is performed more efficiently.
+
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Implement well-architected database configurations in Workload Factory]
