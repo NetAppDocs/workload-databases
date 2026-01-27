@@ -39,10 +39,10 @@ If you use a proxy server for all outbound connections from EC2 instances, you m
 * ``.aws.amazon.com``
 * ``.amazonaws.com``
 
-== Register a SQL Server instance
+== Register a Microsoft SQL Server instance
 Registering an instance includes three steps: instance authentication, FSx for ONTAP authentication, and preparation to complete missing prerequisites. You can register single or multiple instances.
 
-Workload Factory supports registration for Failover Cluster Instance (FCI), Single instance, and Always On Availability Group (AOAG) deployment models for SQL Server. 
+Workload Factory supports registration for Failover Cluster Instance (FCI), Single instance, and Always On availability group (AOAG) deployment models for SQL Server. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
