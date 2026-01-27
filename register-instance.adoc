@@ -21,7 +21,6 @@ You can authenticate using SQL Server credentials or with Windows credentials.
 NOTE: Workload Factory supports only Microsoft SQL Server instance and Oracle database registration and management. Depending on the AWS account credentials you select in Workload Factory, PostgreSQL hosts might appear in the Inventory. Currently, Workload Factory supports unregistered PostgreSQL instances running only on Amazon Linux operating systems.
 
 == Before you begin
-Consider the following before registering an instance:
 
 The host for the instance or database must appear in the Inventory. For hosts to appear in the inventory, you must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _view, planning, and analysis_ permissions^] in your AWS account. 
 
@@ -41,7 +40,9 @@ If you use a proxy server for all outbound connections from EC2 instances, you m
 * ``.amazonaws.com``
 
 == Register a SQL Server instance
-Registering an instance includes instance authentication and preparation. 
+Registering an instance includes three steps: instance authentication, FSx for ONTAP authentication, and preparation to complete missing prerequisites. You can register single or multiple instances.
+
+Workload Factory supports registration for Failover Cluster Instance (FCI), Standalone, and Always On Availability Group deployment models for SQL Server. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -49,30 +50,28 @@ Registering an instance includes instance authentication and preparation.
 . From the Databases menu, select *Inventory*. 
 . In the Inventory, select *Microsoft SQL Server* as the engine type.
 . Select the *Instances* tab. 
-. Select to register a single instance or multiple instances. 
-.. Single instance registration: Navigate to the instance to manage and select *Register instance*. 
-.. Multiple instance registration: Select the *Register multiple instances* button.
-+
-Two options are available for registering multiple instances. In both cases, the instances must share the same authentication status (unauthenticated or authenticated).
-
-* Unauthenticated instances: Select multiple unauthenticated instances to register. These instances must share the same authentication credentials and FSx for ONTAP credentials. Select *Apply* and then *Next*. 
-* Authenticated instances: Select multiple authenticated instances to register and then select *Next*. 
-. In step 2 on the Register instances page, select the instance authentication mode, enter the following details, and select *Next*. If instances are already authenticated, select *Next*.
+. Select to register a single instance or multiple instances.  
+. In step 1 Authenticate instance, select the instance authentication mode, enter the following details, and select *Next*. If instances are already authenticated, select *Next*.
 * *SQL Server authentication*: Enter the SQL Server user name and password, and the FSx for ONTAP file system user name and password.
 * *Windows authentication*: Enter the Windows user name and password, and the FSx for ONTAP file system user name and password.
-. In step 3, prepare the instance by making sure the instance meets required prerequisites.
-If all required modules are installed and prerequisites are met, select *Next* to register the instance. If you need to take action, follow these steps.  
-.. If missing, select workload factory to *Install missing AWS and NetApp PowerShell modules*.
-.. If missing, select workload factory to *Install missing PowerShell 7*. Installing missing PowerShell module 7 requires a system reboot. 
-.. Review the prerequisites list for the following capabilities. Make sure that you meet all prerequisites per capability to register the instance. 
+. In step 2 Authenticate FSx for ONTAP, do the following:
+* Select to *Use the same credentials for all resources* or *Manage credentials manually*. 
+* Enter the FSx for ONTAP file system user name and password, and then select *Next*. If the FSx for ONTAP file system is already authenticated, select *Next*.
+. In step 3 Prepare, make sure the instance meets the minimum requirements. To meet the minimum requirements, the instance must have AWS and NetApp PowerShell modules and PowerShell 7 modules installed and complete the prerequisites for at least one of the capabilities listed under Prerequisite check.
++
+If all required modules are installed and prerequisites are met, select *Next* to register the instance. If you need to take action, follow the onscreen instructions to complete the missing prerequisites.
+//Rachel: removed the details so as not to repeat what is in the UI and to avoid content relevancy should changes arise. If needed, add back the granularity.
+//.. If missing, select the box to allow Workload Factory to *Install missing AWS and NetApp PowerShell modules*.
+//.. If missing, select the box to allow Workload Factory to *Install missing PowerShell 7*. Installing missing PowerShell module 7 requires a system reboot. 
+//.. Review the prerequisites list for the following capabilities. Make sure that you meet all prerequisites per capability to register the instance. 
 
-* *Review well-architected issues and recommendations*
-* *Fix well-architected issues*
-* *Create database*
-* *Create database copies (sandbox)*
+//* *Review well-architected issues and recommendations*
+//* *Fix well-architected issues*
+//* *Create database*
+//* *Create database copies (sandbox)*
 +
 Completing prerequisites includes updating your AWS IAM policy permissions, EC2 IAM instance profile permissions, SQL Server permissions, and PowerShell modules.
-.. When prerequisites are complete and checks are *Ready*, you can select to *Register* the instance.
+.. When prerequisites are complete, *Register* the instance.
 
 .Result
 Instance registration initiates. Select the *Job monitoring* tab to to track progress.
