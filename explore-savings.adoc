@@ -72,8 +72,7 @@ Follow the steps under the tab for your storage type.
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Databases*.
-. From the Databases menu, select *Explore savings*.
-. From Explore savings, select the *SQL Server on Elastic Block Store (EBS)* tab and then select *Analyze custom configuration for Elastic Block Store (EBS)*.
+. From Databases, select *Explore savings* then *Microsoft SQL Server on EBS*. 
 . In the Savings calculator, provide the following details: 
 .. *Region*: Select a region from the dropdown menu. 
 .. *Deployment model*: Select a deployment model from the dropdown menu.
@@ -99,8 +98,7 @@ Follow the steps under the tab for your storage type.
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Databases*.
-. From the Databases menu, select *Explore savings*.
-. From Explore savings, select the *SQL Server on FSx for Windows* tab and then select *Analyze custom configuration for FSx for Windows File Server*.
+. From Databases, select *Explore savings* then *Microsoft SQL Server on FSx for Windows*. 
 . In the Savings calculator, provide the following details: 
 .. *Region*: Select a region from the dropdown menu. 
 .. *Deployment model*: Select a deployment model from the dropdown menu.
@@ -192,7 +190,10 @@ Follow the steps under the tab for your storage type.
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Databases*.
-. From the Databases menu, select *Explore savings* and then the *SQL Server on Elastic Block Store (EBS)* tab.
+. From the Databases menu, select *Explore savings*.
+. In Explore savings, select the *SQL Server on Elastic Block Store (EBS)* tab.
++
+If Workload Factory detects EBS hosts, you'll be redirected to the Explore savings tab. If Workload Factory doesn't detect EBS hosts, you'll be redirected to the calculator to <<Explore savings via customization,explore savings via customization>>.
 . From *Explore savings*, select one or more database hosts running on EBS and then select *Explore savings*.
 . If required, authenticate the database host with SQL Server credentials, Windows credentials, or by adding missing SQL Server permissions.
 +
@@ -211,7 +212,10 @@ Workload Factory consolidates multiple SQL Server hosts into a single FSx for ON
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Databases*.
-. From the Databases menu, select *Explore savings* and then the *SQL Server on FSx for Windows* tab.
+. From the Databases menu, select *Explore savings*.
+. In Explore savings, select the *SQL Server on FSx for Windows* tab.
++
+If Workload Factory detects FSx for Windows hosts, you'll be redirected to the Explore savings tab. If Workload Factory doesn't detect FSx for Windows hosts, you'll be redirected to the calculator to <<Explore savings via customization,explore savings via customization>>.
 . In the Explore savings tab, select *Explore savings* of the database host using FSx for Windows File Server storage.
 . If required, authenticate the database host with SQL Server credentials, Windows credentials, or by adding missing SQL Server permissions.
 +
@@ -229,8 +233,9 @@ If FSx for Windows shadow copies are detected, the default value is *Daily*. If 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Databases*.
-. From the Databases menu, select *Explore savings* and then the *SQL Server on-premises* tab.
-. From the SQL Server on-premises tab, do the following: 
+. From the Databases menu, select *Explore savings*.
+. In Explore savings, select the *SQL Server on-premises* tab.
+. From the SQL Server on-premises tab, download the script to assess your on-premises SQL Server environments. 
 .. Download the assessment script. The script is a data collection tool based on PowerShell. It gathers and then uploads SQL Server configuration and performance data to Workload Factory. The migration advisor assesses the data and plans FSx for ONTAP deployment for your SQL Server environment.
 +
 image:screenshot-download-script-on-premises.png["A screenshot of the SQL Server on-premises tab shows the option to download the assessment script."]
