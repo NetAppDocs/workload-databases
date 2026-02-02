@@ -1,0 +1,11 @@
+=== Improved cost savings for several database hosts on Microsoft SQL Server on-premises
+
+The cost savings analysis for Microsoft SQL Server on-premises storage has been enhanced to provide a consolidated storage solution for several database hosts on one FSx for ONTAP file system. This consolidation optimizes storage costs by reducing the number of file systems required for multiple database hosts, leading to improved cost savings.
+
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html#explore-savings-for-detected-hosts[Explore savings for detected hosts on Microsoft SQL Server on-premises]
+
+=== Well-architected analysis for Oracle
+
+The well-architected analysis includes four new sub assessments for the storage configuration analysis for Oracle: dNFS enablement, dNFS consistent IP resolution, dNFS configuration file, and dNFS `nosharecache`. These assessments relate to enabling and setting up Direct NFS (dNFS) for your Oracle environment, which bypasses the host NFS client and performs NFS file operations directly on an NFS server, improving I/O performance and decreasing the load on the host and the storage system because I/O is performed more efficiently.
+
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Implement well-architected database configurations in Workload Factory]
