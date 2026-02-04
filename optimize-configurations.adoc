@@ -9,7 +9,7 @@ summary: "NetApp Workload Factory for Databases scans Microsoft SQL Server confi
 :imagesdir: ./media/
 
 [.lead]
-Using configuration analysis insights and recommendations, leverage NetApp Workload Factory to implement best practices for your database configurations with Microsoft SQL Server and Oracle. You can easily review the well-architected status, learn about issues with database configurations, and take action to improve any configurations that aren't optimized for reliability, security, efficiency, performance, and cost.
+Using configuration analysis insights and recommendations, leverage NetApp Workload Factory to implement best practices for your database configurations with Microsoft SQL Server and Oracle. You can easily review the well-architected status, learn about issues with database configurations, and fix configurations that aren't optimized for reliability, security, efficiency, performance, and cost.
 
 You can also dismiss the analysis of specific configurations that don't apply to your environment to avoid unnecessary alerts and inaccurate optimization results.
 
