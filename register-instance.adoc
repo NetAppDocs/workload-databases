@@ -42,7 +42,7 @@ If you use a proxy server for all outbound connections from EC2 instances, you m
 == Register a Microsoft SQL Server instance
 Registering an instance includes three steps: instance authentication, FSx for ONTAP authentication, and preparation to complete missing prerequisites. You can register single or multiple instances.
 
-Workload Factory supports registration for Failover Cluster Instance (FCI), Single instance, and Always On availability group (AOAG) deployment models for SQL Server. 
+Workload Factory supports registration for Failover Cluster Instance (FCI) and Standalone deployment for SQL Server. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -50,28 +50,23 @@ Workload Factory supports registration for Failover Cluster Instance (FCI), Sing
 . From the Databases menu, select *Inventory*. 
 . In the Inventory, select *Microsoft SQL Server* as the engine type.
 . Select the *Instances* tab. 
-. Select to register a single instance or multiple instances.  
-. In step 1 Authenticate instance, select the instance authentication mode, enter the following details, and select *Next*. If instances are already authenticated, select *Next*.
+. Select to register a single instance or multiple instances. 
+. To Authenticate instances (step 1), select to *Use the same credentials for all instances* or *Manage credentials manually*. If instances are already authenticated, select *Next*.
+. Provide the following details based on the authentication mode selected:
 * *SQL Server authentication*: Enter the SQL Server user name and password, and the FSx for ONTAP file system user name and password.
 * *Windows authentication*: Enter the Windows user name and password, and the FSx for ONTAP file system user name and password.
-. In step 2 Authenticate FSx for ONTAP, do the following:
+. To Authenticate FSx for ONTAP (step 2), do the following:
 * Select to *Use the same credentials for all resources* or *Manage credentials manually*. 
 * Enter the FSx for ONTAP file system user name and password, and then select *Next*. If the FSx for ONTAP file system is already authenticated, select *Next*.
-. In step 3 Prepare, make sure the instance meets the minimum requirements. To meet the minimum requirements, the instance must have AWS and NetApp PowerShell modules and PowerShell 7 modules installed and complete the prerequisites for at least one of the capabilities listed under Prerequisite check.
+. To Prepare (step 3), make sure the instance(s) meets the minimum requirements. To meet the minimum requirements, the instance must have AWS and NetApp PowerShell modules and PowerShell 7 modules installed and complete the prerequisites for at least one of the capabilities listed under Prerequisite check.
+.. Review the prerequisites in the *Prerequisite check view*. 
 +
-If all required modules are installed and prerequisites are met, select *Next* to register the instance. If you need to take action, follow the onscreen instructions to complete the missing prerequisites.
-//Rachel: removed the details so as not to repeat what is in the UI and to avoid content relevancy should changes arise. If needed, add back the granularity.
-//.. If missing, select the box to allow Workload Factory to *Install missing AWS and NetApp PowerShell modules*.
-//.. If missing, select the box to allow Workload Factory to *Install missing PowerShell 7*. Installing missing PowerShell module 7 requires a system reboot. 
-//.. Review the prerequisites list for the following capabilities. Make sure that you meet all prerequisites per capability to register the instance. 
+All prerequisites for a single capability like *Review well-architected issues and recommendations* must be complete to register the database. 
+.. Select *Setup details* for each capability to learn about the capability prerequisites and follow the on-screen instructions to complete any missing prerequisites for a capability. 
++
+Let's say that you want Workload Factory to review the well-architected issues for your databases, provide recommendations, and automatically fix the issues. In this case, you must complete all prerequisites listed under *Review well-architected issues and recommendations* and *Fix well-architected issues* capabilities.
 
-//* *Review well-architected issues and recommendations*
-//* *Fix well-architected issues*
-//* *Create database*
-//* *Create database copies (sandbox)*
-+
-Completing prerequisites includes updating your AWS IAM policy permissions, EC2 IAM instance profile permissions, SQL Server permissions, and PowerShell modules.
-.. When prerequisites are complete, *Register* the instance.
+. When prerequisites are complete, *Register* the database(s).
 
 .Result
 Instance registration initiates. Select the *Job monitoring* tab to to track progress.
@@ -83,32 +78,29 @@ Registering a database includes instance authentication and preparation.
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Databases*.
 . From the Databases menu, select *Inventory*. 
-. In the Inventory, select *Oracle* as the database engine.
+. In the Inventory, select *Oracle* as the engine type.
 . Select the *Databases* tab.
 . Select to register a single database or multiple databases. 
-.. Single database registration: Navigate to the database to manage and select *Register database*. 
-.. Multiple database registration: Select the *Register multiple databases* button.
+. To Authenticate databases (step 1), select to *Use the same credentials for all instances* or *Manage credentials manually*. Then provide the following Oracle credentials and select *Next*:
+
+* *Oracle user authentication*: Enter the Oracle user name and password.
+* *ASM grid user authentication*: Optional. If the Oracle database uses Automatic Storage Management (ASM), enter the Oracle ASM (grid) user name and password.
 +
-Two options are available for registering multiple databases. In both cases, the databases must share the same authentication status (unauthenticated or authenticated).
+If databases are already authenticated, select *Next*.
 
-* Unauthenticated databases: Select multiple unauthenticated databases to register. These databases must share the same authentication credentials and FSx for ONTAP credentials. Select *Apply* and then *Next*. 
-* Authenticated databases: Select multiple authenticated databases to register and then select *Next*. 
-. In step 2 on the Register databases page, select the database authentication mode, enter the following details, and select *Next*. If databases are already authenticated, select *Next*.
-* *Oracle user authentication*: Enter the Oracle user name and password, and the FSx for ONTAP file system user name and password.
-* *Oracle ASM user authentication*: Optional. If the Oracle database uses Automatic Storage Management (ASM), enter the Oracle ASM (grid) user name and password.
-. In step 3, prepare the database by making sure the database meets required prerequisites.
+. To Authenticate FSx for ONTAP (step 2), do the following:
+* Select to *Use the same credentials for all resources* or *Manage credentials manually*. 
+* Enter the FSx for ONTAP file system user name and password, and then select *Next*. If the FSx for ONTAP file system is already authenticated, select *Next*.
+. To Prepare (step 3), make sure the database meets required prerequisites.
 If all required modules are installed and prerequisites are met, select *Next* to register the database. If you need to take action, follow these steps.  
-.. Review the prerequisites list for the following capability. All prerequisites for a single capability must be complete to register the database.
+.. Review the prerequisites in the *Prerequisite check view*. 
++
+All prerequisites for a single capability like *Review well-architected issues and recommendations* must be complete to register the database. 
+.. Select *Setup details* for each capability to learn about the capability prerequisites and follow the on-screen instructions to complete any missing prerequisites for a capability. 
++
+Let's say that you want Workload Factory to review the well-architected issues for your databases, provide recommendations, and automatically fix the issues. In this case, you must complete all prerequisites listed under *Review well-architected issues and recommendations* and *Fix well-architected issues* capabilities.
 
-* *Review well-architected issues and recommendations*
-
-.. Complete the following prerequisites: 
-
-* *AWS IAM policy permissions*: Copy and update AWS permissions in the AWS console.
-* *EC2 IAM instance profile permissions*: Copy and update EC2 IAM instance profile permissions on the Amazon EC2 instance in the AWS console.
-* *Deployment modules*: If required, select to install dependent modules which include the AWS Command Line interface (AWS CLI), jq (command-line JSON processor), and Python 3.12, if version 3.6 or greater isn't already installed. Workload factory automatically installs these modules as part of the registration process.
-* *Oracle user permissions*: If required, update the permissions for the Oracle user. 
-.. When prerequisites are complete and checks are *Ready*, you can select to *Register* the database.
+. When prerequisites are complete, *Register* the database(s).
 
 .Result
 Database registration initiates. Select the *Job monitoring* tab to to track progress. 
