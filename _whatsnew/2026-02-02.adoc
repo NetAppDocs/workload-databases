@@ -3,8 +3,3 @@
 The cost savings analysis for Microsoft SQL Server on-premises storage has been enhanced to provide a consolidated storage solution for several database hosts on one FSx for ONTAP file system. This consolidation optimizes storage costs by reducing the number of file systems required for multiple database hosts, leading to improved cost savings.
 
 link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html#explore-savings-for-detected-hosts[Explore savings for detected hosts on Microsoft SQL Server on-premises]
-
-=== Registration support for Always On availability groups on Microsoft SQL Server
-You can now discover and register Microsoft SQL Server instances with the Always On availability group deployment model in the Databases workload of NetApp Workload Factory. This enhancement allows for better management and monitoring of SQL Server instances configured in high-availability setups within the Workload Factory console.
-
-link:https://docs.netapp.com/us-en/workload-databases/register-instance.html#register-a-sql-server-instance[Register an Always On availability group SQL Server instance]
