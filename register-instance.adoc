@@ -38,7 +38,7 @@ If you use a proxy server for all outbound connections from EC2 instances, you m
 * ``.amazonaws.com``
 
 == Register a Microsoft SQL Server instance
-Registering an instance includes three steps: instance authentication, FSx for ONTAP authentication, and preparation to complete missing prerequisites. You can register single or multiple instances.
+Registering an instance has three steps - instance authentication, FSx for ONTAP authentication, and preparation to complete missing prerequisites. You can register single or multiple instances.
 
 Workload Factory supports registration for Failover Cluster Instance (FCI) and Standalone deployment for SQL Server. 
 
@@ -59,7 +59,9 @@ If instances are authenticated, select *Next*.
 * Enter the FSx for ONTAP file system user name and password, and then select *Next*. 
 +
 If the FSx for ONTAP file system is authenticated, select *Next*.
-. To Prepare (step 3), make sure the instance(s) meets the minimum requirements. To meet the minimum requirements, the instance must have AWS and NetApp PowerShell modules and PowerShell 7 modules installed and complete the prerequisites for at least one of the capabilities listed under Prerequisite check.
+. To Prepare (step 3), make sure the instance(s) meets the minimum requirements. 
++
+To meet the minimum requirements, the instance must have AWS and NetApp PowerShell modules and PowerShell 7 modules installed, and you must complete the prerequisites for at least one of the capabilities listed under Prerequisite check.
 .. Review the prerequisites in the *Prerequisite check view*. 
 +
 You must complete all prerequisites for a single capability like *Review well-architected issues and recommendations* to register the instance.
@@ -73,7 +75,7 @@ To have Workload Factory to link:optimize-configurations.html[review and fix wel
 Instance registration initiates. Select the *Job monitoring* tab to track progress.
 
 == Register an Oracle database
-Registering a database includes instance authentication and preparation. 
+Registering an instance has three steps - database authentication, FSx for ONTAP authentication, and preparation to complete missing prerequisites. You can register single or multiple databases.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
