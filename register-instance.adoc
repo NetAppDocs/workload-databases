@@ -88,13 +88,13 @@ Registering an instance has three steps - database authentication, FSx for ONTAP
 * Select to *Use the same credentials for all instances* or *Manage credentials manually*. 
 * Authenticate Oracle user and Automatic Storage Management (ASM) grid user (if applicable) by providing user name and password information.
 +
-If databases are already authenticated, select *Next*.
+If databases are authenticated, select *Next*.
 
 . To Authenticate FSx for ONTAP (step 2), do the following and then select *Next*:
 * Select to *Use the same credentials for all resources* or *Manage credentials manually*. 
 * Enter the FSx for ONTAP file system user name and password.
 +
-If the FSx for ONTAP file system is already authenticated, select *Next*.
+If the FSx for ONTAP file system is authenticated, select *Next*.
 
 . To Prepare (step 3), make sure the database(s) meets required prerequisites.
 If all required modules are installed and prerequisites are met, select *Next* to register the database. Otherwise, follow these steps.  
