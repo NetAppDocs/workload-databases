@@ -14,7 +14,7 @@ indexpage:
       links:
         - title: Explore savings
           url: /explore-savings.html
-        - title: Register an instance
+        - title: Register resources
           url: /register-instance.html
         - title: View the well-architected status of your instances  
           url: /optimize-configurations.html
