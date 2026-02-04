@@ -49,7 +49,7 @@ Workload Factory supports registration for Failover Cluster Instance (FCI) and S
 . In the Inventory, select *Microsoft SQL Server* as the engine type.
 . Select the *Instances* tab. 
 . Select to register a single instance or multiple instances. 
-. To Authenticate instances (step 1), do the following: 
+. To Authenticate instances (step 1), do the following and then select *Next*: 
 * Select to *Use the same credentials for all instances* or *Manage credentials manually*. 
 * Authenticate SQL Server and Windows by providing user name and password information.
 +
@@ -86,9 +86,12 @@ Registering a database includes instance authentication and preparation.
 +
 If databases are already authenticated, select *Next*.
 
-. To Authenticate FSx for ONTAP (step 2), do the following:
+. To Authenticate FSx for ONTAP (step 2), do the following and then select *Next*.:
 * Select to *Use the same credentials for all resources* or *Manage credentials manually*. 
-* Enter the FSx for ONTAP file system user name and password, and then select *Next*. If the FSx for ONTAP file system is already authenticated, select *Next*.
+* Enter the FSx for ONTAP file system user name and password.
++
+If the FSx for ONTAP file system is already authenticated, select *Next*.
+
 . To Prepare (step 3), make sure the database meets required prerequisites.
 If all required modules are installed and prerequisites are met, select *Next* to register the database. If you need to take action, follow these steps.  
 .. Review the prerequisites in the *Prerequisite check view*. 
