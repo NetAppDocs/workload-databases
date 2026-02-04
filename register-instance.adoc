@@ -11,17 +11,14 @@ summary: "Register resources so that you can monitor resource status, resource u
 [.lead]
 Register instances for Microsoft SQL Server and databases for Oracle so that you can monitor instance and database status, resource utilization, protection, and storage performance in NetApp Workload Factory for Databases.
 
-Registration is possible only for databases engines running on FSx for ONTAP file system storage.
+You can register your resources only if they run on FSx for ONTAP file system storage.
 
 == About the task
-Registering an instance (SQL Server) or database (Oracle) includes two steps - authentication and preparation. Preparation involves making sure all AWS, NetApp, and PowerShell modules are installed on the instance.
+Registering an instance (SQL Server) or database (Oracle) has three steps - instance or database authentication, FSx for ONTAP authentication, and preparation. Preparation involves making sure that all AWS, NetApp, and PowerShell modules are installed on the instance or database, and that the minimum requirements for Workload Factory for Databases features like link:analyze-error-logs.html[error log analysis] or link:optimize-configurations.html[well-architected review] are met.
 
-You can authenticate using SQL Server credentials or with Windows credentials.
-
-NOTE: Workload Factory supports only Microsoft SQL Server instance and Oracle database registration and management. Depending on the AWS account credentials you select in Workload Factory, PostgreSQL hosts might appear in the Inventory. Currently, Workload Factory supports unregistered PostgreSQL instances running only on Amazon Linux operating systems.
+Workload Factory supports only Microsoft SQL Server instance and Oracle database registration and management. Depending on the AWS account credentials you select in Workload Factory, PostgreSQL hosts might appear in the Inventory. Currently, Workload Factory supports unregistered PostgreSQL instances running only on Amazon Linux operating systems.
 
 == Before you begin
-Consider the following before registering an instance:
 
 The host for the instance or database must appear in the Inventory. For hosts to appear in the inventory, you must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _view, planning, and analysis_ permissions^] in your AWS account. 
 
@@ -40,8 +37,10 @@ If you use a proxy server for all outbound connections from EC2 instances, you m
 * ``.aws.amazon.com``
 * ``.amazonaws.com``
 
-== Register a SQL Server instance
-Registering an instance includes instance authentication and preparation. 
+== Register a Microsoft SQL Server instance
+Registering an instance has three steps - instance authentication, FSx for ONTAP authentication, and preparation to complete missing prerequisites. You can register single or multiple instances.
+
+Workload Factory supports registration for Failover Cluster Instance (FCI) and Standalone deployment for SQL Server. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -50,69 +49,66 @@ Registering an instance includes instance authentication and preparation.
 . In the Inventory, select *Microsoft SQL Server* as the engine type.
 . Select the *Instances* tab. 
 . Select to register a single instance or multiple instances. 
-.. Single instance registration: Navigate to the instance to manage and select *Register instance*. 
-.. Multiple instance registration: Select the *Register multiple instances* button.
+. To Authenticate instances (step 1), do the following and then select *Next*: 
+* Select to *Use the same credentials for all instances* or *Manage credentials manually*. 
+* Authenticate SQL Server and Windows by providing user name and password information.
 +
-Two options are available for registering multiple instances. In both cases, the instances must share the same authentication status (unauthenticated or authenticated).
-
-* Unauthenticated instances: Select multiple unauthenticated instances to register. These instances must share the same authentication credentials and FSx for ONTAP credentials. Select *Apply* and then *Next*. 
-* Authenticated instances: Select multiple authenticated instances to register and then select *Next*. 
-. In step 2 on the Register instances page, select the instance authentication mode, enter the following details, and select *Next*. If instances are already authenticated, select *Next*.
-* *SQL Server authentication*: Enter the SQL Server user name and password, and the FSx for ONTAP file system user name and password.
-* *Windows authentication*: Enter the Windows user name and password, and the FSx for ONTAP file system user name and password.
-. In step 3, prepare the instance by making sure the instance meets required prerequisites.
-If all required modules are installed and prerequisites are met, select *Next* to register the instance. If you need to take action, follow these steps.  
-.. If missing, select workload factory to *Install missing AWS and NetApp PowerShell modules*.
-.. If missing, select workload factory to *Install missing PowerShell 7*. Installing missing PowerShell module 7 requires a system reboot. 
-.. Review the prerequisites list for the following capabilities. Make sure that you meet all prerequisites per capability to register the instance. 
-
-* *Review well-architected issues and recommendations*
-* *Fix well-architected issues*
-* *Create database*
-* *Create database copies (sandbox)*
+If instances are authenticated, select *Next*.
+. To Authenticate FSx for ONTAP (step 2), do the following:
+* Select to *Use the same credentials for all resources* or *Manage credentials manually*. 
+* Enter the FSx for ONTAP file system user name and password, and then select *Next*. 
 +
-Completing prerequisites includes updating your AWS IAM policy permissions, EC2 IAM instance profile permissions, SQL Server permissions, and PowerShell modules.
-.. When prerequisites are complete and checks are *Ready*, you can select to *Register* the instance.
+If the FSx for ONTAP file system is authenticated, select *Next*.
+. To Prepare (step 3), make sure the instance(s) meets the minimum requirements. 
++
+To meet the minimum requirements, the instance must have AWS and NetApp PowerShell modules and PowerShell 7 modules installed, and you must complete the prerequisites for at least one of the capabilities listed under Prerequisite check.
+.. Review the prerequisites in the *Prerequisite check view*. 
++
+You must complete all prerequisites for a single capability like *Review well-architected issues and recommendations* to register the instance.
+.. Select *Setup details* for each capability to learn about the capability prerequisites and follow the on-screen instructions to complete any missing prerequisites for a capability. 
++
+To have Workload Factory to link:optimize-configurations.html[review and fix well-architected issues] for your instances, complete all prerequisites listed under *Review well-architected issues and recommendations* and *Fix well-architected issues* capabilities.
+
+. When prerequisites are complete, *Register* the instance(s).
 
 .Result
-Instance registration initiates. Select the *Job monitoring* tab to to track progress.
+Instance registration initiates. Select the *Job monitoring* tab to track progress.
 
 == Register an Oracle database
-Registering a database includes instance authentication and preparation. 
+Registering an instance has three steps - database authentication, FSx for ONTAP authentication, and preparation to complete missing prerequisites. You can register single or multiple databases.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Databases*.
 . From the Databases menu, select *Inventory*. 
-. In the Inventory, select *Oracle* as the database engine.
+. In the Inventory, select *Oracle* as the engine type.
 . Select the *Databases* tab.
 . Select to register a single database or multiple databases. 
-.. Single database registration: Navigate to the database to manage and select *Register database*. 
-.. Multiple database registration: Select the *Register multiple databases* button.
+. To Authenticate databases (step 1), do the following: 
+* Select to *Use the same credentials for all instances* or *Manage credentials manually*. 
+* Authenticate Oracle user and Automatic Storage Management (ASM) grid user (if applicable) by providing user name and password information.
 +
-Two options are available for registering multiple databases. In both cases, the databases must share the same authentication status (unauthenticated or authenticated).
+If databases are authenticated, select *Next*.
 
-* Unauthenticated databases: Select multiple unauthenticated databases to register. These databases must share the same authentication credentials and FSx for ONTAP credentials. Select *Apply* and then *Next*. 
-* Authenticated databases: Select multiple authenticated databases to register and then select *Next*. 
-. In step 2 on the Register databases page, select the database authentication mode, enter the following details, and select *Next*. If databases are already authenticated, select *Next*.
-* *Oracle user authentication*: Enter the Oracle user name and password, and the FSx for ONTAP file system user name and password.
-* *Oracle ASM user authentication*: Optional. If the Oracle database uses Automatic Storage Management (ASM), enter the Oracle ASM (grid) user name and password.
-. In step 3, prepare the database by making sure the database meets required prerequisites.
-If all required modules are installed and prerequisites are met, select *Next* to register the database. If you need to take action, follow these steps.  
-.. Review the prerequisites list for the following capability. All prerequisites for a single capability must be complete to register the database.
+. To Authenticate FSx for ONTAP (step 2), do the following and then select *Next*:
+* Select to *Use the same credentials for all resources* or *Manage credentials manually*. 
+* Enter the FSx for ONTAP file system user name and password.
++
+If the FSx for ONTAP file system is authenticated, select *Next*.
 
-* *Review well-architected issues and recommendations*
+. To Prepare (step 3), make sure the database(s) meets required prerequisites.
+If all required modules are installed and prerequisites are met, select *Next* to register the database. Otherwise, follow these steps.  
+.. Review the prerequisites in the *Prerequisite check view*. 
++
+You must complete all prerequisites for a single capability like *Review well-architected issues and recommendations* to register the database. 
+.. Select *Setup details* for each capability to learn about the capability prerequisites and follow the on-screen instructions to complete any missing prerequisites for a capability. 
++
+To have Workload Factory to link:optimize-configurations.html[review and fix well-architected issues] for your databases, complete all prerequisites listed under *Review well-architected issues and recommendations* and *Fix well-architected issues* capabilities.
 
-.. Complete the following prerequisites: 
-
-* *AWS IAM policy permissions*: Copy and update AWS permissions in the AWS console.
-* *EC2 IAM instance profile permissions*: Copy and update EC2 IAM instance profile permissions on the Amazon EC2 instance in the AWS console.
-* *Deployment modules*: If required, select to install dependent modules which include the AWS Command Line interface (AWS CLI), jq (command-line JSON processor), and Python 3.12, if version 3.6 or greater isn't already installed. Workload factory automatically installs these modules as part of the registration process.
-* *Oracle user permissions*: If required, update the permissions for the Oracle user. 
-.. When prerequisites are complete and checks are *Ready*, you can select to *Register* the database.
+. When prerequisites are complete, *Register* the database(s).
 
 .Result
-Database registration initiates. Select the *Job monitoring* tab to to track progress. 
+Database registration initiates. Select the *Job monitoring* tab to track progress. 
 
 .What's next
 
