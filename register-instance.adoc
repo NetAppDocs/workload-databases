@@ -14,11 +14,9 @@ Register instances for Microsoft SQL Server and databases for Oracle so that you
 Registration is possible only for databases engines running on FSx for ONTAP file system storage.
 
 == About the task
-Registering an instance (SQL Server) or database (Oracle) includes two steps - authentication and preparation. Preparation involves making sure all AWS, NetApp, and PowerShell modules are installed on the instance.
+Registering an instance (SQL Server) or database (Oracle) includes three steps - instance or database authentication, FSx for ONTAP authentication, and preparation. Preparation involves making sure that all AWS, NetApp, and PowerShell modules are installed on the instance and that the minimum requirements for a Workload Factory features like log error analysis or well-architected review are met.
 
-You can authenticate using SQL Server credentials or with Windows credentials.
-
-NOTE: Workload Factory supports only Microsoft SQL Server instance and Oracle database registration and management. Depending on the AWS account credentials you select in Workload Factory, PostgreSQL hosts might appear in the Inventory. Currently, Workload Factory supports unregistered PostgreSQL instances running only on Amazon Linux operating systems.
+Workload Factory supports only Microsoft SQL Server instance and Oracle database registration and management. Depending on the AWS account credentials you select in Workload Factory, PostgreSQL hosts might appear in the Inventory. Currently, Workload Factory supports unregistered PostgreSQL instances running only on Amazon Linux operating systems.
 
 == Before you begin
 
@@ -51,10 +49,11 @@ Workload Factory supports registration for Failover Cluster Instance (FCI) and S
 . In the Inventory, select *Microsoft SQL Server* as the engine type.
 . Select the *Instances* tab. 
 . Select to register a single instance or multiple instances. 
-. To Authenticate instances (step 1), select to *Use the same credentials for all instances* or *Manage credentials manually*. If instances are already authenticated, select *Next*.
-. Provide the following details based on the authentication mode selected:
-* *SQL Server authentication*: Enter the SQL Server user name and password, and the FSx for ONTAP file system user name and password.
-* *Windows authentication*: Enter the Windows user name and password, and the FSx for ONTAP file system user name and password.
+. To Authenticate instances (step 1), do the following: 
+* Select to *Use the same credentials for all instances* or *Manage credentials manually*. 
+* Authenticate SQL Server and Windows by providing user name and password information.
++
+If instances are already authenticated, select *Next*.
 . To Authenticate FSx for ONTAP (step 2), do the following:
 * Select to *Use the same credentials for all resources* or *Manage credentials manually*. 
 * Enter the FSx for ONTAP file system user name and password, and then select *Next*. If the FSx for ONTAP file system is already authenticated, select *Next*.
@@ -81,10 +80,9 @@ Registering a database includes instance authentication and preparation.
 . In the Inventory, select *Oracle* as the engine type.
 . Select the *Databases* tab.
 . Select to register a single database or multiple databases. 
-. To Authenticate databases (step 1), select to *Use the same credentials for all instances* or *Manage credentials manually*. Then provide the following Oracle credentials and select *Next*:
-
-* *Oracle user authentication*: Enter the Oracle user name and password.
-* *ASM grid user authentication*: Optional. If the Oracle database uses Automatic Storage Management (ASM), enter the Oracle ASM (grid) user name and password.
+. To Authenticate databases (step 1), do the following: 
+* Select to *Use the same credentials for all instances* or *Manage credentials manually*. 
+* Authenticate Oracle user and Automatic Storage Management (ASM) grid user (if applicable) by providing user name and password information.
 +
 If databases are already authenticated, select *Next*.
 
