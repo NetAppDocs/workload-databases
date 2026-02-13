@@ -20,26 +20,29 @@ Key capabilities include:
 * Insights to action
 * AWS Well-Architected Framework advisor
 
-== Components of the configuration analysis
-The configuration analysis includes the following components:
+== How it works 
 
-Well-architected status::
-The well-architected status refers to the overall health of your database configurations; configurations are categorized as "optimized", "not optimized", or "over-provisioned". The well-architected status of a configuration is referenced from within a Microsoft SQL Server instance or Oracle database in the Workload Factory console.
+Workload Factory analyzes Microsoft SQL Server and Oracle deployments daily. The analysis provides well-architected status, insights, and recommendations. You can automatically fix configuration issues to meet best practices and operate efficiently.
 
-Well-architected score:: 
+After the daily analysis completes, configurations appear as "optimized" or "not optimized" in the Well-architected dashboard for the deployment. You'll find the total optimization score, configuration issues by category, and a list of configuration issues and recommendations. You can review the recommendations for configuration issues. Some issues can be fixed automatically by Workload Factory, while others require manual intervention. In this case, Workload Factory provides detailed instructions to help you implement the recommended changes.
 
-The score includes all currently analyzed configurations and appears as a percentage. A 25% score means that 25% of your database deployments are well-architected. The well-architected score is referenced from the *Well-architected* screen and from within a Microsoft SQL Server instance or Oracle database in the Workload Factory console. 
+You can dismiss the analysis of configurations that do not apply to your environments. This avoids unnecessary alerts and inaccurate optimization results. When you dismiss a specific configuration analysis, Workload Factory does not include the configuration in the total optimization score.
 
-Configuration categories::
-The configurations are organized into the following categories: storage, compute, application, resiliency, and cloning. Each category includes specific configuration assessments that are analyzed regularly. Configuration categories are referenced from the *Well-architected* screen and from within a Microsoft SQL Server instance or Oracle database in the Workload Factory console.
+== Why it matters
 
-== Analysis scope 
-The scope of optimization is different depending on which component is being assessed. For example, storage optimization occurs at the SQL instance level whereas compute optimization occurs at the host level. 
+Workload Factory applies best practices to large storage or database environments by combining ongoing assessment with recommendation insights and remediation. Automated fixes reduce human error, ensure uniform management, and maintain performance and reliability. Fixes applied in the Workload Factory console reduce human error and ensure uniform management. Automation ensures configurations are applied correctly and maintained, preserving performance and reliability across your workload infrastructures.
 
 == Analysis requirements
-For a complete database environment analysis, resources must be registered and online.
+For a complete database environment analysis, you must do the following: resources must be registered and online.
 
-link:register-instance.html[Learn how to register resources.]
+* link:register-instance.html[Register your resources] and make sure they are online.
+
+* Associate a link. Link connectivity lets Workload Factory analyze all database deployment configurations like storage layout and resiliency.
++
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. 
+* Grant _view, planning, and analysis_ permissions in your AWS account. 
++
+link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to grant permissions to an AWS account^]
 
 .What's next
 
