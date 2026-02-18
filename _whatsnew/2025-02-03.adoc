@@ -1,5 +1,5 @@
-=== On-premises database environments cost analysis and migration planning
-BlueXP workload factory for Databases now detects, analyzes, and help you plan for on-premises database migration to Amazon FSx for NetApp ONTAP. You can use the savings calculator to estimate the cost of running your on-premises database environment in the cloud and review recommendations for migrating your on-premises database environment to the cloud.
+=== SQL Server on-premises database environments cost analysis and migration planning
+BlueXP workload factory for Databases now detects, analyzes, and help you plan for SQL Server on-premises database migration to Amazon FSx for NetApp ONTAP. You can use the savings calculator to estimate the cost of running your SQL Server on-premises database environment in the cloud and review recommendations for migrating your on-premises database environment to the cloud.
 
 link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html[Explore savings for on-premises database environments]
 
