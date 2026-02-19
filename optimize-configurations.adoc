@@ -42,6 +42,8 @@ For Oracle databases:
 * Storage layout: includes redo log placement, temp tablespace placement, data files placement, archive log placement, control files placement and binaries placement, ASM disk groups LUN count
 * Compute: includes operating system patches
 
+Additionally, the well-architected analysis for Oracle notifies you when a configuration such as storage layout has dependencies on other configurations. The notification tells you which actions to take to ensure that linked configurations are optimized so that all recommendations that we provide are the most optimal.
+
 == Perform a one-time assessment of SQL Server database configurations
 Perform a one-time assessment to determine the well-architected status of your Microsoft SQL Server instances without credentials or instance registration. 
 
