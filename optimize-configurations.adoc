@@ -18,7 +18,9 @@ link:optimize-overview.html[Learn about the configuration analysis and well-arch
 == About this task
 Workload Factory analyzes database configurations daily. The daily analysis provides the well-architected status, and insights and recommendations with options to automatically fix configuration issues so that your configurations meet best practices. 
 
-You have options to review the recommendations for configuration issues and fix those issues from the Databases inventory within the Workload Factory console. 
+You can review the recommendations for configuration issues and fix those issues from the Databases inventory within the Workload Factory console. 
+
+For SQL Server resources, you can perform a one-time assessment to review best practices for your database configurations. The one-time assessment doesn't require resource registration or credentials.
 
 .What is analyzed
 Workload Factory analyzes the well-architected status of the following configurations: 
@@ -38,11 +40,27 @@ For Oracle databases:
 * Storage sizing: includes swap space allocation and file system headroom
 * Storage configuration: includes capacity management, thin provisioning, tiering policy, snapshots, storage efficiencies, and operating system configurations for deployments using NFS or iSCSI with or without Automatic Storage Management (ASM) including Microsoft Multipath I/O (MPIO) status and settings, and the following dNFS settings: dNFS enablement, dNFS consistent IP resolution, dNFS configuration file, and dNFS `nosharecache`
 * Storage layout: includes redo log placement, temp tablespace placement, data files placement, archive log placement, control files placement and binaries placement, ASM disk groups LUN count
+* Compute: includes operating system patches
 
-== Before you begin
+== Perform a one-time assessment of SQL Server database configurations
+Perform a one-time assessment to determine the well-architected status of your Microsoft SQL Server instances without credentials or instance registration. 
+
+You can run the script and upload results as many times as you want. Each time you upload, the well-architected status and insights are updated based on the latest results.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Databases*.
+. In the *Inventory*, select *One-time assessment* > *Learn about assessment*. Review the information about the one-time assessment.
+. Select *Download script*.
+.. Copy the script to your Microsoft SQL Server host.
+.. Run the script in PowerShell. One script collects metadata from all instances.
+. Select *One-time assessment* > *Upload*. Find the file and upload it to the Workload Factory console.
+. View the recommendation for any configuration. Recommendations include best practices and potential pitfalls of unoptimized configurations.
+
+== Before you begin fixing, dismissing, and re-activating configurations
 
 * You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _operations and remediation_ permissions^] in your AWS account. 
-* To assess the storage of a Microsoft SQL Server instance or Oracle database, the resource must be registered in Workload Factory and the storage type must be FSx for ONTAP. link:register-instance.html[Learn how to register resources.]
+* The resource must be registered in Workload Factory and the storage type must be FSx for ONTAP. link:register-instance.html[Learn how to register resources.]
 * Make sure you review each recommendation carefully before selecting to fix a setting or configuration. For RSS and MAXDOP settings, we suggest that you test the recommended settings to determine performance improvements before making changes to your production environment. 
 
 NOTE: The remediation process may cause instance downtimes or service interruptions. Make sure you review the recommendation carefully before you choose to fix a configuration.
@@ -81,42 +99,8 @@ You can also download a report of the findings by selecting *Export PDF*.
 .Result
 Workload Factory begins fixing the issue(s). Select the *Job monitoring* tab to view the status of the operation.
 
-== Postpone or dismiss the analysis of database configurations
-Postpone or dismiss the analysis of specific database configurations that don't apply to your database environment to avoid unnecessary alerts and inaccurate optimization results. You can reactivate a postponed or dismissed configuration analysis at any time.  
-
-The application requirements for database configurations vary. Workload Factory gives you two options for skipping the analysis of specific database configurations so that you can monitor only relevant issues and get an accurate view of the health of relevant configurations. When a specific configuration analysis is postponed or dismissed, the configuration isn't included in the total optimization score.
-
-You can postpone, dismiss, and reactivate the configuration analysis at the configuration level and at the SQL Server instance or at the Oracle database level. 
-
-* *Postpone for 30 days*: Postponing the analysis will stop the analysis for 30 days. After 30 days, the analysis will restart automatically. 
-
-* *Dismiss*: Dismissing the analysis postpones the analysis indefinitely. You can restart the analysis if needed. 
-
-The following instructions describe how to postpone, dismiss, or reactivate an analysis at the configuration level. To complete the following tasks for specific SQL Server instances or Oracle databases, start in the *Dashboard* tab. 
-
-[role="tabbed-block"]
-====
-
-.Postpone
---
-Postpone to stop a configuration analysis for 30 days. After 30 days, the analysis will restart automatically. 
-
-.Steps
-. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Databases*.
-. From the Databases menu, select *Inventory*.
-. In the Inventory, select the database engine type: *Microsoft SQL Server* or *Oracle*.
-. Navigate to the SQL Server instance or Oracle database with the configuration to postpone, select the action menu, and then select *Well-architected*.
-. On the Well-architected analysis page, scroll down to the configuration to postpone, select the action menu, and then select *Dismiss*.
-. In the Dismiss configuration dialog, select *Postpone for 30 days* and then select *Dismiss*.
-
-.Result
-The configuration analysis stops for 30 days.
---
-
-.Dismiss
---
-Dismiss to stop a configuration analysis indefinitely. You can restart the analysis when needed. 
+== Dismiss the analysis of database configurations
+Dismiss the analysis of specific database configurations that don't apply to your database environment to avoid unnecessary alerts and inaccurate optimization results. You can reactivate a dismissed configuration analysis at any time.  
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -129,11 +113,11 @@ Dismiss to stop a configuration analysis indefinitely. You can restart the analy
 
 .Result
 The configuration analysis stops. 
---
 
-.Reactivate
---
-Reactivate a postponed or dismissed configuration analysis at any time. 
+You can reactivate the analysis at any time. The configuration is no longer included in the total optimization score.
+
+== Reactivate a dismissed configuration analysis
+Reactivate a dismissed configuration analysis at any time. You can select one or more configurations to reactivate.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -146,6 +130,3 @@ Reactivate a postponed or dismissed configuration analysis at any time.
 
 .Result
 The configuration analysis is reactivated and occurs daily moving forward.
---
-
-====
