@@ -5,7 +5,7 @@ After registering your AOAG instances and Data Guard databases, you can take adv
 
 link:https://docs.netapp.com/us-en/workload-databases/register-instance.html#register-a-sql-server-instance[Register resources in Workload Factory for Databases]
 
-==== Enhancements to the well-architected feature
+=== Enhancements to the well-architected feature
 The following enhancements have been made to the well-architected feature in Workload Factory for Databases. For more information, refer to the documentation on link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[implementing well-architected database configurations in Workload Factory.]
 
 ==== One-time assessment
