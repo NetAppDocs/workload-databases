@@ -1,27 +1,24 @@
-=== Registration support for Always On availability groups on Microsoft SQL Server and Data Guard on Oracle
-You can now discover and register Microsoft SQL Server instances with the Always On availability group deployment model and Oracle databases with the Data Guard deployment model in the Databases workload of NetApp Workload Factory. This enhancement allows for better management and monitoring of SQL Server and Oracle resources within the Workload Factory console.
+=== One-time assessment
+Workload Factory now offers a one-time assessment to analyze the configurations of your database deployments. You'll get recommendations to help you optimize your deployment configurations and comply with best practices. This is your opportunity to use the well-architected feature without fully committing to the setup process. You can assess your databases without storing credentials in Workload Factory, registering database resources, or setting up external connections to use this feature.
 
-After registering your AOAG instances and Data Guard databases, you can take advantage of the various features in Workload Factory for Databases such as viewing resource details that include the well-architected status and error log analysis.
+=== Registration support for Always On availability groups on Microsoft SQL Server and Data Guard on Oracle
+You can now discover and register Microsoft SQL Server instances with the Always On availability group deployment model and Oracle databases with the Data Guard deployment model in the Databases workload of NetApp Workload Factory. This enhancement allows for better management of SQL Server and Oracle resources within the Workload Factory console.
+
+After registering your AOAG instances and Data Guard databases, you can take advantage of the various features in Workload Factory for Databases such as viewing resource details and the error log analysis.
+
+Workload Factory for Databases also supports the well-architected analysis for Microsoft SQL Server instances with the Always On availability group deployment model. You can analyze the configurations of your SQL Server instances in an availability group and receive recommendations to optimize your deployment configurations and comply with best practices. Register your AOAG instances to enable this feature. 
 
 link:https://docs.netapp.com/us-en/workload-databases/register-instance.html#register-a-sql-server-instance[Register resources in Workload Factory for Databases]
 
-=== Enhancements to the well-architected feature
-The following enhancements have been made to the well-architected feature in Workload Factory for Databases. For more information, refer to the documentation on link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[implementing well-architected database configurations in Workload Factory.]
-
-==== One-time assessment
-Workload Factory offers a one-time assessment to analyze the configurations of your database deployments and receive recommendations to optimize performance, cost efficiency, and compliance with best practices. You don't need to provide credentials, register database resources, or set up external connections to use this feature. 
-
-==== Well-architected analysis support for AOAG instances on Microsoft SQL Server and Data Guard databases on Oracle
-Workload Factory for Databases supports well-architected analysis for Microsoft SQL Server instances with the Always On availability group deployment model. This enhancement allows you to analyze the configurations of your SQL Server instances in an availability group and receive recommendations to optimize performance, cost efficiency, and compliance with best practices. Register your AOAG instances to enable this feature. 
-
-==== Well-architected analysis for Oracle
+=== Well-architected analysis for Oracle
 
 The well-architected analysis includes *Operating system patches* for Oracle to assess if the latest patches are installed on the operating system and provide guidance on installing the latest patches.
 
 Additionally, the well-architected analysis for Oracle notifies you when a configuration such as storage layout has dependencies on other configurations. The notification tells you which actions to take to ensure that linked configurations are optimized so that all recommendations that we provide are the most optimal. 
 
 === Oracle on-premises database environments cost analysis and migration planning
-Workload Factory for Databases now detects, analyzes, and help you plan for Oracle on-premises database migration to Amazon FSx for NetApp ONTAP. You can use the savings calculator to estimate the cost of running your Oracle on-premises database environment in the cloud and review recommendations for migrating your on-premises database environment to the cloud.
+
+Workload Factory for Databases now analyzes and helps you plan for Oracle on-premises database migration to Amazon FSx for NetApp ONTAP. You can use the savings calculator to estimate the cost of running your Oracle on-premises database environment in the cloud and review recommendations for migrating your on-premises database environment to the cloud.
 
 link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html[Explore savings for on-premises database environments]
 
