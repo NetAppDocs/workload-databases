@@ -12,24 +12,24 @@ summary: "Compare the costs of using Amazon Elastic Block Store (EBS), FSx for W
 Explore savings in NetApp Workload Factory for Databases for your database workloads by comparing the costs of using Microsoft SQL Server on Amazon Elastic Block Store (EBS), FSx for Windows File Server, and on-premises storage with FSx for ONTAP storage.
 
 == About this task
-Workload Factory has several ways for you to explore savings for your database workloads running on Amazon Elastic Block Store (EBS), FSx for Windows File Server, and on-premises storage - from the Dashboard, from the Inventory tab, and from the Explore savings tab. In all cases, you can use the savings calculator to compare various cost components of running Microsoft SQL Server workloads like storage, compute, SQL license, snapshots, and clones for your database workloads on FSx for ONTAP file systems against Elastic Block Store (EBS), FSx for Windows File Server, and on-premises storage.
+You can explore savings for your database workloads on EBS, FSx for Windows File Server, and on-premises storage using the Dashboard, Inventory tab, or Explore savings tab. In all cases, you can use the savings calculator to compare various cost components of running Microsoft SQL Server workloads like storage, compute, SQL license, snapshots, and clones for your database workloads on FSx for ONTAP file systems against Elastic Block Store (EBS), FSx for Windows File Server, and on-premises storage.
 
-If Workload Factory determines that you could save money by running these workloads on an FSx for ONTAP file system, you can deploy Microsoft SQL over FSx for ONTAP directly from the savings calculator in the Workload Factory console. When you have multiple Microsoft SQL Server instances over Elastic Block Store, FSx for Windows File Server, or on-premises storage, we'll recommend an FSx for ONTAP configuration with a single SQL instance.
+If Workload Factory finds cost savings on FSx for ONTAP, you can deploy Microsoft SQL over FSx for ONTAP directly from the savings calculator in the Workload Factory console. When you have multiple Microsoft SQL Server instances over Elastic Block Store, FSx for Windows File Server, or on-premises storage, we'll recommend an FSx for ONTAP configuration with a single SQL instance.
 
 .Potential savings for all database workloads
-Visit the Databases *Dashboard* in the Workload Factory console to get an overview of potential cost savings for running all of your database workloads on FSx for ONTAP. In the *Potential savings* tile, you can view the number of all database workloads you have on Elastic Block Store and FSx for Windows File Server, the potential cost savings, the savings percentage, and visual representation in the bar graph.
+Visit the Databases *Dashboard* in the Workload Factory console to get an overview of potential cost savings for running all of your database workloads on FSx for ONTAP. The *Potential savings* tile shows your database workloads on EBS and FSx for Windows File Server, potential cost savings, savings percentage, and a bar graph.
 
 image:screenshot-dashboard-potential-savings-tile.png["A screenshot of the potential savings tile from the databases dashboard in the Workload Factory console. The potential savings tile shows the number of all database workloads you have on Elastic Block Store and FSx for Windows File Server, the potential cost savings, the savings percentage, and visual representation in the bar graph."]
 
 .Savings calculator
-You can utilize the savings calculator so you can compare various cost components of running Microsoft SQL Server workloads like storage, compute, SQL license, snapshots, and clones for your database workloads on FSx for ONTAP file systems against Elastic Block Store (EBS), FSx for Windows File Server, and on-premises storage. Depending on your storage requirements, you might find that FSx for ONTAP file systems are the most cost effective for your database workloads.
+You can utilize the savings calculator so you can compare various cost components of running Microsoft SQL Server workloads like storage, compute, SQL license, snapshots, and clones for your database workloads on FSx for ONTAP file systems against Elastic Block Store (EBS), FSx for Windows File Server, and on-premises storage. FSx for ONTAP file systems may be the most cost-effective option for your database workloads.
 
 The calculator displays whether the storage for the database workloads on these Microsoft SQL Servers would cost less if you used an FSx for ONTAP file system. <<Calculator options,Learn how to use the calculator.>>
 
 image:screenshot-ebs-savings-calculator-update.png["A screenshot of the savings calculator page shows the selected Microsoft SQL Server on Amazon Elastic Block Store configuration on the left with the option to customize snapshot and clone values. Cost savings in dollar amount and percentage savings as well as the total monthly cost for using Microsoft SQL Server on FSx for ONTAP and Elastic Block Store storage display on the left."]
 
 == SQL Server deployment analysis
-The calculator performs a comprehensive analysis of your SQL Server deployment to ensure that the resources and features being utilized are appropriately matched to the SQL Server edition. Here are the key factors and conditions the calculator checks before recommending a downgrade to Standard Edition:
+The calculator checks your SQL Server deployment to make sure the resources and features used match the SQL Server edition. Here are the key factors and conditions the calculator checks before recommending a downgrade to Standard Edition:
 
 .Deployment model
 The calculator evaluates the deployment model and whether Enterprise edition is required.
@@ -50,7 +50,7 @@ The calculator verifies if any of the following Enterprise features are in use:
 * R/Python extensions
 * Memory-optimized TempDB
 
-If the assessed SQL Server instance doesn't utilize any of the above Enterprise features and meets the resource constraints, the calculator will recommend downgrading the license to Standard Edition. This recommendation is made to help you optimize your SQL Server licensing costs without compromising performance or functionality.
+If the assessed SQL Server instance doesn't utilize any of the above Enterprise features and meets the resource constraints, the calculator will recommend downgrading the license to Standard Edition. The calculator helps you optimize SQL Server licensing costs without reducing performance or functionality.
 
 == Calculator options
 Two calculator options are available for making the cost comparison between your systems and FSx for ONTAP — customization and detection.
@@ -193,12 +193,12 @@ Follow the steps under the tab for your storage type.
 . From the Databases menu, select *Explore savings*.
 . In Explore savings, select the *SQL Server on Elastic Block Store (EBS)* tab.
 +
-If Workload Factory detects EBS hosts, you'll be redirected to the Explore savings tab. If Workload Factory doesn't detect EBS hosts, you'll be redirected to the calculator to <<Explore savings via customization,explore savings via customization>>.
+If Workload Factory detects EBS hosts, it redirects you to the Explore savings tab. If it doesn't detect EBS hosts, it redirects you to the calculator to <<Explore savings via customization,explore savings via customization>>.
 . From *Explore savings*, select one or more database hosts running on EBS and then select *Explore savings*.
 . If required, authenticate the database host with SQL Server credentials, Windows credentials, or by adding missing SQL Server permissions.
 +
 If the Explore savings page doesn't load data after successful authentication, select the *Inventory* tab to reload the data, and then select the *Explore savings* tab again.
-. In the Savings calculator, optionally, provide the following details on clones and snapshots in your EBS storage for a more accurate cost savings estimate.
+. In the Savings calculator, you can give the following details on clones and snapshots in your EBS storage for a more accurate cost savings estimate.
 .. *Snapshot frequency*: Select a snapshot frequency from the menu.
 .. *Clone refresh frequency*: Select the frequency that clones refresh from the menu.
 .. *Number of cloned copies*: Enter the number of cloned copies in the EBS configuration.
@@ -215,7 +215,7 @@ Workload Factory consolidates multiple SQL Server hosts into a single FSx for ON
 . From the Databases menu, select *Explore savings*.
 . In Explore savings, select the *SQL Server on FSx for Windows* tab.
 +
-If Workload Factory detects FSx for Windows hosts, you'll be redirected to the Explore savings tab. If Workload Factory doesn't detect FSx for Windows hosts, you'll be redirected to the calculator to <<Explore savings via customization,explore savings via customization>>.
+If Workload Factory detects FSx for Windows hosts, it redirects you to the Explore savings tab. If it doesn't detect FSx for Windows hosts, it redirects you to the calculator to <<Explore savings via customization,explore savings via customization>>.
 . In the Explore savings tab, select *Explore savings* of the database host using FSx for Windows File Server storage.
 . If required, authenticate the database host with SQL Server credentials, Windows credentials, or by adding missing SQL Server permissions.
 +
@@ -223,7 +223,7 @@ If the Explore savings page doesn't load data after successful authentication, s
 . In the Savings calculator, optionally, provide the following details on clones (shadow copies) and snapshots in your FSx for Windows storage for a more accurate cost savings estimate.
 .. *Snapshot frequency*: Select a snapshot frequency from the menu.
 +
-If FSx for Windows shadow copies are detected, the default value is *Daily*. If shadow copies aren't detected, the default value is *No snapshot frequency*.
+If Workload Factory detects FSx for Windows shadow copies, it sets the default value to *Daily*. If it doesn't detect shadow copies, it sets the default value to *No snapshot frequency*.
 .. *Clone refresh frequency*: Select the frequency that clones refresh from the menu.
 .. *Number of cloned copies*: Enter the number of cloned copies in the FSx for Windows configuration. 
 .. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.  
@@ -247,7 +247,7 @@ The script is a data collection tool based on PowerShell. It gathers and then up
 . Optionally, provide the following details on clones (shadow copies) and snapshots in your on-premises database environment for a more accurate cost savings estimate.  
 .. *Snapshot frequency*: Select a snapshot frequency from the menu.
 +
-If FSx for Windows shadow copies are detected, the default value is *Daily*. If shadow copies aren't detected, the default value is *No snapshot frequency*.
+If Workload Factory detects FSx for Windows shadow copies, it sets the default value to *Daily*. If it doesn't detect shadow copies, it sets the default value to *No snapshot frequency*.
 .. *Clone refresh frequency*: Select the frequency that clones refresh from the menu.
 .. *Number of cloned copies*: Enter the number of cloned copies in the on-premises configuration. 
 .. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.  
@@ -274,7 +274,7 @@ The script is a data collection tool based on PowerShell. It gathers Oracle Serv
 . Optionally, provide the following details on clones (shadow copies) and snapshots in your on-premises database environment for a more accurate cost savings estimate.  
 .. *Snapshot frequency*: Select a snapshot frequency from the menu.
 +
-If FSx for Windows shadow copies are detected, the default value is *Daily*. If shadow copies aren't detected, the default value is *No snapshot frequency*.
+If Workload Factory detects FSx for Windows shadow copies, it sets the default value to *Daily*. If it doesn't detect shadow copies, it sets the default value to *No snapshot frequency*.
 .. *Clone refresh frequency*: Select the frequency that clones refresh from the menu.
 .. *Number of cloned copies*: Enter the number of cloned copies in the on-premises configuration. 
 .. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.  
