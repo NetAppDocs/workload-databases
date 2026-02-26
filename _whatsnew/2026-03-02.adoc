@@ -1,5 +1,5 @@
 === One-time assessment
-Workload Factory now offers a one-time assessment to analyze the configurations of your database deployments. You'll get recommendations to help you optimize your deployment configurations and comply with best practices. This is your opportunity to use the well-architected feature without fully committing to the setup process. You can assess your databases without storing credentials in Workload Factory, registering database resources, or setting up external connections.
+Workload Factory now offers a one-time assessment to analyze the configurations of your database deployments whenever needed - new deployments, post-migration, troubleshooting, and more. You'll get recommendations to help you optimize your deployment configurations and comply with best practices. This is your opportunity to use the well-architected feature without fully committing to the setup process. You can assess your databases without storing credentials in Workload Factory, registering database resources, or setting up external connections. 
 
 === Registration support for Always On availability groups on Microsoft SQL Server and Data Guard on Oracle
 You can now discover and register Microsoft SQL Server instances with the Always On availability group deployment model and Oracle databases with the Data Guard deployment model in the Databases workload of NetApp Workload Factory. This enhancement allows for better management of SQL Server and Oracle resources within the Workload Factory console.
@@ -12,9 +12,9 @@ link:https://docs.netapp.com/us-en/workload-databases/register-instance.html#reg
 
 === Well-architected analysis for Oracle
 
-The well-architected analysis includes *Operating system patches* for Oracle to assess if the latest patches are installed on the operating system and provide guidance on installing the latest patches.
+The well-architected analysis includes *Operating system patches* for Oracle to check if you have the latest patches on the operating system and tell you how to install them.
 
-Additionally, the well-architected analysis for Oracle notifies you when a configuration such as storage layout has dependencies on other configurations. The notification tells you which actions to take to ensure that linked configurations are optimized so that all recommendations that we provide are the most optimal. 
+Additionally, the well-architected analysis for Oracle notifies you when a configuration such as storage layout has dependencies on other configurations. The notification tells you which actions to optimize linked configurations so that all recommendations we provide are optimal.
 
 === Oracle on-premises database environments cost analysis and migration planning
 
@@ -24,6 +24,6 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html[Explo
 
 === New Ask me bookmark available in Workload Factory for Databases
 
-We have added a new Ask me bookmark on every screen in Workload Factory console. This improvement makes it easier and faster for you to access Ask me whenever you need help. Ask me is our AI assistant, enabling you to ask questions about your own database estate, get personalized insights directly from your environment, and refer to previous conversations.
+We added a new Ask me bookmark on every screen in Workload Factory console. This improvement makes it easier and faster for you to access Ask me whenever you need help. Ask me is our AI assistant, enabling you to ask questions about your own database estate, get personalized insights directly from your environment, and refer to previous conversations.
 
 You can open Ask me from any page by clicking the new bookmark. It launches Ask me in a side panel without interrupting your current work and offers quick explanations and recommendations related to what you're currently doing.
