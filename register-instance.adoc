@@ -14,23 +14,23 @@ Register instances for Microsoft SQL Server and databases for Oracle so that you
 You can register your resources only if they run on FSx for ONTAP file system storage.
 
 == About the task
-Registering an instance (SQL Server) or database (Oracle) has three steps - instance or database authentication, FSx for ONTAP authentication, and preparation. Preparation involves making sure that all AWS, NetApp, and PowerShell modules are installed on the instance or database, and that the minimum requirements for Workload Factory for Databases features like link:analyze-error-logs.html[error log analysis] or link:optimize-configurations.html[well-architected assessment] are met.
+Registering an instance (SQL Server) or database (Oracle) involves three steps: instance or database authentication, FSx for ONTAP authentication, and preparation. To prepare, install AWS, NetApp, and PowerShell modules on the instance or database, and meet the minimum requirements for Workload Factory for Databases features like link:analyze-error-logs.html[error log analysis] or link:optimize-configurations.html[well-architected assessment].
 
-Workload Factory supports only Microsoft SQL Server instance and Oracle database registration and management. Depending on the AWS account credentials you select in Workload Factory, PostgreSQL hosts might appear in the Inventory. Currently, Workload Factory supports unregistered PostgreSQL instances running only on Amazon Linux operating systems.
+Workload Factory supports only Microsoft SQL Server instance and Oracle database registration and management. Depending on the AWS account credentials you select in Workload Factory, PostgreSQL hosts appear in the Inventory. Currently, Workload Factory supports unregistered PostgreSQL instances running only on Amazon Linux operating systems.
 
 == Before you begin
 
 The host for the instance or database must appear in the Inventory. For hosts to appear in the inventory, you must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _view, planning, and analysis_ permissions^] in your AWS account. 
 
 === Registering an instance in a private network
-To register an instance (SQL Server) or database (Oracle) in a private network with no external connectivity, the following endpoints need to be available in the VPC with association to the subnets where SQL servers are present. Ensure the interface endpoints allow port 443 in the attached Security Group.
+To register an instance or database in a private network without external connectivity, make the required endpoints available in the VPC and associate them with the relevant subnets. Allow port 443 in the Security Group for interface endpoints.
 
 * `S3 Gateway/endpoint`
 * `ssm`
 * `ssmmessages`
 * `fsx` 
 +
-If you use a proxy server for all outbound connections from EC2 instances, you must allow access to the following domains so that management operations work:
+If you use a proxy server for outbound EC2 connections, allow access to these domains for management operations:
  
 * ``.microsoft.com`` (SQL Server)
 * ``.powershellgallery.com`` (SQL Server)
@@ -68,9 +68,9 @@ To meet the minimum requirements, the instance must have AWS and NetApp PowerShe
 You must complete all prerequisites for a single capability like *Review well-architected issues and recommendations* to register the instance.
 .. Select *Setup details* for each capability to learn about the capability prerequisites and follow the on-screen instructions to complete any missing prerequisites for a capability. 
 +
-To have Workload Factory link:optimize-configurations.html[review and fix well-architected issues] for your instances, complete all prerequisites listed under *Review well-architected issues and recommendations* and *Fix well-architected issues* capabilities.
+To enable Workload Factory to link:optimize-configurations.html[review and fix well-architected issues], complete all prerequisites under *Review well-architected issues and recommendations* and *Fix well-architected issues*.
 
-. When prerequisites are complete, *Register* the instance(s).
+. After you complete all prerequisites, *Register* the instance(s).
 
 .Result
 Instance registration initiates. Select the *Job monitoring* tab to track progress.
@@ -106,14 +106,14 @@ You must complete all prerequisites for a single capability like *Review well-ar
 +
 To have Workload Factory link:optimize-configurations.html[review and fix well-architected issues] for your databases, complete all prerequisites listed under *Review well-architected issues and recommendations* and *Fix well-architected issues* capabilities.
 
-. When prerequisites are complete, *Register* the database(s).
+. After you complete the prerequisites, *Register* the database(s).
 
 .Result
 Database registration initiates. Select the *Job monitoring* tab to track progress. 
 
 .What's next
 
-After resource registration, you can perform the following tasks.
+After registration, you can perform these tasks.
 
 * View databases from the inventory
 * link:create-database.html[Create a database]
