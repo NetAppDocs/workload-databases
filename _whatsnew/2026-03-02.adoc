@@ -1,0 +1,35 @@
+=== One-time assessment
+Workload Factory now offers a one-time assessment to analyze the configurations of your database deployments whenever needed - new deployments, post-migration, troubleshooting, and more. You'll get recommendations to help you optimize your deployment configurations and comply with best practices. This is your opportunity to use the well-architected feature without fully committing to the setup process. You can assess your databases without storing credentials in Workload Factory, registering database resources, or setting up external connections. 
+
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Perform a one-time assessment of your database deployments]
+
+=== Registration support for Always On availability groups on Microsoft SQL Server and Data Guard on Oracle
+You can now discover and register Microsoft SQL Server instances with the Always On availability group (AOAG) deployment model and Oracle databases with the Data Guard deployment model in the Databases workload of NetApp Workload Factory. This enhancement allows for better management of SQL Server and Oracle resources within the Workload Factory console.
+
+After registering your AOAG instances and Data Guard databases, you can take advantage of the various features in Workload Factory for Databases such as viewing resource details and analyzing error logs.
+
+Workload Factory for Databases also supports the well-architected analysis for Microsoft SQL Server instances with the AOAG deployment model. You can analyze the configurations of your SQL Server instances in an availability group and receive recommendations to optimize your deployment configurations and comply with best practices. Register your AOAG instances to enable this feature. 
+
+link:https://docs.netapp.com/us-en/workload-databases/register-instance.html#register-a-sql-server-instance[Register resources in Workload Factory for Databases]
+
+=== Well-architected analysis for Oracle
+
+The well-architected analysis includes *Operating system patches* for Oracle to check if you have the latest patches on the operating system and tell you how to install them.
+
+Additionally, the well-architected analysis for Oracle notifies you when a configuration such as storage layout has dependencies on other configurations. The notification tells you which actions to optimize linked configurations so that all recommendations we provide are optimal.
+
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Implement well-architected database configurations in Workload Factory]
+
+=== Oracle on-premises database environments cost analysis and migration planning
+
+Workload Factory for Databases now analyzes and helps you plan for Oracle on-premises database migration to Amazon FSx for NetApp ONTAP. You can use the savings calculator to estimate the cost of running your Oracle on-premises database environment in the cloud and review recommendations for migrating your on-premises database environment to the cloud.
+
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html[Explore savings for on-premises database environments]
+
+=== New Ask Me bookmark available in Workload Factory
+ 
+We added a new Ask Me bookmark on every screen in Workload Factory console. This improvement makes it easier and faster for you to access Ask Me whenever you need help. Ask Me is our AI assistant, enabling you to ask questions about your own workload environments, get personalized insights directly from your environment, and refer to previous conversations.
+ 
+You can open Ask Me from any page by clicking the new bookmark. It launches Ask Me in a side panel without interrupting your current work and offers quick explanations and recommendations related to what you're currently doing.
+ 
+link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html#features[Learn more about Ask Me^]
