@@ -18,6 +18,8 @@ The well-architected analysis includes *Operating system patches* for Oracle to 
 
 Additionally, the well-architected analysis for Oracle notifies you when a configuration such as storage layout has dependencies on other configurations. The notification tells you which actions to optimize linked configurations so that all recommendations we provide are optimal.
 
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Implement well-architected database configurations in Workload Factory]
+
 === Oracle on-premises database environments cost analysis and migration planning
 
 Workload Factory for Databases now analyzes and helps you plan for Oracle on-premises database migration to Amazon FSx for NetApp ONTAP. You can use the savings calculator to estimate the cost of running your Oracle on-premises database environment in the cloud and review recommendations for migrating your on-premises database environment to the cloud.
