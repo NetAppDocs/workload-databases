@@ -11,6 +11,10 @@ summary: "Learn what's new with NetApp Workload Factory for Databases."
 [.lead]
 Learn what's new with NetApp Workload Factory for Databases.
 
+== 02 March 2026
+
+include::_whatsnew/2026-03-02.adoc[]
+
 == 02 February 2026
 
 include::_whatsnew/2026-02-02.adoc[]
