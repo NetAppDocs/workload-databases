@@ -20,26 +20,178 @@ Key capabilities include:
 * Insights to action
 * AWS Well-Architected Framework advisor
 
-== Components of the configuration analysis
-The configuration analysis includes the following components:
+include::https://raw.githubusercontent.com/NetAppDocs/workload-setup-admin/main/_include/well-architected-workloads.adoc[]
 
-Well-architected status::
-The well-architected status refers to the overall health of your database configurations; configurations are categorized as "optimized", "not optimized", or "over-provisioned". The well-architected status of a configuration is referenced from within a Microsoft SQL Server instance or Oracle database in the Workload Factory console.
-
-Well-architected score:: 
-
-The score includes all currently analyzed configurations and appears as a percentage. A 25% score means that 25% of your database deployments are well-architected. The well-architected score is referenced from the *Well-architected* screen and from within a Microsoft SQL Server instance or Oracle database in the Workload Factory console. 
-
-Configuration categories::
-The configurations are organized into the following categories: storage, compute, application, resiliency, and cloning. Each category includes specific configuration assessments that are analyzed regularly. Configuration categories are referenced from the *Well-architected* screen and from within a Microsoft SQL Server instance or Oracle database in the Workload Factory console.
-
-== Analysis scope 
-The scope of optimization is different depending on which component is being assessed. For example, storage optimization occurs at the SQL instance level whereas compute optimization occurs at the host level. 
+//include comes from workload-setup-admin repository because the content is shared between workload-setup-admin and all workload repos that offer the well-architected feature.
 
 == Analysis requirements
-For a complete database environment analysis, resources must be registered and online.
+For a complete database environment analysis, you must do the following: 
 
-link:register-instance.html[Learn how to register resources.]
+* link:register-instance.html[Register your resources] and make sure they are online.
+
+* Associate a link. Link connectivity lets Workload Factory analyze all database deployment configurations like storage layout and resiliency.
++
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. 
+* Grant _view, planning, and analysis_ permissions in your AWS account. 
++
+link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to grant permissions to an AWS account^]
+
+== Best practices and recommendations for database workloads
+
+Workload Factory provides a set of best practices and recommendations for operating well-architected database workloads. The well-architected analysis assesses Microsoft SQL Server and Oracle Database configurations and settings related to storage sizing, storage layout, storage configuration, compute, application (SQL Server), and resiliency. 
+
+=== Microsoft SQL Server
+
+==== Storage sizing
+
+* *Storage tier*
++
+Use the primary SSD tier for FSx for ONTAP volumes to ensure optimal performance. The capacity pool tier may reduce performance and increase latency. The primary SSD tier is designed for high-performance workloads, while the capacity pool tier is optimized for cost efficiency and may not meet the performance requirements of SQL Server workloads.
+
+* *File system headroom*
++
+Maintain enough file system capacity above your total volume size. Too little headroom causes performance issues; too much wastes storage and increases costs.
+
+* *Log drive size*
++
+Size and monitor your SQL Server log drive appropriately to prevent transaction rollbacks, database unavailability, data corruption, and performance issues caused by a full log drive. 
+
+* *TempDB drive size*
++
+Size and monitor TempDB appropriately to maintain optimal performance and system stability. Insufficient TempDB space can cause query slowdowns, application timeouts, and system crashes.
+
+==== Storage layout
+
+* *Data files (.mdf) placement* and *Log files (.ldf) placement*
++
+Place data and log files on separate drives to improve performance and enable independent backup and restore operations.
+
+* *TempDB placement*
++
+Place TempDB on a dedicated drive to avoid I/O contention and improve SQL Server performance and stability. Otherwise, you may experience I/O bottlenecks, slower queries, and system instability.
+
+==== Storage configuration
+
+* *ONTAP configuration*
++
+Enable thin provisioning, autosize, and space management for FSx for ONTAP volumes to optimize storage efficiency and cost-effectiveness. Configure tiering policies to move older snapshots to the capacity tier while maintaining high performance for active data. For LUNs, ensure the OS type matches your operating system partitioning scheme for proper I/O alignment, enable space reservation to prevent write failures, and enable space allocation to allow automatic space reclamation and host notifications when storage is full.
+
+* *Operating system*
++ 
+Enable and configure Microsoft Multipath I/O (MPIO) with appropriate timeout settings to ensure high availability and data access consistency for SQL Server databases on EC2 with FSx for ONTAP. MPIO provides redundant paths for enhanced resiliency and performance during failovers. Configure NTFS allocation unit size appropriately for optimal disk utilization and performance.
+
+==== Compute
+
+* *Compute rightsizing*
++
+Rightsize your SQL Server EC2 instance based on workload demands to balance performance and cost efficiency. If your current instance is under-provisioned, upgrading can enhance CPU, memory, and I/O capacity. If it is over-provisioned, downgrading can maintain performance while reducing costs. 
+
+* *Operating system patch*
++
+Apply the latest operating system patches to enhance security and system reliability. 
+
+* *Network adapter settings*
++
+Configure Receive Side Scaling (RSS) to distribute network processing across multiple processors and improve network performance. Test settings before applying to production.
+
+* *MTU alignment*
++
+Align EC2 instance Maximum Transmission Unit (MTU) settings with FSx for ONTAP to prevent network fragmentation and optimize SQL Server performance. Fixing MTU misalignment ensures consistent MTU configuration across all nodes and network paths.
+
+==== Application (SQL Server)
+
+* *License*
++
+The SQL Server license assessment and recommendation are provided at the host level. Workload Factory considers a license "not optimized" when it detects that your database infrastructure doesn't use any of the commercial software license features you're paying for. An unoptimized license might result in unnecessary costs. Review your SQL Server license usage to ensure you are utilizing all features you are paying for. 
+
+* *Microsoft SQL Server patch*
++
+Apply the latest SQL Server patches to enhance security, protect against vulnerabilities, and improve system reliability.
+
+* *MAXDOP*
++
+Configure MAXDOP to optimize query performance. Values of 4, 8, or 16 typically work well. Test your workload and monitor for parallelism wait types such as CXPACKET.
+
+==== Reliability
+
+* *Schedule local snapshots* 
++
+Schedule regular snapshots for point-in-time backups and fast recovery from accidental deletions, data corruption, and other issues. 
+
+* *Backup configuration* 
++
+Configure FSx for ONTAP backups or AWS Backup to meet data retention and compliance requirements. Avoid redundant backups.
+   
+
+* *Cross-region replication* 
++
+Enable cross-region replication (CRR) to improve data availability and disaster recovery. Use CRR to protect against regional outages and ensure business continuity.
+
+* *Microsoft SQL Server High Availability*
++
+Make sure high availability is set up for SQL Server by checking that all shared storage is accessible by all cluster nodes, drive letters are the same across nodes to prevent conflicts during failover, quorum is set up for cluster health, heartbeat thresholds are set for cloud environments, and SQL Server services are set for automatic startup and failover.
+
+* *Clone cleanup*
++
+Regularly review and remove outdated clones to reduce storage costs. Old and unused clones cause high costs.
+
+=== Oracle
+
+==== Storage sizing
+
+* *File system headroom*
++
+Maintain adequate file system capacity to optimize storage performance and prevent performance degradation. Sufficient headroom allows for efficient storage management and supports database growth.
+
+* *Swap space*
++
+Set swap space based on the amount of RAM so the system can handle memory pressure and avoid slowdowns or crashes.
+
+==== Storage layout
+
+* *Oracle binary placement*
++
+Place Oracle binaries on a dedicated volume to ensure optimal performance and stability by reducing I/O contention. This separation simplifies software updates and minimizes the risk of accidental modifications or corruption.
+
+* *Data files placement*
++ 
+Place data files on a dedicated volume or with control files to isolate random I/O and improve performance. This separation enables customized snapshot configurations, tiering policies, and efficiency mechanisms to optimize performance and cost.
+
+* *Control files placement*
++
+Store copies of control files on different volumes or disks to avoid a single point of failure and add redundancy. Place control files on a dedicated volume or share them with redo logs or data files, but do not place them on volumes tiered to object storage due to performance requirements.
+
+* *Redo logs placement*
++
+Place redo logs on a dedicated volume or shared appropriately with temp or control files to isolate high-write I/O operations and improve performance. Store each copy of the redo log on a separate volume for redundancy. Do not place redo logs on volume snapshots or on volumes tiered to object storage because they are updated frequently. 
+
+* *Temp placement*
++
+Place temp files on a dedicated volume or shared appropriately with redo or control files to isolate high-write I/O operations and improve performance. Each multiplexed temp copy should reside on a separate volume for redundancy. Temp files should not be placed on volume snapshots or volumes tiered to object storage due to their frequent update patterns.
+
+* *Archive placement*
++
+Place archive logs on a dedicated volume to enhance performance and recovery processes by preventing high I/O demands from interfering with other database operations.
+
+* *ASM-only configurations: ASM data disk group LUNs, ASM logs disk group LUNs, and ASM archive disk group LUNs*
++
+Distribute LUNs across Automatic Storage Management (ASM) data, redo log, and archive log disk groups for optimal performance and redundancy.
+
+==== Storage configuration
+
+* *ONTAP*
++
+Optimize FSx for ONTAP configuration for Oracle databases by enabling thin provisioning, autosize, and space management for volumes. Configure appropriate snapshot policies and tiering strategies to balance performance and cost. For LUNs, ensure proper OS type alignment, space reservation, and space allocation settings to prevent write failures and enable automatic space reclamation.
+
+* *Operating system*
++
+Configure operating system settings for optimal Oracle database performance, including tuning kernel parameters for database workloads and configuring NFS or dNFS settings appropriately for network file system access.
+
+==== Compute
+
+* *Operating system patch*
++
+Apply operating system patches regularly to ensure security, stability, and performance improvements for your Oracle database environment.
 
 .What's next
 
