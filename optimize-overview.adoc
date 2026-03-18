@@ -25,7 +25,7 @@ include::https://raw.githubusercontent.com/NetAppDocs/workload-setup-admin/main/
 //include comes from workload-setup-admin repository because the content is shared between workload-setup-admin and all workload repos that offer the well-architected feature.
 
 == Analysis requirements
-For a complete database environment analysis, you must do the following: resources must be registered and online.
+For a complete database environment analysis, you must do the following: 
 
 * link:register-instance.html[Register your resources] and make sure they are online.
 
@@ -50,7 +50,7 @@ Use the primary SSD tier for FSx for ONTAP volumes to ensure optimal performance
 
 * *File system headroom*
 +
-Maintain adequate file system capacity above your total volume size. Adequate headroom ensures efficient storage management and prevents performance degradation without incurring unnecessary costs. Insufficient headroom can lead to performance issues, while excessive headroom may result in inefficient storage utilization and increased costs.
+Maintain enough file system capacity above your total volume size. Too little headroom causes performance issues; too much wastes storage and increases costs.
 
 * *Log drive size*
 +
@@ -68,8 +68,7 @@ Place data and log files on separate drives to improve performance and enable in
 
 * *TempDB placement*
 +
-Place TempDB on a dedicated drive to eliminate I/O contention and improve overall SQL Server 
-performance and stability. Failure to do so can result in significant I/O bottlenecks, slower query performance, and potential system instability. 
+Place TempDB on a dedicated drive to avoid I/O contention and improve SQL Server performance and stability. Otherwise, you may experience I/O bottlenecks, slower queries, and system instability.
 
 ==== Storage configuration
 
@@ -103,7 +102,7 @@ Align EC2 instance Maximum Transmission Unit (MTU) settings with FSx for ONTAP t
 
 * *License*
 +
-The SQL Server license assessment and recommendation are provided at the host level. A license is considered "not optimized" when Workload Factory detects that your database infrastructure doesn't use any of the commercial software license features you're paying for. An unoptimized license might result in unnecessary costs. Review your SQL Server license usage to ensure you are utilizing all features you are paying for. 
+The SQL Server license assessment and recommendation are provided at the host level. Workload Factory considers a license "not optimized" when it detects that your database infrastructure doesn't use any of the commercial software license features you're paying for. An unoptimized license might result in unnecessary costs. Review your SQL Server license usage to ensure you are utilizing all features you are paying for. 
 
 * *Microsoft SQL Server patch*
 +
@@ -117,7 +116,7 @@ Configure MAXDOP to optimize query performance. Values of 4, 8, or 16 typically 
 
 * *Schedule local snapshots* 
 +
-Schedule regular snapshots for point-in-time backups and fast recovery. Local snapshots provide a quick and efficient way to protect your data and recover from accidental deletions, data corruption, or other issues. 
+Schedule regular snapshots for point-in-time backups and fast recovery from accidental deletions, data corruption, and other issues. 
 
 * *Backup configuration* 
 +
@@ -126,15 +125,15 @@ Configure FSx for ONTAP backups or AWS Backup to meet data retention and complia
 
 * *Cross-region replication* 
 +
-Enable cross-region replication to ensure that your data is replicated to another AWS region, providing enhanced data availability and disaster recovery capabilities. CRR is essential for protecting against regional outages and ensuring business continuity.
+Enable cross-region replication (CRR) to improve data availability and disaster recovery. Use CRR to protect against regional outages and ensure business continuity.
 
 * *Microsoft SQL Server High Availability*
 +
-Ensure proper high availability configuration for SQL Server by validating that all shared storage is accessible by all cluster nodes, drive letters are consistently available across nodes to prevent conflicts during failover, quorum is properly configured for cluster health, heartbeat thresholds are optimized for cloud environments, and SQL Server services are configured for automatic startup and failover.
+Make sure high availability is set up for SQL Server by checking that all shared storage is accessible by all cluster nodes, drive letters are the same across nodes to prevent conflicts during failover, quorum is set up for cluster health, heartbeat thresholds are set for cloud environments, and SQL Server services are set for automatic startup and failover.
 
 * *Clone cleanup*
 +
-Regularly review and remove outdated clones to optimize storage costs. Old and divergent clones can incur significant costs. 
+Regularly review and remove outdated clones to reduce storage costs. Old and unused clones cause high costs.
 
 === Oracle
 
@@ -146,7 +145,7 @@ Maintain adequate file system capacity to optimize storage performance and preve
 
 * *Swap space*
 +
-Configure swap space relative to RAM to ensure the system can handle memory pressure smoothly, avoiding potential performance degradation or system crashes.
+Set swap space based on the amount of RAM so the system can handle memory pressure and avoid slowdowns or crashes.
 
 ==== Storage layout
 
@@ -155,16 +154,16 @@ Configure swap space relative to RAM to ensure the system can handle memory pres
 Place Oracle binaries on a dedicated volume to ensure optimal performance and stability by reducing I/O contention. This separation simplifies software updates and minimizes the risk of accidental modifications or corruption.
 
 * *Data files placement*
-+
-Place data files on a dedicated volume or shared with control files to boost performance by isolating random I/O operations from other database activities. This separation enables customized snapshot configurations, tiering policies, and efficiency mechanisms to optimize performance and cost.
++ 
+Place data files on a dedicated volume or with control files to isolate random I/O and improve performance. This separation enables customized snapshot configurations, tiering policies, and efficiency mechanisms to optimize performance and cost.
 
 * *Control files placement*
 +
-Multiplex control files across separate volumes or disks to avoid a single point of failure and enhance redundancy. Control files can be placed on a dedicated volume or shared with redo logs or data files, but should not be placed on volumes tiered to object storage due to performance requirements.
+Store copies of control files on different volumes or disks to avoid a single point of failure and add redundancy. Place control files on a dedicated volume or share them with redo logs or data files, but do not place them on volumes tiered to object storage due to performance requirements.
 
 * *Redo logs placement*
 +
-Place redo logs on a dedicated volume or shared appropriately with temp or control files to isolate high-write I/O operations and improve performance. Each multiplexed redo log copy should reside on a separate volume for redundancy. Redo logs should not be placed on volume snapshots or volumes tiered to object storage due to their frequent update patterns.
+Place redo logs on a dedicated volume or shared appropriately with temp or control files to isolate high-write I/O operations and improve performance. Store each copy of the redo log on a separate volume for redundancy. Do not place redo logs on volume snapshots or on volumes tiered to object storage because they are updated frequently. 
 
 * *Temp placement*
 +
@@ -176,7 +175,7 @@ Place archive logs on a dedicated volume to enhance performance and recovery pro
 
 * *ASM-only configurations: ASM data disk group LUNs, ASM logs disk group LUNs, and ASM archive disk group LUNs*
 +
-Configure Automatic Storage Management (ASM) disk groups with appropriate LUN distribution across data, redo logs, and archive log disk groups to provide optimal performance and redundancy.
+Distribute LUNs across Automatic Storage Management (ASM) data, redo log, and archive log disk groups for optimal performance and redundancy.
 
 ==== Storage configuration
 
