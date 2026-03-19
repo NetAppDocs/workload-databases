@@ -31,7 +31,7 @@ For Microsoft SQL Server instances:
 * Storage layout: includes user data files placement, log files placement, and TempDB placement
 * Storage configuration: includes capacity management, thin provisioning, tiering policy, snapshots, Microsoft Multipath I/O (MPIO) status, and MPIO timeout setting
 * Compute: includes rightsizing, operating system patches, and network adapter settings like Receive Side Scaling (RSS), TCP offloading, and MTU alignment
-* Applications: includes Microsoft SQL Server licenses, Microsoft SQL Server patch, and MAXDOP settings 
+* Application: includes Microsoft SQL Server licenses, Microsoft SQL Server patch, and MAXDOP settings 
 * Resiliency: includes local snapshots, FSx for ONTAP backups, cross-region replication (CRR), and Microsoft SQL High Availability.
 * Clones: includes options to refresh and delete clones (sandboxes) that were created in or outside of Workload Factory and are older than 60 days
 
@@ -41,6 +41,8 @@ For Oracle databases:
 * Storage configuration: includes capacity management, thin provisioning, tiering policy, snapshots, storage efficiencies, and operating system configurations for deployments using NFS or iSCSI with or without Automatic Storage Management (ASM) including Microsoft Multipath I/O (MPIO) status and settings, and the following dNFS settings: dNFS enablement, dNFS consistent IP resolution, dNFS configuration file, and dNFS `nosharecache`
 * Storage layout: includes redo log placement, temp tablespace placement, data files placement, archive log placement, control files placement and binaries placement, ASM disk groups LUN count
 * Compute: includes operating system patches
+* Application: includes Oracle critical patch update 
+* Resiliency: includes cross-region replication (CRR) and snapshot policy
 
 The well-architected analysis for Oracle notifies you when a configuration depends on others and lists actions to optimize linked configurations.
 

@@ -193,6 +193,22 @@ Configure operating system settings for optimal Oracle database performance, inc
 +
 Apply operating system patches regularly to ensure security, stability, and performance improvements for your Oracle database environment.
 
+==== Application
+
+* *Oracle critical patch update*
++
+Apply the latest Oracle critical patch update to address security vulnerabilities and maintain the integrity of your database environment. Regularly review and apply patches to protect against potential threats and ensure compliance with security best practices.
+
+==== Resiliency
+
+* *Cross-region replication (CRR)*
++   
+Enable cross-region replication (CRR) to enhance data availability and disaster recovery capabilities for your Oracle databases. CRR helps protect against regional outages and ensures business continuity by replicating data across geographically dispersed locations.
+
+* *Snapshot policy*
++   
+Implement a snapshot policy to automate regular snapshots of your Oracle database volumes. This provides point-in-time recovery options and helps protect against data loss due to accidental deletions, corruption, or other issues.
+
 .What's next
 
 link:optimize-configurations.html[Implement well-architected database configurations]
