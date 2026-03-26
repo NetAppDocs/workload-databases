@@ -4,7 +4,7 @@ The well-architected analysis includes the following new configurations for Orac
 
 * *Critical patch update*: checks whether the database is missing the latest Oracle critical patch update. 
 * *Cross-region replication*: checks whether cross-region replication (CRR) is enabled for your FSx for ONTAP file systems serving Oracle databases.
-* *Snapshot policy*: checks whether the Oracle database is protected by a snapshot policy that meets the recommended frequency and retention requirements.
+* *Application-consistent snapshots*: checks whether the Oracle database is protected by application-consistent snapshots with NetApp SnapCenter.
 
 link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Implement well-architected database configurations in Workload Factory]
 
