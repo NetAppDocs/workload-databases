@@ -45,7 +45,7 @@ For Oracle databases:
 The well-architected analysis for Oracle notifies you when a configuration depends on others and lists actions to optimize linked configurations.
 
 == Perform a one-time assessment of your configurations
-Perform a one-time assessment to find out the well-architected status of your Microsoft SQL Server instances or your Oracle databases without storing credentials or registering resources. 
+Perform a one-time assessment to find out the well-architected status of your Microsoft SQL Server instances or Oracle databases without storing credentials or registering resources. 
 
 You can run the script and upload results as many times as you want. Each time you upload, the well-architected status and insights are updated based on the latest results.
 
