@@ -44,20 +44,40 @@ For Oracle databases:
 
 The well-architected analysis for Oracle notifies you when a configuration depends on others and lists actions to optimize linked configurations.
 
-== Perform a one-time assessment of SQL Server database configurations
-Perform a one-time assessment to find out the well-architected status of your Microsoft SQL Server instances without storing credentials or registering instances. 
+== Perform a one-time assessment of your configurations
+Perform a one-time assessment to find out the well-architected status of your Microsoft SQL Server instances or your Oracle databases without storing credentials or registering resources. 
 
 You can run the script and upload results as many times as you want. Each time you upload, the well-architected status and insights are updated based on the latest results.
 
+[role="tabbed-block"]
+====
+.Microsoft SQL Server instances
+--
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] Then select *Databases*.
-. In the *Inventory*, select *One-time assessment* > *Learn about assessment*. Review the information about the one-time assessment.
+. In the *Inventory*, select *SQL Server* as the engine type. 
+. Select *One-time assessment* > *Learn about assessment*. Review the information about the one-time assessment.
 . Select *Download script*.
 .. Copy the script to your Microsoft SQL Server host.
 .. Run the script in PowerShell. One script collects metadata from all instances.
 . Select *One-time assessment* > *Upload*. Find the file and upload it to the Workload Factory console.
 . View the recommendation for any configuration. Recommendations include best practices and problems you might have if configurations are not optimized.
+--
+.Oracle databases
+--
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] Then select *Databases*.
+. In the *Inventory*, select *Oracle* as the engine type. 
+. Select *One-time assessment* > *Learn about assessment*. Review the information about the one-time assessment.
+. Select *Download script*.
+.. Copy the Python script to your Oracle database host.
+.. Run the script in the appropriate shell. One script collects metadata from all databases.
+. Select *One-time assessment* > *Upload*. Find the file and upload it to the Workload Factory console.
+. View the recommendation for any configuration. Recommendations include best practices and problems you might have if configurations are not optimized.
+--
+====
 
 == Before you begin fixing, dismissing, and re-activating configurations
 
