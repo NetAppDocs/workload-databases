@@ -2,7 +2,7 @@
 
 The well-architected analysis includes the following new configurations for Oracle: 
 
-* *Critical patch update*: checks whether the database is missing the latest Oracle critical patch update. 
+* *Oracle critical patch update*: assesses missing security patches for supported Oracle self-managed database installations.
 * *Cross-region replication*: checks whether cross-region replication (CRR) is enabled for your FSx for ONTAP file systems serving Oracle databases.
 * *Application-consistent snapshots*: checks whether the Oracle database is protected by application-consistent snapshots with NetApp SnapCenter.
 
@@ -15,6 +15,6 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 === Improved cost savings for several Oracle databases 
 
-The cost savings analysis for Oracle has been enhanced to provide a consolidated storage solution for several Oracle on-premises databases on one FSx for ONTAP file system. This consolidation optimizes storage costs by reducing the number of file systems required for multiple databases, leading to improved cost savings.
+We've enhanced the cost savings analysis for Oracle to provide a consolidated storage solution for several Oracle on-premises databases on one FSx for ONTAP file system. This consolidation optimizes storage costs by reducing the number of file systems required for multiple databases, leading to improved cost savings.
 
 link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html#explore-savings-for-detected-hosts[Explore savings for detected databases on Oracle on-premises]
