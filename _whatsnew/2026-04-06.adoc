@@ -2,7 +2,7 @@
 
 The well-architected analysis includes the following new configurations for Oracle: 
 
-* *Oracle critical patch update*: assesses missing security patches for supported Oracle self-managed database installations.
+* *Oracle Critical Patch Updates*: assesses missing security patches for supported Oracle self-managed database installations.
 * *Cross-region replication*: checks whether cross-region replication (CRR) is enabled for your FSx for ONTAP file systems serving Oracle databases.
 * *Application-consistent snapshots*: checks whether the Oracle database is protected by application-consistent snapshots with NetApp SnapCenter.
 
