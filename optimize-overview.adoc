@@ -195,9 +195,9 @@ Apply operating system patches regularly to ensure security, stability, and perf
 
 ==== Application
 
-* *Oracle critical patch update*
+* *Oracle Critical Patch Updates*
 +
-Apply the latest Oracle critical patch update to address security vulnerabilities and maintain the integrity of your database environment. Regularly review and apply patches to protect against potential threats and ensure compliance with security best practices.
+Apply the latest Oracle Critical Patch Updates to address security vulnerabilities and maintain the integrity of your database environment. Regularly review and apply patches to protect against potential threats and ensure compliance with security best practices.
 
 ==== Resiliency
 

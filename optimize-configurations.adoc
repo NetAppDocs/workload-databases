@@ -41,7 +41,7 @@ For Oracle databases:
 * Storage configuration: includes capacity management, thin provisioning, tiering policy, snapshots, storage efficiencies, and operating system configurations for deployments using NFS or iSCSI with or without Automatic Storage Management (ASM) including Microsoft Multipath I/O (MPIO) status and settings, and the following dNFS settings: dNFS enablement, dNFS consistent IP resolution, dNFS configuration file, and dNFS `nosharecache`
 * Storage layout: includes redo log placement, temp tablespace placement, data files placement, archive log placement, control files placement and binaries placement, ASM disk groups LUN count
 * Compute: includes operating system patches
-* Application: includes Oracle critical patch update 
+* Application: includes Oracle Critical Patch Updates
 * Resiliency: includes cross-region replication (CRR) and application-consistent snapshots
 
 The well-architected analysis for Oracle notifies you when a configuration depends on others and lists actions to optimize linked configurations.
