@@ -80,6 +80,7 @@ You can run the script and upload results multiple times. Workload Factory updat
 ====
 
 == Before you begin fixing, dismissing, and re-activating configurations
+The following requirements are necessary for continuous monitoring of your database environment and automatic fixing of configuration issues. These requirements are not required for the one-time assessment.
 
 * You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _operations and remediation_ permissions^] in your AWS account. 
 * The resource must be registered in Workload Factory and the storage type must be FSx for ONTAP. link:register-instance.html[Learn how to register resources.]
