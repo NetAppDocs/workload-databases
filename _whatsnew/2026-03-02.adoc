@@ -1,5 +1,5 @@
-=== One-time assessment
-Workload Factory now offers a one-time assessment to analyze the configurations of your database deployments whenever needed - new deployments, post-migration, troubleshooting, and more. You'll get recommendations to help you optimize your deployment configurations and comply with best practices. This is your opportunity to use the well-architected feature without fully committing to the setup process. You can assess your databases without storing credentials in Workload Factory, registering database resources, or setting up external connections. 
+=== One-time assessment for SQL Server
+Workload Factory now offers a one-time assessment to analyze the configurations of your SQL Server database deployments whenever needed - new deployments, post-migration, troubleshooting, and more. You'll get recommendations to help you optimize your deployment configurations and comply with best practices. This is your opportunity to use the well-architected feature without fully committing to the setup process. You can assess your databases without storing credentials in Workload Factory, registering database resources, or setting up external connections. 
 
 link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Perform a one-time assessment of your database deployments]
 
