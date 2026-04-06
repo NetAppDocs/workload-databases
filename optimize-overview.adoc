@@ -24,8 +24,17 @@ include::https://raw.githubusercontent.com/NetAppDocs/workload-setup-admin/main/
 
 //include comes from workload-setup-admin repository because the content is shared between workload-setup-admin and all workload repos that offer the well-architected feature.
 
+== Options for analyzing your database environment
+Workload Factory provides the following options for analyzing your database environment:
+
+* *One-time assessment*: Perform a link:optimize-configurations.html[one-time assessment] to find out the well-architected status of your Microsoft SQL Server instances or Oracle databases without storing credentials or registering resources. 
+
+* *Continuous monitoring*: Register resources to enable continuous monitoring. Workload Factory analyzes your database environment regularly, provides ongoing recommendations for optimizing your configurations, and automatically fixes issues. 
+
 == Analysis requirements
-For a complete database environment analysis, you must do the following: 
+For the one-time assessment, you only need to provide credentials once for the Microsoft SQL Server instances or Oracle database you want to analyze. 
+
+For continuous monitoring, you need to register your resources, associate a link, and grant permissions in your AWS account.
 
 * link:register-instance.html[Register your resources] and make sure they are online.
 
