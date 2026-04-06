@@ -1,0 +1,20 @@
+=== Well-architected analysis for Oracle
+
+The well-architected analysis includes the following new configurations for Oracle: 
+
+* *Oracle Critical Patch Updates*: assesses missing security patches for supported Oracle self-managed database installations.
+* *Cross-region replication*: checks whether cross-region replication (CRR) is enabled for your FSx for ONTAP file systems serving Oracle databases.
+* *Application-consistent snapshots*: checks whether the Oracle database is protected by application-consistent snapshots with NetApp SnapCenter.
+
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Implement well-architected database configurations in Workload Factory]
+
+=== One-time assessment for Oracle
+Workload Factory now offers a one-time assessment to analyze the configurations of your Oracle database deployments whenever needed - new deployments, post-migration, troubleshooting, and more. You'll get recommendations to help you optimize your deployment configurations and comply with best practices. This is your opportunity to use the well-architected feature without fully committing to the setup process. You can assess your databases without storing credentials in Workload Factory, registering database resources, or setting up external connections. 
+
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Perform a one-time assessment of your Oracle database deployments]
+
+=== Improved cost savings for several Oracle databases 
+
+We've enhanced the cost savings analysis for Oracle to provide a consolidated storage solution for several Oracle on-premises databases on one FSx for ONTAP file system. This consolidation optimizes storage costs by reducing the number of file systems required for multiple databases, leading to improved cost savings.
+
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html#explore-savings-for-detected-hosts[Explore savings for detected databases on Oracle on-premises]

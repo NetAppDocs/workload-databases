@@ -11,16 +11,16 @@ summary: "NetApp Workload Factory for Databases scans Microsoft SQL Server confi
 [.lead]
 Using configuration analysis insights and recommendations, leverage NetApp Workload Factory to implement best practices for your database configurations with Microsoft SQL Server and Oracle. You can easily review the well-architected status, learn about issues with database configurations, and fix configurations that aren't optimized for reliability, security, efficiency, performance, and cost.
 
-You can also dismiss the analysis of specific configurations that don't apply to your environment to avoid unnecessary alerts and inaccurate optimization results.
+You can also dismiss the analysis of configurations that don't apply to your environment to avoid extra alerts and inaccurate results.
 
 link:optimize-overview.html[Learn about the configuration analysis and well-architected status in Workload Factory.]
 
 == About this task
 Workload Factory analyzes database configurations daily. The daily analysis provides well-architected status, insights, and recommendations. You can automatically fix configuration issues to meet best practices. 
 
-You can review the recommendations for configuration issues and fix those issues from the Databases inventory within the Workload Factory console. 
+You can review and fix issues from the Databases inventory or the Well-architected dashboard within the Workload Factory console. 
 
-For SQL Server resources, you can perform a one-time assessment to review best practices for your database configurations. You don't need to register resources or store credentials to perform the one-time assessment.
+Optionally, you can perform a one-time assessment to review best practices for your database configurations without storing credentials or registering resources. 
 
 .What is analyzed
 Workload Factory analyzes the well-architected status of the following configurations: 
@@ -31,7 +31,7 @@ For Microsoft SQL Server instances:
 * Storage layout: includes user data files placement, log files placement, and TempDB placement
 * Storage configuration: includes capacity management, thin provisioning, tiering policy, snapshots, Microsoft Multipath I/O (MPIO) status, and MPIO timeout setting
 * Compute: includes rightsizing, operating system patches, and network adapter settings like Receive Side Scaling (RSS), TCP offloading, and MTU alignment
-* Applications: includes Microsoft SQL Server licenses, Microsoft SQL Server patch, and MAXDOP settings 
+* Application: includes Microsoft SQL Server licenses, Microsoft SQL Server patch, and MAXDOP settings 
 * Resiliency: includes local snapshots, FSx for ONTAP backups, cross-region replication (CRR), and Microsoft SQL High Availability.
 * Clones: includes options to refresh and delete clones (sandboxes) that were created in or outside of Workload Factory and are older than 60 days
 
@@ -41,36 +41,57 @@ For Oracle databases:
 * Storage configuration: includes capacity management, thin provisioning, tiering policy, snapshots, storage efficiencies, and operating system configurations for deployments using NFS or iSCSI with or without Automatic Storage Management (ASM) including Microsoft Multipath I/O (MPIO) status and settings, and the following dNFS settings: dNFS enablement, dNFS consistent IP resolution, dNFS configuration file, and dNFS `nosharecache`
 * Storage layout: includes redo log placement, temp tablespace placement, data files placement, archive log placement, control files placement and binaries placement, ASM disk groups LUN count
 * Compute: includes operating system patches
+* Application: includes Oracle Critical Patch Updates
+* Resiliency: includes cross-region replication (CRR) and application-consistent snapshots
 
 The well-architected analysis for Oracle notifies you when a configuration depends on others and lists actions to optimize linked configurations.
 
-== Perform a one-time assessment of SQL Server database configurations
-Perform a one-time assessment to find out the well-architected status of your Microsoft SQL Server instances without storing credentials or registering instances. 
+== Perform a one-time assessment of your configurations
+Perform a one-time assessment to find out the well-architected status of your Microsoft SQL Server instances or Oracle databases without storing credentials or registering resources. 
 
-You can run the script and upload results as many times as you want. Each time you upload, the well-architected status and insights are updated based on the latest results.
+You can run the script and upload results multiple times. Workload Factory updates the well-architected status and insights with each upload.
 
+[role="tabbed-block"]
+====
+.Microsoft SQL Server instances
+--
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] Then select *Databases*.
-. In the *Inventory*, select *One-time assessment* > *Learn about assessment*. Review the information about the one-time assessment.
+. In the *Inventory*, select *SQL Server* as the engine type. 
+. Select *One-time assessment* > *Learn about assessment*. Review the information about the one-time assessment.
 . Select *Download script*.
 .. Copy the script to your Microsoft SQL Server host.
 .. Run the script in PowerShell. One script collects metadata from all instances.
 . Select *One-time assessment* > *Upload*. Find the file and upload it to the Workload Factory console.
-. View the recommendation for any configuration. Recommendations include best practices and problems you might have if configurations are not optimized.
+. View the recommendation for any configuration. Workload Factory includes best practices and potential problems in the recommendations if configurations are not optimized.
+--
+.Oracle databases
+--
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] Then select *Databases*.
+. In the *Inventory*, select *Oracle* as the engine type. 
+. Select *One-time assessment* > *Learn about assessment*. Review the information about the one-time assessment.
+. Select *Download script*.
+.. Copy the Python script to your Oracle database host.
+.. Run the script in the appropriate shell. One script collects metadata from all databases.
+. Select *One-time assessment* > *Upload*. Find the file and upload it to the Workload Factory console.
+. View the recommendation for any configuration. Workload Factory includes best practices and potential problems in the recommendations if configurations are not optimized.
+--
+====
 
 == Before you begin fixing, dismissing, and re-activating configurations
+The following requirements are necessary for continuous monitoring of your database environment and automatic fixing of configuration issues. These requirements are not required for the one-time assessment.
 
 * You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _operations and remediation_ permissions^] in your AWS account. 
 * The resource must be registered in Workload Factory and the storage type must be FSx for ONTAP. link:register-instance.html[Learn how to register resources.]
 * Review each recommendation before fixing a setting or configuration. For RSS and MAXDOP, test recommended settings to check performance before changing your production environment.
 
-NOTE: Fixing a configuration may cause instance downtimes or service interruptions. Make sure you review the recommendation carefully before you choose to fix a configuration.
-
 == Fix a configuration issue
 Fix configuration issues for SQL Server or Oracle environments running on FSx for ONTAP storage.
 
-NOTE: The remediation process may cause instance downtimes or service interruptions. Make sure you review the recommendation carefully before you choose to fix a configuration issue.
+NOTE: Fixing a configuration may cause downtimes or service interruptions. Make sure you review the recommendation carefully before you choose to fix a configuration.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -90,7 +111,7 @@ Select *Export PDF* to download a report of the findings.
 +
 *Select all* is the default, but you can select specific resources to fix.
 +
-.. For all configurations except clone cleanup, review the recommendation details to learn what will happen if you choose to fix the issue. Some remediation operations may cause instance downtimes or service interruptions. 
+.. For all configurations except clone cleanup, review the recommendation details to see the impact of fixing the issue. Some remediation operations may cause downtime or service interruptions.
 .. For clone cleanup, select cloned databases (sandboxes) to refresh or delete.
 +
 * Refreshing a clone synchronizes it with its source database. Refresh is available only for clones created in Workload Factory.
@@ -114,7 +135,7 @@ Dismiss the analysis of specific database configurations that don't apply to you
 . In the Dismiss configuration dialog, select the *Dismiss* option and then select *Dismiss* to confirm dismissal.
 
 .Result
-The configuration analysis stops. 
+Workload Factory stops the configuration analysis. 
 
 You can reactivate the analysis at any time. The configuration is no longer included in the total optimization score.
 
@@ -131,4 +152,4 @@ Reactivate a dismissed configuration analysis at any time. You can select one or
 . Select *Reactivate* to restart the configuration analysis for the postponed or dismissed configuration.
 
 .Result
-The configuration analysis is reactivated and runs every day from now on.
+Workload Factory reactivates the configuration analysis and runs it every day from now on.
