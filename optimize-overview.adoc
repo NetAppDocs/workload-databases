@@ -4,7 +4,7 @@ permalink: optimize-overview.html
 keywords: database configuration issues, issues, analyze, scan, optimize, improve, database configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations, storage, compute, application, resiliency, scan, optimization, SQL Server, host, instance
 summary: "Workload Factory for Databases analyzes Microsoft SQL Server and Oracle configurations regularly to determine if any there are any issues."   
 ---
-= Configuration analysis for database environments in Workload Factory 
+= Configuration analysis for database environments in Workload Factory
 :icons: font
 :imagesdir: ./media/
 
@@ -192,6 +192,22 @@ Configure operating system settings for optimal Oracle database performance, inc
 * *Operating system patch*
 +
 Apply operating system patches regularly to ensure security, stability, and performance improvements for your Oracle database environment.
+
+==== Application
+
+* *Oracle Critical Patch Updates*
++
+Apply the latest Oracle Critical Patch Updates to address security vulnerabilities and maintain the integrity of your database environment. Regularly review and apply patches to protect against potential threats and ensure compliance with security best practices.
+
+==== Resiliency
+
+* *Cross-region replication (CRR)*
++   
+Enable cross-region replication (CRR) to enhance data availability and disaster recovery capabilities for your Oracle databases. CRR helps protect against regional outages and ensures business continuity by replicating data across geographically dispersed locations.
+
+* *Application-consistent snapshots*
++   
+Use application-consistent snapshots with NetApp SnapCenter to take accurate, reliable snapshots of your volume data at a specific moment in time. This keeps your apps running smoothly and your data safe. SnapCenter makes backups easier and helps you restore data quickly and correctly, reducing downtime and protecting your most important workloads.
 
 .What's next
 
