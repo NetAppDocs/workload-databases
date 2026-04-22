@@ -181,7 +181,7 @@ Complete the following prerequisites before you begin:
 ----
 . Opt the billable AWS account in to AWS Compute Optimizer.
 
-=== Explore savings for detected Microsoft SQL Server hosts
+==== Explore savings for detected Microsoft SQL Server hosts
 
 Follow the steps under the tab for your storage type.
 
@@ -256,33 +256,6 @@ If Workload Factory detects FSx for Windows shadow copies, it sets the default v
 . For more accurate results, update Compute information and Storage and performance details.
 +
 Workload Factory consolidates multiple SQL Server on-premises hosts into a single FSx for ONTAP configuration recommendation to optimize cost savings unless the selected on-premises hosts exceed throughput, capacity, or IOPS limits for a single FSx for ONTAP file system.
---
-.Oracle Server on-premises 
---
-.Steps
-. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Databases*.
-. From the Databases menu, select *Explore savings*.
-. In Explore savings, select engine type *Microsoft SQL Server*. 
-. Next, select the *Oracle Server on-premises* tab.
-. From the Oracle Server on-premises tab, select *Assessment script* > *Assessment script information* and review the information provided. 
-. Select *Download assessment script*.
-+
-The script is a data collection tool based on PowerShell. It gathers Oracle Server configuration and performance data.
-. Run the script on the Oracle host with a user that has sufficient privileges.
-. Select *Upload script results* and then upload the script output file to the Workload Factory console. The migration advisor assesses the data and plans FSx for ONTAP deployment for your Oracle Server environment.
-. From the Oracle Server on-premises tab, select the on-premises Oracle Server and then select *Explore savings* to run a cost analysis against FSx for ONTAP. 
-. In the Savings calculator, select the region for the on-premises host. 
-. Optionally, provide the following details on clones (shadow copies) and snapshots in your on-premises database environment for a more accurate cost savings estimate.  
-.. *Snapshot frequency*: Select a snapshot frequency from the menu.
-+
-If Workload Factory detects FSx for Windows shadow copies, it sets the default value to *Daily*. If it doesn't detect shadow copies, it sets the default value to *No snapshot frequency*.
-.. *Clone refresh frequency*: Select the frequency that clones refresh from the menu.
-.. *Number of cloned copies*: Enter the number of cloned copies in the on-premises configuration. 
-.. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.  
-. For more accurate results, update Compute information and Storage and performance details.
-+
-Workload Factory consolidates multiple Oracle on-premises databases into a single FSx for ONTAP configuration recommendation to optimize cost savings unless the selected on-premises databases exceed throughput, capacity, or IOPS limits for a single FSx for ONTAP file system.
 ====
 After you provide details for your database host configuration, review the calculations and recommendations provided on the page.
 
@@ -297,7 +270,7 @@ To switch to FSx for ONTAP, follow the instructions to <<Deploy Microsoft SQL Se
 .On-premises host removal
 After you've explored savings for a Microsoft SQL server on-premises host, you have the option to remove the on-premises host record from Workload Factory. Select the action menu of the Microsoft SQL Server on-premises host and then select *Delete*.
 
-=== Explore savings for detected Oracle hosts
+==== Explore savings for detected Oracle hosts
 
 Follow the steps under the tab for your storage type.
 
