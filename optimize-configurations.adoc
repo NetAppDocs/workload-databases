@@ -42,7 +42,7 @@ For Oracle databases:
 * Storage layout: includes redo log placement, temp tablespace placement, data files placement, archive log placement, control files placement and binaries placement, ASM disk groups LUN count
 * Compute: includes operating system patches
 * Application: includes Oracle Critical Patch Updates
-* Resiliency: includes cross-region replication (CRR) and application-consistent snapshots, backup configuration, and clone cleanup
+* Resiliency: includes cross-region replication (CRR), application-consistent snapshots, backup configuration, and clone cleanup
 
 The well-architected analysis for Oracle notifies you when a configuration depends on others and lists actions to optimize linked configurations.
 
