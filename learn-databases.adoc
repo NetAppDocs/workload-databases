@@ -47,7 +47,7 @@ Workload Factory for Databases offers the following features:
 * *Job Monitoring*: monitor and track database job execution progress and diagnose and troubleshoot issues in case any failure occurs.
 * *Continuous optimization*: continuously scan your Microsoft SQL Server and Oracle estates offline for a comprehensive report of insights, opportunities, and recommendations to help you achieve operational excellence.
 * *Error analysis*: analyze and troubleshoot log errors with the AI analyzer to get detailed error messages, troubleshooting steps, and recommendations to resolve issues.
-* *LUN mapping*: view how LUNs are mapped to each Microsoft SQL Server database running on FSx for ONTAP based deployments.
+* *LUN association*: view how LUNs are mapped to each Microsoft SQL Server database running on FSx for ONTAP based deployments.
 
 == Benefits of Amazon FSx for ONTAP for self-managed databases
 
