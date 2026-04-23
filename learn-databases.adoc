@@ -43,7 +43,7 @@ Workload Factory for Databases offers the following features:
 * *AWS resource discovery*: automatically discover Microsoft SQL Servers, Oracle databases, and PostgreSQL instances on FSx for ONTAP deployed from your AWS account. 
 * *Well-architected assessment feature*: continuously scan your Microsoft SQL Server and Oracle estates offline for a comprehensive report of insights, opportunities, and recommendations to help you achieve operational excellence.
 * *Error analysis*: analyze and troubleshoot log errors with the AI analyzer to get detailed error messages, troubleshooting steps, and recommendations to resolve issues.
-* *Centralized management*: manage your Microsoft SQL Server, Oracle, and PostgreSQL resources on FSx for ONTAP from a single location. Workload Factory provides a unified interface that includes host-level, instance-level, and database-level configurations, and storage usage, storage structure, and volume (NFS protocol) and LUN (iSCSI protocol) associations for inventory, performance, and protection management. 
+* *Centralized management*: manage your Microsoft SQL Server, Oracle, and PostgreSQL resources on FSx for ONTAP from a single location. From Workload Factory, you can view host-level, instance-level, and database-level attached infrastructure, AWS account and credentials, associated FSx for ONTAP file systems, storage usage including volumes for your NFS-protocol deployments and LUNs for your iSCSI-protocol associations, and check protection status, performance, well-architected status, and error analysis. 
 
 == Benefits of Amazon FSx for ONTAP for self-managed databases
 
