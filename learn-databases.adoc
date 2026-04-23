@@ -12,12 +12,12 @@ summary: "NetApp Workload Factory for Databases is an end-to-end database deploy
 NetApp Workload Factory for Databases is an end-to-end database deployment and maintenance service with built-in best practices for optimization, automatic thin cloning, and monitoring and resolution capabilities.
 
 == What is NetApp Workload Factory for Databases?
-NetApp Workload Factory for Databases detects, assesses, plans, provisions, and moves Microsoft SQL Server data to Amazon FSx for NetApp ONTAP (FSx for ONTAP) deployments optimized to meet your performance and cost expectations while adhering to industry best practices. Throughout the life cycle, NetApp Workload Factory for Databases delivers continuous optimization and management for databases on FSx for ONTAP.
+NetApp Workload Factory for Databases discovers, assesses, plans, provisions, and moves Microsoft SQL Server, PostgreSQL, andOracle data to Amazon FSx for NetApp ONTAP (FSx for ONTAP) deployments optimized to meet your performance and cost expectations while adhering to industry best practices. NetApp Workload Factory for Databases continuously optimizes and manages databases on FSx for ONTAP.
 
 For more information about Workload Factory, refer to the link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html[Workload Factory overview^].
 
 == Workload Factory benefits for self-managed databases
-Workload Factory offers the following beneficial best practices and automation for self-managed databases.
+Workload Factory provides best practices and automation for self-managed databases.
 
 === Best practices
 
@@ -29,7 +29,7 @@ Workload Factory offers the following beneficial best practices and automation f
 === Automation with Workload Factory Codebox
 Workload Factory introduces built-in automation with the _Codebox_. The Codebox offers the following automation benefits: 
 
-* *Code snippet generation*: Infrastructure-as-Code (IaC) snippets are generated during resource creation, allowing seamless integration with existing orchestration workflows.
+* *Code snippet generation*: Workload Factory generates Infrastructure-as-Code (IaC) snippets during resource creation, allowing seamless integration with existing orchestration workflows.
 * *Infrastructure-as-code co-pilot*: the Codebox is an Infrastructure-as-code (IaC) co-pilot that helps developers and DevOps generate code to execute any operation supported by Workload Factory.
 * *Code viewer and automation catalog*: the Codebox provides a code viewer for quick analysis of automation and an automation catalog for quick future re-use.
 
@@ -39,11 +39,11 @@ Workload Factory for Databases offers the following features:
 * *Cost estimation*: assess potential cost savings with the Savings calculator that estimates and details storage, compute, SQL licensing, snapshot, and clone itemized costs for existing Microsoft SQL Server and Oracle deployments with Elastic Block Store, FSx for Windows File Server, and on-premises compared to FSx for ONTAP.
 * *Simple, fast deployments*: simplify and streamline host, database, and sandbox provisioning with built-in NetApp, Microsoft, Oracle, and Amazon best practices that eliminate manual configuration complexity for Microsoft SQL Server, Oracle, and PostgreSQL instances on AWS.
 ** Deploy from the Workload Factory console using _Quick_ or _Advanced_ create modes, or create, reuse, and customize AWS CloudFormation templates through the Codebox for future deployments across multiple environments.
-** Create on-demand, isolated databases including storage configurations, and sandbox clones that can be used for testing, integration, diagnostics, and training, without affecting production data. 
+** Create on-demand, isolated databases with storage configurations and sandbox clones that can be used for testing, integration, diagnostics, and training, without affecting production data. 
 * *AWS resource discovery*: automatically discover Microsoft SQL Servers, Oracle databases, and PostgreSQL instances on FSx for ONTAP deployed from your AWS account. 
 * *Well-architected assessment feature*: continuously scan your Microsoft SQL Server and Oracle estates offline for a comprehensive report of insights, opportunities, and recommendations to help you achieve operational excellence.
 * *Error analysis*: analyze and troubleshoot log errors with the AI analyzer to get detailed error messages, troubleshooting steps, and recommendations to resolve issues.
-* *Centralized management*: manage your Microsoft SQL Server, Oracle, and PostgreSQL resources on FSx for ONTAP from a single location. From Workload Factory, you can view host-level, instance-level, and database-level attached infrastructure, AWS account and credentials, associated FSx for ONTAP file systems, storage usage including volumes for your NFS-protocol deployments and LUNs for your iSCSI-protocol associations, and check protection status, performance, well-architected status, and error analysis. 
+* *Centralized management*: manage your Microsoft SQL Server, Oracle, and PostgreSQL resources on FSx for ONTAP from one place. In Workload Factory, view attached infrastructure, AWS accounts, credentials, connected FSx for ONTAP file systems, storage use including NFS volumes and iSCSI LUNs, protection status, performance, well-architected status, and error analysis.
 
 == Benefits of Amazon FSx for ONTAP for self-managed databases
 
@@ -57,7 +57,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html[Learn
 include::https://raw.githubusercontent.com/NetAppDocs/workload-family/main/_include/learn-about-tools.adoc[]
 
 == Supported configurations
-Workload Factory supports the following database engines, versions, operating systems, and deployment models according to AWS, NetApp ONTAP, Microsoft SQL Server, Oracle, and PostgreSQL best practices.
+You can use Workload Factory with the following database engines, versions, operating systems, and deployment models, following AWS, NetApp ONTAP, Microsoft SQL Server, Oracle, and PostgreSQL best practices.
 
 [cols="1,1,1,1", options="header"]
 |===
@@ -87,7 +87,7 @@ Workload Factory supports the following database engines, versions, operating sy
 |===
 
 == Integrated AWS services
-Databases includes the following integrated AWS services: 
+Databases include the following integrated AWS services:
 
 * CloudFormation
 * Simple Notification Service 
