@@ -37,11 +37,10 @@ Workload Factory introduces built-in automation with the _Codebox_. The Codebox 
 Workload Factory for Databases offers the following features:
 
 * *Cost estimation*: assess potential cost savings with the Savings calculator that estimates and details storage, compute, SQL licensing, snapshot, and clone itemized costs for existing Microsoft SQL Server and Oracle deployments with Elastic Block Store, FSx for Windows File Server, and on-premises compared to FSx for ONTAP.
-* *Simple, fast deployments*: simplify and streamline host, database, and sandbox provisioning with built-in NetApp, Microsoft, Oracle, and Amazon best practices that eliminate manual configuration complexity for Microsoft SQL Server, Oracle, and PostgreSQL instances on AWS.
+* *Simple, fast deployments*: simplify and streamline host, database, and sandbox provisioning with built-in NetApp, Microsoft, and Amazon best practices that eliminate manual configuration complexity for Microsoft SQL Server and PostgreSQL instances on AWS.
 ** Deploy from the Workload Factory console using _Quick_ or _Advanced_ create modes, or create, reuse, and customize AWS CloudFormation templates through the Codebox for future deployments across multiple environments.
 ** Create on-demand, isolated databases with storage configurations and sandbox clones that can be used for testing, integration, diagnostics, and training, without affecting production data. 
-* *AWS resource discovery*: automatically discover Microsoft SQL Servers, Oracle databases, and PostgreSQL instances on FSx for ONTAP deployed from your AWS account. 
-* *Well-architected assessment feature*: continuously scan your Microsoft SQL Server and Oracle estates offline for a comprehensive report of insights, opportunities, and recommendations to help you achieve operational excellence.
+* *Well-architected assessment feature*: continuously scan your Microsoft SQL Server and Oracle estates for a comprehensive report of insights, opportunities, and recommendations to help you achieve operational excellence, security, reliability, performance efficiency, and cost optimization based on AWS best practices.
 * *Error analysis*: analyze and troubleshoot log errors with the AI analyzer to get detailed error messages, troubleshooting steps, and recommendations to resolve issues.
 * *Centralized management*: manage your Microsoft SQL Server, Oracle, and PostgreSQL resources on FSx for ONTAP from one place. In Workload Factory, view attached infrastructure, AWS accounts, credentials, connected FSx for ONTAP file systems, storage use including NFS volumes and iSCSI LUNs, protection status, performance, well-architected status, and error analysis.
 
