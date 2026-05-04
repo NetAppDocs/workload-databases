@@ -1,0 +1,23 @@
+=== Well-architected analysis for Oracle
+
+The well-architected analysis includes the following new configurations for Oracle: 
+
+* *Backup configuration*: checks whether your Oracle databases are protected by AWS Backup or FSx for ONTAP backups.
+* *Clone cleanup*: recommends removing outdated or unused clones to reduce storage costs.
+
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Implement well-architected database configurations in Workload Factory]
+
+=== Automatic savings calculation for Oracle databases on Amazon Elastic Block Store (EBS)
+
+Workload Factory automatically analyzes the cost of EBS storage used for Oracle databases and then suggests the best and most cost-efficient FSx for ONTAP configuration. You can select multiple EBS hosts to analyze and then compare the cost of running those hosts on EBS versus FSx for ONTAP. 
+
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html#explore-savings-for-detected-hosts[Explore savings for detected EBS hosts]
+
+=== CRR configuration prerequisite check
+
+When you enable cross-region replication (CRR) for your database estate, the Database workload checks if the FSx for ONTAP file system has an associated link and replication setup. If needed, the Database workload redirects you to the FSx for ONTAP Storage workload replication wizard to handle the link prerequisites in the same way Storage does.
+
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html[Implement well-architected database configurations in Workload Factory]
+
+=== Associated LUNs for Microsoft SQL Server databases
+You can now view LUNs mapped to Microsoft SQL Server databases in Workload Factory from the Inventory screen. This allows you to easily identify which LUNs are associated with which databases, making it easier to manage and optimize your storage resources.
