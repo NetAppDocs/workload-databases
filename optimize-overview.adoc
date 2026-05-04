@@ -121,7 +121,7 @@ Apply the latest SQL Server patches to enhance security, protect against vulnera
 +
 Configure MAXDOP to optimize query performance. Values of 4, 8, or 16 typically work well. Test your workload and monitor for parallelism wait types such as CXPACKET.
 
-==== Reliability
+==== Resiliency
 
 * *Schedule local snapshots* 
 +
@@ -217,6 +217,14 @@ Enable cross-region replication (CRR) to enhance data availability and disaster 
 * *Application-consistent snapshots*
 +   
 Use application-consistent snapshots with NetApp SnapCenter to take accurate, reliable snapshots of your volume data at a specific moment in time. This keeps your apps running smoothly and your data safe. SnapCenter makes backups easier and helps you restore data quickly and correctly, reducing downtime and protecting your most important workloads.
+
+* *Backup configuration*
++
+Configure FSx for ONTAP backups or AWS Backup to meet data retention and compliance requirements. Avoid redundant backups.
+
+* *Clone cleanup*
++
+Regularly review and remove outdated clones to reduce storage costs. Old and unused clones cause high costs.
 
 .What's next
 
