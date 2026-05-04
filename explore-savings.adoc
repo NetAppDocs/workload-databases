@@ -130,7 +130,7 @@ Additionally, scroll down to the bottom of the page to view the report by select
 To switch to FSx for ONTAP, follow the instructions to <<Deploy Microsoft SQL Server on AWS EC2 using FSx for ONTAP,deploy Microsoft SQL Server on AQS EC2 using FSx for ONTAP file systems>>.
 
 === Explore savings for detected hosts
-Workload Factory enters the detected Elastic Block Store and FSx for Windows File Server host characteristics so that you can explore savings automatically.
+Workload Factory enters the detected host characteristics so that you can explore savings automatically.
 
 .Before you begin
 Complete the following prerequisites before you begin: 
@@ -180,6 +180,8 @@ Complete the following prerequisites before you begin:
 }
 ----
 . Opt the billable AWS account in to AWS Compute Optimizer.
+
+==== Explore savings for detected Microsoft SQL Server hosts
 
 Follow the steps under the tab for your storage type.
 
@@ -254,6 +256,47 @@ If Workload Factory detects FSx for Windows shadow copies, it sets the default v
 . For more accurate results, update Compute information and Storage and performance details.
 +
 Workload Factory consolidates multiple SQL Server on-premises hosts into a single FSx for ONTAP configuration recommendation to optimize cost savings unless the selected on-premises hosts exceed throughput, capacity, or IOPS limits for a single FSx for ONTAP file system.
+
+.On-premises host removal
+After you've explored savings for a Microsoft SQL server on-premises host, you have the option to remove the on-premises host record from Workload Factory. Select the action menu of the Microsoft SQL Server on-premises host and then select *Delete*.
+====
+After you provide details for your database host configuration, review the calculations and recommendations provided on the page.
+
+Additionally, scroll down to the bottom of the page to view the report by selecting one of the following:
+
+* *Export PDF*
+* *Send by email*
+* *View the calculations*
+
+To switch to FSx for ONTAP, follow the instructions to <<Deploy Microsoft SQL Server on AWS EC2 using FSx for ONTAP,deploy Microsoft SQL Server on AQS EC2 using FSx for ONTAP file systems>>.
+
+==== Explore savings for detected Oracle hosts
+
+Follow the steps under the tab for your storage type.
+
+[role="tabbed-block"]
+====
+.Amazon Elastic Block Store (EBS)
+--
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Databases*.
+. From the Databases menu, select *Explore savings*.
+. In Explore savings, select the *Oracle on Elastic Block Store (EBS)* tab.
++
+If Workload Factory detects EBS hosts, it redirects you to the Explore savings tab. If it doesn't detect EBS hosts, it redirects you to the calculator to <<Explore savings via customization,explore savings via customization>>.
+. From *Explore savings*, select one or more database hosts running on EBS and then select *Explore savings*.
+. If required, authenticate the database host with Oracle credentials, or by adding missing Oracle permissions.
++
+If the Explore savings page doesn't load data after successful authentication, select the *Inventory* tab to reload the data, and then select the *Explore savings* tab again.
+. In the Savings calculator, you can give the following details on clones and snapshots in your EBS storage for a more accurate cost savings estimate.
+.. *Snapshot frequency*: Select a snapshot frequency from the menu.
+.. *Clone refresh frequency*: Select the frequency that clones refresh from the menu.
+.. *Number of cloned copies*: Enter the number of cloned copies in the EBS configuration.
+.. *Monthly change rate*: Enter the percentage that clone and snapshot data changes on average per month.
+.. *Add hosts*: Optionally, select up to five detected EBS hosts to include in the savings calculation.
++
+Workload Factory consolidates multiple Oracle hosts into a single FSx for ONTAP configuration recommendation to optimize cost savings unless the selected EBS hosts exceed throughput, capacity, or IOPS limits for a single FSx for ONTAP file system.
 --
 .Oracle Server on-premises 
 --
@@ -281,6 +324,9 @@ If Workload Factory detects FSx for Windows shadow copies, it sets the default v
 . For more accurate results, update Compute information and Storage and performance details.
 +
 Workload Factory consolidates multiple Oracle on-premises databases into a single FSx for ONTAP configuration recommendation to optimize cost savings unless the selected on-premises databases exceed throughput, capacity, or IOPS limits for a single FSx for ONTAP file system.
+
+.On-premises host removal
+After you've explored savings for an Oracle on-premises host, you have the option to remove the on-premises host record from Workload Factory. Select the action menu of the Oracle on-premises host and then select *Delete*.
 ====
 After you provide details for your database host configuration, review the calculations and recommendations provided on the page.
 
@@ -291,9 +337,6 @@ Additionally, scroll down to the bottom of the page to view the report by select
 * *View the calculations*
 
 To switch to FSx for ONTAP, follow the instructions to <<Deploy Microsoft SQL Server on AWS EC2 using FSx for ONTAP,deploy Microsoft SQL Server on AQS EC2 using FSx for ONTAP file systems>>.
-
-.On-premises host removal
-After you've explored savings for a Microsoft SQL server on-premises host, you have the option to remove the on-premises host record from Workload Factory. Select the action menu of the Microsoft SQL Server on-premises host and then select *Delete*.
 
 == Deploy Microsoft SQL Server on AWS EC2 using FSx for ONTAP
 If you'd like to switch to FSx for ONTAP to realize cost savings, click *Create* to create the recommended configuration(s) directly from the Create new Microsoft SQL server wizard or click *Save* to save the recommended configuration(s) for later. 
