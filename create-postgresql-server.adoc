@@ -133,14 +133,7 @@ In the *Cluster configuration - Node 1* field, select an availability zone from 
 ... In the *Cluster configuration - Node 1* field, select the primary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the primary availability zone from the *Subnet* dropdown menu. 
 ... In the *Cluster configuration - Node 2* field, select the secondary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the secondary availability zone from the *Subnet* dropdown menu. 
 
-.. *Security group*: Select one or more existing security groups or create a new security group. 
-+
-Two security groups get attached to the SQL nodes (EC2 instances) during new server deployment. 
-+
-1. A workload security group is created to allow ports and protocols required for PostgreSQL. 
-+
-2. For a new FSx for ONTAP file system, a new security group is created and attached to the SQL node. For an existing FSx for ONTAP file system, the security group associated with it is added automatically to the PostgreSQL node which allows communication to the file system. 
-
+.. *Security group*: A workload security group is created to allow ports and protocols required for PostgreSQL. In addition, you can select one or more security groups.
 . Under *Application settings*, provide the following: 
 .. Select the *Operating system* from the dropdown menu.
 .. Select the *PostgreSQL version* from the dropdown menu.
