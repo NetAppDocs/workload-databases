@@ -4,7 +4,7 @@ NetApp Workload Factory for Databases lets you customize savings for Oracle host
 link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html[Explore savings for Oracle hosts on EBS]
 
 === Multiple security group selection for Microsoft SQL Server and PostgreSQL host deployment
-NetApp Workload Factory for Databases now allows you to select multiple security groups when deploying Microsoft SQL Server and PostgreSQL hosts. This enhancement provides greater flexibility in configuring network security for your database workloads.
+NetApp Workload Factory for Databases now allows you to select multiple security groups when deploying Microsoft SQL Server and PostgreSQL hosts. This gives you greater flexibility when configuring network security for your database workloads.
 
 * link:https://docs.netapp.com/us-en/workload-databases/create-database-server.html[Deploy Microsoft SQL Server hosts]
 * link:https://docs.netapp.com/us-en/workload-databases/create-postgresql-server.html[Deploy PostgreSQL hosts]
