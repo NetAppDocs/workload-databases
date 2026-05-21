@@ -8,3 +8,6 @@ NetApp Workload Factory for Databases now allows you to select multiple security
 
 * link:https://docs.netapp.com/us-en/workload-databases/create-database-server.html[Deploy Microsoft SQL Server hosts]
 * link:https://docs.netapp.com/us-en/workload-databases/create-postgresql-server.html[Deploy PostgreSQL hosts]
+
+=== Support for AWS GovCloud (US) in NetApp Workload Factory
+NetApp Workload Factory supports AWS GovCloud (US) accounts. Using a GovCloud account, you can deploy and manage database workloads in the AWS GovCloud (US) regions.
