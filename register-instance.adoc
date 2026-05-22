@@ -18,6 +18,8 @@ Registering an instance (SQL Server) or database (Oracle) involves three steps: 
 
 Workload Factory supports only Microsoft SQL Server instance and Oracle database registration and management. Depending on the AWS account credentials you select in Workload Factory, PostgreSQL hosts appear in the Inventory. Currently, Workload Factory supports unregistered PostgreSQL instances running only on Amazon Linux operating systems.
 
+AWS GovCloud (US) users must use AWS Secrets Manager to authenticate FSx for ONTAP credentials. For all other users, you can authenticate FSx for ONTAP with either Secrets Manager or file system credentials.
+
 == Before you begin
 
 The host for the instance or database must appear in the Inventory. For hosts to appear in the inventory, you must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _view, planning, and analysis_ permissions^] in your AWS account. 
