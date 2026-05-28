@@ -60,7 +60,7 @@ If instances are authenticated, select *Next*.
 .. Select to *Use the same credentials for all resources* or *Manage credentials manually*. 
 .. Enter either the AWS SSM Parameter ARN with FSx for ONTAP credentials for GovCloud accounts or the FSx for ONTAP file system user name and password for all other accounts, and then select *Next*. 
 +
-For GovCloud accounts, the AWS SSM Parameter ARN value is provided in the Parameter Store under Parameter details in the AWS Management Console in the following format: `{fsx:{"username":"fsxadmin","password":"pass"}}`. The AWS SSM Parameter type must be "Secure String" with the name in the format `/netapp/wlmdb/<fsx_filesystemID>`. Learn more about retrieving SSM parameters from link:https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html[AWS Systems Manager Parameter Store documentation^].  
+For GovCloud accounts, the AWS SSM Parameter ARN value is provided in the Parameter Store under Parameter details in the AWS Management Console in the following format: `{fsx:{"username":"fsxadmin","password":"pass"}}`. The AWS SSM Parameter type must be "Secure String" with the name in the format `/netapp/wlmdb/<fsx_filesystemID>`. Learn more about retrieving SSM parameters from link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html[AWS GovCloud documentation^].  
 +
 If the FSx for ONTAP file system is authenticated, select *Next*.
 . To Prepare (step 3), make sure the instance(s) meets the minimum requirements. 
@@ -100,7 +100,7 @@ If databases are authenticated, select *Next*.
 .. Enter either the AWS SSM Parameter ARN with FSx for ONTAP credentials for GovCloud accounts or the FSx for ONTAP file system user name and password for all other accounts, and then select *Next*. 
 +
 The AWS SSM Parameter type must be "Secure String" with the name in the format `/netapp/wlmdb/<fsx_filesystemID>`. Enter the value for the AWS SSM Parameter ARN in the following format:
-`{fsx:{"username":"fsxadmin","password":"pass"}}`. Learn more about retrieving SSM parameters from link:https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html[AWS Systems Manager Parameter Store documentation^]. 
+`{fsx:{"username":"fsxadmin","password":"pass"}}`. Learn more about retrieving SSM parameters from link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html[AWS GovCloud documentation^]. 
 +
 If the FSx for ONTAP file system is authenticated, select *Next*.
 
