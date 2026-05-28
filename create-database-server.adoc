@@ -126,7 +126,7 @@ For AWS-managed Active Directories, the DNS IP address(es) appear in the dropdow
 ... *Create new FSx for ONTAP*: Enter user name and password.
 +
 A new FSx for ONTAP file system may add 30 minutes or more of installation time. 
-... *Select an existing FSx for ONTAP*: Select FSx for ONTAP name from the dropdown menu, and enter a user name and password for the file system. 
+... *Select an existing FSx for ONTAP*: Select the FSx for ONTAP name, and enter a user name and password for the file system. 
 +
 For existing FSx for ONTAP file systems, ensure the following: 
 
