@@ -1,0 +1,13 @@
+=== Custom savings for Oracle hosts on Amazon Elastic Block Store
+NetApp Workload Factory for Databases lets you customize savings for Oracle hosts on Amazon Elastic Block Store (EBS). You can adjust several fields like the snapshot frequency, the number of cloned copies, and volume details to see how they affect your savings. 
+
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html[Explore savings for Oracle hosts on EBS]
+
+=== Multiple security group selection for Microsoft SQL Server and PostgreSQL host deployment
+NetApp Workload Factory for Databases now allows you to select multiple security groups when deploying Microsoft SQL Server and PostgreSQL hosts. This gives you greater flexibility when configuring network security for your database workloads.
+
+* link:https://docs.netapp.com/us-en/workload-databases/create-database-server.html[Deploy Microsoft SQL Server hosts]
+* link:https://docs.netapp.com/us-en/workload-databases/create-postgresql-server.html[Deploy PostgreSQL hosts]
+
+=== Support for AWS GovCloud (US) in NetApp Workload Factory
+NetApp Workload Factory supports AWS GovCloud (US) accounts. Using a GovCloud account, you can deploy and manage database workloads in the AWS GovCloud (US) regions.

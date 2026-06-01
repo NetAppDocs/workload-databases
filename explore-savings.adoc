@@ -62,6 +62,10 @@ Explore savings for detected hosts: Workload Factory links to your existing Micr
 Additionally, you can link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[add AWS credentials^] to improve the accuracy of the calculator analysis. Select *Calculate savings based on existing resources*. You'll be redirected to the Add credentials page. After you add credentials, select the existing resources to compare with FSx for ONTAP, and select *Explore savings*.
 
 === Explore savings via customization
+Customize the fields in the calculator to get the most accurate savings estimate. 
+
+==== Customize savings for Microsoft SQL Server hosts
+
 Follow the steps under the tab for your storage type.
 
 [role="tabbed-block"]
@@ -118,7 +122,6 @@ Follow the steps under the tab for your storage type.
 
 --
 ====
-
 After you provide details for your database host configuration, review the calculations and recommendations provided on the page.
 
 Additionally, scroll down to the bottom of the page to view the report by selecting one of the following:
@@ -127,7 +130,42 @@ Additionally, scroll down to the bottom of the page to view the report by select
 * *Send by email*
 * *View the calculations*
 
-To switch to FSx for ONTAP, follow the instructions to <<Deploy Microsoft SQL Server on AWS EC2 using FSx for ONTAP,deploy Microsoft SQL Server on AQS EC2 using FSx for ONTAP file systems>>.
+To switch to FSx for ONTAP, follow the instructions to <<Deploy Microsoft SQL Server on AWS EC2 using FSx for ONTAP,deploy Microsoft SQL Server on AWS EC2 using FSx for ONTAP file systems>>.
+
+==== Customize savings for Oracle hosts on EBS
+Customize the fields in the calculator to get the most accurate savings estimate for your Oracle hosts running on Amazon Elastic Block Store (EBS). 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Databases*.
+. From Databases, select *Explore savings* then *Oracle on EBS*. 
+. In the Savings calculator, provide the following details: 
+.. *Region*: Select a region from the dropdown menu. 
+.. *Deployment model*: Select a deployment model from the dropdown menu.
+.. *Oracle edition*: Select the Oracle edition from the dropdown menu.
+.. *Monthly data change rate (%)*: Enter the percentage that clone and snapshot data changes on average per month.  
+.. *Snapshot frequency*: Select a snapshot frequency from the dropdown menu. 
+.. *Number of cloned copies*: Enter the number of cloned copies in the EBS configuration.
+.. *Monthly Oracle BYOL cost ($)*: Optionally, enter the monthly Oracle BYOL cost in dollars.  
+.. Under EC2 specifications, provide the following: 
++
+* *Machine description*: Optionally, enter a name to describe the machine.
+* *Instance type*: Select the EC2 instance type from the dropdown menu. 
+.. Under Volume types, provide the following details for at least one volume type. IOPS and throughput apply to certain disk type volumes.
++
+* *Number of volumes*
+* *Storage amount per volume (GiB)*
+* *Provisioned IOPS per volume*
+* *Throughput MB/s*
+.. If you selected the Always On availability deployment model, provide details for *Secondary EC2 specifications* and *Volume types*.  
+
+After you provide details for your database host configuration, review the calculations and recommendations provided on the page.
+
+Additionally, scroll down to the bottom of the page to view the report by selecting one of the following:
+
+* *Export PDF*
+* *Send by email*
+* *View the calculations*
 
 === Explore savings for detected hosts
 Workload Factory enters the detected host characteristics so that you can explore savings automatically.
@@ -260,6 +298,7 @@ Workload Factory consolidates multiple SQL Server on-premises hosts into a singl
 .On-premises host removal
 After you've explored savings for a Microsoft SQL server on-premises host, you have the option to remove the on-premises host record from Workload Factory. Select the action menu of the Microsoft SQL Server on-premises host and then select *Delete*.
 ====
+
 After you provide details for your database host configuration, review the calculations and recommendations provided on the page.
 
 Additionally, scroll down to the bottom of the page to view the report by selecting one of the following:
@@ -268,7 +307,7 @@ Additionally, scroll down to the bottom of the page to view the report by select
 * *Send by email*
 * *View the calculations*
 
-To switch to FSx for ONTAP, follow the instructions to <<Deploy Microsoft SQL Server on AWS EC2 using FSx for ONTAP,deploy Microsoft SQL Server on AQS EC2 using FSx for ONTAP file systems>>.
+To switch to FSx for ONTAP, follow the instructions to <<Deploy Microsoft SQL Server on AWS EC2 using FSx for ONTAP,deploy Microsoft SQL Server on AWS EC2 using FSx for ONTAP file systems>>.
 
 ==== Explore savings for detected Oracle hosts
 
@@ -328,6 +367,7 @@ Workload Factory consolidates multiple Oracle on-premises databases into a singl
 .On-premises host removal
 After you've explored savings for an Oracle on-premises host, you have the option to remove the on-premises host record from Workload Factory. Select the action menu of the Oracle on-premises host and then select *Delete*.
 ====
+
 After you provide details for your database host configuration, review the calculations and recommendations provided on the page.
 
 Additionally, scroll down to the bottom of the page to view the report by selecting one of the following:
@@ -335,8 +375,6 @@ Additionally, scroll down to the bottom of the page to view the report by select
 * *Export PDF*
 * *Send by email*
 * *View the calculations*
-
-To switch to FSx for ONTAP, follow the instructions to <<Deploy Microsoft SQL Server on AWS EC2 using FSx for ONTAP,deploy Microsoft SQL Server on AQS EC2 using FSx for ONTAP file systems>>.
 
 == Deploy Microsoft SQL Server on AWS EC2 using FSx for ONTAP
 If you'd like to switch to FSx for ONTAP to realize cost savings, click *Create* to create the recommended configuration(s) directly from the Create new Microsoft SQL server wizard or click *Save* to save the recommended configuration(s) for later. 
