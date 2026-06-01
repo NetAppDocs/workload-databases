@@ -149,7 +149,6 @@ For GovCloud accounts, enter the AWS SSM Parameter ARN value for the credentials
 .. *FSx for ONTAP system*: Create a new FSx for ONTAP file system or use an existing FSx for ONTAP file system. 
 ... *Create new FSx for ONTAP*: Enter user name and password.
 +
-+
 For GovCloud accounts, enter the AWS SSM Parameter ARN value for the FSx for ONTAP credentials in the following format: `{fsx:{"username":"fsxadmin","password":"pass"}}`. The AWS SSM Parameter type must be "Secure String" with the name in the format `/netapp/wlmdb/<anyname>`. Learn more about retrieving SSM parameters from link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html[AWS GovCloud documentation^].
 +
 A new FSx for ONTAP file system may add 30 minutes or more of installation time. 
