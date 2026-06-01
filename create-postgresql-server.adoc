@@ -77,6 +77,8 @@ Subnets should not share the same route table for high availability.
 .. *FSx for ONTAP system*: Create a new FSx for ONTAP file system or use an existing FSx for ONTAP file system. 
 ... *Create new FSx for ONTAP*: Enter user name and password.
 +
+For GovCloud accounts, enter the AWS SSM Parameter ARN value for FSx for ONTAP credentials in the following format: `{fsx:{"username":"fsxadmin","password":"pass"}}`. The AWS SSM Parameter type must be "Secure String" with the name in the format `/netapp/wlmdb/<anyname>`. Learn more about retrieving SSM parameters from link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html[AWS GovCloud documentation^].
++
 A new FSx for ONTAP file system may add 30 minutes or more of installation time. 
 ... *Select an existing FSx for ONTAP*: Select FSx for ONTAP name from the dropdown menu, and enter a user name and password for the file system. 
 +
@@ -133,24 +135,22 @@ In the *Cluster configuration - Node 1* field, select an availability zone from 
 ... In the *Cluster configuration - Node 1* field, select the primary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the primary availability zone from the *Subnet* dropdown menu. 
 ... In the *Cluster configuration - Node 2* field, select the secondary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the secondary availability zone from the *Subnet* dropdown menu. 
 
-.. *Security group*: Select an existing security group or create a new security group. 
-+
-Two security groups get attached to the SQL nodes (EC2 instances) during new server deployment. 
-+
-1. A workload security group is created to allow ports and protocols required for PostgreSQL. 
-+
-2. For a new FSx for ONTAP file system, a new security group is created and attached to the SQL node. For an existing FSx for ONTAP file system, the security group associated with it is added automatically to the PostgreSQL node which allows communication to the file system. 
-
+.. *Security group*: A workload security group is created to allow ports and protocols required for PostgreSQL. In addition, you can select one or more security groups.
 . Under *Application settings*, provide the following: 
 .. Select the *Operating system* from the dropdown menu.
 .. Select the *PostgreSQL version* from the dropdown menu.
 .. *Database server name*: Enter the database cluster name.
 .. *Database credentials*: Enter a user name and password for a new service account or use existing service account credentials in the Active Directory.
++
+For GovCloud accounts, enter the AWS SSM Parameter ARN value for the credentials in the following format: `{fsx:{"username":"fsxadmin","password":"pass"}}`. The AWS SSM Parameter type must be "Secure String" with the name in the format `/netapp/wlmdb/<anyname>`. Learn more about retrieving SSM parameters from link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html[AWS GovCloud documentation^].
 . Under *Connectivity*, select a key pair to connect securely to your instance.
 . Under *Infrastructure settings*, provide the following:  
 .. *DB Instance type*: Select the database instance type from the dropdown menu. 
 .. *FSx for ONTAP system*: Create a new FSx for ONTAP file system or use an existing FSx for ONTAP file system. 
 ... *Create new FSx for ONTAP*: Enter user name and password.
++
++
+For GovCloud accounts, enter the AWS SSM Parameter ARN value for the FSx for ONTAP credentials in the following format: `{fsx:{"username":"fsxadmin","password":"pass"}}`. The AWS SSM Parameter type must be "Secure String" with the name in the format `/netapp/wlmdb/<anyname>`. Learn more about retrieving SSM parameters from link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html[AWS GovCloud documentation^].
 +
 A new FSx for ONTAP file system may add 30 minutes or more of installation time. 
 ... *Select an existing FSx for ONTAP*: Select FSx for ONTAP name from the dropdown menu, and enter a user name and password for the file system. 
@@ -173,7 +173,7 @@ FSx for ONTAP custom encryption keys aren't listed based on service applicabilit
 +
 AWS-managed keys are filtered based on service applicability.  
 .. *Tags*: Optionally, you can add up to 40 tags. 
-.. *Simple Notification Service*: Optionally, you can enable the Simple Notification Service (SNS) for this configuration by selecting an SNS topic for Microsoft SQL Server from the dropdown menu. 
+.. *Simple Notification Service*: Optionally, you can enable the Simple Notification Service (SNS) for this configuration by selecting an SNS topic for PostgreSQL from the dropdown menu. 
 ... Enable the Simple Notification Service. 
 ... Select an ARN from the dropdown menu.
 .. *CloudWatch monitoring*: Optionally, you can enable CloudWatch monitoring.
