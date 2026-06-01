@@ -193,16 +193,7 @@ NOTE: FCI deployments are only supported on Multiple Availability Zone (MAZ) FSx
 ** In the *Cluster configuration - Node 1* field, select the primary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the primary availability zone from the *Subnet* dropdown menu.
 ** In the *Cluster configuration - Node 2* field, select the secondary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the secondary availability zone from the *Subnet* dropdown menu.
 
-.. *Security group*: Select an existing security group or create a new security group.
-Three security groups get attached to the SQL nodes (EC2 instances) during new server deployment. 
-
-1. A workload security group is created to allow ports and protocols required for Microsoft SQL and Windows cluster communication on nodes. 
-+
-2. In case of AWS-managed Active Directory, the security group attached to the directory service gets automatically added to the Microsoft SQL nodes to allow communication with Active Directory.  
-+
-3. For an existing FSx for ONTAP file system, the security group associated with it is added automatically to the SQL nodes which allows communication to the file system. When a new FSx for ONTAP system is created, a new security group is created for the FSx for ONTAP file system and the same security group also gets attached to SQL nodes.
-+
-For a user-managed Active Directory, ensure the security group configured on the AD instance allows traffic from subnets used for deployment. The security group should allow communication to the Active Directory domain controllers from the subnets where EC2 instances for Microsoft SQL are configured.
+.. *Security group*: A workload security group is created to allow ports and protocols required for Microsoft SQL and Windows cluster communication on nodes. In addition, you can select one or more security groups.
 
 . Under *Application settings*, provide the following: 
 .. Under *SQL Server install type*, select *License included AMI* or *Use custom AMI*. 
