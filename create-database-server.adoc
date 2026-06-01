@@ -110,6 +110,12 @@ NOTE: FCI deployments are only supported on Multiple Availability Zone (MAZ) FSx
 ... In the *Cluster configuration - Node 2* field, select the secondary availability zone for the MAZ FSx for ONTAP configuration from the *Availability zone* dropdown menu and a subnet from the secondary availability zone from the *Subnet* dropdown menu. 
 
 . Under *Application settings*, enter a user name and password for *Database credentials*. 
++
+For GovCloud accounts, enter the value for the AWS SSM Parameter ARN in the following format:
+`{fsx:{"username":"fsxadmin","password":"pass"}}`.
++
+The value is provided in the Parameter Store under Parameter details in the AWS Management Console. The AWS SSM Parameter type must be "Secure String" with the name in the format `/netapp/wlmdb/<anyname>`. Learn more about retrieving SSM parameters from link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html[AWS GovCloud documentation^].  
++
 . Under *Connectivity*, provide the following: 
 .. *Key pair*: Select a key pair.
 .. *Active Directory*: 
@@ -121,12 +127,16 @@ NOTE: FCI deployments are only supported on Multiple Availability Zone (MAZ) FSx
 For AWS-managed Active Directories, the DNS IP address(es) appear in the dropdown menu.
 ... In the *User name* field, enter the user name for the Active Directory domain. 
 ... In the *Password* field, enter a password for the Active Directory domain.
++
+For GovCloud accounts, enter the AWS SSM Parameter ARN value for Active Directory credentials in the following format: `{fsx:{"username":"fsxadmin","password":"pass"}}`. The AWS SSM Parameter type must be "Secure String" with the name in the format `/netapp/wlmdb/<anyname>`. Learn more about retrieving SSM parameters from link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html[AWS GovCloud documentation^].
 . Under *Infrastructure settings*, provide the following:  
 .. *FSx for ONTAP system*: Create a new FSx for ONTAP file system or use an existing FSx for ONTAP file system. 
-... *Create new FSx for ONTAP*: Enter user name and password.
+... *Create new FSx for ONTAP*: Enter user name and password. 
++
+For GovCloud accounts, enter the AWS SSM Parameter ARN value for FSx for ONTAP credentials in the following format: `{fsx:{"username":"fsxadmin","password":"pass"}}`. The AWS SSM Parameter type must be "Secure String" with the name in the format `/netapp/wlmdb/<anyname>`. Learn more about retrieving SSM parameters from link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html[AWS GovCloud documentation^].
 +
 A new FSx for ONTAP file system may add 30 minutes or more of installation time. 
-... *Select an existing FSx for ONTAP*: Select FSx for ONTAP name from the dropdown menu, and enter a user name and password for the file system. 
+... *Select an existing FSx for ONTAP*: Select the FSx for ONTAP name, and enter a user name and password for the file system. 
 +
 For existing FSx for ONTAP file systems, ensure the following: 
 
@@ -210,6 +220,11 @@ NOTE: If the selected collation set isn't compatible for installation, we recomm
 .. *Database credentials*: Enter a user name and password for a new service account or use existing service account credentials in the Active Directory.
 +
 Optional: Select to *Use managed service account* for the SQL Server service account. Use this option if your environment uses MSA (Managed Service Account) or Group Managed Service Accounts (gMSA) where password management is handled by Active Directory.
++
+For GovCloud accounts, enter the value for the AWS SSM Parameter ARN in the following format:
+`{fsx:{"username":"fsxadmin","password":"pass"}}`.
++
+The value is provided in the Parameter Store under Parameter details in the AWS Management Console. The AWS SSM Parameter type must be "Secure String" with the name in the format `/netapp/wlmdb/<anyname>`. Learn more about retrieving SSM parameters from link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html[AWS GovCloud documentation^].  
 . Under *Connectivity*, provide the following:
 .. *Key pair*: Select a key pair to connect securely to your instance.
 .. *Active Directory*: Provide the following Active Directory details: 
@@ -219,8 +234,9 @@ Optional: Select to *Use managed service account* for the SQL Server service acc
 ... In the *DNS address* field, enter the DNS IP address for the domain. You can add up to 3 IP addresses. 
 +
 For AWS-managed Active Directories, the DNS IP address(es) appear in the dropdown menu.
-... In the *User name* field, enter the user name for the Active Directory domain. 
-... In the *Password* field, enter a password for the Active Directory domain.
+... Enter the user name and password for the Active Directory domain. 
++
+For GovCloud accounts, enter the AWS SSM Parameter ARN value for Active Directory credentials in the following format: `{fsx:{"username":"fsxadmin","password":"pass"}}`. The AWS SSM Parameter type must be "Secure String" with the name in the format `/netapp/wlmdb/<anyname>`. Learn more about retrieving SSM parameters from link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html[AWS GovCloud documentation^].
 ... *Preferred domain controller*: Optionally, enter the preferred domain controller to use for the Active Directory to join. 
 ... *Preferred organizational unit path*: Optionally, enter the preferred organizational unit (OU) in the Active Directory to join.
 ... *Target Active Directory group*: Optionally, enter the target Active Directory group to add the computers to.
@@ -228,6 +244,8 @@ For AWS-managed Active Directories, the DNS IP address(es) appear in the dropdow
 .. *DB Instance type*: Select the database instance type from the dropdown menu. 
 .. *FSx for ONTAP system*: Create a new FSx for ONTAP file system or use an existing FSx for ONTAP file system. 
 ... *Create new FSx for ONTAP*: Enter user name and password.
++
+For GovCloud accounts, enter the AWS SSM Parameter ARN value for the FSx for ONTAP credentials in the following format: `{fsx:{"username":"fsxadmin","password":"pass"}}`. The AWS SSM Parameter type must be "Secure String" with the name in the format `/netapp/wlmdb/<anyname>`. Learn more about retrieving SSM parameters from link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html[AWS GovCloud documentation^].
 +
 A new FSx for ONTAP file system may add 30 minutes or more of installation time. 
 ... *Select an existing FSx for ONTAP*: Select FSx for ONTAP name from the dropdown menu, and enter a user name and password for the file system. 
