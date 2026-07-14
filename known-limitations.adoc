@@ -87,7 +87,6 @@ After adding hosts to NetApp Backup and Recovery for protection, database discov
 The following AWS regions aren't supported: 
 
 * China regions
-* GovCloud (US) regions
 * Secret Cloud
 * Top Secret 
 
