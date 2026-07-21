@@ -1,0 +1,13 @@
+=== Configuration changes for Oracle and Microsoft SQL Server in the well-architected analysis
+
+Several database configurations have been combined and renamed to the following configurations in the well-architected analysis. 
+
+* *Block device space management*: includes space reservation, space allocation, and fractional reserve
+
+* *Storage efficiencies*: includes compression, deduplication, and compaction
+
+* *Tiering/TCO optimization*: includes tiering policy and tiering minimum cooling days
+
+* *Schedule local snapshots*: includes snapshot policy
+
+link:https://docs.netapp.com/us-en/workload-databases/optimize-overview.html[Configuration analysis in Workload Factory]
