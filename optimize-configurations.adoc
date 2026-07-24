@@ -51,6 +51,8 @@ Perform a one-time assessment to find out the well-architected status of your Mi
 
 You can run the script and upload results multiple times. Workload Factory updates the well-architected status and insights with each upload.
 
+For each configuration, you can view the current value and the recommended value.
+
 [role="tabbed-block"]
 ====
 .Microsoft SQL Server instances
