@@ -51,7 +51,7 @@ Workload Factory provides a set of best practices and recommendations for operat
 
 === Microsoft SQL Server
 
-==== Storage sizing
+==== Storage
 
 * *Storage tier*
 +
@@ -69,8 +69,6 @@ Size and monitor your SQL Server log drive appropriately to prevent transaction 
 +
 Size and monitor TempDB appropriately to maintain optimal performance and system stability. Insufficient TempDB space can cause query slowdowns, application timeouts, and system crashes.
 
-==== Storage layout
-
 * *Data files (.mdf) placement* and *Log files (.ldf) placement*
 +
 Place data and log files on separate drives to improve performance and enable independent backup and restore operations.
@@ -79,8 +77,6 @@ Place data and log files on separate drives to improve performance and enable in
 +
 Place TempDB on a dedicated drive to avoid I/O contention and improve SQL Server performance and stability. Otherwise, you may experience I/O bottlenecks, slower queries, and system instability.
 
-==== Storage configuration
-
 * *ONTAP configuration*
 +
 Enable thin provisioning, autosize, and space management for FSx for ONTAP volumes to optimize storage efficiency and cost-effectiveness. Configure tiering policies to move older snapshots to the capacity tier while maintaining high performance for active data. For LUNs, ensure the OS type matches your operating system partitioning scheme for proper I/O alignment, enable space reservation to prevent write failures, and enable space allocation to allow automatic space reclamation and host notifications when storage is full.
@@ -88,6 +84,10 @@ Enable thin provisioning, autosize, and space management for FSx for ONTAP volum
 * *Operating system*
 + 
 Enable and configure Microsoft Multipath I/O (MPIO) with appropriate timeout settings to ensure high availability and data access consistency for SQL Server databases on EC2 with FSx for ONTAP. MPIO provides redundant paths for enhanced resiliency and performance during failovers. Configure NTFS allocation unit size appropriately for optimal disk utilization and performance.
+
+* *Storage efficiency*
++
+Enable storage efficiency features such as compaction, compression, and deduplication on FSx for ONTAP volumes to optimize storage utilization and reduce costs.
 
 ==== Compute
 
@@ -107,7 +107,7 @@ Configure Receive Side Scaling (RSS) to distribute network processing across mul
 +
 Align EC2 instance Maximum Transmission Unit (MTU) settings with FSx for ONTAP to prevent network fragmentation and optimize SQL Server performance. Fixing MTU misalignment ensures consistent MTU configuration across all nodes and network paths.
 
-==== Application (SQL Server)
+==== Application
 
 * *License*
 +
@@ -127,10 +127,13 @@ Configure MAXDOP to optimize query performance. Values of 4, 8, or 16 typically 
 +
 Schedule regular snapshots for point-in-time backups and fast recovery from accidental deletions, data corruption, and other issues. 
 
+* *Application-consistent snapshots*
++   
+Use application-consistent snapshots with NetApp SnapCenter to take accurate, reliable snapshots of your volume data at a specific moment in time. This keeps your apps running smoothly and your data safe. SnapCenter makes backups easier and helps you restore data quickly and correctly, reducing downtime and protecting your most important workloads.
+
 * *Backup configuration* 
 +
 Configure FSx for ONTAP backups or AWS Backup to meet data retention and compliance requirements. Avoid redundant backups.
-   
 
 * *Cross-region replication* 
 +
@@ -146,7 +149,7 @@ Regularly review and remove outdated clones to reduce storage costs. Old and unu
 
 === Oracle
 
-==== Storage sizing
+==== Storage
 
 * *File system headroom*
 +
@@ -155,8 +158,6 @@ Maintain adequate file system capacity to optimize storage performance and preve
 * *Swap space*
 +
 Set swap space based on the amount of RAM so the system can handle memory pressure and avoid slowdowns or crashes.
-
-==== Storage layout
 
 * *Oracle binary placement*
 +
@@ -186,8 +187,6 @@ Place archive logs on a dedicated volume to enhance performance and recovery pro
 +
 Distribute LUNs across Automatic Storage Management (ASM) data, redo log, and archive log disk groups for optimal performance and redundancy.
 
-==== Storage configuration
-
 * *ONTAP*
 +
 Optimize FSx for ONTAP configuration for Oracle databases by enabling thin provisioning, autosize, and space management for volumes. Configure appropriate snapshot policies and tiering strategies to balance performance and cost. For LUNs, ensure proper OS type alignment, space reservation, and space allocation settings to prevent write failures and enable automatic space reclamation.
@@ -195,6 +194,10 @@ Optimize FSx for ONTAP configuration for Oracle databases by enabling thin provi
 * *Operating system*
 +
 Configure operating system settings for optimal Oracle database performance, including tuning kernel parameters for database workloads and configuring NFS or dNFS settings appropriately for network file system access.
+
+* *Storage efficiency*
++
+Enable storage efficiency features such as compaction, compression, and deduplication on FSx for ONTAP volumes to optimize storage utilization and reduce costs.
 
 ==== Compute
 
