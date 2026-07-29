@@ -49,13 +49,10 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Lea
 
 Workload Factory provides best practices and recommendations for well-architected database workloads. The well-architected analysis assesses Microsoft SQL Server and Oracle Database configurations and settings related to storage, compute, application, resiliency, and cloning. 
 
-* Use the best practices sections as indexes to find  configuration names and short descriptions quickly.
-* Get more configuration details by opening the expandable items in the detailed recommendations section.
-
 == Microsoft SQL Server best practices
+The following best practices and recommendations apply to Microsoft SQL Server workloads.
 
-
-==== Storage
+=== Storage
 
 .Storage tier
 Use the primary SSD tier for performance-sensitive SQL workloads.
@@ -148,7 +145,7 @@ Set to 64K.
 Set NTFS allocation unit size to 64K to improve disk efficiency and reduce fragmentation for SQL Server workloads.
 ====
 
-==== Compute
+=== Compute
 
 .Compute rightsizing
 Match EC2 instance size to workload demand.
@@ -178,7 +175,7 @@ Align MTU across host and storage paths.
 Align EC2 MTU settings with FSx for ONTAP paths to prevent fragmentation and maintain stable throughput.
 ====
 
-==== Application
+=== Application
 
 .License
 Review license usage for paid features.
@@ -201,7 +198,7 @@ Use workload-tested values.
 Configure MAXDOP based on workload testing. Values of 4, 8, or 16 often work well. Monitor parallelism waits such as CXPACKET.
 ====
 
-==== Resiliency
+=== Resiliency
 
 .Application-consistent snapshots
 Use application-consistent snapshots with NetApp SnapCenter.
@@ -259,7 +256,7 @@ Validate service account and startup dependencies.
 Validate service account permissions, startup type, and dependencies for reliable high availability behavior.
 ====
 
-==== Cloning
+=== Cloning
 
 .Clone cleanup
 Remove old clones regularly.
@@ -268,7 +265,7 @@ Remove old clones regularly.
 Regularly remove outdated clones to reduce storage cost and operational clutter.
 ====
 
-== Oracle best practices
+=== Oracle best practices
 
 Use this index section to scan configuration names quickly and identify the items you want to review in the detailed recommendations section.
 
