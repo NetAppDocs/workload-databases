@@ -104,7 +104,8 @@ Use the expandable items in this section to read implementation guidance only fo
 
 ==== Storage
 
-.Storage tier
+.Storage tier: 
+Use the primary SSD tier for performance-sensitive SQL workloads.
 [%collapsible]
 ====
 Use the primary SSD tier for FSx for ONTAP volumes for optimal performance. The capacity pool tier might reduce performance and increase latency for SQL Server workloads.
