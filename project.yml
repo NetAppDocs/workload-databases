@@ -58,6 +58,8 @@ sidebar:
         entries: 
           - title: Configuration analysis for Databases
             url: /optimize-overview.html
+          - title: Updated configuration analysis
+            url: /option-a.html  
           - title: Implement well-architected database configurations   
             url: /optimize-configurations.html     
       - title: Analyze error logs
