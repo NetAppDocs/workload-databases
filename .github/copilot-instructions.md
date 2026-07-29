@@ -43,10 +43,10 @@ NetApp Workload Factory for Databases is an end-to-end database deployment and m
 
 **Key concepts:**
 - *Inventory*: the centralized view in Workload Factory where all discovered database hosts (SQL Server, Oracle, PostgreSQL) appear; hosts appear after AWS credentials with view permissions are added
-- *Registration*: the process of onboarding a SQL Server instance or Oracle database into Workload Factory for full management (monitoring, cloning, well-architected analysis); requires instance/database authentication, FSx for ONTAP authentication, and prerequisite preparation; PostgreSQL hosts appear in the Inventory but are not registered for management
-- *Well-architected assessment*: continuous or one-time analysis of SQL Server and Oracle configurations across six dimensions — storage sizing, storage layout, storage configuration, compute, application, and resiliency — based on AWS Well-Architected Framework
+- *Registration*: the process of onboarding a SQL Server instance or Oracle database into Workload Factory for full management (monitoring, cloning, well-architected analysis); requires instance/database authentication, operations and remediation permissions, and link association with the FSx for ONTAP file system; PostgreSQL hosts appear in the Inventory but are not registered for management
+- *Well-architected assessment*: continuous or one-time analysis of SQL Server and Oracle configurations across five configuration categories — storage, compute, application, resiliency, and cloning
 - *Sandbox clone*: a thin clone created from the most recent FSx for ONTAP snapshot of a source database, used for dev, test, QA, analytics, or training without affecting the source; clones must share the same FSx for ONTAP file system as the source
-- *Savings calculator*: compares total cost of ownership (storage, compute, SQL licensing, snapshots, clones) for SQL Server workloads on EBS, FSx for Windows File Server, or on-premises versus FSx for ONTAP
+- *Savings calculator*: compares total cost of ownership (storage, compute, SQL licensing, snapshots, clones) for SQL Server workloads on Amazon Elastic Block Store (EBS), FSx for Windows File Server, or on-premises versus FSx for ONTAP
 - *Quick create* and *Advanced create*: two deployment modes available for creating SQL Server hosts and databases; Quick create applies default best-practice settings while Advanced create allows full customization
 - *Thin provisioning*: FSx for ONTAP volumes are thin-provisioned by default; new database files consume only a few MBs of the total allocated size
 
@@ -59,9 +59,9 @@ NetApp Workload Factory for Databases is an end-to-end database deployment and m
 - *ASM* = Automatic Storage Management (Oracle disk group management)
 - *Data Guard* = Oracle HA/DR replication feature
 - *SnapMirror* = NetApp replication technology used by Backup and Recovery for SQL Server protection
-- *Workload Factory console* = the web UI; users can also access via *BlueXP console* or *Workload Factory API*
-- Permissions in Workload Factory are tiered: *basic* (read-only/IaC generation), *view, planning, and analysis* (discovery and assessment), and *automate* (full deployment and management)
-- *CRR* = Cross-Region Replication (FSx for ONTAP feature for disaster recovery)
+- *Workload Factory console* = the web UI; users can also access via *NetApp Console* or *Workload Factory API*
+- Permissions in Workload Factory are tiered: *View, planning, and analysis* (discovery and assessment), *Operations and remediation* (management and fixes), and *Database host creation* (deployment)
+- *CRR* = cross-region replication (FSx for ONTAP feature for disaster recovery)
 - *MPIO* = Microsoft Multipath I/O (required OS setting for SQL Server on EC2 with FSx for ONTAP)
 - *MAXDOP* = Maximum Degree of Parallelism (SQL Server configuration parameter)
 - *dNFS* = Direct NFS (Oracle kernel NFS client for improved NFS performance)
@@ -70,11 +70,11 @@ NetApp Workload Factory for Databases is an end-to-end database deployment and m
 
 **Explore cost savings:** Access Databases dashboard → Open Explore savings tab → Use savings calculator (customization or detected hosts mode) → Review itemized cost comparison → Optionally deploy SQL Server on FSx for ONTAP from calculator
 
-**Deploy a new SQL Server host:** Log in to Workload Factory → Select Databases workload → Deploy host → Choose Microsoft SQL Server → Select Quick create or Advanced create → Configure landing zone, VPC, storage (FSx for ONTAP), and SQL Server settings → Deploy via console or generate CloudFormation/Terraform via Codebox
+**Deploy a new database host:** Log in to Workload Factory → Select Databases workload → Deploy host → Choose Microsoft SQL Server or PostgreSQL → Select Quick create or Advanced create → Configure landing zone, VPC, storage (FSx for ONTAP), and database settings → Deploy via console or generate CloudFormation/Terraform via Codebox
 
-**Register and manage existing resources:** Discover hosts in Inventory (requires view permissions) → Select instance → Authenticate SQL Server/Oracle credentials → Authenticate FSx for ONTAP credentials → Complete prerequisite checks (install AWS and NetApp PowerShell modules) → Register instance → View in Inventory → Create databases, clones, or run well-architected assessment
+**Register and manage existing resources:** Discover hosts in Inventory (requires View, planning, and analysis permissions) → Select instance → Authenticate SQL Server/Oracle credentials → Complete prerequisite checks (install AWS and NetApp PowerShell modules) → Associate Workload Factory link with FSx for ONTAP file system → Register instance → View in Inventory → Create databases, clones, or run well-architected assessment
 
-**Well-architected continuous monitoring:** Register resources → Associate a Workload Factory link → Grant view, planning, and analysis permissions → Review well-architected dashboard → Apply recommended configuration fixes
+**Well-architected continuous assessment:** Register resources → Associate a Workload Factory link → Grant View, planning, and analysis permissions → Review well-architected dashboard → Apply recommended configuration fixes
 
 **Create and manage sandbox clones:** Register source SQL Server instance → Navigate to Sandboxes tab → Create new sandbox → Select source host, instance, and database → Select target host and instance (same FSx for ONTAP file system) → Configure mount point → Create clone → Manage lifecycle (refresh, revert, check integrity, split, or delete)
 
