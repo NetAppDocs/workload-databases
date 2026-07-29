@@ -11,3 +11,13 @@ Several database configurations have been combined and renamed to the following 
 * *Schedule local snapshots*: includes snapshot policy
 
 link:https://docs.netapp.com/us-en/workload-databases/optimize-overview.html[Configuration analysis in Workload Factory]
+
+=== Updated IAM permission policies for Databases
+
+Permissions for Databases were updated to improve feature access and limit SSM access where unnecessary.
+
+The view, planning, and analysis permissions are limited to AWS SSM documents. With these permissions, you can view hosts, instances, and databases. You can also run a basic on-demand well-architected analysis of your resources. 
+
+The operations and remediation permissions allow you to make changes to your resources, analyze error logs, get a comprehensive well-architected analysis of your resources and fix configuration issues.
+
+link:http^s://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html[Permissions reference^]
