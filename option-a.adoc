@@ -54,57 +54,10 @@ Workload Factory provides best practices and recommendations for well-architecte
 
 == Microsoft SQL Server best practices
 
-Use this index section to scan configuration names quickly and identify the items you want to review in the detailed recommendations section.
 
 ==== Storage
 
-* Storage tier: Use the primary SSD tier for performance-sensitive SQL workloads.
-* File system headroom: Keep enough free capacity above total volume size.
-* Log drive size: Size and monitor log drives to avoid rollbacks and outages.
-* TempDB drive size: Size TempDB to avoid bottlenecks and timeouts.
-* Data and log files placement: Separate `.mdf` and `.ldf` paths.
-* TempDB placement: Use a dedicated drive.
-* Thin provisioning: Allocate storage as needed.
-* Autosize and auto-size mode: Grow volumes automatically.
-* Snapshot reserve and autodelete: Preserve user data capacity.
-* Storage efficiencies: Use deduplication, compression, and compaction.
-* OS type: Match ONTAP LUN OS type to host partitioning.
-* MPIO settings: Configure policy, sessions, status monitoring, and timeout.
-* NTFS allocation unit size: Set to 64K.
-
-==== Compute
-
-* Compute rightsizing: Match EC2 instance size to workload demand.
-* Operating system patch: Apply current OS patches.
-* Network adapter settings: Configure RSS.
-* MTU alignment: Align MTU across host and storage paths.
-
-==== Application
-
-* License: Review license usage for paid features.
-* Microsoft SQL Server patch: Apply latest SQL Server patches.
-* MAXDOP: Use workload-tested values.
-
-==== Resiliency
-
-* Application-consistent snapshots: Use SnapCenter.
-* Cross-region replication: Protect against regional outages.
-* Backup configuration: Configure FSx for ONTAP backups or AWS Backup.
-* Cluster quorum: Configure quorum for failover cluster instances.
-* Drive letter consistency: Keep drive letters consistent across nodes.
-* Heartbeat settings: Tune heartbeat for stable failover behavior.
-* Shared storage: Ensure both nodes can access shared iSCSI LUNs.
-* SQL Server service settings: Validate service account and startup dependencies.
-
-==== Cloning
-
-* Clone cleanup: Remove old clones regularly.
-
-Use the expandable items in this section to read implementation guidance only for the configurations you select from the index.
-
-==== Storage
-
-.Storage tier: 
+.Storage tier
 Use the primary SSD tier for performance-sensitive SQL workloads.
 [%collapsible]
 ====
@@ -112,72 +65,84 @@ Use the primary SSD tier for FSx for ONTAP volumes for optimal performance. The 
 ====
 
 .File system headroom
+Keep enough free capacity above total volume size.
 [%collapsible]
 ====
 Maintain enough file system capacity above your total volume size. Too little free space causes performance issues; too much wastes storage and increases costs.
 ====
 
 .Log drive size
+Size and monitor log drives to avoid rollbacks and outages.
 [%collapsible]
 ====
 Size and monitor your SQL Server log drive to prevent transaction rollbacks, database unavailability, data corruption, and performance issues caused by a full log drive.
 ====
 
 .TempDB drive size
+Size TempDB to avoid bottlenecks and timeouts.
 [%collapsible]
 ====
 Size and monitor TempDB to maintain performance and stability. Insufficient TempDB space can cause query slowdowns, application timeouts, and system crashes.
 ====
 
 .Data and log files placement
+Separate `.mdf` and `.ldf` paths.
 [%collapsible]
 ====
 Separate data and log files onto different drives to improve parallel I/O, backup flexibility, and restore behavior.
 ====
 
 .TempDB placement
+Use a dedicated drive.
 [%collapsible]
 ====
 Place TempDB on a dedicated drive to avoid I/O contention and improve SQL Server performance and stability.
 ====
 
 .Thin provisioning
+Allocate storage as needed.
 [%collapsible]
 ====
 Configure thin provisioning for FSx for ONTAP volumes to make better use of storage and reduce costs.
 ====
 
 .Autosize and auto-size mode
+Grow volumes automatically.
 [%collapsible]
 ====
 Turn on autosize and set the mode to `grow` so volumes increase automatically before they become full and read-only.
 ====
 
 .Snapshot reserve and autodelete
+Preserve user data capacity.
 [%collapsible]
 ====
 Set snapshot reserve to 0% and enable snapshot autodelete so snapshots do not consume space needed for active data.
 ====
 
 .Storage efficiencies
+Use deduplication, compression, and compaction.
 [%collapsible]
 ====
 Enable deduplication, compression, and compaction to use less storage while maintaining performance.
 ====
 
 .OS type
+Match ONTAP LUN OS type to host partitioning.
 [%collapsible]
 ====
 Match the ONTAP LUN Operating System value to the host partitioning scheme to maintain correct I/O alignment.
 ====
 
 .MPIO settings
+Configure policy, sessions, status monitoring, and timeout.
 [%collapsible]
 ====
 Configure Multipath I/O for resiliency and throughput. Use five MPIO sessions per target interface for SQL Server on iSCSI LUNs, monitor path status, and set host timeout to 60 seconds.
 ====
 
 .NTFS allocation unit size
+Set to 64K.
 [%collapsible]
 ====
 Set NTFS allocation unit size to 64K to improve disk efficiency and reduce fragmentation for SQL Server workloads.
@@ -186,24 +151,28 @@ Set NTFS allocation unit size to 64K to improve disk efficiency and reduce fragm
 ==== Compute
 
 .Compute rightsizing
+Match EC2 instance size to workload demand.
 [%collapsible]
 ====
 Rightsize your SQL Server EC2 instance based on workload demand. Increase size when under-provisioned and reduce size when over-provisioned to balance cost and performance.
 ====
 
 .Operating system patch
+Apply current OS patches.
 [%collapsible]
 ====
 Apply the latest operating system patches to improve security and reliability.
 ====
 
 .Network adapter settings
+Configure RSS.
 [%collapsible]
 ====
 Configure Receive Side Scaling (RSS) to distribute network processing across CPUs. Validate settings before production rollout.
 ====
 
 .MTU alignment
+Align MTU across host and storage paths.
 [%collapsible]
 ====
 Align EC2 MTU settings with FSx for ONTAP paths to prevent fragmentation and maintain stable throughput.
@@ -212,18 +181,21 @@ Align EC2 MTU settings with FSx for ONTAP paths to prevent fragmentation and mai
 ==== Application
 
 .License
+Review license usage for paid features.
 [%collapsible]
 ====
 Review SQL Server license usage at the host level. If paid features are not in use, the license is not optimized and may increase cost.
 ====
 
 .Microsoft SQL Server patch
+Apply latest SQL Server patches.
 [%collapsible]
 ====
 Apply the latest SQL Server patches to improve security and system reliability.
 ====
 
 .MAXDOP
+Use workload-tested values.
 [%collapsible]
 ====
 Configure MAXDOP based on workload testing. Values of 4, 8, or 16 often work well. Monitor parallelism waits such as CXPACKET.
@@ -232,48 +204,56 @@ Configure MAXDOP based on workload testing. Values of 4, 8, or 16 often work wel
 ==== Resiliency
 
 .Application-consistent snapshots
+Use application-consistent snapshots with NetApp SnapCenter.
 [%collapsible]
 ====
-Use application-consistent snapshots with SnapCenter for reliable backup and restore.
+Use application-consistent snapshots with NetApp SnapCenter to take accurate, reliable snapshots of your volume data at a specific moment in time. SnapCenter makes backups easier and helps you restore data quickly, reducing downtime and protecting critical workloads.
 ====
 
 .Cross-region replication
+Protect against regional outages.
 [%collapsible]
 ====
 Enable CRR to improve disaster recovery readiness and business continuity.
 ====
 
 .Backup configuration
+Configure FSx for ONTAP backups or AWS Backup.
 [%collapsible]
 ====
 Configure FSx for ONTAP backups or AWS Backup to meet retention and compliance requirements while avoiding duplicate backup workflows.
 ====
 
 .Cluster quorum
+Configure quorum for failover cluster instances.
 [%collapsible]
 ====
 Configure quorum correctly for SQL Server Failover Cluster Instances so the cluster can tolerate expected node failures.
 ====
 
 .Drive letter consistency
+Keep drive letters consistent across nodes.
 [%collapsible]
 ====
 Use consistent drive letters across nodes in high availability deployments.
 ====
 
 .Heartbeat settings
+Tune heartbeat for stable failover behavior.
 [%collapsible]
 ====
 Tune heartbeat settings to avoid unnecessary failovers while still detecting real failures quickly.
 ====
 
 .Shared storage
+Make sure both nodes can access shared iSCSI LUNs.
 [%collapsible]
 ====
 Ensure both nodes in the FCI model can access all shared iSCSI LUNs.
 ====
 
-.SQL Server service settings
+.SQL Server service
+Validate service account and startup dependencies.
 [%collapsible]
 ====
 Validate service account permissions, startup type, and dependencies for reliable high availability behavior.
@@ -282,6 +262,7 @@ Validate service account permissions, startup type, and dependencies for reliabl
 ==== Cloning
 
 .Clone cleanup
+Remove old clones regularly.
 [%collapsible]
 ====
 Regularly remove outdated clones to reduce storage cost and operational clutter.
