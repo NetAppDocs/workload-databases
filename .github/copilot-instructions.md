@@ -6,28 +6,8 @@ Product: NetApp Workload Factory for Databases
 NetApp Workload Factory for Databases is an end-to-end database deployment and maintenance service that discovers, assesses, provisions, and manages Microsoft SQL Server, PostgreSQL, and Oracle databases on Amazon FSx for NetApp ONTAP (FSx for ONTAP). It provides built-in best practices for optimization, automatic thin cloning, cost savings analysis, and continuous well-architected monitoring.
 
 ### Repository structure
-- `learn-databases.adoc` – Product overview: what Workload Factory for Databases is, supported configurations, integrated AWS services, and FSx for ONTAP benefits
-- `quick-start-databases.adoc` – Getting started guide covering login, credentials, resource discovery, savings exploration, and well-architected setup
-- `create-database-server.adoc` – Steps to deploy a new Microsoft SQL Server host on FSx for ONTAP using Quick create or Advanced create modes
-- `create-postgresql-server.adoc` – Steps to deploy a new PostgreSQL server (HA or single instance) on FSx for ONTAP
-- `create-database.adoc` – Steps to create a Microsoft SQL user database within a managed SQL Server instance
-- `register-instance.adoc` – Steps to register Microsoft SQL Server instances and Oracle databases for continuous monitoring and management
-- `manage-instance.adoc` – Overview of resource management capabilities for registered SQL Server and Oracle resources
-- `explore-savings.adoc` – Savings calculator for comparing costs between EBS, FSx for Windows File Server, on-premises storage, and FSx for ONTAP
-- `optimize-overview.adoc` – Well-architected framework analysis covering storage sizing, storage layout, storage configuration, compute, application, and resiliency for SQL Server and Oracle
-- `optimize-configurations.adoc` – Steps to implement well-architected recommendations and fixes for registered database resources
-- `protect-sql-server.adoc` – Steps to protect SQL Server workloads using NetApp Backup and Recovery with the Plug-in for Microsoft SQL Server
-- `analyze-error-logs.adoc` – AI-powered (Amazon Bedrock) error log analysis for SQL Server and Oracle using the smart error log analyzer
-- `monitor-databases.adoc` – Database job monitoring
-- `create-sandbox-clone.adoc` – Steps to create a sandbox (thin) clone from a source database for dev, test, QA, and analytics
-- `refresh-clone.adoc`, `revert-clone.adoc`, `check-clone-integrity.adoc`, `split-clone.adoc`, `delete-clone.adoc`, `view-clone-connection.adoc`, `connect-clone-cicd.adoc` – Clone lifecycle management tasks
-- `deregister-instance.adoc` – Steps to deregister resources from Workload Factory management
-- `automate-codebox.adoc` – Codebox automation: generating IaC snippets, REST API, AWS CLI, CloudFormation, and Terraform templates
-- `whats-new.adoc` – Release notes landing page
 - `_whatsnew/` – Release note snippets included into `whats-new.adoc`, one file per release
 - `_include/` – Shared content snippets included across pages
-- `known-limitations.adoc` – Current product limitations
-- `support-registration.adoc`, `get-help.adoc` – Support and help resources
 - `media/` – Screenshots and images referenced in documentation
 
 ### Product-specific context
