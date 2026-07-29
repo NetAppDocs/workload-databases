@@ -11,14 +11,7 @@ summary: "Workload Factory for Databases analyzes Microsoft SQL Server and Oracl
 [.lead]
 Workload Factory for Databases analyzes database configurations regularly to determine if there are any issues with Microsoft SQL Server and Oracle deployments on Amazon FSx for NetApp ONTAP storage. When issues are found, Workload Factory shows you what the issues are and explains what needs to change so that your database configurations achieve peak performance, cost efficiency, and compliance with best practices.
 
-Key capabilities include: 
-
-* Daily configuration analysis
-* Automatic best practice validations
-* Right-sizing recommendations
-* Proactive observability
-* Insights to action
-* AWS Well-Architected Framework advisor
+Workload Factory provides best practices and recommendations for well-architected database workloads. The well-architected analysis assesses Microsoft SQL Server and Oracle Database configurations and settings related to storage, compute, application, resiliency, and cloning. 
 
 include::https://raw.githubusercontent.com/NetAppDocs/workload-setup-admin/main/_include/well-architected-workloads.adoc[]
 
@@ -28,26 +21,12 @@ include::https://raw.githubusercontent.com/NetAppDocs/workload-setup-admin/main/
 Workload Factory provides the following options for analyzing your database environment:
 
 * *One-time assessment*: Perform a link:optimize-configurations.html[one-time assessment] to find out the well-architected status of your Microsoft SQL Server instances or Oracle databases without storing credentials or registering resources. 
-
-* *Continuous monitoring*: Register resources to enable continuous monitoring. Workload Factory analyzes your database environment regularly, provides ongoing recommendations for optimizing your configurations, and automatically fixes issues. 
-
-== Analysis requirements
++
 For the one-time assessment, you only need to provide credentials once for the Microsoft SQL Server instances or Oracle database you want to analyze. 
 
-For continuous monitoring, you need to register your resources, associate a link, and grant permissions in your AWS account.
-
-* link:register-instance.html[Register your resources] and make sure they are online.
-
-* Associate a link. Link connectivity lets Workload Factory analyze all database deployment configurations like storage layout and resiliency.
+* *Continuous assessment*: Workload Factory analyzes your database environment regularly, provides ongoing recommendations for optimizing your configurations, and automatically fixes issues. 
 +
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. 
-* Grant _view, planning, and analysis_ permissions in your AWS account. 
-+
-link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to grant permissions to an AWS account^]
-
-== Best practices and recommendations for database workloads
-
-Workload Factory provides best practices and recommendations for well-architected database workloads. The well-architected analysis assesses Microsoft SQL Server and Oracle Database configurations and settings related to storage, compute, application, resiliency, and cloning. 
+For continuous assessment, you need to register your resources, associate a link, and grant permissions in your AWS account.
 
 == Microsoft SQL Server best practices
 The following best practices and recommendations apply to Microsoft SQL Server workloads.
@@ -265,160 +244,198 @@ Remove old clones regularly.
 Regularly remove outdated clones to reduce storage cost and operational clutter.
 ====
 
-=== Oracle best practices
+== Oracle best practices
 
-Use this index section to scan configuration names quickly and identify the items you want to review in the detailed recommendations section.
+The following best practices and recommendations apply to Oracle workloads.
 
-==== Storage
-
-* File system headroom: Keep enough free capacity.
-* Thin provisioning: Allocate storage as needed.
-* Autosize and auto-size mode: Grow volumes automatically.
-* Snapshot reserve and autodelete: Keep space for active data.
-* Storage efficiencies: Use deduplication, compression, and compaction.
-* Swap space: Set swap based on RAM.
-* Archive placement: Use a dedicated volume.
-* Data files placement: Isolate random I/O.
-* Control files placement: Place copies on separate volumes.
-* Redo logs placement: Isolate high-write activity.
-* Temp placement: Keep temp I/O isolated.
-* Oracle binary placement: Use a dedicated volume.
-* Schedule local snapshots: Disable local scheduled snapshots.
-* NFS rootonly: Disable for dNFS.
-* Binaries export policy: Include superuser and setuid permissions.
-* TCP slot table: Set to 128 for NFS-based Oracle workloads.
-* NFS mount options for database files: Use optimized options.
-* NFS mount options for ADR home: Use reliability-focused options.
-* NFS caching options: Do not disable host caching in standalone deployments.
-* dNFS enablement: Enable dNFS.
-* dNFS consistent IP resolution: Avoid round-robin name resolution.
-* dNFS configuration file: Validate `oranfstab` content.
-* dNFS no shared cache: Use `nosharecache` for specific multi-mount cases.
-
-==== Compute
-
-* Operating system patch: Apply current patches.
-* Oracle Critical Patch Updates: Apply current CPU updates.
-
-==== Resiliency
-
-* Application-consistent snapshots: Use SnapCenter.
-* Cross-region replication: Improve disaster recovery.
-* Backup configuration: Configure FSx for ONTAP backups or AWS Backup.
-
-==== Cloning
-
-* Clone cleanup: Remove old clones regularly.
-
-==== Storage detailed recommendations
-Expand items in this section to read implementation guidance only for the configurations you select from the index.
+=== Storage
 
 .File system headroom
+Keep enough free capacity.
 [%collapsible]
 ====
 Maintain enough file system capacity to improve storage performance and prevent slowdowns.
 ====
 
 .Thin provisioning
+Allocate storage as needed.
 [%collapsible]
 ====
 Configure thin provisioning to allocate storage as needed and reduce cost.
 ====
 
 .Autosize and auto-size mode
+Grow volumes automatically.
 [%collapsible]
 ====
 Turn on autosize and set mode to `grow` so volumes can increase before space exhaustion.
 ====
 
 .Snapshot reserve and autodelete
+Keep space for active data.
 [%collapsible]
 ====
 Set snapshot reserve to 0% and enable snapshot autodelete to protect space for active data.
 ====
 
 .Storage efficiencies
+Use deduplication, compression, and compaction.
 [%collapsible]
 ====
 Enable deduplication, compression, and compaction to reduce storage use and cost while maintaining performance.
 ====
 
+.Swap space
+Set swap based on RAM.
+[%collapsible]
+====
+Configure swap space according to the system's RAM size to ensure optimal performance and prevent out-of-memory issues.
+====
+
 .Archive, data, control, redo, and temp placement
+Use a dedicated volume, isolate random I/O, and place copies on separate volumes, isolate high-write activity, and keep temp I/O isolated.
 [%collapsible]
 ====
 Place archive logs, data files, control files, redo logs, and temp files to isolate I/O patterns and improve resiliency. Keep redundant copies on separate volumes where required.
 ====
 
 .Oracle binary placement
+Use a dedicated volume.
 [%collapsible]
 ====
 Place Oracle binaries on a dedicated volume to reduce contention and simplify updates.
 ====
 
 .Schedule local snapshots
+Disable local scheduled snapshots.
 [%collapsible]
 ====
 Disable scheduled local snapshots and use external orchestration such as SnapCenter for application-consistent protection.
 ====
 
-.NFS and dNFS settings
+.NFS rootonly
+Disable for dNFS.
 [%collapsible]
 ====
-For dNFS environments, disable `nfs-rootonly`, validate export policy permissions for binaries, tune TCP slot table to 128, and use optimized mount options. Avoid round-robin name resolution and verify `oranfstab` configuration.
+Disable the ONTAP `nfs-rootonly` parameter for dNFS. `nfs-rootonly` restricts NFS connections to privileged ports (<1024). Because dNFS processes in NFSv4+ do not run as root and use higher ports, disabling this parameter allows necessary connections.
 ====
 
-.NFS caching options
+.Binaries export policy
+Include superuser and setuid permissions in the dedicated export policy for Oracle binaries.
+[%collapsible]
+====
+Make sure that if Oracle binaries are located on an NFS share, the export policy includes superuser and setuid permissions. Superuser (root) access allows NFS clients to map as root, needed for binary execution.
+====
+
+.TCP slot table
+Set to 128 for NFS-based Oracle workloads.
+[%collapsible]
+====
+Configure the kernel parameters for the TCP slot table to 128 for Oracle workloads running on NFS. This configuration enables more concurrent I/O operations, reducing latency in high-throughput scenarios such as Oracle data file access. Kernel parameters govern the maximum number of outstanding NFS requests over TCP, acting like queue depth in Fibre Channel setups. The default Linux values, typically set at 16, do not support optimal database performance.
+====
+
+.NFS mount options - database files
+Use NFS mount options that optimize performance for database files.
 [%collapsible]
 ====
 In standalone Oracle environments, do not use mount options such as `actimeo=0` or `noac` that disable host caching and reduce performance.
 ====
 
-.dNFS no shared cache
+.NFS mount options for ADR home
+Use NFS mount options that optimize performance for the ADR home directory.
 [%collapsible]
 ====
-Use `nosharecache` when a source volume is mounted more than once on a server with nested NFS mounts.
+Use optimized NFS mount options for the Automatic Diagnostic Repository (ADR) home, or root directory.  The ADR home stores logs and traces, which benefit from similar reliability options as core database files but don't require the `nointr` mount option because operations are less interrupt-sensitive.
 ====
 
-==== Compute
+.NFSv4 domain name
+?
+[%collapsible]
+====
+? Specify the NFSv4 domain name to ensure proper Kerberos authentication and consistent client-server interactions. The domain name should match the DNS domain of the NFS server to avoid authentication and access issues.
+====
+
+.NFS caching options
+Do not disable host caching in standalone deployments.
+[%collapsible]
+====
+Omit NFS mount options that disable host caching—such as, `actimeo=0` and `noac`—in standalone Oracle deployments. These options apply to clustered environments to ensure cache consistency, but in single-instance environments, they unnecessarily bypass caching and can significantly reduce performance. For optimal efficiency and reliability in standalone deployments, do not include these options.
+====
+
+.dNFS enablement
+Enable dNFS.
+[%collapsible]
+====
+Enable Direct NFS (dNFS) in your Oracle environment to optimize NFS storage performance and reliability.
+====
+
+.dNFS consistent IP resolution
+Avoid round-robin name resolution.
+[%collapsible]
+====
+Configure dNFS to use consistent IP resolution to prevent performance degradation and connectivity issues that can arise from round-robin name resolution. Avoid the use of Direct NFS (dNFS) with any type of round-robin name resolution, including DNS, DDNS, NIS, or any other method. This includes the DNS load balancing feature available in ONTAP. Consistent IP address resolution maintains database stability and prevents potential crashes or data corruption.
+====
+
+.dNFS configuration file
+Validate `oranfstab` content.
+[%collapsible]
+====
+Check and update the `oranfstab` file content to ensure proper Direct NFS (dNFS) usage. The `oranfstab` file is essential for configuring advanced dNFS features such as multipathing and specific NFS options. Proper configuration ensures efficient data access and management.
+====
+
+.dNFS no shared cache
+Use `nosharecache` for specific multi-mount cases.
+[%collapsible]
+====
+Configure the `nosharecache` mount option for environments where Direct NFS (dNFS) is enabled, and a source volume is mounted more than once on a single server with nested NFS mounts. This configuration prevents cache sharing between mounts, ensuring data consistency and optimal performance.
+====
+
+=== Compute
 
 .Operating system patch
+Apply current patches.
 [%collapsible]
 ====
-Apply operating system patches regularly for security, stability, and performance.
+Apply operating system patches regularly to ensure security, stability, and performance improvements for your Oracle database environment.
 ====
 
 .Oracle Critical Patch Updates
+Apply current CPU updates.
 [%collapsible]
 ====
-Apply Oracle Critical Patch Updates on schedule to address security vulnerabilities.
+Apply the latest Oracle Critical Patch Updates to address security vulnerabilities and maintain the integrity of your database environment. Regularly review and apply patches to protect against potential threats and ensure compliance with security best practices.
 ====
 
-==== Resiliency
+=== Resiliency
 
 .Application-consistent snapshots
+Use application-consistent snapshots with NetApp SnapCenter.
 [%collapsible]
 ====
-Use SnapCenter for application-consistent snapshots to improve backup reliability and restore quality.
+Use application-consistent snapshots with NetApp SnapCenter to take accurate, reliable snapshots of your volume data at a specific moment in time. SnapCenter makes backups easier and helps you restore data quickly, reducing downtime and protecting critical workloads.
 ====
 
 .Cross-region replication
+Protect against regional outages.
 [%collapsible]
 ====
-Enable CRR to protect against regional outages and support continuity objectives.
+Enable CRR to improve disaster recovery readiness and business continuity.
 ====
 
 .Backup configuration
+Configure FSx for ONTAP backups or AWS Backup.
 [%collapsible]
 ====
-Configure FSx for ONTAP backups or AWS Backup to align with retention and compliance requirements.
+Configure FSx for ONTAP backups or AWS Backup to meet retention and compliance requirements while avoiding duplicate backup workflows.
 ====
 
-==== Cloning
+=== Cloning
 
 .Clone cleanup
+Remove old clones regularly.
 [%collapsible]
 ====
-Remove outdated clones regularly to control storage cost.
+Regularly remove outdated clones to reduce storage cost and operational clutter.
 ====
 
 .What's next
