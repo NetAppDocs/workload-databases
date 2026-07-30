@@ -1,0 +1,325 @@
+== Best practices and recommendations for database workloads
+
+Workload Factory provides best practices and recommendations for well-architected database workloads. The well-architected analysis assesses Microsoft SQL Server and Oracle Database configurations and settings related to storage sizing, storage layout, storage configuration, compute, application (SQL Server), and resiliency. 
+
+=== Microsoft SQL Server
+The following best practices and recommendations apply to Microsoft SQL Server workloads.
+
+==== Storage
+
+* *Storage tier*
++
+Use the primary SSD tier for FSx for ONTAP volumes for optimal performance. The capacity pool tier might reduce performance and increase latency. The primary SSD tier is designed for high-performance workloads, while the capacity pool tier is optimized for cost efficiency and might not meet the performance requirements of SQL Server workloads.
+
+* *File system headroom*
++
+Maintain enough file system capacity above your total volume size. Too little free space causes performance issues; too much wastes storage and increases costs.
+
+* *Log drive size*
++
+Size and monitor your SQL Server log drive appropriately to prevent transaction rollbacks, database unavailability, data corruption, and performance issues caused by a full log drive. 
+
+* *TempDB drive size*
++
+Size and monitor TempDB appropriately to maintain optimal performance and system stability. Insufficient TempDB space can cause query slowdowns, application timeouts, and system crashes.
+
+* *Data files (.mdf) placement* and *log files (.ldf) placement*
++
+Separating data and log files onto different drives improves performance by allowing simultaneous I/O activity, independent backup schedules, and improved restore functionality. We recommend separating data and log LUN paths into different volumes for smaller databases.
+
+* *TempDB placement*
++
+Place TempDB on a dedicated drive to avoid I/O contention and improve SQL Server performance and stability. Otherwise, you might experience I/O bottlenecks, slower queries, and system instability.
+
+* *Thin provisioning*
++
+Configure thin provisioning for FSx for ONTAP volumes to make better use of storage and reduce costs. Thin provisioning lets you allocate storage as needed instead of reserving all capacity at once.
+
+* *Autosize*
++
+Turn on autosize to automatically increase volume size when it nears full capacity. Autosize improves storage efficiency, saves costs, and prevents volumes from running out of space and becoming read-only.
+
+* *Auto-size mode*
++
+Set autosize mode to "grow" to automatically increase volume size when it gets full. If autosize is off, you must monitor and resize volumes manually, which takes more time and increases the risk of mistakes.
+
+* *Block device space management*
++
+Configure block device space settings for LUNs used by Microsoft SQL server instances to prevent write failures and improve space efficiency on FSx for ONTAP. 
+
+* *Snapshot copy reserve*
++
+Set the snapshot copy reserve to 0% to use more storage for active file data and reduce costs.
+
+* *Snapshot autodelete*
++
+Turn on automatic snapshot deletion to remove older snapshots when space runs low, so snapshots do not use space needed for user data.
+
+* *Space management*
++
+When space runs low, expand the volume before deleting snapshot copies. Expanding the volume prevents "volume full" errors, reduces write failures, and preserves snapshot recovery points.
+
+* *Tiering / TCO optimization*
++
+For optimal database performance and cost efficiency, use the snapshot-only tiering policy, which moves only snapshot data to the capacity tier while keeping active data on the SSD tier.
+This approach preserves low-latency performance for SQL workloads while reducing storage costs.
+Tier snapshot data after a 7-day cooling period.
+
+* *Storage efficiencies*
++
+Enable storage efficiencies—deduplication, compression, and compaction—on volumes used by Microsoft SQL Server to use less storage, lower costs, and make better use of resources while maintaining performance.
+
+* *OS type*
++
+Match the ONTAP LUN Operating System (OS) type value to the operating system partitioning scheme to achieve I/O alignment. Incorrect configuration causes suboptimal performance.
+
+* *Multipath I/O (MPIO) settings*
++
+MPIO provides redundant paths for enhanced resiliency and performance during failovers. The following settings relate to MPIO. 
+
+** *Multipath I/O policy*
++
+To ensure optimal uptime and data access consistency for Microsoft SQL databases on EC2 with underlying LUNs provisioned in FSx for ONTAP, we recommend enabling and configuring Multipath I/O (MPIO). MPIO provides multiple paths to FSx for ONTAP, enhancing both resiliency and performance. This best practice protects against potential data loss or downtime by maintaining data access even if a component fails.
+
+** *Multipath I/O sessions*
++
+For SQL Server on FSx for ONTAP iSCSI LUNs, use five multipath I/O (MPIO) sessions per target interface. This balances traffic across paths and improves redundancy, throughput, and failover.
++
+** *Multipath I/O status*
++
+Monitor the status of multipath I/O to detect any path failures or performance issues. Ensure that all paths are active and functioning correctly.
++
+** *Multipath I/O timeout*
++
+Configure the Microsoft Multipath I/O (MPIO) timeout setting on the host to 60 seconds to ensure connectivity and stability during FSx for ONTAP failovers. The 60-second setting prevents disk disconnections, application errors, and potential data loss caused by insufficient timeout settings.
+
+** *NTFS allocation unit size*
+Set NTFS allocation unit size to 64K to better use disk space, reduce fragmentation, and improve file read/write performance. Failure to configure this properly might lead to inefficient disk usage and degraded performance.
+
+* *Schedule local snapshots*
++
+Disable scheduled snapshots for FSx for ONTAP volumes used by Microsoft SQL Server. Instead, manage snapshots externally using tools such as SnapCenter, which create application-consistent backups and help prevent data corruption during restore operations.
+
+==== Compute
+
+* *Compute rightsizing*
++
+Rightsize your SQL Server EC2 instance based on workload demands to balance performance and cost efficiency. If your current instance is under-provisioned, upgrading enhances CPU, memory, and I/O capacity. If it is over-provisioned, downgrading maintains performance while reducing costs. 
+
+* *Operating system patch*
++
+Apply the latest operating system patches to enhance security and system reliability. 
+
+* *Network adapter settings*
++
+Configure Receive Side Scaling (RSS) to distribute network processing across multiple processors and improve network performance. Test settings before applying to production.
+
+* *MTU alignment*
++
+Align EC2 instance Maximum Transmission Unit (MTU) settings with FSx for ONTAP to prevent network fragmentation and optimize SQL Server performance. Fixing MTU misalignment ensures consistent MTU configuration across all nodes and network paths.
+
+==== Application
+
+* *License*
++
+Workload Factory provides the SQL Server license assessment and recommendation at the host level. We consider a license "not optimized" when it detects that your database infrastructure doesn't use any of the commercial software license features you pay for. An unoptimized license results in unnecessary costs. Review your SQL Server license usage to check that you use all features you pay for.
+
+* *Microsoft SQL Server patch*
++
+Apply the latest SQL Server patches to improve security and system reliability.
+
+* *MAXDOP*
++
+Configure MAXDOP to optimize query performance. Values of 4, 8, or 16 typically work well. Test your workload and monitor for parallelism wait types such as CXPACKET.
+
+==== Resiliency
+
+* *Application-consistent snapshots*
++   
+Use application-consistent snapshots with NetApp SnapCenter to take accurate, reliable snapshots of your volume data at a specific moment in time. SnapCenter makes backups easier and helps you restore data quickly, reducing downtime and protecting critical workloads.
+
+* *Cross-region replication* 
++
+Enable cross-region replication (CRR) to improve data availability and disaster recovery for your Oracle databases. CRR helps protect against regional outages and ensures business continuity by replicating data across different locations.
+
+* *Backup configuration* 
++
+Configure FSx for ONTAP backups or AWS Backup to meet data retention and compliance requirements. Avoid redundant backups.
+
+* *Cluster quorum*
++
+For SQL Server Failover Cluster Instances, Workload Factory recommends properly configuring the cluster quorum to ensure cluster health and proper failover behavior. The quorum configuration determines how many node failures the cluster can sustain.
+
+* *Drive letter*
++
+Use consistent drive letter assignments across all nodes in a SQL Server high availability configuration. Consistent drive letters simplify management and ensure proper failover behavior.
+
+* *Heartbeat settings*
++
+Configure appropriate heartbeat settings for SQL Server high availability clusters. Proper heartbeat configuration prevents unnecessary failovers while ensuring timely detection of actual failures.
+
+* *Shared storage*
++
+All shared disks (iSCSI LUNs) must be accessible by both nodes in the FCI deployment model to allow failover.
+
+* *SQL Server Service*
++
+Ensure SQL Server services are properly configured for high availability scenarios. This includes appropriate service account permissions, startup types, and dependencies to ensure reliable operation.
+
+==== Cloning
+
+* *Clone cleanup*
++
+Regularly review and remove outdated clones to reduce storage costs. Old and unused clones cause high costs.
+
+=== Oracle
+
+==== Storage
+
+* *File system headroom*
++
+Maintain enough file system capacity to improve storage performance and prevent slowdowns. Enough headroom helps manage storage and supports database growth.
+
+* *Thin provisioning*
++
+Configure thin provisioning for FSx for ONTAP volumes to make better use of storage and reduce costs. Thin provisioning lets you allocate storage as needed instead of reserving all capacity at once.
+
+* *Autosize*
++
+Turn on autosize to automatically increase volume size when it nears full capacity. Autosize improves storage efficiency, saves costs, and prevents volumes from running out of space and becoming read-only.
+
+* *Auto-size mode*
++
+Set autosize mode to "grow" to automatically increase volume size when it gets full. If autosize is off, you must monitor and resize volumes manually, which takes more time and increases the risk of mistakes.
+
+* *Space management*
++
+When space runs low, expand the volume before deleting snapshot copies. Expanding the volume prevents "volume full" errors, reduces write failures, and preserves snapshot recovery points.
+
+* *Snapshot copy reserve*
++
+Set the snapshot copy reserve to 0% to use more storage for active file data and reduce costs.
+
+* *Snapshot autodelete*
++
+Turn on automatic snapshot deletion to remove older snapshots when space runs low, so snapshots do not use space needed for user data.
+
+* *Tiering / TCO optimization*
++
+For optimal database performance and cost efficiency, use the snapshot-only tiering policy, which moves only snapshot data to the capacity tier while keeping active data on the SSD tier.
+This approach preserves low-latency performance for SQL workloads while reducing storage costs.
+Tier snapshot data after a 7-day cooling period.
+
+* *Storage efficiencies*
++
+Enable storage efficiencies—deduplication, compression, and compaction—on volumes used by Microsoft SQL Server to reduce storage use, lower costs, and make better use of resources while maintaining performance.
+
+* *Swap space*
++
+Set swap space based on the amount of RAM so the system can handle memory pressure and avoid slowdowns or crashes.
+
+* *Archive placement*
++
+Place archive logs on a dedicated volume to enhance performance and recovery processes by preventing high I/O demands from interfering with other database operations.
+
+* *Data files placement*
++ 
+Place data files on a dedicated volume or with control files to isolate random I/O and improve performance. This separation enables customized snapshot configurations, tiering policies, and efficiency mechanisms to optimize performance and cost.
+
+* *Control files placement*
++
+Store copies of control files on different volumes or disks to avoid a single point of failure and add redundancy. Place control files on a dedicated volume or share them with redo logs or data files, but do not place them on volumes tiered to object storage due to performance requirements.
+
+* *Redo logs placement*
++
+Place redo logs on a dedicated volume or shared appropriately with temp or control files to isolate high-write I/O operations and improve performance. Store each copy of the redo log on a separate volume for redundancy. Do not place redo logs on volume snapshots or on volumes tiered to object storage because Oracle updates them frequently. 
+
+* *Temp placement*
++
+Place temp files on a dedicated volume or shared appropriately with redo or control files to isolate high-write I/O operations and improve performance. Each multiplexed temp copy should reside on a separate volume for redundancy. Temp files should not be placed on volume snapshots or volumes tiered to object storage due to their frequent update patterns.
+
+* *Oracle binary placement*
++
+Place Oracle binaries on a dedicated volume to ensure optimal performance and stability by reducing I/O contention. This separation simplifies software updates and minimizes the risk of accidental modifications or corruption.
+
+* *Schedule local snapshots*
++
+Disable scheduled snapshots for FSx for ONTAP volumes used by Microsoft SQL Server. Instead, manage snapshots externally using tools such as SnapCenter, which create application-consistent backups and help prevent data corruption during restore operations.
+
+* *NFS rootonly*
++
+Disable the ONTAP `nfs-rootonly` parameter for dNFS. `nfs-rootonly` restricts NFS connections to privileged ports (<1024). Because dNFS processes in NFSv4+ do not run as root and use higher ports, disabling this parameter allows necessary connections.
+
+* *Binaries export policy*
++
+Ensure that if Oracle binaries are located on an NFS share, the export policy includes superuser and setuid permissions. Superuser (root) access allows NFS clients to map as root, needed for binary execution.
+
+* *TCP slot table*'
++
+Configure the kernel parameters for the TCP slot table to 128 for Oracle workloads running on NFS. This configuration enables more concurrent I/O operations, reducing latency in high-throughput scenarios such as Oracle data file access. Kernel parameters govern the maximum number of outstanding NFS requests over TCP, acting like queue depth in Fibre Channel setups. The default Linux values, typically set at 16, do not support optimal database performance.
+
+* *NFS mount options - database files*
++ 
+Use optimized NFS mount options for database files. Key parameters include `rw` for read/write access, `bg` for background mounting, `hard` for indefinite retries on failures, and `proto=tcp` for reliable delivery. The `rsize` and `wsize` values of 262144 improve large I/O operations, enhancing throughput, while `nointr` doesn't interrupt long-running tasks. This configuration improves database performance and resilience, particularly in high-throughput environments.
+
+* *NFS mount options - ADR home*
++ 
+Use optimized NFS mount options for the Automatic Diagnostic Repository (ADR) home, or root directory.  The ADR home stores logs and traces, which benefit from similar reliability options as core database files but don't require the `nointr` mount option because operations are less interrupt-sensitive.
+
+* *NFSv4 domain name*
++ 
+? no recommendation in exported file
+
+* *NFS caching options*
++
+Omit NFS mount options that disable host caching—such as, `actimeo=0` and `noac`—in standalone Oracle deployments. These options apply to clustered environments to ensure cache consistency, but in single-instance environments, they unnecessarily bypass caching and can significantly reduce performance. For optimal efficiency and reliability in standalone deployments, do not include these options.
+
+* *dNFS enablement*
++ 
+Enable Direct NFS (dNFS) in your Oracle environment to optimize NFS storage performance and reliability.
+
+* *dNFS consistent IP resolution*
++
+Avoid the use of Direct NFS (dNFS) with any type of round-robin name resolution, including DNS, DDNS, NIS, or any other method. This includes the DNS load balancing feature available in ONTAP. Consistent IP address resolution maintains database stability and prevents potential crashes or data corruption.
+
+* *dNFS configuration file*
++ 
+Check and update the `oranfstab` file content to ensure proper Direct NFS (dNFS) usage. The `oranfstab` file is essential for configuring advanced dNFS features such as multipathing and specific NFS options. Proper configuration ensures efficient data access and management.
+
+* *dNFS no shared cache*
++
+Configure the `nosharecache` mount option for environments where Direct NFS (dNFS) is enabled, and a source volume is mounted more than once on a single server with nested NFS mounts. This configuration prevents cache sharing between mounts, ensuring data consistency and optimal performance.
+
+==== Compute
+
+* *Operating system patch*
++
+Apply operating system patches regularly to ensure security, stability, and performance improvements for your Oracle database environment.
+
+* *Oracle Critical Patch Updates*
++
+Apply the latest Oracle Critical Patch Updates to address security vulnerabilities and maintain the integrity of your database environment. Regularly review and apply patches to protect against potential threats and ensure compliance with security best practices.
+
+==== Resiliency
+
+* *Application-consistent snapshots*
++   
+Use application-consistent snapshots with NetApp SnapCenter to take accurate, reliable snapshots of your volume data at a specific moment in time. SnapCenter makes backups easier and restores data quickly, reducing downtime and protecting critical workloads.
+
+* *Cross-region replication (CRR)*
++   
+Enable cross-region replication (CRR) to improve data availability and disaster recovery for your Oracle databases. CRR helps protect against regional outages and ensures business continuity by replicating data across different locations.
+
+* *Backup configuration*
++
+Configure FSx for ONTAP backups or AWS Backup to meet data retention and compliance requirements. Avoid redundant backups.
+
+==== Cloning 
+
+* *Clone cleanup*
++
+Regularly review and remove outdated clones to reduce storage costs. Old and unused clones cause high costs.
+
+
+
+

@@ -22,7 +22,7 @@ Workload Factory provides the following options for analyzing your database envi
 
 * *One-time assessment*: Perform a link:optimize-configurations.html[one-time assessment] to find out the well-architected status of your Microsoft SQL Server instances or Oracle databases without storing credentials or registering resources. 
 +
-For the one-time assessment, you only need to provide credentials once for the Microsoft SQL Server instances or Oracle database you want to analyze. 
+For the one-time assessment, you only need to provide credentials once for the Microsoft SQL Server instances or Oracle databases you want to analyze. 
 
 * *Continuous assessment*: Workload Factory analyzes your database environment regularly, provides ongoing recommendations for optimizing your configurations, and automatically fixes issues. 
 +
@@ -37,7 +37,7 @@ The following best practices and recommendations apply to Microsoft SQL Server w
 Use the primary SSD tier for performance-sensitive SQL workloads.
 [%collapsible]
 ====
-Use the primary SSD tier for FSx for ONTAP volumes for optimal performance. The capacity pool tier might reduce performance and increase latency for SQL Server workloads.
+Use the primary SSD tier for FSx for ONTAP volumes for optimal performance. The capacity pool tier might reduce performance and increase latency. The primary SSD tier is designed for high-performance workloads, while the capacity pool tier is optimized for cost efficiency and might not meet the performance requirements of SQL Server workloads.
 ====
 
 .File system headroom
@@ -58,14 +58,14 @@ Size and monitor your SQL Server log drive to prevent transaction rollbacks, dat
 Size TempDB to avoid bottlenecks and timeouts.
 [%collapsible]
 ====
-Size and monitor TempDB to maintain performance and stability. Insufficient TempDB space can cause query slowdowns, application timeouts, and system crashes.
+Size and monitor TempDB to maintain performance and stability. Too little TempDB space can cause query slowdowns, application timeouts, and system crashes.
 ====
 
 .Data and log files placement
 Separate `.mdf` and `.ldf` paths.
 [%collapsible]
 ====
-Separate data and log files onto different drives to improve parallel I/O, backup flexibility, and restore behavior.
+Separate data and log files onto different drives to improve parallel I/O, backup flexibility, and restore behavior. We recommend separating data and log LUN paths into different volumes for smaller databases.
 ====
 
 .TempDB placement
@@ -79,7 +79,7 @@ Place TempDB on a dedicated drive to avoid I/O contention and improve SQL Server
 Allocate storage as needed.
 [%collapsible]
 ====
-Configure thin provisioning for FSx for ONTAP volumes to make better use of storage and reduce costs.
+Configure thin provisioning for FSx for ONTAP volumes to make better use of storage and reduce costs. Thin provisioning lets you allocate storage as needed instead of reserving all capacity at once.
 ====
 
 .Autosize and auto-size mode
@@ -89,11 +89,32 @@ Grow volumes automatically.
 Turn on autosize and set the mode to `grow` so volumes increase automatically before they become full and read-only.
 ====
 
-.Snapshot reserve and autodelete
+.Block device space management
+Configure block device space settings for LUNs used by SQL Server.
+[%collapsible]
+====
+Configure block device space settings for LUNs used by Microsoft SQL server instances to prevent write failures and improve space efficiency on FSx for ONTAP. 
+====
+
+.Snapshot copy reserve and autodelete
 Preserve user data capacity.
 [%collapsible]
 ====
-Set snapshot reserve to 0% and enable snapshot autodelete so snapshots do not consume space needed for active data.
+Set snapshot copy reserve to 0% and enable snapshot autodelete so snapshots do not consume space needed for active data.
+====
+
+.Space management
+Expand the volume before deleting snapshot copies.
+[%collapsible]
+====
+When space runs low, expand the volume before deleting snapshot copies. Expanding the volume prevents "volume full" errors, reduces write failures, and preserves snapshot recovery points.
+====
+
+.Tiering / TCP optimization
+Tier snapshot data using the snapshot-only tiering policy.
+[%collapsible]
+====
+Use the snapshot-only tiering policy, which moves only snapshot data to the capacity tier while keeping active data on the SSD tier. This approach preserves low-latency performance for SQL workloads while reducing storage costs. Tier snapshot data after a 7-day cooling period.
 ====
 
 .Storage efficiencies
@@ -110,11 +131,11 @@ Match ONTAP LUN OS type to host partitioning.
 Match the ONTAP LUN Operating System value to the host partitioning scheme to maintain correct I/O alignment.
 ====
 
-.MPIO settings
-Configure policy, sessions, status monitoring, and timeout.
+.MPIO policy, sessions, status, and timeout settings
+Configure Multipath I/O (MPIO) policy, sessions, status, and timeout settings.
 [%collapsible]
 ====
-Configure Multipath I/O for resiliency and throughput. Use five MPIO sessions per target interface for SQL Server on iSCSI LUNs, monitor path status, and set host timeout to 60 seconds.
+Configure Multipath I/O (MPIO) for resiliency and throughput. Use five MPIO sessions per target interface for SQL Server on iSCSI LUNs, monitor path status, and set host timeout to 60 seconds.
 ====
 
 .NTFS allocation unit size
@@ -122,6 +143,13 @@ Set to 64K.
 [%collapsible]
 ====
 Set NTFS allocation unit size to 64K to improve disk efficiency and reduce fragmentation for SQL Server workloads.
+====
+
+.Scheduled local snapshots
+Disable scheduled snapshots for FSx for ONTAP volumes used by Microsoft SQL Server.
+[%collapsible]
+====
+Disable scheduled snapshots for FSx for ONTAP volumes used by Microsoft SQL Server. Instead, manage snapshots externally using tools such as NetApp SnapCenter, which create application-consistent backups and help prevent data corruption during restore operations.
 ====
 
 === Compute
@@ -141,17 +169,17 @@ Apply the latest operating system patches to improve security and reliability.
 ====
 
 .Network adapter settings
-Configure RSS.
+Configure Receive Side Scaling (RSS).
 [%collapsible]
 ====
-Configure Receive Side Scaling (RSS) to distribute network processing across CPUs. Validate settings before production rollout.
+Configure Receive Side Scaling (RSS) to distribute network processing across CPUs to improve network performance. Validate settings before production rollout.
 ====
 
 .MTU alignment
-Align MTU across host and storage paths.
+Align Maximum Transmission Unit (MTU) across host and storage paths.
 [%collapsible]
 ====
-Align EC2 MTU settings with FSx for ONTAP paths to prevent fragmentation and maintain stable throughput.
+Align EC2 Maximum Transmission Unit (MTU) settings with FSx for ONTAP paths to prevent fragmentation and maintain stable throughput. 
 ====
 
 === Application
@@ -174,7 +202,7 @@ Apply the latest SQL Server patches to improve security and system reliability.
 Use workload-tested values.
 [%collapsible]
 ====
-Configure MAXDOP based on workload testing. Values of 4, 8, or 16 often work well. Monitor parallelism waits such as CXPACKET.
+Configure MAXDOP to optimize query performance. Values of 4, 8, or 16 typically work well. Test your workload and monitor for parallelism wait types such as CXPACKET.
 ====
 
 === Resiliency
@@ -190,7 +218,7 @@ Use application-consistent snapshots with NetApp SnapCenter to take accurate, re
 Protect against regional outages.
 [%collapsible]
 ====
-Enable CRR to improve disaster recovery readiness and business continuity.
+Enable cross-region replication (CRR) to improve data availability and disaster recovery for your Oracle databases. CRR helps protect against regional outages and ensures business continuity by replicating data across different locations.
 ====
 
 .Backup configuration
@@ -207,11 +235,11 @@ Configure quorum for failover cluster instances.
 Configure quorum correctly for SQL Server Failover Cluster Instances so the cluster can tolerate expected node failures.
 ====
 
-.Drive letter consistency
+.Drive letter
 Keep drive letters consistent across nodes.
 [%collapsible]
 ====
-Use consistent drive letters across nodes in high availability deployments.
+Use the same drive letters on every node in your SQL Server high availability setup. This makes management easier and helps failover work correctly.
 ====
 
 .Heartbeat settings
@@ -225,7 +253,7 @@ Tune heartbeat settings to avoid unnecessary failovers while still detecting rea
 Make sure both nodes can access shared iSCSI LUNs.
 [%collapsible]
 ====
-Ensure both nodes in the FCI model can access all shared iSCSI LUNs.
+All shared disks (iSCSI LUNs) must be accessible from both nodes in the FCI deployment model so failover can work.
 ====
 
 .SQL Server service
@@ -241,7 +269,7 @@ Validate service account permissions, startup type, and dependencies for reliabl
 Remove old clones regularly.
 [%collapsible]
 ====
-Regularly remove outdated clones to reduce storage cost and operational clutter.
+Regularly remove outdated clones to reduce storage cost and operational clutter. Old and unused clones cause high costs.
 ====
 
 == Oracle best practices
@@ -271,11 +299,25 @@ Grow volumes automatically.
 Turn on autosize and set mode to `grow` so volumes can increase before space exhaustion.
 ====
 
-.Snapshot reserve and autodelete
+.Snapshot copy reserve and autodelete
 Keep space for active data.
 [%collapsible]
 ====
-Set snapshot reserve to 0% and enable snapshot autodelete to protect space for active data.
+Set snapshot copy reserve to 0% and enable snapshot autodelete to protect space for active data.
+====
+
+.Space management
+Expand the volume before deleting snapshot copies.
+[%collapsible]
+====
+When space runs low, expand the volume before deleting snapshot copies. Expanding the volume prevents "volume full" errors, reduces write failures, and preserves snapshot recovery points.
+====
+
+.Tiering / TCP optimization
+Tier snapshot data using the snapshot-only tiering policy.
+[%collapsible]
+====
+Use the snapshot-only tiering policy, which moves only snapshot data to the capacity tier while keeping active data on the SSD tier. This approach preserves low-latency performance for SQL workloads while reducing storage costs. Tier snapshot data after a 7-day cooling period.
 ====
 
 .Storage efficiencies
@@ -289,7 +331,7 @@ Enable deduplication, compression, and compaction to reduce storage use and cost
 Set swap based on RAM.
 [%collapsible]
 ====
-Configure swap space according to the system's RAM size to ensure optimal performance and prevent out-of-memory issues.
+Set swap space based on the amount of RAM so the system can handle memory pressure and avoid slowdowns or crashes.
 ====
 
 .Archive, data, control, redo, and temp placement
@@ -299,18 +341,46 @@ Use a dedicated volume, isolate random I/O, and place copies on separate volumes
 Place archive logs, data files, control files, redo logs, and temp files to isolate I/O patterns and improve resiliency. Keep redundant copies on separate volumes where required.
 ====
 
+.ASM setup
+Set up Oracle Automatic Storage Management (ASM) for iSCSI-based storage running on FSx for ONTAP.
+[%collapsible]
+====
+Use Oracle Automatic Storage Management (ASM) for iSCSI-based storage running on FSx for ONTAP to optimize performance, simplify storage management, and enhance scalability for Oracle Database deployments.
+====
+
+.ASM-only configurations
+
+* ASM data disk group, ASM logs disk group, ASM FRA disk group, and ASM archive disk group LUNs: Distribute LUNs across Automatic Storage Management (ASM) disk group resources.
+[%collapsible]
+====
+Distribute LUNs across Automatic Storage Management (ASM) data, redo log, and archive log disk groups for optimal performance and redundancy.
+====
++
+* ASM external redundancy
+Configure Oracle ASM disk groups with EXTERNAL redundancy.
+[%collapsible]
+====
+Configure Oracle ASM disk groups with EXTERNAL redundancy for FSx for ONTAP iSCSI LUNs to leverage FSx for ONTAP's built-in high availability, optimize storage efficiency, and reduce costs by avoiding Oracle-level data mirroring. 
+====
++
+* ASM filter driver and ASMLib logical block size alignment
+[%collapsible]
+====
+Configure the Oracle ASM Filter Driver (AFD) and ASMLib in the ASMLib configuration file to use the logical block size of the underlying FSx for ONTAP storage. This ensures that AFD and ASMLib aligns I/O operations with the storage's block size, optimizing performance by minimizing latency and reducing unnecessary I/O overhead.
+====
+
 .Oracle binary placement
 Use a dedicated volume.
 [%collapsible]
 ====
-Place Oracle binaries on a dedicated volume to reduce contention and simplify updates.
+Place Oracle binaries on a dedicated volume to reduce I/O contention. This separation simplifies software updates and minimizes the risk of accidental modifications or corruption.
 ====
 
-.Schedule local snapshots
+.Scheduled local snapshots
 Disable local scheduled snapshots.
 [%collapsible]
 ====
-Disable scheduled local snapshots and use external orchestration such as SnapCenter for application-consistent protection.
+Disable scheduled snapshots for FSx for ONTAP volumes used by Oracle to save space and lower costs. Instead, manage snapshots externally using tools such as NetApp SnapCenter, which create application-consistent backups and help prevent data corruption during restore operations.
 ====
 
 .NFS rootonly
@@ -338,7 +408,7 @@ Configure the kernel parameters for the TCP slot table to 128 for Oracle workloa
 Use NFS mount options that optimize performance for database files.
 [%collapsible]
 ====
-In standalone Oracle environments, do not use mount options such as `actimeo=0` or `noac` that disable host caching and reduce performance.
+Use optimized NFS mount options for database files. Key parameters include `rw` for read/write access, `bg` for background mounting, `hard` for indefinite retries on failures, and `proto=tcp` for reliable delivery. The `rsize` and `wsize` values of 262144 improve large I/O operations, enhancing throughput, while `nointr` doesn't interrupt long-running tasks. This configuration improves database performance and resilience, particularly in high-throughput environments.
 ====
 
 .NFS mount options for ADR home
@@ -359,28 +429,28 @@ Use optimized NFS mount options for the Automatic Diagnostic Repository (ADR) ho
 Do not disable host caching in standalone deployments.
 [%collapsible]
 ====
-Omit NFS mount options that disable host caching—such as, `actimeo=0` and `noac`—in standalone Oracle deployments. These options apply to clustered environments to ensure cache consistency, but in single-instance environments, they unnecessarily bypass caching and can significantly reduce performance. For optimal efficiency and reliability in standalone deployments, do not include these options.
+Omit NFS mount options that disable host caching—such as, `actimeo=0` and `noac`—in standalone Oracle deployments to improve efficiency and reliability. These options apply to clustered environments to ensure cache consistency, but in single-instance environments, they unnecessarily bypass caching and can significantly reduce performance. 
 ====
 
 .dNFS enablement
 Enable dNFS.
 [%collapsible]
 ====
-Enable Direct NFS (dNFS) in your Oracle environment to optimize NFS storage performance and reliability.
+Enable Direct NFS (dNFS) in your Oracle environment to improve NFS storage performance and reliability.
 ====
 
 .dNFS consistent IP resolution
 Avoid round-robin name resolution.
 [%collapsible]
 ====
-Configure dNFS to use consistent IP resolution to prevent performance degradation and connectivity issues that can arise from round-robin name resolution. Avoid the use of Direct NFS (dNFS) with any type of round-robin name resolution, including DNS, DDNS, NIS, or any other method. This includes the DNS load balancing feature available in ONTAP. Consistent IP address resolution maintains database stability and prevents potential crashes or data corruption.
+Avoid the use of Direct NFS (dNFS) with any type of round-robin name resolution, including DNS, DDNS, NIS, or any other method. This includes the DNS load balancing feature available in ONTAP. Consistent IP address resolution maintains database stability and prevents potential crashes or data corruption.
 ====
 
 .dNFS configuration file
 Validate `oranfstab` content.
 [%collapsible]
 ====
-Check and update the `oranfstab` file content to ensure proper Direct NFS (dNFS) usage. The `oranfstab` file is essential for configuring advanced dNFS features such as multipathing and specific NFS options. Proper configuration ensures efficient data access and management.
+Check and update the `oranfstab` file content to ensure proper Direct NFS (dNFS) usage. The `oranfstab` file is essential for configuring advanced dNFS features such as multipathing and specific NFS options. Correct configuration improves the efficiency of data access and management.
 ====
 
 .dNFS no shared cache
@@ -396,7 +466,7 @@ Configure the `nosharecache` mount option for environments where Direct NFS (dNF
 Apply current patches.
 [%collapsible]
 ====
-Apply operating system patches regularly to ensure security, stability, and performance improvements for your Oracle database environment.
+Apply operating system patches regularly to ensure security, stability, and performance improvements for your Oracle Database environment.
 ====
 
 .Oracle Critical Patch Updates
@@ -419,7 +489,7 @@ Use application-consistent snapshots with NetApp SnapCenter to take accurate, re
 Protect against regional outages.
 [%collapsible]
 ====
-Enable CRR to improve disaster recovery readiness and business continuity.
+Enable cross-region replication (CRR) to improve data availability and disaster recovery for your Oracle databases. CRR helps protect against regional outages and ensures business continuity by replicating data across different locations.
 ====
 
 .Backup configuration
@@ -435,7 +505,7 @@ Configure FSx for ONTAP backups or AWS Backup to meet retention and compliance r
 Remove old clones regularly.
 [%collapsible]
 ====
-Regularly remove outdated clones to reduce storage cost and operational clutter.
+Regularly remove outdated clones to reduce storage cost and operational clutter. Old and unused clones cause high costs.
 ====
 
 .What's next
