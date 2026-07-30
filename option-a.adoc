@@ -378,14 +378,17 @@ Use Oracle Automatic Storage Management (ASM) for iSCSI-based storage running on
 
 .ASM-only configurations
 
-* ASM data disk group, ASM logs disk group, ASM FRA disk group, and ASM archive disk group LUNs: Distribute LUNs across Automatic Storage Management (ASM) disk group resources.
+* *ASM data disk group, ASM logs disk group, ASM FRA disk group, and ASM archive disk group LUNs* 
++
+Distribute LUNs across Automatic Storage Management (ASM) disk group resources.
 +
 [%collapsible]
 ====
 Distribute LUNs across Automatic Storage Management (ASM) data, redo log, and archive log disk groups for optimal performance and redundancy.
 ====
 
-* ASM external redundancy
+* *ASM external redundancy*
++
 Configure Oracle ASM disk groups with EXTERNAL redundancy.
 +
 [%collapsible]
@@ -393,7 +396,9 @@ Configure Oracle ASM disk groups with EXTERNAL redundancy.
 Configure Oracle ASM disk groups with EXTERNAL redundancy for FSx for ONTAP iSCSI LUNs to leverage FSx for ONTAP's built-in high availability, optimize storage efficiency, and reduce costs by avoiding Oracle-level data mirroring. 
 ====
 
-* ASM filter driver and ASMLib logical block size alignment
+* *ASM filter driver and ASMLib logical block size alignment*
++
+Configure Oracle ASM Filter Driver (AFD) and ASMLib to use the logical block size of the underlying FSx for ONTAP storage.
 +
 [%collapsible]
 ====
