@@ -9,20 +9,20 @@ summary: "Register resources so that you can monitor resource status, resource u
 :imagesdir: ./media/
 
 [.lead]
-Register instances for Microsoft SQL Server and databases for Oracle so that you can monitor instance and database status, resource utilization, protection, and storage performance in NetApp Workload Factory for Databases.
+Register instances for Microsoft SQL Server and databases for Oracle so that you can manage your resources, create databases and sandbox clones, run error log analysis, and optimize configurations in NetApp Workload Factory for Databases.
 
 You can register your resources only if they run on FSx for ONTAP file system storage.
 
 == About the task
-Registering an instance (SQL Server) or database (Oracle) involves three steps: instance or database authentication, FSx for ONTAP authentication, and preparation. To prepare, install AWS, NetApp, and PowerShell modules on the instance or database, and meet the minimum requirements for Workload Factory for Databases features like link:analyze-error-logs.html[error log analysis] or link:optimize-configurations.html[well-architected assessment].
+Registering an instance (SQL Server) or database (Oracle) involves two steps: instance or database authentication and preparation. Authentication is the process of verifying the credentials for the instance or database. Preparation includes installing AWS, NetApp, and PowerShell modules on the instance or database, to meet the minimum requirements for Workload Factory for Databases features like link:create-database[creating a database], link:create-sandbox-clone.html[creating a sandbox], link:analyze-error-logs.html[error log analysis] or link:optimize-configurations.html[the well-architected assessment].
 
 Workload Factory supports only Microsoft SQL Server instance and Oracle database registration and management. Depending on the AWS account credentials you select in Workload Factory, PostgreSQL hosts appear in the Inventory. Currently, Workload Factory supports unregistered PostgreSQL instances running only on Amazon Linux operating systems.
 
-AWS GovCloud (US) users must use AWS Secrets Manager to authenticate FSx for ONTAP credentials. For all other users, you must authenticate FSx for ONTAP with file system credentials.
-
 == Before you begin
+You must do the following before you register an instance or database:
 
-The host for the instance or database must appear in the Inventory. For hosts to appear in the inventory, you must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _view, planning, and analysis_ permissions^] in your AWS account. 
+* Make sure the hosts of the resources that you want to register appear in the inventory. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Grant _operations and remediation_ permissions^] in your AWS account. 
+* Associate a link with the FSx for ONTAP file system that hosts the resources you want to register. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link.^] After the link associates, return to this operation.
 
 === Registering an instance in a private network
 To register an instance or database in a private network without external connectivity, make the required endpoints available in the VPC and associate them with the relevant subnets. Allow port 443 in the Security Group for interface endpoints.
@@ -40,7 +40,7 @@ If you use a proxy server for outbound EC2 connections, allow access to these do
 * ``.amazonaws.com``
 
 == Register a Microsoft SQL Server instance
-Registering an instance has three steps - instance authentication, FSx for ONTAP authentication, and preparation to complete missing prerequisites. You can register single or multiple instances.
+Registering an instance has two steps - instance authentication and preparation. You can register a single instance or multiple instances.
 
 Workload Factory supports registration for Failover Cluster Instance (FCI) and Standalone deployment for SQL Server. 
 
@@ -59,11 +59,8 @@ If instances are authenticated, select *Next*.
 . To Authenticate FSx for ONTAP (step 2), do the following and then select *Next*:
 .. Select to *Use the same credentials for all resources* or *Manage credentials manually*. 
 .. Enter either the AWS SSM Parameter ARN with FSx for ONTAP credentials for GovCloud accounts or the FSx for ONTAP file system user name and password for all other accounts, and then select *Next*. 
-+
-For GovCloud accounts, the AWS SSM Parameter ARN value is provided in the Parameter Store under Parameter details in the AWS Management Console in the following format: `{fsx:{"username":"fsxadmin","password":"pass"}}`. The AWS SSM Parameter type must be "Secure String" with the name in the format `/netapp/wlmdb/<fsx_filesystemID>`. Learn more about retrieving SSM parameters from link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html[AWS GovCloud documentation^].  
-+
-If the FSx for ONTAP file system is authenticated, select *Next*.
-. To Prepare (step 3), make sure the instance(s) meets the minimum requirements. 
+
+. To Prepare (step 2), make sure the instance(s) meets the minimum requirements. 
 +
 To meet the minimum requirements, the instance must have AWS and NetApp PowerShell modules and PowerShell 7 modules installed, and you must complete the prerequisites for at least one of the capabilities listed under Prerequisite check.
 +
@@ -80,7 +77,7 @@ To enable Workload Factory to link:optimize-configurations.html[review and fix w
 Instance registration initiates. Select the *Job monitoring* tab to track progress.
 
 == Register an Oracle database
-Registering an instance has three steps - database authentication, FSx for ONTAP authentication, and preparation to complete missing prerequisites. You can register single or multiple databases.
+Registering an instance has two steps - database authentication and preparation. You can register a single instance or multiple databases.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -95,16 +92,7 @@ Registering an instance has three steps - database authentication, FSx for ONTAP
 +
 If databases are authenticated, select *Next*.
 
-. To Authenticate FSx for ONTAP (step 2), do the following and then select *Next*:
-.. Select to *Use the same credentials for all resources* or *Manage credentials manually*. 
-.. Enter either the AWS SSM Parameter ARN with FSx for ONTAP credentials for GovCloud accounts or the FSx for ONTAP file system user name and password for all other accounts, and then select *Next*. 
-+
-The AWS SSM Parameter type must be "Secure String" with the name in the format `/netapp/wlmdb/<fsx_filesystemID>`. Enter the value for the AWS SSM Parameter ARN in the following format:
-`{fsx:{"username":"fsxadmin","password":"pass"}}`. Learn more about retrieving SSM parameters from link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html[AWS GovCloud documentation^]. 
-+
-If the FSx for ONTAP file system is authenticated, select *Next*.
-
-. To Prepare (step 3), make sure the database(s) meets required prerequisites.
+. To Prepare (step 2), make sure the database(s) meets required prerequisites.
 If all required modules are installed and prerequisites are met, select *Next* to register the database. Otherwise, follow these steps.  
 .. Review the prerequisites in the *Prerequisite check view*. 
 +

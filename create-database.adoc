@@ -21,9 +21,9 @@ Creating a database in workload factory requires _view, planning, and analysis_ 
 NOTE: Microsoft SQL Servers using SMB protocol don't support database creation. 
 
 .Before you begin
-Ensure you complete the following prerequisites before you create a new database. 
+Complete the following prerequisites before you create a new database. 
 
-* *Credentials and permissions*: You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and _view, planning, and analysis_ permissions^] to create a new database in Workload Factory. 
+* *Credentials and permissions*: You must have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[AWS account credentials and _operations and remediation_ permissions^] to create a new database in Workload Factory. 
 +
 Alternatively, you can use the Codebox to copy a template so that you can deploy a database outside of workload factory using REST API. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html[Learn more about Codebox automation^].
 
