@@ -434,10 +434,10 @@ Use optimized NFS mount options for the Automatic Diagnostic Repository (ADR) ho
 ====
 
 .NFSv4 domain name
-?
+Match NFSv4 domain names between the host and NFS server.
 [%collapsible]
 ====
-? Specify the NFSv4 domain name to ensure proper Kerberos authentication and consistent client-server interactions. The domain name should match the DNS domain of the NFS server to avoid authentication and access issues.
+Match NFSv4 domain names between the host (`/etc/idmapd.conf` or `hostname -d`) and NFS server (`v4-id-domain` in ONTAP).
 ====
 
 .NFS caching options
