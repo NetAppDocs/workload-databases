@@ -110,7 +110,7 @@ Expand the volume before deleting snapshot copies.
 When space runs low, expand the volume before deleting snapshot copies. Expanding the volume prevents "volume full" errors, reduces write failures, and preserves snapshot recovery points.
 ====
 
-.Tiering / TCP optimization
+.Tiering / TCO optimization
 Tier snapshot data using the snapshot-only tiering policy.
 [%collapsible]
 ====
@@ -313,7 +313,7 @@ Expand the volume before deleting snapshot copies.
 When space runs low, expand the volume before deleting snapshot copies. Expanding the volume prevents "volume full" errors, reduces write failures, and preserves snapshot recovery points.
 ====
 
-.Tiering / TCP optimization
+.Tiering / TCO optimization
 Tier snapshot data using the snapshot-only tiering policy.
 [%collapsible]
 ====
@@ -339,34 +339,6 @@ Use a dedicated volume, isolate random I/O, and place copies on separate volumes
 [%collapsible]
 ====
 Place archive logs, data files, control files, redo logs, and temp files to isolate I/O patterns and improve resiliency. Keep redundant copies on separate volumes where required.
-====
-
-.ASM setup
-Set up Oracle Automatic Storage Management (ASM) for iSCSI-based storage running on FSx for ONTAP.
-[%collapsible]
-====
-Use Oracle Automatic Storage Management (ASM) for iSCSI-based storage running on FSx for ONTAP to optimize performance, simplify storage management, and enhance scalability for Oracle Database deployments.
-====
-
-.ASM-only configurations
-
-* ASM data disk group, ASM logs disk group, ASM FRA disk group, and ASM archive disk group LUNs: Distribute LUNs across Automatic Storage Management (ASM) disk group resources.
-[%collapsible]
-====
-Distribute LUNs across Automatic Storage Management (ASM) data, redo log, and archive log disk groups for optimal performance and redundancy.
-====
-+
-* ASM external redundancy
-Configure Oracle ASM disk groups with EXTERNAL redundancy.
-[%collapsible]
-====
-Configure Oracle ASM disk groups with EXTERNAL redundancy for FSx for ONTAP iSCSI LUNs to leverage FSx for ONTAP's built-in high availability, optimize storage efficiency, and reduce costs by avoiding Oracle-level data mirroring. 
-====
-+
-* ASM filter driver and ASMLib logical block size alignment
-[%collapsible]
-====
-Configure the Oracle ASM Filter Driver (AFD) and ASMLib in the ASMLib configuration file to use the logical block size of the underlying FSx for ONTAP storage. This ensures that AFD and ASMLib aligns I/O operations with the storage's block size, optimizing performance by minimizing latency and reducing unnecessary I/O overhead.
 ====
 
 .Oracle binary placement
@@ -395,6 +367,37 @@ Include superuser and setuid permissions in the dedicated export policy for Orac
 [%collapsible]
 ====
 Make sure that if Oracle binaries are located on an NFS share, the export policy includes superuser and setuid permissions. Superuser (root) access allows NFS clients to map as root, needed for binary execution.
+====
+
+.ASM setup
+Set up Oracle Automatic Storage Management (ASM) for iSCSI-based storage running on FSx for ONTAP.
+[%collapsible]
+====
+Use Oracle Automatic Storage Management (ASM) for iSCSI-based storage running on FSx for ONTAP to optimize performance, simplify storage management, and enhance scalability for Oracle Database deployments.
+====
+
+.ASM-only configurations
+
+* ASM data disk group, ASM logs disk group, ASM FRA disk group, and ASM archive disk group LUNs: Distribute LUNs across Automatic Storage Management (ASM) disk group resources.
++
+[%collapsible]
+====
+Distribute LUNs across Automatic Storage Management (ASM) data, redo log, and archive log disk groups for optimal performance and redundancy.
+====
+
+* ASM external redundancy
+Configure Oracle ASM disk groups with EXTERNAL redundancy.
++
+[%collapsible]
+====
+Configure Oracle ASM disk groups with EXTERNAL redundancy for FSx for ONTAP iSCSI LUNs to leverage FSx for ONTAP's built-in high availability, optimize storage efficiency, and reduce costs by avoiding Oracle-level data mirroring. 
+====
+
+* ASM filter driver and ASMLib logical block size alignment
++
+[%collapsible]
+====
+Configure the Oracle ASM Filter Driver (AFD) and ASMLib in the ASMLib configuration file to use the logical block size of the underlying FSx for ONTAP storage. This ensures that AFD and ASMLib aligns I/O operations with the storage's block size, optimizing performance by minimizing latency and reducing unnecessary I/O overhead.
 ====
 
 .TCP slot table
