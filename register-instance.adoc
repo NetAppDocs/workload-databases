@@ -56,10 +56,6 @@ Workload Factory supports registration for Failover Cluster Instance (FCI) and S
 .. Authenticate SQL Server and Windows by providing user name and password information.
 +
 If instances are authenticated, select *Next*.
-. To Authenticate FSx for ONTAP (step 2), do the following and then select *Next*:
-.. Select to *Use the same credentials for all resources* or *Manage credentials manually*. 
-.. Enter either the AWS SSM Parameter ARN with FSx for ONTAP credentials for GovCloud accounts or the FSx for ONTAP file system user name and password for all other accounts, and then select *Next*. 
-
 . To Prepare (step 2), make sure the instance(s) meets the minimum requirements. 
 +
 To meet the minimum requirements, the instance must have AWS and NetApp PowerShell modules and PowerShell 7 modules installed, and you must complete the prerequisites for at least one of the capabilities listed under Prerequisite check.
@@ -113,4 +109,4 @@ After registration, you can perform these tasks.
 * View databases from the inventory
 * link:create-database.html[Create a database]
 * link:create-sandbox-clone.html[Create a database clone (sandbox)]
-* link:optimize-configurations.html[Implement well-architected database configurations]
+* link:optimize-configurations.html[Get a comprehensive well-architected assessment of database configurations]
