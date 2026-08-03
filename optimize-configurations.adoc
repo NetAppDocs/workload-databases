@@ -20,9 +20,11 @@ Workload Factory analyzes database configurations daily. The daily analysis prov
 
 Many recommendations are available when you grant _view, planning, and analysis_ permissions to your AWS account. If you grant _operations and remediation_ permissions, all recommendations are available, and you can automatically fix configuration issues to meet best practices. 
 
-You can review and fix issues from the Databases inventory or the Well-architected dashboard within the Workload Factory console. 
+You can review and fix issues from the Databases inventory or the Well-architected dashboard within the Workload Factory console. Because requirements for database configurations vary, you can dismiss the analysis of specific configurations that don't apply to your database environment. This helps you avoid unnecessary alerts and inaccurate optimization results.
 
 Optionally, you can perform a one-time assessment to review best practices for your database configurations without storing credentials or registering resources. 
+
+You can also create custom rules in plain language to validate your environments against your organization's standards and NetApp best practices. Test rules with a dry run, then schedule them to run across your environments. link:https://docs.netapp.com/us-en/console-well-architected/learn-custom-rules.html[Learn more about custom rules.^]
 
 .What is analyzed
 Workload Factory analyzes the well-architected status of the following configurations: 
@@ -169,3 +171,9 @@ Reactivate a dismissed configuration analysis at any time. You can select one or
 
 .Result
 Workload Factory reactivates the configuration analysis and runs it every day from now on.
+
+== Related information
+
+* link:optimize-overview.html[Learn about the configuration analysis for database resources and well-architected status in Workload Factory]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Connect to an FSx for ONTAP file system using a link^]
+* link:https://docs.netapp.com/us-en/console-well-architected_july6-release/learn-custom-rules.html[Learn about custom rules^]
