@@ -16,7 +16,9 @@ You can also dismiss the analysis of configurations that don't apply to your env
 link:optimize-overview.html[Learn about the configuration analysis and well-architected status in Workload Factory.]
 
 == About this task
-Workload Factory analyzes database configurations daily. The daily analysis provides well-architected status, insights, and recommendations. You can automatically fix configuration issues to meet best practices. 
+Workload Factory analyzes database configurations daily. The daily analysis provides well-architected status, insights, and recommendations. 
+
+Many recommendations are available when you grant _view, planning, and analysis_ permissions to your AWS account. If you grant _operations and remediation_ permissions, all recommendations are available, and you can automatically fix configuration issues to meet best practices. 
 
 You can review and fix issues from the Databases inventory or the Well-architected dashboard within the Workload Factory console. 
 
@@ -82,6 +84,18 @@ For each configuration, you can view the current value and the recommended value
 . View the recommendation for any configuration. Workload Factory includes best practices and potential problems in the recommendations if configurations are not optimized.
 --
 ====
+
+== Perform an on-demand assessment
+If you grant _operations and remediation_ permissions in your AWS account, you can perform an on-demand assessment of your Oracle databases. You don't have to register resources to run this assessment. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] Then select *Databases*.
+. In the *Inventory*, select *Oracle* as the engine type. 
+. Select *View and fix*. 
+. In the Well-architected status tab, select *Analyze now*. 
+. View the recommendation for any configuration. Workload Factory includes best practices and potential problems in the recommendations if configurations are not optimized.
+
 
 == Before you begin fixing, dismissing, and re-activating configurations
 The following requirements are necessary for continuous monitoring of your database environment and automatic fixing of configuration issues. These requirements are not required for the one-time assessment.
