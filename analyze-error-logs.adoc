@@ -25,7 +25,7 @@ To use the error log analyzer, you need to activate Amazon Bedrock, select the m
 
 link:https://aws.amazon.com/bedrock/pricing/[Amazon Bedrock pricing^]
 
-NOTE: If your account admin has turned off AI features, you'll see a message and won't be able to use AI analysis. Contact your administrator or https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html[learn about AI administration^].
+NOTE: If your account admin has turned off AI features, you'll see a message and won't be able to use AI analysis. Contact your administrator or link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html[learn about AI administration^].
 
 === Data privacy and security
 The feature ensures data privacy and security with the following measures: 

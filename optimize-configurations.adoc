@@ -176,4 +176,4 @@ Workload Factory reactivates the configuration analysis and runs it every day fr
 
 * link:optimize-overview.html[Learn about the configuration analysis for database resources and well-architected status in Workload Factory]
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Connect to an FSx for ONTAP file system using a link^]
-* link:https://docs.netapp.com/us-en/console-well-architected_july6-release/learn-custom-rules.html[Learn about custom rules^]
+* link:https://docs.netapp.com/us-en/console-well-architected/learn-custom-rules.html[Learn about custom rules^]

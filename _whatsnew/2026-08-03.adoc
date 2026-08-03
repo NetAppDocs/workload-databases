@@ -20,4 +20,4 @@ The view, planning, and analysis permissions are limited to AWS SSM documents. W
 
 The operations and remediation permissions allow you to make changes to your resources, analyze error logs, get a comprehensive well-architected analysis of your resources and fix configuration issues.
 
-link:http^s://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html[Permissions reference^]
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html[Permissions reference^]

@@ -14,7 +14,7 @@ Register instances for Microsoft SQL Server and databases for Oracle so that you
 You can register your resources only if they run on FSx for ONTAP file system storage.
 
 == About the task
-Registering an instance (SQL Server) or database (Oracle) involves two steps: instance or database authentication and preparation. Authentication is the process of verifying the credentials for the instance or database. Preparation includes installing AWS, NetApp, and PowerShell modules on the instance or database, to meet the minimum requirements for Workload Factory for Databases features like link:create-database[creating a database], link:create-sandbox-clone.html[creating a sandbox], link:analyze-error-logs.html[error log analysis] or link:optimize-configurations.html[the well-architected assessment].
+Registering an instance (SQL Server) or database (Oracle) involves two steps: instance or database authentication and preparation. Authentication is the process of verifying the credentials for the instance or database. Preparation includes installing AWS, NetApp, and PowerShell modules on the instance or database, to meet the minimum requirements for Workload Factory for Databases features like link:create-database.html[creating a database], link:create-sandbox-clone.html[creating a sandbox], link:analyze-error-logs.html[error log analysis] or link:optimize-configurations.html[the well-architected assessment].
 
 Workload Factory supports only Microsoft SQL Server instance and Oracle database registration and management. Depending on the AWS account credentials you select in Workload Factory, PostgreSQL hosts appear in the Inventory. Currently, Workload Factory supports unregistered PostgreSQL instances running only on Amazon Linux operating systems.
 
