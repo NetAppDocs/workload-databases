@@ -1,0 +1,23 @@
+=== Configuration changes for Oracle and Microsoft SQL Server in the well-architected analysis
+
+Several database configurations have been combined and renamed to the following configurations in the well-architected analysis. 
+
+* *Block device space management*: includes space reservation, space allocation, and fractional reserve
+
+* *Storage efficiencies*: includes compression, deduplication, and compaction
+
+* *Tiering/TCO optimization*: includes tiering policy and tiering minimum cooling days
+
+* *Schedule local snapshots*: includes snapshot policy
+
+link:https://docs.netapp.com/us-en/workload-databases/optimize-overview.html[Configuration analysis in Workload Factory]
+
+=== Updated IAM permission policies for Databases
+
+Permissions for Databases were updated to improve feature access and limit SSM access where unnecessary.
+
+The view, planning, and analysis permissions are limited to AWS SSM documents. With these permissions, you can view hosts, instances, and databases. You can also run a basic on-demand well-architected analysis of your resources. 
+
+The operations and remediation permissions allow you to make changes to your resources, analyze error logs, get a comprehensive well-architected analysis of your resources and fix configuration issues.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html[Permissions reference^]
