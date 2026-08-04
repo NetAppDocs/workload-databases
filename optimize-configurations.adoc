@@ -16,11 +16,15 @@ You can also dismiss the analysis of configurations that don't apply to your env
 link:optimize-overview.html[Learn about the configuration analysis and well-architected status in Workload Factory.]
 
 == About this task
-Workload Factory analyzes database configurations daily. The daily analysis provides well-architected status, insights, and recommendations. You can automatically fix configuration issues to meet best practices. 
+Workload Factory analyzes database configurations daily. The daily analysis provides well-architected status, insights, and recommendations. 
 
-You can review and fix issues from the Databases inventory or the Well-architected dashboard within the Workload Factory console. 
+Many recommendations are available when you grant _view, planning, and analysis_ permissions to your AWS account. If you grant _operations and remediation_ permissions, all recommendations are available, and you can automatically fix configuration issues to meet best practices. 
+
+You can review and fix issues from the Databases inventory or the Well-architected dashboard within the Workload Factory console. Because requirements for database configurations vary, you can dismiss the analysis of specific configurations that don't apply to your database environment. This helps you avoid unnecessary alerts and inaccurate optimization results.
 
 Optionally, you can perform a one-time assessment to review best practices for your database configurations without storing credentials or registering resources. 
+
+You can also create custom rules in plain language to validate your environments against your organization's standards and NetApp best practices. Test rules with a dry run, then schedule them to run across your environments. link:https://docs.netapp.com/us-en/console-well-architected/learn-custom-rules.html[Learn more about custom rules.^]
 
 .What is analyzed
 Workload Factory analyzes the well-architected status of the following configurations: 
@@ -50,6 +54,8 @@ The well-architected analysis for Oracle notifies you when a configuration depen
 Perform a one-time assessment to find out the well-architected status of your Microsoft SQL Server instances or Oracle databases without storing credentials or registering resources. 
 
 You can run the script and upload results multiple times. Workload Factory updates the well-architected status and insights with each upload.
+
+For each configuration, you can view the current value and the recommended value.
 
 [role="tabbed-block"]
 ====
@@ -81,11 +87,23 @@ You can run the script and upload results multiple times. Workload Factory updat
 --
 ====
 
+== Perform an on-demand assessment
+If you grant _operations and remediation_ permissions in your AWS account, you can perform an on-demand assessment of your Oracle databases. You don't have to register resources to run this assessment. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] Then select *Databases*.
+. In the *Inventory*, select *Oracle* as the engine type. 
+. Select *View and fix*. 
+. In the Well-architected status tab, select *Analyze now*. 
+. View the recommendation for any configuration. Workload Factory includes best practices and potential problems in the recommendations if configurations are not optimized.
+
+
 == Before you begin fixing, dismissing, and re-activating configurations
-The following requirements are necessary for continuous monitoring of your database environment and automatic fixing of configuration issues. These requirements are not required for the one-time assessment.
+The following requirements are necessary for continuous assessment of your database environment and automatic fixing of configuration issues. These requirements are not required for the one-time assessment.
 
 * You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _operations and remediation_ permissions^] in your AWS account. 
-* The resource must be registered in Workload Factory and the storage type must be FSx for ONTAP. link:register-instance.html[Learn how to register resources.]
+* You must register the resource in Workload Factory and the storage type must be FSx for ONTAP. link:register-instance.html[Learn how to register resources.]
 * Review each recommendation before fixing a setting or configuration. For RSS and MAXDOP, test recommended settings to check performance before changing your production environment.
 
 == Fix a configuration issue
@@ -153,3 +171,9 @@ Reactivate a dismissed configuration analysis at any time. You can select one or
 
 .Result
 Workload Factory reactivates the configuration analysis and runs it every day from now on.
+
+== Related information
+
+* link:optimize-overview.html[Learn about the configuration analysis for database resources and well-architected status in Workload Factory]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Connect to an FSx for ONTAP file system using a link^]
+* link:https://docs.netapp.com/us-en/console-well-architected/learn-custom-rules.html[Learn about custom rules^]
