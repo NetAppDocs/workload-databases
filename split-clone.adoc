@@ -4,7 +4,7 @@ permalink: split-clone.html
 keywords: split, clone, source, new database 
 summary: "Split a database clone from the source database to create a new database in NetApp Workload Factory for Databases." 
 ---
-= Split a database clone from the source database
+= Split a database clone in NetApp Workload Factory for Databases
 :icons: font
 :imagesdir: ./media/
 
