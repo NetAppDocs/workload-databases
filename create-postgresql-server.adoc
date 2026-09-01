@@ -4,7 +4,7 @@ permalink: create-postgresql-server.html
 keywords: create, server, PostgreSQL, deploy, host, deploy a database host, database host 
 summary: "Create a new PostgreSQL SQL server within NetApp Workload Factory for Databases." 
 ---
-= Create a PostgreSQL server in NetApp Workload Factory
+= Create a PostgreSQL server in NetApp Workload Factory for Databases
 :icons: font
 :imagesdir: ./media/
 

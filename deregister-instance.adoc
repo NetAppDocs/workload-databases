@@ -4,7 +4,7 @@ permalink: deregister-instance.html
 keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle database, deregister instance, unregister instance, remove instance
 summary: "Deregister a resource if you no longer want to deploy or monitor resources from the Workload Factory console." 
 ---
-= Deregister a resource in NetApp Workload Factory
+= Deregister a resource in NetApp Workload Factory for Databases
 :icons: font
 :imagesdir: ./media/
 

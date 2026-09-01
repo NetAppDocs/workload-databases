@@ -4,7 +4,7 @@ permalink: delete-clone.html
 keywords: delete, clone 
 summary: "Delete a sandbox clone in NetApp Workload Factory for Databases when you no longer need it and want to free up storage capacity." 
 ---
-= Delete a datahase clone in NetApp Workload Factory for Databases
+= Delete a database clone in NetApp Workload Factory for Databases
 :icons: font
 :imagesdir: ./media/
 
