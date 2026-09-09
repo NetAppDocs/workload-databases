@@ -10,3 +10,7 @@ The well-architected dashboard now includes recommendations for your database co
 Find the well-architected dashboard by selecting the main menu in the Workload Factory console and select *Well-architected*. 
 
 image:well-architected-menu-option.png[Well-architected menu option in the Workload Factory console]
+
+=== Support for multiple file systems per a single instance
+
+Workload Factory for Databases supports multiple file systems per a single Microsoft SQL Server instance. You can register multiple file systems in a SQL Server instance, and fix one configuration issue for multiple file systems in a SQL Server instance at the same time. However, creating and saving configurations for Microsoft SQL Server with multiple FSx for ONTAP file systems is not supported. Only one FSx for ONTAP file system configuration deployment is supported. 
