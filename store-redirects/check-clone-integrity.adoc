@@ -1,0 +1,4 @@
+---
+permalink: check-clone-integrity.html
+redirect: workload-databases/manage-clones.html
+---
