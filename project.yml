@@ -49,7 +49,7 @@ sidebar:
           - title: Manage clones
             url: /manage-clones.html                  
           - title: Deregister resources
-            url: /deregister-instance.html                              
+            url: /deregister-instance.html 
   - title: Protect, monitor, and optimize database resources
     entries:
       - title: Analyze error logs
@@ -59,9 +59,9 @@ sidebar:
           - title: Configuration analysis for Databases
             url: /optimize-overview.html
           - title: Implement well-architected database configurations   
-            url: /optimize-configurations.html                                   
+            url: /optimize-configurations.html 
       - title: Monitor database jobs
-        url: /monitor-databases.html
+        url: /monitor-databases.html                                              
       - title: Protect Microsoft SQL Server workloads
         url: /protect-sql-server.html         
   - title: Knowledge and support
