@@ -26,7 +26,7 @@ sidebar:
         url: /learn-databases.html 
       - title: Quick start
         url: /quick-start-databases.html 
-  - title: Use Database workloads
+  - title: Use Workload Factory for Database workloads
     entries: 
       - title: Explore savings
         url: /explore-savings.html
@@ -50,7 +50,7 @@ sidebar:
             url: /manage-clones.html                  
           - title: Deregister resources
             url: /deregister-instance.html                              
-  - title: Protect and monitor database resources
+  - title: Protect, monitor, and optimize database resources
     entries:
       - title: Analyze error logs
         url: /analyze-error-logs.html   
