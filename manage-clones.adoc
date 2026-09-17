@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: manage-clones.html
-keywords: manage clones, manage sandboxes, manage sandbox clones, check clone integrity, check data integrity, connect to CI/CD, delete clone 
-summary: "Delete a sandbox clone in NetApp Workload Factory for Databases when you no longer need it and want to free up storage capacity." 
+keywords: manage clones, manage sandboxes, manage sandbox clones, check clone integrity, check data integrity, connect to CICD, delete clone 
+summary: "Manage your sandbox clones in NetApp Workload Factory for Databases to keep your development and testing environments reliable and cost-effective."
 ---
 = Manage database clones in NetApp Workload Factory for Databases
 :icons: font
