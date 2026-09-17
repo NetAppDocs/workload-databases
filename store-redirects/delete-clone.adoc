@@ -1,0 +1,4 @@
+---
+permalink: delete-clone.html
+redirect: workload-databases/manage-clones.html
+---
