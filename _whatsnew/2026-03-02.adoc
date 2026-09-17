@@ -10,7 +10,7 @@ After registering your AOAG instances and Data Guard databases, you can take adv
 
 Workload Factory for Databases also supports the well-architected analysis for Microsoft SQL Server instances with the AOAG deployment model. You can analyze the configurations of your SQL Server instances in an availability group and receive recommendations to optimize your deployment configurations and comply with best practices. Register your AOAG instances to enable this feature. 
 
-link:https://docs.netapp.com/us-en/workload-databases/register-instance.html#register-a-sql-server-instance[Register resources in Workload Factory for Databases]
+link:https://docs.netapp.com/us-en/workload-databases/register-instance.html[Register resources in Workload Factory for Databases]
 
 === Well-architected analysis for Oracle
 

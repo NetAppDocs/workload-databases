@@ -1,0 +1,4 @@
+---
+permalink: automate-codebox.html
+redirect: https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html
+---
