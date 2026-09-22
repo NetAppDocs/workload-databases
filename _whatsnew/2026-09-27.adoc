@@ -13,4 +13,4 @@ image:well-architected-menu-option.png[Well-architected menu option in the Workl
 
 === Support for multiple file systems per a single instance
 
-Workload Factory for Databases supports multiple file systems per a single Microsoft SQL Server instance. You can register multiple file systems in a SQL Server instance, and fix one configuration issue for multiple file systems in a SQL Server instance at the same time. However, creating and saving configurations for Microsoft SQL Server with multiple FSx for ONTAP file systems is not supported. Only one FSx for ONTAP file system configuration deployment is supported. 
+Workload Factory for Databases supports multiple file systems per a single Microsoft SQL Server instance. You can register multiple file systems in a SQL Server instance, and fix one configuration issue for multiple file systems in a SQL Server instance at the same time. 

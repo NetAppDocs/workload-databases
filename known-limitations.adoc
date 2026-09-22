@@ -56,6 +56,9 @@ Microsoft SQL Server detection isn't saved. Each time you access Databases in Wo
 == Explore savings
 In the Inventory tab, the estimated cost shown for each Microsoft SQL instance is calculated at the FSx for ONTAP file system level and not for volumes hosting the SQL instance.
 
+== Multiple FSx for ONTAP file systems 
+Workload Factory doesn't support creating or saving configurations for Microsoft SQL Server with multiple FSx for ONTAP file systems. Only one FSx for ONTAP file system configuration deployment is supported. 
+
 == Optimization limitations
 
 === Compute rightsizing optimization
