@@ -4,7 +4,6 @@ permalink: faq-workload-factory-databases.html
 keywords: faq, frequently asked questions, frequently asked questions about workload factory for databases, workload factory, databases, sql server, oracle, postgresql, fsx for ontap, savings calculator, well-architected, sandbox clones, codebox, backup and recovery
 summary: "Frequently asked questions about NetApp Workload Factory for Databases."
 ---
-
 = FAQ for NetApp Workload Factory for Databases
 :hardbreaks:
 :nofooter:
@@ -13,7 +12,7 @@ summary: "Frequently asked questions about NetApp Workload Factory for Databases
 :imagesdir: ./media/
 
 [.lead]
-This FAQ answers common questions about NetApp Workload Factory for Databases. It focuses on concepts, prerequisites, and behavior that are useful when deploying, registering, optimizing, cloning, and protecting database workloads on Amazon FSx for NetApp ONTAP.
+Find answers to common questions about NetApp Workload Factory for Databases, including concepts, prerequisites, and behavior that are useful when you deploy, register, optimize, clone, and protect database workloads on Amazon FSx for NetApp ONTAP.
 
 == Getting started and permissions
 
@@ -55,7 +54,7 @@ link:create-database-server.html[Create a SQL Server host].
 
 .Does deploying a host change my VPC network configuration?
 
-Possibly. If they aren't found, deployment creates the AWS interface endpoints and the S3 gateway endpoint that it needs. It also sets the VPC DNS attributes `EnableDnsSupport` and `EnableDnsHostnames` to true if they aren't already. 
+Possibly. Deployment creates the AWS interface endpoints and the S3 gateway endpoint that it needs if they don't exist. It also sets the VPC DNS attributes `EnableDnsSupport` and `EnableDnsHostnames` to true if they aren't already. 
 
 link:create-database-server.html[Learn more about creating a SQL Server host].
 
@@ -97,7 +96,7 @@ link:register-instance.html[Learn how to register resources].
 
 .What happens when I deregister a resource?
 
-You can no longer deploy to or monitor the resource from the console, and its FSx for ONTAP storage capacity is no longer counted as used by the instance. You can register the resource again later. See 
+You can no longer deploy to or monitor the resource from the console, and its FSx for ONTAP storage capacity is no longer counted as used by the instance. You can register the resource again later.
 
 link:deregister-instance.html[Deregister a resource].
 
@@ -168,7 +167,7 @@ Refresh syncs the clone to the source database's current state or a previous sna
 
 .How do I verify that a sandbox clone's data is good, and what if the check fails?
 
-If you create a clone while the source database is busy, the clone may not be in sync with the latest snapshot. The integrity check examines all objects in the clone. If it fails, don't use the clone and create a new one. 
+If you create a clone while the source database is busy, the clone might not be in sync with the latest snapshot. The integrity check examines all objects in the clone. If it fails, don't use the clone and create a new one. 
 
 link:manage-clones.html[Check the integrity of a database clone].
 
