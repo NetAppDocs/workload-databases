@@ -19,11 +19,15 @@ This FAQ answers common questions about NetApp Workload Factory for Databases. I
 
 .What is Workload Factory for Databases, and which database engines and deployment models does it support?
 
-Workload Factory for Databases discovers, assesses, provisions, and manages SQL Server, PostgreSQL, and Oracle databases on FSx for ONTAP. Supported models include SQL Server FCI, standalone, and Always On availability group (listed in the supported configurations table). Oracle is supported as standalone (including ASM) and Data Guard on RHEL or SuSe Linux. PostgreSQL 15 and 16 are supported as HA or standalone on Amazon Linux 2023. See link:learn-databases.html[Learn about Workload Factory for Databases].
+Workload Factory for Databases discovers, assesses, provisions, and manages SQL Server, PostgreSQL, and Oracle databases on FSx for ONTAP. 
+
+Refer to link:learn-databases.html[Learn about Workload Factory for Databases] for supported models. 
 
 .In which AWS regions is Workload Factory for Databases available?
 
-Workload Factory for Databases works in all commercial regions where FSx for ONTAP is supported, but not in China regions, Secret Cloud, or Top Secret Cloud. See link:learn-databases.html[Learn about Workload Factory for Databases].
+Workload Factory for Databases works in all commercial regions where FSx for ONTAP is supported, but not in China regions, Secret Cloud, or Top Secret Cloud. 
+
+https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/[View supported Amazon regions.^]
 
 .Do I have to grant AWS permissions to start using Workload Factory for Databases?
 
@@ -31,119 +35,162 @@ No. You can start in basic mode without granting permissions and copy partially 
 
 .Which permission level do I need for each task (discovery, registration, database creation, host deployment, fixing configurations)?
 
-Savings calculator for detected hosts and the error log analyzer require view, planning, and analysis permissions. Registering resources, creating databases, creating sandbox clones, and fixing well-architected issues require operations and remediation permissions. Deploying a new database host requires database host creation permissions. See link:register-instance.html[Register resources] and link:create-database-server.html[Create a SQL Server host].
+Savings calculator for detected hosts and the error log analyzer require view, planning, and analysis permissions. Registering resources, creating databases, creating sandbox clones, and fixing well-architected issues require operations and remediation permissions. Deploying a new database host requires database host creation permissions. 
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html#permissions-for-database-workloads[Permissions for database workloads^]
 
 == Deploy database hosts
 
 .What is the difference between Quick create and Advanced create when deploying a SQL Server host?
 
-Quick create applies defaults: FCI deployment, Windows Server 2016, and SQL Server 2019 Standard Edition. Advanced create lets you customize the deployment model (FCI or single instance), operating system, edition, version, instance type, provisioned IOPS and throughput, encryption, and monitoring. See link:create-database-server.html[Create a SQL Server host].
+Quick create applies defaults: FCI deployment, Windows Server 2016, and SQL Server 2019 Standard Edition. Advanced create lets you customize the deployment model (FCI or single instance), operating system, edition, version, instance type, provisioned IOPS and throughput, encryption, and monitoring. 
+
+link:create-database-server.html[Create a SQL Server host].
 
 .What FSx for ONTAP configuration does a new SQL Server FCI or standalone deployment create?
 
-FCI deployments create a Multi-AZ FSx for ONTAP file system, and FCI is supported only on Multi-AZ configurations. Standalone deployments create a Single-AZ file system. If you select an existing file system, a new storage VM is created for the SQL Server workloads. See link:create-database-server.html[Create a SQL Server host].
+FCI deployments create a Multi-AZ FSx for ONTAP file system, and FCI is supported only on Multi-AZ configurations. Standalone deployments create a Single-AZ file system. If you select an existing file system, a new storage VM is created for the SQL Server workloads. 
+
+link:create-database-server.html[Create a SQL Server host].
 
 .Does deploying a host change my VPC network configuration?
 
-Possibly. If they aren't found, deployment creates the AWS interface endpoints and the S3 gateway endpoint that it needs. It also sets the VPC DNS attributes EnableDnsSupport and EnableDnsHostnames to true if they aren't already. See link:create-database-server.html[Create a SQL Server host].
+Possibly. If they aren't found, deployment creates the AWS interface endpoints and the S3 gateway endpoint that it needs. It also sets the VPC DNS attributes `EnableDnsSupport` and `EnableDnsHostnames` to true if they aren't already. 
+
+link:create-database-server.html[Learn more about creating a SQL Server host].
 
 .What Active Directory access is needed to deploy a SQL Server host?
 
-You need Active Directory administrative access so that deployment can join the domain and create computer objects. Deployment creates a SQL service account if you don't supply one. For user-managed Active Directory, you must provide a security group that allows traffic from the EC2 instances to the directory service. See link:create-database-server.html[Create a SQL Server host].
+You need Active Directory administrative access so that deployment can join the domain and create computer objects. Deployment creates a SQL service account if you don't supply one. For user-managed Active Directory, you must provide a security group that allows traffic from the EC2 instances to the directory service. 
+
+link:create-database-server.html[Learn more about creating a SQL Server host].
 
 .Why could my SQL Server deployment fail because of CredSSP?
 
-During deployment, Workload Factory enables CredSSP for credential delegation to the provisioning scripts. If a group policy blocks CredSSP delegation for all domain computers, deployment fails. Workload Factory disables CredSSP after deployment. See link:create-database-server.html[Create a SQL Server host].
+During deployment, Workload Factory enables CredSSP for credential delegation to the provisioning scripts. If a group policy blocks CredSSP delegation for all domain computers, deployment fails. Workload Factory disables CredSSP after deployment.
+ 
+link:create-database-server.html[Learn more about creating a SQL Server host].
 
 .Can I connect to the SQL Server right after deployment?
 
-Not immediately. Workload Factory doesn't enable remote connection on the deployed SQL Server, so you must complete additional configuration, such as allowing the required client IP or subnet in the security group. See link:create-database-server.html[Create a SQL Server host].
+Not immediately. Workload Factory doesn't enable remote connection on the deployed SQL Server, so you'll need to configure it yourself, such as allowing the required client IP or subnet in the security group. 
 
-.How does PostgreSQL deployment differ from SQL Server deployment?
-
-PostgreSQL hosts deploy in High Availability (HA) or single instance models on FSx for ONTAP. HA uses a Multi-AZ file system and streaming replication between the primary and secondary servers. Single instance uses a Single-AZ file system. PostgreSQL hosts appear in the Inventory but aren't registered for management. See link:create-postgresql-server.html[Create a PostgreSQL server].
+link:create-database-server.html[Learn how to enable remote connection on the SQL Server].
 
 == Register and manage resources
 
-.What do I get from registering an instance, and what are the prerequisites?
+.What do I get from registering an instance in Workload Factory, and what are the prerequisites?
 
-Registration lets you create databases and sandbox clones, run error log analysis, and optimize configurations. Resources must run on FSx for ONTAP storage and appear in the Inventory, which requires AWS credentials. You must also associate a link with the FSx for ONTAP file system and complete the prerequisite checks, including AWS and NetApp PowerShell modules for SQL Server. See link:register-instance.html[Register resources].
+Registration lets you create databases and sandbox clones, run error log analysis, and optimize configurations. Resources must run on FSx for ONTAP storage and appear in the Inventory, which requires AWS credentials. You must also associate a link with the FSx for ONTAP file system and complete the prerequisite checks, including AWS and NetApp PowerShell modules for SQL Server. 
+
+link:register-instance.html[Register resources].
 
 .Which databases can be registered and managed, and what about PostgreSQL?
 
-Only SQL Server instances (FCI and standalone) and Oracle databases can be registered and managed. PostgreSQL hosts appear in the Inventory based on your AWS credentials but aren't registered. Detection covers PostgreSQL only on Amazon Linux and Oracle only on Red Hat Enterprise Linux. See link:known-limitations.html[Known limitations].
+Only SQL Server instances (FCI and standalone) and Oracle databases can be registered and managed. PostgreSQL hosts appear in the Inventory based on your AWS credentials but aren't registered. Detection covers PostgreSQL only on Amazon Linux and Oracle only on Red Hat Enterprise Linux. 
 
 .What do I need to register an instance in a private network without internet access?
 
-Make the VPC endpoints for S3, AWS Systems Manager, and FSx for ONTAP available in the VPC, and allow port 443 in the security group for the interface endpoints. If you use a proxy, you must also allow the required Microsoft, PowerShell Gallery (SQL Server), and AWS domains. See link:register-instance.html[Register resources].
+Make the VPC endpoints for S3, AWS Systems Manager, and FSx for ONTAP available in the VPC, and allow port 443 in the security group for the interface endpoints. If you use a proxy, you must also allow the required Microsoft, PowerShell Gallery (SQL Server), and AWS domains.
+
+link:register-instance.html[Learn how to register resources].
 
 .What happens when I deregister a resource?
 
-You can no longer deploy to or monitor the resource from the console, and its FSx for ONTAP storage capacity is no longer counted as used by the instance. You can register the resource again later. See link:deregister-instance.html[Deregister a resource].
+You can no longer deploy to or monitor the resource from the console, and its FSx for ONTAP storage capacity is no longer counted as used by the instance. You can register the resource again later. See 
+
+link:deregister-instance.html[Deregister a resource].
 
 .What do I need to know about creating databases?
 
-Creating a database adds two new volumes with independent LUNs for the data and log files. The files are thin-provisioned and consume only a few MBs of the allocated size. SQL Servers that use SMB don't support database creation. See link:create-database.html[Create a SQL Server database].
+Creating a database adds two new volumes with independent LUNs for the data and log files. The files are thin-provisioned and consume only a few MBs of the allocated size. SQL Servers that use SMB don't support database creation. 
+
+link:create-database.html[Create a SQL Server database].
 
 == Savings calculator
 
 .What does the savings calculator compare, and how are on-premises SQL Server hosts assessed?
 
-It compares storage, compute, SQL license, snapshot, and clone costs on FSx for ONTAP against EBS, FSx for Windows File Server, and on-premises storage. For on-premises hosts you download a PowerShell assessment script, run it on the host, and upload the results. You can then select up to five hosts to analyze. Note that on-premises volume size isn't factored into the cost and percentage savings calculations. See link:explore-savings.html[Explore savings].
+It compares storage, compute, SQL license, snapshot, and clone costs on FSx for ONTAP against Amazon Elastic Block Store, FSx for Windows File Server, and on-premises storage. For on-premises hosts you download a PowerShell assessment script, run it on the host, and upload the results. You can then select up to five hosts to analyze. Note that on-premises volume size isn't factored into the cost and percentage savings calculations. 
+
+link:explore-savings.html[Learn how to use the savings calculator].
 
 .Why does the calculator recommend downgrading SQL Server Enterprise to Standard Edition?
 
-It recommends the downgrade when the instance has 48 or fewer vCPUs and 128 GB or less of memory. The instance also must not use Enterprise features such as online index operations, Resource Governor, peer-to-peer or Oracle replication, R/Python extensions, or memory-optimized TempDB. The deployment model must not require Enterprise either. See link:explore-savings.html[Explore savings].
+It recommends the downgrade when the instance has 48 or fewer vCPUs and 128 GB or less of memory. The instance also must not use Enterprise features such as online index operations, Resource Governor, peer-to-peer or Oracle replication, R/Python extensions, or memory-optimized TempDB. The deployment model must not require Enterprise either. 
 
 .How does the calculator size an FSx for ONTAP configuration when I select multiple hosts?
 
-You can select up to five detected hosts. Workload Factory consolidates them into a single FSx for ONTAP configuration recommendation with one SQL instance, unless the hosts exceed the throughput, capacity, or IOPS limits of a single file system. Creating or saving multiple FSx for ONTAP file systems isn't supported. See link:explore-savings.html[Explore savings].
+You can select up to five detected hosts. Workload Factory consolidates them into a single FSx for ONTAP configuration recommendation with one SQL instance, unless the hosts exceed the throughput, capacity, or IOPS limits of a single file system. Creating or saving multiple FSx for ONTAP file systems isn't supported. 
+
+link:explore-savings.html[Explore savings].
 
 == Well-architected configurations
 
 .What is the difference between one-time and continuous well-architected assessment?
 
-The one-time assessment runs a script on the host and uploads the results, so no credentials are stored and no registration is needed. Continuous assessment requires registering resources, associating a link, and granting permissions. It analyzes daily and can automatically fix issues. See link:optimize-overview.html[Learn about configuration analysis].
+The one-time assessment runs a script on the host and uploads the results, so no credentials are stored and resource registration isn't needed. Continuous assessment requires registering resources, associating a link, and granting permissions. It analyzes daily and can automatically fix issues. 
+
+link:optimize-configurations.html[Optimize your database configurations].
 
 .What risks should I consider before fixing a well-architected configuration issue?
 
-Some fixes can cause downtime or service interruptions, so review each recommendation first. Test RSS and MAXDOP recommendations for performance before changing production. Fixing requires operations and remediation permissions, and the registered resource must use FSx for ONTAP storage. See link:optimize-configurations.html[Implement well-architected configurations].
+Some fixes can cause downtime or service interruptions, so review each recommendation first. For example, test RSS and MAXDOP recommendations for performance before changing production.
 
-.Can I dismiss well-architected recommendations that don't apply to my environment?
+link:optimize-configurations.html[Run the assessment to learn more about configuration recommendations].
 
-Yes. Dismissing a configuration stops its analysis, avoids unnecessary alerts, and removes it from the total optimization score. You can reactivate it at any time, and analysis then resumes daily. See link:optimize-configurations.html[Implement well-architected configurations].
+.Can I ignore well-architected recommendations that don't apply to my environment?
+
+Yes. Dismissing a configuration stops its analysis, avoids unnecessary alerts, and removes it from the total optimization score. You can reactivate it at any time, and analysis then resumes daily. 
+
+link:optimize-configurations.html[Dismiss a configuration from the well-architected assessment].
 
 .Why do the best practices recommend disabling scheduled local snapshots on volumes for SQL Server and Oracle?
 
-Scheduled FSx for ONTAP snapshots aren't application-consistent. The recommendation is to manage snapshots externally with tools such as NetApp SnapCenter to get application-consistent backups and avoid corruption during restore. Note that the Advanced create host deployment enables a daily snapshot policy with 7-day retention by default. See link:optimize-overview.html[Learn about configuration analysis].
+Scheduled FSx for ONTAP snapshots aren't application-consistent. The recommendation is to manage snapshots externally with tools such as NetApp SnapCenter to get application-consistent backups and avoid corruption during restore. Note that the Advanced create host deployment enables a daily snapshot policy with 7-day retention by default. 
+
+link:optimize-overview.html[Learn more about the analysis for database configurations].
 
 == Sandbox clones
 
 .How is a sandbox clone created, and where can it be placed?
 
-A sandbox clone is created from the most recent snapshot of the source database. It can be on the same SQL Server instance or on another one, as long as the target host is in the same VPC and shares the same FSx for ONTAP file system as the source. Creating one requires a managed (registered) SQL Server and operations and remediation permissions. See link:create-sandbox-clone.html[Create a sandbox clone].
+A sandbox clone is created from the most recent snapshot of the source database. It can be on the same SQL Server instance or on another one, as long as the target host is in the same VPC and shares the same FSx for ONTAP file system as the source. Creating one requires a managed (registered) SQL Server and operations and remediation permissions. 
+
+link:create-sandbox-clone.html[Create a sandbox clone].
 
 .What's the difference between refresh, re-baseline, and split for a sandbox clone?
 
-Refresh syncs the clone to the source database's current state or a previous snapshot, and deletes any changes you made to the clone. Re-baseline reverts the clone to its state at creation, also deleting changes, and saves space compared to creating a new clone. Split turns the clone into an independent database that consumes storage capacity, and the clone is deleted when the split completes. See link:manage-clones.html[Manage database clones] and link:split-clone.html[Split a database clone].
+Refresh syncs the clone to the source database's current state or a previous snapshot, and deletes any changes you made to the clone. Re-baseline reverts the clone to its state at creation, also deleting changes, and saves space compared to creating a new clone. Split turns the clone into an independent database that consumes storage capacity, and the clone is deleted when the split completes. 
+
+* link:manage-clones.html[Manage database clones].
+* link:split-clone.html[Split a database clone].
 
 .How do I verify that a sandbox clone's data is good, and what if the check fails?
 
-If you create a clone while the source database is busy, the clone may not be in sync with the latest snapshot. The integrity check examines all objects in the clone. If it fails, don't use the clone and create a new one. See link:manage-clones.html[Manage database clones].
+If you create a clone while the source database is busy, the clone may not be in sync with the latest snapshot. The integrity check examines all objects in the clone. If it fails, don't use the clone and create a new one. 
+
+link:manage-clones.html[Check the integrity of a database clone].
 
 .What should I check before splitting a clone?
 
-Splitting creates a new database that consumes additional storage capacity. Plan the capacity needed and increase the FSx for ONTAP file system capacity beforehand if required. See link:split-clone.html[Split a database clone].
+Splitting creates a new database that consumes additional storage capacity. Plan the capacity needed and increase the FSx for ONTAP file system capacity beforehand if required. 
+
+link:split-clone.html[Split a database clone].
 
 == Data protection
 
-.What does it take to protect SQL Server with NetApp Backup and Recovery?
-
-The SQL Server instance must be registered with Windows credentials. You must also meet the Backup and Recovery SQL Server requirements, the NetApp Console requirements (including a Console agent), and licensing. Workload Factory then installs the Plug-in for Microsoft SQL Server and redirects you to Backup and Recovery to create a protection policy. See link:protect-sql-server.html[Protect SQL Server workloads].
-
 .What protection does Backup and Recovery provide for SQL Server workloads?
 
-It backs up workloads with local snapshots on primary FSx for ONTAP storage and replicates them to secondary FSx for ONTAP storage using SnapMirror technology. You create protection policies in Backup and Recovery. See link:protect-sql-server.html[Protect SQL Server workloads].
+It backs up workloads with local snapshots on primary FSx for ONTAP storage and replicates them to secondary FSx for ONTAP storage using SnapMirror technology. You create protection policies in Backup and Recovery. 
+
+link:protect-sql-server.html[Protect SQL Server workloads with Backup and Recovery].
+
+.What does it take to protect SQL Server with NetApp Backup and Recovery?
+
+The SQL Server instance must be registered with Windows credentials. You must also meet the Backup and Recovery SQL Server requirements, NetApp Console requirements (including a Console agent), and licensing. Workload Factory then installs the Plug-in for Microsoft SQL Server and redirects you to Backup and Recovery to create a protection policy. 
+
+link:protect-sql-server.html[Protect SQL Server workloads with Backup and Recovery].
 
 == Automation and error analysis
 
@@ -153,8 +200,10 @@ Codebox is an infrastructure-as-code co-pilot that generates REST API, AWS CLI, 
 
 .What do I need to set up to use the AI-powered error log analyzer?
 
-The analyzer requires Amazon Bedrock activation, a Bedrock VPC endpoint associated with the host's subnet, registered resources, and the required IAM permissions. For Oracle, you must also grant access to V$DIAG_ALERT_EXT. If your account administrator disabled AI features, the analyzer isn't available. See link:analyze-error-logs.html[Analyze error logs].
+The analyzer requires Amazon Bedrock activation, a Bedrock VPC endpoint associated with the host's subnet, registered resources, and the required IAM permissions. For Oracle, you must also grant access to V$DIAG_ALERT_EXT. If your account administrator disabled AI features, the analyzer isn't available. 
+
+link:analyze-error-logs.html[Learn how to analyze error logs in Workload Factory].
 
 .Is my log data safe when using the error log analyzer?
 
-Log data and aggregations stay in your AWS account and travel over a private VPC endpoint, with no public internet exposure. Customer data isn't used to train or improve models. Bedrock processes logs in real time, and results are stored in your environment. See link:analyze-error-logs.html[Analyze error logs].
+Log data and aggregations stay in your AWS account and travel over a private VPC endpoint, with no public internet exposure. Customer data isn't used to train or improve models. Bedrock processes logs in real time, and results are stored in your environment. 
