@@ -63,7 +63,9 @@ sidebar:
       - title: Monitor database jobs
         url: /monitor-databases.html                                              
       - title: Protect Microsoft SQL Server workloads
-        url: /protect-sql-server.html         
+        url: /protect-sql-server.html  
+  - title: FAQ
+    url: /faq-workload-factory-databases.html
   - title: Knowledge and support
     entries: 
       - title: Register for support
