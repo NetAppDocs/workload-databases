@@ -1,12 +1,12 @@
 === Database configurations included in well-architected dashboard
 
-The well-architected dashboard now includes recommendations for your database configurations, allowing you to assess and optimize your setup based on best practices. The first configurations include: 
+The well-architected dashboard now includes recommendations for your database configurations, allowing you to assess and optimize your setup based on best practices. The first configurations included in the dashboard are: 
 
 * Cold data tiering
 * Storage efficiencies
 * Snapshot policy
 * SSD capacity headroom
 
-Find the well-architected dashboard by selecting the main menu in the Workload Factory console and select *Well-architected*. 
+Select the main menu in the Workload Factory console, and then select *Well-architected* to find the well-architected dashboard. 
 
 image:well-architected-menu-option.png[Well-architected menu option in the Workload Factory console]
