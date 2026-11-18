@@ -2,34 +2,34 @@
 sidebar: sidebar
 permalink: protect-sql-server.html
 keywords: protect, server, Microsoft SQL Server, SQL Server, protect instance, protect database
-summary: "Protect Microsoft SQL Server instances and databases."
+summary: "Prepare Microsoft SQL Server instances for protection with NetApp Backup and Recovery from Workload Factory, and edit protection for instances and databases."
 ---
-= Protect Microsoft SQL Server workloads with NetApp Workload Factory for Databases
+= Protect Microsoft SQL Server workloads with Workload Factory for Databases
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Protect your Microsoft SQL Server applications data using NetApp Backup and Recovery from the Workload Factory console. With this integration, you can achieve the following protection goals: back up workloads with local snapshots on local primary Amazon FSx for NetApp ONTAP (FSx for ONTAP) storage, and replicate workloads to secondary FSx for ONTAP storage. 
+Protect your Microsoft SQL Server application data with NetApp Backup and Recovery from the Workload Factory console. With this integration, you can back up workloads with local snapshots on primary Amazon FSx for NetApp ONTAP (FSx for ONTAP) storage and replicate workloads to secondary FSx for ONTAP storage. 
 
 == About this task
-Workload Factory automates discovering resources, validating prerequisites, and configuring and installing the Plug-in for Microsoft SQL Server to prepare for protecting your workloads with NetApp Backup and Recovery. The plug-in is a host-side component of NetApp Software that enables you to protect your Microsoft SQL Server workloads.
+Workload Factory automates discovering resources, validating prerequisites, and configuring and installing the Plug-in for Microsoft SQL Server to prepare for protecting your workloads with NetApp Backup and Recovery. The plug-in is a host-side component of NetApp software that enables you to protect your Microsoft SQL Server workloads.
 
-NetApp Backup and Recovery leverages NetApp SnapMirror data replication technology to ensure that all the backups are fully synchronized by creating snapshot copies and transferring them to the backup locations.
+NetApp Backup and Recovery uses NetApp SnapMirror data replication technology to ensure that all the backups are fully synchronized by creating snapshot copies and transferring them to the backup locations.
 
 For details about protection with Backup and Recovery, refer to the link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-mssql-protect-overview.html[Protect Microsoft SQL workloads overview with Backup and Recovery^]. 
 
 == Before you begin
-The following requirements must be met to protect Microsoft SQL Server workloads with Backup and Recovery.
+Meet these requirements before you protect Microsoft SQL Server workloads with Backup and Recovery.
 
 * Ensure that your environment meets link:https://docs.netapp.com/us-en/data-services-backup-recovery/concept-start-prereq.html#microsoft-sql-server-workload-requirements[the Backup and Recovery SQL Server requirements^].
 
-* link:https://docs.netapp.com/us-en/data-services-backup-recovery/concept-start-prereq.html#in-netapp-console[Complete NetApp Console requirements^] including setting up, assigning IAM roles, and installing a Console agent.
+* link:https://docs.netapp.com/us-en/data-services-backup-recovery/concept-start-prereq.html#in-netapp-console[Complete NetApp Console requirements^], including setting up, assigning IAM roles, and installing a Console agent.
 
 If you have organization administrator access to the NetApp account, the `backup and recovery super admin` role is automatically assigned when you <<Prepare for protection with NetApp Backup and Recovery,prepare for protection with NetApp Backup and Recovery>>.
 
-** Set the host resolution on the Connector
+** Set the host resolution on the Console agent 
 +
-To discover databases, you must set host resolution on the Connector. On the hosted device, add the mapping of the IP address to the hostname in the `/etc/hosts` file.
+To discover databases, you must set host resolution on the Console agent. On the hosted device, add the mapping of the IP address to the hostname in the `/etc/hosts` file.
 
 * link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-licensing.html[Set up licensing for NetApp Backup and Recovery^]
 
@@ -46,8 +46,8 @@ Complete the preparation process to protect your Microsoft SQL Server resources 
 +
 To use NetApp Backup and Recovery for protection, SQL Server instances must be registered in Workload Factory with Windows credentials.
 . If several Console agents are active and available, select the *Console agent* where you want the workload to be registered and protected.
-. To prepare for data protection, Workload Factory automatically registers your SQL Server resources in Backup and Recovery, configures and installs the Plug-in for Microsoft SQL Server, and discovers resources to meet the prerequisites for protecting your SQL Server instance. Select *Start* to begin the process.
-. After meeting the prerequisites, select *Redirect* to access Backup and Recovery.
+. Select *Start* to prepare for data protection. Workload Factory automatically registers your SQL Server resources in Backup and Recovery, configures and installs the Plug-in for Microsoft SQL Server, and discovers resources to meet the prerequisites for protecting your SQL Server instance.
+. After the prerequisites are met, select *Redirect* to access Backup and Recovery.
 
 .What's next
 From Backup and Recovery, create a policy to protect your Microsoft SQL Server instance and databases.
