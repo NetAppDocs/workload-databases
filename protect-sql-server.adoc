@@ -27,9 +27,9 @@ The following requirements must be met to protect Microsoft SQL Server workloads
 
 If you have organization administrator access to the NetApp account, the `backup and recovery super admin` role is automatically assigned when you <<Prepare for protection with NetApp Backup and Recovery,prepare for protection with NetApp Backup and Recovery>>.
 
-** Set the host resolution on the Connector
+** Set the host resolution on the Console agent 
 +
-To discover databases, you must set host resolution on the Connector. On the hosted device, add the mapping of the IP address to the hostname in the `/etc/hosts` file.
+To discover databases, you must set host resolution on the Console agent. On the hosted device, add the mapping of the IP address to the hostname in the `/etc/hosts` file.
 
 * link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-licensing.html[Set up licensing for NetApp Backup and Recovery^]
 
