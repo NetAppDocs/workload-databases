@@ -6,7 +6,7 @@ summary: "NetApp provides support for Workload Factory and its cloud services in
 ---
 = Get help for NetApp Workload Factory for Databases
 :icons: font
-:imagesdir: ./media/
+:imagesdir: https://docs.netapp.com/us-en/workload-family/media/
 
 [.lead]
 include::https://raw.githubusercontent.com/NetAppDocs/workload-family/main/_include/get-help.adoc[]
